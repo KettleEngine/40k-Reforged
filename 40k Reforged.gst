@@ -8,6 +8,15 @@
     <categoryEntry name="Leaders" id="2886-2afd-f65f-9d8e" hidden="false"/>
     <categoryEntry name="Support" id="ccc6-6202-853c-23e4" hidden="false"/>
     <categoryEntry name="Elites" id="4820-e2b5-9e00-bb68" hidden="false"/>
+    <categoryEntry name="Infantry" id="205c-3072-067b-d808" hidden="false"/>
+    <categoryEntry name="Vehicle" id="b239-6bd1-e7a0-0a02" hidden="false"/>
+    <categoryEntry name="Monster" id="6537-7b2d-b2c8-6005" hidden="false"/>
+    <categoryEntry name="Chaos" id="f809-9826-f58a-6b8d" hidden="false"/>
+    <categoryEntry name="Rare" id="1738-1300-9dbb-c5be" hidden="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="false" id="a7a5-5ed0-460d-f5f5" includeChildSelections="true"/>
+      </constraints>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Army Roster" hidden="false" id="default-force">
@@ -128,6 +137,40 @@
     <rule name="Overcharge" id="e676-2d17-e4bf-f5e8" hidden="false">
       <description>After selecting targets for this weapon’s attacks, you may ‘overcharge’ them. If you
 do, the Damage of those attacks improves by D3 and Wound Rolls of 4+ are always successful. Hit Rolls and Wound Rolls for those attacks cannot be modified, rerolled or cause additional effects. After a Wound Roll fails, the unit of this weapon’s model loses Health equal to the D of that attack, starting with the model equipped with this weapon. Health lost this way cannot be Repaired/Healed.</description>
+    </rule>
+    <rule name="Fly" id="449b-2864-9b01-7476" hidden="false">
+      <description>This unit&apos;s models may move through the air instead of along the battlefield surface, using vertical distance, or moving over enemy models or terrain. After a unit has Fly and attaches to or is attached by a unit that does not have Fly, it loses Fly.</description>
+    </rule>
+    <rule name="Psyker (X)" id="6ff7-e000-c4c9-fb18" hidden="false">
+      <description>Units with Psyker X can cast psychic powers. X is the psyker tier of that unit. Each army has a list of six unique psychic powers listed in the Psychic Powers table on each army’s rules.
+
+
+After a unit with Psyker is Activated, make a Psychic Test for that unit. To make a Psychic Test, roll X D6 dice equal to the unit’s Psyker X.
+Keep track of the results.
+
+
+After the Move step for an active unit with Psyker on the battlefield, it may Cast a psychic power.
+
+
+To Cast a psychic power, select a psychic power from your army rules which matches any dice in the earlier Psychic Test. If that Psychic Test had two or more dice with the same result, you may instead select any psychic power.
+
+
+Psychic powers, unit abilities, and weapon abilities on units with Psyker can cause enemy units to suffer Psychic Shock Wounds (SW). Psychic SW are SW with an AP of -X where X is double the unit’s psyker tier.</description>
+    </rule>
+    <rule name="Open Deck" id="b8d6-4f70-5c6c-d053" hidden="false">
+      <description>During the Attacks step for an active unit embarked in this unit, that embarked unit may select targets for its ranged attacks using the model of this unit as the attacking model.</description>
+    </rule>
+    <rule name="Walker" id="4100-8e8c-47a5-3a15" hidden="false">
+      <description>This unit’s models may move over terrain 4” or less in height or units as if they were not there.</description>
+    </rule>
+    <rule name="Feel No Pain (X+)" id="d17d-0e33-f77d-0131" hidden="false">
+      <description>Each time a model in this unit would lose Health, make a Feel No Pain roll. To make a Feel No Pain roll, roll one D6 for each Health it would lose. If the result equals or exceeds ‘X’, that roll is successful and that Health is not lost. A Feel No Pain roll of 1 always fails</description>
+    </rule>
+    <rule name="Titan" id="8f09-c87f-c86c-8cfc" hidden="false">
+      <description>The first time each battle round this unit Activates, it does not lose ready. This unit can never have its M” worsened.</description>
+    </rule>
+    <rule name="Forward Deploy" id="b433-60cc-2ed2-658f" hidden="false">
+      <description>After this unit is Activated in reserves, roll 2D6 and add this unit’s M to the result. You may Deploy this unit within X” of your Deployment Zone where X is the total.</description>
     </rule>
   </sharedRules>
   <publications>

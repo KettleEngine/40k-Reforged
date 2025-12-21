@@ -7,6 +7,7 @@
       </costs>
       <categoryLinks>
         <categoryLink name="Leaders" hidden="false" id="4c0e-5b98-ece4-fc24" targetId="2886-2afd-f65f-9d8e" primary="true"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="9db2-6c81-a86b-7a20" primary="false" name="Infantry"/>
       </categoryLinks>
       <profiles>
         <profile name="Captain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="4691-1b6b-8e7c-3e83">
@@ -238,6 +239,7 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink targetId="2886-2afd-f65f-9d8e" id="00eb-51b7-aaac-fa11" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="9fc6-9751-7abb-fc5c" primary="false" name="Infantry"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy Bolt Rifle" hidden="false" id="b92f-66fa-317d-4630">
@@ -282,9 +284,81 @@
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Phobos Captain" hidden="false" id="2c75-f86c-f941-89b6">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <profiles>
+        <profile name="Phobos Captain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="533d-9a88-2aec-e45e">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Bolt Carbine" hidden="false" id="8285-3fe3-2ee9-0db4" type="selectionEntry" targetId="71d2-7131-6b87-c38b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="448f-3628-2de5-0537-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="448f-3628-2de5-0537-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Combat Knife" hidden="false" id="5531-1344-c84d-273f" type="selectionEntry" targetId="a0e3-54ef-3ad5-3039">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fdb9-7594-a771-c82b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fdb9-7594-a771-c82b-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="On My Command" id="f3d9-99d1-5c39-606d" hidden="false" type="rule" targetId="70e2-66ec-acb2-18d4"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="48bc-faf3-eb67-47ca" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="87e9-7bf3-89bb-4c63" primary="false" name="Infantry"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bolt Carbine" hidden="false" id="71d2-7131-6b87-c38b">
+      <profiles>
+        <profile name="Bolt Carbine" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="49ad-8647-f34d-a7a6">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Combat Knife" hidden="false" id="a0e3-54ef-3ad5-3039">
+      <profiles>
+        <profile name="Combat Knife" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b8d5-77ba-517d-c360">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">-1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
     <entryLink import="true" name="Gravis Captain" hidden="false" id="5289-6d89-4699-e7e5" type="selectionEntry" targetId="8c10-ce99-ce34-c11a"/>
+    <entryLink import="true" name="Phobos Captain" hidden="false" id="135a-c472-f59f-d212" type="selectionEntry" targetId="2c75-f86c-f941-89b6"/>
   </entryLinks>
 </catalogue>
