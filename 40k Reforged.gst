@@ -125,6 +125,10 @@
     <rule name="On My Command" id="70e2-66ec-acb2-18d4" hidden="false">
       <description>While enemy units are visible to this unit, for each attack made by your units that targets those units, add 1 to the Hit Roll of that attack. Attacks can only be affected by an ability with this name once.</description>
     </rule>
+    <rule name="Overcharge" id="e676-2d17-e4bf-f5e8" hidden="false">
+      <description>After selecting targets for this weapon’s attacks, you may ‘overcharge’ them. If you
+do, the Damage of those attacks improves by D3 and Wound Rolls of 4+ are always successful. Hit Rolls and Wound Rolls for those attacks cannot be modified, rerolled or cause additional effects. After a Wound Roll fails, the unit of this weapon’s model loses Health equal to the D of that attack, starting with the model equipped with this weapon. Health lost this way cannot be Repaired/Healed.</description>
+    </rule>
   </sharedRules>
   <publications>
     <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisher="https://github.com/KettleEngine/40k-Reforged"/>

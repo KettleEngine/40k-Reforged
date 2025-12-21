@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
-  <selectionEntries>
+  <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
       <categoryLinks>
-        <categoryLink targetId="2886-2afd-f65f-9d8e" id="4c0e-5b98-ece4-fc24" primary="true" name="Leaders"/>
+        <categoryLink name="Leaders" hidden="false" id="4c0e-5b98-ece4-fc24" targetId="2886-2afd-f65f-9d8e" primary="true"/>
       </categoryLinks>
       <profiles>
         <profile name="Captain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="4691-1b6b-8e7c-3e83">
@@ -22,6 +22,133 @@
       <infoLinks>
         <infoLink name="On My Command" id="bba1-f2e6-fa69-6ab7" hidden="false" type="rule" targetId="70e2-66ec-acb2-18d4"/>
       </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is equipped with either:" id="0954-855d-4473-1cd9" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Bolt Rifle" hidden="false" id="2a4f-333a-2ad6-2112" type="selectionEntry" targetId="6802-fb1b-a361-36bb"/>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="2e08-e44a-bbb0-add6" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79"/>
+            <entryLink import="true" name="Neo-Volkite Pistol" hidden="false" id="f353-8b58-4291-f3d2" type="selectionEntry" targetId="4e49-f9e0-6bfe-b308"/>
+            <entryLink import="true" name="Plasma Pistol" hidden="false" id="158e-bfd3-9488-dcd7" type="selectionEntry" targetId="6894-2cf4-78df-13e8"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1141-da19-f28d-2542-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1141-da19-f28d-2542-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
-  </selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Bolt Rifle" hidden="false" id="6802-fb1b-a361-36bb">
+      <profiles>
+        <profile name="Bolt Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ae74-14f6-d7b1-5950">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="dae5-9fbf-bdd8-7f79">
+      <profiles>
+        <profile name="Bolt Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7ecd-8f62-2a52-d2c9">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Neo-Volkite Pistol" hidden="false" id="4e49-f9e0-6bfe-b308">
+      <profiles>
+        <profile name="Neo-Volkite Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="dd7e-f54d-1ece-2d47">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="6894-2cf4-78df-13e8">
+      <profiles>
+        <profile name="Plasma Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="feb1-abf1-df8e-4587">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Overcharge" id="e094-db9c-9da7-0cb1" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Power Sword" hidden="false" id="dfed-4c14-cafd-626d">
+      <profiles>
+        <profile name="Power Sword" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0235-7859-850a-582a">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Power Fist" hidden="false" id="e9ab-47d0-5cce-0c1d">
+      <profiles>
+        <profile name="Power Fist" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4a54-aac0-6f08-f47e">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Storm Shield" hidden="false" id="79cf-dc73-3df6-852a">
+      <profiles>
+        <profile name="Storm Shield" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9cde-e462-4a3a-124a">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each wound assigned to the model with this weapon, add 1 to the Saving Throw for that attack.</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <entryLinks>
+    <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
+  </entryLinks>
 </catalogue>
