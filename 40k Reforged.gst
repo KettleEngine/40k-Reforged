@@ -20,17 +20,17 @@
           <modifiers>
             <modifier type="increment" value="1" field="17e7-3cee-3114-9772">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d62d-db22-4893-4bc0" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d62d-db22-4893-4bc0" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
             <modifier type="increment" value="2" field="17e7-3cee-3114-9772">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="baf8-997f-e323-a090" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="baf8-997f-e323-a090" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
-            <modifier type="increment" value="2" field="17e7-3cee-3114-9772">
+            <modifier type="increment" value="3" field="17e7-3cee-3114-9772">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4204-82d0-908c-a62a" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="4204-82d0-908c-a62a" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -85,7 +85,7 @@
         <categoryLink targetId="9cd6-0442-3f35-6b52" id="d464-ac4f-3093-5bbf" primary="false" name="Configuration"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Battle Size" id="b960-4789-a3a6-59cb" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
+        <selectionEntryGroup name="Battle Size" id="b960-4789-a3a6-59cb" hidden="false" collective="false" import="true" defaultSelectionEntryId="d62d-db22-4893-4bc0">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="132a-318-b78a-7afb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dea4-90c8-6d86-3a01" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
