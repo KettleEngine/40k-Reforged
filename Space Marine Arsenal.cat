@@ -25,10 +25,10 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="This model is equipped with either:" id="0954-855d-4473-1cd9" hidden="false">
           <entryLinks>
-            <entryLink import="true" name="Bolt Rifle" hidden="false" id="2a4f-333a-2ad6-2112" type="selectionEntry" targetId="6802-fb1b-a361-36bb"/>
-            <entryLink import="true" name="Bolt Pistol" hidden="false" id="2e08-e44a-bbb0-add6" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79"/>
-            <entryLink import="true" name="Neo-Volkite Pistol" hidden="false" id="f353-8b58-4291-f3d2" type="selectionEntry" targetId="4e49-f9e0-6bfe-b308"/>
-            <entryLink import="true" name="Plasma Pistol" hidden="false" id="158e-bfd3-9488-dcd7" type="selectionEntry" targetId="6894-2cf4-78df-13e8"/>
+            <entryLink import="true" name="Bolt Rifle" hidden="false" id="2a4f-333a-2ad6-2112" type="selectionEntry" targetId="6802-fb1b-a361-36bb" sortIndex="1"/>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="2e08-e44a-bbb0-add6" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79" sortIndex="2"/>
+            <entryLink import="true" name="Neo-Volkite Pistol" hidden="false" id="f353-8b58-4291-f3d2" type="selectionEntry" targetId="4e49-f9e0-6bfe-b308" sortIndex="3"/>
+            <entryLink import="true" name="Plasma Pistol" hidden="false" id="158e-bfd3-9488-dcd7" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="4"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.0954-855d-4473-1cd9.profiles.Weapon"/>
@@ -38,7 +38,30 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1141-da19-f28d-2542-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
+        <selectionEntryGroup name="This model is also equipped with either:" id="6ae7-b10b-8253-5c98" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Power Sword" hidden="false" id="8482-567a-18e2-217a" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="2"/>
+            <entryLink import="true" name="Power Fist" hidden="false" id="4d64-2d91-adf3-e0d0" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="1"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.0954-855d-4473-1cd9.profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c818-0f91-e249-cba8-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c818-0f91-e249-cba8-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Storm Shield" hidden="false" id="2cfd-0ac6-4d6d-6e7e" type="selectionEntry" targetId="79cf-dc73-3df6-852a">
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.0954-855d-4473-1cd9.profiles.Weapon"/>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bolt Rifle" hidden="false" id="6802-fb1b-a361-36bb">
       <profiles>
