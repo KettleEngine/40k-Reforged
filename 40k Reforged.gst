@@ -13,7 +13,28 @@
     <forceEntry name="Army Roster" hidden="false" id="default-force">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="a8ad-6c7d-926d-0d05" targetId="9cd6-0442-3f35-6b52"/>
-        <categoryLink name="Leaders" hidden="false" id="bce6-f6a1-9694-851b" targetId="2886-2afd-f65f-9d8e"/>
+        <categoryLink name="Leaders" hidden="false" id="bce6-f6a1-9694-851b" targetId="2886-2afd-f65f-9d8e">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="17e7-3cee-3114-9772" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="17e7-3cee-3114-9772">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d62d-db22-4893-4bc0" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="2" field="17e7-3cee-3114-9772">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="baf8-997f-e323-a090" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="2" field="17e7-3cee-3114-9772">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4204-82d0-908c-a62a" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
         <categoryLink name="Troops" hidden="false" id="3014-c4c1-a77d-5525" targetId="b69b-5b51-faf1-2c40"/>
         <categoryLink name="Elites" hidden="false" id="ece3-c768-4906-318a" targetId="4820-e2b5-9e00-bb68"/>
         <categoryLink name="Fast Attack" hidden="false" id="82b8-8e3e-1fff-c3eb" targetId="af46-d948-7306-0601"/>
@@ -100,4 +121,9 @@
       </categoryLinks>
     </entryLink>
   </entryLinks>
+  <sharedRules>
+    <rule name="On My Command" id="70e2-66ec-acb2-18d4" hidden="false">
+      <description>While enemy units are visible to this unit, for each attack made by your units that targets those units, add 1 to the Hit Roll of that attack. Attacks can only be affected by an ability with this name once.</description>
+    </rule>
+  </sharedRules>
 </gameSystem>
