@@ -173,8 +173,118 @@
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Gravis Captain" hidden="false" id="8c10-ce99-ce34-c11a">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <profiles>
+        <profile name="Gravis Captain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="73ac-29ad-ddd0-a2e6">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2++</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="On My Command" id="3a56-0b1d-aea6-1e8b" hidden="false" type="rule" targetId="70e2-66ec-acb2-18d4"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is also equipped with either:" id="6e37-09ca-767d-fc65" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolt Rifle" hidden="false" id="72f2-2736-6dd1-ef48" type="selectionEntry" targetId="b92f-66fa-317d-4630" sortIndex="1"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.profiles.Weapon"/>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Boltstorm Gauntlet and Power Fist" hidden="false" id="a1d9-ded1-419f-398c" sortIndex="2">
+              <entryLinks>
+                <entryLink import="true" name="Boltstorm Gauntlet" hidden="false" id="6b77-a743-6368-1c9e" type="selectionEntry" targetId="0965-9622-6286-24e8">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5720-0010-f9ce-e5f5-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5720-0010-f9ce-e5f5-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Power Fist" hidden="false" id="1334-80d7-110c-f5c3" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dbeb-be6c-98c6-397c-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dbeb-be6c-98c6-397c-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="04ee-223f-a2b9-4756-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="04ee-223f-a2b9-4756-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="This model is also equipped with either:" id="7b7a-1e16-cb47-037f" hidden="false">
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.profiles.Weapon"/>
+          </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Power Sword" hidden="false" id="f7df-6cee-84fc-98da" type="selectionEntry" targetId="dfed-4c14-cafd-626d"/>
+            <entryLink import="true" name="Chainsword" hidden="false" id="889e-28a1-287d-402c" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0dda-cd19-9b00-fb38-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0dda-cd19-9b00-fb38-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="00eb-51b7-aaac-fa11" primary="true" name="Leaders"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Bolt Rifle" hidden="false" id="b92f-66fa-317d-4630">
+      <profiles>
+        <profile name="Heavy Bolt Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="794a-1db6-bb4d-888e">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boltstorm Gauntlet" hidden="false" id="0965-9622-6286-24e8">
+      <profiles>
+        <profile name="Boltstorm Gauntlet" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5fdc-991a-571d-7453">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Chainsword" hidden="false" id="d7bf-1f8b-4dd2-edfb">
+      <profiles>
+        <profile name="Chainsword" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="78ae-ed81-7007-5f71">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
+    <entryLink import="true" name="Gravis Captain" hidden="false" id="5289-6d89-4699-e7e5" type="selectionEntry" targetId="8c10-ce99-ce34-c11a"/>
   </entryLinks>
 </catalogue>
