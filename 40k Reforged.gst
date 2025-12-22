@@ -232,6 +232,9 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     <rule name="Litany of Hate" id="6f33-c1c9-bda5-9cce" hidden="false">
       <description>For each attack made for a friendly unit within 12&quot; of this unit which targets an enemy unit within 12&quot;, if that attack&apos;s S is equal to or greater than the target&apos;s T, add 1 to the Wound Roll of that attack.</description>
     </rule>
+    <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
+      <description>For each attack made by this unit, a Wound Roll of 6 causes and additional wound.</description>
+    </rule>
   </sharedRules>
   <publications>
     <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisher="https://github.com/KettleEngine/40k-Reforged"/>
