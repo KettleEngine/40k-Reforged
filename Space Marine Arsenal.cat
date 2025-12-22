@@ -787,6 +787,207 @@
         <categoryLink targetId="2886-2afd-f65f-9d8e" id="3318-9b07-82d8-e726" primary="true" name="Leaders"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boltgun" hidden="false" id="7c03-84c7-a561-dfa9">
+      <profiles>
+        <profile name="Boltgun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9ea0-3ecc-5045-fe66">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Lieutenant" hidden="false" id="e3af-118f-915b-e97e">
+      <costs>
+        <cost name="pts" typeId="points" value="40"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="e262-9653-ceb8-f763" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="c9b9-b8aa-2ce5-e711" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Lieutenant" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5228-47b4-34bf-dc89">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Deliberate Tactician" id="0d14-c888-53fa-8628" hidden="false" type="rule" targetId="5ef9-b670-dd95-d45f"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is equipped with either:" id="34f5-8f65-ba6c-6b09" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="422a-48d7-3129-34ad" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79" sortIndex="1"/>
+            <entryLink import="true" name="Heavy Bolt Pistol" hidden="false" id="6f9d-43cb-0ae3-6470" type="selectionEntry" targetId="051d-4a2c-81be-094d" sortIndex="2"/>
+            <entryLink import="true" name="Boltgun" hidden="false" id="024e-5219-f791-bb4b" type="selectionEntry" targetId="7c03-84c7-a561-dfa9" sortIndex="3"/>
+            <entryLink import="true" name="Plasma Pistol" hidden="false" id="187f-1fec-7692-fc8b" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="4"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e4a0-4314-fd02-8643-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e4a0-4314-fd02-8643-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="422a-48d7-3129-34ad.profiles.Weapon"/>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="6f9d-43cb-0ae3-6470.profiles.Weapon"/>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="024e-5219-f791-bb4b.profiles.Weapon"/>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="187f-1fec-7692-fc8b.profiles.Weapon"/>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="This model is also equipped with either:" id="7baf-bd32-e1fd-410c" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Power Weapon" hidden="false" id="c629-63d1-e1c6-7de1" type="selectionEntry" targetId="d9f7-95c7-488f-7718" sortIndex="1"/>
+            <entryLink import="true" name="Chainsword" hidden="false" id="7817-0386-5f62-565f" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="2"/>
+            <entryLink import="true" name="Power Fist" hidden="false" id="2e8c-9d95-c7c1-f570" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="3"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="c629-63d1-e1c6-7de1.profiles.Weapon"/>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="7817-0386-5f62-565f.profiles.Weapon"/>
+            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="2e8c-9d95-c7c1-f570.profiles.Weapon"/>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Storm Shield" hidden="false" id="d05f-28ad-50ec-9a16" type="selectionEntry" targetId="79cf-dc73-3df6-852a">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e7e-0dd0-21f0-6a99" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="d05f-28ad-50ec-9a16.profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Power Weapon" hidden="false" id="d9f7-95c7-488f-7718">
+      <profiles>
+        <profile name="Power Weapon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e5c4-bcb7-53a7-058b">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Phobos Lieutenant" hidden="false" id="945e-85d2-ebc1-52fd">
+      <costs>
+        <cost name="pts" typeId="points" value="40"/>
+      </costs>
+      <profiles>
+        <profile name="Phobos Lieutenant" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6f2f-ce7a-80cf-e114">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Bolt Carbine" hidden="false" id="56aa-bc28-f2b5-4564" type="selectionEntry" targetId="71d2-7131-6b87-c38b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9fbf-32a9-b483-1123-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9fbf-32a9-b483-1123-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.56aa-bc28-f2b5-4564.profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Combat Knife" hidden="false" id="bafb-3f0d-aee3-a9da" type="selectionEntry" targetId="a0e3-54ef-3ad5-3039">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="64c9-6b4d-3476-849b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="64c9-6b4d-3476-849b-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.bafb-3f0d-aee3-a9da.profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Bolt Pistol" hidden="false" id="c607-5347-7b9e-db13" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0b4e-e801-ef1c-8e58-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0b4e-e801-ef1c-8e58-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.c607-5347-7b9e-db13.profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Deliberate Tactician" id="81e4-228e-522c-1fd4" hidden="false" type="rule" targetId="5ef9-b670-dd95-d45f"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="5b5e-67b8-c647-8b67" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="7c43-7d93-1bcd-c230" primary="false" name="Infantry"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Chaplin" hidden="false" id="4216-cdb4-410e-0c48">
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="6ffa-20fb-3ab0-bd22" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="e24f-3a7b-451d-b39f" primary="false" name="Infantry"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="e50e-083c-5b4f-4df4" primary="false" name="Rare"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Chaplin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="cdb0-55d1-b60b-1a49">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="40"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Bolt Pistol" hidden="false" id="7722-01ec-be87-38d1" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="34ab-1636-b268-e19b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="34ab-1636-b268-e19b-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="7722-01ec-be87-38d1.profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Crozius Arcanum" hidden="false" id="4251-9b74-4f57-6be2" type="selectionEntry" targetId="29a2-c5cc-f5bc-1c53">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1013-befd-68f6-8079-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1013-befd-68f6-8079-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Crozius Arcanum" hidden="false" id="29a2-c5cc-f5bc-1c53">
+      <profiles>
+        <profile name="Crozius Arcanum" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9827-ef89-3231-4a38">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <comment>WS is the same on all chaplins so WS here can stay fixed</comment>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -797,5 +998,8 @@
     <entryLink import="true" name="Librarian" hidden="false" id="fccb-db96-a05f-3619" type="selectionEntry" targetId="8512-1f91-b6ea-095b"/>
     <entryLink import="true" name="Phobos Librarian" hidden="false" id="c3eb-cbdd-57c9-039e" type="selectionEntry" targetId="3b63-fc62-95b5-795c"/>
     <entryLink import="true" name="Terminator Librarian" hidden="false" id="a0b7-f911-a22c-7362" type="selectionEntry" targetId="5189-1a94-7de4-cf89"/>
+    <entryLink import="true" name="Lieutenant" hidden="false" id="c41a-6dcf-e7b0-b2e1" type="selectionEntry" targetId="e3af-118f-915b-e97e"/>
+    <entryLink import="true" name="Phobos Lieutenant" hidden="false" id="f930-3576-df28-6e1c" type="selectionEntry" targetId="945e-85d2-ebc1-52fd"/>
+    <entryLink import="true" name="Chaplin" hidden="false" id="2647-accf-690f-042d" type="selectionEntry" targetId="4216-cdb4-410e-0c48"/>
   </entryLinks>
 </catalogue>

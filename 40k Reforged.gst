@@ -230,6 +230,12 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     <rule name="Windfall of the Warp, Lightning Arc" id="3191-a1e1-1f37-0cdd" hidden="false">
       <description>After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select up to 2 different visible enemy units within 16”. For each selected unit, it suffers D3 SW.</description>
     </rule>
+    <rule name="Deliberate Tactician" id="5ef9-b670-dd95-d45f" hidden="false">
+      <description>For each attack made by this unit, reroll a Hit Roll of 1 of that attack.</description>
+    </rule>
+    <rule name="Litany of Hate" id="6f33-c1c9-bda5-9cce" hidden="false">
+      <description>For each attack made for a friendly unit within 12&quot; of this unit which targets an enemy unit within 12&quot;, if that attack&apos;s S is equal to or greater than the target&apos;s T, add 1 to the Wound Roll of that attack.</description>
+    </rule>
   </sharedRules>
   <publications>
     <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisher="https://github.com/KettleEngine/40k-Reforged"/>
