@@ -988,6 +988,115 @@
       </profiles>
       <comment>WS is the same on all chaplins so WS here can stay fixed</comment>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Terminator Chaplin" hidden="false" id="38a3-65d0-162d-518f">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <profiles>
+        <profile name="Terminator Chaplin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5fd9-49c3-6df7-d0be">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2++</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Deep Strike" id="6fc8-b625-1cfb-ad6a" hidden="false" type="rule" targetId="a184-8710-3dda-7fdc"/>
+        <infoLink name="Litany of Hate" id="579d-7be9-b528-4ace" hidden="false" type="rule" targetId="6f33-c1c9-bda5-9cce"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is equipped with either:" id="9846-58d1-9049-4be7" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Storm Bolter" hidden="false" id="451e-a84e-1584-2084" type="selectionEntry" targetId="d215-60bd-f49d-295e" sortIndex="1"/>
+            <entryLink import="true" name="Combi-Flamer" hidden="false" id="800f-7b1b-adc2-f252" type="selectionEntry" targetId="f994-ef44-fd09-0308" sortIndex="2">
+              <comment>this is for the terminator captain as i cant be arsed to find a way to make it so i can change both profiles WS</comment>
+            </entryLink>
+            <entryLink import="true" name="Combi-Melta" hidden="false" id="13ef-c57d-5252-d0e5" type="selectionEntry" targetId="a73f-6c65-ee6a-2801" sortIndex="3"/>
+            <entryLink import="true" name="Combi-Plasma" hidden="false" id="b403-d2d4-112d-a4d7" type="selectionEntry" targetId="4814-a9c5-27c0-aa7d" sortIndex="4"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="a094-253a-145a-baed.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="2ce3-832c-0295-40d7.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="f40d-39b9-c821-21d0.profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b32-071c-30b1-f957-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7b32-071c-30b1-f957-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="b28b-3c44-9ce0-bd56" primary="false" name="Infantry"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="0b21-6ae3-82fb-c663" primary="true" name="Leaders"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="5c56-44bf-ca31-16d9" primary="false" name="Rare"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Crozius Arcanum" hidden="false" id="1c49-1a94-d958-bad6" type="selectionEntry" targetId="29a2-c5cc-f5bc-1c53">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a9d0-12cf-adac-c213-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9d0-12cf-adac-c213-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Jump Pack Chaplin" hidden="false" id="91a9-39fa-6505-b63d">
+      <costs>
+        <cost name="pts" typeId="points" value="60"/>
+      </costs>
+      <profiles>
+        <profile name="Jump Pack Chaplin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="482c-ea25-c3c9-a66e">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Litany of Hate" id="a7d9-3568-2795-b3f5" hidden="false" type="rule" targetId="6f33-c1c9-bda5-9cce"/>
+        <infoLink name="Fly" id="5dd9-8896-6c4a-ac55" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="fcea-7393-0127-a047" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="9ae4-547b-bd1d-a82c" primary="false" name="Infantry"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="9c6d-e033-6986-d03e" primary="false" name="Rare"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is equipped with either:" id="c850-2f79-e4ad-6104" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Bolt Rifle" hidden="false" id="5409-3d74-cc2a-d243" type="selectionEntry" targetId="6802-fb1b-a361-36bb" sortIndex="1"/>
+            <entryLink import="true" name="Neo-Volkite Pistol" hidden="false" id="52a6-1403-3885-9bea" type="selectionEntry" targetId="4e49-f9e0-6bfe-b308" sortIndex="2"/>
+            <entryLink import="true" name="Plasma Pistol" hidden="false" id="4b88-5717-3abd-d427" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="3"/>
+            <entryLink import="true" name="Bolt Pistol" hidden="false" id="839b-c5e4-7c88-cd39" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79" sortIndex="1"/>
+            <entryLink import="true" name="Power Fist" hidden="false" id="1c63-94f1-c181-b4e2" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="5"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aba0-04de-16c8-555a-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aba0-04de-16c8-555a-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="839b-c5e4-7c88-cd39.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="52a6-1403-3885-9bea.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="d0cf-e733-ca44-d644.profiles.Weapon"/>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="1c63-94f1-c181-b4e2.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="5409-3d74-cc2a-d243.profiles.Weapon"/>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Crozius Arcanum" hidden="false" id="feb9-bb1e-f35a-c99c" type="selectionEntry" targetId="29a2-c5cc-f5bc-1c53">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e67d-54e0-a046-297e-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e67d-54e0-a046-297e-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -1001,5 +1110,7 @@
     <entryLink import="true" name="Lieutenant" hidden="false" id="c41a-6dcf-e7b0-b2e1" type="selectionEntry" targetId="e3af-118f-915b-e97e"/>
     <entryLink import="true" name="Phobos Lieutenant" hidden="false" id="f930-3576-df28-6e1c" type="selectionEntry" targetId="945e-85d2-ebc1-52fd"/>
     <entryLink import="true" name="Chaplin" hidden="false" id="2647-accf-690f-042d" type="selectionEntry" targetId="4216-cdb4-410e-0c48"/>
+    <entryLink import="true" name="Terminator Chaplin" hidden="false" id="2acf-6f14-ebfb-5e03" type="selectionEntry" targetId="38a3-65d0-162d-518f"/>
+    <entryLink import="true" name="Jump Pack Chaplin" hidden="false" id="e5f6-de99-bba6-b03f" type="selectionEntry" targetId="91a9-39fa-6505-b63d"/>
   </entryLinks>
 </catalogue>
