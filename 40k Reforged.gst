@@ -12,11 +12,7 @@
     <categoryEntry name="Vehicle" id="b239-6bd1-e7a0-0a02" hidden="false"/>
     <categoryEntry name="Monster" id="6537-7b2d-b2c8-6005" hidden="false"/>
     <categoryEntry name="Chaos" id="f809-9826-f58a-6b8d" hidden="false"/>
-    <categoryEntry name="Rare" id="1738-1300-9dbb-c5be" hidden="false">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="false" id="a7a5-5ed0-460d-f5f5" includeChildSelections="true"/>
-      </constraints>
-    </categoryEntry>
+    <categoryEntry name="Rare" id="1738-1300-9dbb-c5be" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Army Roster" hidden="false" id="default-force">
