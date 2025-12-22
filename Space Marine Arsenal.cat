@@ -688,11 +688,11 @@
       <profiles>
         <profile name="Phobos Librarian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="d574-1ee5-7848-bf28">
           <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
             <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
             <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -723,6 +723,70 @@
         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="4ab5-c372-2a62-dc83.profiles.Weapon"/>
       </modifiers>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Terminator Librarian" hidden="false" id="5189-1a94-7de4-cf89">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <profiles>
+        <profile name="Terminator Librarian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="2a2d-4fc4-2a35-ed37">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2++</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Deep Strike" id="eeed-fd85-f4c1-fa01" hidden="false" type="rule" targetId="a184-8710-3dda-7fdc"/>
+        <infoLink name="Windfall of the Warp, Lightning Arc" id="9d0e-382a-38ee-7f6b" hidden="false" type="rule" targetId="3191-a1e1-1f37-0cdd"/>
+        <infoLink name="Psyker (X)" id="8da0-4bb0-edd6-6217" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (2)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is also equipped with either:" id="5d3d-674d-2e3b-f6d5" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Power Sword" hidden="false" id="e02f-b151-88dd-2d27" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="1"/>
+            <entryLink import="true" name="Power Fist" hidden="false" id="3eab-dd6a-e3fc-51bd" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="2"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="2488-2304-8700-92de.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="d7b9-6ed0-0ad4-9295.profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cdee-b6b4-503f-2873-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cdee-b6b4-503f-2873-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="This model is equipped with either:" id="48cc-9842-da3a-483c" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Storm Bolter" hidden="false" id="e040-e121-90a0-4339" type="selectionEntry" targetId="d215-60bd-f49d-295e" sortIndex="1"/>
+            <entryLink import="true" name="Combi-Flamer" hidden="false" id="a9d8-fef4-e45e-59bb" type="selectionEntry" targetId="f994-ef44-fd09-0308" sortIndex="2">
+              <comment>this is for the terminator captain as i cant be arsed to find a way to make it so i can change both profiles WS</comment>
+            </entryLink>
+            <entryLink import="true" name="Combi-Melta" hidden="false" id="7b8d-687b-e8b9-f9cc" type="selectionEntry" targetId="a73f-6c65-ee6a-2801" sortIndex="3"/>
+            <entryLink import="true" name="Combi-Plasma" hidden="false" id="1002-ad3f-2cac-1928" type="selectionEntry" targetId="4814-a9c5-27c0-aa7d" sortIndex="4"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="a094-253a-145a-baed.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="2ce3-832c-0295-40d7.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="f40d-39b9-c821-21d0.profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ea34-cdcf-92be-9dbc-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ea34-cdcf-92be-9dbc-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="1971-848e-b531-75bf" primary="false" name="Infantry"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="3318-9b07-82d8-e726" primary="true" name="Leaders"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -732,5 +796,6 @@
     <entryLink import="true" name="Terminator Captain" hidden="false" id="ec32-98c5-be55-4362" type="selectionEntry" targetId="f126-7aa0-78a3-2817"/>
     <entryLink import="true" name="Librarian" hidden="false" id="fccb-db96-a05f-3619" type="selectionEntry" targetId="8512-1f91-b6ea-095b"/>
     <entryLink import="true" name="Phobos Librarian" hidden="false" id="c3eb-cbdd-57c9-039e" type="selectionEntry" targetId="3b63-fc62-95b5-795c"/>
+    <entryLink import="true" name="Terminator Librarian" hidden="false" id="a0b7-f911-a22c-7362" type="selectionEntry" targetId="5189-1a94-7de4-cf89"/>
   </entryLinks>
 </catalogue>
