@@ -172,6 +172,61 @@ Psychic powers, unit abilities, and weapon abilities on units with Psyker can c
     <rule name="Forward Deploy" id="b433-60cc-2ed2-658f" hidden="false">
       <description>After this unit is Activated in reserves, roll 2D6 and add this unit’s M to the result. You may Deploy this unit within X” of your Deployment Zone where X is the total.</description>
     </rule>
+    <rule name="Deep Strike" id="a184-8710-3dda-7fdc" hidden="false">
+      <description>After this unit is Activated in reserves, roll 3D6. You may Deploy that unit anywhere on the battlefield at least X” away from all enemy units where X is the result of that roll. If you do, this unit cannot March or Fall Back this turn.</description>
+    </rule>
+    <rule name="Unstoppable" id="9726-164b-d2c0-a58f" hidden="false">
+      <description>For each Resolve Test made for this unit, reroll a failed result for that Resolve Test.</description>
+    </rule>
+    <rule name="Transport" id="d78d-24c6-e7a9-e94f" hidden="false">
+      <description>After you deploy a unit with Transport or Heavy Transport, you may select one infantry (but not vehicle or monster) unit to deploy ‘embarked’ within that unit.
+
+Embarked units are not on the battlefield (they’re never visible, cannot be within range for any abilities, can’t capture objectives, etc).
+
+After an embarked unit’s Move step begins, that unit may Disembark. After a unit with Transport is destroyed, before removing its models, any unit embarked in it must Disembark.
+
+To Disembark, place the embarked unit wholly within 3” of the unit it&apos;s embarked within, in unit coherency. If you cannot meet these conditions, remove models from the unit until you can. After a unit Disembarks, it cannot March or Fall Back this battle round.
+
+After an infantry (but not vehicle or monster) unit ends a March wholly within 3” of a friendly unit with Transport or Heavy Transport that does not have an embarked unit, it may Embark into that unit. To Embark a unit, remove it from the battlefield until it Disembarks.
+
+After the End step for a unit with this ability, if this turn was not your second turn in a row, take another turn.</description>
+    </rule>
+    <rule name="Heavy Transport" id="5fcb-6b70-9399-7a81" hidden="false">
+      <description>After you deploy a unit with Transport or Heavy Transport, you may select one infantry (but not vehicle or monster) unit to deploy ‘embarked’ within that unit.
+
+Embarked units are not on the battlefield (they’re never visible, cannot be within range for any abilities, can’t capture objectives, etc).
+
+After an embarked unit’s Move step begins, that unit may Disembark. After a unit with Transport is destroyed, before removing its models, any unit embarked in it must Disembark.
+
+To Disembark, place the embarked unit wholly within 3” of the unit it&apos;s embarked within, in unit coherency. If you cannot meet these conditions, remove models from the unit until you can. After a unit Disembarks, it cannot March or Fall Back this battle round.
+
+After an infantry (but not vehicle or monster) unit ends a March wholly within 3” of a friendly unit with Transport or Heavy Transport that does not have an embarked unit, it may Embark into that unit. To Embark a unit, remove it from the battlefield until it Disembarks.
+</description>
+    </rule>
+    <rule name="Heal/Repair (X)" id="02c8-1ec5-cdab-2572" hidden="false">
+      <description>Heal X or Repair X: For each X, if all models within this unit are at their starting Health and the unit has fewer models than it started with, then add 1 missing model with 1 Health remaining. Otherwise, add 1 Health to a model with fewer Health than it started with.</description>
+    </rule>
+    <rule name="Ignore Cover" id="c88b-5cb0-aa9d-b742" hidden="false">
+      <description>Saving Throws for this weapon’s attacks cannot benefit from cover.</description>
+    </rule>
+    <rule name="Indirect" id="4de2-ca68-9af9-1b10" hidden="false">
+      <description>This weapon does not need the target to be visible. However, when the target is not visible, this weapon has a -1 penalty to its Hit Rolls.</description>
+    </rule>
+    <rule name="Precision (X+)" id="db97-d77e-4392-6f10" hidden="false">
+      <description>For successful Wound Roll of X+, the attacking player may choose which model in the targeted unit which that wound is assigned to (even if they are a leader model or if another model has taken damage).</description>
+    </rule>
+    <rule name="Strike or Sweep (X)" id="2757-6563-cdb2-3456" hidden="false">
+      <description>Each time you make attacks with this weapon, use only one of either weapon with Strike or Sweep.</description>
+    </rule>
+    <rule name="Barrage" id="9cfc-06e3-74c6-ad83" hidden="false">
+      <description>After selecting the target for this weapon&apos;s attacks, select up to 2 different enemy units within 6&quot; of the selected target. Also make attacks with this weapon targeting each of the selected units.</description>
+    </rule>
+    <rule name="Suppressive" id="aed3-e154-8fa2-5378" hidden="false">
+      <description>After a successful Wound Roll, the attack’s sequence ends and the enemy unit targeted by that attack suffers X Suppression where X is equal to the weapon&apos;s D.</description>
+    </rule>
+    <rule name="One Shot" id="0c06-9eed-2a45-b772" hidden="false">
+      <description>You may only select a target for this weapon once per battle.</description>
+    </rule>
   </sharedRules>
   <publications>
     <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisher="https://github.com/KettleEngine/40k-Reforged"/>

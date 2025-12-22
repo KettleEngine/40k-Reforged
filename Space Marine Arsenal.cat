@@ -355,10 +355,119 @@
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Jump Pack Captain" hidden="false" id="b2a7-00a5-9d28-2228">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <profiles>
+        <profile name="Jump Pack Captain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="538c-079b-79f2-00d2">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="On My Command" id="fbb0-31d7-440c-4ad4" hidden="false" type="rule" targetId="70e2-66ec-acb2-18d4"/>
+        <infoLink name="Fly" id="8da6-a046-ebbc-6d2c" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="27e2-e1cf-aab4-5ae3" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="9cae-eb27-f98f-b43d" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is equipped with either:" id="2ec1-b379-e9e2-e791" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolt Pistol" hidden="false" id="a1a0-5deb-1ef5-b949" type="selectionEntry" targetId="051d-4a2c-81be-094d" sortIndex="1"/>
+            <entryLink import="true" name="Flamer Pistol" hidden="false" id="d4e9-1413-5c96-57a6" type="selectionEntry" targetId="6ba7-fe2b-ac9d-446c" sortIndex="2"/>
+            <entryLink import="true" name="Plasma Pistol" hidden="false" id="d0cf-e733-ca44-d644" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="3"/>
+            <entryLink import="true" name="Chainsword" hidden="false" id="28ea-f8fe-ec7d-5314" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="4"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="608f-25a9-e03a-106e-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="608f-25a9-e03a-106e-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.profiles.Weapon"/>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="This model is also equipped with either:" id="05b3-b3a6-ebd3-45d2" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Power Fist" hidden="false" id="7955-dfec-a443-93ec" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="1"/>
+            <entryLink import="true" name="Power Sword" hidden="false" id="8f0b-e0f9-1afc-87a5" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="2"/>
+            <entryLink import="true" name="Thunder Hammer" hidden="false" id="5024-4b1c-7ecd-3d8c" type="selectionEntry" targetId="a26d-bbe4-6e1d-51af" sortIndex="3"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.profiles.Weapon">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="5024-4b1c-7ecd-3d8c" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.profiles.Weapon">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="5024-4b1c-7ecd-3d8c" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Bolt Pistol" hidden="false" id="051d-4a2c-81be-094d">
+      <profiles>
+        <profile name="Heavy Bolt Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2915-922f-4701-874e">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Flamer Pistol" hidden="false" id="6ba7-fe2b-ac9d-446c">
+      <profiles>
+        <profile name="Flamer Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="604d-fac1-585a-0431">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignores Cover</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="aa6e-c680-81e8-1779" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Thunder Hammer" hidden="false" id="a26d-bbe4-6e1d-51af">
+      <profiles>
+        <profile name="Thunder Hammer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b000-d891-2007-fab4">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
     <entryLink import="true" name="Gravis Captain" hidden="false" id="5289-6d89-4699-e7e5" type="selectionEntry" targetId="8c10-ce99-ce34-c11a"/>
     <entryLink import="true" name="Phobos Captain" hidden="false" id="135a-c472-f59f-d212" type="selectionEntry" targetId="2c75-f86c-f941-89b6"/>
+    <entryLink import="true" name="Jump Pack Captain" hidden="false" id="16df-7db9-e2e7-31f5" type="selectionEntry" targetId="b2a7-00a5-9d28-2228"/>
   </entryLinks>
 </catalogue>
