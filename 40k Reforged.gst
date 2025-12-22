@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="2" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="3" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -196,8 +196,7 @@ After an embarked unit’s Move step begins, that unit may Disembark. After a u
 
 To Disembark, place the embarked unit wholly within 3” of the unit it&apos;s embarked within, in unit coherency. If you cannot meet these conditions, remove models from the unit until you can. After a unit Disembarks, it cannot March or Fall Back this battle round.
 
-After an infantry (but not vehicle or monster) unit ends a March wholly within 3” of a friendly unit with Transport or Heavy Transport that does not have an embarked unit, it may Embark into that unit. To Embark a unit, remove it from the battlefield until it Disembarks.
-</description>
+After an infantry (but not vehicle or monster) unit ends a March wholly within 3” of a friendly unit with Transport or Heavy Transport that does not have an embarked unit, it may Embark into that unit. To Embark a unit, remove it from the battlefield until it Disembarks.</description>
     </rule>
     <rule name="Heal/Repair (X)" id="02c8-1ec5-cdab-2572" hidden="false">
       <description>Heal X or Repair X: For each X, if all models within this unit are at their starting Health and the unit has fewer models than it started with, then add 1 missing model with 1 Health remaining. Otherwise, add 1 Health to a model with fewer Health than it started with.</description>
@@ -237,6 +236,6 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     </rule>
   </sharedRules>
   <publications>
-    <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisher="https://github.com/KettleEngine/40k-Reforged"/>
+    <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisher="" publisherUrl="https://github.com/KettleEngine/40k-Reforged"/>
   </publications>
 </gameSystem>

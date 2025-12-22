@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -72,7 +72,7 @@
         <profile name="Bolt Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ae74-14f6-d7b1-5950">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
@@ -86,7 +86,7 @@
         <profile name="Bolt Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7ecd-8f62-2a52-d2c9">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
@@ -100,7 +100,7 @@
         <profile name="Neo-Volkite Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="dd7e-f54d-1ece-2d47">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
@@ -114,7 +114,7 @@
         <profile name="Plasma Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="feb1-abf1-df8e-4587">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
@@ -134,7 +134,7 @@
         <profile name="Power Sword" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0235-7859-850a-582a">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
@@ -148,7 +148,7 @@
         <profile name="Power Fist" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4a54-aac0-6f08-f47e">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
@@ -198,7 +198,12 @@
             <entryLink import="true" name="Heavy Bolt Rifle" hidden="false" id="72f2-2736-6dd1-ef48" type="selectionEntry" targetId="b92f-66fa-317d-4630" sortIndex="1"/>
           </entryLinks>
           <modifiers>
-            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="72f2-2736-6dd1-ef48.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="6b77-a743-6368-1c9e.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="1334-80d7-110c-f5c3.profiles.Weapon"/>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="1334-80d7-110c-f5c3.profiles.Weapon"/>
+            <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="72f2-2736-6dd1-ef48.profiles.Weapon"/>
+            <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="6b77-a743-6368-1c9e.profiles.Weapon"/>
           </modifiers>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Boltstorm Gauntlet and Power Fist" hidden="false" id="a1d9-ded1-419f-398c" sortIndex="2">
@@ -225,7 +230,10 @@
         </selectionEntryGroup>
         <selectionEntryGroup name="This model is also equipped with either:" id="7b7a-1e16-cb47-037f" hidden="false">
           <modifiers>
-            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="f7df-6cee-84fc-98da.profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="889e-28a1-287d-402c.profiles.Weapon"/>
+            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="889e-28a1-287d-402c.profiles.Weapon"/>
+            <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="f7df-6cee-84fc-98da.profiles.Weapon"/>
           </modifiers>
           <entryLinks>
             <entryLink import="true" name="Power Sword" hidden="false" id="f7df-6cee-84fc-98da" type="selectionEntry" targetId="dfed-4c14-cafd-626d"/>
@@ -247,7 +255,7 @@
         <profile name="Heavy Bolt Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="794a-1db6-bb4d-888e">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
@@ -261,7 +269,7 @@
         <profile name="Boltstorm Gauntlet" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5fdc-991a-571d-7453">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
@@ -275,7 +283,7 @@
         <profile name="Chainsword" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="78ae-ed81-7007-5f71">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
@@ -307,6 +315,7 @@
           </constraints>
           <modifiers>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.profiles.Weapon"/>
+            <modifier type="set" value="8" field="13c5-f234-c120-afc3" scope="parent" affects="entries.recursive.profiles.Weapon"/>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Combat Knife" hidden="false" id="5531-1344-c84d-273f" type="selectionEntry" targetId="a0e3-54ef-3ad5-3039">
@@ -315,6 +324,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fdb9-7594-a771-c82b-max" includeChildSelections="false"/>
           </constraints>
           <modifiers>
+            <modifier type="set" value="8" field="13c5-f234-c120-afc3" scope="parent" affects="entries.recursive.profiles.Weapon"/>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.profiles.Weapon"/>
           </modifiers>
         </entryLink>
@@ -332,7 +342,7 @@
         <profile name="Bolt Carbine" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="49ad-8647-f34d-a7a6">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
@@ -346,7 +356,7 @@
         <profile name="Combat Knife" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b8d5-77ba-517d-c360">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
@@ -395,6 +405,10 @@
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="d4e9-1413-5c96-57a6.profiles.Weapon"/>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="d0cf-e733-ca44-d644.profiles.Weapon"/>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="28ea-f8fe-ec7d-5314.profiles.Weapon"/>
+            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="a1a0-5deb-1ef5-b949.profiles.Weapon"/>
+            <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="d4e9-1413-5c96-57a6.profiles.Weapon"/>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="d0cf-e733-ca44-d644.profiles.Weapon"/>
+            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="28ea-f8fe-ec7d-5314.profiles.Weapon"/>
           </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="This model is also equipped with either:" id="05b3-b3a6-ebd3-45d2" hidden="false">
@@ -407,6 +421,9 @@
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="5024-4b1c-7ecd-3d8c.profiles.Weapon"/>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="7955-dfec-a443-93ec.profiles.Weapon"/>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="8f0b-e0f9-1afc-87a5.profiles.Weapon"/>
+            <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="8f0b-e0f9-1afc-87a5.profiles.Weapon"/>
+            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="5024-4b1c-7ecd-3d8c.profiles.Weapon"/>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="7955-dfec-a443-93ec.profiles.Weapon"/>
           </modifiers>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9604-6dbb-d3da-2cac-min" includeChildSelections="false"/>
@@ -420,7 +437,7 @@
         <profile name="Heavy Bolt Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2915-922f-4701-874e">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
@@ -434,7 +451,7 @@
         <profile name="Flamer Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="604d-fac1-585a-0431">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
@@ -454,7 +471,7 @@
         <profile name="Thunder Hammer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b000-d891-2007-fab4">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
@@ -491,6 +508,8 @@
           <modifiers>
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="2488-2304-8700-92de.profiles.Weapon"/>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="d7b9-6ed0-0ad4-9295.profiles.Weapon"/>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="2488-2304-8700-92de.profiles.Weapon"/>
+            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="d7b9-6ed0-0ad4-9295.profiles.Weapon"/>
           </modifiers>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bd90-f86e-f987-4427-min" includeChildSelections="false"/>
@@ -527,7 +546,7 @@
         <profile name="Storm Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="669d-3fa9-3a28-6abd">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
@@ -661,6 +680,8 @@
       <modifiers>
         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="a75a-2aba-e173-0061.profiles.Weapon"/>
         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="8a18-9f2a-13a8-9470.profiles.Weapon"/>
+        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="a75a-2aba-e173-0061.profiles.Weapon"/>
+        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="8a18-9f2a-13a8-9470.profiles.Weapon"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Force Weapon" hidden="false" id="3eee-b0b8-0616-25e0">
@@ -668,7 +689,7 @@
         <profile name="Force Weapon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7a10-0f2e-cb2d-ff84">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
@@ -721,6 +742,8 @@
       <modifiers>
         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="3631-8f33-6cd4-f460.profiles.Weapon"/>
         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="4ab5-c372-2a62-dc83.profiles.Weapon"/>
+        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="4ab5-c372-2a62-dc83.profiles.Weapon"/>
+        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="3631-8f33-6cd4-f460.profiles.Weapon"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Terminator Librarian" hidden="false" id="5189-1a94-7de4-cf89">
@@ -756,6 +779,8 @@
           <modifiers>
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="2488-2304-8700-92de.profiles.Weapon"/>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="d7b9-6ed0-0ad4-9295.profiles.Weapon"/>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="2488-2304-8700-92de.profiles.Weapon"/>
+            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="d7b9-6ed0-0ad4-9295.profiles.Weapon"/>
           </modifiers>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cdee-b6b4-503f-2873-min" includeChildSelections="false"/>
@@ -792,7 +817,7 @@
         <profile name="Boltgun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9ea0-3ecc-5045-fe66">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
@@ -840,6 +865,10 @@
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="6f9d-43cb-0ae3-6470.profiles.Weapon"/>
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="024e-5219-f791-bb4b.profiles.Weapon"/>
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="187f-1fec-7692-fc8b.profiles.Weapon"/>
+            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="422a-48d7-3129-34ad.profiles.Weapon"/>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="6f9d-43cb-0ae3-6470.profiles.Weapon"/>
+            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="024e-5219-f791-bb4b.profiles.Weapon"/>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="187f-1fec-7692-fc8b.profiles.Weapon"/>
           </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="This model is also equipped with either:" id="7baf-bd32-e1fd-410c" hidden="false">
@@ -852,6 +881,9 @@
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="c629-63d1-e1c6-7de1.profiles.Weapon"/>
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="7817-0386-5f62-565f.profiles.Weapon"/>
             <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="2e8c-9d95-c7c1-f570.profiles.Weapon"/>
+            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="c629-63d1-e1c6-7de1.profiles.Weapon"/>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="7817-0386-5f62-565f.profiles.Weapon"/>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="2e8c-9d95-c7c1-f570.profiles.Weapon"/>
           </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -874,7 +906,7 @@
         <profile name="Power Weapon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e5c4-bcb7-53a7-058b">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
@@ -906,6 +938,7 @@
           </constraints>
           <modifiers>
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.56aa-bc28-f2b5-4564.profiles.Weapon"/>
+            <modifier type="set" value="4" field="13c5-f234-c120-afc3" scope="parent" affects="entries.recursive.56aa-bc28-f2b5-4564.profiles.Weapon"/>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Combat Knife" hidden="false" id="bafb-3f0d-aee3-a9da" type="selectionEntry" targetId="a0e3-54ef-3ad5-3039">
@@ -915,6 +948,7 @@
           </constraints>
           <modifiers>
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.bafb-3f0d-aee3-a9da.profiles.Weapon"/>
+            <modifier type="set" value="8" field="13c5-f234-c120-afc3" scope="parent" affects="entries.recursive.bafb-3f0d-aee3-a9da.profiles.Weapon"/>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Bolt Pistol" hidden="false" id="c607-5347-7b9e-db13" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
@@ -924,6 +958,7 @@
           </constraints>
           <modifiers>
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" scope="parent" affects="entries.recursive.c607-5347-7b9e-db13.profiles.Weapon"/>
+            <modifier type="set" value="4" field="13c5-f234-c120-afc3" scope="parent" affects="entries.recursive.c607-5347-7b9e-db13.profiles.Weapon"/>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -963,6 +998,7 @@
           </constraints>
           <modifiers>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="7722-01ec-be87-38d1.profiles.Weapon"/>
+            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="7722-01ec-be87-38d1.profiles.Weapon"/>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Crozius Arcanum" hidden="false" id="4251-9b74-4f57-6be2" type="selectionEntry" targetId="29a2-c5cc-f5bc-1c53">
@@ -970,6 +1006,10 @@
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1013-befd-68f6-8079-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1013-befd-68f6-8079-max" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="4251-9b74-4f57-6be2.profiles.Weapon"/>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="4251-9b74-4f57-6be2.profiles.Weapon"/>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <constraints>
@@ -981,7 +1021,7 @@
         <profile name="Crozius Arcanum" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9827-ef89-3231-4a38">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
@@ -1042,6 +1082,9 @@
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a9d0-12cf-adac-c213-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9d0-12cf-adac-c213-max" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="1c49-1a94-d958-bad6.profiles.Weapon"/>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <constraints>
@@ -1075,7 +1118,6 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="This model is equipped with either:" id="c850-2f79-e4ad-6104" hidden="false">
           <entryLinks>
-            <entryLink import="true" name="Bolt Rifle" hidden="false" id="5409-3d74-cc2a-d243" type="selectionEntry" targetId="6802-fb1b-a361-36bb" sortIndex="1"/>
             <entryLink import="true" name="Neo-Volkite Pistol" hidden="false" id="52a6-1403-3885-9bea" type="selectionEntry" targetId="4e49-f9e0-6bfe-b308" sortIndex="2"/>
             <entryLink import="true" name="Plasma Pistol" hidden="false" id="4b88-5717-3abd-d427" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="3"/>
             <entryLink import="true" name="Bolt Pistol" hidden="false" id="839b-c5e4-7c88-cd39" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79" sortIndex="1"/>
@@ -1090,7 +1132,10 @@
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="52a6-1403-3885-9bea.profiles.Weapon"/>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="d0cf-e733-ca44-d644.profiles.Weapon"/>
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="1c63-94f1-c181-b4e2.profiles.Weapon"/>
-            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="5409-3d74-cc2a-d243.profiles.Weapon"/>
+            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="839b-c5e4-7c88-cd39.profiles.Weapon"/>
+            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="52a6-1403-3885-9bea.profiles.Weapon"/>
+            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="d0cf-e733-ca44-d644.profiles.Weapon"/>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="1c63-94f1-c181-b4e2.profiles.Weapon"/>
           </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1100,6 +1145,9 @@
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e67d-54e0-a046-297e-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e67d-54e0-a046-297e-max" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="feb9-bb1e-f35a-c99c.profiles.Weapon"/>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <constraints>
@@ -1125,6 +1173,7 @@
         <entryLink import="true" name="Bolt Pistol" hidden="false" id="7f06-1016-054b-3bb1" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
           <modifiers>
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="7f06-1016-054b-3bb1.profiles.Weapon"/>
+            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="7f06-1016-054b-3bb1.profiles.Weapon"/>
           </modifiers>
         </entryLink>
       </entryLinks>
