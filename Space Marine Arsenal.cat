@@ -617,6 +617,112 @@
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Librarian" hidden="false" id="8512-1f91-b6ea-095b">
+      <costs>
+        <cost name="pts" typeId="points" value="60"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="3c9f-5a69-2542-87bb" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="b057-b20e-0ffd-ad4a" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Librarian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0b4e-2db1-1e16-a912">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Bolt Pistol" hidden="false" id="8a18-9f2a-13a8-9470" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e820-9085-2f78-7931-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e820-9085-2f78-7931-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Force Weapon" hidden="false" id="a75a-2aba-e173-0061" type="selectionEntry" targetId="3eee-b0b8-0616-25e0">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="519f-d312-5d52-71f1-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="519f-d312-5d52-71f1-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="3a2d-824d-b276-0ca1" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (2)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Windfall of the Warp, Lightning Arc" id="7fe8-4f4c-2932-cea7" hidden="false" type="rule" targetId="3191-a1e1-1f37-0cdd"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="a75a-2aba-e173-0061.profiles.Weapon"/>
+        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="8a18-9f2a-13a8-9470.profiles.Weapon"/>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Force Weapon" hidden="false" id="3eee-b0b8-0616-25e0">
+      <profiles>
+        <profile name="Force Weapon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7a10-0f2e-cb2d-ff84">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Phobos Librarian" hidden="false" id="3b63-fc62-95b5-795c">
+      <costs>
+        <cost name="pts" typeId="points" value="60"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="11fd-d62f-dbc4-6a1d" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="6c1d-a66e-27a6-8a0c" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Phobos Librarian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="d574-1ee5-7848-bf28">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Bolt Pistol" hidden="false" id="3631-8f33-6cd4-f460" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5108-371e-50a6-f819-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5108-371e-50a6-f819-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Force Weapon" hidden="false" id="4ab5-c372-2a62-dc83" type="selectionEntry" targetId="3eee-b0b8-0616-25e0">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0313-ac2a-fe84-a455-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0313-ac2a-fe84-a455-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="aa22-d956-9a02-6d90" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (2)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Windfall of the Warp, Lightning Arc" id="1039-6728-e20c-4723" hidden="false" type="rule" targetId="3191-a1e1-1f37-0cdd"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="3631-8f33-6cd4-f460.profiles.Weapon"/>
+        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="4ab5-c372-2a62-dc83.profiles.Weapon"/>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -624,5 +730,7 @@
     <entryLink import="true" name="Phobos Captain" hidden="false" id="135a-c472-f59f-d212" type="selectionEntry" targetId="2c75-f86c-f941-89b6"/>
     <entryLink import="true" name="Jump Pack Captain" hidden="false" id="16df-7db9-e2e7-31f5" type="selectionEntry" targetId="b2a7-00a5-9d28-2228"/>
     <entryLink import="true" name="Terminator Captain" hidden="false" id="ec32-98c5-be55-4362" type="selectionEntry" targetId="f126-7aa0-78a3-2817"/>
+    <entryLink import="true" name="Librarian" hidden="false" id="fccb-db96-a05f-3619" type="selectionEntry" targetId="8512-1f91-b6ea-095b"/>
+    <entryLink import="true" name="Phobos Librarian" hidden="false" id="c3eb-cbdd-57c9-039e" type="selectionEntry" targetId="3b63-fc62-95b5-795c"/>
   </entryLinks>
 </catalogue>

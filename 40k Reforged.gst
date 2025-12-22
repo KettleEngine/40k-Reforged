@@ -227,6 +227,9 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     <rule name="One Shot" id="0c06-9eed-2a45-b772" hidden="false">
       <description>You may only select a target for this weapon once per battle.</description>
     </rule>
+    <rule name="Windfall of the Warp, Lightning Arc" id="3191-a1e1-1f37-0cdd" hidden="false">
+      <description>After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select up to 2 different visible enemy units within 16”. For each selected unit, it suffers D3 SW.</description>
+    </rule>
   </sharedRules>
   <publications>
     <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisher="https://github.com/KettleEngine/40k-Reforged"/>
