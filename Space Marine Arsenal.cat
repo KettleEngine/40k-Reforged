@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="16" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -2835,18 +2835,6 @@
                         <cost name="pts" typeId="points" value="10"/>
                       </costs>
                     </entryLink>
-                    <entryLink import="true" name="Multi-Melta" hidden="false" id="c7f9-37dd-bed9-bde4" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f" sortIndex="3">
-                      <modifiers>
-                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="6fae-9098-94c0-e8c8" shared="true" id="4409-d0ce-97ef-e545" includeChildSelections="false"/>
-                      </constraints>
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                    </entryLink>
                   </entryLinks>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4396-523a-94ce-c6a8-min" includeChildSelections="false"/>
@@ -2854,6 +2842,36 @@
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Eradicator w/ Multi-Melta" hidden="false" id="aeb3-f8cf-7d15-5e62">
+              <profiles>
+                <profile name="Eradicator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="2ca2-31cb-c616-e0f3">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2++</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <entryLinks>
+                <entryLink import="true" name="Multi-Melta" hidden="false" id="2f94-6a3c-bef8-7c75" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
+                  <modifiers>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="6fae-9098-94c0-e8c8" shared="true" id="3022-425d-c511-a5a5" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b5b2-eb51-bfa1-f6f4" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -2920,7 +2938,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Eliminators" id="61cd-5d84-74c3-6998" hidden="false" defaultSelectionEntryId="030f-f8b1-5c25-0575">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Eliminator" hidden="false" id="030f-f8b1-5c25-0575">
+            <selectionEntry type="upgrade" import="true" name="Eliminator w/ Bolt Sniper (Hyperfrag)" hidden="false" id="030f-f8b1-5c25-0575">
               <profiles>
                 <profile name="Eliminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="a27c-6cda-1317-3141">
                   <characteristics>
@@ -2939,51 +2957,150 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afb5-9c5a-a169-0d8f-max" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
-              </entryLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Weapon:" id="1a4d-8558-3e5b-0b46" hidden="false">
-                  <entryLinks>
-                    <entryLink import="true" name="Bolt Sniper (Executioner)" hidden="false" id="ebdd-5de5-e14c-cc96" type="selectionEntry" targetId="4093-5795-6ad2-5141" sortIndex="2">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="0700-6874-3f0e-f805" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Bolt Sniper (Hyperfrag)" hidden="false" id="2738-4085-96db-1a4c" type="selectionEntry" targetId="4241-40f4-847f-869d" sortIndex="1">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="8b70-f58d-1f14-43f8" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Bolt Sniper (Mortis Bolts)" hidden="false" id="2782-756d-08d3-1a75" type="selectionEntry" targetId="3dde-2dbb-b591-030b" sortIndex="3">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="551d-7e9c-f457-2a3a" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Las Fusil" hidden="false" id="3197-a302-d06f-aeb6" type="selectionEntry" targetId="b5d0-b2e8-345d-d922" sortIndex="4">
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Bolt Carbine w/ Covering Fire" hidden="false" id="b84a-ec69-e4ca-3d26" type="selectionEntry" targetId="b303-b907-cf42-6121" sortIndex="5">
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="eda6-4d7c-3b1f-afe5" includeChildSelections="false"/>
-                      </constraints>
-                      <modifiers>
-                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
+                <entryLink import="true" name="Bolt Sniper (Hyperfrag)" hidden="false" id="2738-4085-96db-1a4c" type="selectionEntry" targetId="4241-40f4-847f-869d">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c1fa-3a95-a400-ff12-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c1fa-3a95-a400-ff12-max" includeChildSelections="false"/>
                   </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d327-0079-75c3-7d8d" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Eliminator w/ Bolt Sniper (Executioner)" hidden="false" id="c667-87d9-42ec-7d6f">
+              <profiles>
+                <profile name="Eliminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1fcc-c697-4a8b-f69e">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Camo Cloaks" hidden="false" id="d1b1-52ca-dc1d-c247" type="selectionEntry" targetId="16c2-f1b8-de80-f4c2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="687c-c665-c5cb-6b5e-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="687c-c665-c5cb-6b5e-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Bolt Sniper (Executioner)" hidden="false" id="3f27-680c-3d2a-649c" type="selectionEntry" targetId="4093-5795-6ad2-5141">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9042-160f-a705-68d6-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9042-160f-a705-68d6-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f171-677b-9c12-ff40" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Eliminator w/ Las Fusil" hidden="false" id="ec30-f30b-92d3-1b2a">
+              <profiles>
+                <profile name="Eliminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="2e83-1973-5013-79f7">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Camo Cloaks" hidden="false" id="f870-eb01-4f33-e437" type="selectionEntry" targetId="16c2-f1b8-de80-f4c2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="af59-f42d-2e01-7610-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af59-f42d-2e01-7610-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Las Fusil" hidden="false" id="0e3a-e979-073e-15ad" type="selectionEntry" targetId="b5d0-b2e8-345d-d922">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c36-30c7-41f8-c9f4-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c36-30c7-41f8-c9f4-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Eliminator w/ Bolt Sniper (Mortis Bolts)" hidden="false" id="c47a-dc7c-1738-5666">
+              <profiles>
+                <profile name="Eliminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0aed-ddbe-5d9b-8007">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Camo Cloaks" hidden="false" id="623c-1dda-b005-96b5" type="selectionEntry" targetId="16c2-f1b8-de80-f4c2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d728-7c35-200d-5dcb-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d728-7c35-200d-5dcb-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Bolt Sniper (Mortis Bolts)" hidden="false" id="b459-e9db-223c-40bc" type="selectionEntry" targetId="3dde-2dbb-b591-030b">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="9d12-f052-c9f8-be5b" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="292c-c643-3c56-19de-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="292c-c643-3c56-19de-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="909b-c510-92fd-dafc" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Eliminator w/ Bolt Carbine" hidden="false" id="738e-7368-a7d0-7cdb">
+              <profiles>
+                <profile name="Eliminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="72d2-d635-eb98-7de0">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Camo Cloaks" hidden="false" id="1ed4-13ad-6e57-f3b1" type="selectionEntry" targetId="16c2-f1b8-de80-f4c2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="93ae-df33-2803-0680-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="93ae-df33-2803-0680-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Bolt Carbine w/ Covering Fire" hidden="false" id="b9c4-14b7-f974-ecc7" type="selectionEntry" targetId="b303-b907-cf42-6121">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1f3a-3bd3-8fdb-bcc6-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f3a-3bd3-8fdb-bcc6-max" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f692-5716-2a99-463d" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="3c10-3b6f-ca1b-9cd3-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="3c10-3b6f-ca1b-9cd3-max" includeChildSelections="false"/>
+          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
