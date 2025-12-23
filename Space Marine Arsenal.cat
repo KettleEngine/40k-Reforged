@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -2801,6 +2801,94 @@
         <categoryLink targetId="205c-3072-067b-d808" id="d96f-bc10-31d9-ae19" primary="false" name="Infantry"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Eradicators Squad" hidden="false" id="6fae-9098-94c0-e8c8">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Eradicators" id="24cb-b011-06ac-5286" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Eradicator" hidden="false" id="b9a0-d241-f603-80e9">
+              <profiles>
+                <profile name="Eradicator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="c6ec-fcdc-98ef-1df6">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2++</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="each model may replace its weapon with:" id="7726-8d9a-164a-df4a" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Melta Rifle" hidden="false" id="d743-2f9c-9db3-4dd5" type="selectionEntry" targetId="1790-e53b-0d70-8302" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Heavy Melta Rifle" hidden="false" id="186f-8dcc-2616-4258" type="selectionEntry" targetId="eb81-746d-1ee0-c6ff" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Multi-Melta" hidden="false" id="c7f9-37dd-bed9-bde4" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="4409-d0ce-97ef-e545" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4396-523a-94ce-c6a8-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4396-523a-94ce-c6a8-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="e8d1-d6f7-2324-11f5-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e8d1-d6f7-2324-11f5-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="1326-d9d6-052d-9deb" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="01a7-f1ec-455b-6f48" primary="false" name="Infantry"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Melta Rifle" hidden="false" id="1790-e53b-0d70-8302">
+      <profiles>
+        <profile name="Melta Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="dfe4-17de-16f9-ece3">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Melta Rifle" hidden="false" id="eb81-746d-1ee0-c6ff">
+      <profiles>
+        <profile name="Heavy Melta Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f602-02e4-5490-5d3c">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -2822,5 +2910,6 @@
     <entryLink import="true" name="Assault Intercessors Squad" hidden="false" id="7995-04c6-734e-dbcf" type="selectionEntry" targetId="72f0-a0f8-8fae-5a8c"/>
     <entryLink import="true" name="Jump Assault Intercessors Squad" hidden="false" id="a28c-f798-1ed5-7e74" type="selectionEntry" targetId="4aa0-c017-3a42-e00e"/>
     <entryLink import="true" name="Heavy Intercessors Squad" hidden="false" id="7c50-9a43-169e-43f1" type="selectionEntry" targetId="ba06-0962-484b-8cb5"/>
+    <entryLink import="true" name="Eradicators Squad" hidden="false" id="6df5-7169-0205-2273" type="selectionEntry" targetId="6fae-9098-94c0-e8c8"/>
   </entryLinks>
 </catalogue>
