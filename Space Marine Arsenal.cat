@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -3891,6 +3891,166 @@
         <infoLink name="Overcharge" id="20ee-cf7e-8f83-1b9b" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Superfrag Rocket Launcher" hidden="false" id="ed18-c020-35e8-72cb">
+      <profiles>
+        <profile name="Superfrag Rocket Launcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b9c8-2f43-69eb-d130">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Castellan Launcher" hidden="false" id="32a9-e1cd-6292-dcb9" type="selectionEntry" targetId="ad60-7777-e66c-4c0c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4f6d-a4d9-c027-aef3-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f6d-a4d9-c027-aef3-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Barrage" id="7332-85e3-743c-7b98" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Superkrak Rocket Launcher" hidden="false" id="df6d-a27b-1dda-5db0">
+      <profiles>
+        <profile name="Superkrak Rocket Launcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="53fd-aae5-8c05-5781">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Castellan Launcher" hidden="false" id="95b9-31c5-3d08-56f7" type="selectionEntry" targetId="ad60-7777-e66c-4c0c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc26-96ca-c830-8a79-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc26-96ca-c830-8a79-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Castellan Launcher" hidden="false" id="ad60-7777-e66c-4c0c">
+      <profiles>
+        <profile name="Castellan Launcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e337-9536-0441-99b9">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Barrage" id="358a-0a1d-0f79-93b5" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Vengor Launcher" hidden="false" id="606c-d310-e648-810c">
+      <profiles>
+        <profile name="Vengor Launcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="acc0-b807-a397-d405">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Indirect</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Desolation Squad" hidden="false" id="c5fe-60d6-f084-bdb7">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Desolation Marines" id="5e0e-25a2-13e9-305e" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Desolation Marine" hidden="false" id="0343-d4dd-89e2-194a">
+              <profiles>
+                <profile name="Desolation Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6e07-d101-5b3d-ca9c">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Each model is equipped with either:" id="2267-7cc7-b613-a197" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Superfrag Rocket Launcher" hidden="false" id="7abd-74d0-be0a-e097" type="selectionEntry" targetId="ed18-c020-35e8-72cb"/>
+                    <entryLink import="true" name="Superkrak Rocket Launcher" hidden="false" id="b0d9-fd9b-93f2-8bf2" type="selectionEntry" targetId="df6d-a27b-1dda-5db0"/>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6d12-ea34-19a3-fa2d-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d12-ea34-19a3-fa2d-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Desolation Marine w/ Vengor Launcher" hidden="false" id="bd95-c5fc-00ec-1c11">
+              <profiles>
+                <profile name="Desolation Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="42ce-b550-fa75-d110">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ed7-b6cd-cc98-f1f7" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Vengor Launcher" hidden="false" id="b27b-f207-0060-46bb" type="selectionEntry" targetId="606c-d310-e648-810c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6e48-e057-622c-aaef-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6e48-e057-622c-aaef-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Castellan Launcher" hidden="false" id="6b57-fd32-5ac4-5f94" type="selectionEntry" targetId="ad60-7777-e66c-4c0c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8ea2-3f76-35ea-8734-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ea2-3f76-35ea-8734-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="9438-ce8e-32d3-4e39" includeChildSelections="false"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="2209-c589-074f-3323" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -3917,6 +4077,7 @@
     <entryLink import="true" name="Riever Squad" hidden="false" id="12e7-7347-368f-a5bc" type="selectionEntry" targetId="b31f-9637-df9f-85e5"/>
     <entryLink import="true" name="Devastator Squad" hidden="false" id="bf7f-e50a-e0a7-8d36" type="selectionEntry" targetId="58f1-68ba-4d8a-8b11"/>
     <entryLink import="true" name="Hellbasters Squad" hidden="false" id="fae0-1780-73dd-fe1a" type="selectionEntry" targetId="36dc-e3f0-17af-c4b5"/>
+    <entryLink import="true" name="Desolation Squad" hidden="false" id="cd26-2520-349b-b970" type="selectionEntry" targetId="c5fe-60d6-f084-bdb7"/>
   </entryLinks>
   <sharedRules>
     <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
