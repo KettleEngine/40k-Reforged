@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="28" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="29" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -5362,6 +5362,258 @@
         <cost name="pts" typeId="points" value="90"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Accelerator Autocannon" hidden="false" id="23d3-333b-8a90-588a">
+      <profiles>
+        <profile name="Accelerator Autocannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7357-b0b5-6f83-8983">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive" id="3dd8-7621-be9a-4111" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Suppressor Squad" hidden="false" id="c587-01ec-2269-0103">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Suppressors" id="bdf7-e36d-95f7-886d" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Suppressor" hidden="false" id="738c-31fa-ead7-5fe9">
+              <profiles>
+                <profile name="Suppressor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5f70-4765-5200-9b17">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3++</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Accelerator Autocannon" hidden="false" id="7687-b857-34fa-89b4" type="selectionEntry" targetId="23d3-333b-8a90-588a">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c5ea-737f-8365-368a-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c5ea-737f-8365-368a-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="f385-fd92-ae27-9be9-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="f385-fd92-ae27-9be9-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="3f42-099c-f4aa-da21" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="2897-b993-4f39-ffcd" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Deep Strike" id="888a-df60-7762-5357" hidden="false" type="rule" targetId="a184-8710-3dda-7fdc"/>
+        <infoLink name="Fly" id="f410-ca73-d9de-82d9" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Inceptors Squad" hidden="false" id="e4aa-17c0-c701-74f4">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Inceptors" id="17c9-3e61-d3f9-a4c2" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inceptor" hidden="false" id="b792-2fa5-421a-58e9">
+              <profiles>
+                <profile name="Inceptor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="8bb2-e170-f149-c676">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3++</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Each model is equipped with either:" id="3f99-b880-d8e9-1ed2" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Assault Bolters" hidden="false" id="2dd0-01f0-3560-3038" type="selectionEntry" targetId="e38b-2332-7488-713b"/>
+                    <entryLink import="true" name="Plasma Exterminators" hidden="false" id="fbfa-fbfe-d445-23dc" type="selectionEntry" targetId="356d-71fa-97f1-6370"/>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e5a3-19e8-bd51-8ee1-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e5a3-19e8-bd51-8ee1-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="b791-c076-8ede-6662-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="b791-c076-8ede-6662-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="518e-13e7-39b7-45f8" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="53aa-c8fe-ed8b-b56d" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Deep Strike" id="6afd-391d-5f05-6a06" hidden="false" type="rule" targetId="a184-8710-3dda-7fdc"/>
+        <infoLink name="Fly" id="110f-31f6-9a8b-1eab" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Plasma Exterminators" hidden="false" id="356d-71fa-97f1-6370">
+      <profiles>
+        <profile name="Plasma Exterminators" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="686a-8971-adf0-9e02">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Overcharge" id="11ac-e75d-8631-7196" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Assault Bolters" hidden="false" id="e38b-2332-7488-713b">
+      <profiles>
+        <profile name="Assault Bolters" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="18cd-b191-ff9f-87db">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Aggressors Squad" hidden="false" id="111a-71d9-3241-3947">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Aggressors" id="fe82-1565-8bab-e87d" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Aggressor" hidden="false" id="e798-2f9e-cb9d-0202">
+              <profiles>
+                <profile name="Aggressor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="7566-49d3-8e4f-5dbc">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2++</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Each model is equipped with either:" id="2c68-3d23-7b01-83df" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Boltstorm Gauntlets and Power Fists" hidden="false" id="5ba7-5800-12e6-945f">
+                      <entryLinks>
+                        <entryLink import="true" name="Boltstorm Gauntlet" hidden="false" id="18f0-baa8-6c3b-0d68" type="selectionEntry" targetId="0965-9622-6286-24e8">
+                          <modifiers>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d9ef-4d13-c4be-5804-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d9ef-4d13-c4be-5804-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Power Fist" hidden="false" id="073b-a8f2-7067-12e1" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d">
+                          <modifiers>
+                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a561-41ac-a2e2-2223-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a561-41ac-a2e2-2223-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Flamestorm Gauntlets and Power Fists" hidden="false" id="b998-25f5-edf4-aa21">
+                      <entryLinks>
+                        <entryLink import="true" name="Power Fist" hidden="false" id="6fbe-d240-8008-80f1" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d">
+                          <modifiers>
+                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4c66-c80c-e0dd-1efb-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c66-c80c-e0dd-1efb-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Flamestorm Gauntlets " hidden="false" id="c169-a605-a5c2-3088" type="selectionEntry" targetId="d2c1-85dc-10f1-f7e3">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2f85-fa09-88c5-ed72-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f85-fa09-88c5-ed72-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="486b-c33e-3d05-3999-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="486b-c33e-3d05-3999-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="04c8-be72-3254-f01e-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="04c8-be72-3254-f01e-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="b1d4-bb91-893b-9929" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="4f14-9383-900b-f4c8" primary="false" name="Infantry"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Flamestorm Gauntlets " hidden="false" id="d2c1-85dc-10f1-f7e3">
+      <profiles>
+        <profile name="Flamestorm Gauntlets " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d342-9a6a-2c56-77dd">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="bf8b-3d84-a8f5-6033" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -5395,6 +5647,8 @@
     <entryLink import="true" name="Bladeguard Veteran Squad" hidden="false" id="89ee-7516-d90d-3a9c" type="selectionEntry" targetId="d113-bf7d-a0fb-1ade"/>
     <entryLink import="true" name="Terminators Squad" hidden="false" id="e4ab-1ae8-f0d6-4705" type="selectionEntry" targetId="d63c-ad9b-d5b9-ab11"/>
     <entryLink import="true" name="Assault Terminators Squad" hidden="false" id="1729-0964-a234-deae" type="selectionEntry" targetId="c9e2-3a0d-a225-d951"/>
+    <entryLink import="true" name="Suppressor Squad" hidden="false" id="cc7b-5a6f-be58-043b" type="selectionEntry" targetId="c587-01ec-2269-0103"/>
+    <entryLink import="true" name="Inceptors Squad" hidden="false" id="6bd4-2222-ad4a-5d4f" type="selectionEntry" targetId="e4aa-17c0-c701-74f4"/>
   </entryLinks>
   <sharedRules>
     <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
