@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -2898,6 +2898,215 @@
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Camo Cloaks" hidden="false" id="16c2-f1b8-de80-f4c2">
+      <profiles>
+        <profile name="Camo Cloaks" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="6a34-edd3-b381-2969">
+          <attributes>
+            <attribute name="Description" typeId="51c0-d8f9-d891-a366">For each ranged attack that targets this unit, if that attack is benefiting from cover, add 1 to the Saving Throw.</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Covering Fire" hidden="false" id="1b5a-3792-cb7a-ed8b">
+      <profiles>
+        <profile name="Covering Fire" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="1759-116e-aaf9-9d04">
+          <attributes>
+            <attribute name="Description" typeId="51c0-d8f9-d891-a366">After an enemy unit finishes a March within 16” and visible to this unit, you may roll a D6. On a 4+, that enemy unit is Suppressed 2D3. Then, this unit may Fall Back.</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Eliminators Squad" hidden="false" id="3653-67c8-4bcc-7d9e">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Eliminators" id="61cd-5d84-74c3-6998" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Eliminator" hidden="false" id="030f-f8b1-5c25-0575">
+              <profiles>
+                <profile name="Eliminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="a27c-6cda-1317-3141">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Camo Cloaks" hidden="false" id="2a3b-e67a-57c4-1d4b" type="selectionEntry" targetId="16c2-f1b8-de80-f4c2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="afb5-9c5a-a169-0d8f-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afb5-9c5a-a169-0d8f-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon:" id="1a4d-8558-3e5b-0b46" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Bolt Sniper (Executioner)" hidden="false" id="ebdd-5de5-e14c-cc96" type="selectionEntry" targetId="4093-5795-6ad2-5141" sortIndex="2">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="22ee-8c88-cc2b-a5b6" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Bolt Sniper (Hyperfrag)" hidden="false" id="2738-4085-96db-1a4c" type="selectionEntry" targetId="4241-40f4-847f-869d" sortIndex="1">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="64d9-19bd-13be-10e4" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Bolt Sniper (Mortis Bolts)" hidden="false" id="2782-756d-08d3-1a75" type="selectionEntry" targetId="3dde-2dbb-b591-030b" sortIndex="3">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="5729-bc05-c4e0-912d" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Las Fusil" hidden="false" id="3197-a302-d06f-aeb6" type="selectionEntry" targetId="b5d0-b2e8-345d-d922" sortIndex="4">
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Bolt Carbine w/ Covering Fire" hidden="false" id="b84a-ec69-e4ca-3d26" type="selectionEntry" targetId="b303-b907-cf42-6121" sortIndex="5">
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="eda6-4d7c-3b1f-afe5" includeChildSelections="false"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3034-83a9-90c4-4fc8-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3034-83a9-90c4-4fc8-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Forward Deploy" id="ca1e-dffa-9f51-5e33" hidden="false" type="rule" targetId="b433-60cc-2ed2-658f"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="76f3-7167-371e-3f9e" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="7596-973c-cf81-3b88" primary="false" name="Infantry"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bolt Sniper (Hyperfrag)" hidden="false" id="4241-40f4-847f-869d">
+      <profiles>
+        <profile name="Bolt Sniper (Hyperfrag)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b2f3-e9c0-a56a-dad2">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bolt Sniper (Executioner)" hidden="false" id="4093-5795-6ad2-5141">
+      <profiles>
+        <profile name="Bolt Sniper (Executioner)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8a3d-a46f-e38a-5b4d">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover, Precision 5+</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="d722-6c59-594e-982e" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Precision (X+)" id="f64f-4bda-543f-d961" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
+          <modifiers>
+            <modifier type="set" value="Precision (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bolt Sniper (Mortis Bolts)" hidden="false" id="3dde-2dbb-b591-030b">
+      <infoLinks>
+        <infoLink name="Precision (X+)" id="8235-a012-bee3-625e" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
+          <modifiers>
+            <modifier type="set" value="Precision (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <profiles>
+        <profile name="Bolt Sniper (Mortis Bolts)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a600-8d13-880c-3d03">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Precision 5+, For each attack made for this weapon, a Hit Roll of 6 doubles the damage of that attack.</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Las Fusil" hidden="false" id="b5d0-b2e8-345d-d922">
+      <profiles>
+        <profile name="Las Fusil" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0cbe-f3cb-bf0c-758d">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Precision 5+
+</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Precision (X+)" id="c4f0-45de-c6cf-63ab" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
+          <modifiers>
+            <modifier type="set" value="Precision (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bolt Carbine w/ Covering Fire" hidden="false" id="b303-b907-cf42-6121">
+      <profiles>
+        <profile name="Bolt Carbine" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="90ce-a104-2788-040a">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Covering Fire" hidden="false" id="6e73-d02b-a98b-52a6" type="selectionEntry" targetId="1b5a-3792-cb7a-ed8b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="377c-a5af-0ca8-acc2-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="377c-a5af-0ca8-acc2-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -2920,5 +3129,23 @@
     <entryLink import="true" name="Jump Assault Intercessors Squad" hidden="false" id="a28c-f798-1ed5-7e74" type="selectionEntry" targetId="4aa0-c017-3a42-e00e"/>
     <entryLink import="true" name="Heavy Intercessors Squad" hidden="false" id="7c50-9a43-169e-43f1" type="selectionEntry" targetId="ba06-0962-484b-8cb5"/>
     <entryLink import="true" name="Eradicators Squad" hidden="false" id="6df5-7169-0205-2273" type="selectionEntry" targetId="6fae-9098-94c0-e8c8"/>
+    <entryLink import="true" name="Eliminators Squad" hidden="false" id="5a06-8347-3f81-6465" type="selectionEntry" targetId="3653-67c8-4bcc-7d9e"/>
   </entryLinks>
+  <sharedRules>
+    <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
+      <description>For each attack made by this unit, a Wound Roll of 6 causes and additional wound.</description>
+    </rule>
+    <rule name="Windfall of the Warp, Lightning Arc" id="3191-a1e1-1f37-0cdd" hidden="false">
+      <description>After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select up to 2 different visible enemy units within 16”. For each selected unit, it suffers D3 SW.</description>
+    </rule>
+    <rule name="On My Command" id="70e2-66ec-acb2-18d4" hidden="false">
+      <description>While enemy units are visible to this unit, for each attack made by your units that targets those units, add 1 to the Hit Roll of that attack. Attacks can only be affected by an ability with this name once.</description>
+    </rule>
+    <rule name="Litany of Hate" id="6f33-c1c9-bda5-9cce" hidden="false">
+      <description>For each attack made for a friendly unit within 12&quot; of this unit which targets an enemy unit within 12&quot;, if that attack&apos;s S is equal to or greater than the target&apos;s T, add 1 to the Wound Roll of that attack.</description>
+    </rule>
+    <rule name="Deliberate Tactician" id="5ef9-b670-dd95-d45f" hidden="false">
+      <description>For each attack made by this unit, reroll a Hit Roll of 1 of that attack.</description>
+    </rule>
+  </sharedRules>
 </catalogue>

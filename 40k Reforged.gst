@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="3" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="4" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -127,9 +127,6 @@
     </entryLink>
   </entryLinks>
   <sharedRules>
-    <rule name="On My Command" id="70e2-66ec-acb2-18d4" hidden="false">
-      <description>While enemy units are visible to this unit, for each attack made by your units that targets those units, add 1 to the Hit Roll of that attack. Attacks can only be affected by an ability with this name once.</description>
-    </rule>
     <rule name="Overcharge" id="e676-2d17-e4bf-f5e8" hidden="false">
       <description>After selecting targets for this weapon’s attacks, you may ‘overcharge’ them. If you
 do, the Damage of those attacks improves by D3 and Wound Rolls of 4+ are always successful. Hit Rolls and Wound Rolls for those attacks cannot be modified, rerolled or cause additional effects. After a Wound Roll fails, the unit of this weapon’s model loses Health equal to the D of that attack, starting with the model equipped with this weapon. Health lost this way cannot be Repaired/Healed.</description>
@@ -222,20 +219,8 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     <rule name="One Shot" id="0c06-9eed-2a45-b772" hidden="false">
       <description>You may only select a target for this weapon once per battle.</description>
     </rule>
-    <rule name="Windfall of the Warp, Lightning Arc" id="3191-a1e1-1f37-0cdd" hidden="false">
-      <description>After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select up to 2 different visible enemy units within 16”. For each selected unit, it suffers D3 SW.</description>
-    </rule>
-    <rule name="Deliberate Tactician" id="5ef9-b670-dd95-d45f" hidden="false">
-      <description>For each attack made by this unit, reroll a Hit Roll of 1 of that attack.</description>
-    </rule>
-    <rule name="Litany of Hate" id="6f33-c1c9-bda5-9cce" hidden="false">
-      <description>For each attack made for a friendly unit within 12&quot; of this unit which targets an enemy unit within 12&quot;, if that attack&apos;s S is equal to or greater than the target&apos;s T, add 1 to the Wound Roll of that attack.</description>
-    </rule>
-    <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
-      <description>For each attack made by this unit, a Wound Roll of 6 causes and additional wound.</description>
-    </rule>
   </sharedRules>
   <publications>
-    <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisher="" publisherUrl="https://github.com/KettleEngine/40k-Reforged"/>
+    <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisherUrl="https://github.com/KettleEngine/40k-Reforged"/>
   </publications>
 </gameSystem>
