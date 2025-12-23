@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="20" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -3507,7 +3507,7 @@
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Can replace Bolter for:" id="7189-947d-9559-c9a4" hidden="false">
+                <selectionEntryGroup name="Can replace Bolter for:" id="7189-947d-9559-c9a4" hidden="false" defaultSelectionEntryId="9eff-d3a5-dbba-ecf8">
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Combi-Bolter" id="f0f3-5b61-98b9-0d0b" hidden="false">
                       <constraints>
@@ -3699,6 +3699,9 @@
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                         <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="090b-d864-8d40-2360" includeChildSelections="false"/>
+                      </constraints>
                     </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
