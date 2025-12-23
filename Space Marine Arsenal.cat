@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -2865,7 +2865,8 @@
                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                   <constraints>
-                    <constraint type="max" value="1" field="selections" scope="6fae-9098-94c0-e8c8" shared="true" id="3022-425d-c511-a5a5" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="6fae-9098-94c0-e8c8" shared="true" id="3022-425d-c511-a5a5-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="6fae-9098-94c0-e8c8" shared="true" id="3022-425d-c511-a5a5-max" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -3224,6 +3225,158 @@
         </entryLink>
       </entryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Shock Grenade" hidden="false" id="fb45-0b07-1d60-a161">
+      <profiles>
+        <profile name="Shock Grenade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7453-4c8d-646a-73f7">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One-Shot, Indirect, Suppressive</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive" id="2ab9-2b05-5ba2-8aa7" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="One Shot" id="b776-fc37-a66a-a53d" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Indirect" id="8978-b18e-7726-460f" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Riever Squad" hidden="false" id="b31f-9637-df9f-85e5">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Rievers" id="25f5-52eb-5104-ba65" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Riever" hidden="false" id="f7b6-f687-3d8b-1899">
+              <profiles>
+                <profile name="Riever" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="d19b-e1d6-6077-18f0">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Shock Grenade" hidden="false" id="4626-9107-948e-8300" type="selectionEntry" targetId="fb45-0b07-1d60-a161">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f478-0efc-f50d-207d-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f478-0efc-f50d-207d-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Heavy Bolt Pistol" hidden="false" id="891f-2208-49b9-b819" type="selectionEntry" targetId="051d-4a2c-81be-094d">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8ea4-98f1-95a7-565f-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ea4-98f1-95a7-565f-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Each model is also equipped with either:" id="6d59-5637-8ea9-c9e2" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Bolt Carbine" hidden="false" id="6309-7079-fb3e-9bba" type="selectionEntry" targetId="71d2-7131-6b87-c38b">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Combat Knife" hidden="false" id="2029-786d-8ad1-5399" type="selectionEntry" targetId="a0e3-54ef-3ad5-3039">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4dbe-fb7c-3a60-ee3c-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4dbe-fb7c-3a60-ee3c-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Riever Sergeant" hidden="false" id="28f0-7a1d-729d-bad8">
+              <profiles>
+                <profile name="Riever" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3858-a3e8-64e0-60a0">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Shock Grenade" hidden="false" id="f94e-d680-7813-1153" type="selectionEntry" targetId="fb45-0b07-1d60-a161">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1d24-6981-f7a0-2bb0-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d24-6981-f7a0-2bb0-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Heavy Bolt Pistol" hidden="false" id="3991-61c6-e128-faeb" type="selectionEntry" targetId="051d-4a2c-81be-094d">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6698-474d-3f92-5581-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6698-474d-3f92-5581-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Bolt Carbine" hidden="false" id="31b0-6e71-95ca-041f" type="selectionEntry" targetId="71d2-7131-6b87-c38b">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0320-10a1-0ca1-6b2c-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0320-10a1-0ca1-6b2c-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Combat Knife" hidden="false" id="e9af-b7d3-a0ad-2cfa" type="selectionEntry" targetId="a0e3-54ef-3ad5-3039">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b25a-96ab-f6e9-bf18-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b25a-96ab-f6e9-bf18-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0fd6-5167-b01b-fafc" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="e7a7-23e3-1e78-195d-min" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="e7a7-23e3-1e78-195d-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Deep Strike" id="88a3-4136-2d5f-1576" hidden="false" type="rule" targetId="a184-8710-3dda-7fdc"/>
+        <infoLink name="The Time For Silence Is Over" id="18d3-1890-ca42-b20f" hidden="false" type="rule" targetId="9848-3a4b-2b35-ec70"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="abeb-5be0-62b5-3b96" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="ffb2-e657-20f7-66e6" primary="false" name="Infantry"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -3247,6 +3400,7 @@
     <entryLink import="true" name="Heavy Intercessors Squad" hidden="false" id="7c50-9a43-169e-43f1" type="selectionEntry" targetId="ba06-0962-484b-8cb5"/>
     <entryLink import="true" name="Eradicators Squad" hidden="false" id="6df5-7169-0205-2273" type="selectionEntry" targetId="6fae-9098-94c0-e8c8"/>
     <entryLink import="true" name="Eliminators Squad" hidden="false" id="5a06-8347-3f81-6465" type="selectionEntry" targetId="3653-67c8-4bcc-7d9e"/>
+    <entryLink import="true" name="Riever Squad" hidden="false" id="12e7-7347-368f-a5bc" type="selectionEntry" targetId="b31f-9637-df9f-85e5"/>
   </entryLinks>
   <sharedRules>
     <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
@@ -3263,6 +3417,15 @@
     </rule>
     <rule name="Deliberate Tactician" id="5ef9-b670-dd95-d45f" hidden="false">
       <description>For each attack made by this unit, reroll a Hit Roll of 1 of that attack.</description>
+    </rule>
+    <rule name="The Time For Silence Is Over" id="9848-3a4b-2b35-ec70" hidden="false">
+      <description>After this unit is Activated, until the End step, each enemy unit that not visible to this unit gains the following ability:
+
+
+Unnerved: While an enemy REIVERS unit is within 6” of this unit, its Rv is worsened by 1.
+
+
+Combat Grapnels: While this unit’s models move, they may ignore vertical distances.</description>
     </rule>
   </sharedRules>
 </catalogue>
