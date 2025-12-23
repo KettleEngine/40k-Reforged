@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="27" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="28" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -5281,6 +5281,87 @@
         <cost name="pts" typeId="points" value="90"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Assault Terminators Squad" hidden="false" id="c9e2-3a0d-a225-d951">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Assault Terminators" id="6a20-3021-d399-defe" hidden="false" defaultSelectionEntryId="5c07-5152-d7d4-ba5c">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Assault Terminator" hidden="false" id="93c1-0121-75cb-119c">
+              <profiles>
+                <profile name="Assault Terminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="f485-182d-7cab-6f32">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2++</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="For an additional 10 points each time, each model may be equipped with:" id="3545-5a6c-9c02-4866" hidden="false" defaultSelectionEntryId="1c7f-cd48-4625-5766">
+                  <entryLinks>
+                    <entryLink import="true" name="Lightning Claw" hidden="false" id="0021-06b4-2367-92fa" type="selectionEntry" targetId="6e69-532c-9a66-4cb2" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ac3-c94b-e011-503c-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ac3-c94b-e011-503c-max" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Thunder Hammer and Storm Shield" hidden="false" id="f909-d033-feec-e2f3">
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                      <entryLinks>
+                        <entryLink import="true" name="Thunder Hammer" hidden="false" id="9287-10aa-240d-a144" type="selectionEntry" targetId="a26d-bbe4-6e1d-51af">
+                          <modifiers>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="78a1-304d-98a8-17da-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="78a1-304d-98a8-17da-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Storm Shield" hidden="false" id="48e0-c262-c988-1293" type="selectionEntry" targetId="79cf-dc73-3df6-852a">
+                          <modifiers>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f96d-5dc8-6580-bdad-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f96d-5dc8-6580-bdad-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d449-3534-ccb0-dcd1-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d449-3534-ccb0-dcd1-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Unstoppable" id="aa6e-264a-f20c-fc8a" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Deep Strike" id="1f63-2061-52c1-cd7f" hidden="false" type="rule" targetId="a184-8710-3dda-7fdc"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="5c95-6c5a-d268-e8be" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="667b-5bfc-b61f-b112" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="90"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -5313,6 +5394,7 @@
     <entryLink import="true" name="Sternguard Veteran Squad" hidden="false" id="e167-578a-15c4-981c" type="selectionEntry" targetId="a7df-8b8a-706f-b6d7"/>
     <entryLink import="true" name="Bladeguard Veteran Squad" hidden="false" id="89ee-7516-d90d-3a9c" type="selectionEntry" targetId="d113-bf7d-a0fb-1ade"/>
     <entryLink import="true" name="Terminators Squad" hidden="false" id="e4ab-1ae8-f0d6-4705" type="selectionEntry" targetId="d63c-ad9b-d5b9-ab11"/>
+    <entryLink import="true" name="Assault Terminators Squad" hidden="false" id="1729-0964-a234-deae" type="selectionEntry" targetId="c9e2-3a0d-a225-d951"/>
   </entryLinks>
   <sharedRules>
     <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
