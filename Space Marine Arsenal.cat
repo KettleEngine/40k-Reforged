@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -3377,6 +3377,348 @@
         <categoryLink targetId="205c-3072-067b-d808" id="ffb2-e657-20f7-66e6" primary="false" name="Infantry"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Power Axe" hidden="false" id="2d40-0672-6885-33af">
+      <profiles>
+        <profile name="Power Axe" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6aff-213e-cc6e-d0f2">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lightning Claw" hidden="false" id="6e69-532c-9a66-4cb2">
+      <profiles>
+        <profile name="Lightning Claw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4201-a055-110a-33d8">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each attack this weapon makes targeting an infantry unit, a Hit Roll of 5+ for that attack always wounds.</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Devastator Squad" hidden="false" id="58f1-68ba-4d8a-8b11">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Devastators" id="eb42-5bc3-cb4e-09b8" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Devastator marine" hidden="false" id="6916-060f-e7a2-97a7">
+              <profiles>
+                <profile name="Devastator marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="7738-0a84-a573-6cc8">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="With no more than two of any one weapon, up to four models are equipped with either:" id="e677-a790-602b-c710" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Heavy Bolter" hidden="false" id="5dba-2082-e48c-ec5b" type="selectionEntry" targetId="82a1-b562-e748-d5ad" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3e11-5f27-aed6-4d4b" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Grav-Cannon" hidden="false" id="ddd1-69f4-b531-810e" type="selectionEntry" targetId="4811-c9c2-5c16-0a39" sortIndex="2">
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8d73-4caa-b106-a775" includeChildSelections="false"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Missile Launcher" hidden="false" id="b79e-8ff2-8002-3173" type="selectionEntry" targetId="7d83-0ddd-5155-225c" sortIndex="3">
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0e1b-d6cf-2b28-c6ff" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Multi-Melta" hidden="false" id="85c1-e664-6e58-3d4b" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f" sortIndex="4">
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9db1-134f-9093-7164" includeChildSelections="false"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Lascannon" hidden="false" id="3a51-bed6-2948-48c8" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="5">
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="303f-e841-f9b8-706b" includeChildSelections="false"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Plasma Cannon" hidden="false" id="8a45-6311-c9d2-d58e" type="selectionEntry" targetId="597d-3cc2-8209-d3d1" sortIndex="6">
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="04a8-f3a1-fa3a-36c4" includeChildSelections="false"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Storm Bolter" hidden="false" id="620e-dfe0-fa6a-69f4" type="selectionEntry" targetId="d215-60bd-f49d-295e" sortIndex="7">
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4e47-ab2a-3a50-e239" includeChildSelections="false"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="a2f9-5f00-bfe1-271f-min" includeChildSelections="false"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="a2f9-5f00-bfe1-271f-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Devastator Sergeant" hidden="false" id="e9ce-246f-99d3-c389">
+              <profiles>
+                <profile name="Devastator Sergeant" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="c080-5533-d3c1-15d5">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Can replace Bolter for:" id="7189-947d-9559-c9a4" hidden="false">
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Combi-Bolter" id="f0f3-5b61-98b9-0d0b" hidden="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e5c-db7e-9fe4-e8b4" includeChildSelections="false"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Combi-Flamer" hidden="false" id="a5fd-c1d1-58f4-07b6">
+                          <profiles>
+                            <profile name="Combi-Flamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="aba6-b5a4-d467-a78c">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                              </characteristics>
+                              <attributes>
+                                <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</attribute>
+                              </attributes>
+                            </profile>
+                          </profiles>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Combi-Bolter" hidden="false" id="b740-90d4-efc2-47c6">
+                              <profiles>
+                                <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a685-bb36-9275-481e">
+                                  <characteristics>
+                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="afae-fe81-6714-22ea" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6566-edb6-2faa-9320" includeChildSelections="false"/>
+                              </constraints>
+                            </selectionEntry>
+                          </selectionEntries>
+                          <modifiers>
+                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Combi-Grav" hidden="false" id="13c5-6b8c-bf13-18dd">
+                          <profiles>
+                            <profile name="Combi-Grav" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d96d-d703-ad36-607a">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                              </characteristics>
+                              <attributes>
+                                <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each attack made for this weapon, its AP is equal to the target’s Toughness.</attribute>
+                              </attributes>
+                            </profile>
+                          </profiles>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Combi-Bolter" hidden="false" id="9e27-43ca-9c85-d976">
+                              <profiles>
+                                <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="24ca-da80-9259-3735">
+                                  <characteristics>
+                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f743-14f9-f9b1-2e17" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e421-c1b0-a950-f369" includeChildSelections="false"/>
+                              </constraints>
+                            </selectionEntry>
+                          </selectionEntries>
+                          <modifiers>
+                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Combi-Melta" hidden="false" id="db8f-b707-49d8-e0de">
+                          <profiles>
+                            <profile name="Combi-Melta" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="42b3-408e-d734-e8c7">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+                              </characteristics>
+                              <attributes>
+                                <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                              </attributes>
+                            </profile>
+                          </profiles>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Combi-Bolter" hidden="false" id="95ba-791e-3d5f-092f">
+                              <profiles>
+                                <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="eab3-1d13-8501-bb64">
+                                  <characteristics>
+                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="82dd-60d0-b8c6-9c27" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="369c-806b-a556-eb2b" includeChildSelections="false"/>
+                              </constraints>
+                            </selectionEntry>
+                          </selectionEntries>
+                          <modifiers>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Combi-Plasma" hidden="false" id="38df-3052-a0ea-dd3f">
+                          <profiles>
+                            <profile name="Combi-Plasma" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="39ea-7bff-d990-00f5">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                              </characteristics>
+                              <attributes>
+                                <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</attribute>
+                              </attributes>
+                            </profile>
+                          </profiles>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Combi-Bolter" hidden="false" id="da57-ff0e-c275-2da1">
+                              <profiles>
+                                <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0e53-50c8-cfd5-cbb9">
+                                  <characteristics>
+                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="6c6c-d4cb-55bd-d447" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bc23-b3f6-6903-886e" includeChildSelections="false"/>
+                              </constraints>
+                            </selectionEntry>
+                          </selectionEntries>
+                          <modifiers>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <entryLinks>
+                    <entryLink import="true" name="Boltgun" hidden="false" id="9eff-d3a5-dbba-ecf8" type="selectionEntry" targetId="7c03-84c7-a561-dfa9">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="768c-9d66-1160-18c3-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="768c-9d66-1160-18c3-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="a8ca-bbaf-2213-129f" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="a39d-1a80-b41b-8b73" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -3401,6 +3743,7 @@
     <entryLink import="true" name="Eradicators Squad" hidden="false" id="6df5-7169-0205-2273" type="selectionEntry" targetId="6fae-9098-94c0-e8c8"/>
     <entryLink import="true" name="Eliminators Squad" hidden="false" id="5a06-8347-3f81-6465" type="selectionEntry" targetId="3653-67c8-4bcc-7d9e"/>
     <entryLink import="true" name="Riever Squad" hidden="false" id="12e7-7347-368f-a5bc" type="selectionEntry" targetId="b31f-9637-df9f-85e5"/>
+    <entryLink import="true" name="Devastator Squad" hidden="false" id="bf7f-e50a-e0a7-8d36" type="selectionEntry" targetId="58f1-68ba-4d8a-8b11"/>
   </entryLinks>
   <sharedRules>
     <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
