@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -4055,6 +4055,62 @@
         <categoryLink targetId="205c-3072-067b-d808" id="ba14-a606-ea72-e201" primary="false" name="Infantry"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Pyreblasters" hidden="false" id="8eac-6a68-deb6-3e07">
+      <profiles>
+        <profile name="Pyreblasters" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="07ab-6baf-e309-1622">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignores Cover</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="6e37-31c8-1c1a-6f49" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Infernus Squad" hidden="false" id="812c-afbe-5c53-e24b">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Infernus Marine" hidden="false" id="4f65-b791-d202-ddfd">
+          <profiles>
+            <profile name="Infernus Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="71be-cf18-fc1e-8fb6">
+              <characteristics>
+                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Pyreblasters" hidden="false" id="6753-e78f-ea85-c1eb" type="selectionEntry" targetId="8eac-6a68-deb6-3e07">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dd2c-86c2-b684-f4ef-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dd2c-86c2-b684-f4ef-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="1921-03ce-0643-40c9-min" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="1921-03ce-0643-40c9-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="8dae-1168-c0fd-8f6b" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="2b98-1877-9d66-e1ad" primary="false" name="Infantry"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -4082,6 +4138,7 @@
     <entryLink import="true" name="Devastator Squad" hidden="false" id="bf7f-e50a-e0a7-8d36" type="selectionEntry" targetId="58f1-68ba-4d8a-8b11"/>
     <entryLink import="true" name="Hellbasters Squad" hidden="false" id="fae0-1780-73dd-fe1a" type="selectionEntry" targetId="36dc-e3f0-17af-c4b5"/>
     <entryLink import="true" name="Desolation Squad" hidden="false" id="cd26-2520-349b-b970" type="selectionEntry" targetId="c5fe-60d6-f084-bdb7"/>
+    <entryLink import="true" name="Infernus Squad" hidden="false" id="be13-0886-1804-65ba" type="selectionEntry" targetId="812c-afbe-5c53-e24b"/>
   </entryLinks>
   <sharedRules>
     <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
