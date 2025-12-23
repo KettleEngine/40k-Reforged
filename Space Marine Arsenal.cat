@@ -5384,7 +5384,7 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Suppressor Squad" hidden="false" id="c587-01ec-2269-0103">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Suppressors" id="bdf7-e36d-95f7-886d" hidden="false">
+        <selectionEntryGroup name="Suppressors" id="bdf7-e36d-95f7-886d" hidden="false" defaultSelectionEntryId="738c-31fa-ead7-5fe9">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Suppressor" hidden="false" id="738c-31fa-ead7-5fe9">
               <profiles>
@@ -5428,7 +5428,7 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Inceptors Squad" hidden="false" id="e4aa-17c0-c701-74f4">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Inceptors" id="17c9-3e61-d3f9-a4c2" hidden="false">
+        <selectionEntryGroup name="Inceptors" id="17c9-3e61-d3f9-a4c2" hidden="false" defaultSelectionEntryId="b792-2fa5-421a-58e9">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Inceptor" hidden="false" id="b792-2fa5-421a-58e9">
               <profiles>
@@ -5508,12 +5508,32 @@
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Flamestorm Gauntlets " hidden="false" id="d2c1-85dc-10f1-f7e3">
+      <profiles>
+        <profile name="Flamestorm Gauntlets " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d342-9a6a-2c56-77dd">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="bf8b-3d84-a8f5-6033" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+      </infoLinks>
+    </selectionEntry>
     <selectionEntry type="unit" import="true" name="Aggressors Squad" hidden="false" id="111a-71d9-3241-3947">
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Aggressors" id="fe82-1565-8bab-e87d" hidden="false">
+        <selectionEntryGroup name="Aggressors" id="fe82-1565-8bab-e87d" hidden="false" defaultSelectionEntryId="e798-2f9e-cb9d-0202">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Aggressor" hidden="false" id="e798-2f9e-cb9d-0202">
               <profiles>
@@ -5590,29 +5610,9 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink targetId="4820-e2b5-9e00-bb68" id="b1d4-bb91-893b-9929" primary="true" name="Elites"/>
-        <categoryLink targetId="205c-3072-067b-d808" id="4f14-9383-900b-f4c8" primary="false" name="Infantry"/>
+        <categoryLink name="Elites" hidden="false" id="b1d4-bb91-893b-9929" targetId="4820-e2b5-9e00-bb68" primary="true"/>
+        <categoryLink name="Infantry" hidden="false" id="4f14-9383-900b-f4c8" targetId="205c-3072-067b-d808" primary="false"/>
       </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Flamestorm Gauntlets " hidden="false" id="d2c1-85dc-10f1-f7e3">
-      <profiles>
-        <profile name="Flamestorm Gauntlets " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d342-9a6a-2c56-77dd">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-          </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</attribute>
-          </attributes>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Ignore Cover" id="bf8b-3d84-a8f5-6033" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
-      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
@@ -5649,6 +5649,7 @@
     <entryLink import="true" name="Assault Terminators Squad" hidden="false" id="1729-0964-a234-deae" type="selectionEntry" targetId="c9e2-3a0d-a225-d951"/>
     <entryLink import="true" name="Suppressor Squad" hidden="false" id="cc7b-5a6f-be58-043b" type="selectionEntry" targetId="c587-01ec-2269-0103"/>
     <entryLink import="true" name="Inceptors Squad" hidden="false" id="6bd4-2222-ad4a-5d4f" type="selectionEntry" targetId="e4aa-17c0-c701-74f4"/>
+    <entryLink import="true" name="Aggressors Squad" hidden="false" id="223b-0689-6768-0cfb" type="selectionEntry" targetId="111a-71d9-3241-3947"/>
   </entryLinks>
   <sharedRules>
     <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
