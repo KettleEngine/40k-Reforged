@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="25" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -4648,6 +4648,334 @@
         <categoryLink targetId="1738-1300-9dbb-c5be" id="206c-3579-cdb3-5099" primary="false" name="Rare"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Sternguard Veteran Squad" hidden="false" id="a7df-8b8a-706f-b6d7">
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="e7df-1ec2-4aee-eb17" includeChildSelections="false"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Sternguard Veterans" id="07b5-0cc7-9d94-bb5c" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Sternguard Veteran" hidden="false" id="d181-47d4-5582-d20a">
+              <profiles>
+                <profile name="Sternguard Veteran" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="864d-0130-eb4d-1bd0">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Bolt Rifle" hidden="false" id="5ece-feac-715d-b967" type="selectionEntry" targetId="6802-fb1b-a361-36bb">
+                  <modifiers>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1ade-801b-1175-d84e-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ade-801b-1175-d84e-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Sternguard Veteran w/ Combi-Bolter" hidden="false" id="a861-7ecf-8cfa-58c7">
+              <profiles>
+                <profile name="Sternguard Veteran" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5c5b-fab0-2dd3-234d">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Combi-Bolter" id="ec19-37e0-ffd9-e008" hidden="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a08-d76a-1666-87a9" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Combi-Flamer" hidden="false" id="73bd-7fdf-4d25-b392">
+                      <profiles>
+                        <profile name="Combi-Flamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c101-a353-6a64-9fa9">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                          </characteristics>
+                          <attributes>
+                            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</attribute>
+                          </attributes>
+                        </profile>
+                      </profiles>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Combi-Bolter" hidden="false" id="f16d-c16e-ee19-15c6">
+                          <profiles>
+                            <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c2ed-5ce1-1c00-58b0">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="047a-3d27-ef2d-80bd" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d758-7530-196c-65a1" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Combi-Melta" hidden="false" id="ad6c-ade6-5502-6371">
+                      <profiles>
+                        <profile name="Combi-Melta" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e89d-4395-c96c-92c1">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+                          </characteristics>
+                          <attributes>
+                            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                          </attributes>
+                        </profile>
+                      </profiles>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Combi-Bolter" hidden="false" id="0578-23f0-c7d5-f4bd">
+                          <profiles>
+                            <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="557e-20df-29ab-11bd">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="a2eb-2b39-cc34-087a" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="448c-9aee-77bb-a29e" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
+                      <modifiers>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Combi-Plasma" hidden="false" id="4c00-8d33-f11b-9902">
+                      <profiles>
+                        <profile name="Combi-Plasma" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="fa48-5d93-f8f7-bc6b">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                          </characteristics>
+                          <attributes>
+                            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</attribute>
+                          </attributes>
+                        </profile>
+                      </profiles>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Combi-Bolter" hidden="false" id="7f41-e6fa-7ca7-3d9b">
+                          <profiles>
+                            <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9df1-9217-e497-ed9e">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="4a48-068e-325f-ed32" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c736-eb0a-975a-e0e9" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
+                      <modifiers>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="eff6-9dc2-92ed-6f78" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Sternguard Veteran w/ Heavy Weapon" hidden="false" id="9d09-95d3-a907-5f6a">
+              <profiles>
+                <profile name="Sternguard Veteran" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="9988-f54a-6ec7-1149">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon:" id="0f7e-a3bd-2330-4899" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Heavy Bolter" hidden="false" id="592a-0d4c-75fa-74ca" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Pyrecannon" hidden="false" id="31fe-1057-6538-f13b" type="selectionEntry" targetId="1394-81c1-97f8-8aba"/>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9c7f-e5ff-1c2d-c5a1-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c7f-e5ff-1c2d-c5a1-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="867c-c4bb-d8ef-03f1" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Sternguard Veteran Sergeant" hidden="false" id="e8a5-f0e2-295d-5ab6">
+              <profiles>
+                <profile name="Sternguard Veteran" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="4466-4083-345e-b8d9">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="may replace their Bolt Rifle with either:" id="c285-6d3f-e20a-504b" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Bolt Rifle" hidden="false" id="bcae-6e82-eddf-d2b2" type="selectionEntry" targetId="6802-fb1b-a361-36bb" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Sergeant Bolt Rifle" hidden="false" id="77fe-50d8-8b1a-3442" type="selectionEntry" targetId="2f3a-12bf-f2d9-4df8" sortIndex="2"/>
+                    <entryLink import="true" name="Bolt Pistol" hidden="false" id="a0bb-e6af-1f02-dfbe" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8567-b88c-710a-db9e-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8567-b88c-710a-db9e-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="may replace their Bolt Rifle with either:" id="087d-54e6-8857-f715" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Power Sword" hidden="false" id="111f-a853-9ac3-b7db" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Power Fist" hidden="false" id="7214-f81b-7d61-f6d6" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Chainsword" hidden="false" id="cef6-95af-73e2-4dcf" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="51ce-7dce-b989-e33a-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="51ce-7dce-b989-e33a-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c88b-86ad-2622-1dd5" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="1305-62e5-704a-1d91-min" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="1305-62e5-704a-1d91-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="8d87-7e6a-f68e-ed30" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="d61b-984d-b929-b384" primary="false" name="Infantry"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="179f-3483-9ac0-6680" primary="false" name="Rare"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sergeant Bolt Rifle" hidden="false" id="2f3a-12bf-f2d9-4df8">
+      <profiles>
+        <profile name="Sergeant Bolt Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="01b8-95b2-f8b4-760a">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Pyrecannon" hidden="false" id="1394-81c1-97f8-8aba">
+      <profiles>
+        <profile name="Pyrecannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="faab-f7ef-1b7f-f2d8">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignores Cover</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="ab91-4a82-74e1-be93" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -4677,6 +5005,7 @@
     <entryLink import="true" name="Desolation Squad" hidden="false" id="cd26-2520-349b-b970" type="selectionEntry" targetId="c5fe-60d6-f084-bdb7"/>
     <entryLink import="true" name="Infernus Squad" hidden="false" id="be13-0886-1804-65ba" type="selectionEntry" targetId="812c-afbe-5c53-e24b"/>
     <entryLink import="true" name="Vanguard Veteran Squad" hidden="false" id="7cd6-697d-b205-b137" type="selectionEntry" targetId="12bb-f78b-624e-1b7d"/>
+    <entryLink import="true" name="Sternguard Veteran Squad" hidden="false" id="e167-578a-15c4-981c" type="selectionEntry" targetId="a7df-8b8a-706f-b6d7"/>
   </entryLinks>
   <sharedRules>
     <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
