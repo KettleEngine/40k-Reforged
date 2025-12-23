@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="4" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="5" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -117,6 +117,73 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Frag Grenade" hidden="false" id="a1b6-2895-8960-4e57">
+      <profiles>
+        <profile name="Frag Grenade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d0b4-4c54-e9c5-4e3c">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect
+
+</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="One Shot" id="79f0-68e7-00a6-83ee" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Indirect" id="4c3e-854a-4e0b-96d3" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Melta Bomb" hidden="false" id="a308-d575-5b0a-5782">
+      <profiles>
+        <profile name="Melta Bomb" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d783-a406-6b62-8ca8">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect
+</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="One Shot" id="c3c8-2bba-f450-4979" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Indirect" id="65ad-bcba-5072-6f96" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Krak Grenade" hidden="false" id="e06d-dcbe-f391-392b">
+      <profiles>
+        <profile name="Krak Grenade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2f58-917f-e392-5c19">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect
+</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="One Shot" id="e82f-8e0a-299c-8b05" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Indirect" id="ba67-7204-a161-5839" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
