@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="5" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="6" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -183,6 +183,203 @@
       <infoLinks>
         <infoLink name="One Shot" id="e82f-8e0a-299c-8b05" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
         <infoLink name="Indirect" id="ba67-7204-a161-5839" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Hunter-Killer Missile" hidden="false" id="eda8-2347-1928-a28e">
+      <profiles>
+        <profile name="Hunter-Killer Missile" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9a2b-01ac-19e1-8c5f">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot
+
+</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="One Shot" id="b135-e658-b305-b6a8" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dozer Blade" hidden="false" id="73da-e53b-4390-b808">
+      <profiles>
+        <profile name="Dozer Blade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="41f3-3261-ccbc-05a0">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Bolter" hidden="false" id="82a1-b562-e748-d5ad">
+      <profiles>
+        <profile name="Heavy Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="075a-7042-381d-3c14">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Flamer" hidden="false" id="5c44-7d31-605d-4b6f">
+      <profiles>
+        <profile name="Heavy Flamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ea8d-c350-06be-ff13">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="c243-7453-e273-d71b" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Earthshaker Cannon" hidden="false" id="226d-3e2d-b6a8-aace">
+      <profiles>
+        <profile name="Earthshaker Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d4eb-32fc-36cd-cddb">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">14</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Suppressive, For each attack made for this weapon, a successful Hit Roll causes the target unit to suffer 2 SW.</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Indirect" id="f703-26c3-351e-c85a" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="Barrage" id="2d82-5dc0-cf1e-101a" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+        <infoLink name="Suppressive" id="eb4e-0561-2100-a6d6" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Smoke Launchers" hidden="false" id="d653-3fc2-d577-6295">
+      <profiles>
+        <profile name="Smoke Launchers" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="05b6-0208-cd8f-0a67">
+          <attributes>
+            <attribute name="Description" typeId="51c0-d8f9-d891-a366">Smoke Launchers: After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability until the next battle round.</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="360a-f40f-1386-1cfc" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Basilisk" hidden="false" id="0eec-c7ca-30ee-9fc5">
+      <profiles>
+        <profile name="Basilisk" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="942d-6a1d-96b4-cf2d">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4++</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Earthshaker Cannon" hidden="false" id="c4a6-3747-66f6-375c" type="selectionEntry" targetId="226d-3e2d-b6a8-aace">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6a9b-4f97-7b99-f712-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a9b-4f97-7b99-f712-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="835b-7697-b35f-540f" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9828-010a-ff94-ec3b" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Smoke Launchers" hidden="false" id="32ad-469b-ca85-eb36" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is also equipped with either:" id="54f5-352e-b388-5b35" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="2ff8-e45c-c32f-6860" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+              <modifiers>
+                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Flamer" hidden="false" id="aa7f-0fbe-b669-6033" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="beb1-a05f-84bf-aa55-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="beb1-a05f-84bf-aa55-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="0598-3856-f927-bc4f" primary="false" name="Vehicle"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Multi-Melta" hidden="false" id="8cdb-d231-cc0f-a98f">
+      <profiles>
+        <profile name="Multi-Melta" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="18da-3b01-0f89-91ae">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Autocannon" hidden="false" id="a636-c9c9-ad6d-6db0">
+      <profiles>
+        <profile name="Autocannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8569-dde5-8e37-1b1c">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive" id="312a-9a55-63b9-e2fc" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
