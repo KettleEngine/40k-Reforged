@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Captain" hidden="false" id="8bcc-45cb-abc8-847b">
       <costs>
@@ -1534,10 +1534,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Tactical Marines" id="7138-c61a-3bdf-79b8" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Tactical Marine" hidden="false" id="2cd0-25f2-e7bc-02bd">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
+            <selectionEntry type="model" import="true" name="Tactical Marine" hidden="false" id="2cd0-25f2-e7bc-02bd">
               <profiles>
                 <profile name="Tactical Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="369b-661f-c520-458e">
                   <characteristics>
@@ -1572,10 +1569,7 @@
                 </entryLink>
               </entryLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Tactical Marine Sergeant" hidden="false" id="2b68-a173-6c60-7c27">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
+            <selectionEntry type="model" import="true" name="Tactical Marine Sergeant" hidden="false" id="2b68-a173-6c60-7c27">
               <profiles>
                 <profile name="Tactical Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="ecd2-d6e7-63d2-51de">
                   <characteristics>
@@ -1818,7 +1812,7 @@
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Tactical Marine w/ special weapon" hidden="false" id="76a9-02af-97a3-430e">
+            <selectionEntry type="model" import="true" name="Tactical Marine w/ special weapon" hidden="false" id="76a9-02af-97a3-430e">
               <profiles>
                 <profile name="Tactical Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="cdf0-1ec5-02ad-1197">
                   <characteristics>
@@ -1944,9 +1938,6 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -1955,6 +1946,9 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="4cf9-1758-d00d-29c4">
       <profiles>
@@ -2146,6 +2140,194 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d618-7b48-3b0c-9620-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="false" id="5e33-c33d-0868-472e">
+      <profiles>
+        <profile name="Grenade Launcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3a8d-1874-cce7-445b">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Indirect" id="88a7-6d6b-e467-d294" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Intercessors Squad" hidden="false" id="7c59-2513-2be0-bf53">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Intercessors" id="27ce-4607-a687-4c4f" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Intercessor" hidden="false" id="0b47-e9d1-b7a1-2b3f">
+              <profiles>
+                <profile name="Intercessor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="8376-b519-2624-97fe">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Bolt Rifle" hidden="false" id="e40e-e8d9-c3d8-fa99" type="selectionEntry" targetId="6802-fb1b-a361-36bb">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b915-9d29-566b-2606-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b915-9d29-566b-2606-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Intercessor w/ Grenade Launcher" hidden="false" id="4a2c-c4ad-dd32-a6fd">
+              <profiles>
+                <profile name="Intercessor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="70c8-04fd-c9fe-5720">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Bolt Rifle" hidden="false" id="eaf8-ce7b-fa32-84a1" type="selectionEntry" targetId="6802-fb1b-a361-36bb">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fcdb-823d-8da5-b7fd-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fcdb-823d-8da5-b7fd-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Grenade Launcher" hidden="false" id="e998-147e-8ae5-2673" type="selectionEntry" targetId="5e33-c33d-0868-472e">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7f54-56e1-8d67-3974-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f54-56e1-8d67-3974-max" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dbf9-d350-9f47-6fe3" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Intercessor Sergeant" hidden="false" id="0212-4053-5c62-8f34">
+              <profiles>
+                <profile name="Intercessor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="73ba-a60d-5472-8076">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="may replace their Bolt Rifle with either:" id="5d51-6588-e868-da05" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Bolt Rifle" hidden="false" id="2d3e-59fa-2304-c5ce" type="selectionEntry" targetId="6802-fb1b-a361-36bb" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Chainsword" hidden="false" id="c737-ac83-7a00-5a99" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Bolt Pistol" hidden="false" id="dd91-21d4-a423-8bed" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Flamer Pistol" hidden="false" id="453d-ebd4-957b-280a" type="selectionEntry" targetId="6ba7-fe2b-ac9d-446c" sortIndex="4">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Plasma Pistol" hidden="false" id="2112-8cf7-21b1-5dbb" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="5">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Power Sword" hidden="false" id="dee4-34fa-c9d7-1859" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="6">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Select One:" id="5652-aabc-6758-46a2" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Power Sword" hidden="false" id="e53d-2597-856a-7e22" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Power Fist" hidden="false" id="6937-1967-bde8-3a2e" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Thunder Hammer" hidden="false" id="3550-f33a-b1b5-55d7" type="selectionEntry" targetId="a26d-bbe4-6e1d-51af" sortIndex="4">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Chainsword" hidden="false" id="ec7a-3fcc-9ede-8ef3" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b5a9-0cb4-a2a7-a9d1" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="061e-30c7-459d-b87e-min" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="061e-30c7-459d-b87e-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="b69b-5b51-faf1-2c40" id="e22b-c5b9-6bff-62d0" primary="true" name="Troops"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="2235-76d5-d62d-7474" primary="false" name="Infantry"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Captain" hidden="false" id="810c-1025-fba2-96d9" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
@@ -2163,5 +2345,6 @@
     <entryLink import="true" name="Jump Pack Chaplin" hidden="false" id="e5f6-de99-bba6-b03f" type="selectionEntry" targetId="91a9-39fa-6505-b63d"/>
     <entryLink import="true" name="Apothecary Biologis" hidden="false" id="2b00-689e-0770-b7f5" type="selectionEntry" targetId="69ff-439b-6ac0-8756"/>
     <entryLink import="true" name="Tactical Squad" hidden="false" id="6d72-1691-862f-84e5" type="selectionEntry" targetId="8838-62e2-29c4-69ce"/>
+    <entryLink import="true" name="Intercessors Squad" hidden="false" id="85d1-d2af-df28-56a9" type="selectionEntry" targetId="7c59-2513-2be0-bf53"/>
   </entryLinks>
 </catalogue>
