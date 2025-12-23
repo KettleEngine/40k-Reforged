@@ -2920,7 +2920,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Eliminators" id="61cd-5d84-74c3-6998" hidden="false" defaultSelectionEntryId="030f-f8b1-5c25-0575">
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Eliminator" hidden="false" id="030f-f8b1-5c25-0575">
+            <selectionEntry type="upgrade" import="true" name="Eliminator" hidden="false" id="030f-f8b1-5c25-0575">
               <profiles>
                 <profile name="Eliminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="a27c-6cda-1317-3141">
                   <characteristics>
@@ -2943,9 +2943,21 @@
               <selectionEntryGroups>
                 <selectionEntryGroup name="Weapon:" id="1a4d-8558-3e5b-0b46" hidden="false">
                   <entryLinks>
-                    <entryLink import="true" name="Bolt Sniper (Executioner)" hidden="false" id="ebdd-5de5-e14c-cc96" type="selectionEntry" targetId="4093-5795-6ad2-5141" sortIndex="2"/>
-                    <entryLink import="true" name="Bolt Sniper (Hyperfrag)" hidden="false" id="2738-4085-96db-1a4c" type="selectionEntry" targetId="4241-40f4-847f-869d" sortIndex="1"/>
-                    <entryLink import="true" name="Bolt Sniper (Mortis Bolts)" hidden="false" id="2782-756d-08d3-1a75" type="selectionEntry" targetId="3dde-2dbb-b591-030b" sortIndex="3"/>
+                    <entryLink import="true" name="Bolt Sniper (Executioner)" hidden="false" id="ebdd-5de5-e14c-cc96" type="selectionEntry" targetId="4093-5795-6ad2-5141" sortIndex="2">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="0700-6874-3f0e-f805" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Bolt Sniper (Hyperfrag)" hidden="false" id="2738-4085-96db-1a4c" type="selectionEntry" targetId="4241-40f4-847f-869d" sortIndex="1">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="8b70-f58d-1f14-43f8" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Bolt Sniper (Mortis Bolts)" hidden="false" id="2782-756d-08d3-1a75" type="selectionEntry" targetId="3dde-2dbb-b591-030b" sortIndex="3">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="551d-7e9c-f457-2a3a" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                     <entryLink import="true" name="Las Fusil" hidden="false" id="3197-a302-d06f-aeb6" type="selectionEntry" targetId="b5d0-b2e8-345d-d922" sortIndex="4">
                       <costs>
                         <cost name="pts" typeId="points" value="10"/>
@@ -2967,7 +2979,6 @@
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c1fa-3a95-a400-ff12-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c1fa-3a95-a400-ff12-max" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="8b70-f58d-1f14-43f8" includeChildSelections="false"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
