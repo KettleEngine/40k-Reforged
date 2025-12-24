@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="6" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="7" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -74,6 +74,16 @@
     <profileType name="Wargear" id="3ce5-e1a1-5b1f-0410" hidden="false">
       <attributeTypes>
         <attributeType name="Description" id="51c0-d8f9-d891-a366"/>
+      </attributeTypes>
+    </profileType>
+    <profileType name="Psychic Power" id="6406-cf2b-ec5b-c7e6" hidden="false">
+      <attributeTypes>
+        <attributeType name="1." id="50cc-2755-a7f9-13ca"/>
+        <attributeType name="2." id="0c4f-6bf9-4b72-f3ac"/>
+        <attributeType name="3." id="83e3-3600-de49-6de9"/>
+        <attributeType name="4." id="382f-90d4-c328-4ba5"/>
+        <attributeType name="5." id="a259-872f-bde9-46cf"/>
+        <attributeType name="6." id="9934-176d-e02e-428e"/>
       </attributeTypes>
     </profileType>
   </profileTypes>
@@ -218,6 +228,9 @@
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
           </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -232,6 +245,9 @@
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
           </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -359,6 +375,9 @@
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
           </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
