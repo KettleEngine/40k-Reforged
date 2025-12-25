@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="7" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="8" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -49,7 +49,7 @@
     </forceEntry>
   </forceEntries>
   <profileTypes>
-    <profileType name="Unit" id="a706-96eb-fcae-b696" hidden="false">
+    <profileType name="Unit" id="a706-96eb-fcae-b696" hidden="false" kind="model">
       <characteristicTypes>
         <characteristicType name="M" id="c06e-b1a2-0f87-fe2f"/>
         <characteristicType name="T" id="a6ad-d820-8495-f5b0"/>
@@ -58,7 +58,7 @@
         <characteristicType name="Rv" id="411f-3942-6dc0-7c06"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Weapon" id="2dff-53d0-6d25-8c59" hidden="false">
+    <profileType name="Weapon" id="2dff-53d0-6d25-8c59" hidden="false" kind="weapon">
       <characteristicTypes>
         <characteristicType name="Tp" id="6c1c-7d1d-c8b0-33ec"/>
         <characteristicType name="A" id="13c5-f234-c120-afc3"/>
@@ -71,20 +71,30 @@
         <attributeType name="Abilities" id="d93f-70ee-72bc-5ef9"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Wargear" id="3ce5-e1a1-5b1f-0410" hidden="false">
+    <profileType name="Wargear" id="3ce5-e1a1-5b1f-0410" hidden="false" kind="ability">
+      <characteristicTypes>
+        <characteristicType name="Description" id="14c0-3a47-fe6d-6563"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Psychic Power" id="6406-cf2b-ec5b-c7e6" hidden="false" kind="spell">
       <attributeTypes>
-        <attributeType name="Description" id="51c0-d8f9-d891-a366"/>
+        <attributeType name="1" id="50cc-2755-a7f9-13ca" kind="longText"/>
+        <attributeType name="2" id="0c4f-6bf9-4b72-f3ac" kind="longText"/>
+        <attributeType name="3" id="83e3-3600-de49-6de9" kind="longText"/>
+        <attributeType name="4" id="382f-90d4-c328-4ba5" kind="longText"/>
+        <attributeType name="5" id="a259-872f-bde9-46cf" kind="longText"/>
+        <attributeType name="6" id="9934-176d-e02e-428e" kind="longText"/>
       </attributeTypes>
     </profileType>
-    <profileType name="Psychic Power" id="6406-cf2b-ec5b-c7e6" hidden="false">
-      <attributeTypes>
-        <attributeType name="1." id="50cc-2755-a7f9-13ca"/>
-        <attributeType name="2." id="0c4f-6bf9-4b72-f3ac"/>
-        <attributeType name="3." id="83e3-3600-de49-6de9"/>
-        <attributeType name="4." id="382f-90d4-c328-4ba5"/>
-        <attributeType name="5." id="a259-872f-bde9-46cf"/>
-        <attributeType name="6." id="9934-176d-e02e-428e"/>
-      </attributeTypes>
+    <profileType name="Windfall of the Warp" id="266a-be4d-b9fa-94de" hidden="false" kind="spell">
+      <characteristicTypes>
+        <characteristicType name="Psychic Power" id="9060-973c-99e9-75b4" kind="longText"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Ability" id="e9b6-89e0-ffee-5662" hidden="false" kind="ability">
+      <characteristicTypes>
+        <characteristicType name="Description:" id="22b9-735d-71b1-6d7a" kind="longText"/>
+      </characteristicTypes>
     </profileType>
   </profileTypes>
   <costTypes>
@@ -140,9 +150,7 @@
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect
-
-</attribute>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -163,8 +171,7 @@
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect
-</attribute>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -185,8 +192,7 @@
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect
-</attribute>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -207,9 +213,7 @@
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
           </characteristics>
           <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot
-
-</attribute>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot</attribute>
           </attributes>
         </profile>
       </profiles>
@@ -296,9 +300,9 @@
     <selectionEntry type="upgrade" import="true" name="Smoke Launchers" hidden="false" id="d653-3fc2-d577-6295">
       <profiles>
         <profile name="Smoke Launchers" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="05b6-0208-cd8f-0a67">
-          <attributes>
-            <attribute name="Description" typeId="51c0-d8f9-d891-a366">Smoke Launchers: After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability until the next battle round.</attribute>
-          </attributes>
+          <characteristics>
+            <characteristic name="Description" typeId="14c0-3a47-fe6d-6563"/>
+          </characteristics>
         </profile>
       </profiles>
       <constraints>
@@ -401,11 +405,50 @@
         <infoLink name="Suppressive" id="312a-9a55-63b9-e2fc" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Haywire Grenade" hidden="false" id="70d9-3670-51f4-ae16">
+      <profiles>
+        <profile name="Haywire Grenade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="864a-e562-3bea-a12e">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Suppressive, For each attack that targets a vehicle unit, a Wound Roll automatically succeeds on a 2+.</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="One Shot" id="6db5-e03b-a8f8-2641" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Suppressive" id="e3fa-9ad1-c075-f35a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Indirect" id="2512-df36-d64f-600d" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Power Sword" hidden="false" id="dfed-4c14-cafd-626d">
+      <profiles>
+        <profile name="Power Sword" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0235-7859-850a-582a">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </attributes>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Battle Size" hidden="false" id="416b-2ab1-795a-6a90" type="selectionEntry" targetId="564e-fbc6-5266-3ea4">
       <categoryLinks>
-        <categoryLink targetId="9cd6-0442-3f35-6b52" id="ca9b-32b3-f032-0e85" primary="false" name="Configuration"/>
+        <categoryLink targetId="9cd6-0442-3f35-6b52" id="ca9b-32b3-f032-0e85" primary="true" name="Configuration"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
