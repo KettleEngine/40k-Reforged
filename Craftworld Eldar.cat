@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Strands of Fate (X)" id="80eb-f4ac-e40d-8401" hidden="false">
       <description>When an ability has you “roll Strands of Fate X”: Roll X D6 die all at once. For each 6, remove it and set it aside in a “Fate Dice” pool. Then remove one die and reroll the rest. Repeat until you remove the last dice.
@@ -2178,11 +2178,7 @@ Each of those units gains a different Masque&apos;s Ensemble ability from either
         </selectionEntryGroup>
         <selectionEntryGroup name="This unit is equipped with two different weapons from:" id="f3b3-911d-8b3d-5fe8" hidden="false">
           <entryLinks>
-            <entryLink import="true" name="Aeldari Missile Launcher" hidden="false" id="57e4-1983-b7f1-963f" type="selectionEntry" targetId="1c94-6fd1-0105-7e91" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Aeldari Missile Launcher" hidden="false" id="57e4-1983-b7f1-963f" type="selectionEntry" targetId="f248-50fc-03b1-8e6c" sortIndex="1"/>
             <entryLink import="true" name="Bright Lance" hidden="false" id="b0c6-e143-80d1-7cf6" type="selectionEntry" targetId="92dd-6279-6da9-82bc" sortIndex="2">
               <modifiers>
                 <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
@@ -2258,11 +2254,7 @@ Each of those units gains a different Masque&apos;s Ensemble ability from either
                         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
-                    <entryLink import="true" name="Aeldari Missile Launcher" hidden="false" id="284d-7e68-92ab-67e4" type="selectionEntry" targetId="1c94-6fd1-0105-7e91" sortIndex="4">
-                      <modifiers>
-                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
+                    <entryLink import="true" name="Aeldari Missile Launcher" hidden="false" id="284d-7e68-92ab-67e4" type="selectionEntry" targetId="3300-92da-63e9-4009" sortIndex="4"/>
                   </entryLinks>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="959e-c3b8-a166-9f6b-min" includeChildSelections="false"/>
@@ -3190,6 +3182,68 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
           </characteristics>
           <attributes>
             <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep</attribute>
+          </attributes>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Aeldari Missile Launcher" hidden="false" id="3300-92da-63e9-4009">
+      <comment>for reapers</comment>
+      <profiles>
+        <profile name="Aeldari Missile Launcher (Starshot)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="785f-e0aa-79a1-207e">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">10</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </attributes>
+        </profile>
+        <profile name="Aeldari Missile Launcher (Sunburst)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="258b-5569-3c23-f79d">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </attributes>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Aeldari Missile Launcher" hidden="false" id="f248-50fc-03b1-8e6c">
+      <comment>for wraith lord</comment>
+      <profiles>
+        <profile name="Aeldari Missile Launcher (Starshot)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="1398-9742-33e6-7261">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">10</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </attributes>
+        </profile>
+        <profile name="Aeldari Missile Launcher (Sunburst)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b126-5987-12b6-c3fc">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+          <attributes>
+            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </attributes>
         </profile>
       </profiles>
