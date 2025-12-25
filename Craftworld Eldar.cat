@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Strands of Fate (X)" id="80eb-f4ac-e40d-8401" hidden="false">
       <description>When an ability has you “roll Strands of Fate X”: Roll X D6 die all at once. For each 6, remove it and set it aside in a “Fate Dice” pool. Then remove one die and reroll the rest. Repeat until you remove the last dice.
@@ -264,6 +264,21 @@ Each of those units gains a different Masque&apos;s Ensemble ability from either
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9290-0a5d-11fb-6ed3-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="9d21-8760-f581-3023">
+          <profiles>
+            <profile name="Leader" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f4d4-5b1f-0ebf-3d17">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit must attach to either:
+a) GUARDIAN DEFENDERS
+b) Any unit with an Aspect, X ability</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eb73-6623-3232-c799-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb73-6623-3232-c799-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
@@ -383,6 +398,21 @@ Each of those units gains a different Masque&apos;s Ensemble ability from either
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1724-007e-8e5c-1f3e-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1724-007e-8e5c-1f3e-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="4fcb-8503-b19c-4c8c">
+          <profiles>
+            <profile name="Leader" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0611-aac3-c616-98d9">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit must attach to either:
+a) GUARDIAN DEFENDERS
+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9610-9ba1-0418-547f-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9610-9ba1-0418-547f-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -508,6 +538,21 @@ Each of those units gains a different Masque&apos;s Ensemble ability from either
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="669c-917f-1f12-c3ba-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="669c-917f-1f12-c3ba-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="e539-cc6b-f159-c1b9">
+          <profiles>
+            <profile name="Leader" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4c2b-fd05-736b-a561">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit must attach to either:
+a) SHINING SPEARS
+b) WINDRIDERS</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6f06-78c9-83d6-36a7-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6f06-78c9-83d6-36a7-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -653,6 +698,22 @@ Each of those units gains a different Masque&apos;s Ensemble ability from either
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="1e3d-ed9b-e9f9-245e">
+          <profiles>
+            <profile name="Leader" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5f33-56cc-68c7-d360">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit must attach to either:
+a) WRAITHBLADES
+b) WRAITHGUARD
+c) WRAITHLORD</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="463a-f8cf-2479-816c-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="463a-f8cf-2479-816c-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
       <infoLinks>
         <infoLink name="Psyker (X)" id="bca7-13b7-1a32-6593" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
@@ -749,6 +810,20 @@ Each of those units gains a different Masque&apos;s Ensemble ability from either
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="22ec-b334-c2cf-1f99-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="22ec-b334-c2cf-1f99-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="302b-05b2-4ada-b10b">
+          <profiles>
+            <profile name="Leader" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8f17-822f-68b1-33d0">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit must attach to:
+a) GUARDIAN DEFENDERS</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4231-7268-6a1e-2e7d-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4231-7268-6a1e-2e7d-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
