@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Strands of Fate (X)" id="80eb-f4ac-e40d-8401" hidden="false">
       <description>When an ability has you “roll Strands of Fate X”: Roll X D6 die all at once. For each 6, remove it and set it aside in a “Fate Dice” pool. Then remove one die and reroll the rest. Repeat until you remove the last dice.
@@ -2236,7 +2236,12 @@ Each of those units gains a different Masque&apos;s Ensemble ability from either
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Reaper Launcher" hidden="false" id="805f-b631-daa6-bd4b" type="selectionEntry" targetId="6e3a-11b3-527f-9634"/>
+                <entryLink import="true" name="Reaper Launcher" hidden="false" id="805f-b631-daa6-bd4b" type="selectionEntry" targetId="6e3a-11b3-527f-9634">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1ca6-1a6c-a711-4e95-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ca6-1a6c-a711-4e95-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Dark Reaper Exarch" hidden="false" id="cf31-c204-135e-192f">
