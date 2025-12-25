@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -553,7 +553,12 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Vanquisher Cannon" hidden="false" id="f6ee-373c-29d3-e7bf" sortIndex="6">
               <entryLinks>
-                <entryLink import="true" name="Vanquisher Cannon" hidden="false" id="42ea-8b54-6421-af0b" type="selectionEntry" targetId="7a5b-67b9-ac68-3240"/>
+                <entryLink import="true" name="Vanquisher Cannon" hidden="false" id="42ea-8b54-6421-af0b" type="selectionEntry" targetId="7a5b-67b9-ac68-3240">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e0b3-3edd-243c-f987-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e0b3-3edd-243c-f987-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Select One:" id="1970-3d7d-109c-a5ac" hidden="false">
