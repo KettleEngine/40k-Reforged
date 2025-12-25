@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Blood Angels" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <catalogueLinks>
+    <catalogueLink type="catalogue" name=" Space Marine Arsenal" id="04c0-e0e1-7d78-c85d" targetId="189f-f42f-6f3b-5328"/>
+  </catalogueLinks>
+  <sharedSelectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Angelus Bolter" hidden="false" id="4bc5-677b-4d80-0714">
+      <profiles>
+        <profile name="Angelus Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9bb9-6db9-ecad-b19a">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Encarmine Sword" hidden="false" id="474a-d571-be3a-f108">
+      <profiles>
+        <profile name="Encarmine Sword" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="da87-02a8-edd4-a3f6">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Encarmine Spear" hidden="false" id="3103-f6e5-45c8-bea2">
+      <profiles>
+        <profile name="Encarmine Spear" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="1706-96ab-588e-cfca">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Encarmine Axe" hidden="false" id="548a-25f0-b9f5-0d38">
+      <profiles>
+        <profile name="Encarmine Axe" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2b5c-40ff-724e-22fb">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Sanguinary Guard" hidden="false" id="8d3e-cb44-eb3b-769e">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Sanguinary Guard" id="a477-24df-a5cb-8eb4" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Sanguinary Guard" hidden="false" id="ecb8-527d-099f-c14c">
+              <constraints>
+                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="577d-ed00-3338-70cf" includeChildSelections="false"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="30b2-771a-71f1-3ca0" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Each model is equipped with either:" id="5319-dbc2-aa4e-b1d6" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Encarmine Axe" hidden="false" id="f83b-224f-07ae-49f5" type="selectionEntry" targetId="548a-25f0-b9f5-0d38" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Encarmine Sword" hidden="false" id="d06d-8367-0396-2340" type="selectionEntry" targetId="474a-d571-be3a-f108" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Encarmine Spear" hidden="false" id="15b6-9aba-4f32-35fc" type="selectionEntry" targetId="3103-f6e5-45c8-bea2" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="One model may replace its Angelus Bolter with:" id="b218-3216-fa6d-86b8" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Angelus Bolter" hidden="false" id="410a-d65d-5624-92d9" type="selectionEntry" targetId="4bc5-677b-4d80-0714">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Inferno Pistol " hidden="false" id="3b3b-7332-f9db-5856" type="selectionEntry" targetId="cddf-3a99-f266-f50a">
+                      <modifiers>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="6f88-7092-e1bc-9d72" includeChildSelections="true"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="97b9-7973-e6f6-4eac-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97b9-7973-e6f6-4eac-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <profiles>
+                <profile name="Sanguinary Guard" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="234b-39a1-8ebd-fdb1">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Fly" id="f3b2-802b-a48a-e3f8" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Unstoppable" id="921d-c788-05cd-f40c" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Terrifying Halos" hidden="false" id="d81f-5c8b-3f49-7e53">
+          <profiles>
+            <profile name="Terrifying Halos" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="4ba6-9395-2a37-6868">
+              <characteristics>
+                <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">After this unit finishes a March, each visible enemy unit within 12” suffers D3+1 Suppression.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="02d2-42d6-403b-ca8b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02d2-42d6-403b-ca8b-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Angelic Visage" hidden="false" id="c4f0-b318-88ef-b43b">
+          <profiles>
+            <profile name="Angelic Visage" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5ac7-59ce-9ac1-b82e">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack that targets this unit from within 12”, the Wound Roll of that attack suffers a -1 penalty.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2991-9f35-d8bc-c51b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2991-9f35-d8bc-c51b-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Heirs of Azkaellon" hidden="false" id="576f-8a8a-82fb-d055">
+          <profiles>
+            <profile name="Heirs of Azkaellon" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="043d-3849-147f-5492">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack that targets this unit, add 1 to the Saving Throw.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e4c1-44ab-7fa9-d8b6-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e4c1-44ab-7fa9-d8b6-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sanguinary Banner" hidden="false" id="4364-c095-3720-985c">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7dc4-e3f7-736d-dd58" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Sanguinary Banner" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="f545-1420-759b-2e41">
+              <characteristics>
+                <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">While friendly units are visible to this unit, they gain Unstoppable.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Unstoppable" id="6497-fa5c-ed43-bbec" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="57e9-c953-cb9f-cffc" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="0181-9664-e8e5-657f" primary="false" name="Infantry"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Death Company Assault Intercessors Squad" hidden="false" id="8128-bcde-a7b1-9df2">
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Death Company Assault Intercessors" id="352a-6fd5-e3ef-2493" hidden="false" defaultSelectionEntryId="1016-e5c9-7961-5e6b">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Death Company Assault Intercessor" hidden="false" id="bb98-94dc-c100-1339">
+              <profiles>
+                <profile name="Death Company Assault Intercessor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="2437-fad0-d448-105a">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Heavy Bolt Pistol" hidden="false" id="18d0-efa8-ea78-4c2f" type="selectionEntry" targetId="051d-4a2c-81be-094d">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="07ca-1ce9-8936-82f1" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4356-cd54-f8c7-6900" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="One model may replace its Chainsword with:" id="b981-39ef-adb8-39ab" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Chainsword" hidden="false" id="e283-0513-4ae2-7af9" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Eviscerator" hidden="false" id="ffc4-5350-0b74-55d8" type="selectionEntry" targetId="ab06-0f46-9b20-e308">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="9cb1-3aa0-621d-81fc" includeChildSelections="true"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7696-965d-ed23-d1c7-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7696-965d-ed23-d1c7-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Death Company Assault Intercessor Sergeant" hidden="false" id="25da-e68d-d241-502a">
+              <profiles>
+                <profile name="Death Company Assault Intercessor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="ccc4-00c5-2fb0-6ad1">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="may replace their Heavy Bolt Pistol with either:" id="57ee-6770-5ee0-f2dc" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Heavy Bolt Pistol" hidden="false" id="c0bb-9f2e-618d-f69c" type="selectionEntry" targetId="051d-4a2c-81be-094d" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Flamer Pistol" hidden="false" id="8a5c-f322-405f-80e5" type="selectionEntry" targetId="6ba7-fe2b-ac9d-446c" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Plasma Pistol" hidden="false" id="df04-d8da-0370-69c3" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="4">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Inferno Pistol " hidden="false" id="52d1-1e06-ef26-6379" type="selectionEntry" targetId="cddf-3a99-f266-f50a" sortIndex="5">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cda8-f722-448e-ebf0" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7960-af55-6eca-c19b" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Select One:" id="0ae0-e06e-ed26-0000" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Power Sword" hidden="false" id="3f89-30dd-7a41-1914" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Power Fist" hidden="false" id="8e28-501e-0e20-3aae" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Thunder Hammer" hidden="false" id="bcbf-0642-33e9-f430" type="selectionEntry" targetId="a26d-bbe4-6e1d-51af" sortIndex="4">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Chainsword" hidden="false" id="eb57-93fa-162d-b450" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="09d5-5f29-48bd-9676" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="17ac-a3cd-9145-6e0e" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0c5-05b4-2af4-e106" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="8384-1fe8-b0b7-cb00" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="57d3-d65d-df94-8056" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="20af-b64c-2a58-1092" targetId="205c-3072-067b-d808" primary="false"/>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="722c-bf0c-1bf8-8d2a" primary="true" name="Elites"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Unstoppable" id="9ebe-3439-8632-fa09" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Feel No Pain (X+)" id="761a-2c33-af2d-228a" hidden="false" type="rule" targetId="d17d-0e33-f77d-0131">
+          <modifiers>
+            <modifier type="set" value="Feel No Pain (6+)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="The Black Rage" hidden="false" id="9321-c122-c87b-1eb0" type="selectionEntry" targetId="3797-a3d0-64d7-f8a0"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="The Black Rage" hidden="false" id="3797-a3d0-64d7-f8a0">
+      <profiles>
+        <profile name="The Black Rage" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d804-96d2-a22a-e699">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit has no leader model, this unit cannot capture objectives.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="57ba-b620-9914-481f-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="57ba-b620-9914-481f-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Death Company Jump Assault Intercessors Squad" hidden="false" id="2b26-f76b-031c-dcee">
+      <costs>
+        <cost name="pts" typeId="points" value="130"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Death Company Jump Assault Intercessors" id="8c2c-a812-6e9d-2fd6" hidden="false" defaultSelectionEntryId="d5ab-bbf5-7cf6-5d42">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Death Company Jump Assault Intercessor" hidden="false" id="52c0-33bb-487b-350d">
+              <profiles>
+                <profile name="Death Company Jump Assault Intercessor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="a47c-6948-b7a5-1b91">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Heavy Bolt Pistol" hidden="false" id="2dda-5429-9bfb-ac9e" type="selectionEntry" targetId="051d-4a2c-81be-094d">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2fe1-92cd-4dcf-9e1d" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c8f-6dee-4aa4-2c04" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="One model may replace its Chainsword with:" id="230b-e703-f2a3-c9bd" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Chainsword" hidden="false" id="569c-89d6-5e16-f807" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Eviscerator" hidden="false" id="6ab0-7897-b12e-0a37" type="selectionEntry" targetId="ab06-0f46-9b20-e308">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="310c-3ba7-6caf-249a" includeChildSelections="true"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="91ac-9701-00fc-36ef-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91ac-9701-00fc-36ef-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Death Company Jump Assault Intercessor Sergeant" hidden="false" id="2df6-ad7a-149d-2a7b">
+              <profiles>
+                <profile name="Death Company Jump Assault Intercessor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="d49d-787c-51be-dad7">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="may replace their Heavy Bolt Pistol with either:" id="ea99-7452-083c-0e35" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Heavy Bolt Pistol" hidden="false" id="753b-d385-8ea4-d2f7" type="selectionEntry" targetId="051d-4a2c-81be-094d" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Flamer Pistol" hidden="false" id="9703-37f8-96f4-fc0e" type="selectionEntry" targetId="6ba7-fe2b-ac9d-446c" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Plasma Pistol" hidden="false" id="7ded-1b6d-5c43-42e2" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Inferno Pistol " hidden="false" id="53bd-dcb7-66b4-ec03" type="selectionEntry" targetId="cddf-3a99-f266-f50a" sortIndex="5">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3885-b3a4-b632-213a" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="95c4-1ff7-19b6-e124" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Select One:" id="3fc4-b873-6389-d000" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Power Sword" hidden="false" id="3b07-9f3f-e10d-b834" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Power Fist" hidden="false" id="e861-2b7a-8f89-10ff" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Thunder Hammer" hidden="false" id="2756-b0c6-51f6-7376" type="selectionEntry" targetId="a26d-bbe4-6e1d-51af" sortIndex="4">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Chainsword" hidden="false" id="d84a-ef4a-5739-b13c" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="995e-eaa7-4a31-c5fd" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58e4-523f-c79d-f74a" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c904-f552-820b-1cac" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="88b7-da79-2c5f-ee30" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="8eb8-cebb-9ebe-66af" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="62eb-f317-2ac4-ed8a" targetId="205c-3072-067b-d808" primary="false"/>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="8842-a89b-bf58-0882" primary="true" name="Elites"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Fly" id="257e-3e0e-1dd2-64e8" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Unstoppable" id="e376-d019-3aff-6560" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Feel No Pain (X+)" id="fa22-7c32-8d46-e522" hidden="false" type="rule" targetId="d17d-0e33-f77d-0131">
+          <modifiers>
+            <modifier type="set" value="Feel No Pain (6+)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="The Black Rage" hidden="false" id="d948-9af8-f0d7-f41a" type="selectionEntry" targetId="3797-a3d0-64d7-f8a0"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Death Company Intercessors Squad" hidden="false" id="6de3-0eee-8320-70c5">
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Death Company Intercessors" id="0ca7-48b2-aefc-818a" hidden="false" defaultSelectionEntryId="0b47-e9d1-b7a1-2b3f">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Death Company Intercessor" hidden="false" id="4fec-9707-7bda-10f3">
+              <profiles>
+                <profile name="Death Company Intercessor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="ccca-3863-b6d0-2bc1">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Bolt Rifle" hidden="false" id="77b1-d217-62c6-e589" type="selectionEntry" targetId="6802-fb1b-a361-36bb">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e07-c543-6f93-0b33" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="670d-4a70-7ce6-807b" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Death Company Intercessor w/ Grenade Launcher" hidden="false" id="8119-7dd7-dd48-f5ec">
+              <profiles>
+                <profile name="Death Company Intercessor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0351-82c2-e5e8-2a9b">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Bolt Rifle" hidden="false" id="01b5-d974-9c2e-781c" type="selectionEntry" targetId="6802-fb1b-a361-36bb">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1b79-e5ff-aa0f-5908" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba87-f9e7-7f47-40ff" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Grenade Launcher" hidden="false" id="f06e-f526-58c0-18ee" type="selectionEntry" targetId="5e33-c33d-0868-472e">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6f6a-cb79-dab8-99e3" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38e6-1083-f2d5-4a3c" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c23c-d8aa-8c91-9b07" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Death Company Intercessor Sergeant" hidden="false" id="2856-bbbd-ded2-e801">
+              <profiles>
+                <profile name="Death Company Intercessor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1ed4-bade-4e1a-24d7">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="may replace their Bolt Rifle with either:" id="4168-9e52-fd48-8d81" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Bolt Rifle" hidden="false" id="2059-3c5f-600d-03f8" type="selectionEntry" targetId="6802-fb1b-a361-36bb" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Chainsword" hidden="false" id="58b4-8d2f-6cf9-ec51" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Bolt Pistol" hidden="false" id="90de-61b5-2305-e641" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Flamer Pistol" hidden="false" id="44d3-44a0-58ef-7704" type="selectionEntry" targetId="6ba7-fe2b-ac9d-446c" sortIndex="4">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Plasma Pistol" hidden="false" id="87d4-3c8e-edcd-8bf8" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="5">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Power Sword" hidden="false" id="dd44-200a-602e-5753" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="6">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86a9-dc28-a8b2-a430" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fac-96d3-898b-db1d" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Select One:" id="209e-b9b2-90e1-e3fa" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Power Sword" hidden="false" id="4748-7448-f348-175a" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Power Fist" hidden="false" id="49d4-80f8-45d7-2dc6" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Thunder Hammer" hidden="false" id="565b-0f53-ac34-147b" type="selectionEntry" targetId="a26d-bbe4-6e1d-51af" sortIndex="4">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Chainsword" hidden="false" id="015e-040c-8b67-899c" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b010-2e27-76a5-7740" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a921-227b-032b-7535" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac6f-655f-20fb-0c3c" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="f2fb-b04d-8425-0f50" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="e309-017c-3c6c-72ec" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="d4e5-1ab7-aaa5-c569" targetId="205c-3072-067b-d808" primary="false"/>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="53e1-6efa-5f10-6fb0" primary="true" name="Elites"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Unstoppable" id="5c01-f1aa-0147-fbc4" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Feel No Pain (X+)" id="87d5-4d84-27ed-f3b7" hidden="false" type="rule" targetId="d17d-0e33-f77d-0131">
+          <modifiers>
+            <modifier type="set" value="Feel No Pain (6+)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="The Black Rage" hidden="false" id="e9a8-277e-108f-8e50" type="selectionEntry" targetId="3797-a3d0-64d7-f8a0"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Mephiston" hidden="false" id="8259-145e-28e2-592e">
+      <costs>
+        <cost name="pts" typeId="points" value="150"/>
+      </costs>
+      <profiles>
+        <profile name="Mephiston" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="88b5-d200-87f6-080e">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Unstoppable" id="f6cb-89fe-1a0b-6d61" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Psyker (X)" id="4d6e-d7c9-688f-5025" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (4)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="6707-2be6-c65a-1bcc" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="9d2c-3ce9-e7d1-e9ce" primary="false" name="Rare"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="52b7-4859-8f1a-9783" primary="false" name="Infantry"/>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="9b4f-4dab-031f-3580" primary="true" name="Elites"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Plasma Pistol" hidden="false" id="1498-93cc-b66c-7d39" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
+          <modifiers>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="28c5-69a1-8335-3c47-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="28c5-69a1-8335-3c47-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Vitarus" hidden="false" id="faa6-81a0-49b7-9266">
+          <profiles>
+            <profile name="Vitarus" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="bb2b-e773-400e-b1de">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9fbc-6aae-064f-f489-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9fbc-6aae-064f-f489-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Lord of Death’s Gaze" hidden="false" id="5575-c829-f305-a6e9">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d5be-4497-d4ab-4366-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d5be-4497-d4ab-4366-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="The Lord of Death’s Gaze" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="fe34-ebab-cbe7-9bb2">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy unit finishes a March within 12” of and visible to this unit, you may roll a D6. On a 4+, that unit suffers D3+1 Psychic SW.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Wings of Sanginuous" hidden="false" id="efd6-6835-6370-11e8">
+          <profiles>
+            <profile name="Wings of Sanginuous" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="2011-be50-a90f-0075">
+              <characteristics>
+                <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, until the End step, this unit gains Fly and its M improves by 2”.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="de31-d52a-0efc-7d67-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de31-d52a-0efc-7d67-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Fear of the Darkness" hidden="false" id="ac91-f0b4-ad6c-2ae5">
+          <profiles>
+            <profile name="Fear of the Darkness" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="294b-5854-85ee-fced">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March, each enemy unit within 6” suffers X Suppression where X is equal to the highest dice result of the last Psychic Test made for this unit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="65cb-7e26-b50e-8fee-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="65cb-7e26-b50e-8fee-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Sanguinary Priest" hidden="false" id="70a4-20e9-4ed4-2cd1">
+      <costs>
+        <cost name="pts" typeId="points" value="40"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="25bb-2310-bcd0-6aff" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="e159-86b4-5b84-8eec" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Sanguinary Priest" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="f6fe-f198-dc17-6a34">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Bolt Pistol" hidden="false" id="5caf-a403-db60-ef7c" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+          <modifiers>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7cd5-ed66-9509-3ef5-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cd5-ed66-9509-3ef5-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Chainsword" hidden="false" id="8795-8c35-2c9e-1384" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
+          <modifiers>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="30f0-39e1-3fa5-f3c1-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="30f0-39e1-3fa5-f3c1-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Blood Chalice" hidden="false" id="c374-2fd4-b6dd-ed64">
+          <profiles>
+            <profile name="Blood Chalice" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="2fc1-d637-afe4-7b6c">
+              <characteristics>
+                <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">After this unit finishes a March, you may select a friendly infantry unit within 6”. If you do, the selected unit Heals 1 and loses Succumbed.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f6bd-2115-c946-8638-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f6bd-2115-c946-8638-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Exsanguinator" hidden="false" id="dbf2-ed61-25b3-2b25">
+          <profiles>
+            <profile name="Exsanguinator" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="32fc-84ef-7fb5-07da">
+              <characteristics>
+                <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">After this unit finishes a March, select up to one friendly infantry unit within 3”. The selected unit Heals 3.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5b8f-894c-fadf-d481-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b8f-894c-fadf-d481-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Jump Pack" hidden="false" id="351b-c66f-a017-d8bf">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <profiles>
+            <profile name="Jump Pack" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="9429-14ad-2c2f-5ac9">
+              <characteristics>
+                <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">This unit gains Fly and its M is improved by 4”.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2736-8e06-3739-04cc" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Fly" id="3f12-3a41-4dfa-ad37" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="4" field="c06e-b1a2-0f87-fe2f" scope="unit" affects="profiles.Unit"/>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Baal Predator" hidden="false" id="be62-438b-5797-6b6d">
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="070d-5e5b-f464-0a0f" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+        <categoryLink name="Support" hidden="false" id="979f-d3df-6273-8ae2" targetId="ccc6-6202-853c-23e4" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Baal Predator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="436b-ee93-c960-06e4">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3++</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is equipped with either:" id="6b8d-835e-fc2b-4819" hidden="false">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b1b4-c5ab-c72e-1157" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="356d-24c0-2195-5679" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Flamestorm Cannon" hidden="false" id="2540-4df8-5466-ee59">
+              <profiles>
+                <profile name="Flamestorm Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="eba8-53d0-7992-ff0a">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">18</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                  </characteristics>
+                  <attributes>
+                    <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</attribute>
+                  </attributes>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Ignore Cover" id="876b-6003-fe89-1016" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Assault Cannon" hidden="false" id="049f-9d20-76be-1c58" type="selectionEntry" targetId="8a8c-9d46-5991-9a39">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="This unit may also be equipped with either:" id="8c00-89ca-f322-5d59" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="09c9-c8c1-fee1-86d4" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+              <modifiers>
+                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Storm Bolter" hidden="false" id="de46-1d2e-48f8-6764" type="selectionEntry" targetId="d215-60bd-f49d-295e">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e5db-91d6-5754-8315" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4bfa-61a7-40b2-65a7" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="For an additional 20 points, this model may also be equipped with either:" id="667b-bb46-e74f-771c" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Multi-Melta" hidden="false" id="43ea-f335-c18d-1a82" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Sponson" field="name"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Heavy Flamer" hidden="false" id="5e32-fb8c-0846-c255" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Sponson" field="name"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9d62-552f-1f50-e794" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Dozer Blade" hidden="false" id="65f8-2f45-488b-d16d" type="selectionEntry" targetId="73da-e53b-4390-b808">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd9e-b7d4-a086-63b9" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <entryLinks>
+    <entryLink import="true" name="Sanguinary Guard" hidden="false" id="84d1-1fa4-7864-040c" type="selectionEntry" targetId="8d3e-cb44-eb3b-769e"/>
+    <entryLink import="true" name="Aggressors Squad" hidden="false" id="9313-20e7-fd81-fd22" type="selectionEntry" targetId="111a-71d9-3241-3947"/>
+    <entryLink import="true" name="Apothecary" hidden="false" id="6e76-36b6-e346-319d" type="selectionEntry" targetId="b193-686b-bc03-ddbb"/>
+    <entryLink import="true" name="Apothecary Biologis" hidden="false" id="cd61-96f8-da38-afaf" type="selectionEntry" targetId="69ff-439b-6ac0-8756"/>
+    <entryLink import="true" name="Assault Centurion" hidden="false" id="24f6-11de-abbd-e0d5" type="selectionEntry" targetId="91c3-9c87-e38e-0302"/>
+    <entryLink import="true" name="Assault Intercessors Squad" hidden="false" id="0a70-885f-8c19-8415" type="selectionEntry" targetId="72f0-a0f8-8fae-5a8c"/>
+    <entryLink import="true" name="Assault Terminators Squad" hidden="false" id="fa3b-3411-6918-6858" type="selectionEntry" targetId="c9e2-3a0d-a225-d951"/>
+    <entryLink import="true" name="Basilisk" hidden="false" id="b618-ac18-3283-30e4" type="selectionEntry" targetId="0eec-c7ca-30ee-9fc5">
+      <categoryLinks>
+        <categoryLink name="Support" hidden="false" id="447a-f076-9001-88d5" targetId="ccc6-6202-853c-23e4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="160"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Bladeguard Veteran Squad" hidden="false" id="a66b-cb53-8fbb-f7b4" type="selectionEntry" targetId="d113-bf7d-a0fb-1ade"/>
+    <entryLink import="true" name="Captain" hidden="false" id="f69e-8929-fb17-ec90" type="selectionEntry" targetId="8bcc-45cb-abc8-847b"/>
+    <entryLink import="true" name="Chaplin" hidden="false" id="ebe1-bf36-fc9f-8361" type="selectionEntry" targetId="4216-cdb4-410e-0c48"/>
+    <entryLink import="true" name="Contemptor Dreadnaught" hidden="false" id="600e-4ed6-31de-8491" type="selectionEntry" targetId="1214-e873-29cf-8d3f"/>
+    <entryLink import="true" name="Desolation Squad" hidden="false" id="3855-3db0-6877-9de8" type="selectionEntry" targetId="c5fe-60d6-f084-bdb7"/>
+    <entryLink import="true" name="Devastator Centurion" hidden="false" id="2155-02bd-4529-02e5" type="selectionEntry" targetId="2126-e01c-886f-a0ec"/>
+    <entryLink import="true" name="Devastator Squad" hidden="false" id="20a6-11d5-ee51-688a" type="selectionEntry" targetId="58f1-68ba-4d8a-8b11"/>
+    <entryLink import="true" name="Dreadnaught" hidden="false" id="5ca7-da77-cff1-8751" type="selectionEntry" targetId="3459-4b91-484c-cb59"/>
+    <entryLink import="true" name="Eliminators Squad" hidden="false" id="96a4-eaf3-55b3-0219" type="selectionEntry" targetId="3653-67c8-4bcc-7d9e"/>
+    <entryLink import="true" name="Eradicators Squad" hidden="false" id="1823-37b4-6bca-da5c" type="selectionEntry" targetId="6fae-9098-94c0-e8c8"/>
+    <entryLink import="true" name="Gravis Captain" hidden="false" id="9f0b-e9c8-4742-fdf9" type="selectionEntry" targetId="8c10-ce99-ce34-c11a"/>
+    <entryLink import="true" name="Heavy Intercessors Squad" hidden="false" id="0f8d-99b4-4937-ad33" type="selectionEntry" targetId="ba06-0962-484b-8cb5"/>
+    <entryLink import="true" name="Hellbasters Squad" hidden="false" id="1948-45a1-008c-77bc" type="selectionEntry" targetId="36dc-e3f0-17af-c4b5"/>
+    <entryLink import="true" name="Inceptors Squad" hidden="false" id="266c-4dd5-d0d3-a41e" type="selectionEntry" targetId="e4aa-17c0-c701-74f4"/>
+    <entryLink import="true" name="Incursors Squad" hidden="false" id="477a-3d60-0423-21d7" type="selectionEntry" targetId="c973-7572-0d09-ba5d"/>
+    <entryLink import="true" name="Infernus Squad" hidden="false" id="b614-aaab-7666-a0fe" type="selectionEntry" targetId="812c-afbe-5c53-e24b"/>
+    <entryLink import="true" name="Infiltrators Squad" hidden="false" id="1077-0fa2-d5a6-2766" type="selectionEntry" targetId="43a3-0edd-ca51-bf81"/>
+    <entryLink import="true" name="Intercessors Squad" hidden="false" id="f206-9318-deed-1185" type="selectionEntry" targetId="7c59-2513-2be0-bf53"/>
+    <entryLink import="true" name="Jump Assault Intercessors Squad" hidden="false" id="83ac-c3c5-a405-1495" type="selectionEntry" targetId="4aa0-c017-3a42-e00e"/>
+    <entryLink import="true" name="Jump Pack Captain" hidden="false" id="9751-4be8-4f31-34c0" type="selectionEntry" targetId="b2a7-00a5-9d28-2228"/>
+    <entryLink import="true" name="Jump Pack Chaplin" hidden="false" id="4334-2c15-ec24-3b42" type="selectionEntry" targetId="91a9-39fa-6505-b63d"/>
+    <entryLink import="true" name="Land Raider" hidden="false" id="cadb-af1f-a4c9-24df" type="selectionEntry" targetId="7128-e377-d8e2-17dc"/>
+    <entryLink import="true" name="Librarian" hidden="false" id="eca8-fc62-1d72-89d3" type="selectionEntry" targetId="8512-1f91-b6ea-095b"/>
+    <entryLink import="true" name="Lieutenant" hidden="false" id="e641-471a-ef0e-939f" type="selectionEntry" targetId="e3af-118f-915b-e97e"/>
+    <entryLink import="true" name="Phobos Captain" hidden="false" id="70de-9afa-d9a5-5de4" type="selectionEntry" targetId="2c75-f86c-f941-89b6"/>
+    <entryLink import="true" name="Phobos Librarian" hidden="false" id="1ebf-881f-4c6d-b126" type="selectionEntry" targetId="3b63-fc62-95b5-795c"/>
+    <entryLink import="true" name="Phobos Lieutenant" hidden="false" id="4e5a-3f6a-3609-14e8" type="selectionEntry" targetId="945e-85d2-ebc1-52fd"/>
+    <entryLink import="true" name="Predator" hidden="false" id="5c8b-d6cf-8d6f-381f" type="selectionEntry" targetId="0630-8454-7f40-51ee"/>
+    <entryLink import="true" name="Rhino" hidden="false" id="2b47-568f-1352-8f60" type="selectionEntry" targetId="9884-6337-d74d-e190"/>
+    <entryLink import="true" name="Riever Squad" hidden="false" id="c80f-bc47-900a-779a" type="selectionEntry" targetId="b31f-9637-df9f-85e5"/>
+    <entryLink import="true" name="Scouts Squad" hidden="false" id="8d42-0d23-d0ef-46b7" type="selectionEntry" targetId="3b8b-e719-8714-0e04"/>
+    <entryLink import="true" name="Sternguard Veteran Squad" hidden="false" id="b651-0343-8edf-2fc3" type="selectionEntry" targetId="a7df-8b8a-706f-b6d7"/>
+    <entryLink import="true" name="Suppressor Squad" hidden="false" id="24c1-6a7c-4641-d8a1" type="selectionEntry" targetId="c587-01ec-2269-0103"/>
+    <entryLink import="true" name="Tactical Squad" hidden="false" id="f9ee-f48b-b0ac-9611" type="selectionEntry" targetId="8838-62e2-29c4-69ce"/>
+    <entryLink import="true" name="Techmarine" hidden="false" id="644e-8603-661b-32b0" type="selectionEntry" targetId="d941-0694-9514-20ce"/>
+    <entryLink import="true" name="Terminator Captain" hidden="false" id="f4c4-c2e8-1875-978b" type="selectionEntry" targetId="f126-7aa0-78a3-2817"/>
+    <entryLink import="true" name="Terminator Chaplin" hidden="false" id="d2f2-8e46-bb0a-1097" type="selectionEntry" targetId="38a3-65d0-162d-518f"/>
+    <entryLink import="true" name="Terminator Librarian" hidden="false" id="5b63-5d21-9f02-8bcb" type="selectionEntry" targetId="5189-1a94-7de4-cf89"/>
+    <entryLink import="true" name="Terminators Squad" hidden="false" id="0794-7b7d-5e6e-86b6" type="selectionEntry" targetId="d63c-ad9b-d5b9-ab11"/>
+    <entryLink import="true" name="Vanguard Veteran Squad" hidden="false" id="38d4-8940-1f74-2144" type="selectionEntry" targetId="12bb-f78b-624e-1b7d"/>
+    <entryLink import="true" name="Mephiston" hidden="false" id="cd1f-b82a-f2b1-6058" type="selectionEntry" targetId="8259-145e-28e2-592e"/>
+    <entryLink import="true" name="Death Company Assault Intercessors Squad" hidden="false" id="5a7e-9edb-95b7-0779" type="selectionEntry" targetId="8128-bcde-a7b1-9df2"/>
+    <entryLink import="true" name="Death Company Intercessors Squad" hidden="false" id="3352-430d-67ed-1dc4" type="selectionEntry" targetId="6de3-0eee-8320-70c5"/>
+    <entryLink import="true" name="Death Company Jump Assault Intercessors Squad" hidden="false" id="675d-3768-1a77-11e8" type="selectionEntry" targetId="2b26-f76b-031c-dcee"/>
+    <entryLink import="true" name="Sanguinary Priest" hidden="false" id="7e10-60d3-25d4-37ab" type="selectionEntry" targetId="70a4-20e9-4ed4-2cd1"/>
+    <entryLink import="true" name="Baal Predator" hidden="false" id="d803-d47f-6859-9626" type="selectionEntry" targetId="be62-438b-5797-6b6d"/>
+  </entryLinks>
+</catalogue>
