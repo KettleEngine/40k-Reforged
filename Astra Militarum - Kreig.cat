@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="eef4-16e6-fd38-1a64" name="Astra Militarum - Kreig" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="eef4-16e6-fd38-1a64" name="Astra Militarum - Kreig" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Death Korps Voxcaster" hidden="false" id="bcaa-e6ba-bdeb-f43d">
       <profiles>
@@ -38,7 +38,7 @@
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Weapons" id="e2f5-d79f-9284-d729" hidden="false">
+                <selectionEntryGroup name="Weapons" id="e2f5-d79f-9284-d729" hidden="false" defaultSelectionEntryId="d5ec-e275-5784-a807">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Lasgun &amp; Bayonet" hidden="false" id="d5ec-e275-5784-a807">
                       <entryLinks>
@@ -97,6 +97,10 @@
                       </entryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7415-c7cf-c224-22b4-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7415-c7cf-c224-22b4-max" includeChildSelections="false"/>
+                  </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
