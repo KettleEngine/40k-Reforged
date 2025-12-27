@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="10" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="11" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -86,10 +86,8 @@
         <characteristicType name="S" id="571c-0471-2614-c57c"/>
         <characteristicType name="AP" id="68a3-e9dc-8975-7aca"/>
         <characteristicType name="D" id="c2c0-3714-05e2-65a0"/>
+        <characteristicType name="Abilities" id="d93f-70ee-72bc-5ef9"/>
       </characteristicTypes>
-      <attributeTypes>
-        <attributeType name="Abilities" id="d93f-70ee-72bc-5ef9"/>
-      </attributeTypes>
     </profileType>
     <profileType name="Wargear" id="3ce5-e1a1-5b1f-0410" hidden="false" kind="ability">
       <characteristicTypes>
@@ -115,6 +113,16 @@
       <characteristicTypes>
         <characteristicType name="Description:" id="22b9-735d-71b1-6d7a" kind="longText"/>
       </characteristicTypes>
+    </profileType>
+    <profileType name="Relics" id="9b56-9768-f88b-14ac" hidden="false" kind="spell">
+      <attributeTypes>
+        <attributeType name="1" id="446c-54b7-5947-c265" kind="longText"/>
+        <attributeType name="2" id="081a-4343-7610-b5e9" kind="longText"/>
+        <attributeType name="3" id="4ca5-a5d7-3a35-97d0" kind="longText"/>
+        <attributeType name="4" id="6755-2abf-f621-cfb6" kind="longText"/>
+        <attributeType name="5" id="c487-ff6d-c45e-b8ff" kind="longText"/>
+        <attributeType name="6" id="9e90-b28f-6b5e-e881" kind="longText"/>
+      </attributeTypes>
     </profileType>
   </profileTypes>
   <costTypes>
@@ -168,10 +176,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</attribute>
-          </attributes>
         </profile>
       </profiles>
       <infoLinks>
@@ -189,10 +195,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</attribute>
-          </attributes>
         </profile>
       </profiles>
       <infoLinks>
@@ -210,10 +214,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</attribute>
-          </attributes>
         </profile>
       </profiles>
       <infoLinks>
@@ -231,10 +233,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot</attribute>
-          </attributes>
         </profile>
       </profiles>
       <infoLinks>
@@ -251,12 +251,13 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This unit gains Walker</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Walker" id="c019-2b10-abb1-2272" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy Bolter" hidden="false" id="82a1-b562-e748-d5ad">
       <profiles>
@@ -268,10 +269,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -285,10 +284,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</attribute>
-          </attributes>
         </profile>
       </profiles>
       <infoLinks>
@@ -305,10 +302,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">14</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Suppressive, For each attack made for this weapon, a successful Hit Roll causes the target unit to suffer 2 SW.</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Suppressive, For each attack made for this weapon, a successful Hit Roll causes the target unit to suffer 2 SW.</attribute>
-          </attributes>
         </profile>
       </profiles>
       <infoLinks>
@@ -398,10 +393,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -415,10 +408,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive</attribute>
-          </attributes>
         </profile>
       </profiles>
       <infoLinks>
@@ -435,10 +426,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Suppressive, For each attack that targets a vehicle unit, a Wound Roll automatically succeeds on a 2+.</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Suppressive, For each attack that targets a vehicle unit, a Wound Roll automatically succeeds on a 2+.</attribute>
-          </attributes>
         </profile>
       </profiles>
       <infoLinks>
@@ -457,10 +446,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -474,10 +461,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</attribute>
-          </attributes>
         </profile>
       </profiles>
       <infoLinks>
@@ -494,10 +479,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -511,10 +494,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</attribute>
-          </attributes>
         </profile>
       </profiles>
       <infoLinks>
@@ -531,10 +512,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -548,10 +527,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -565,12 +542,13 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Overcharge" id="16f1-ab0d-dae7-bfcd" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Cannon" hidden="false" id="597d-3cc2-8209-d3d1">
       <profiles>
@@ -582,12 +560,13 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Overcharge" id="e98a-2c0a-0547-06c7" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="dae5-9fbf-bdd8-7f79">
       <profiles>
@@ -599,10 +578,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -616,10 +593,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -633,10 +608,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -650,10 +623,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -667,6 +638,7 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
         </profile>
       </profiles>
@@ -681,6 +653,7 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
         </profile>
       </profiles>
@@ -695,10 +668,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </attributes>
         </profile>
       </profiles>
     </selectionEntry>
@@ -712,6 +683,7 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
         </profile>
       </profiles>
@@ -726,10 +698,8 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
           </characteristics>
-          <attributes>
-            <attribute name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignores Cover</attribute>
-          </attributes>
         </profile>
       </profiles>
       <infoLinks>
