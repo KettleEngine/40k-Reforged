@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Strands of Fate (X)" id="80eb-f4ac-e40d-8401" hidden="false">
       <description>When an ability has you “roll Strands of Fate X”: Roll X D6 die all at once. For each 6, remove it and set it aside in a “Fate Dice” pool. Then remove one die and reroll the rest. Repeat until you remove the last dice.
@@ -9,9 +9,6 @@ Once during each turn, instead of rolling a Hit Roll, Wound Roll or Damage Roll
     </rule>
     <rule name="Foretold Foray" id="d0c2-99f6-070a-f4ed" hidden="false">
       <description>After rolling for initiative battle round 1, roll Strands of Fate X where X is twice the number of leader units you have on the battlefield and reserves.</description>
-    </rule>
-    <rule name="Shuriken" id="c503-366d-25f8-01c0" hidden="false">
-      <description>For each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit.</description>
     </rule>
     <rule name="Roaming Performers" id="c56f-e048-3acd-ec3d" hidden="false">
       <description>You may also add any of the following Harlequins units to your Army List:
@@ -28,24 +25,6 @@ Each of those units gains a different Masque&apos;s Ensemble ability from either
     <rule name=" Aspect (X)" id="9db0-7796-725a-f91f" hidden="false"/>
   </sharedRules>
   <sharedSelectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Shuriken Pistol" hidden="false" id="4f77-9c86-d981-5252">
-      <profiles>
-        <profile name="Shuriken Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="fb0b-3967-e3e8-0ef4">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shuriken</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Shuriken" id="5f6f-182d-6dcc-e9c6" hidden="false" type="rule" targetId="c503-366d-25f8-01c0"/>
-      </infoLinks>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Death Spinner" hidden="false" id="cf8a-26ed-56bd-dda3">
       <profiles>
         <profile name="Death Spinner" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="eb4d-6281-b214-4a9e">
@@ -102,21 +81,6 @@ Each of those units gains a different Masque&apos;s Ensemble ability from either
         </profile>
       </profiles>
       <comment>Autarch</comment>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Fusion Pistol" hidden="false" id="2a6b-b034-37f1-59fa">
-      <profiles>
-        <profile name="Fusion Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3ae2-af28-5285-f2e2">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Wound Rolls of 6 cause an additional wound</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Reaper Launcher" hidden="false" id="6e3a-11b3-527f-9634">
       <profiles>
@@ -815,24 +779,6 @@ a) GUARDIAN DEFENDERS</characteristic>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Shuriken Cannon" hidden="false" id="3de8-f8bb-0dc7-7dc8">
-      <infoLinks>
-        <infoLink name="Shuriken" id="622f-0a76-56fd-d6c6" hidden="false" type="rule" targetId="c503-366d-25f8-01c0"/>
-      </infoLinks>
-      <profiles>
-        <profile name="Shuriken Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2c89-3531-02ff-e360">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shuriken</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Aeldari Missile Launcher" hidden="false" id="1c94-6fd1-0105-7e91">
       <comment>for guardians</comment>
       <profiles>
@@ -1354,21 +1300,6 @@ a) GUARDIAN DEFENDERS</characteristic>
         <infoLink name="Ignore Cover" id="f0c8-931e-3d30-8cd4" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Firepike" hidden="false" id="12b0-4131-6369-ce22">
-      <profiles>
-        <profile name="Firepike" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="142e-ff96-c578-d832">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Cq</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">18</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Wound Rolls of 6 cause an additional wound</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-    </selectionEntry>
     <selectionEntry type="unit" import="true" name="Fire Dragons Squad" hidden="false" id="0b82-f13b-6efa-4079">
       <selectionEntryGroups>
         <selectionEntryGroup name="Fire Dragons" id="133c-7392-4e2a-3c88" hidden="false" defaultSelectionEntryId="0ce1-286c-2a00-a0a9">
@@ -1733,25 +1664,6 @@ a) GUARDIAN DEFENDERS</characteristic>
           </characteristics>
         </profile>
       </profiles>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Plasma Grenade" hidden="false" id="16c6-5a66-c200-152f">
-      <profiles>
-        <profile name="Plasma Grenade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="65a1-1cab-62d6-adc9">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="One Shot" id="c151-b4dc-feed-8b27" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-        <infoLink name="Indirect" id="5e0f-0369-fdb1-32e0" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Swooping Hawks Squad" hidden="false" id="4d07-22a4-4a10-f521">
       <selectionEntryGroups>
@@ -3336,5 +3248,15 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
     <entryLink import="true" name="Wraithknight" hidden="false" id="eb34-57da-a9f9-34e3" type="selectionEntry" targetId="ffa3-9c3c-bd0b-83f8"/>
     <entryLink import="true" name="Psychic Powers (Refrence)" hidden="false" id="6020-4c59-0ec9-5d4c" type="selectionEntry" targetId="cb57-8ddf-8547-48b1"/>
     <entryLink import="true" name="Relics (Refrence)" hidden="false" id="ff9b-9bb7-fe9b-a5c4" type="selectionEntry" targetId="81b3-1ebe-3f72-c7bf"/>
+    <entryLink import="true" name="Troupe Master" hidden="false" id="5801-0c51-8bbe-f4bc" type="selectionEntry" targetId="4022-69f2-afa5-0bc5"/>
+    <entryLink import="true" name="Troupe" hidden="false" id="b794-ae3d-b953-953a" type="selectionEntry" targetId="b4ef-2da3-f7cf-6b80">
+      <constraints>
+        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="a7bb-9aee-c4fb-d444" includeChildSelections="false"/>
+      </constraints>
+    </entryLink>
+    <entryLink import="true" name="Shaddowseer" hidden="false" id="2ecf-ac74-ad45-bc06" type="selectionEntry" targetId="5be0-2b38-78af-32bf"/>
   </entryLinks>
+  <catalogueLinks>
+    <catalogueLink type="catalogue" name="Harlequins" id="929c-fb4c-d5a7-175e" targetId="5f5e-53b8-b4af-9b92"/>
+  </catalogueLinks>
 </catalogue>

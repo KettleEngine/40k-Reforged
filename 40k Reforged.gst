@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="12" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="13" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -711,6 +711,91 @@
         <infoLink name="Ignore Cover" id="aa6e-c680-81e8-1779" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Shuriken Pistol" hidden="false" id="4f77-9c86-d981-5252">
+      <profiles>
+        <profile name="Shuriken Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="fb0b-3967-e3e8-0ef4">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shuriken</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Shuriken" id="5f6f-182d-6dcc-e9c6" hidden="false" type="rule" targetId="c503-366d-25f8-01c0"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Shuriken Cannon" hidden="false" id="3de8-f8bb-0dc7-7dc8">
+      <infoLinks>
+        <infoLink name="Shuriken" id="622f-0a76-56fd-d6c6" hidden="false" type="rule" targetId="c503-366d-25f8-01c0"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Shuriken Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2c89-3531-02ff-e360">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shuriken</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Fusion Pistol" hidden="false" id="2a6b-b034-37f1-59fa">
+      <profiles>
+        <profile name="Fusion Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3ae2-af28-5285-f2e2">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Wound Rolls of 6 cause an additional wound</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Firepike" hidden="false" id="12b0-4131-6369-ce22">
+      <profiles>
+        <profile name="Firepike" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="142e-ff96-c578-d832">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Cq</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">18</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Wound Rolls of 6 cause an additional wound</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Plasma Grenade" hidden="false" id="16c6-5a66-c200-152f">
+      <profiles>
+        <profile name="Plasma Grenade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="65a1-1cab-62d6-adc9">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="One Shot" id="c151-b4dc-feed-8b27" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Indirect" id="5e0f-0369-fdb1-32e0" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Battle Size" hidden="false" id="416b-2ab1-795a-6a90" type="selectionEntry" targetId="564e-fbc6-5266-3ea4">
@@ -814,6 +899,9 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     </rule>
     <rule name="Leader (X)" id="cc45-da26-194a-5be3" hidden="false">
       <description>This rule dictates what units can lead or be lead by this squad</description>
+    </rule>
+    <rule name="Shuriken" id="c503-366d-25f8-01c0" hidden="false">
+      <description>For each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit.</description>
     </rule>
   </sharedRules>
   <publications>
