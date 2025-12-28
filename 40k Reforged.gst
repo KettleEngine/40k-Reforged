@@ -96,12 +96,12 @@
     </profileType>
     <profileType name="Psychic Power" id="6406-cf2b-ec5b-c7e6" hidden="false" kind="spell">
       <characteristicTypes>
-        <characteristicType name="1." id="4b9e-dc73-b312-b42d"/>
-        <characteristicType name="2." id="e240-47ea-ea39-5bd8"/>
-        <characteristicType name="3." id="e623-475f-7979-1f72"/>
-        <characteristicType name="4." id="1eb8-c780-191e-1f49"/>
-        <characteristicType name="5." id="c7c4-b767-4934-72c0"/>
-        <characteristicType name="6." id="7516-f49b-d8f3-98c4"/>
+        <characteristicType name="1" id="4b9e-dc73-b312-b42d"/>
+        <characteristicType name="2" id="e240-47ea-ea39-5bd8"/>
+        <characteristicType name="3" id="e623-475f-7979-1f72"/>
+        <characteristicType name="4" id="1eb8-c780-191e-1f49"/>
+        <characteristicType name="5" id="c7c4-b767-4934-72c0"/>
+        <characteristicType name="6" id="7516-f49b-d8f3-98c4"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Windfall of the Warp" id="266a-be4d-b9fa-94de" hidden="false" kind="spell">
@@ -116,12 +116,17 @@
     </profileType>
     <profileType name="Relics" id="9b56-9768-f88b-14ac" hidden="false" kind="spell">
       <characteristicTypes>
-        <characteristicType name="1." id="becf-f398-aed2-688b"/>
-        <characteristicType name="2." id="a0af-6e43-1e76-7997"/>
-        <characteristicType name="3." id="974b-8308-a17b-356f"/>
-        <characteristicType name="4." id="3855-8954-144a-1b35"/>
-        <characteristicType name="5." id="c9f0-a624-cffd-f4f4"/>
-        <characteristicType name="6." id="c2fa-c373-4d11-a951"/>
+        <characteristicType name="1" id="becf-f398-aed2-688b"/>
+        <characteristicType name="2" id="a0af-6e43-1e76-7997"/>
+        <characteristicType name="3" id="974b-8308-a17b-356f"/>
+        <characteristicType name="4" id="3855-8954-144a-1b35"/>
+        <characteristicType name="5" id="c9f0-a624-cffd-f4f4"/>
+        <characteristicType name="6" id="c2fa-c373-4d11-a951"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Leader" id="55da-e0a0-1fa3-2d1c" hidden="false" kind="rule">
+      <characteristicTypes>
+        <characteristicType name="Must Attach to" id="2c63-5e3f-9132-459d" kind="longText"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
