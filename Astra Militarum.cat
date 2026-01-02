@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -155,6 +155,23 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b517-511d-15ab-c1cf-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="0d78-bfec-2ae3-1c7e">
+          <profiles>
+            <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="c593-c0a6-1540-13a7">
+              <characteristics>
+                <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either, even if there is another Leader attached to it:
+a) CADIAN PLATOON COMMAND SQUAD
+b) DEATH KORPS PLATOON COMMAND SQUAD
+c) MORDIAN PLATOON COMMAND SQUAD
+This unit does not count towards the leader maximum of the army list</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="35bf-2c03-3bed-2806-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="35bf-2c03-3bed-2806-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="45fb-d7ae-a534-61a0" includeChildSelections="false"/>
@@ -165,9 +182,9 @@
         <cost name="pts" typeId="points" value="10"/>
       </costs>
       <categoryLinks>
-        <categoryLink targetId="2886-2afd-f65f-9d8e" id="0e6a-c8ee-e0bf-fbcd" primary="true" name="Leaders"/>
         <categoryLink targetId="205c-3072-067b-d808" id="e12f-fd4a-d07d-0405" primary="false" name="Infantry"/>
         <categoryLink targetId="1738-1300-9dbb-c5be" id="9a94-b29a-1c99-9ab0" primary="false" name="Rare"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="5a66-3d80-425f-df0a" primary="true" name="Leaders"/>
       </categoryLinks>
       <profiles>
         <profile name="Master of Ordinance" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3a96-51e2-582f-89b1">
@@ -205,6 +222,23 @@
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="12f3-e612-c5c9-434e">
+          <profiles>
+            <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="d938-a811-c324-d507">
+              <characteristics>
+                <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either, even if there is another Leader attached to it:
+a) CADIAN PLATOON COMMAND SQUAD
+b) DEATH KORPS PLATOON COMMAND SQUAD
+c) MORDIAN PLATOON COMMAND SQUAD
+This unit does not count towards the leader maximum of the army list</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c4ad-3bad-ba38-0f3b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c4ad-3bad-ba38-0f3b-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="8904-0633-6de7-64bb" includeChildSelections="false"/>
@@ -237,6 +271,23 @@
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="15d7-dfe1-ac0f-6141-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="15d7-dfe1-ac0f-6141-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="4fb5-1953-2d20-025f">
+          <profiles>
+            <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="1d15-b3e1-654c-5599">
+              <characteristics>
+                <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either, even if there is another Leader attached to it:
+a) CADIAN PLATOON COMMAND SQUAD
+b) DEATH KORPS PLATOON COMMAND SQUAD
+c) MORDIAN PLATOON COMMAND SQUAD
+This unit does not count towards the leader maximum of the army list</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac52-46cb-0317-08dd-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac52-46cb-0317-08dd-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -320,17 +371,39 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a21-568f-8687-30c0-max" includeChildSelections="false"/>
           </constraints>
           <profiles>
-            <profile name="Psychic Powers" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="e1d0-5149-1542-1d8d">
+            <profile name="1/2. Terrifying Visions" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="e1d0-5149-1542-1d8d">
               <characteristics>
-                <characteristic name="1" typeId="4b9e-dc73-b312-b42d"/>
-                <characteristic name="2" typeId="e240-47ea-ea39-5bd8"/>
-                <characteristic name="3" typeId="e623-475f-7979-1f72"/>
-                <characteristic name="4" typeId="1eb8-c780-191e-1f49"/>
-                <characteristic name="5" typeId="c7c4-b767-4934-72c0"/>
-                <characteristic name="6" typeId="7516-f49b-d8f3-98c4"/>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit with 16” and visible to this unit. The selected unit suffers 3D3 Suppression.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="3/4. Psyker Barrier" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="0b50-440c-774e-6c6d">
+              <characteristics>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a friendly unit within 16”. Until the end of the battle round, the selected unit’s Sv changes to 3++.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="5/6. Gaze of the Emperor" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="dcd9-1a32-8930-95d0">
+              <characteristics>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit with 16” and visible to this unit. The selected unit suffers 2D3 Psychic SW.</characteristic>
               </characteristics>
             </profile>
           </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="31b9-5a65-3566-ec7d">
+          <profiles>
+            <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="6200-fb74-dfbc-6a92">
+              <characteristics>
+                <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either, even if there is another Leader attached to it:
+a) CADIAN PLATOON COMMAND SQUAD
+b) DEATH KORPS PLATOON COMMAND SQUAD
+c) MORDIAN PLATOON COMMAND SQUAD
+This unit does not count towards the leader maximum of the army list</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58ba-09c2-ad6a-3ae5-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58ba-09c2-ad6a-3ae5-max" includeChildSelections="false"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <infoLinks>
@@ -645,7 +718,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">1</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover, After each successful Hit Roll made for this weapon’s attacks which targets an infantry unit, the target unit suffers 2 SW.</characteristic>
           </characteristics>
@@ -762,6 +835,20 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86f6-f0f1-95c7-e0d6-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="86f6-f0f1-95c7-e0d6-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="7f79-88d9-2c50-51f1">
+          <profiles>
+            <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="9476-5123-558f-104b">
+              <characteristics>
+                <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to:
+a) Any unit without Titan</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0643-e530-5613-9282" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d07b-cebc-09af-b9dd" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -2646,6 +2733,146 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Death Korps Field Artillery" hidden="false" id="b186-98a3-7201-087b">
+      <costs>
+        <cost name="pts" typeId="points" value="90"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Feel No Pain (X+)" id="c3e8-d619-13e0-b4a1" hidden="false" type="rule" targetId="d17d-0e33-f77d-0131">
+          <modifiers>
+            <modifier type="set" value="Feel No Pain (6+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Unstoppable" id="4e1f-d296-ff87-c82c" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="9ccb-b3d9-60fe-34fd"/>
+      </constraints>
+      <profiles>
+        <profile name="Death Korps Field Artillery" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="ca61-c14d-48a7-6fdf">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">9</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Recrew" hidden="false" id="8c3d-180b-e8bb-35a0" type="selectionEntry" targetId="a6d9-ef35-44bc-59b6"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Gas Dispersion" hidden="false" id="f82b-5b08-a9ff-3f9d">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3c1f-c6bb-e7c5-300d" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Gas Dispersion" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="90a6-5a3c-fa10-4648">
+              <characteristics>
+                <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">For each of this unit’s weapons with Indirect, after selecting targets for its attacks, you may ‘load gas shells’. If you do, for each successful Hit Roll, that attack fails and the target unit suffers Suppression X where X is equal to the Damage of the attack.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Main Gun:" id="cb69-b5df-41c2-6304" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Siege Cannon" hidden="false" id="1169-8f79-cb82-7262" sortIndex="1">
+              <profiles>
+                <profile name="Siege Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="bbf1-d5ae-6d3a-e848">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Indirect" id="e0ae-023d-f67f-ee63" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+                <infoLink name="Barrage" id="b30c-0756-047b-3715" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Mortar" hidden="false" id="370c-db33-27df-fe46" sortIndex="2">
+              <profiles>
+                <profile name="Heavy Mortar" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="fc85-595d-92ef-75ec">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">18</characteristic>
+                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3+3</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Barrage" id="6253-c098-39a3-b9b3" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+                <infoLink name="Indirect" id="9d36-2eae-8a27-bd73" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+                <infoLink name="Ignore Cover" id="834e-1d5e-2391-2a36" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Multiple Rocket Launcher" hidden="false" id="cc5f-f025-c810-bf7d" sortIndex="3">
+              <profiles>
+                <profile name="Multiple Rocket Launcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="858e-0ff7-866c-9892">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Barrage" id="bbc7-7840-b8cc-f18b" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+                <infoLink name="Suppressive" id="60cb-08ff-0d93-4d5d" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+                <infoLink name="Indirect" id="93b9-e236-de1a-b4c4" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Quad Launcher" hidden="false" id="8c2f-b473-bf55-5f27" sortIndex="4">
+              <infoLinks>
+                <infoLink name="Barrage" id="c4a7-0b18-a682-4887" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+                <infoLink name="Ignore Cover" id="23cc-fc2c-0019-4173" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+                <infoLink name="Indirect" id="19af-f12f-dc23-fe42" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Heavy Quad Launcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="44eb-b881-d35f-75e7">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8eb8-b2ff-d952-d27e-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8eb8-b2ff-d952-d27e-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Support" hidden="false" id="6446-6f34-d132-d08b" targetId="ccc6-6202-853c-23e4" primary="true"/>
+        <categoryLink name="Infantry" hidden="false" id="dd42-1b6f-8c9e-7924" targetId="205c-3072-067b-d808" primary="false"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <categoryEntries>
     <categoryEntry name="Cadian" id="c010-6218-a650-5198" hidden="false"/>
@@ -2679,4 +2906,80 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
       <description>After this unit&apos;s End step, if this turn was not your second turn in a row, take another turn.</description>
     </rule>
   </sharedRules>
+  <forceEntries>
+    <forceEntry name="Army Roster (Use for Guard Lists)" id="3c12-04b7-9f62-e699" hidden="false">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="0348-beac-ccc0-6740" targetId="9cd6-0442-3f35-6b52"/>
+        <categoryLink name="Leaders" hidden="false" id="69b0-62ce-793a-efb4" targetId="2886-2afd-f65f-9d8e">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="7ee8-4782-dcc4-19b9" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="7ee8-4782-dcc4-19b9">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="d62d-db22-4893-4bc0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="2" field="7ee8-4782-dcc4-19b9">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="baf8-997f-e323-a090" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="3" field="7ee8-4782-dcc4-19b9">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="4204-82d0-908c-a62a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="7ee8-4782-dcc4-19b9">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="75ca-3292-ce3c-933e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="7ee8-4782-dcc4-19b9">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="7f11-bc81-0039-49de" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="7ee8-4782-dcc4-19b9">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="7b9c-0f95-64b8-19ec" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="7ee8-4782-dcc4-19b9">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="cf4c-6bec-10c3-511e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Troops" hidden="false" id="6144-60be-7a42-364c" targetId="b69b-5b51-faf1-2c40"/>
+        <categoryLink name="Elites" hidden="false" id="0cd9-e8d8-2a05-9a82" targetId="4820-e2b5-9e00-bb68"/>
+        <categoryLink name="Fast Attack" hidden="false" id="fc80-1a62-2458-5b3f" targetId="af46-d948-7306-0601"/>
+        <categoryLink name="Support" hidden="false" id="6246-c7a6-c618-157f" targetId="ccc6-6202-853c-23e4"/>
+        <categoryLink name="Transport" hidden="false" id="79f3-3ff5-ea9f-5d04" targetId="3239-2096-a612-ed8e"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="500" field="3cfb-46cb-9702-38be">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="d62d-db22-4893-4bc0" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1000" field="3cfb-46cb-9702-38be">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="baf8-997f-e323-a090" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="-1" field="3cfb-46cb-9702-38be">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="4204-82d0-908c-a62a" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="0" field="points" scope="force" shared="true" id="3cfb-46cb-9702-38be" includeChildSelections="true"/>
+        <constraint type="min" value="1" field="forces" scope="roster" shared="true" id="0377-eb38-e058-8edc-min" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="0377-eb38-e058-8edc-max" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+    </forceEntry>
+  </forceEntries>
 </catalogue>

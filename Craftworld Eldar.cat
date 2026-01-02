@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Strands of Fate (X)" id="80eb-f4ac-e40d-8401" hidden="false">
       <description>When an ability has you “roll Strands of Fate X”: Roll X D6 die all at once. For each 6, remove it and set it aside in a “Fate Dice” pool. Then remove one die and reroll the rest. Repeat until you remove the last dice.
@@ -50,7 +50,7 @@ Each of those units gains a different Masque&apos;s Ensemble ability from either
             <characteristic name="S" typeId="571c-0471-2614-c57c">14</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Wound Rolls of 6 cause an additional wound</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3005,7 +3005,7 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">18</characteristic>
                     <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-8</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+6</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Hit Rolls of 6 cause an additional hit</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3020,7 +3020,7 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">14</characteristic>
                     <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each wound assigned to the model with this weapon, add 1 to the Saving Throw for that attack.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3043,7 +3043,7 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">18</characteristic>
                     <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-8</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+6</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Hit Rolls of 6 cause an additional hit</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3110,7 +3110,7 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">20</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">8</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Strike</characteristic>
           </characteristics>
         </profile>
         <profile name="Wraithknight Ghostglaive (Sweep)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8080-179e-9827-e4f9">
@@ -3121,7 +3121,7 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">10</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3182,14 +3182,34 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Psychic Powers (Refrence)" hidden="false" id="cb57-8ddf-8547-48b1">
       <profiles>
-        <profile name="Psychic Powers" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="5661-15c3-120e-477f">
+        <profile name="1. Song of Souls" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="5661-15c3-120e-477f">
           <characteristics>
-            <characteristic name="1" typeId="4b9e-dc73-b312-b42d">Song of Souls: Select a friendly unit on the battlefield. The selected unit Heals D3 and its M is improved by 2 until the end of the battle round. Then, if the selected unit has Wraithbone, it Heals D3.</characteristic>
-            <characteristic name="2" typeId="e240-47ea-ea39-5bd8">Woven Webway: Select up to two obstacle or structure terrain pieces within 24” of this unit. Until the end of the battle round, after you Activate an infantry unit in reserves or one of your infantry units finishes a March within 3” of one of the selected terrain pieces, you may remove your active unit from the battlefield. Then, Deploy that unit wholly within 6” of one of the selected terrain pieces at least 9&quot; away from enemy models.</characteristic>
-            <characteristic name="3" typeId="e623-475f-7979-1f72">Combinatorial Foresight: Until the next time this unit is Activated, for each attack that targets a friendly unit within 12” of and visible to this unit, you may change the Sv of this unit to 5+++ for that attack.</characteristic>
-            <characteristic name="4" typeId="1eb8-c780-191e-1f49">Eldritch Bolt: Select one unit within 16” and visible to this unit. That unit suffers 2D3 Psychic SW.</characteristic>
-            <characteristic name="5" typeId="c7c4-b767-4934-72c0">Eldritch Storm: Select one point on the battlefield within 24&quot; of this unit. For each unit within 3D6” of that point, that unit suffers 2 Psychic SW.</characteristic>
-            <characteristic name="6" typeId="7516-f49b-d8f3-98c4">Battle Meditations: Roll Strands of Fate 6.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a friendly unit on the battlefield. The selected unit Heals D3 and its M is improved by 2 until the end of the battle round. Then, if the selected unit has Wraithbone, it Heals D3.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2. Woven Webway" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="ac7f-83f6-9d25-2ea0">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select up to two obstacle or structure terrain pieces within 24” of this unit. Until the end of the battle round, after you Activate an infantry unit in reserves or one of your infantry units finishes a March within 3” of one of the selected terrain pieces, you may remove your active unit from the battlefield. Then, Deploy that unit wholly within 6” of one of the selected terrain pieces at least 9&quot; away from enemy models.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3. Combinatorial Foresight" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="e5c9-9797-3640-40c2">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the next time this unit is Activated, for each attack that targets a friendly unit within 12” of and visible to this unit, you may change the Sv of this unit to 5+++ for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4. Eldritch Bolt" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="4d29-91e4-ba19-e9ab">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one unit within 16” and visible to this unit. That unit suffers 2D3 Psychic SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5. Eldritch Storm" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="d24c-86a1-6524-c6a0">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one point on the battlefield within 24&quot; of this unit. For each unit within 3D6” of that point, that unit suffers 2 Psychic SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6. Battle Meditations" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="d934-e5eb-df8a-5194">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Roll Strands of Fate 6.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3211,14 +3231,34 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="6ea7-4439-5ad4-86a1" includeChildSelections="false"/>
       </constraints>
       <profiles>
-        <profile name="Relics (Refrence)" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="6be5-4d96-d9ca-1370">
+        <profile name="1. Blood Moon of Khaine" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="6be5-4d96-d9ca-1370">
           <characteristics>
-            <characteristic name="1" typeId="becf-f398-aed2-688b">Blood Moon of Khaine: For each attack this unit makes, reroll a Hit Roll and Wound Roll of 1 for that attack. Additionally, after this unit’s Attacks step, roll Strands of Fate X where X is equal to the number of Health enemy units lost this turn.</characteristic>
-            <characteristic name="2" typeId="a0af-6e43-1e76-7997">Webway Network: After this unit is Activated, you may remove it from the battlefield and place it into reserves. Then, you may Deploy it at least 3D6” away from enemy units.</characteristic>
-            <characteristic name="3" typeId="974b-8308-a17b-356f">Farseer Spirit Stone: This unit gains Psyker 3.</characteristic>
-            <characteristic name="4" typeId="3855-8954-144a-1b35">Faolchu’s Wing: After this unit finishes its Attacks step, it may make a March.</characteristic>
-            <characteristic name="5" typeId="c9f0-a624-cffd-f4f4">Rune of the Bladestorm: For each ML attack this unit makes, a Hit Roll of 5+ for that attack causes an additional hit.</characteristic>
-            <characteristic name="6" typeId="c2fa-c373-4d11-a951">Exarch Spirit Stone: After this unit&apos;s End step, if this turn was not your second turn in a row, take another turn. During that turn, if your active unit has an Aspect, X ability, for each attack made by that unit, a Hit Roll of 6 for that attack causes an additional hit.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each attack this unit makes, reroll a Hit Roll and Wound Roll of 1 for that attack. Additionally, after this unit’s Attacks step, roll Strands of Fate X where X is equal to the number of Health enemy units lost this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2. Webway Network" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="4f48-1df1-4fd2-d115">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit is Activated, you may remove it from the battlefield and place it into reserves. Then, you may Deploy it at least 3D6” away from enemy units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3. Farseer Spirit Stone" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="a73b-cff7-f2ed-f0e7">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit gains Psyker 3.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5. Rune of the Bladestorm" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="428e-170c-f3ba-f8ae">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each ML attack this unit makes, a Hit Roll of 5+ for that attack causes an additional hit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4. Faolchu’s Wing" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="9567-4b7f-ec24-af3d">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b"> After this unit finishes its Attacks step, it may make a March.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6. Exarch Spirit Stone" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="4192-00a1-633b-7b44">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit&apos;s End step, if this turn was not your second turn in a row, take another turn. During that turn, if your active unit has an Aspect, X ability, for each attack made by that unit, a Hit Roll of 6 for that attack causes an additional hit.</characteristic>
           </characteristics>
         </profile>
       </profiles>

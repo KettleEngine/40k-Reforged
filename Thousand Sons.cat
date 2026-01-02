@@ -1,2 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3336-6a64-b87f-ab82" name="Thousand Sons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="14" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema"/>
+<catalogue library="false" id="3336-6a64-b87f-ab82" name="Thousand Sons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="14" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <sharedSelectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Windfall of the Warp, Stolen Sorcery" hidden="false" id="6ab5-dc8c-40f6-8ff5">
+      <profiles>
+        <profile name="Windfall of the Warp, Stolen Sorcery" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="ccb8-77ea-04d9-04d3">
+          <characteristics>
+            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same results, the nearest visible enemy unit within 27” suffers D3 Psychic SW.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="380f-53a5-84fb-6664-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="380f-53a5-84fb-6664-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="368e-26e3-98ff-35c3">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b528-3219-0b8f-35b1" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink targetId="9cd6-0442-3f35-6b52" id="c0fe-5b1b-b5ff-cefe" primary="true" name="Configuration"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Entwined Will" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="eb32-15f5-befc-e96e">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Psychic Test your units make, add 1 D6.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Inferno" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d87d-c93b-77b5-aedd">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each of this weapon’s attacks, a Wound Roll of 6 for that attack causes the attack sequence to end. Then, the unit targeted by that attack suffers a number of Psychic SWs equal to the D of that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Great Traitors’ Arsenal" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e6b2-19e6-5d3f-258d">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">You may also add units to your army list from the “Chaos Space Marine Arsenal” document. For each unit added to your army this way, that unit gains:
+
+
+Arcane Munitions: After this unit selects targets for its attacks, select up to one of your units with Psyker X within 18” of this unit. Until the End step, this unit gains the selected unit’s Psyker X ability and this unit’s ranged weapons gain Inferno.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Psychic Powers (Reference)" hidden="false" id="0171-0833-7fc4-972d">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="2961-1d3e-4adf-052e" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink targetId="9cd6-0442-3f35-6b52" id="f360-8a68-627a-fe58" primary="true" name="Configuration"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Psychic Powers (Reference)" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="e9cf-3e6f-ea5c-76e7">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">1 Psychic Subjugation: Select an enemy unit within 18”. The selected unit suffers 2D3+X Suppression where X is this unit’s Psyker X.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="d99e-9556-c5f6-0407">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="f5e5-d983-d892-9541" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink targetId="9cd6-0442-3f35-6b52" id="8c12-fc52-3844-1e0d" primary="true" name="Configuration"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Relics (Reference)" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="680a-7c95-55fa-ef82">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">1 Dust Aegis: For each attack that targets this unit, reroll Saving Throws of 1 for that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Inferno Bolt Pistol" hidden="false" id="9779-6b3e-5fd2-ee95">
+      <profiles>
+        <profile name="Inferno Bolt Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a2e8-83fe-b68d-64c2">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Inferno" id="1db1-8f3d-2758-fec1" hidden="false" type="rule" targetId="3b9e-8b58-9bed-fb98"/>
+      </infoLinks>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedRules>
+    <rule name="Inferno" id="3b9e-8b58-9bed-fb98" hidden="false">
+      <description>For each of this weapon’s attacks, a Wound Roll of 6 for that attack causes the attack sequence to end. Then, the unit targeted by that attack suffers a number of Psychic SWs equal to the D of that attack.</description>
+    </rule>
+  </sharedRules>
+  <entryLinks>
+    <entryLink import="true" name="Army Rules (Reference)" hidden="false" id="2bcc-c947-c47d-7e43" type="selectionEntry" targetId="368e-26e3-98ff-35c3"/>
+    <entryLink import="true" name="Psychic Powers (Reference)" hidden="false" id="800d-d887-208f-bbb6" type="selectionEntry" targetId="0171-0833-7fc4-972d"/>
+    <entryLink import="true" name="Relics (Reference)" hidden="false" id="5fd9-cf7a-7a58-34e5" type="selectionEntry" targetId="d99e-9556-c5f6-0407"/>
+  </entryLinks>
+</catalogue>
