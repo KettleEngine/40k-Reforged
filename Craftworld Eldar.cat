@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Strands of Fate (X)" id="80eb-f4ac-e40d-8401" hidden="false">
       <description>When an ability has you “roll Strands of Fate X”: Roll X D6 die all at once. For each 6, remove it and set it aside in a “Fate Dice” pool. Then remove one die and reroll the rest. Repeat until you remove the last dice.
@@ -735,7 +735,7 @@ c) WRAITHLORD</characteristic>
           <profiles>
             <profile name="Path of the Seer" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="406b-29d5-34a7-7dbb">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a"/>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">You may reroll any rolls for a number of Psychic SW for this unit’s Casts.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1070,6 +1070,14 @@ a) GUARDIAN DEFENDERS</characteristic>
         <categoryLink targetId="b69b-5b51-faf1-2c40" id="1a9e-2cd5-272f-6310" primary="true" name="Troops"/>
         <categoryLink targetId="205c-3072-067b-d808" id="a70f-23c7-71e5-aae5" primary="false" name="Infantry"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Cameleoline Cloaks" hidden="false" id="47e3-ae7e-a0c0-577c" type="selectionEntry" targetId="e65f-7c4c-968c-f36a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="39d6-6c1e-af5a-9e57-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39d6-6c1e-af5a-9e57-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Dire Avengers Squad" hidden="false" id="4423-e14c-0460-ff76">
       <selectionEntries>
@@ -3253,7 +3261,7 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
         </profile>
         <profile name="4. Faolchu’s Wing" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="9567-4b7f-ec24-af3d">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b"> After this unit finishes its Attacks step, it may make a March.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit finishes its Attacks step, it may make a March.</characteristic>
           </characteristics>
         </profile>
         <profile name="6. Exarch Spirit Stone" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="4192-00a1-633b-7b44">
