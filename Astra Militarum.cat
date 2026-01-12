@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -75,13 +75,14 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Ignore Cover</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Indirect" id="bad6-a7b0-7ea4-21ee" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
         <infoLink name="Barrage" id="86fc-daf9-1e3c-31ad" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+        <infoLink name="Ignore Cover" id="2ff7-3d0a-aca4-f385" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Missile Launcher" hidden="false" id="e03f-db1b-d6b0-b70f">
@@ -94,7 +95,7 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Strike</characteristic>
           </characteristics>
         </profile>
         <profile name="Missile Launcher (Sweep)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f919-d228-c45e-2ae6">
@@ -105,7 +106,7 @@
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2367,7 +2368,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
                 <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
                 <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+2</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2536,7 +2537,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
                             <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
                             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Ignores Cover</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2556,7 +2557,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
                             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
                             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Suppressive</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2646,7 +2647,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
                 <characteristic name="S" typeId="571c-0471-2614-c57c">14</characteristic>
                 <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Suppressive, Once per turn, after an enemy unit is hit by an attack made for this weapon, that unit suffers 3 SW.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2745,9 +2746,6 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
         </infoLink>
         <infoLink name="Unstoppable" id="4e1f-d296-ff87-c82c" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
       </infoLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="9ccb-b3d9-60fe-34fd"/>
-      </constraints>
       <profiles>
         <profile name="Death Korps Field Artillery" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="ca61-c14d-48a7-6fdf">
           <characteristics>
@@ -2792,7 +2790,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
                     <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
                     <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2811,7 +2809,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
                     <characteristic name="S" typeId="571c-0471-2614-c57c">18</characteristic>
                     <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3+3</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Ignore Cover</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2831,7 +2829,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
                     <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
                     <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage,  Suppressive</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2856,7 +2854,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
                     <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                     <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Ignore Cover</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
