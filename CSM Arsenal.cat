@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <sharedSelectionEntries>
+    <selectionEntry type="unit" import="true" name="Terminator Chaos Lord" hidden="false" id="3013-35a0-f4d2-6410">
+      <profiles>
+        <profile name="Terminator Chaos Lord" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="7be3-fc07-a7e5-c6ea">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2++</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="e8c7-a3ca-36af-cd13" primary="false" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="dd11-c202-87a9-1e3d" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="d0ad-15b8-86df-ca7d" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Unstoppable" id="296d-5b2b-e4d7-67dc" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Warhost Champion" hidden="false" id="4ed5-475e-0544-8b74">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3833-cb25-e3b4-bbdb-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3833-cb25-e3b4-bbdb-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Warhost Champion" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5e10-1286-6aea-0ba9">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack your units make targeting an enemy unit within 10” of this unit, a Hit Roll of 6 causes an additional hit. Attacks may only be affected by an ability of this name once.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="4ce3-de17-4f34-0aab">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d983-8dfd-9ac7-08af-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d983-8dfd-9ac7-08af-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="b308-b185-c494-0390">
+              <characteristics>
+                <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) Troops unit
+b) Elites unit</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapons" id="70bd-c682-329e-3e5e" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Other Options:" hidden="false" id="5d70-886c-7026-529c">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Melee:" id="b4bf-8c69-162c-6d06" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Power Axe" hidden="false" id="3dc0-e397-4d3f-d3eb" type="selectionEntry" targetId="2d40-0672-6885-33af">
+                      <modifiers>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Power Fist" hidden="false" id="4542-8db8-0dce-c72f" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="65c1-f8ce-e498-0640-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="65c1-f8ce-e498-0640-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Gun:" id="6de0-fbaf-b3bb-00b2" hidden="false">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="95c3-88d4-d9fc-b326-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="95c3-88d4-d9fc-b326-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a495-b53e-4d41-0b43-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a495-b53e-4d41-0b43-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Lightning Claw" hidden="false" id="0fab-cc1c-61ed-3434" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
+              <modifiers>
+                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="20" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <catalogueLinks>
+    <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
+  </catalogueLinks>
+</catalogue>
