@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="15" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="16" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -85,7 +85,6 @@
         <characteristicType name="A" id="13c5-f234-c120-afc3"/>
         <characteristicType name="WS" id="459f-6890-e77f-b62f"/>
         <characteristicType name="S" id="571c-0471-2614-c57c"/>
-        <characteristicType name="AP" id="68a3-e9dc-8975-7aca"/>
         <characteristicType name="D" id="c2c0-3714-05e2-65a0"/>
         <characteristicType name="Abilities" id="d93f-70ee-72bc-5ef9"/>
       </characteristicTypes>
@@ -841,17 +840,19 @@ Psychic powers, unit abilities, and weapon abilities on units with Psyker can c
       <description>For each Resolve Test made for this unit, reroll a failed result for that Resolve Test.</description>
     </rule>
     <rule name="Transport" id="d78d-24c6-e7a9-e94f" hidden="false">
-      <description>After you deploy a unit with Transport or Heavy Transport, you may select one infantry (but not vehicle or monster) unit to deploy ‘embarked’ within that unit.
+      <description>After you deploy a unit with Transport, you may select one infantry (but not vehicle or monster) unit in reserves to be ‘embarked’ within that unit.
 
-Embarked units are not on the battlefield (they’re never visible, cannot be within range for any abilities, can’t capture objectives, etc).
 
-After an embarked unit’s Move step begins, that unit may Disembark. After a unit with Transport is destroyed, before removing its models, any unit embarked in it must Disembark.
+Embarked units are not on the battlefield (they’re never visible, cannot be within range for any abilities, can’t capture objectives, etc). 
 
-To Disembark, place the embarked unit wholly within 3” of the unit it&apos;s embarked within, in unit coherency. If you cannot meet these conditions, remove models from the unit until you can. After a unit Disembarks, it cannot March or Fall Back this battle round.
 
-After an infantry (but not vehicle or monster) unit ends a March wholly within 3” of a friendly unit with Transport or Heavy Transport that does not have an embarked unit, it may Embark into that unit. To Embark a unit, remove it from the battlefield until it Disembarks.
+After an embarked unit’s Move step begins, that unit may Disembark.
 
-After the End step for a unit with this ability, if this turn was not your second turn in a row, take another turn.</description>
+
+To Disembark, place the embarked unit wholly within 3” of the unit it&apos;s embarked within, in unit coherency. If it cannot meet these conditions, remove models from the unit until it can.
+
+
+After a unit with Transport is destroyed, any unit embarked within it is also destroyed.</description>
     </rule>
     <rule name="Heavy Transport" id="5fcb-6b70-9399-7a81" hidden="false">
       <description>After you deploy a unit with Transport or Heavy Transport, you may select one infantry (but not vehicle or monster) unit to deploy ‘embarked’ within that unit.
@@ -873,8 +874,8 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     <rule name="Indirect" id="4de2-ca68-9af9-1b10" hidden="false">
       <description>This weapon does not need the target to be visible. However, when the target is not visible, this weapon has a -1 penalty to its Hit Rolls.</description>
     </rule>
-    <rule name="Precision (X+)" id="db97-d77e-4392-6f10" hidden="false">
-      <description>For successful Wound Roll of X+, the attacking player may choose which model in the targeted unit which that wound is assigned to (even if they are a leader model or if another model has taken damage).</description>
+    <rule name="Precision" id="db97-d77e-4392-6f10" hidden="false">
+      <description>For each Saving Throw of this weapon’s attacks, instead of the controller of the target unit selecting the model to suffer the wound for that Saving Throw, you may choose any non-leader model to suffer that wound.</description>
     </rule>
     <rule name="Strike or Sweep (X)" id="2757-6563-cdb2-3456" hidden="false">
       <description>Each time you make attacks with this weapon, use only one of either weapon with Strike or Sweep.</description>
@@ -882,8 +883,8 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     <rule name="Barrage" id="9cfc-06e3-74c6-ad83" hidden="false">
       <description>After selecting the target for this weapon&apos;s attacks, select up to 2 different enemy units within 6&quot; of the selected target. Also make attacks with this weapon targeting each of the selected units.</description>
     </rule>
-    <rule name="Suppressive" id="aed3-e154-8fa2-5378" hidden="false">
-      <description>After a successful Wound Roll, the attack’s sequence ends and the enemy unit targeted by that attack suffers X Suppression where X is equal to the weapon&apos;s D.</description>
+    <rule name="Suppressive (X)" id="aed3-e154-8fa2-5378" hidden="false">
+      <description>For each attack made for this weapon, after a successful Wound Roll for that attack, the target unit suffers X Suppression.</description>
     </rule>
     <rule name="One Shot" id="0c06-9eed-2a45-b772" hidden="false">
       <description>You may only select a target for this weapon once per battle.</description>
@@ -893,6 +894,15 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     </rule>
     <rule name="Shuriken" id="c503-366d-25f8-01c0" hidden="false">
       <description>For each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit.</description>
+    </rule>
+    <rule name="Killshot" id="8fb7-ea3f-ae47-9521" hidden="false">
+      <description>For each attack made for this weapon that targets a unit with a single model, if the Wound Roll of that attack is a 6, triple the Damage of that attack.</description>
+    </rule>
+    <rule name="Pierce" id="f61d-729a-ad35-ab97" hidden="false">
+      <description>For each attack made for this weapon, the Saving Throw of that attack is worsened by 1.</description>
+    </rule>
+    <rule name="Shred" id="4a04-e9da-d7b5-e035" hidden="false">
+      <description>For each attack made for this weapon, a successful Wound Roll for that attack causes an additional wound.</description>
     </rule>
   </sharedRules>
   <publications>
