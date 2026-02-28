@@ -710,13 +710,12 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Shuriken Pistol" hidden="false" id="4f77-9c86-d981-5252">
       <profiles>
-        <profile name="Shuriken Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="fb0b-3967-e3e8-0ef4">
+        <profile name="Shuriken Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="647e-3c95-9b52-bc3a">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shuriken</characteristic>
           </characteristics>
