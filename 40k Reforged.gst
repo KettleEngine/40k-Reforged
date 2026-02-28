@@ -169,15 +169,19 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Blast 1</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="One Shot" id="79f0-68e7-00a6-83ee" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-        <infoLink name="Indirect" id="4c3e-854a-4e0b-96d3" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="Blast" id="4c3e-854a-4e0b-96d3" hidden="false" type="rule" targetId="308a-e96e-90f7-855e">
+          <modifiers>
+            <modifier type="set" value="Blast (1)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Indirect" id="4b39-975d-1afc-7737" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Melta Bomb" hidden="false" id="a308-d575-5b0a-5782">
@@ -188,15 +192,15 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="One Shot" id="c3c8-2bba-f450-4979" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-        <infoLink name="Indirect" id="65ad-bcba-5072-6f96" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="Pierce" id="65ad-bcba-5072-6f96" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+        <infoLink name="Indirect" id="72a5-733d-3a17-ee42" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Krak Grenade" hidden="false" id="e06d-dcbe-f391-392b">
@@ -304,7 +308,7 @@
       <infoLinks>
         <infoLink name="Indirect" id="f703-26c3-351e-c85a" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
         <infoLink name="Barrage" id="2d82-5dc0-cf1e-101a" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-        <infoLink name="Suppressive" id="eb4e-0561-2100-a6d6" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Suppressive (X)" id="eb4e-0561-2100-a6d6" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Smoke Launchers" hidden="false" id="d653-3fc2-d577-6295">
@@ -408,7 +412,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Suppressive" id="312a-9a55-63b9-e2fc" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Suppressive (X)" id="312a-9a55-63b9-e2fc" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Haywire Grenade" hidden="false" id="70d9-3670-51f4-ae16">
@@ -419,15 +423,18 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Suppressive, For each attack that targets a vehicle unit, a Wound Roll automatically succeeds on a 2+.</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Suppressive (3), For each attack made for this weapon that targets a vehicle unit, the Wound Roll of that attack always succeeds on a 2+. If that Wound Roll is successful, after the Attacks step, the target unit must make an Explode Roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="One Shot" id="6db5-e03b-a8f8-2641" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-        <infoLink name="Suppressive" id="e3fa-9ad1-c075-f35a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Suppressive (X)" id="e3fa-9ad1-c075-f35a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378">
+          <modifiers>
+            <modifier type="set" value="Suppressive (3)" field="name"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Indirect" id="2512-df36-d64f-600d" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
@@ -744,13 +751,15 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Wound Rolls of 6 cause an additional wound</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="8bf0-1e59-ee46-0992" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Firepike" hidden="false" id="12b0-4131-6369-ce22">
       <profiles>
@@ -760,12 +769,14 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">18</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Wound Rolls of 6 cause an additional wound</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+4</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="96a2-7b7d-f294-6627" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Grenade" hidden="false" id="16c6-5a66-c200-152f">
       <profiles>
@@ -893,7 +904,7 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
       <description>This rule dictates what units can lead or be lead by this squad</description>
     </rule>
     <rule name="Shuriken" id="c503-366d-25f8-01c0" hidden="false">
-      <description>For each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit.</description>
+      <description>For each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit. If the target for that attack had Fatal Thread, that additional hit always wounds.</description>
     </rule>
     <rule name="Killshot" id="8fb7-ea3f-ae47-9521" hidden="false">
       <description>For each attack made for this weapon that targets a unit with a single model, if the Wound Roll of that attack is a 6, triple the Damage of that attack.</description>
@@ -903,6 +914,21 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     </rule>
     <rule name="Shred" id="4a04-e9da-d7b5-e035" hidden="false">
       <description>For each attack made for this weapon, a successful Wound Roll for that attack causes an additional wound.</description>
+    </rule>
+    <rule name="Blast (X)" id="308a-e96e-90f7-855e" hidden="false">
+      <description>For each attack made for this weapon, after a successful Hit Roll for that attack, instead of making a Wound Roll, make a number of Wound Rolls equal to this weapon’s D. The D of those attacks is 1 (but they retain this weapon’s abilities).</description>
+    </rule>
+    <rule name="Heavy Armour" id="ec2c-77fd-05f2-a794" hidden="false">
+      <description>For each attack that targets this unit, the Wound Roll for that attack is worsened by 1. This unit cannot be in cover for enemy attacks.</description>
+    </rule>
+    <rule name="Fatal Thread" id="209e-12d3-d64c-9005" hidden="false">
+      <description>For each attack made by an Aeldari Craftworlds unit that targets this unit, a Hit Roll of 6 always wounds.</description>
+    </rule>
+    <rule name="Resilient (X)" id="253c-c1fa-d29d-d21e" hidden="false">
+      <description>For each attack that targets this unit, after a failed Saving Throw for that attack, make a Resilient roll. To make a Resilient roll, roll a D6. If the result equals or exceeds X, that attack fails.</description>
+    </rule>
+    <rule name="Open Deck" id="a419-83d6-e52a-c4d2" hidden="false">
+      <description>During the Attacks step for an active unit embarked in this unit, that embarked unit may select targets for its ranged attacks using the model of this unit as the attacking model.</description>
     </rule>
   </sharedRules>
   <publications>

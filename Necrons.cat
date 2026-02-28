@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Gauss" id="b2e9-8420-cfb7-4bde" hidden="false">
       <description>For each attack made by this weapon assigned to a model with a ++ Sv, improve the AP of that attack by 2.</description>
@@ -115,10 +115,9 @@ c) LYCHGUARD</characteristic>
                 <profile name="Staff of Light (CQ)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="99ea-4e5b-52c9-86d6">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                     <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
                   </characteristics>
@@ -143,13 +142,15 @@ c) LYCHGUARD</characteristic>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
                     <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Pierce" id="146e-622b-d6c8-b443" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -191,7 +192,7 @@ c) LYCHGUARD</characteristic>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Command Barge" hidden="false" id="4548-cd81-24e3-e127">
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="2886-2afd-f65f-9d8e" id="af99-0599-a7d4-304b" primary="true" name="Leaders"/>
@@ -224,21 +225,9 @@ c) LYCHGUARD</characteristic>
             <profile name="Staff of Light (CQ)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="074a-695f-f70c-2670">
               <characteristics>
                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">14</characteristic>
                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                 <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-              </characteristics>
-            </profile>
-            <profile name="Staff of Light (ML)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="62b1-7f7d-6188-0670">
-              <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                 <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
               </characteristics>
@@ -283,14 +272,14 @@ c) LYCHGUARD</characteristic>
           <entryLinks>
             <entryLink import="true" name="Gauss Cannon" hidden="false" id="b8ce-f035-72f0-14f6" type="selectionEntry" targetId="1204-6118-b8e6-75ec">
               <modifiers>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
               </modifiers>
             </entryLink>
             <entryLink import="true" name="Tesla Cannon" hidden="false" id="ad4b-2135-4892-4092" type="selectionEntry" targetId="c6dc-e264-4072-80a5">
               <modifiers>
-                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -307,13 +296,15 @@ c) LYCHGUARD</characteristic>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Hit Rolls of 5+ cause 2 additional hits</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Blast" id="dc71-5fd0-5416-47a0" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Gauss Cannon" hidden="false" id="1204-6118-b8e6-75ec">
       <profiles>
@@ -351,7 +342,7 @@ Lord&apos;s Mandate: For each attack this unit makes, reroll a Wound Roll of 1�
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skorpekh Lord" hidden="false" id="3548-78d0-64b7-fef0">
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="2886-2afd-f65f-9d8e" id="84c4-931e-7e43-6359" primary="true" name="Leaders"/>
@@ -375,12 +366,11 @@ Lord&apos;s Mandate: For each attack this unit makes, reroll a Wound Roll of 1�
             <profile name="Enmitic Annihilator" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b28f-513e-edb6-2ddc">
               <characteristics>
                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -388,6 +378,9 @@ Lord&apos;s Mandate: For each attack this unit makes, reroll a Wound Roll of 1�
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="003f-449b-3c16-10b1-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="003f-449b-3c16-10b1-max" includeChildSelections="false"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Shred" id="85aa-f784-f961-fc7d" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Flensing Claw" hidden="false" id="7b68-5ce2-9270-fe64">
           <constraints>
@@ -400,13 +393,15 @@ Lord&apos;s Mandate: For each attack this unit makes, reroll a Wound Roll of 1�
                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
                 <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Shred" id="0063-968d-087a-1d3e" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Hyperphase Harvester" hidden="false" id="3a0e-ccd2-d24e-b6ec">
           <constraints>
@@ -417,15 +412,17 @@ Lord&apos;s Mandate: For each attack this unit makes, reroll a Wound Roll of 1�
             <profile name="Hyperphase Harvester" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c5bf-859d-6e1d-5a5f">
               <characteristics>
                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                 <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Pierce" id="93a6-aa83-bc8c-c4f0" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="c3fa-0a4e-1b5e-bbd9">
           <constraints>
@@ -527,7 +524,7 @@ a) SKORPEKH DESTROYERS</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="60"/>
+        <cost name="pts" typeId="points" value="90"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Nanoscarab Repair" hidden="false" id="a8e5-1dbf-0662-1009" type="selectionEntry" targetId="1448-e157-f806-4c16"/>
@@ -573,21 +570,9 @@ c) OPHYDIAN DESTROYERS</characteristic>
                 <profile name="Staff of Light (CQ)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="10b2-2596-3afe-7c74">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">22</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-                  </characteristics>
-                </profile>
-                <profile name="Staff of Light (ML)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e6f5-330b-7216-249f">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                     <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
                   </characteristics>
@@ -599,15 +584,17 @@ c) OPHYDIAN DESTROYERS</characteristic>
                 <profile name="Voidblade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="63b4-0e47-d897-3c15">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">14</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Pierce" id="9578-7cca-7bc9-ce39" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -617,9 +604,12 @@ c) OPHYDIAN DESTROYERS</characteristic>
           <entryLinks>
             <entryLink import="true" name="Warscythe" hidden="false" id="51e1-3252-d531-3062" type="selectionEntry" targetId="619f-cb0f-6cf2-4055">
               <modifiers>
-                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="7" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                 <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Pierce" id="0631-88c0-2572-4969" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+              </infoLinks>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -636,8 +626,7 @@ c) OPHYDIAN DESTROYERS</characteristic>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
@@ -665,7 +654,7 @@ c) OPHYDIAN DESTROYERS</characteristic>
         </profile>
       </profiles>
       <costs>
-        <cost name="pts" typeId="points" value="60"/>
+        <cost name="pts" typeId="points" value="80"/>
       </costs>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Begin Reactivation" hidden="false" id="3494-25ac-8ac3-55f4">
@@ -724,36 +713,26 @@ This unit uses a Necron Lord model.</characteristic>
                 <profile name="Lord’s Blade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d684-5bc4-6277-f224">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Pierce" id="2a35-a32d-9ead-2b09" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Staff of Light" hidden="false" id="2d92-1468-d5df-2fc4">
               <profiles>
                 <profile name="Staff of Light (CQ)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2c51-9d77-95cf-56ba">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-                  </characteristics>
-                </profile>
-                <profile name="Staff of Light (ML)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b5b2-29cc-3fbb-f639">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                     <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
                   </characteristics>
@@ -770,15 +749,15 @@ This unit uses a Necron Lord model.</characteristic>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Royal Warden" hidden="false" id="4225-aeb6-e82d-fc41">
       <costs>
-        <cost name="pts" typeId="points" value="40"/>
+        <cost name="pts" typeId="points" value="50"/>
       </costs>
       <profiles>
         <profile name="Royal Warden" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3d35-c2e4-0199-74df">
           <characteristics>
             <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
             <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3++</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
           </characteristics>
         </profile>
@@ -842,6 +821,9 @@ b) IMMORTALS</characteristic>
         <categoryLink targetId="2886-2afd-f65f-9d8e" id="85df-b5d8-883b-a585" primary="true" name="Leaders"/>
         <categoryLink targetId="205c-3072-067b-d808" id="6dd5-c9be-8de9-dda0" primary="false" name="Infantry"/>
       </categoryLinks>
+      <infoLinks>
+        <infoLink name="Heavy Armour" id="7285-75cb-3adf-5d0c" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Technomancer" hidden="false" id="2457-6b9b-91fd-8053">
       <costs>
@@ -2083,7 +2065,7 @@ WIDE NANOSCARAB BEAM: After this unit finishes a March, select up to two diffe
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink name="Precision (X+)" id="0bb7-2355-6a01-b40b" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
+                    <infoLink name="Precision" id="0bb7-2355-6a01-b40b" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
                       <modifiers>
                         <modifier type="set" value="Precision (2+)" field="name"/>
                       </modifiers>
@@ -2701,7 +2683,7 @@ ADVANCE SCOUT: For each attack this unit makes while within 8” of one or mor
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a29a-f447-4bc9-aa93-max" includeChildSelections="false"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Precision (X+)" id="6cb1-533e-9a07-4531" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
+            <infoLink name="Precision" id="6cb1-533e-9a07-4531" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
               <modifiers>
                 <modifier type="set" value="Precision (5+)" field="name"/>
               </modifiers>
@@ -3085,7 +3067,11 @@ RELOCATE: This unit&apos;s M is improved by 4.</characteristic>
     <entryLink import="true" name="Overlord" hidden="false" id="67de-200b-0800-a59c" type="selectionEntry" targetId="b20b-f625-ae4f-45c7"/>
     <entryLink import="true" name="Skorpekh Lord" hidden="false" id="664f-a458-5ab1-1194" type="selectionEntry" targetId="3548-78d0-64b7-fef0"/>
     <entryLink import="true" name="Command Barge" hidden="false" id="7c5c-8572-d010-036c" type="selectionEntry" targetId="4548-cd81-24e3-e127"/>
-    <entryLink import="true" name="Harbinger of Awakening" hidden="false" id="4464-f169-f42b-7d68" type="selectionEntry" targetId="0cc4-d5f6-d974-8b06"/>
+    <entryLink import="true" name="Harbinger of Awakening" hidden="false" id="4464-f169-f42b-7d68" type="selectionEntry" targetId="0cc4-d5f6-d974-8b06">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+    </entryLink>
     <entryLink import="true" name="Destroyer Lord" hidden="false" id="b96f-2341-6473-6d90" type="selectionEntry" targetId="6588-e4a2-83bb-4c00"/>
     <entryLink import="true" name="Royal Warden" hidden="false" id="a862-79c9-5b6f-f579" type="selectionEntry" targetId="4225-aeb6-e82d-fc41"/>
     <entryLink import="true" name="Technomancer" hidden="false" id="b1cd-10f8-abd1-df41" type="selectionEntry" targetId="2457-6b9b-91fd-8053"/>
