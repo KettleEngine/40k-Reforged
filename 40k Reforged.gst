@@ -730,13 +730,12 @@
         <infoLink name="Shuriken" id="622f-0a76-56fd-d6c6" hidden="false" type="rule" targetId="c503-366d-25f8-01c0"/>
       </infoLinks>
       <profiles>
-        <profile name="Shuriken Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2c89-3531-02ff-e360">
+        <profile name="Shuriken Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="211a-044e-544c-610a">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shuriken</characteristic>
           </characteristics>
