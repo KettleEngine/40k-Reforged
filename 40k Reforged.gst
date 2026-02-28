@@ -783,10 +783,9 @@
         <profile name="Plasma Grenade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="65a1-1cab-62d6-adc9">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
