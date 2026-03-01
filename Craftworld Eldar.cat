@@ -173,7 +173,7 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
       </profiles>
       <comment>Farseer</comment>
       <infoLinks>
-        <infoLink name="Blast" id="1783-5035-e3ac-8204" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+        <infoLink name="Blast (X)" id="1783-5035-e3ac-8204" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Witch Blade" hidden="false" id="961d-a24c-820e-21d9">
@@ -221,7 +221,7 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Blast" id="919f-956a-2c2c-823e" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+        <infoLink name="Blast (X)" id="919f-956a-2c2c-823e" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bright Lance" hidden="false" id="92dd-6279-6da9-82bc">
@@ -1525,6 +1525,10 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
                       </characteristics>
                     </profile>
                   </profiles>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7810-e4e5-38ac-c1ce-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7810-e4e5-38ac-c1ce-max" includeChildSelections="false"/>
+                  </constraints>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Powerblades" hidden="false" id="8fb1-757f-2f0f-d835">
                   <profiles>
@@ -1542,6 +1546,10 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
                   <infoLinks>
                     <infoLink name="Pierce" id="18b7-53db-5ab8-5efa" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                   </infoLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c23d-90ed-31ec-78c6-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c23d-90ed-31ec-78c6-max" includeChildSelections="false"/>
+                  </constraints>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntry>
@@ -1737,8 +1745,7 @@ a) GUARDIAN DEFENDERS</characteristic>
               <characteristics>
                 <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit must attach to either:
 a) WRAITHBLADES
-b) WRAITHGUARD
-</characteristic>
+b) WRAITHGUARD</characteristic>
               </characteristics>
             </profile>
           </profiles>
