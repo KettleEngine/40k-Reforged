@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="15" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="16" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -15,7 +15,7 @@
     <categoryEntry name="Rare" id="1738-1300-9dbb-c5be" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry name="Army Roster" hidden="false" id="default-force">
+    <forceEntry name="Army Roster" hidden="false" id="0396-e1ff-fdad-e17b">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="a8ad-6c7d-926d-0d05" targetId="9cd6-0442-3f35-6b52"/>
         <categoryLink name="Leaders" hidden="false" id="bce6-f6a1-9694-851b" targetId="2886-2afd-f65f-9d8e">
@@ -85,7 +85,6 @@
         <characteristicType name="A" id="13c5-f234-c120-afc3"/>
         <characteristicType name="WS" id="459f-6890-e77f-b62f"/>
         <characteristicType name="S" id="571c-0471-2614-c57c"/>
-        <characteristicType name="AP" id="68a3-e9dc-8975-7aca"/>
         <characteristicType name="D" id="c2c0-3714-05e2-65a0"/>
         <characteristicType name="Abilities" id="d93f-70ee-72bc-5ef9"/>
       </characteristicTypes>
@@ -170,15 +169,19 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Blast 1</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="One Shot" id="79f0-68e7-00a6-83ee" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-        <infoLink name="Indirect" id="4c3e-854a-4e0b-96d3" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="Blast (X)" id="4c3e-854a-4e0b-96d3" hidden="false" type="rule" targetId="308a-e96e-90f7-855e">
+          <modifiers>
+            <modifier type="set" value="Blast (1)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Indirect" id="4b39-975d-1afc-7737" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Melta Bomb" hidden="false" id="a308-d575-5b0a-5782">
@@ -189,15 +192,15 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="One Shot" id="c3c8-2bba-f450-4979" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-        <infoLink name="Indirect" id="65ad-bcba-5072-6f96" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="Pierce" id="65ad-bcba-5072-6f96" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+        <infoLink name="Indirect" id="72a5-733d-3a17-ee42" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Krak Grenade" hidden="false" id="e06d-dcbe-f391-392b">
@@ -262,8 +265,7 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
@@ -305,7 +307,7 @@
       <infoLinks>
         <infoLink name="Indirect" id="f703-26c3-351e-c85a" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
         <infoLink name="Barrage" id="2d82-5dc0-cf1e-101a" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-        <infoLink name="Suppressive" id="eb4e-0561-2100-a6d6" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Suppressive (X)" id="eb4e-0561-2100-a6d6" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Smoke Launchers" hidden="false" id="d653-3fc2-d577-6295">
@@ -402,14 +404,17 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive (2)</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Suppressive" id="312a-9a55-63b9-e2fc" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Suppressive (X)" id="312a-9a55-63b9-e2fc" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378">
+          <modifiers>
+            <modifier type="set" value="Suppressive (2)" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Haywire Grenade" hidden="false" id="70d9-3670-51f4-ae16">
@@ -420,15 +425,18 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Suppressive, For each attack that targets a vehicle unit, a Wound Roll automatically succeeds on a 2+.</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Suppressive (3), For each attack made for this weapon that targets a vehicle unit, the Wound Roll of that attack always succeeds on a 2+. If that Wound Roll is successful, after the Attacks step, the target unit must make an Explode Roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="One Shot" id="6db5-e03b-a8f8-2641" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-        <infoLink name="Suppressive" id="e3fa-9ad1-c075-f35a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Suppressive (X)" id="e3fa-9ad1-c075-f35a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378">
+          <modifiers>
+            <modifier type="set" value="Suppressive (3)" field="name"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Indirect" id="2512-df36-d64f-600d" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
@@ -439,13 +447,15 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="f24c-4852-082e-e409" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="4cf9-1758-d00d-29c4">
       <profiles>
@@ -473,12 +483,14 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="4861-6ff8-d7f1-1b2e" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="6894-2cf4-78df-13e8">
       <profiles>
@@ -536,14 +548,14 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, Overcharge</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Overcharge" id="16f1-ab0d-dae7-bfcd" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+        <infoLink name="Pierce" id="16f1-ab0d-dae7-bfcd" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+        <infoLink name="Overcharge" id="926e-629a-3753-89d0" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Cannon" hidden="false" id="597d-3cc2-8209-d3d1">
@@ -587,12 +599,14 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Killshot</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Killshot" id="fe6f-00b1-551e-4372" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Chainsword" hidden="false" id="d7bf-1f8b-4dd2-edfb">
       <profiles>
@@ -601,13 +615,15 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Shred" id="7c7c-fd7b-04d9-bbdf" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="d215-60bd-f49d-295e">
       <profiles>
@@ -704,13 +720,12 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Shuriken Pistol" hidden="false" id="4f77-9c86-d981-5252">
       <profiles>
-        <profile name="Shuriken Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="fb0b-3967-e3e8-0ef4">
+        <profile name="Shuriken Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="647e-3c95-9b52-bc3a">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shuriken</characteristic>
           </characteristics>
@@ -725,13 +740,12 @@
         <infoLink name="Shuriken" id="622f-0a76-56fd-d6c6" hidden="false" type="rule" targetId="c503-366d-25f8-01c0"/>
       </infoLinks>
       <profiles>
-        <profile name="Shuriken Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2c89-3531-02ff-e360">
+        <profile name="Shuriken Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="211a-044e-544c-610a">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shuriken</characteristic>
           </characteristics>
@@ -745,13 +759,15 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Wound Rolls of 6 cause an additional wound</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="8bf0-1e59-ee46-0992" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Firepike" hidden="false" id="12b0-4131-6369-ce22">
       <profiles>
@@ -761,22 +777,23 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">18</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Wound Rolls of 6 cause an additional wound</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+4</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="96a2-7b7d-f294-6627" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Grenade" hidden="false" id="16c6-5a66-c200-152f">
       <profiles>
         <profile name="Plasma Grenade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="65a1-1cab-62d6-adc9">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
@@ -841,17 +858,19 @@ Psychic powers, unit abilities, and weapon abilities on units with Psyker can c
       <description>For each Resolve Test made for this unit, reroll a failed result for that Resolve Test.</description>
     </rule>
     <rule name="Transport" id="d78d-24c6-e7a9-e94f" hidden="false">
-      <description>After you deploy a unit with Transport or Heavy Transport, you may select one infantry (but not vehicle or monster) unit to deploy ‘embarked’ within that unit.
+      <description>After you deploy a unit with Transport, you may select one infantry (but not vehicle or monster) unit in reserves to be ‘embarked’ within that unit.
 
-Embarked units are not on the battlefield (they’re never visible, cannot be within range for any abilities, can’t capture objectives, etc).
 
-After an embarked unit’s Move step begins, that unit may Disembark. After a unit with Transport is destroyed, before removing its models, any unit embarked in it must Disembark.
+Embarked units are not on the battlefield (they’re never visible, cannot be within range for any abilities, can’t capture objectives, etc). 
 
-To Disembark, place the embarked unit wholly within 3” of the unit it&apos;s embarked within, in unit coherency. If you cannot meet these conditions, remove models from the unit until you can. After a unit Disembarks, it cannot March or Fall Back this battle round.
 
-After an infantry (but not vehicle or monster) unit ends a March wholly within 3” of a friendly unit with Transport or Heavy Transport that does not have an embarked unit, it may Embark into that unit. To Embark a unit, remove it from the battlefield until it Disembarks.
+After an embarked unit’s Move step begins, that unit may Disembark.
 
-After the End step for a unit with this ability, if this turn was not your second turn in a row, take another turn.</description>
+
+To Disembark, place the embarked unit wholly within 3” of the unit it&apos;s embarked within, in unit coherency. If it cannot meet these conditions, remove models from the unit until it can.
+
+
+After a unit with Transport is destroyed, any unit embarked within it is also destroyed.</description>
     </rule>
     <rule name="Heavy Transport" id="5fcb-6b70-9399-7a81" hidden="false">
       <description>After you deploy a unit with Transport or Heavy Transport, you may select one infantry (but not vehicle or monster) unit to deploy ‘embarked’ within that unit.
@@ -873,8 +892,8 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     <rule name="Indirect" id="4de2-ca68-9af9-1b10" hidden="false">
       <description>This weapon does not need the target to be visible. However, when the target is not visible, this weapon has a -1 penalty to its Hit Rolls.</description>
     </rule>
-    <rule name="Precision (X+)" id="db97-d77e-4392-6f10" hidden="false">
-      <description>For successful Wound Roll of X+, the attacking player may choose which model in the targeted unit which that wound is assigned to (even if they are a leader model or if another model has taken damage).</description>
+    <rule name="Precision" id="db97-d77e-4392-6f10" hidden="false">
+      <description>For each Saving Throw of this weapon’s attacks, instead of the controller of the target unit selecting the model to suffer the wound for that Saving Throw, you may choose any non-leader model to suffer that wound.</description>
     </rule>
     <rule name="Strike or Sweep (X)" id="2757-6563-cdb2-3456" hidden="false">
       <description>Each time you make attacks with this weapon, use only one of either weapon with Strike or Sweep.</description>
@@ -882,8 +901,8 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     <rule name="Barrage" id="9cfc-06e3-74c6-ad83" hidden="false">
       <description>After selecting the target for this weapon&apos;s attacks, select up to 2 different enemy units within 6&quot; of the selected target. Also make attacks with this weapon targeting each of the selected units.</description>
     </rule>
-    <rule name="Suppressive" id="aed3-e154-8fa2-5378" hidden="false">
-      <description>After a successful Wound Roll, the attack’s sequence ends and the enemy unit targeted by that attack suffers X Suppression where X is equal to the weapon&apos;s D.</description>
+    <rule name="Suppressive (X)" id="aed3-e154-8fa2-5378" hidden="false">
+      <description>For each attack made for this weapon, after a successful Wound Roll for that attack, the target unit suffers X Suppression.</description>
     </rule>
     <rule name="One Shot" id="0c06-9eed-2a45-b772" hidden="false">
       <description>You may only select a target for this weapon once per battle.</description>
@@ -892,7 +911,31 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
       <description>This rule dictates what units can lead or be lead by this squad</description>
     </rule>
     <rule name="Shuriken" id="c503-366d-25f8-01c0" hidden="false">
-      <description>For each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit.</description>
+      <description>For each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit. If the target for that attack had Fatal Thread, that additional hit always wounds.</description>
+    </rule>
+    <rule name="Killshot" id="8fb7-ea3f-ae47-9521" hidden="false">
+      <description>For each attack made for this weapon that targets a unit with a single model, if the Wound Roll of that attack is a 6, triple the Damage of that attack.</description>
+    </rule>
+    <rule name="Pierce" id="f61d-729a-ad35-ab97" hidden="false">
+      <description>For each attack made for this weapon, the Saving Throw of that attack is worsened by 1.</description>
+    </rule>
+    <rule name="Shred" id="4a04-e9da-d7b5-e035" hidden="false">
+      <description>For each attack made for this weapon, a successful Wound Roll for that attack causes an additional wound.</description>
+    </rule>
+    <rule name="Blast (X)" id="308a-e96e-90f7-855e" hidden="false">
+      <description>For each attack made for this weapon, after a successful Hit Roll for that attack, instead of making a Wound Roll, make a number of Wound Rolls equal to this weapon’s D. The D of those attacks is 1 (but they retain this weapon’s abilities).</description>
+    </rule>
+    <rule name="Heavy Armour" id="ec2c-77fd-05f2-a794" hidden="false">
+      <description>For each attack that targets this unit, the Wound Roll for that attack is worsened by 1. This unit cannot be in cover for enemy attacks.</description>
+    </rule>
+    <rule name="Fatal Thread" id="209e-12d3-d64c-9005" hidden="false">
+      <description>For each attack made by an Aeldari Craftworlds unit that targets this unit, a Hit Roll of 6 always wounds.</description>
+    </rule>
+    <rule name="Resilient (X)" id="253c-c1fa-d29d-d21e" hidden="false">
+      <description>For each attack that targets this unit, after a failed Saving Throw for that attack, make a Resilient roll. To make a Resilient roll, roll a D6. If the result equals or exceeds X, that attack fails.</description>
+    </rule>
+    <rule name="Open Deck" id="a419-83d6-e52a-c4d2" hidden="false">
+      <description>During the Attacks step for an active unit embarked in this unit, that embarked unit may select targets for its ranged attacks using the model of this unit as the attacking model.</description>
     </rule>
   </sharedRules>
   <publications>

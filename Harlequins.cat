@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Neuro Disruptor" hidden="false" id="7dc0-1f7b-a49c-295b">
       <profiles>
@@ -48,7 +48,7 @@
       <infoLinks>
         <infoLink name="One Shot" id="c748-2002-fc75-75af" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
         <infoLink name="Indirect" id="c5da-bef7-8b23-3505" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
-        <infoLink name="Suppressive" id="80f7-3142-3ed0-ff27" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Suppressive (X)" id="80f7-3142-3ed0-ff27" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Creidann Grenade Launcher" hidden="false" id="ed08-7c0a-71f0-6376">
@@ -66,7 +66,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Suppressive" id="c13c-c14f-0a3a-bc3a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Suppressive (X)" id="c13c-c14f-0a3a-bc3a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Miststave" hidden="false" id="2aad-f236-5f5e-ecff">
@@ -111,7 +111,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Precision (X+)" id="f8a4-217a-b198-e18d" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
+        <infoLink name="Precision" id="f8a4-217a-b198-e18d" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
           <modifiers>
             <modifier type="set" value="Precision (5+)" field="name"/>
           </modifiers>
@@ -134,7 +134,7 @@
       </profiles>
       <infoLinks>
         <infoLink name="Shuriken" id="a686-01a6-542e-42ba" hidden="false" type="rule" targetId="c503-366d-25f8-01c0"/>
-        <infoLink name="Precision (X+)" id="6916-9e3a-a946-3c81" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
+        <infoLink name="Precision" id="6916-9e3a-a946-3c81" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
           <modifiers>
             <modifier type="set" value="Precision 5+" field="name"/>
           </modifiers>
@@ -238,7 +238,7 @@
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="60"/>
+        <cost name="pts" typeId="points" value="50"/>
       </costs>
       <selectionEntryGroups>
         <selectionEntryGroup name="Grenade:" id="fd85-b569-fd5b-ea7f" hidden="false">
@@ -729,7 +729,7 @@ Twilight: Each time you roll a D6 for Mocking Misstep for this unit, it is suc
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Suppressive" id="c0b2-f626-8a95-02a8" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Suppressive (X)" id="c0b2-f626-8a95-02a8" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Star Bolas" hidden="false" id="202b-4717-60f2-5259">
@@ -977,4 +977,25 @@ Twilight: Each time you roll a D6 for Mocking Misstep for this unit, it is suc
     <entryLink import="true" name="VoidWeaver" hidden="false" id="2232-2067-380e-d412" type="selectionEntry" targetId="bd11-2d3e-551a-c440"/>
     <entryLink import="true" name="Starweaver" hidden="false" id="6e39-d3ff-5163-836b" type="selectionEntry" targetId="72e6-ef1d-a416-84ca"/>
   </entryLinks>
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Army Abilities" hidden="false" id="3e4b-29af-4da8-2435">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Mocking Misstep" hidden="false" id="d7fb-3c5a-bf3c-59d1">
+          <profiles>
+            <profile name="Mocking Misstep" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="93f2-8278-f866-f23e">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Once per turn, after an enemy unit’s Move step, you may select one of your Harlequins units that is visible to that enemy unit. If you do, roll a D6. On a 5+ the roll is successful and this unit may Fall Back.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="9cd6-0442-3f35-6b52" id="0760-2d2e-bb87-c895" primary="true" name="Configuration"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ef3-7421-f11f-96ec" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+  </selectionEntries>
 </catalogue>
