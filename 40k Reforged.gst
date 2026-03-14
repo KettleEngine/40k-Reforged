@@ -15,7 +15,7 @@
     <categoryEntry name="Rare" id="1738-1300-9dbb-c5be" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry name="Army Roster" hidden="false" id="default-force">
+    <forceEntry name="Army Roster" hidden="false" id="0396-e1ff-fdad-e17b">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="a8ad-6c7d-926d-0d05" targetId="9cd6-0442-3f35-6b52"/>
         <categoryLink name="Leaders" hidden="false" id="bce6-f6a1-9694-851b" targetId="2886-2afd-f65f-9d8e">
@@ -176,7 +176,7 @@
       </profiles>
       <infoLinks>
         <infoLink name="One Shot" id="79f0-68e7-00a6-83ee" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-        <infoLink name="Blast" id="4c3e-854a-4e0b-96d3" hidden="false" type="rule" targetId="308a-e96e-90f7-855e">
+        <infoLink name="Blast (X)" id="4c3e-854a-4e0b-96d3" hidden="false" type="rule" targetId="308a-e96e-90f7-855e">
           <modifiers>
             <modifier type="set" value="Blast (1)" field="name"/>
           </modifiers>
@@ -265,8 +265,7 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
@@ -405,14 +404,17 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive (2)</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Suppressive (X)" id="312a-9a55-63b9-e2fc" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Suppressive (X)" id="312a-9a55-63b9-e2fc" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378">
+          <modifiers>
+            <modifier type="set" value="Suppressive (2)" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Haywire Grenade" hidden="false" id="70d9-3670-51f4-ae16">
@@ -445,13 +447,15 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-4</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="f24c-4852-082e-e409" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="4cf9-1758-d00d-29c4">
       <profiles>
@@ -479,12 +483,14 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="4861-6ff8-d7f1-1b2e" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="6894-2cf4-78df-13e8">
       <profiles>
@@ -542,14 +548,14 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, Overcharge</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Overcharge" id="16f1-ab0d-dae7-bfcd" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+        <infoLink name="Pierce" id="16f1-ab0d-dae7-bfcd" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+        <infoLink name="Overcharge" id="926e-629a-3753-89d0" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Cannon" hidden="false" id="597d-3cc2-8209-d3d1">
@@ -593,12 +599,14 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Killshot</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Killshot" id="fe6f-00b1-551e-4372" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Chainsword" hidden="false" id="d7bf-1f8b-4dd2-edfb">
       <profiles>
@@ -607,13 +615,15 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Shred" id="7c7c-fd7b-04d9-bbdf" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="d215-60bd-f49d-295e">
       <profiles>

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
         <profile name="Lasgun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7e81-3d0f-52fe-3d94">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
@@ -21,10 +20,9 @@
         <profile name="Drum-Fed Autogun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ba2b-94e2-e248-1994">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
@@ -54,15 +52,14 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Suppressive</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Blast 5</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Indirect" id="bc72-3a65-cd7f-f53c" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
-        <infoLink name="Suppressive" id="e365-350d-8efe-009e" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Blast (X)" id="e365-350d-8efe-009e" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mortar" hidden="false" id="41f7-2ab6-7e6c-8e01">
@@ -70,19 +67,19 @@
         <profile name="Mortar" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="288c-ad79-6029-a5fb">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Ignore Cover</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Blast 7, Ignore Cover</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Indirect" id="bad6-a7b0-7ea4-21ee" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
         <infoLink name="Barrage" id="86fc-daf9-1e3c-31ad" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-        <infoLink name="Ignore Cover" id="2ff7-3d0a-aca4-f385" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Blast (X)" id="2ff7-3d0a-aca4-f385" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+        <infoLink name="Ignore Cover" id="7d28-6fbd-613f-f10f" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Missile Launcher" hidden="false" id="e03f-db1b-d6b0-b70f">
@@ -90,10 +87,9 @@
         <profile name="Missile Launcher (Strike)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ce13-bd31-15ed-0e5e">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Strike</characteristic>
           </characteristics>
@@ -101,17 +97,17 @@
         <profile name="Missile Launcher (Sweep)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f919-d228-c45e-2ae6">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Blast 7</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Strike or Sweep (X)" id="14fb-71d2-f60b-7297" hidden="false" type="rule" targetId="2757-6563-cdb2-3456"/>
+        <infoLink name="Blast (X)" id="14fb-71d2-f60b-7297" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+        <infoLink name="Strike or Sweep (X)" id="991d-cc4f-8972-90c1" hidden="false" type="rule" targetId="2757-6563-cdb2-3456"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Medic" hidden="false" id="7f11-bc81-0039-49de">
@@ -708,7 +704,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Suppressive" id="0518-9ff2-dbf9-c631" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Suppressive (X)" id="0518-9ff2-dbf9-c631" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Demolisher Cannon" hidden="false" id="7b4a-720a-a71d-f7b7">
@@ -1836,7 +1832,7 @@ a) Any unit without Titan</characteristic>
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Suppressive" id="43c1-55df-e238-348c" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+                <infoLink name="Suppressive (X)" id="43c1-55df-e238-348c" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Melta Cannon" hidden="false" id="4add-6fd8-8139-d017" sortIndex="3">
@@ -2323,7 +2319,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
           <infoLinks>
             <infoLink name="Indirect" id="8a76-7115-e057-19b5" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
             <infoLink name="Barrage" id="826c-2d10-8486-b48d" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-            <infoLink name="Suppressive" id="b919-5d9a-e0dc-028a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+            <infoLink name="Suppressive (X)" id="b919-5d9a-e0dc-028a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -2564,7 +2560,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
                       <infoLinks>
                         <infoLink name="Indirect" id="7ff0-b6d0-75b5-05f6" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
                         <infoLink name="Barrage" id="0f56-ad61-3cc6-671b" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-                        <infoLink name="Suppressive" id="08a8-a7a8-7c74-0c80" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+                        <infoLink name="Suppressive (X)" id="08a8-a7a8-7c74-0c80" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
                       </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Heavy Lascannon" hidden="false" id="cf6e-aed4-12f9-ace1" sortIndex="3">
@@ -2654,7 +2650,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
           <infoLinks>
             <infoLink name="Indirect" id="613a-0a08-efe3-fd40" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
             <infoLink name="Barrage" id="c3d2-4d80-ed1a-e7a9" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-            <infoLink name="Suppressive" id="080d-bc5b-dc20-1814" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+            <infoLink name="Suppressive (X)" id="080d-bc5b-dc20-1814" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
           </infoLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cbab-1905-6a5b-2850-min" includeChildSelections="false"/>
@@ -2712,7 +2708,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Precision (X+)" id="24e7-31ac-393e-d5b3" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
+        <infoLink name="Precision" id="24e7-31ac-393e-d5b3" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
           <modifiers>
             <modifier type="set" value="Precision (6+)" field="name"/>
           </modifiers>
@@ -2835,7 +2831,7 @@ Grinding Treads: After this unit finishes a March, you may select an enemy uni
               </profiles>
               <infoLinks>
                 <infoLink name="Barrage" id="bbc7-7840-b8cc-f18b" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-                <infoLink name="Suppressive" id="60cb-08ff-0d93-4d5d" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+                <infoLink name="Suppressive (X)" id="60cb-08ff-0d93-4d5d" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
                 <infoLink name="Indirect" id="93b9-e236-de1a-b4c4" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
               </infoLinks>
             </selectionEntry>
