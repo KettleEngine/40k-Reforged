@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="16" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="17" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -426,7 +426,7 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Suppressive (3), For each attack made for this weapon that targets a vehicle unit, the Wound Roll of that attack always succeeds on a 2+. If that Wound Roll is successful, after the Attacks step, the target unit must make an Explode Roll.</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Suppressive 2D3, For each attack made for this weapon that targets a vehicle unit, a Wound Roll for that attack always succeeds on a 2+. If that wound roll is successful, after the Attacks step, the target unit must make an Explode Roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -795,13 +795,14 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="One Shot" id="c151-b4dc-feed-8b27" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
         <infoLink name="Indirect" id="5e0f-0369-fdb1-32e0" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="Pierce" id="c787-373e-c03d-4b2f" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>

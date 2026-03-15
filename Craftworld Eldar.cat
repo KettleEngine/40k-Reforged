@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="16" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Foretold Foray" id="d0c2-99f6-070a-f4ed" hidden="false">
       <description>After rolling for initiative battle round 1, roll Strands of Fate X where X is twice the number of leader units you have on the battlefield and reserves.</description>
@@ -548,46 +548,6 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
         <infoLink name="Pierce" id="2d96-fbcf-fdad-573f" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Relics (Refrence)" hidden="false" id="81b3-1ebe-3f72-c7bf">
-      <categoryLinks>
-        <categoryLink targetId="9cd6-0442-3f35-6b52" id="f048-e4ad-4be8-0d55" primary="true" name="Configuration"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="6ea7-4439-5ad4-86a1" includeChildSelections="false"/>
-      </constraints>
-      <profiles>
-        <profile name="1. Blood Moon of Khaine" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="6be5-4d96-d9ca-1370">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each attack this unit makes, reroll a Hit Roll and Wound Roll of 1 for that attack. Additionally, after this unit’s Attacks step, roll Strands of Fate X where X is equal to the number of Health enemy units lost this turn.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="2. Webway Network" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="4f48-1df1-4fd2-d115">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit is Activated, you may remove it from the battlefield and place it into reserves. Then, you may Deploy it at least 3D6” away from enemy units.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="3. Farseer Spirit Stone" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="a73b-cff7-f2ed-f0e7">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit gains Psyker 3.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="5. Rune of the Bladestorm" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="428e-170c-f3ba-f8ae">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each ML attack this unit makes, a Hit Roll of 5+ for that attack causes an additional hit.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="4. Faolchu’s Wing" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="9567-4b7f-ec24-af3d">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit finishes its Attacks step, it may make a March.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="6. Exarch Spirit Stone" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="4192-00a1-633b-7b44">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit&apos;s End step, if this turn was not your second turn in a row, take another turn. During that turn, if your active unit has an Aspect, X ability, for each attack made by that unit, a Hit Roll of 6 for that attack causes an additional hit.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Windfall of the Warp: Certain Death" hidden="false" id="d9c3-f9d1-e3dd-f1bd">
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4dbb-d3be-2cea-4a76-min" includeChildSelections="false"/>
@@ -746,32 +706,32 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
       <profiles>
         <profile name="1. Song of Souls" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="5661-15c3-120e-477f">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a friendly unit on the battlefield. The selected unit Heals D3 and its M is improved by 2 until the end of the battle round. Then, if the selected unit has Wraithbone, it Heals D3.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a friendly unit on the battlefield. The selected unit Heals D3 and its M is improved by 2 until the next time this unit is Activated or dies. If the selected unit has Wraithbone, it Heals D3+1 instead.</characteristic>
           </characteristics>
         </profile>
         <profile name="2. Woven Webway" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="ac7f-83f6-9d25-2ea0">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select up to two obstacle or structure terrain pieces within 24” of this unit. Until the end of the battle round, after you Activate an infantry unit in reserves or one of your infantry units finishes a March within 3” of one of the selected terrain pieces, you may remove your active unit from the battlefield. Then, Deploy that unit wholly within 6” of one of the selected terrain pieces at least 9&quot; away from enemy models.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select any of your infantry units in the battlefield. Remove that unit from the battlefield and place it into reserves. Then, Deploy wholly within 6&quot; of this unit, outside of the engagement range of enemy models.</characteristic>
           </characteristics>
         </profile>
         <profile name="3. Combinatorial Foresight" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="e5c9-9797-3640-40c2">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the next time this unit is Activated, for each attack that targets a friendly unit within 12” of and visible to this unit, you may change the Sv of this unit to 5+++ for that attack.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the next time this unit is Activated or dies, after a model in a friendly unit within 12” of and visible to this unit suffers a wound, roll a D6. On a 6, that attack fails.</characteristic>
           </characteristics>
         </profile>
         <profile name="4. Eldritch Bolt" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="4d29-91e4-ba19-e9ab">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one unit within 16” and visible to this unit. That unit suffers 2D3 Psychic SW.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one unit within 16” of and visible to this unit. That unit suffers 4+2D3 SW.</characteristic>
           </characteristics>
         </profile>
         <profile name="5. Eldritch Storm" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="d24c-86a1-6524-c6a0">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one point on the battlefield within 24&quot; of this unit. For each unit within 3D6” of that point, that unit suffers 2 Psychic SW.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one point on the battlefield within 16&quot; of this unit. All units within 2D6” of that point each suffer 3 SW.</characteristic>
           </characteristics>
         </profile>
         <profile name="6. Battle Meditations" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="d934-e5eb-df8a-5194">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Roll Strands of Fate 6.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the next time this unit is Activated or dies, each time a model in a friendly unit within 12” of and visible to this unit makes an Advance Roll, you may roll 6+D6 instead of 2D6.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -894,6 +854,10 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
             <infoLink name="Killshot" id="bf14-74ac-8b78-b2e3" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
             <infoLink name="Pierce" id="7033-4201-b521-7eb9" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
           </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e039-98fd-7e38-a3f2-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e039-98fd-7e38-a3f2-max" includeChildSelections="false"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -3021,6 +2985,10 @@ a) GUARDIAN DEFENDERS</characteristic>
           <infoLinks>
             <infoLink name="Fatal Thread" id="5891-d31c-9b84-a00a" hidden="false" type="rule" targetId="209e-12d3-d64c-9005"/>
           </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f8b7-e6aa-068b-7d77-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8b7-e6aa-068b-7d77-max" includeChildSelections="false"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -3046,10 +3014,6 @@ a) GUARDIAN DEFENDERS</characteristic>
                   </constraints>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="036d-27f3-59ed-9249" includeChildSelections="false"/>
-                <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="8367-1e24-d9e2-5724" includeChildSelections="false"/>
-              </constraints>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Dire Avenger Exarch" hidden="false" id="b2e5-eb63-a1a4-e835">
               <profiles>
@@ -3108,6 +3072,10 @@ a) GUARDIAN DEFENDERS</characteristic>
                           <infoLinks>
                             <infoLink name="Pierce" id="45f7-4b9d-4841-e6d8" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                           </infoLinks>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ccf-8690-9aa4-3943-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ccf-8690-9aa4-3943-max" includeChildSelections="false"/>
+                          </constraints>
                         </selectionEntry>
                       </selectionEntries>
                     </selectionEntry>
@@ -3587,6 +3555,46 @@ b) Any unit with an Aspect, X ability</characteristic>
           </constraints>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Relics (Refrence)" hidden="false" id="81b3-1ebe-3f72-c7bf">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="f048-e4ad-4be8-0d55" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="6ea7-4439-5ad4-86a1" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="1. Blood Moon of Khaine" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="6be5-4d96-d9ca-1370">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each ranged attack made for this unit, a Wound Roll of 5+ causes an additional wound. If the target unit of those attacks has Fatal Thread, reroll a Wound Roll of 1 for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2. Webway Network" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="4f48-1df1-4fd2-d115">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit gains this ability, select two points on the battlefield within 16” of this unit and mark those points. While this unit has this ability, after any of your units Activate within 3” of that point, you may remove your active unit from the battlefield. Then, Deploy your active unit wholly within 6” of the other selected point.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3. Farseer Spirit Stone" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="a73b-cff7-f2ed-f0e7">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit gains Psyker 3.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5. Rune of the Bladestorm" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="428e-170c-f3ba-f8ae">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each melee attack made for this unit, a Hit Roll of 5+ for that attack causes an additional hit. If the target unit of those attacks has Fatal Thread, reroll a Hit Roll of 1 for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4. Faolchu’s Wing" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="9567-4b7f-ec24-af3d">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit&apos;s Attacks step, it may March.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6. Exarch Spirit Stone" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="4192-00a1-633b-7b44">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each attack made for this unit, a Hit Roll of 6 for that attack causes an additional hit. Additionally, if this is your second turn in a row, for each attack made for the active unit, reroll a Hit Roll of 1 for that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </selectionEntries>
 </catalogue>
