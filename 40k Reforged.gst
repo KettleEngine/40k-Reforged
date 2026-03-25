@@ -1,18 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="17" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="18" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
     <categoryEntry name="Configuration" id="9cd6-0442-3f35-6b52" hidden="false"/>
     <categoryEntry name="Fast Attack" id="af46-d948-7306-0601" hidden="false"/>
-    <categoryEntry name="Leaders" id="2886-2afd-f65f-9d8e" hidden="false"/>
+    <categoryEntry name="Leaders" id="2886-2afd-f65f-9d8e" hidden="false">
+      <description>Leader units must attach to another unit. Attach each leader unit in your army list to one of the compatible units listed under its unit profile.
+
+
+To attach a leader unit, select a compatible unit in your army list which does not already have an attached leader. Those two units are combined into one unit for the battle.
+
+
+The combined unit has the unit types of both units.
+
+
+Change the attached leader unit’s Toughness (T) and Resolve (Rv) to equal the other unit’s T and Rv.
+
+
+While there are non-leader models in a leader unit, when you make a Saving Throw for this unit, you must choose non-leader models to suffer the wound for that Saving Throw (even if a leader model is missing H).</description>
+    </categoryEntry>
     <categoryEntry name="Support" id="ccc6-6202-853c-23e4" hidden="false"/>
     <categoryEntry name="Elites" id="4820-e2b5-9e00-bb68" hidden="false"/>
-    <categoryEntry name="Infantry" id="205c-3072-067b-d808" hidden="false"/>
-    <categoryEntry name="Vehicle" id="b239-6bd1-e7a0-0a02" hidden="false"/>
-    <categoryEntry name="Monster" id="6537-7b2d-b2c8-6005" hidden="false"/>
-    <categoryEntry name="Chaos" id="f809-9826-f58a-6b8d" hidden="false"/>
-    <categoryEntry name="Rare" id="1738-1300-9dbb-c5be" hidden="false"/>
+    <categoryEntry name="Infantry" id="205c-3072-067b-d808" hidden="false">
+      <description>Infantry models may move over friendly infantry models as if they were not there.</description>
+    </categoryEntry>
+    <categoryEntry name="Vehicle" id="b239-6bd1-e7a0-0a02" hidden="false">
+      <description>Vehicle models may select targets for their ranged weapons as if the vehicle model were not within engagement range of any enemy units.
+
+
+Vehicle units can be targeted with ranged weapons as if they were not within engagement range of any enemy units.
+
+
+After an Attacks step where a vehicle unit is reduced to 4 or fewer Health (excluding zero), make an Explode Roll for that unit.
+
+
+Vehicle models can give cover to friendly infantry.</description>
+    </categoryEntry>
+    <categoryEntry name="Monster" id="6537-7b2d-b2c8-6005" hidden="false">
+      <description>Monster units and models follow the same rules as vehicles.</description>
+    </categoryEntry>
+    <categoryEntry name="Chaos" id="f809-9826-f58a-6b8d" hidden="false">
+      <description>Chaos units have no special rules, but some rules interact with their chaos type.</description>
+    </categoryEntry>
+    <categoryEntry name="Rare" id="1738-1300-9dbb-c5be" hidden="false">
+      <description>Rare units may only be included once in your army list during List Building.</description>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Army Roster" hidden="false" id="0396-e1ff-fdad-e17b">
@@ -389,12 +422,14 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="6e10-493a-5feb-948b" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Autocannon" hidden="false" id="a636-c9c9-ad6d-6db0">
       <profiles>
@@ -804,6 +839,66 @@
         <infoLink name="Indirect" id="5e0f-0369-fdb1-32e0" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
         <infoLink name="Pierce" id="c787-373e-c03d-4b2f" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Plasma Blaster" hidden="false" id="f4e1-5e30-78a3-2852">
+      <profiles>
+        <profile name="Plasma Blaster" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0284-277e-7a8b-a855">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge, Pierce</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Overcharge" id="bf91-2f4b-881f-eb6b" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+        <infoLink name="Pierce" id="e5fb-6d02-2363-114d" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Grav-Gun" hidden="false" id="f657-b5e1-7a66-d017">
+      <profiles>
+        <profile name="Grav-Gun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2e68-61ee-e3ff-dfb2">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">-</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This unit may move over structures as if they were not there. For each attack made for this weapon, that attack’s S is 1 higher to the target’s Toughness.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Grav Pistol" hidden="false" id="aeca-017c-7dcb-cf9e">
+      <profiles>
+        <profile name="Grav Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7c64-b31a-d4d2-f3cc">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Grav-Cannon" hidden="false" id="4811-c9c2-5c16-0a39">
+      <profiles>
+        <profile name="Grav-Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a8ad-069d-d915-9742">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>

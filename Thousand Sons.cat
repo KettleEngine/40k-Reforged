@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3336-6a64-b87f-ab82" name="Thousand Sons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="14" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3336-6a64-b87f-ab82" name="Thousand Sons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="14" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Windfall of the Warp, Stolen Sorcery" hidden="false" id="6ab5-dc8c-40f6-8ff5">
+    <selectionEntry type="upgrade" import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="6ab5-dc8c-40f6-8ff5">
       <profiles>
-        <profile name="Windfall of the Warp, Stolen Sorcery" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="ccb8-77ea-04d9-04d3">
+        <profile name="Windfall of the Warp, Baleful Arc" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="ccb8-77ea-04d9-04d3">
           <characteristics>
-            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same results, the nearest visible enemy unit within 27” suffers D3 Psychic SW.</characteristic>
+            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same results, the nearest visible enemy unit within 27&quot; suffers 3D3 SW.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -14,67 +14,63 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="380f-53a5-84fb-6664-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="368e-26e3-98ff-35c3">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b528-3219-0b8f-35b1" includeChildSelections="false"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink targetId="9cd6-0442-3f35-6b52" id="c0fe-5b1b-b5ff-cefe" primary="true" name="Configuration"/>
-      </categoryLinks>
+    <selectionEntry type="upgrade" import="true" name="Warpflame Pistol" hidden="false" id="9779-6b3e-5fd2-ee95">
       <profiles>
-        <profile name="Entwined Will" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="eb32-15f5-befc-e96e">
+        <profile name="Warpflame Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a2e8-83fe-b68d-64c2">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Psychic Test your units make, add 1 D6.</characteristic>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover, Inferno</characteristic>
           </characteristics>
         </profile>
-        <profile name="Inferno" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d87d-c93b-77b5-aedd">
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="1db1-8f3d-2758-fec1" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Inferno" id="6fc1-862f-8c2f-a1e0" hidden="false" type="rule" targetId="188a-b70b-b086-9c0e"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Inferno (Rules Package)" hidden="false" id="1c9d-5a76-8730-ed1e" type="selectionEntry" targetId="8e48-0184-0153-dddc"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Inferno (Rules Package)" hidden="false" id="8e48-0184-0153-dddc">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f5e7-bb42-2821-32a7-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5e7-bb42-2821-32a7-max" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Pierce" id="4efb-ed77-9be7-60c8" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+        <infoLink name="Inferno" id="599f-f0c1-4f09-1716" hidden="false" type="rule" targetId="188a-b70b-b086-9c0e"/>
+        <infoLink name="Shred" id="c6a9-5da9-81c1-5ce5" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Cabalistic Rituals" hidden="false" id="20ae-74f3-a7a2-0f22">
+      <profiles>
+        <profile name="Cabalistic Rituals" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3fc0-f99e-3c3d-11d2">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each of this weapon’s attacks, a Wound Roll of 6 for that attack causes the attack sequence to end. Then, the unit targeted by that attack suffers a number of Psychic SWs equal to the D of that attack.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Great Traitors’ Arsenal" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e6b2-19e6-5d3f-258d">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">You may also add units to your army list from the “Chaos Space Marine Arsenal” document. For each unit added to your army this way, that unit gains:
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your active unit is within 18” of this unit, that unit gains the following abilities:
 
 
-Arcane Munitions: After this unit selects targets for its attacks, select up to one of your units with Psyker X within 18” of this unit. Until the End step, this unit gains the selected unit’s Psyker X ability and this unit’s ranged weapons gain Inferno.</characteristic>
+Arcane Endowment: For each Psychic Test this unit makes, add 1 D6 to that Psychic Test.
+
+
+Ruinous Spellcraft: For each SW an enemy unit suffers, that SW gains Pierce.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Psychic Powers (Reference)" hidden="false" id="0171-0833-7fc4-972d">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="2961-1d3e-4adf-052e" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ddd1-e0fe-e3b1-85d0-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ddd1-e0fe-e3b1-85d0-max" includeChildSelections="false"/>
       </constraints>
-      <categoryLinks>
-        <categoryLink targetId="9cd6-0442-3f35-6b52" id="f360-8a68-627a-fe58" primary="true" name="Configuration"/>
-      </categoryLinks>
-      <profiles>
-        <profile name="Psychic Powers (Reference)" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="e9cf-3e6f-ea5c-76e7">
-          <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">1 Psychic Subjugation: Select an enemy unit within 18”. The selected unit suffers 2D3+X Suppression where X is this unit’s Psyker X.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="65f1-f261-4d04-40a8" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="d99e-9556-c5f6-0407">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="f5e5-d983-d892-9541" includeChildSelections="false"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink targetId="9cd6-0442-3f35-6b52" id="8c12-fc52-3844-1e0d" primary="true" name="Configuration"/>
-      </categoryLinks>
+    <selectionEntry type="upgrade" import="true" name="Inferno Bolt Pistol" hidden="false" id="a803-d087-1a5e-367b">
       <profiles>
-        <profile name="Relics (Reference)" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="680a-7c95-55fa-ef82">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">1 Dust Aegis: For each attack that targets this unit, reroll Saving Throws of 1 for that attack.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Inferno Bolt Pistol" hidden="false" id="9779-6b3e-5fd2-ee95">
-      <profiles>
-        <profile name="Inferno Bolt Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a2e8-83fe-b68d-64c2">
+        <profile name="Inferno Bolt Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="09f6-abe6-e319-6477">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
@@ -87,18 +83,1778 @@ Arcane Munitions: After this unit selects targets for its attacks, select up t
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Inferno" id="1db1-8f3d-2758-fec1" hidden="false" type="rule" targetId="3b9e-8b58-9bed-fb98"/>
+        <infoLink name="Inferno" id="8dbb-5cdb-da4f-ada1" hidden="false" type="rule" targetId="188a-b70b-b086-9c0e"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Inferno (Rules Package)" hidden="false" id="0607-62ee-f804-c2cb" type="selectionEntry" targetId="8e48-0184-0153-dddc"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sorcerer Staff" hidden="false" id="3ee6-8ec7-9b5b-c9ce">
+      <profiles>
+        <profile name="Sorcerer Staff" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5d77-498b-fafb-03d7">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest result of this unit’s last Psychic Test.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Blast (X)" id="176e-181f-7740-f7e1" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Prosperine Khopesh" hidden="false" id="e554-5480-e062-1e72">
+      <profiles>
+        <profile name="Prosperine Khopesh" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a89d-f2ed-a746-db12">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="552d-6747-0114-7f49" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fcb5-d6c5-f5f0-e077-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fcb5-d6c5-f5f0-e077-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Inferno Combi-Bolter" hidden="false" id="538d-3054-aab9-ecb6">
+      <profiles>
+        <profile name="Inferno Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="631b-551e-1b6d-28f7">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Inferno" id="526c-0a75-3fe1-785b" hidden="false" type="rule" targetId="188a-b70b-b086-9c0e"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Inferno (Rules Package)" hidden="false" id="9742-f4f0-d2d1-9c76" type="selectionEntry" targetId="8e48-0184-0153-dddc"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Warpflamer" hidden="false" id="888e-ae4b-43a5-49b6">
+      <profiles>
+        <profile name="Warpflamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ef59-0571-1189-1b3e">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno, Ignore Cover</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Inferno (Rules Package)" hidden="false" id="f79f-13e3-ce51-9708" type="selectionEntry" targetId="8e48-0184-0153-dddc"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="a8a8-675e-6527-2662" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Soulreaper Cannon" hidden="false" id="60f6-5a0d-8af6-34b5">
+      <profiles>
+        <profile name="Soulreaper Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e71d-85b5-3ccc-fa32">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Inferno (Rules Package)" hidden="false" id="0e10-f5f2-65e9-bf2a" type="selectionEntry" targetId="8e48-0184-0153-dddc"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Inferno Boltgun" hidden="false" id="5e89-6a0d-ed0a-a5f6">
+      <profiles>
+        <profile name="Inferno Boltgun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="eef5-1161-e05d-4b62">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Inferno (Rules Package)" hidden="false" id="cef6-c2f3-7860-8607" type="selectionEntry" targetId="8e48-0184-0153-dddc"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Summon (Rules Package)" hidden="false" id="1934-6ca4-3741-6c73">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a96b-2e93-dbdc-9f97-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a96b-2e93-dbdc-9f97-max" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Fickle Grasp" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1502-5222-acbb-cc01">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit cannot capture objectives.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Summoned Horror" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0dcf-a26f-713a-583d">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s End step, take another turn. If you have another unit with this ability and ready, you must select that unit to Activate.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Daemonic" id="c5cf-019f-c0bf-2a22" hidden="false" type="rule" targetId="3b9e-8b58-9bed-fb98"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
-    <rule name="Inferno" id="3b9e-8b58-9bed-fb98" hidden="false">
-      <description>For each of this weapon’s attacks, a Wound Roll of 6 for that attack causes the attack sequence to end. Then, the unit targeted by that attack suffers a number of Psychic SWs equal to the D of that attack.</description>
+    <rule name="Daemonic" id="3b9e-8b58-9bed-fb98" hidden="false">
+      <description>For each attack that targets this unit, the Wound Roll of that attack is always successful on a 5+ and always fails on any result worse than 5+.</description>
+    </rule>
+    <rule name="Entwined Will" id="5a20-9748-a65b-7e1f" hidden="false">
+      <description>While this unit is not active, if your active unit with Psyker is within 9” of one or more units with Entwined Will, for each Psychic Test that unit makes, add 1 D6 to that Psychic Test.</description>
+    </rule>
+    <rule name="Inferno" id="188a-b70b-b086-9c0e" hidden="false">
+      <description>While any of your units with Psyker are within 9” of this unit, each of this weapon’s attacks gain Pierce and Shred.</description>
     </rule>
   </sharedRules>
-  <entryLinks>
-    <entryLink import="true" name="Army Rules (Reference)" hidden="false" id="2bcc-c947-c47d-7e43" type="selectionEntry" targetId="368e-26e3-98ff-35c3"/>
-    <entryLink import="true" name="Psychic Powers (Reference)" hidden="false" id="800d-d887-208f-bbb6" type="selectionEntry" targetId="0171-0833-7fc4-972d"/>
-    <entryLink import="true" name="Relics (Reference)" hidden="false" id="5fd9-cf7a-7a58-34e5" type="selectionEntry" targetId="d99e-9556-c5f6-0407"/>
-  </entryLinks>
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="d99e-9556-c5f6-0407" sortIndex="3">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="f5e5-d983-d892-9541" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="6cbb-cba9-064d-978c-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="6cbb-cba9-064d-978c-max" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="8c12-fc52-3844-1e0d" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="1 Dust Aegis" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="680a-7c95-55fa-ef82">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit gains Resilient 5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2 Siphoning Sigil" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="f2b2-9452-7098-7d53">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each Psychic Test this unit makes, add 1 D6 to the Psychic Test for each other unit with Psyker on the battlefield. For each Psychic Test an enemy unit makes while within 12” of this unit, that unit&apos;s Psyker X is worsened by 1 for that Psychic Test.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Staff of Influence" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="37f8-515f-c8ad-7d58">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit gains this ability or Activates, roll XD6 where X is this unit’s Psyker X. Keep each dice as your ‘influence dice’. While any of your units have ability, for each attack that targets this unit, instead of making a Saving Throw for that attack, you may ‘spend influence’. To spend influence, discard one of those influence dice equal to or greater than the result for that Saving Throw to be successful.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Unholy Ammunition" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="87b7-363e-8ccf-df89">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each attack this unit makes with a weapon with Inferno, on a Wound Roll of 5+ for that attack, the target unit suffers X SW where X is the Damage of that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6 Tablet of Treason" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="094e-964e-533c-405a">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit finishes a March, it may make a Psychic Test. If it does, select an enemy infantry unit visible to and within X” of this unit, where X is the total result of that Psychic Test. The selected unit’s non-leader models make ranged attacks and you select the targets for those attacks.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Trespassers’ Ring" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="0aed-2950-6019-dced">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After an enemy unit finishes a March visible to this unit, you may roll a D6. On a 5+, this unit may Fall Back up to 9&quot; (instead of its normal M), and may move through enemy models and terrain as if they were not there while doing so.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="43bd-d1b8-ce34-1ed1" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Psychic Powers (Reference)" hidden="false" id="0171-0833-7fc4-972d" sortIndex="2">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="2961-1d3e-4adf-052e" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="3818-5dec-525f-9143-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="3818-5dec-525f-9143-max" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="f360-8a68-627a-fe58" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="1 Psychic Subjugation" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="e9cf-3e6f-ea5c-76e7">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 16&quot;. The selected unit suffers XD3+1 Suppression where X is this unit’s Psyker X.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2 Destiny&apos;s Doorstep" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="989b-95ed-8fbb-e4e1">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">If this unit is in reserves, roll 3D6. You may Deploy it at last X” away from all enemy units where X is the result. Otherwise, this unit may Fall Back up to 9&quot; (instead of its normal M), and may move over terrain and models as if they were not there while doing so.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Temporal Manipulation" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="de1e-1879-559a-5b39">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a friendly unit within 9” of this model. Select and apply one of the following effects:
+
+
+a) After the next time you roll for initiative, the selected unit Heals XD3 where X is this unit’s Psyker X.
+b) The selected unit Heals X where X is this unit&apos;s Psyker X.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Tzeentch’s Labyrinth" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="fcd2-d13d-fa07-9cb0">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select up to one debris terrain piece within 18” of this unit. Remove the selected debris from the battlefield. Then, place the debris anywhere on the battlefield. Do not place it on any terrain, objectives, or models. After moving that terrain, each enemy unit within 3” of that terrain suffers X SW where X is this unit’s Psyker X.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6 Immolating Vortex" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="9351-c256-d375-0321">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select any point on the battlefield within 16&quot; of and visible to this unit. Each enemy unit within XD6” of the selected point, where X is the number of times this psychic power has been Cast this battle, suffers 2 SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Psychic Powers (Reference)" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="84e8-17b2-6a57-120c">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">1 Psychic Subjugation: Select an enemy unit within 18”. The selected unit suffers 2D3+X Suppression where X is this unit’s Psyker X.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="368e-26e3-98ff-35c3" sortIndex="1">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b528-3219-0b8f-35b1" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="fa8a-f266-43e2-48fc-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="fa8a-f266-43e2-48fc-max" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="c0fe-5b1b-b5ff-cefe" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Entwined Will" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="eb32-15f5-befc-e96e">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is not active, if your active unit with Psyker is within 9” of one or more units with Entwined Will, for each Psychic Test that unit makes, add 1 D6 to that Psychic Test.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Daemonic" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d87d-c93b-77b5-aedd">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack that targets this unit, the Wound Roll of that attack is always successful on a 5+ and always fails on any result worse than 5+.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Great Traitors’ Arsenal" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e6b2-19e6-5d3f-258d">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">You may also add units to your army list from the “Chaos Space Marines” document. (will add when 3.0 CSM is added, DM me if i forget)</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Inferno" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="106b-f1d2-35eb-d344">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While any of your units with Psyker are within 9” of this unit, each of this weapon’s attacks gain Pierce and Shred.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Discborn Exalted Sorcerer" hidden="false" id="9a09-390b-2968-8fee">
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="6b77-31c5-1fdd-d120" primary="false" name="Infantry"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="2df5-d3df-5f62-a21d" primary="true" name="Leaders"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="c695-5c9d-f79a-64b4" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Discborn Exalted Sorcerer" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3c81-5a8c-879d-d20f">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="d15d-d288-78ef-9cdd">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="5c86-f692-ccc4-43cc" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (3)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Fly" id="d2f8-f19a-4b1d-d4bd" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Entwined Will" id="ab8a-e2b0-a7ea-1975" hidden="false" type="rule" targetId="5a20-9748-a65b-7e1f"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Cabalistic Rituals" hidden="false" id="183d-d5a8-f2cd-3397" type="selectionEntry" targetId="20ae-74f3-a7a2-0f22"/>
+        <entryLink import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="50a4-3ff0-7e90-d55b" type="selectionEntry" targetId="6ab5-dc8c-40f6-8ff5"/>
+        <entryLink import="true" name="Sorcerer Staff" hidden="false" id="007e-58fd-6d3e-2e7b" type="selectionEntry" targetId="3ee6-8ec7-9b5b-c9ce">
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c01-e73a-33e7-dd8f-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c01-e73a-33e7-dd8f-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Pistol" id="7501-162e-338e-336c" hidden="false" defaultSelectionEntryId="59b2-e556-5a92-450a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1e63-1025-edde-550b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1e63-1025-edde-550b-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Inferno Bolt Pistol" hidden="false" id="59b2-e556-5a92-450a" type="selectionEntry" targetId="a803-d087-1a5e-367b" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Plasma Pistol" hidden="false" id="2d84-18b9-b09a-e46a" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Warpflame Pistol" hidden="false" id="c4c7-9194-80cc-35e9" type="selectionEntry" targetId="9779-6b3e-5fd2-ee95" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Infernal Master" hidden="false" id="ede8-b778-43b2-b6f9">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="d622-8a79-a253-2a50" primary="false" name="Infantry"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="ad48-fc79-3deb-8b63" primary="true" name="Leaders"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="383c-a7b8-2c97-ee5c" primary="false" name="Chaos"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="d8f9-a342-622c-d06a" primary="false" name="Rare"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Infernal Master" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="c0d2-b018-583f-cdb2">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="b981-8693-2c32-f5b1">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+● RUBRIC MARINES</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Roaring Distortion" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="89e2-c6c0-eab5-8f6e">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit makes a Psychic Test, if there is a friendly SUMMONED FLAMERS unit on the battlefield, add 1 SUMMONED FLAMERS model to that unit. Otherwise, create a SUMMONED FLAMERS unit within 1” of this unit outside of the engagement range of enemy units with 1 model. That unit is ready.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Manifest Tutelaries" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5159-2f30-264b-b0e1">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit makes a Psychic Test, if there is a friendly SUMMONED SCREAMERS unit on the battlefield, add 1 SUMMONED SCREAMERS model to that unit. Otherwise, create a SUMMONED SCREAMERS unit within 1” of this unit outside of the engagement range of enemy units with 1 model. That unit is ready.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="a2db-7709-3879-0e1c" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (3)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Entwined Will" id="9b33-9c7d-510f-9bea" hidden="false" type="rule" targetId="5a20-9748-a65b-7e1f"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="39e6-a099-73c7-2977" type="selectionEntry" targetId="6ab5-dc8c-40f6-8ff5"/>
+        <entryLink import="true" name="Sorcerer Staff" hidden="false" id="38d4-b1bb-ebb4-c0be" type="selectionEntry" targetId="3ee6-8ec7-9b5b-c9ce">
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8ad6-6cb2-de1a-fdbc-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ad6-6cb2-de1a-fdbc-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Inferno Bolt Pistol" hidden="false" id="560b-70bf-814e-6ed9" type="selectionEntry" targetId="a803-d087-1a5e-367b">
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="107b-1168-7db9-d352-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="107b-1168-7db9-d352-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="997c-374e-4644-4964" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Time Cult Sorcerer" hidden="false" id="bed0-325f-d8cb-dfb0">
+      <costs>
+        <cost name="pts" typeId="points" value="60"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="d56c-6426-13a8-a5fc" primary="false" name="Infantry"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="e049-2984-0665-9e63" primary="true" name="Leaders"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="840a-2b0b-3bb1-05a6" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Time Cult Sorcerer" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="047b-3074-6db4-41f7">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="6f06-550d-82ca-2caa">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+● RUBRIC MARINES</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Seize the Moment" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="726a-813b-7cb7-f405">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is ready, after each of your End steps, if this was not your second turn in a row, you may take another turn and you must select this unit to activate that turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Chronal Shift" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9c4d-462e-7d2e-b234">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is on the battlefield, when you roll for initiative, if this unit is within 9” of another with Entwined Will, you may add 1 D6 to that initiative roll.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="cede-48e2-ea48-7945" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (2)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Entwined Will" id="cf6a-a31c-636e-d86e" hidden="false" type="rule" targetId="5a20-9748-a65b-7e1f"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="7c3b-f1c3-c9c7-706e" type="selectionEntry" targetId="6ab5-dc8c-40f6-8ff5"/>
+        <entryLink import="true" name="Sorcerer Staff" hidden="false" id="92ae-5c74-ba36-a618" type="selectionEntry" targetId="3ee6-8ec7-9b5b-c9ce">
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="53b0-34b0-f2fe-de38-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="53b0-34b0-f2fe-de38-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Pistol" id="6948-f1f7-9921-8e2a" hidden="false" defaultSelectionEntryId="59b2-e556-5a92-450a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="254d-c760-8eb5-47f6-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="254d-c760-8eb5-47f6-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Inferno Bolt Pistol" hidden="false" id="e7b6-224e-ecdf-cc1b" type="selectionEntry" targetId="a803-d087-1a5e-367b" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Plasma Pistol" hidden="false" id="9bae-6495-c72b-7d22" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Warpflame Pistol" hidden="false" id="717c-ac7c-e045-7aa6" type="selectionEntry" targetId="9779-6b3e-5fd2-ee95" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Exalted Sorcerer" hidden="false" id="3947-f726-47f6-8ede">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="3e64-1cf2-a1e2-e218" primary="false" name="Infantry"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="3160-def7-6e3e-2bf4" primary="true" name="Leaders"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="ae5b-0992-944f-bf84" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Exalted Sorcerer" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1d41-d66c-2ced-b721">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="9a0e-3c1e-7781-a5bd">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+● RUBRIC MARINES</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="3808-2d74-25f2-2d20" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (3)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Entwined Will" id="59cc-2248-8882-b8c9" hidden="false" type="rule" targetId="5a20-9748-a65b-7e1f"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Cabalistic Rituals" hidden="false" id="a246-6556-36f2-d2bf" type="selectionEntry" targetId="20ae-74f3-a7a2-0f22"/>
+        <entryLink import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="8b4a-a3f5-fda4-7b9e" type="selectionEntry" targetId="6ab5-dc8c-40f6-8ff5"/>
+        <entryLink import="true" name="Sorcerer Staff" hidden="false" id="bff1-a814-7005-a251" type="selectionEntry" targetId="3ee6-8ec7-9b5b-c9ce">
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2cd1-d0e0-7d2a-dcd8-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2cd1-d0e0-7d2a-dcd8-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Pistol" id="81a5-21fd-f03f-c5c8" hidden="false" defaultSelectionEntryId="59b2-e556-5a92-450a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7049-5222-b667-3332-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7049-5222-b667-3332-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Inferno Bolt Pistol" hidden="false" id="ebe4-5de0-5b29-a7f0" type="selectionEntry" targetId="a803-d087-1a5e-367b" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Plasma Pistol" hidden="false" id="307e-18f3-1a13-2aa1" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Warpflame Pistol" hidden="false" id="da97-0647-004f-31d9" type="selectionEntry" targetId="9779-6b3e-5fd2-ee95" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Aspiring Sorcerer" hidden="false" id="3401-468c-3870-063c">
+      <costs>
+        <cost name="pts" typeId="points" value="20"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="e0fc-a56a-e11a-e412" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="81a5-1ec2-cec1-18f9" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Aspiring Sorcerer" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="67ed-1647-674d-f225">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="0d0e-9a4e-8bb4-dfee">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to:
+● RUBRIC MARINES
+This unit does not count towards the leader maximum of the army list.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="2575-2109-0b3c-b7b4" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (1)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Fly" id="3358-edbc-a0e8-c83f" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Entwined Will" id="8078-06fc-b94e-0c6a" hidden="false" type="rule" targetId="5a20-9748-a65b-7e1f"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="f2a2-79c8-d1b8-7c8f" type="selectionEntry" targetId="6ab5-dc8c-40f6-8ff5"/>
+        <entryLink import="true" name="Sorcerer Staff" hidden="false" id="ece5-6a95-0e84-71c3" type="selectionEntry" targetId="3ee6-8ec7-9b5b-c9ce">
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cba2-0480-a933-561c-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cba2-0480-a933-561c-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Pistol" id="0a64-9d4f-2076-465f" hidden="false" defaultSelectionEntryId="59b2-e556-5a92-450a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="849f-a620-8103-ea99-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="849f-a620-8103-ea99-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Inferno Bolt Pistol" hidden="false" id="34b9-4f4c-25e3-9299" type="selectionEntry" targetId="a803-d087-1a5e-367b" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Plasma Pistol" hidden="false" id="be7c-0082-6799-2ef4" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Warpflame Pistol" hidden="false" id="01dc-21d9-b48b-f300" type="selectionEntry" targetId="9779-6b3e-5fd2-ee95" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Scarab Occult Sorcerer" hidden="false" id="04cc-9cbf-0b17-bc26">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="7770-45a7-4733-c444" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="23a7-3e54-2306-9471" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Scarab Occult Sorcerer" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="253e-4917-d8cc-a0bd">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="920f-ae58-d9ac-da8a">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to:
+● SCARAB OCCULT TERMINATORS
+This unit does not count towards the leader maximum of the army list.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="70ab-7516-f02a-74cf" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (2)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Heavy Armour" id="b636-2a31-adfb-a760" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+        <infoLink name="Entwined Will" id="9e18-3cd2-bb72-2bb7" hidden="false" type="rule" targetId="5a20-9748-a65b-7e1f"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="6fe2-e99b-c607-b98c" type="selectionEntry" targetId="6ab5-dc8c-40f6-8ff5"/>
+        <entryLink import="true" name="Prosperine Khopesh" hidden="false" id="9d75-2016-12d3-aeed" type="selectionEntry" targetId="e554-5480-e062-1e72"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapon" id="91fb-aabc-3177-d08a" hidden="false" defaultSelectionEntryId="1b9d-ca0b-8cc1-3d5f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bf05-9b3e-bcb1-71b9-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bf05-9b3e-bcb1-71b9-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Inferno Combi-Bolter" hidden="false" id="dcfd-5767-2a4f-8c2d" type="selectionEntry" targetId="538d-3054-aab9-ecb6" sortIndex="1"/>
+            <entryLink import="true" name="Sorcerer Staff" hidden="false" id="b55f-ccde-920c-d63c" type="selectionEntry" targetId="3ee6-8ec7-9b5b-c9ce" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Tzaangor Shaman" hidden="false" id="db65-2ee8-dff0-4d84">
+      <costs>
+        <cost name="pts" typeId="points" value="20"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="51c4-39b4-97c9-db63" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="171b-b134-67cd-3b00" primary="false" name="Chaos"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="dd32-ea5a-8760-d532" primary="true" name="Leaders"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Tzaangor Shaman" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="e261-c5da-cd64-71b2">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="6c82-0adf-360a-76ab">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) TZAANGORS
+b) TZAANGOR ENLIGHTENED</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Dubious Boon" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9589-8ca8-b04c-c7ce">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select an enemy unit within 9” of and visible to this unit. The selected unit suffers 2D3 SW. After this unit’s Attacks step, if one or more enemy models in that unit died as a result of SW this turn, add X TZAANGOR models to this unit, where X is equal to the number of models that died as a result of SW this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="c9c1-bd9b-b45d-e00a" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (1)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Fly" id="a00c-5cd0-2500-90fe" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Entwined Will" id="522d-48d9-3ae2-e664" hidden="false" type="rule" targetId="5a20-9748-a65b-7e1f"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="94f1-ef26-10e1-f91e" type="selectionEntry" targetId="6ab5-dc8c-40f6-8ff5"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Shaman Staff" hidden="false" id="8a9c-2f51-0289-cfce">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="afee-d941-110f-97e3-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afee-d941-110f-97e3-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Shaman Staff" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b1f7-73ec-6360-1ba6">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest result of this unit’s last Psychic Test.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Blast (X)" id="67a9-ed54-0295-5bd7" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Rubric Marines" hidden="false" id="f404-3b3f-4974-1024">
+      <costs>
+        <cost name="pts" typeId="points" value="90"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="6446-f0fe-4d33-da49" primary="false" name="Infantry"/>
+        <categoryLink targetId="b69b-5b51-faf1-2c40" id="8f8b-2750-d9b7-ecd6" primary="true" name="Troops"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Rubric Marines" id="e384-19d0-060c-ec1f" hidden="false" defaultSelectionEntryId="73f1-64ab-30a9-6f17">
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="6fd4-dfad-d1e2-496a-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="6fd4-dfad-d1e2-496a-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Rubric Marine" hidden="false" id="73f1-64ab-30a9-6f17">
+              <profiles>
+                <profile name="Rubric Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="96e7-83c0-02b8-f620">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Gun" id="a371-36b2-431c-7487" hidden="false" defaultSelectionEntryId="70c2-ac14-d010-8bcb">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d490-45d4-6001-896d-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d490-45d4-6001-896d-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Inferno Boltgun" hidden="false" id="70c2-ac14-d010-8bcb" type="selectionEntry" targetId="5e89-6a0d-ed0a-a5f6" sortIndex="1"/>
+                    <entryLink import="true" name="Warpflamer" hidden="false" id="ee7c-4b45-067c-1976" type="selectionEntry" targetId="888e-ae4b-43a5-49b6" sortIndex="2"/>
+                    <entryLink import="true" name="Soulreaper Cannon" hidden="false" id="c43a-ecc2-65ae-2860" type="selectionEntry" targetId="60f6-5a0d-8af6-34b5" sortIndex="3">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="ac2f-9348-1f18-05b8" includeChildSelections="true"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <profiles>
+        <profile name="Immutable Tombs" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="91c8-206d-5814-0234">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any unit Activates, if this unit has one or more RUBRIC MARINES models, until the End step, this unit gains Heavy Armour.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Empyric Anchor" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c3ed-94b7-29c2-bdbe">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your active unit is within 9” of this unit, while selecting an enemy unit for Windfall of the Warp, Baleful Arc, you may instead select the nearest enemy unit visible to and within 18&quot; of this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Heavy Armour" id="0ae0-6426-81eb-289a" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Icon of Flame" hidden="false" id="ca8e-15cf-4f9c-1c77">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7bb6-91bd-4951-cde7" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Icon of Flame" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="747c-8e61-5439-fade">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Once during each of this unit’s turns, after a successful Wound Roll is made for a weapon with Inferno, the target unit suffers D3 SW.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Tzaangors" hidden="false" id="4eac-5463-e672-2916">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="79ee-5e9f-5173-6a5d" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="f395-5b25-fbf4-f300" primary="false" name="Chaos"/>
+        <categoryLink targetId="b69b-5b51-faf1-2c40" id="8a09-46dc-e05a-9226" primary="true" name="Troops"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Warping Aura" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1db0-6f8a-7007-58a9">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Once per turn, if an enemy unit within 9” would suffer any SW, that enemy unit suffers 1 additional SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Rummaging Thralls" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="474d-fd0c-b160-867e">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s End step, if this unit would capture a vault, you may roll 3D6 instead of 2D6 to capture it.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Tzaangors" id="16b9-9d22-4728-b581" hidden="false" defaultSelectionEntryId="1ed2-e72c-93de-d9fc">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Tzaangor" hidden="false" id="1ed2-e72c-93de-d9fc">
+              <profiles>
+                <profile name="Tzaangor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="9bf8-63fd-ef41-45ac">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">7+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapons" id="ba71-e4b5-2189-a2af" hidden="false" defaultSelectionEntryId="a50e-307e-4946-91e2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f086-24af-8a3c-3c09-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f086-24af-8a3c-3c09-max" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Autopistol &amp; Chainsword" hidden="false" id="a50e-307e-4946-91e2">
+                      <entryLinks>
+                        <entryLink import="true" name="Autopistol" hidden="false" id="788b-0796-a367-982b" type="selectionEntry" targetId="64a8-21ad-840f-8b88">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="91a2-af42-8429-cd92-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91a2-af42-8429-cd92-max" includeChildSelections="false"/>
+                          </constraints>
+                          <modifiers>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="Chainsword" hidden="false" id="ee57-31bd-e5cf-57a0" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
+                          <modifiers>
+                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="205f-025b-e16f-da97-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="205f-025b-e16f-da97-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Tzaangor Blades" hidden="false" id="f260-6eb7-6077-e537">
+                      <profiles>
+                        <profile name="Tzaangor Blades" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="329d-934c-24a2-7db9">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Shred" id="cfce-57e1-59a0-39e8" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="9" field="selections" scope="parent" shared="true" id="2423-e402-f7ab-184b-min" includeChildSelections="false"/>
+            <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="2423-e402-f7ab-184b-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Scarab Occult Terminators" hidden="false" id="a5c8-ea12-4da7-b22f">
+      <costs>
+        <cost name="pts" typeId="points" value="140"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Scarab Occult Terminators" id="ce67-124f-cfed-03bc" hidden="false" defaultSelectionEntryId="3a4e-5e78-02c1-1050">
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="da24-8cd3-855a-9e37-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="da24-8cd3-855a-9e37-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Scarab Occult Terminator" hidden="false" id="3a4e-5e78-02c1-1050">
+              <profiles>
+                <profile name="Scarab Occult Terminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6eaa-f97e-2a3e-2b50">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Prosperine Khopesh" hidden="false" id="9e2d-8e98-95a8-48e1" type="selectionEntry" targetId="e554-5480-e062-1e72"/>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Bolter" id="aa6f-4109-cd8d-ee19" hidden="false" defaultSelectionEntryId="b4c2-df3e-ca9a-e360">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="acfc-6406-455a-5681-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acfc-6406-455a-5681-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Inferno Combi-Bolter" hidden="false" id="b4c2-df3e-ca9a-e360" type="selectionEntry" targetId="538d-3054-aab9-ecb6" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Other" id="9c98-8e2d-c757-06f0" hidden="false">
+                      <entryLinks>
+                        <entryLink import="true" name="Soulreaper Cannon" hidden="false" id="2389-1f7c-5352-d7b5" type="selectionEntry" targetId="60f6-5a0d-8af6-34b5" sortIndex="2"/>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="0c2f-d5ac-58f8-035d" includeChildSelections="true"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Heavy Warpflamer" hidden="false" id="cf57-512c-f276-5a5c" sortIndex="1">
+                          <profiles>
+                            <profile name="Heavy Warpflamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="fa75-33fc-cbf0-e873">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno, Ignore Cover</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <entryLinks>
+                            <entryLink import="true" name="Inferno (Rules Package)" hidden="false" id="6935-05c8-8dd8-0ff1" type="selectionEntry" targetId="8e48-0184-0153-dddc"/>
+                          </entryLinks>
+                          <infoLinks>
+                            <infoLink name="Ignore Cover" id="e408-ad50-c1d0-c7af" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+                          </infoLinks>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Hellfyre Missile Rack" hidden="false" id="a07c-9e2e-e7a1-2549">
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="d26a-10f2-bf08-3218" includeChildSelections="true"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Hellfyre Missile Rack" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4be3-dc43-6da4-256b">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <entryLinks>
+                    <entryLink import="true" name="Inferno (Rules Package)" hidden="false" id="6924-95a9-c30a-ea73" type="selectionEntry" targetId="8e48-0184-0153-dddc"/>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="edd7-8f4f-b73d-a63d" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
+        <infoLink name="Heavy Armour" id="378b-d9d1-3e8c-0402" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Immutable Sarcophigae" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0832-ebe6-ea7a-14bf">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any unit Activates, if this unit has one or more SCARAB OCCULT TERMINATORS models, until the End step, this unit gains Resilient 6+.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Teleport Homer" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="a5c7-0547-be9c-1fdf">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Activate this unit in reserves, you may use ‘teleport homer’. If you do, select one of your infantry units and roll D6+2. Then, Deploy this unit wholly within X” of the selected unit where X is the result of that roll and this unit cannot March or Fall Back this turn</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="c054-147c-a3c3-b4bd" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="ee5e-8cd5-a04c-8ec3" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="8dce-2bee-5ec7-5e12" primary="false" name="Chaos"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ahzek Ahriman, The Exile" hidden="false" id="43a2-6d2f-9faf-fd89">
+      <costs>
+        <cost name="pts" typeId="points" value="150"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="f6f3-034a-3abe-fc40" primary="false" name="Chaos"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="8b7c-2076-0ff7-8692" primary="true" name="Support"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="2d70-6e8f-68d8-994a" primary="false" name="Rare"/>
+        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="0335-8585-29d8-4a79" primary="false" name="Vehicle"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Ahzek Ahriman, The Exile" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="451b-a162-6414-c97a">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">9</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Impossible Knowledge" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9810-d2de-1975-fc40">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit Casts, choose one of the following effects:
+
+
+Change Lightning: Select a visible enemy unit within 9” and roll 3D3. That roll is X. Then, select a second enemy unit within X&quot; of and visible to the first, and a third within X&quot; of and visible to the second, and so on for any number of enemy units. Each enemy unit can only be selected once, and you can stop selecting at any time. Then, each selected unit suffers 2 SW.
+
+
+Chaos Familiars: Select either:
+a) SUMMONED FLAMERS with 2 models
+b) SUMMONED SCREAMERS with 3 models
+c) SUMMONED PINK HORRORS with 2 models
+d) SUMMONED CHAOS SPAWN OF TZEENTCH with 1 model
+Create the selected unit within 3” of this unit. That unit is ready.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Disk of Tzeentch" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="dd83-df1d-b8ab-5d01">
+          <characteristics>
+            <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">After this unit’s Attacks step, it may Fall Back.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="979a-b310-51a2-9b80" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (4)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Fly" id="6375-8b9c-f480-1342" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Unstoppable" id="4a0a-fb30-48eb-9901" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Forward Deploy" id="d56e-305c-af39-7717" hidden="false" type="rule" targetId="b433-60cc-2ed2-658f"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="6360-7cc2-9d2d-a674" type="selectionEntry" targetId="6ab5-dc8c-40f6-8ff5"/>
+        <entryLink import="true" name="Inferno Bolt Pistol" hidden="false" id="0b45-2621-2d4d-4404" type="selectionEntry" targetId="a803-d087-1a5e-367b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fb6f-962c-4e12-6c36-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb6f-962c-4e12-6c36-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="c828-4967-d3ab-be00" includeChildSelections="false"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Black Staff of Ahriman" hidden="false" id="9bdb-3c05-2cdb-2e34">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8e11-23c2-3147-d503-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e11-23c2-3147-d503-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Black Staff of Ahriman" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6c9d-3fdc-5fbb-2d24">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest result of this unit’s last Psychic Test.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Blast (X)" id="ef0b-adc4-5aac-5ac9" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Tzaangor Elightened" hidden="false" id="1868-e82f-5cdd-7530">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="2d3f-8da7-5a8a-5c8b" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="a36a-065d-a003-d7d3" primary="false" name="Chaos"/>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="2a75-932c-7a5d-6a1c" primary="true" name="Elites"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Discs of Tzeentch" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d4c0-3cd9-eb64-2b4c">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attacks step, it may Fall Back.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Past Strands" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0b17-9af3-3c30-0cfe">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy unit finishes a March and is visible to this unit, you may roll a D6. On a 4+, this unit may Fall Back and you cannot use this ability again this battle round.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Tzaangor Elightened" id="79b1-efd3-3048-c6b5" hidden="false" defaultSelectionEntryId="1ed2-e72c-93de-d9fc">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Tzaangor Elightened" hidden="false" id="90a3-eecb-342a-734c">
+              <profiles>
+                <profile name="Tzaangor Elightened" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="7d68-d511-cf13-e688">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapons" id="220f-6460-8b29-39c0" hidden="false" defaultSelectionEntryId="2b7e-ff11-6fb6-0000">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="192d-3510-de95-125e-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="192d-3510-de95-125e-max" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Fatebow" hidden="false" id="e8ed-7b75-a781-3b6e" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Inferno (Rules Package)" hidden="false" id="4ca0-306c-e3a7-51a3" type="selectionEntry" targetId="8e48-0184-0153-dddc"/>
+                      </entryLinks>
+                      <profiles>
+                        <profile name="Fatebow" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9de4-dfac-c8f6-ad42">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Divining Spear " hidden="false" id="9d84-e8df-db5c-b5e3" sortIndex="2">
+                      <profiles>
+                        <profile name="Divining Spear" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f793-fc5d-8b6b-160f">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Precision</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Precision" id="96f2-45e8-a4f6-6c04" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="0386-af89-a265-93c3-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="0386-af89-a265-93c3-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="1062-1482-0703-e17f" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (1)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Fly" id="748b-3976-66e3-22f0" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="b586-2021-2708-ddc5" type="selectionEntry" targetId="6ab5-dc8c-40f6-8ff5"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Mutalith Vortex Beast" hidden="false" id="b40f-550b-f9dd-9980">
+      <costs>
+        <cost name="pts" typeId="points" value="140"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="d0c6-ed96-3163-4384" primary="false" name="Chaos"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="5ace-e902-58af-d132" primary="true" name="Support"/>
+        <categoryLink targetId="6537-7b2d-b2c8-6005" id="775f-38af-62d3-2f49" primary="false" name="Monster"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Mutalith Vortex Beast" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3d66-2d7f-a5a9-4e46">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">14</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Warp Vortex" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3583-594a-42e6-aa27">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, it loses whichever of the following abilities it has if any, then roll a D3 and this unit gains the following ability equal to the result:
+
+
+1. Reality Transposition: After this unit gains this ability, this unit may Fall Back up to 9+D6&quot; (instead of its M). During this move, you may move through terrain and models as if they were not there.
+
+
+2. Wyrding Aurora: After this unit’s Move step, all units within 9” of this unit suffer D6+1 SW.
+
+
+3. Beam of Unreality: After this unit’s Move step, select a visible enemy unit within 18&quot; of this unit. Draw a line between the selected unit and this unit. The selected unit and each unit that line passes over suffers D6+1 SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mutalith Claws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3681-8c74-c6e5-ae47">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+        <profile name="Betentacled Maw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="936f-2172-0c22-57b2">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Daemonic" id="c0b7-e197-5405-8095" hidden="false" type="rule" targetId="3b9e-8b58-9bed-fb98"/>
+        <infoLink name="Walker" id="62b7-7723-49d4-26b0" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Mutating Horrors" hidden="false" id="e71a-4cb9-1bb3-3cd3">
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11cf-72ce-7b32-a258" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Mutating Horrors" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5877-dc42-8bfa-19d9">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attacks step, if there is a friendly SUMMONED PINK HORRORS unit on the battlefield, add 1 SUMMONED PINK HORRORS model to that unit. Otherwise, create a SUMMONED PINK HORRORS unit within 1” of this unit outside of the engagement range of enemy units with 1 model. That unit is ready.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Osiron Dreadnaught" hidden="false" id="d286-51a0-09da-6ebb">
+      <costs>
+        <cost name="pts" typeId="points" value="200"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="aed7-15d8-1d0e-e44f" primary="false" name="Chaos"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="d4af-c623-ebb7-0bd7" primary="true" name="Support"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="7354-66f5-62d8-fed4" primary="false" name="Rare"/>
+        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="c39f-5b43-5c3d-15f0" primary="false" name="Vehicle"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Osiron Dreadnaught" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="8ae4-d184-43aa-2f0f">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">14</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="e98f-1910-4fac-40e5" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (3)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="7f2c-f91f-3b56-a20f" type="selectionEntry" targetId="6ab5-dc8c-40f6-8ff5"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="8799-7f32-486a-05d5" includeChildSelections="false"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Arms" id="d759-fb12-63a3-d300" hidden="false">
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="dc74-5202-9977-1b57-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="dc74-5202-9977-1b57-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Autocannon" hidden="false" id="d4f4-6486-90d4-8d9c" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="7" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="2" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Duel" field="name"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="9c90-c2d5-ec3c-f8a8" type="selectionEntry" targetId="82a1-b562-e748-d5ad" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Duel" field="name"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Lascannon" hidden="false" id="04d7-517e-c391-5cfb" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="5">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Duel" field="name"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Multi-Melta" hidden="false" id="eace-4bea-cae6-297a" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f" sortIndex="6">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Dreadnought Chainfist" hidden="false" id="4e18-f69e-75a7-acfd" sortIndex="10">
+              <profiles>
+                <profile name="Dreadnought Chainfist" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8fd2-298e-b165-9f61">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Inferno Combi-Bolter" id="c151-115b-7ed1-45d3" hidden="false" defaultSelectionEntryId="075f-859d-326a-64b5">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="26be-32e1-c2a3-8900-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26be-32e1-c2a3-8900-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Inferno Combi-Bolter" hidden="false" id="6c9c-98ee-64d0-8242" type="selectionEntry" targetId="538d-3054-aab9-ecb6" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Plasma Blaster" hidden="false" id="1feb-bc2f-7537-8c32" type="selectionEntry" targetId="f4e1-5e30-78a3-2852" sortIndex="2"/>
+                    <entryLink import="true" name="Grav-Gun" hidden="false" id="9b6c-b1aa-09d0-043f" type="selectionEntry" targetId="f657-b5e1-7a66-d017" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Meltagun" hidden="false" id="5e74-cd99-fb57-773b" type="selectionEntry" targetId="4260-66c2-4887-4117" sortIndex="4">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <infoLinks>
+                <infoLink name="Shred" id="73a5-0c6d-a720-8b76" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dreadnought Force Blade" hidden="false" id="19a2-2f5f-b261-e1bc" sortIndex="9">
+              <profiles>
+                <profile name="Dreadnought Force Blade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="1223-30bd-393b-942a">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Pierce" id="f4c1-f18e-b511-f18b" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+              </infoLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Inferno Combi-Bolter" id="acfa-7f5e-09d8-5e7a" hidden="false" defaultSelectionEntryId="075f-859d-326a-64b5">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d924-b6fa-03f9-d206-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d924-b6fa-03f9-d206-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Inferno Combi-Bolter" hidden="false" id="0df4-f264-098f-b2fa" type="selectionEntry" targetId="538d-3054-aab9-ecb6" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Plasma Blaster" hidden="false" id="4885-9fae-9ea0-26c8" type="selectionEntry" targetId="f4e1-5e30-78a3-2852" sortIndex="2"/>
+                    <entryLink import="true" name="Grav-Gun" hidden="false" id="6a4e-4338-f409-950e" type="selectionEntry" targetId="f657-b5e1-7a66-d017" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Meltagun" hidden="false" id="4972-3f11-701d-ada2" type="selectionEntry" targetId="4260-66c2-4887-4117" sortIndex="4">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Conversion Beamer" hidden="false" id="c771-62b1-61e3-2879" sortIndex="8">
+              <profiles>
+                <profile name="Heavy Conversion Beamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="42a8-74ad-48d8-4767">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred, For each attack made for this weapon that targets an enemy unit further than 16” away, the D of that attack improves by 2.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9621-09f0-9139-2fef" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Shred" id="b4a4-7e21-4edd-cef2" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Volkite Dual-Culverin" hidden="false" id="5126-a09c-292b-873e" sortIndex="7">
+              <profiles>
+                <profile name="Volkite Dual-Culverin" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="21fc-f25f-eec6-c4de">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">14</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Kheres Assault Cannon" hidden="false" id="bedc-fae7-69bd-c84b" sortIndex="4">
+              <profiles>
+                <profile name="Kheres Assault Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="22e5-6c51-27a5-892e">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">25</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Plasma Cannon" hidden="false" id="2ea3-d316-4cd4-8498" sortIndex="1">
+              <infoLinks>
+                <infoLink name="Pierce" id="0d53-8c31-74ac-b72b" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                <infoLink name="Overcharge" id="0a68-5a81-a06f-938e" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Heavy Plasma Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="dc19-3581-8289-cd21">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">9</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge, Pierce</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Summoned Flamers" hidden="false" id="e1ed-f8e4-2f55-6e76">
+      <categoryLinks>
+        <categoryLink targetId="9cd6-0442-3f35-6b52" id="5df4-290e-d3ed-e641" primary="true" name="Configuration"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="5aa8-06f9-a7af-cd12" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="4aac-a4b5-9b69-492e" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="94ff-5cac-2256-dcff-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="94ff-5cac-2256-dcff-max" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fly" id="6812-08a4-1b34-4fcd" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Ignore Cover" id="99df-210f-63dc-9155" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Shred" id="1a9b-bae7-314c-a2a0" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Flickering Flames" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f97b-7fbf-dbc8-20e1">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover, Shred</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Summoned Flamers" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6b6b-2a2d-f10e-d478">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Summon (Rules Package)" hidden="false" id="55b9-3c9e-2d0d-05a0" type="selectionEntry" targetId="1934-6ca4-3741-6c73"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Summoned Screamers" hidden="false" id="e2ab-ed34-d9d0-b2f4">
+      <categoryLinks>
+        <categoryLink targetId="9cd6-0442-3f35-6b52" id="8fa1-6e75-b8d2-720e" primary="true" name="Configuration"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="63f8-32d2-e3bf-7379" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="e725-2b58-8468-6728" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="5544-e4f2-8f68-aa98-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5544-e4f2-8f68-aa98-max" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fly" id="3816-1c5a-4356-0f21" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Pierce" id="d8c8-6727-7859-c578" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Shrieking Flight" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1bda-c52f-413f-1f83">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit makes a March, select one enemy unit it moved within 1” of during that March. The selected unit suffers 3 Suppression.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Warp Jaws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="78f4-c440-81a1-b940">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Summoned Screamers" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="410e-77e1-60e8-e7a4">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Summon (Rules Package)" hidden="false" id="0bd4-1220-7d0d-24e3" type="selectionEntry" targetId="1934-6ca4-3741-6c73"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Summoned Pink Horrors" hidden="false" id="b1a7-22fb-c64e-9994">
+      <categoryLinks>
+        <categoryLink targetId="9cd6-0442-3f35-6b52" id="aa77-deb1-a8cc-9d35" primary="true" name="Configuration"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="66a3-b148-dbd8-9bb8" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="0e94-0996-8c77-b172" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="f701-04ea-3e38-f49b-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="f701-04ea-3e38-f49b-max" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fly" id="811d-6b28-41fe-3002" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Split" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0295-bb6d-cfbf-a2bb">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any PINK HORROR model in this unit dies, roll a D6. For each 4+, add two BLUE HORROR models to this unit. After any BLUE HORROR model in this unit dies, roll a D6. For each 4+, add one BRIMSTONE HORROR model to this unit (These models all have the same characteristics, but have different weapons corresponding to their colors).</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Summoned Pink Horrors" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="2489-72f6-0623-a3fc">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">7+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">7+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Summon (Rules Package)" hidden="false" id="87f6-1b03-0c4c-a802" type="selectionEntry" targetId="1934-6ca4-3741-6c73"/>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Weapons" hidden="false" id="5938-f98b-8a85-fde8">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b8c-110e-2a2a-43be-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b8c-110e-2a2a-43be-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Pink Horror Flames" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="1990-a280-d12a-7393">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Brimstone Horror Claws " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e8b3-2152-410e-ca56">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Blue Horror Flames " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="273e-823a-cc35-94f1">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Blue Horror Claws " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b7cd-9045-de2c-05f8">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Brimstone Horror Flames" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8c08-e5cc-64b5-c36c">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Pink Horror Claws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8419-2a6c-9ee1-ff49">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Shred" id="720e-379d-230e-7164" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+  </selectionEntries>
 </catalogue>
