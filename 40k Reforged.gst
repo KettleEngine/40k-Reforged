@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="18" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="19" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -313,14 +313,14 @@ Vehicle models can give cover to friendly infantry.</description>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 3, Ignore Cover</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Ignore Cover" id="c243-7453-e273-d71b" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Blast (X)" id="c243-7453-e273-d71b" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+        <infoLink name="Ignore Cover" id="57f2-e08e-9c53-9937" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Earthshaker Cannon" hidden="false" id="226d-3e2d-b6a8-aace">
@@ -529,13 +529,12 @@ Vehicle models can give cover to friendly infantry.</description>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="6894-2cf4-78df-13e8">
       <profiles>
-        <profile name="Plasma Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="feb1-abf1-df8e-4587">
+        <profile name="Plasma Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="44c1-61d6-8602-fbf2">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</characteristic>
           </characteristics>
@@ -720,9 +719,9 @@ Vehicle models can give cover to friendly infantry.</description>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Autopistol" hidden="false" id="64a8-21ad-840f-8b88">
+    <selectionEntry type="upgrade" import="true" name="Autogun/Autopistol" hidden="false" id="64a8-21ad-840f-8b88">
       <profiles>
-        <profile name="Autopistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b0bf-3326-8f40-71bb">
+        <profile name="Autogun/Autopistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b0bf-3326-8f40-71bb">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
@@ -899,6 +898,58 @@ Vehicle models can give cover to friendly infantry.</description>
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Combi-Plasma" hidden="false" id="6a92-d812-47fc-a089">
+      <profiles>
+        <profile name="Combi-Plasma" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0204-c238-5233-95e9">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge, Pierce</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Overcharge" id="10a5-41a6-08fd-4c08" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+        <infoLink name="Pierce" id="7a33-506d-2314-e589" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Combi-Melta" hidden="false" id="f770-b114-9df6-969c">
+      <profiles>
+        <profile name="Combi-Melta" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8e4e-9bf7-c1bd-5251">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="4896-ea26-e5b4-fcab" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Combi-Flamer" hidden="false" id="725d-6955-5aee-023b">
+      <profiles>
+        <profile name="Combi-Flamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="170b-12aa-b9a4-ea0a">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="6984-5176-1794-c61c" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3336-6a64-b87f-ab82" name="Thousand Sons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="14" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3336-6a64-b87f-ab82" name="Thousand Sons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="14" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="6ab5-dc8c-40f6-8ff5">
       <profiles>
@@ -314,14 +314,19 @@ b) The selected unit Heals X where X is this unit&apos;s Psyker X.</characterist
             <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select up to one debris terrain piece within 18” of this unit. Remove the selected debris from the battlefield. Then, place the debris anywhere on the battlefield. Do not place it on any terrain, objectives, or models. After moving that terrain, each enemy unit within 3” of that terrain suffers X SW where X is this unit’s Psyker X.</characteristic>
           </characteristics>
         </profile>
-        <profile name="6 Immolating Vortex" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="9351-c256-d375-0321">
+        <profile name="5 Bolt of Change" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="9351-c256-d375-0321">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select any point on the battlefield within 16&quot; of and visible to this unit. Each enemy unit within XD6” of the selected point, where X is the number of times this psychic power has been Cast this battle, suffers 2 SW.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one visible enemy unit within 16&quot; of this model. It suffers XD3+1 SW where X is this unit’s Psyker X.</characteristic>
           </characteristics>
         </profile>
         <profile name="Psychic Powers (Reference)" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="84e8-17b2-6a57-120c">
           <characteristics>
             <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">1 Psychic Subjugation: Select an enemy unit within 18”. The selected unit suffers 2D3+X Suppression where X is this unit’s Psyker X.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6 Immolating Vortex" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="6317-f3a9-67ef-7902">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select any point on the battlefield within 16&quot; of and visible to this unit. Each enemy unit within XD6” of the selected point, where X is the number of times this psychic power has been Cast this battle, suffers 2 SW.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1609,9 +1614,6 @@ Create the selected unit within 3” of this unit. That unit is ready.</characte
                   </characteristics>
                 </profile>
               </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9621-09f0-9139-2fef" includeChildSelections="false"/>
-              </constraints>
               <infoLinks>
                 <infoLink name="Shred" id="b4a4-7e21-4edd-cef2" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
               </infoLinks>
