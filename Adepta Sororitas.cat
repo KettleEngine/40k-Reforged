@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="23d8-3b8d-77df-8eb4">
       <constraints>
@@ -1110,10 +1110,278 @@ c) RETRIBUTORS</characteristic>
             <infoLink name="Ignore Cover" id="5dff-eae7-91f7-1b98" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
           </infoLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Geminae Superia (lol get reked varmint)" hidden="false" id="a6dd-c58f-b235-d858">
+          <categoryLinks>
+            <categoryLink name="Elites" hidden="false" id="add2-0e65-d856-96c5" targetId="4820-e2b5-9e00-bb68" primary="true"/>
+            <categoryLink name="Infantry" hidden="false" id="c821-2b64-d1c1-5df4" targetId="205c-3072-067b-d808" primary="false"/>
+            <categoryLink name="Rare" hidden="false" id="2f1b-a0bd-0e5f-1196" targetId="1738-1300-9dbb-c5be" primary="false"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="d81c-675e-3a19-24c8" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Geminae Superia" id="b2a9-2607-af2c-3582" hidden="false">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="604a-6aca-e86f-5f47-min" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="604a-6aca-e86f-5f47-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="Geminae Superia" hidden="false" id="7fc6-370a-644e-591d">
+                  <profiles>
+                    <profile name="Geminae Superia" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5ce9-dc44-ead9-87c3">
+                      <characteristics>
+                        <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                        <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                        <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                        <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+                        <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <entryLinks>
+                    <entryLink import="true" name="Bolt Pistol" hidden="false" id="4aa1-99d6-1dfb-bad1" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+                      <modifiers>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
+                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <infoLinks>
+                        <infoLink name="Holy Trinity" id="076b-e1f0-a06a-24b2" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8819-4c33-0ae4-a112-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8819-4c33-0ae4-a112-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Power Sword" hidden="false" id="f75d-a231-b72f-21b1" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
+                      <modifiers>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1244-7d3e-7581-ce3a-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1244-7d3e-7581-ce3a-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Fly" id="35e0-fe0a-08b7-2341" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="New Entry" hidden="false" id="5a90-b3ad-8eef-a524"/>
-    <selectionEntry type="unit" import="true" name="New Entry" hidden="false" id="9be4-3cf2-524a-67ef"/>
+    <selectionEntry type="unit" import="true" name="Hospitaller" hidden="false" id="5a90-b3ad-8eef-a524">
+      <costs>
+        <cost name="pts" typeId="points" value="40"/>
+      </costs>
+      <profiles>
+        <profile name="Hospitaller" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="48db-ac29-3605-26fd">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Last Rites" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="05c2-b8a9-5d79-2465">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After each time one of your units fails an Act of Faith roll, for the rest of the battle, add 1 to the D3 roll for this unit’s Mobile Triage ability.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mobile Triage" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c672-9cef-73da-2291">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, roll a D3. Then, a number of times equal to the result, select a friendly infantry unit within 6” of this unit, and that unit Heals 1.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Bolt Pistol" hidden="false" id="54ae-2d5f-2fdb-1b9f" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+            <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Holy Trinity" id="1ef9-8f13-2bb4-97fa" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9c6f-1f4f-40f1-1a3f-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c6f-1f4f-40f1-1a3f-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Chirurgeon’s Tools" hidden="false" id="108b-d5a5-5f6a-1019">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="affe-f853-7de1-cbed-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="affe-f853-7de1-cbed-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Chirurgeon’s Tools" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="462c-92c4-df44-2d44">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="f48b-9bf7-a24b-ae00" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="5d7a-41c9-dfa6-d1bc" primary="false" name="Infantry"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Celestian Sacresants" hidden="false" id="9be4-3cf2-524a-67ef">
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Celestian Sacresants" id="4c52-6840-eaeb-6860" hidden="false">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="2dcf-9b57-c9a3-ec2f-min" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="2dcf-9b57-c9a3-ec2f-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Celestian Sacresant" hidden="false" id="7df0-a6eb-5b1a-69c3">
+              <profiles>
+                <profile name="Celestian Sacresant" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="be15-bd38-92cb-8c72">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Pistol" id="5a05-590b-24b3-2413" hidden="false" defaultSelectionEntryId="f312-93f9-efba-913d">
+                  <entryLinks>
+                    <entryLink import="true" name="Bolt Pistol" hidden="false" id="f312-93f9-efba-913d" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <infoLinks>
+                        <infoLink name="Holy Trinity" id="9b4d-ff19-95ef-bac3" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
+                      </infoLinks>
+                    </entryLink>
+                  </entryLinks>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Other" id="7e79-aa02-4988-254b" hidden="false">
+                      <entryLinks>
+                        <entryLink import="true" name="Plasma Pistol" hidden="false" id="4d20-e9fc-bbb8-0421" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
+                          <modifiers>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="Inferno Pistol" hidden="false" id="c4a1-924f-eff4-79ac" type="selectionEntry" targetId="2531-7322-ac07-4d49">
+                          <modifiers>
+                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="Hand Flamer" hidden="false" id="3ca1-c31f-411a-4bdb" type="selectionEntry" targetId="8c68-b0f9-70cd-4c1f">
+                          <modifiers>
+                            <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="8b88-82ec-03ca-ad4a" includeChildSelections="true"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Celestian Sacresant Simulacrum Imperialis" hidden="false" id="fdcd-76cd-b929-ef7e" sortIndex="2">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="2c3f-5fb0-9c6b-f0e5" includeChildSelections="true"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Celestian Sacresant Simulacrum Imperialis" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4593-c59d-9f99-106f">
+                          <characteristics>
+                            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Once per battle, after this unit Activates, it may Heal 1.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Melee" id="1136-7935-66a5-40fe" hidden="false" defaultSelectionEntryId="47a8-d3c9-f4b8-be31">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Anointed Halberd" hidden="false" id="0d2f-34a3-00f9-8461">
+                      <profiles>
+                        <profile name="Anointed Halberd" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0007-2c3b-a574-839f">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Hallowed Mace" hidden="false" id="47a8-d3c9-f4b8-be31">
+                      <profiles>
+                        <profile name="Hallowed Mace" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e424-4846-1bb6-1252">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c56f-5d96-ef1e-73ee-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c56f-5d96-ef1e-73ee-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Heavy Armour" id="8d02-ff40-cef4-b156" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+        <infoLink name="Unstoppable" id="5edd-ef87-22c1-0b24" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Processional Shieldwall" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="102a-1fd0-3e3f-a32d">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a ranged attack successfully wounds a friendly leader unit within 6” of this unit, while this unit is visible to and closer to the enemy unit that made that attack, you may roll a D6. On a 4+, that attack’s target changes to this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="d3fa-8e73-66c6-d14e" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="6e46-437a-db85-c7d0" primary="false" name="Infantry"/>
+      </categoryLinks>
+    </selectionEntry>
     <selectionEntry type="unit" import="true" name="New Entry" hidden="false" id="e261-c7bb-30f9-15fe"/>
   </selectionEntries>
   <sharedProfiles>
