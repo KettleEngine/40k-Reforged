@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="19" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="20" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
     <categoryEntry name="Configuration" id="9cd6-0442-3f35-6b52" hidden="false"/>
-    <categoryEntry name="Fast Attack" id="af46-d948-7306-0601" hidden="false"/>
     <categoryEntry name="Leaders" id="2886-2afd-f65f-9d8e" hidden="false">
       <description>Leader units must attach to another unit. Attach each leader unit in your army list to one of the compatible units listed under its unit profile.
 
@@ -75,7 +74,6 @@ Vehicle models can give cover to friendly infantry.</description>
         </categoryLink>
         <categoryLink name="Troops" hidden="false" id="3014-c4c1-a77d-5525" targetId="b69b-5b51-faf1-2c40"/>
         <categoryLink name="Elites" hidden="false" id="ece3-c768-4906-318a" targetId="4820-e2b5-9e00-bb68"/>
-        <categoryLink name="Fast Attack" hidden="false" id="82b8-8e3e-1fff-c3eb" targetId="af46-d948-7306-0601"/>
         <categoryLink name="Support" hidden="false" id="906c-7610-ea3b-35e4" targetId="ccc6-6202-853c-23e4"/>
         <categoryLink name="Transport" hidden="false" id="f485-ae17-bb93-cf81" targetId="3239-2096-a612-ed8e"/>
       </categoryLinks>
@@ -278,18 +276,14 @@ Vehicle models can give cover to friendly infantry.</description>
         <profile name="Dozer Blade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="41f3-3261-ccbc-05a0">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This unit gains Walker</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink name="Walker" id="c019-2b10-abb1-2272" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy Bolter" hidden="false" id="82a1-b562-e748-d5ad">
       <profiles>
@@ -347,7 +341,7 @@ Vehicle models can give cover to friendly infantry.</description>
       <profiles>
         <profile name="Smoke Launchers" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="05b6-0208-cd8f-0a67">
           <characteristics>
-            <characteristic name="Description" typeId="14c0-3a47-fe6d-6563"/>
+            <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability again until the next battle round.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -440,7 +434,7 @@ Vehicle models can give cover to friendly infantry.</description>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive (2)</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 2</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -536,12 +530,13 @@ Vehicle models can give cover to friendly infantry.</description>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge, Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Overcharge" id="e094-db9c-9da7-0cb1" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+        <infoLink name="Pierce" id="e094-db9c-9da7-0cb1" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+        <infoLink name="Overcharge" id="3925-fb3f-4cfe-caf4" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Power Axe" hidden="false" id="2d40-0672-6885-33af">
@@ -950,6 +945,20 @@ Vehicle models can give cover to friendly infantry.</description>
       <infoLinks>
         <infoLink name="Ignore Cover" id="6984-5176-1794-c61c" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Battle Cannon" hidden="false" id="578d-f0a6-d3fa-a4f6">
+      <profiles>
+        <profile name="Battle Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a38f-a3d1-7be4-8ab3">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
