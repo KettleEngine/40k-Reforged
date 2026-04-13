@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Neuro Disruptor" hidden="false" id="7dc0-1f7b-a49c-295b">
       <profiles>
@@ -99,7 +99,7 @@
     </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Army Abilities" hidden="false" id="3e4b-29af-4da8-2435">
+    <selectionEntry type="upgrade" import="true" name="Army Abilities" hidden="false" id="3e4b-29af-4da8-2435" sortIndex="2">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Mocking Misstep" hidden="false" id="d7fb-3c5a-bf3c-59d1" sortIndex="1">
           <profiles>
@@ -148,7 +148,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ef3-7421-f11f-96ec" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Relics (refrence)" hidden="false" id="b58a-ba1e-7fbf-a030">
+    <selectionEntry type="upgrade" import="true" name="Relics (refrence)" hidden="false" id="b58a-ba1e-7fbf-a030" sortIndex="4">
       <profiles>
         <profile name="2 Blinded Damsel" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="3c0c-9a15-b526-32e0">
           <characteristics>
@@ -188,7 +188,7 @@
         <categoryLink name="Configuration" hidden="false" id="d52a-2a89-96ed-2398" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Psychic Powers (Reference)" hidden="false" id="209a-4a6e-d552-b2a7">
+    <selectionEntry type="upgrade" import="true" name="Psychic Powers (Reference)" hidden="false" id="209a-4a6e-d552-b2a7" sortIndex="3">
       <profiles>
         <profile name="1 Fog of Dreams" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="0578-61a0-1ecd-0580">
           <characteristics>
@@ -1339,6 +1339,84 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
         <categoryLink name="Infantry" hidden="false" id="a81e-4b31-d21c-8716" targetId="205c-3072-067b-d808" primary="false"/>
         <categoryLink name="Troops" hidden="false" id="59bc-e019-9150-13cf" targetId="b69b-5b51-faf1-2c40" primary="true"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.2" hidden="false" id="7e19-64a2-0bf1-e5d8" sortIndex="1">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="1295-e31a-c988-78d3" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="0814-5ea2-2203-495e-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="0814-5ea2-2203-495e-max" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="1 Macharian Cross" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="fc8b-2707-9776-618d">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After a friendly Astra Militarum infantry unit Activates within 12” of this unit, that unit may gain one of the following abilities:
+
+
+Move Move Move!: This unit’s M is improved by 3&quot;.
+
+
+Aim There!: For each ranged attack this unit makes, reroll Wound Rolls of 1 for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2 Push Logistics Stockpile" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="eea2-b9e9-e875-afa3">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After rolling for initiative, roll a D6. On a 1, 2 or 3, select one of your infantry units. On a 4, 5 or 6, select one of your vehicle units. The selected unit Repairs 4+D3.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Pull Logistics Radio Request" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="47b2-e95d-3d60-e482">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one of your units. The selected unit Repairs D3+1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Artillery Transponder" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="de96-9a2a-b168-ec5d">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Valkyrie Authorisation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="33e7-3754-ac0a-3094">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6 Reinforcement Allocation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="24a5-3ce4-1c99-0eee">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">Once per battle round, after this unit Activates, you may Deploy one of your following destroyed units wholly within your deployment zone with full Health and ready:
+a) CADIAN SHOCK TROOPS
+b) DEATH KORPS OF KRIEG
+c) MORDIAN IRON GUARD</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Artillery Transponder (Earthshaker Cannon Rear Support)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c994-7b8c-ff42-a3fc">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Suppressive 4, For each successful Wound Roll made for this weapon’s attacks, the target unit suffers 2 SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Valkyrie Authorisation (Valkyrie Multi-Laser)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a021-c80f-427f-83f3">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">30</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Ignore Cover
+
+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="bbe8-8aa6-2a4c-d169" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Barrage" id="9c1b-6149-80bf-184f" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+        <infoLink name="Suppressive (X)" id="9fb9-eaef-82a1-cc9c" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Indirect" id="e8b8-e4c6-9743-4eb5" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
     </selectionEntry>
   </selectionEntries>
 </catalogue>

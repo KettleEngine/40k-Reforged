@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="23d8-3b8d-77df-8eb4">
       <constraints>
@@ -16,7 +16,7 @@
         <infoLink name="Resilient (X)" id="6e28-0f5f-dc07-5560" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="3b5a-2733-35ec-e93c">
+    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="3b5a-2733-35ec-e93c" sortIndex="2">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="fcc7-513d-14f4-8b5a" includeChildSelections="false"/>
         <constraint type="min" value="1" field="selections" scope="force" shared="true" id="aece-9e83-4365-75c0" includeChildSelections="false"/>
@@ -2985,6 +2985,84 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
       <entryLinks>
         <entryLink import="true" name="Munitorum Cherub" hidden="false" id="b620-4ce1-50c4-bc8c" type="selectionEntry" targetId="2772-031f-6d96-99c5"/>
       </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.2" hidden="false" id="1288-3404-e1e5-90f1" sortIndex="1">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="2a32-f478-bc26-83a2" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="8734-bcfd-6f9d-2287-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="8734-bcfd-6f9d-2287-max" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="1 Macharian Cross" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="f892-1420-7ef7-2778">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After a friendly Astra Militarum infantry unit Activates within 12” of this unit, that unit may gain one of the following abilities:
+
+
+Move Move Move!: This unit’s M is improved by 3&quot;.
+
+
+Aim There!: For each ranged attack this unit makes, reroll Wound Rolls of 1 for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2 Push Logistics Stockpile" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="e9f7-8081-591f-9ffc">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After rolling for initiative, roll a D6. On a 1, 2 or 3, select one of your infantry units. On a 4, 5 or 6, select one of your vehicle units. The selected unit Repairs 4+D3.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Pull Logistics Radio Request" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="3cf4-ec58-979b-093b">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one of your units. The selected unit Repairs D3+1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Artillery Transponder" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="1267-8d8d-2583-bbe8">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Valkyrie Authorisation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="9639-86b9-f339-7136">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6 Reinforcement Allocation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="2f6d-7641-efe8-6d26">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">Once per battle round, after this unit Activates, you may Deploy one of your following destroyed units wholly within your deployment zone with full Health and ready:
+a) CADIAN SHOCK TROOPS
+b) DEATH KORPS OF KRIEG
+c) MORDIAN IRON GUARD</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Artillery Transponder (Earthshaker Cannon Rear Support)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f4ff-824e-7311-b628">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Suppressive 4, For each successful Wound Roll made for this weapon’s attacks, the target unit suffers 2 SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Valkyrie Authorisation (Valkyrie Multi-Laser)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9015-8b56-e14c-e41e">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">30</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Ignore Cover
+
+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="448e-b960-0da0-07b8" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Barrage" id="6031-9d00-0cf8-20d1" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+        <infoLink name="Suppressive (X)" id="2028-7eaf-e3a2-2aef" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Indirect" id="8986-5677-7ac1-b991" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>

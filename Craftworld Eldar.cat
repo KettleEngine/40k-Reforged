@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Foretold Foray" id="d0c2-99f6-070a-f4ed" hidden="false">
       <description>After rolling for initiative battle round 1, roll Strands of Fate X where X is twice the number of leader units you have on the battlefield and reserves.</description>
@@ -700,7 +700,7 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
     <catalogueLink type="catalogue" name="Harlequins" id="929c-fb4c-d5a7-175e" targetId="5f5e-53b8-b4af-9b92"/>
   </catalogueLinks>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Army Rules (Refrence)" hidden="false" id="4cde-d7ab-5f40-8120">
+    <selectionEntry type="upgrade" import="true" name="Army Rules (Refrence)" hidden="false" id="4cde-d7ab-5f40-8120" sortIndex="2">
       <categoryLinks>
         <categoryLink targetId="9cd6-0442-3f35-6b52" id="d2a0-61b0-3ac3-9f15" primary="true" name="Configuration"/>
       </categoryLinks>
@@ -3566,7 +3566,7 @@ b) Any unit with an Aspect, X ability</characteristic>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Relics (Refrence)" hidden="false" id="81b3-1ebe-3f72-c7bf">
+    <selectionEntry type="upgrade" import="true" name="Relics (Refrence)" hidden="false" id="81b3-1ebe-3f72-c7bf" sortIndex="3">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="f048-e4ad-4be8-0d55" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -3605,6 +3605,84 @@ b) Any unit with an Aspect, X ability</characteristic>
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="f243-4116-e968-8eee" sortIndex="1">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="b578-d74c-08c1-f280" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="cb93-f78d-dd10-56f4-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="cb93-f78d-dd10-56f4-max" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="1 Macharian Cross" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="52a1-b2bd-ce2c-6b62">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After a friendly Astra Militarum infantry unit Activates within 12” of this unit, that unit may gain one of the following abilities:
+
+
+Move Move Move!: This unit’s M is improved by 3&quot;.
+
+
+Aim There!: For each ranged attack this unit makes, reroll Wound Rolls of 1 for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2 Push Logistics Stockpile" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="3277-ff61-ddbc-381a">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After rolling for initiative, roll a D6. On a 1, 2 or 3, select one of your infantry units. On a 4, 5 or 6, select one of your vehicle units. The selected unit Repairs 4+D3.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Pull Logistics Radio Request" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="983e-d873-9a51-89d0">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one of your units. The selected unit Repairs D3+1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Artillery Transponder" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="16d4-09d0-2306-8de4">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Valkyrie Authorisation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="43ed-a9a2-9ec4-c5ca">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6 Reinforcement Allocation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="b11c-2b1d-779d-ab0f">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">Once per battle round, after this unit Activates, you may Deploy one of your following destroyed units wholly within your deployment zone with full Health and ready:
+a) CADIAN SHOCK TROOPS
+b) DEATH KORPS OF KRIEG
+c) MORDIAN IRON GUARD</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Artillery Transponder (Earthshaker Cannon Rear Support)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="987c-5373-2ffd-a3f0">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Suppressive 4, For each successful Wound Roll made for this weapon’s attacks, the target unit suffers 2 SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Valkyrie Authorisation (Valkyrie Multi-Laser)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3388-2019-d22f-b492">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">30</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Ignore Cover
+
+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="31b9-16d8-4c39-1222" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Barrage" id="a5b6-9dc4-71ff-70e3" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+        <infoLink name="Suppressive (X)" id="6829-89aa-daa8-159a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Indirect" id="9cb6-ac72-8251-f151" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
     </selectionEntry>
   </selectionEntries>
 </catalogue>
