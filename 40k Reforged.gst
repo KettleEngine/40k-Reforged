@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="21" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="22" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -75,7 +75,7 @@ Vehicle models can give cover to friendly infantry.</description>
             </modifier>
           </modifiers>
         </categoryLink>
-        <categoryLink name="Leader-limitless" hidden="false" id="d28c-91c2-d2af-2cb2" targetId="1dc0-a947-c240-76bb"/>
+        <categoryLink name="Countless Leader" hidden="false" id="d28c-91c2-d2af-2cb2" targetId="1dc0-a947-c240-76bb"/>
         <categoryLink name="Troops" hidden="false" id="3014-c4c1-a77d-5525" targetId="b69b-5b51-faf1-2c40"/>
         <categoryLink name="Elites" hidden="false" id="ece3-c768-4906-318a" targetId="4820-e2b5-9e00-bb68"/>
         <categoryLink name="Support" hidden="false" id="906c-7610-ea3b-35e4" targetId="ccc6-6202-853c-23e4"/>
@@ -990,4 +990,11 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
   <publications>
     <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisherUrl="https://github.com/KettleEngine/40k-Reforged"/>
   </publications>
+  <sharedProfiles>
+    <profile name="Teleport Homer" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="77ce-0080-b298-0daa">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Activate this unit in reserves, you may use ‘teleport homer’. If you do, select one of your infantry units and roll D6+2. Then, Deploy this unit wholly within X” of the selected unit where X is the result of that roll and this unit cannot March or Fall Back this turn.</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
 </gameSystem>
