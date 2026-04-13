@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="20" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="21" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -45,6 +45,9 @@ Vehicle models can give cover to friendly infantry.</description>
     <categoryEntry name="Rare" id="1738-1300-9dbb-c5be" hidden="false">
       <description>Rare units may only be included once in your army list during List Building.</description>
     </categoryEntry>
+    <categoryEntry name="Countless Leader" id="1dc0-a947-c240-76bb" hidden="false">
+      <description>same as a regular leader, just i don&apos;t want to change how the force chart is made</description>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Army Roster" hidden="false" id="0396-e1ff-fdad-e17b">
@@ -72,6 +75,7 @@ Vehicle models can give cover to friendly infantry.</description>
             </modifier>
           </modifiers>
         </categoryLink>
+        <categoryLink name="Leader-limitless" hidden="false" id="d28c-91c2-d2af-2cb2" targetId="1dc0-a947-c240-76bb"/>
         <categoryLink name="Troops" hidden="false" id="3014-c4c1-a77d-5525" targetId="b69b-5b51-faf1-2c40"/>
         <categoryLink name="Elites" hidden="false" id="ece3-c768-4906-318a" targetId="4820-e2b5-9e00-bb68"/>
         <categoryLink name="Support" hidden="false" id="906c-7610-ea3b-35e4" targetId="ccc6-6202-853c-23e4"/>
@@ -258,17 +262,17 @@ Vehicle models can give cover to friendly infantry.</description>
         <profile name="Hunter-Killer Missile" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9a2b-01ac-19e1-8c5f">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Killshot</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="One Shot" id="b135-e658-b305-b6a8" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Killshot" id="b135-e658-b305-b6a8" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+        <infoLink name="One Shot" id="c1c5-bedc-fd24-1eeb" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Dozer Blade" hidden="false" id="73da-e53b-4390-b808">
@@ -317,26 +321,6 @@ Vehicle models can give cover to friendly infantry.</description>
         <infoLink name="Ignore Cover" id="57f2-e08e-9c53-9937" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Earthshaker Cannon" hidden="false" id="226d-3e2d-b6a8-aace">
-      <profiles>
-        <profile name="Earthshaker Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d4eb-32fc-36cd-cddb">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">14</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Suppressive, For each attack made for this weapon, a successful Hit Roll causes the target unit to suffer 2 SW.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Indirect" id="f703-26c3-351e-c85a" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
-        <infoLink name="Barrage" id="2d82-5dc0-cf1e-101a" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-        <infoLink name="Suppressive (X)" id="eb4e-0561-2100-a6d6" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-      </infoLinks>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Smoke Launchers" hidden="false" id="d653-3fc2-d577-6295">
       <profiles>
         <profile name="Smoke Launchers" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="05b6-0208-cd8f-0a67">
@@ -348,65 +332,6 @@ Vehicle models can give cover to friendly infantry.</description>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="360a-f40f-1386-1cfc" includeChildSelections="false"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Basilisk" hidden="false" id="0eec-c7ca-30ee-9fc5">
-      <profiles>
-        <profile name="Basilisk" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="942d-6a1d-96b4-cf2d">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4++</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Earthshaker Cannon" hidden="false" id="c4a6-3747-66f6-375c" type="selectionEntry" targetId="226d-3e2d-b6a8-aace">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6a9b-4f97-7b99-f712-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a9b-4f97-7b99-f712-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="835b-7697-b35f-540f" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9828-010a-ff94-ec3b" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Smoke Launchers" hidden="false" id="32ad-469b-ca85-eb36" type="selectionEntry" targetId="d653-3fc2-d577-6295">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="This model is also equipped with either:" id="54f5-352e-b388-5b35" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="2ff8-e45c-c32f-6860" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-              <modifiers>
-                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="aa7f-0fbe-b669-6033" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="beb1-a05f-84bf-aa55-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="beb1-a05f-84bf-aa55-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="0598-3856-f927-bc4f" primary="false" name="Vehicle"/>
-      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Multi-Melta" hidden="false" id="8cdb-d231-cc0f-a98f">
       <profiles>
@@ -562,8 +487,7 @@ Vehicle models can give cover to friendly infantry.</description>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-3</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
         </profile>
@@ -662,36 +586,6 @@ Vehicle models can give cover to friendly infantry.</description>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </characteristics>
-        </profile>
-      </profiles>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Omnissian Axe" hidden="false" id="b835-3f6d-f34c-5199">
-      <profiles>
-        <profile name="Omnissian Axe" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5f51-c5ca-481f-09ee">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </characteristics>
-        </profile>
-      </profiles>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Archeotech Pistol" hidden="false" id="dbab-4453-6f14-a874">
-      <profiles>
-        <profile name="Archeotech Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4a72-915a-e6da-f780">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
             <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
@@ -970,8 +864,7 @@ Vehicle models can give cover to friendly infantry.</description>
   </entryLinks>
   <sharedRules>
     <rule name="Overcharge" id="e676-2d17-e4bf-f5e8" hidden="false">
-      <description>After selecting targets for this weapon’s attacks, you may ‘overcharge’ them. If you
-do, the Damage of those attacks improves by D3 and Wound Rolls of 4+ are always successful. Hit Rolls and Wound Rolls for those attacks cannot be modified, rerolled or cause additional effects. After a Wound Roll fails, the unit of this weapon’s model loses Health equal to the D of that attack, starting with the model equipped with this weapon. Health lost this way cannot be Repaired/Healed.</description>
+      <description>After selecting targets for this weapon’s attacks, you may ‘overcharge’ them. If you do, the Damage of those attacks improves by D3 and Wound Rolls of 4+ are always successful. Hit Rolls and Wound Rolls for those attacks cannot be modified, rerolled or cause additional effects. After a Wound Roll fails, the unit of this weapon’s model loses Health equal to the D of that attack, starting with the model equipped with this weapon. Health lost this way cannot be Repaired/Healed.</description>
     </rule>
     <rule name="Fly" id="449b-2864-9b01-7476" hidden="false">
       <description>This unit&apos;s models may move through the air instead of along the battlefield surface, using vertical distance, or moving over enemy models or terrain. After a unit has Fly and attaches to or is attached by a unit that does not have Fly, it loses Fly.</description>
