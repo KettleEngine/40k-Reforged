@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -3179,6 +3179,75 @@ c) MORDIAN IRON GUARD</characteristic>
         <constraint type="min" value="1" field="selections" scope="force" shared="true" id="70a8-903c-b35f-9866-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="70a8-903c-b35f-9866-max" includeChildSelections="false"/>
       </constraints>
+      <profiles>
+        <profile name="1 Macharian Cross" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="bb68-304a-f335-74f8">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After a friendly Astra Militarum infantry unit Activates within 12” of this unit, that unit may gain one of the following abilities:
+
+
+Move Move Move!: This unit’s M is improved by 3&quot;.
+
+
+Aim There!: For each ranged attack this unit makes, reroll Wound Rolls of 1 for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2 Push Logistics Stockpile" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="d1e9-be42-af7e-c9c0">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After rolling for initiative, roll a D6. On a 1, 2 or 3, select one of your infantry units. On a 4, 5 or 6, select one of your vehicle units. The selected unit Repairs 4+D3.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Pull Logistics Radio Request" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="7f9e-cd34-2759-83fa">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one of your units. The selected unit Repairs D3+1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Artillery Transponder" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="7fca-c9fe-518e-3953">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Valkyrie Authorisation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="2651-1ad0-63e0-9e16">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6 Reinforcement Allocation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="55d5-c37f-4207-931b">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">Once per battle round, after this unit Activates, you may Deploy one of your following destroyed units wholly within your deployment zone with full Health and ready:
+a) CADIAN SHOCK TROOPS
+b) DEATH KORPS OF KRIEG
+c) MORDIAN IRON GUARD</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Artillery Transponder (Earthshaker Cannon Rear Support)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b9e4-1416-a446-b45d">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Suppressive 4, For each successful Wound Roll made for this weapon’s attacks, the target unit suffers 2 SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Valkyrie Authorisation (Valkyrie Multi-Laser)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5b24-4735-104a-082e">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">30</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Ignore Cover
+
+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="bddc-38e5-8e8a-8248" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Barrage" id="362f-2edd-1b10-9f08" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+        <infoLink name="Suppressive (X)" id="6ad5-b8c7-1e2e-b717" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Indirect" id="a95c-5e57-e4bd-689c" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+      </infoLinks>
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
