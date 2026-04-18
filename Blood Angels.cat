@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Stances" hidden="false" id="9ef8-9802-e8e8-b5b6">
       <infoLinks>
@@ -306,7 +306,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb2b-fac7-1b1b-41e6-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.2" hidden="false" id="3fd4-08d0-17f9-61b5" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="3fd4-08d0-17f9-61b5" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="005a-8f68-8604-d3a9" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -314,73 +314,6 @@
         <constraint type="min" value="1" field="selections" scope="force" shared="true" id="cd43-6831-af45-55ec" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b32c-8b38-09c8-ee77" includeChildSelections="false"/>
       </constraints>
-      <profiles>
-        <profile name="1 Macharian Cross" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="c4e2-506c-4d97-2686">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After a friendly Astra Militarum infantry unit Activates within 12” of this unit, that unit may gain one of the following abilities:
-
-
-Move Move Move!: This unit’s M is improved by 3&quot;.
-
-
-Aim There!: For each ranged attack this unit makes, reroll Wound Rolls of 1 for that attack.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="2 Push Logistics Stockpile" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="3f43-0ca9-c73e-f29f">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After rolling for initiative, roll a D6. On a 1, 2 or 3, select one of your infantry units. On a 4, 5 or 6, select one of your vehicle units. The selected unit Repairs 4+D3.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="3 Pull Logistics Radio Request" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="b0aa-9d82-4c1c-0c89">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one of your units. The selected unit Repairs D3+1.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="4 Artillery Transponder" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="8c60-aba8-30c7-c269">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="5 Valkyrie Authorisation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="4de2-b8ae-361b-fbe9">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="6 Reinforcement Allocation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="abfb-30fb-5fc9-816d">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">Once per battle round, after this unit Activates, you may Deploy one of your following destroyed units wholly within your deployment zone with full Health and ready:
-a) CADIAN SHOCK TROOPS
-b) DEATH KORPS OF KRIEG
-c) MORDIAN IRON GUARD</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="4 Artillery Transponder (Earthshaker Cannon Rear Support)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7487-7a98-8d81-d9c2">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Suppressive 4, For each successful Wound Roll made for this weapon’s attacks, the target unit suffers 2 SW.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="5 Valkyrie Authorisation (Valkyrie Multi-Laser)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ef9e-4188-fd01-b765">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">30</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Ignore Cover</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Ignore Cover" id="9908-4290-5214-8508" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
-        <infoLink name="Barrage" id="5c14-6555-78a1-b1ab" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-        <infoLink name="Suppressive (X)" id="3d8f-51f5-36fb-be9e" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-        <infoLink name="Indirect" id="1c90-223e-fc70-6883" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Relics (Refrence)" hidden="false" id="7835-1e7c-5951-ff06" sortIndex="3">
       <categoryLinks>
@@ -393,7 +326,7 @@ c) MORDIAN IRON GUARD</characteristic>
       <profiles>
         <profile name="1 Praetorian Plate" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="5c2e-74a3-336e-baf9">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit gains Resilience 5+.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">Add 1 to Resilient rolls made for this unit</characteristic>
           </characteristics>
         </profile>
         <profile name="2 Solarite Heart-Node" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="0b6c-0cf9-fb5f-9232">
@@ -441,7 +374,7 @@ c) MORDIAN IRON GUARD</characteristic>
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
           </characteristics>
         </profile>
-        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="d847-8d93-f4e6-3280">
+        <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="d847-8d93-f4e6-3280">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.</characteristic>
           </characteristics>
@@ -492,7 +425,7 @@ c) MORDIAN IRON GUARD</characteristic>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Vexilla Allarus Custodian" hidden="false" id="b187-3425-323f-7c28">
       <costs>
-        <cost name="pts" typeId="points" value="180"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="4820-e2b5-9e00-bb68" id="08fc-b29d-6c0f-c8ec" primary="true" name="Elites"/>
@@ -550,7 +483,7 @@ c) MORDIAN IRON GUARD</characteristic>
         <categoryLink targetId="4820-e2b5-9e00-bb68" id="73ff-9010-d720-8c75" primary="true" name="Elites"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="90"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <profiles>
         <profile name="Formidable Will" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="47b2-d9eb-20d9-a0b9">
@@ -794,7 +727,7 @@ c) MORDIAN IRON GUARD</characteristic>
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
           </characteristics>
         </profile>
-        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="8e3b-52e8-aa3f-8c54">
+        <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="8e3b-52e8-aa3f-8c54">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.</characteristic>
           </characteristics>
@@ -848,7 +781,7 @@ c) MORDIAN IRON GUARD</characteristic>
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
           </characteristics>
         </profile>
-        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="e166-7afb-2f74-a8f5">
+        <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="e166-7afb-2f74-a8f5">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.</characteristic>
           </characteristics>
@@ -1147,12 +1080,12 @@ c) MORDIAN IRON GUARD</characteristic>
     </profile>
     <profile name="Stance: Kaptaris" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0c6b-2f19-8d96-a518">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack that targets this unit, this unit gains Resilience 5+ for that attack.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack or SW that targets this unit, this unit gains Resilient 5+ for that attack.</characteristic>
       </characteristics>
     </profile>
     <profile name="Stance: Conservai" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8a9c-3400-eaba-ca54">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack that targets this unit, this unit gains Resilience 5+ for that attack. If this unit would Fall Back, it may March instead.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack or SW that targets this unit, this unit gains Resilient 5+ for that attack. If this unit would Fall Back, it may March instead.</characteristic>
       </characteristics>
     </profile>
     <profile name="Stance: Rendax" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0ffe-80e6-74fc-1c59">

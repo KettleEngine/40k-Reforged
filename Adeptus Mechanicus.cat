@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="false" id="8ebc-4141-b6f1-7899" name="Adeptus Mechanicus" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="22" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.4" hidden="false" id="7646-5c1b-b2e9-3f1f" sortIndex="1">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="c52b-72ff-2114-f15b" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="c1ad-b329-19e3-4744" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="2108-43b7-da1b-d051" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Army Abilities" hidden="false" id="f53e-8354-06fc-cd4b" sortIndex="2">
+      <infoLinks>
+        <infoLink name="Omnissiah’s Blessing" id="0e2e-479f-b1b0-40b0" hidden="false" type="profile" targetId="2345-8a1c-18ba-8c53"/>
+        <infoLink name="Manufactorum Imperium" id="a640-8e88-37db-9ea2" hidden="false" type="profile" targetId="37fa-7d9c-6c8c-e33c"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="3e0e-5121-1c4d-14cb" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="054e-dee5-bd2d-44e4" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5cf5-b9df-33ba-b91d" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Relics (Refrence)" hidden="false" id="d9bc-82df-cc4c-d692" sortIndex="3">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="8aa5-aa14-8e03-1784" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8f04-7f6b-bd22-bb10" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac7f-b4c0-1d7b-2564" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="1 Shroudpsalm Cover" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="d8e8-9474-0602-d2e0">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each ranged attack targeting this unit from further than 6” from this unit, this unit gains Resilience 5+ for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2 Omnispex Array" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="535f-dba8-91af-2849">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each ranged attack made for this unit, add 1 to the Hit Roll for that attack. Each ranged weapon in this unit gains Ignore Cover.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Rad Grenade" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="c2e7-bf3f-277a-e0e2">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Move step, you may select an enemy unit within 12” of it. If you do, roll 2D6. The selected enemy unit gains the following ability until the end of the battle round, where X is the result.:
+
+
+Irradiated X: For each attack that targets this unit and friendly units within X”, add 1 to the Wound Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Autocaduceus" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="70d8-691e-adf5-33cb">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">While this unit has Autocaduceus and Tech-Priest, while any friendly units are within 8” of this unit, each time those units would Repair X, they Repair X+1 instead.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Calculated Casualties" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="a950-644d-3bb8-0a77">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After a unit gains this ability, you may Deploy one of your destroyed units, wholly within your deployment zone with full Health and ready, from among the following:
+a) SKITARII RANGERS
+b) SKITARII VANGUARDS
+c) KATAPHRON BREACHERS
+d) KATAPHRON DESTROYERS
+This ability can only be used once per battle, even if another unit gains it.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6 Princeps Voxlink" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9102-62a0-efa8-fb32">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec"/>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c"/>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+        <profile name="6 Princeps Voxlink" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3201-de57-3b6b-1d0b">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec"/>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c"/>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+        <profile name="6 Princeps Voxlink" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ea13-d19a-aaaf-0f10">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec"/>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c"/>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+        <profile name="6 Princeps Voxlink" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="9cf6-dbd1-eeda-f3ce">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6 Princeps Voxlink (Vulcan Mega-Bolter)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="43b8-eb2f-b4ca-5879">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="6af6-acf1-4e8e-2846" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Barrage" id="e109-19c7-f177-f56f" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+        <infoLink name="Resilient (X)" id="c56b-8b5b-40af-ec6f" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Dominus" hidden="false" id="999f-c410-7dcf-7ad1">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="bd23-c116-1c56-5987" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="e9c6-8f00-3767-e1f1" primary="false" name="Rare"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="788e-79b0-4be2-4bb0" primary="false" name="Infantry"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="caf0-8264-c116-144d" primary="true" name="Leaders"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="96b9-d1fa-554b-6ee3">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit may attach to:
+● SERVITORS
+This unit may instead not attach to anything.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Dominus" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="8742-b0e4-9e83-fbbb">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Destruction Shaper" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f319-0765-580f-d57a">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your units are visible to this unit, after any of those units Repair, until the End step, for each attack made by that unit, a Hit Roll of 6 for that attack causes an additional hit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Invocate Machine" id="99af-a2c4-89e6-40df" hidden="false" type="profile" targetId="f914-73c8-f087-eadf"/>
+        <infoLink name="Tech-Priest" id="0d47-321b-4835-1614" hidden="false" type="profile" targetId="d505-4156-df21-9043"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Omnissian Axe" hidden="false" id="c14d-26ec-7e01-e6f6" type="selectionEntry" targetId="9ccd-3d53-da9a-1566">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d6f0-7819-d15f-45c1-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6f0-7819-d15f-45c1-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Secondary Gun" id="9029-26ee-3651-fd7f" hidden="false" defaultSelectionEntryId="dcae-bdab-d08e-8114">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e80a-83c7-443b-5327-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e80a-83c7-443b-5327-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Macrostubber" hidden="false" id="dcae-bdab-d08e-8114" sortIndex="1">
+              <profiles>
+                <profile name="Macrostubber" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="1d05-f7ac-2107-3ee6">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Suppressive (X)" id="18e3-d8c7-473e-1b8c" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Phosphor Serpenta" hidden="false" id="a411-1528-b5c3-374d" sortIndex="2">
+              <profiles>
+                <profile name="Phosphor Serpenta" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0dfb-dee5-5628-4ee3">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 2</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Blast (X)" id="f19b-e929-f2f2-a76f" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Main Gun" id="63a0-3e31-863d-d0b0" hidden="false" defaultSelectionEntryId="dcae-bdab-d08e-8114">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8630-f0ec-49d3-0746-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8630-f0ec-49d3-0746-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Conversion Beamer" hidden="false" id="f69e-4c63-e09d-8621" type="selectionEntry" targetId="8004-44a4-150e-3506">
+              <modifiers>
+                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Volkite Blaster" hidden="false" id="072e-1b8c-bc67-7e72" sortIndex="1">
+              <profiles>
+                <profile name="Volkite Blaster" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3b70-221a-eb03-6452">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Mv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Macrotek Enginseer" hidden="false" id="8ed1-1617-f2c7-688f">
+      <costs>
+        <cost name="pts" typeId="points" value="60"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ebf6-b762-1388-d898" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="8b6c-01d8-3fb0-7ab5" primary="false" name="Rare"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="f011-99bc-6fee-65e2" primary="false" name="Infantry"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="5582-5c0c-afcd-4428" primary="true" name="Leaders"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="224c-4252-291d-da66">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit may attach to:
+● SERVITORS
+This unit may instead not attach to anything.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Macrotek Enginseer" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6196-bc70-5c21-d15a">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Soothing Communion" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c6e9-0484-509a-7b8d">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Explode Roll made for one of your vehicle units within 9” of this unit, you may reroll that Explode Roll.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Field Reforging" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="54e1-8d35-79c7-d639">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec"/>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c"/>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+        <profile name="Field Reforging" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4023-aca9-bc37-6e1d">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec"/>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c"/>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+        <profile name="Servo Arms" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="274d-7e29-19d6-498f">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Invocate Machine" id="4608-f1ff-70c6-83c3" hidden="false" type="profile" targetId="f914-73c8-f087-eadf"/>
+        <infoLink name="Tech-Priest" id="b5f4-9ea2-e25b-ce47" hidden="false" type="profile" targetId="d505-4156-df21-9043"/>
+        <infoLink name="Heal/Repair (X)" id="f4ed-99aa-73a4-caed" hidden="false" type="rule" targetId="02c8-1ec5-cdab-2572"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Omnissian Axe" hidden="false" id="d367-8373-9a34-37c9" type="selectionEntry" targetId="9ccd-3d53-da9a-1566">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="acab-482c-1465-628b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acab-482c-1465-628b-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+  </selectionEntries>
+  <sharedProfiles>
+    <profile name="Tech-Priest" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d505-4156-df21-9043">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Once per turn, after any of your units, Activate or finish their Move step, while within 8” of one or more units with Tech Priest, that unit Repairs 1.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Manufactorum Imperium" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="37fa-7d9c-6c8c-e33c">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">You may add vehicle units to your army list from the documents “40k Reforged: Astra Militarum” and “40k Reforged: Space Marine Arsenal”.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Invocate Machine" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f914-73c8-f087-eadf">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s End step, if this was not your second turn in a row, you must take another turn.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Omnissiah’s Blessing" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2345-8a1c-18ba-8c53">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any of your units Repair, until the End step, for each attack made by that unit, reroll Hit Rolls of 1 for that attack.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Predictive Algorithms" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="88fc-182e-a840-2df9">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 1” of one of your other units, for each attack that targets this unit, add 1 to the Saving Throw of that attack.</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+  <sharedRules>
+    <rule name="Radiation" id="89da-6037-0bd7-640b" hidden="false">
+      <description>For each attack made for this weapon, if the target unit is an infantry or monster, add 1 to the Wound Roll of that attack.</description>
+    </rule>
+    <rule name="Arc" id="8120-0b96-92c6-b997" hidden="false">
+      <description>For each attack made for this weapon, if the target unit is a vehicle, add 1 to the Wound Roll of that attack.</description>
+    </rule>
+  </sharedRules>
+  <sharedSelectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Conversion Beamer" hidden="false" id="8004-44a4-150e-3506">
+      <profiles>
+        <profile name="Conversion Beamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4043-e5dc-9970-1023">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, For each attack made for this weapon that targets an enemy unit further than 8” away from this unit, improve the D of that attack by D3. If that enemy unit is further than 16” away, improve the D of that attack by an additional D3.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="e784-d593-125b-c9f3" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Omnissian Axe" hidden="false" id="9ccd-3d53-da9a-1566">
+      <profiles>
+        <profile name="Omnissian Axe" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b772-b9b4-16db-93f0">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="355c-dbf3-8baf-6906" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
+    </selectionEntry>
+  </sharedSelectionEntries>
+</catalogue>
