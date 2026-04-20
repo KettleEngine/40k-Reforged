@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="20" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Foretold Foray" id="d0c2-99f6-070a-f4ed" hidden="false">
       <description>After rolling for initiative battle round 1, roll Strands of Fate X where X is twice the number of leader units you have on the battlefield and reserves.</description>
@@ -754,8 +754,8 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Wraithlord" hidden="false" id="6464-acb9-a723-fb2a">
       <categoryLinks>
-        <categoryLink name="Elites" hidden="false" id="94c3-7c62-068f-e44b" targetId="4820-e2b5-9e00-bb68" primary="true"/>
         <categoryLink name="Monster" hidden="false" id="1204-4201-0640-09db" targetId="6537-7b2d-b2c8-6005" primary="false"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="4fcc-b5df-1848-03a2" primary="true" name="Support"/>
       </categoryLinks>
       <profiles>
         <profile name="Wraithlord" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="50f9-e11b-c965-1ab7">
@@ -1130,8 +1130,8 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Elites" hidden="false" id="156f-7277-0af8-f141" targetId="4820-e2b5-9e00-bb68" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="94c0-e754-bee9-2ff5" targetId="205c-3072-067b-d808" primary="false"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="30e4-7361-c5e6-5cd5" primary="true" name="Support"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -1220,8 +1220,8 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Elites" hidden="false" id="311e-6e00-e16f-ef2c" targetId="4820-e2b5-9e00-bb68" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="bbc4-9cc3-4b5d-6def" targetId="205c-3072-067b-d808" primary="false"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="9302-a08b-1f4c-28eb" primary="true" name="Support"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -1239,7 +1239,7 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
               <profiles>
                 <profile name="Windrider" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="aedf-39c0-4e2a-e194">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
@@ -1299,6 +1299,7 @@ Twin&apos;s Essence: That unit&apos;s M is improved by 4&quot;.</characteristic>
       <infoLinks>
         <infoLink name="Fly" id="78c6-41be-7fa5-310c" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
         <infoLink name="Eyes of the Asuryani" id="b42d-76b2-2ee8-a2c1" hidden="false" type="rule" targetId="3be3-6578-1b0d-7468"/>
+        <infoLink name="Jet Bikes" id="ec1c-d570-7748-fb65" hidden="false" type="profile" targetId="e8ad-40cd-784f-fb45"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Jetbike Mastery" hidden="false" id="edff-445d-2dd7-e8e1">
@@ -1587,7 +1588,7 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
       </costs>
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="8a39-0d2e-28f6-c130" targetId="205c-3072-067b-d808" primary="false"/>
-        <categoryLink targetId="ccc6-6202-853c-23e4" id="3c93-c9c2-d69a-7f07" primary="true" name="Support"/>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="0a65-e976-f04f-d5a4" primary="true" name="Elites"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Warlock" hidden="false" id="5f97-b84f-58b4-0536">
@@ -2026,6 +2027,7 @@ b) WINDRIDERS</characteristic>
         </infoLink>
         <infoLink name="Unstoppable" id="d505-ae75-e729-e167" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
         <infoLink name="Fly" id="1e3b-a423-7ec6-4adf" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Jet Bikes" id="6c44-ec68-269e-c8b8" hidden="false" type="profile" targetId="e8ad-40cd-784f-fb45"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Shining Spears" id="01fc-9057-d3bd-6794" hidden="false" defaultSelectionEntryId="daa1-44d8-8a1b-41ff">
@@ -2034,155 +2036,137 @@ b) WINDRIDERS</characteristic>
               <profiles>
                 <profile name="Shining Spear" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="97e6-a3ec-6121-3f64">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
-                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-              <entryLinks>
-                <entryLink import="true" name="Shuriken Catapult" hidden="false" id="870e-c99d-ba2b-5237" type="selectionEntry" targetId="e63e-e756-2598-88cc">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapons" id="0265-ae84-97e1-79ea" hidden="false" defaultSelectionEntryId="fb96-3360-d0a8-78a0">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="fb96-3360-d0a8-78a0" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Shuriken Catapult" hidden="false" id="870e-c99d-ba2b-5237" type="selectionEntry" targetId="e63e-e756-2598-88cc">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9535-448d-a3cd-d9f8-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9535-448d-a3cd-d9f8-max" includeChildSelections="false"/>
+                          </constraints>
+                          <modifiers>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="prepend" value="Twin" field="name"/>
+                          </modifiers>
+                        </entryLink>
+                      </entryLinks>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Laser Lance" hidden="false" id="2891-3550-d686-d456">
+                          <profiles>
+                            <profile name="Laser Lance" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8d4e-1dc7-fa67-edd5">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, After this unit finishes a March, this weapon gains Shred until the End step.</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <infoLinks>
+                            <infoLink name="Pierce" id="134b-5ae4-a210-6c24" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                            <infoLink name="Shred" id="a822-d863-c48a-3518" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                          </infoLinks>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e9e8-9348-f5cb-8662-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e9e8-9348-f5cb-8662-max" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Exarch" hidden="false" id="130b-e6b2-c168-0362" sortIndex="2">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="b1d9-71f5-bb31-2603" includeChildSelections="true"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="Shuriken Cannon" hidden="false" id="adb1-578f-1915-d0fa" type="selectionEntry" targetId="3de8-f8bb-0dc7-7dc8">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1ec6-e0ab-82c3-d021-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ec6-e0ab-82c3-d021-max" includeChildSelections="false"/>
+                          </constraints>
+                          <modifiers>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </entryLink>
+                      </entryLinks>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Star Lance" hidden="false" id="170e-c0a7-60df-8344">
+                          <profiles>
+                            <profile name="Star Lance" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="78a7-d056-0c04-cf69">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, After this unit finishes a March, this weapon gains Shred until the End step.</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <infoLinks>
+                            <infoLink name="Pierce" id="7d6b-dc48-8159-ca0d" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                            <infoLink name="Shred" id="ccf9-3440-e662-5ab8" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                          </infoLinks>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5ed6-bcab-713a-baa2-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ed6-bcab-713a-baa2-max" includeChildSelections="false"/>
+                          </constraints>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntry>
+                  </selectionEntries>
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9535-448d-a3cd-d9f8-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9535-448d-a3cd-d9f8-max" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3411-2fcd-6b57-4c5f-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3411-2fcd-6b57-4c5f-max" includeChildSelections="false"/>
                   </constraints>
-                  <modifiers>
-                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="prepend" value="Twin" field="name"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Laser Lance" hidden="false" id="2891-3550-d686-d456">
-                  <profiles>
-                    <profile name="Laser Lance" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8d4e-1dc7-fa67-edd5">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Killshot, Pierce, This weapon may only make attacks if this unit finished a March this turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Pierce" id="134b-5ae4-a210-6c24" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-                    <infoLink name="Killshot" id="a822-d863-c48a-3518" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
-                  </infoLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e9e8-9348-f5cb-8662-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e9e8-9348-f5cb-8662-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntry>
-            <selectionEntry type="model" import="true" name="Shining Spear Exarch" hidden="false" id="2f23-ab95-d861-d592">
-              <profiles>
-                <profile name="Shining Spear" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="fba0-7d01-1107-4ec1">
-                  <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
-                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-              <entryLinks>
-                <entryLink import="true" name="Shuriken Cannon" hidden="false" id="adb1-578f-1915-d0fa" type="selectionEntry" targetId="3de8-f8bb-0dc7-7dc8">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1ec6-e0ab-82c3-d021-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ec6-e0ab-82c3-d021-max" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b1d9-71f5-bb31-2603" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Star Lance" hidden="false" id="170e-c0a7-60df-8344">
-                  <profiles>
-                    <profile name="Star Lance" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="78a7-d056-0c04-cf69">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Killshot, Pierce, This weapon may only make attacks if this unit finished a March this turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Pierce" id="7d6b-dc48-8159-ca0d" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-                    <infoLink name="Killshot" id="ccf9-3440-e662-5ab8" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
-                  </infoLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5ed6-bcab-713a-baa2-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ed6-bcab-713a-baa2-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="50ff-8e86-cef0-a86c" includeChildSelections="false"/>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="781a-d094-a338-87ad" includeChildSelections="false"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="50ff-8e86-cef0-a86c-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="50ff-8e86-cef0-a86c-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Khaine’s Spear" hidden="false" id="9759-cb9b-26d1-a097">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58c7-11fa-33d8-e63c-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58c7-11fa-33d8-e63c-max" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Khaine’s Spear" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3121-ed5b-8476-ef24">
-              <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March within engagement range of any enemy units with Fatal Thread, until the End step, this unit gains each selected ability:
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="7de8-7756-d531-ae9c" targetId="205c-3072-067b-d808" primary="false"/>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="9a69-841d-6ad8-83ca" primary="true" name="Elites"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <profiles>
+        <profile name="Lightning Speed" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="981f-33b8-4f96-fa66">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March, if that move ended at least 16” away from where it started, until the end of the battle round, for each attack that targets this unit, the Hit Roll for that attack is worsened by 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Khaine’s Spear" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3121-ed5b-8476-ef24">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March within engagement range of any enemy units with Fatal Thread, until the End step, this unit gains each selected ability:
 
 
 Shining Thrust: For each attack made by this unit, add 1 to the Hit Roll for that attack.
 
 
 Shining Wedge: After this unit&apos;s Attacks step, it may Fall Back.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lightning Speed" hidden="false" id="61fc-a8e4-d94e-4607">
-          <profiles>
-            <profile name="Lightning Speed" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="981f-33b8-4f96-fa66">
-              <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March, if that move ended at least 16” away from where it started, until the end of the battle round, for each attack that targets this unit, the Hit Roll for that attack is worsened by 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d19c-c866-70db-6dcf-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d19c-c866-70db-6dcf-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="7de8-7756-d531-ae9c" targetId="205c-3072-067b-d808" primary="false"/>
-        <categoryLink targetId="ccc6-6202-853c-23e4" id="0ec2-cba1-e2b5-3bd2" primary="true" name="Support"/>
-      </categoryLinks>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Rangers" hidden="false" id="2e07-41c1-e196-923c">
       <costs>
@@ -3490,7 +3474,7 @@ b) Any unit with an Aspect, X ability</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3520,6 +3504,7 @@ b) Any unit with an Aspect, X ability</characteristic>
             <modifier type="set" value=" Aspect (Shadow Spectre)" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Fatal Thread" id="abda-9c0b-82b4-1864" hidden="false" type="rule" targetId="209e-12d3-d64c-9005"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Ghostlight" hidden="false" id="c61c-3923-67ae-4570">
@@ -3540,7 +3525,7 @@ b) Any unit with an Aspect, X ability</characteristic>
             </profile>
             <profile name="Ghostlight" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4e9c-5603-3ac9-ea86">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may have this unit ‘combine beams’. If you do, until the End step, each model in this unit loses its Prism Rifle weapon, and one model of your choice gains the Ghostlight weapon.</characteristic>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, if there are three or more SHADOW SPECTRES models in this unit, you may have this unit ‘combine beams’. If you do, until the End step, each model in this unit loses its Prism Rifle weapon and, one model of your choice gains the Ghostlight weapon.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3548,23 +3533,14 @@ b) Any unit with an Aspect, X ability</characteristic>
             <infoLink name="Killshot" id="46df-6416-88dc-c0dc" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Eternal Duty" hidden="false" id="5185-ff36-ba52-a015">
-          <profiles>
-            <profile name="Eternal Duty" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f2ca-d9c3-0db2-ff85">
-              <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made by this unit that targets a unit with Fatal Thread, add 1 to the Hit Roll of that attack.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Fatal Thread" id="abda-9c0b-82b4-1864" hidden="false" type="rule" targetId="209e-12d3-d64c-9005"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d6cd-046d-202d-996d-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6cd-046d-202d-996d-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
       </selectionEntries>
+      <profiles>
+        <profile name="Eternal Duty" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f2ca-d9c3-0db2-ff85">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made by this unit that targets a unit with Fatal Thread, add 1 to the Hit Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Relics (Refrence)" hidden="false" id="81b3-1ebe-3f72-c7bf" sortIndex="3">
       <categoryLinks>
@@ -3606,7 +3582,7 @@ b) Any unit with an Aspect, X ability</characteristic>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="f243-4116-e968-8eee" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.4" hidden="false" id="f243-4116-e968-8eee" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="b578-d74c-08c1-f280" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -3671,9 +3647,7 @@ c) MORDIAN IRON GUARD</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Ignore Cover
-
-</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Ignore Cover</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3685,4 +3659,11 @@ c) MORDIAN IRON GUARD</characteristic>
       </infoLinks>
     </selectionEntry>
   </selectionEntries>
+  <sharedProfiles>
+    <profile name="Jet Bikes" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e8ad-40cd-784f-fb45">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, add 1 D6 to that roll.</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
 </catalogue>
