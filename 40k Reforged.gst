@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="22" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="23" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -854,6 +854,23 @@ Vehicle models can give cover to friendly infantry.</description>
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Stubber" hidden="false" id="4b7a-633d-1e19-061d">
+      <profiles>
+        <profile name="Heavy Stubber" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="03cb-fed2-48f7-2679">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive (X)" id="0518-9ff2-dbf9-c631" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Battle Size" hidden="false" id="416b-2ab1-795a-6a90" type="selectionEntry" targetId="564e-fbc6-5266-3ea4">
@@ -891,9 +908,6 @@ Psychic powers, unit abilities, and weapon abilities on units with Psyker can c
     <rule name="Walker" id="4100-8e8c-47a5-3a15" hidden="false">
       <description>This unit’s models may move over terrain 4” or less in height or units as if they were not there.</description>
     </rule>
-    <rule name="Feel No Pain (X+)" id="d17d-0e33-f77d-0131" hidden="false">
-      <description>Each time a model in this unit would lose Health, make a Feel No Pain roll. To make a Feel No Pain roll, roll one D6 for each Health it would lose. If the result equals or exceeds ‘X’, that roll is successful and that Health is not lost. A Feel No Pain roll of 1 always fails</description>
-    </rule>
     <rule name="Titan" id="8f09-c87f-c86c-8cfc" hidden="false">
       <description>The first time each battle round this unit Activates, it does not lose ready. This unit can never have its M” worsened.</description>
     </rule>
@@ -921,17 +935,6 @@ To Disembark, place the embarked unit wholly within 3” of the unit it&apos;s e
 
 After a unit with Transport is destroyed, any unit embarked within it is also destroyed.</description>
     </rule>
-    <rule name="Heavy Transport" id="5fcb-6b70-9399-7a81" hidden="false">
-      <description>After you deploy a unit with Transport or Heavy Transport, you may select one infantry (but not vehicle or monster) unit to deploy ‘embarked’ within that unit.
-
-Embarked units are not on the battlefield (they’re never visible, cannot be within range for any abilities, can’t capture objectives, etc).
-
-After an embarked unit’s Move step begins, that unit may Disembark. After a unit with Transport is destroyed, before removing its models, any unit embarked in it must Disembark.
-
-To Disembark, place the embarked unit wholly within 3” of the unit it&apos;s embarked within, in unit coherency. If you cannot meet these conditions, remove models from the unit until you can. After a unit Disembarks, it cannot March or Fall Back this battle round.
-
-After an infantry (but not vehicle or monster) unit ends a March wholly within 3” of a friendly unit with Transport or Heavy Transport that does not have an embarked unit, it may Embark into that unit. To Embark a unit, remove it from the battlefield until it Disembarks.</description>
-    </rule>
     <rule name="Heal/Repair (X)" id="02c8-1ec5-cdab-2572" hidden="false">
       <description>Heal X or Repair X: For each X, if all models within this unit are at their starting Health and the unit has fewer models than it started with, then add 1 missing model with 1 Health remaining. Otherwise, add 1 Health to a model with fewer Health than it started with.</description>
     </rule>
@@ -955,9 +958,6 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     </rule>
     <rule name="One Shot" id="0c06-9eed-2a45-b772" hidden="false">
       <description>You may only select a target for this weapon once per battle.</description>
-    </rule>
-    <rule name="Leader (X)" id="cc45-da26-194a-5be3" hidden="false">
-      <description>This rule dictates what units can lead or be lead by this squad</description>
     </rule>
     <rule name="Shuriken" id="c503-366d-25f8-01c0" hidden="false">
       <description>For each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit. If the target for that attack had Fatal Thread, that additional hit always wounds.</description>
@@ -983,9 +983,6 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     <rule name="Resilient (X)" id="253c-c1fa-d29d-d21e" hidden="false">
       <description>For each attack that targets this unit, after a failed Saving Throw for that attack, make a Resilient roll. To make a Resilient roll, roll a D6. If the result equals or exceeds X, that attack fails.</description>
     </rule>
-    <rule name="Open Deck" id="a419-83d6-e52a-c4d2" hidden="false">
-      <description>During the Attacks step for an active unit embarked in this unit, that embarked unit may select targets for its ranged attacks using the model of this unit as the attacking model.</description>
-    </rule>
   </sharedRules>
   <publications>
     <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisherUrl="https://github.com/KettleEngine/40k-Reforged"/>
@@ -994,6 +991,11 @@ After an infantry (but not vehicle or monster) unit ends a March wholly within 3
     <profile name="Teleport Homer" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="77ce-0080-b298-0daa">
       <characteristics>
         <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Activate this unit in reserves, you may use ‘teleport homer’. If you do, select one of your infantry units and roll D6+2. Then, Deploy this unit wholly within X” of the selected unit where X is the result of that roll and this unit cannot March or Fall Back this turn.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Covering Fire" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2415-711c-9ad6-01b3">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there are one or more friendly infantry units within 8” of this unit, this unit’s ranged weapons gain Suppressive 1 (if that weapon already has Suppressive X, improve X by 1 instead).</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
