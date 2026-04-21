@@ -1,0 +1,2226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="false" id="750c-5fc9-13d4-8be3" name="Death Guard" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.0" hidden="false" id="6c0e-086e-521b-782e" sortIndex="-1">
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="de1e-337f-a456-8e31" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="2e0f-3823-bcac-351c" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="83c5-1fcc-193a-f390" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="3491-e84e-c473-9b93" sortIndex="-2">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="84d9-bad1-0b50-955e" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="4555-fc23-e5f1-3252" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="39c9-6cda-edd2-2117" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="7b0c-4df4-36bd-9700" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Festering Advance" id="bd5b-10f4-800e-8d6f" hidden="false" type="profile" targetId="944e-46dd-e901-73d1"/>
+        <infoLink name="Nurgle’s Fruit" id="41f8-82ad-bf04-0885" hidden="false" type="profile" targetId="2bc0-64a5-bf4e-b19c"/>
+        <infoLink name="Plague" id="69d4-c859-9985-cce4" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+        <infoLink name="Suppressive (X)" id="f752-2932-fc36-2191" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Putrid" id="95c0-8f26-f5d5-8862" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+        <infoLink name="Nurgle’s Gifts" id="9809-c380-c147-1088" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Psychic Powers (Reference)" hidden="false" id="aa32-ae3b-7939-cce1" sortIndex="-3">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="6135-94e8-b462-bd67" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="5b6b-e374-f855-1414" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="14b8-80b4-c165-f1cd" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="6a37-e6d0-5cea-f4c5" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="1 Putrid Miasma" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="f5f3-5aaa-ce96-b226">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a friendly unit within 14” of this unit. Until the next time this unit is Activated or dies, ranged attacks that target the selected unit have a -1 penalty to their Hit Roll. Attacks cannot be affected by this psychic power more than once.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2 Blighted Pathogens" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="440d-3cb4-6bfd-c916">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select any friendly unit within 14” of this unit. Until the next time this unit is Activated or dies, enemy units within 14” of the selected unit gain Nurgle’s Fruit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Gift of Contagion" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="e894-0d5a-083d-c75b">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one enemy unit within 14” of this unit. Then, that unit and each enemy unit within 7” of that unit suffer X Suppression equal to the selected unit’s Suppression X.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Curse of the Leper" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="6a08-bd43-c199-35cb">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 14” of this unit. The selected unit suffers 3D6 Suppression.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Bubotic Vitality" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="bf41-f1d8-6eea-f888">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one friendly unit within 14” of this unit. Until the next time this unit is Activated or dies, the selected unit gains Resilient 5+ and you may reroll Resilient rolls made for this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6 Path of the Plaguebearers" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="129f-7968-3d0c-6958">
+          <characteristics>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one friendly unit within 14” of this unit. Until the next time this unit is Activated or dies, the selected unit’s M is improved by 3 and it may move through enemy units and terrain as if they were not there.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive (X)" id="8ed9-cf1a-2baa-0078" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Resilient (X)" id="b304-9670-943c-b044" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="7f88-9d0a-6c6c-3631" sortIndex="-4">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5095-6ce2-a721-9f31" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="bb7f-421c-f474-1756" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="e557-7441-9091-bac6" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="57c1-e6e1-413e-91cb" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="1 Sapping Lantern" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="7abc-0ab4-73fe-c47e">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After an enemy unit Activates within 14” of this unit, until the End step, that unit may only move up to 3”.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2 Tolling Bell" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="f8fe-0314-3589-cffd">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After an enemy unit Activates within 14” of this unit, that unit suffers 3D3 Suppression.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4 Putrid Pustules" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="bab7-714b-4fe4-0b84">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit gains Resilient 5+ and you may reroll Resilient rolls made for this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6 Cornucopia of Corruption" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="5664-e1ae-fac5-44ac">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Move step, all enemy units within 7” suffers 3D3 Suppression. Then, all enemy units within 7” of this unit and Suppressed X, that unit suffers SW equal to X+D3.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5 Sigil of Decay" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="2c28-da20-4303-09e5">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each attack made for this unit’s weapons with Plague or Putrid, and reroll a failed Wound Roll for that attack.
+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Plague Skull of Glothila" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="05b2-650f-a77f-1134">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Plague Skull of Glothila (Weapon)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c1cf-fe3d-c80b-4223">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 7, Putrid, Plague, Indirect</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive (X)" id="4098-dbe8-9e9a-4e6a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Putrid" id="247f-288a-97bc-9f04" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+        <infoLink name="Indirect" id="5a36-d20e-71b1-32f5" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="Plague" id="5d6e-9196-06a2-f588" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+        <infoLink name="Blast (X)" id="77a3-cc18-1795-31cb" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+        <infoLink name="Resilient (X)" id="367c-4e46-39c1-498b" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Lord of Contagion" hidden="false" id="04ad-593f-4f7f-cf5a" sortIndex="1">
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="fc57-692f-2684-f49b" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="a7db-f888-d361-907f" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="84e5-06a7-b448-44e7" primary="false" name="Chaos"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="3805-59d3-bf54-2123" primary="false" name="Rare"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="4286-2c55-df67-c442" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Lord of Contagion" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1ed3-fee3-3209-3183">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mantle of Contagion" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b582-6048-4ac0-c42a">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack that targets an enemy unit within 7”, add 1 to the Wound Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="7253-8437-9cf1-9aa1">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) DEATHSHROUD TERMINATORS
+b) BLIGHTLORD TERMINATORS</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="62b8-39a2-4cc5-7c33" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Heavy Armour" id="e208-9681-add1-2e88" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+        <infoLink name="Nurgle’s Gifts" id="0ceb-1459-b877-db3d" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapon" id="e172-9941-7dbd-accf" hidden="false" defaultSelectionEntryId="6785-6e7d-e9a6-7003">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b7a-f203-4b49-2a1f-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6b7a-f203-4b49-2a1f-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Man Reaper" hidden="false" id="6785-6e7d-e9a6-7003" type="selectionEntry" targetId="e5b9-68cd-70c1-e0ef">
+              <modifiers>
+                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Plaguereaper Power Axe" hidden="false" id="7d70-d283-3628-b6d6">
+              <profiles>
+                <profile name="Plaguereaper Power Axe" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3db7-a615-0007-9dcf">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, Putrid</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Pierce" id="e22c-767f-d5d0-d3f5" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                <infoLink name="Putrid" id="d23f-d1f0-2225-2e7e" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Lord of Virulence" hidden="false" id="c016-9c89-cd5a-5f50" sortIndex="2">
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="5361-9b6a-f881-37a6" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="e037-b67f-be19-5091" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="bee8-09f3-6b44-7003" primary="false" name="Chaos"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="a60b-0fb7-03e0-0895" primary="false" name="Rare"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="6344-f4f6-a4f1-6770" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Lord of Virulence" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="ae9d-db0c-38ca-bf0e">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mantle of Virulence" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="afb0-6994-168e-e568">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made by your heavy weapons which target an enemy unit within 14” of this unit, you may reroll a failed Hit Roll for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="939a-735a-97d8-fcea">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) DEATHSHROUD TERMINATORS
+b) BLIGHTLORD TERMINATORS</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="6593-fba5-9776-28b0" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Nurgle’s Gifts" id="dd5b-006f-b441-add1" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapon" id="69d3-b56f-a5de-6ec3" hidden="false" defaultSelectionEntryId="3c25-9ea0-b075-60f7">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f3d2-d9f9-c390-b07c-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f3d2-d9f9-c390-b07c-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Plague Spewer" hidden="false" id="3c25-9ea0-b075-60f7" type="selectionEntry" targetId="844f-38f1-c894-d8ab" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Plague Claw" hidden="false" id="28a0-3a76-a73c-e164" sortIndex="2">
+              <profiles>
+                <profile name="Plague Claw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="06d3-526b-7a15-6c2a">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid, Shred</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Shred" id="11b2-e1cb-7196-c49b" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                <infoLink name="Putrid" id="3f0a-c468-4cd3-875d" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Foul Blightspawn" hidden="false" id="9001-fb7e-d2c2-e169" sortIndex="3">
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="1b1b-9173-e388-9afc" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="5771-1896-a6f8-1731" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="36eb-ce28-e4c1-1ad9" primary="false" name="Chaos"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="2add-3e52-bcbf-7285" primary="false" name="Rare"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="01dc-afae-55f6-f702" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Foul Blightspawn" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="f767-32ee-9032-2276">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Plaguecrafter’s Opus" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="de77-1736-18c8-b860">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Once per battle, while selecting targets for this unit’s weapons, you may also select a target for the ‘Unholy Death’s Head Grenade’.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="0609-95eb-a9e5-2b38">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) SEPTIC PLAGUE MARINES
+b) INEXORABLE PLAGUE MARINES</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Plague Sprayer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9355-6962-c378-bee1">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">9</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid, Plague, Ignores Cover</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="3d3b-dc4b-f3c7-0ff9" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Nurgle’s Gifts" id="347b-de2a-af54-8453" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Putrid" id="169b-f65b-f063-a7d2" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+        <infoLink name="Ignore Cover" id="79c5-cc8f-3abb-2fa7" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Suppressive (X)" id="e7fa-35f0-3b4d-cce0" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Plague" id="e1e3-c886-c8e4-e355" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="40"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Unholy Death’s Head Grenade" hidden="false" id="f96a-1932-e82e-697f">
+          <profiles>
+            <profile name="Unholy Death’s Head Grenade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="1ed4-893c-8fed-4d5e">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 7, Putrid, Plague, Indirect</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Suppressive (X)" id="c7bc-99e2-d1b9-14fc" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+            <infoLink name="Blast (X)" id="3acf-ba08-9415-170b" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+            <infoLink name="Plague" id="73d4-46c5-9012-cc78" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+            <infoLink name="Indirect" id="ab90-0fb7-a496-e669" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+            <infoLink name="Putrid" id="df08-81ca-9c6e-70ce" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b34c-b6ba-1b96-4709-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b34c-b6ba-1b96-4709-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Blight Grenade" hidden="false" id="85df-7a65-bed8-1c11" type="selectionEntry" targetId="b2d1-1122-5503-1e0f"/>
+        <entryLink import="true" name="Plague Knife" hidden="false" id="455d-5ab1-5ec1-4904" type="selectionEntry" targetId="643f-017d-ea70-c997">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ab0-fa89-f996-81e1-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ab0-fa89-f996-81e1-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Plage Surgeon" hidden="false" id="0ece-b15f-a44b-e72c" sortIndex="4">
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="d2bb-3c73-a3a7-21e6" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="3cbd-f200-0024-3e4a" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="3506-a78d-6efc-7f60" primary="false" name="Chaos"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="430f-d1b9-b46b-2acd" primary="false" name="Rare"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a5a9-bf52-a353-ef9e" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Plage Surgeon" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1c70-e675-0aa1-499c">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Incubated Pathogens" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="bd7e-0d37-4007-d432">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">You may reroll Resilient rolls made for this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="d77d-9575-dd01-71b3">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) SEPTIC PLAGUE MARINES
+b) INEXORABLE PLAGUE MARINES</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Balesword" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="dad1-3787-db5d-5c01">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="f0aa-bde9-46fc-7a59" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Nurgle’s Gifts" id="6c0f-757b-d229-7c9e" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Putrid" id="28bb-be02-3b9c-0bca" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="40"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Plague Bolt Pistol" hidden="false" id="2027-095a-35ff-0b5b" type="selectionEntry" targetId="82e3-3b9d-abfd-0310">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9386-2905-7c51-eb30-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9386-2905-7c51-eb30-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Biologus Putrifier" hidden="false" id="cb27-0b07-cdd7-6ab8" sortIndex="5">
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="9b35-4343-dd8f-8ea8" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="52e6-ced0-f8b3-efbb" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="e93b-02f1-128a-8cda" primary="false" name="Chaos"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="4fd1-463d-39a4-9889" primary="false" name="Rare"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="9ecc-1123-b5ea-b15b" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Biologus Putrifier" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="c313-aefe-499f-15e3">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Virulent Blessings" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9862-06f6-3de2-22cd">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After each Wound Roll made for this unit&apos;s Injector Pistol which targeted a unit within engagement range of this unit, if that Wound Roll was successful, you may make attacks with this unit’s Hyper Blight Grenades.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="e658-f771-65e7-91eb">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) SEPTIC PLAGUE MARINES
+b) INEXORABLE PLAGUE MARINES</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Injector Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8bbb-9266-9661-7eb5">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="b819-76ae-3360-7635" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Nurgle’s Gifts" id="aefa-a9ef-793a-91ab" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Suppressive (X)" id="326f-d939-4158-6ba0" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Plague" id="0c59-7b73-6b49-7d02" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="40"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Hyper Blight Grenades" hidden="false" id="724b-3ae5-1be4-3154">
+          <profiles>
+            <profile name="Hyper Blight Grenades" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="91dc-78b2-e737-f230">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Blast 3, Putrid, Ignores Cover, Plague</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Suppressive (X)" id="2dbf-2bc2-7087-bd2e" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+            <infoLink name="Blast (X)" id="40fb-ee33-93b6-2215" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+            <infoLink name="Ignore Cover" id="5ed3-c5d2-c992-0427" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+            <infoLink name="Indirect" id="d172-84eb-9e3c-d802" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+            <infoLink name="Putrid" id="1ada-da1d-c2a0-e6a1" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+            <infoLink name="Plague" id="3967-21ec-c339-24cf" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="160f-fd6d-ea7e-8e6e-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="160f-fd6d-ea7e-8e6e-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Blight Grenade" hidden="false" id="7b3d-2ac1-9425-d1f3" type="selectionEntry" targetId="b2d1-1122-5503-1e0f"/>
+        <entryLink import="true" name="Plague Knife" hidden="false" id="2d05-92ac-6ec5-27a0" type="selectionEntry" targetId="643f-017d-ea70-c997">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b19e-8219-5aba-178b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b19e-8219-5aba-178b-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Malignant Plaguecaster" hidden="false" id="4888-3fdc-85d8-46af" sortIndex="6">
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="84b8-27be-2b34-ed26" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="59ef-d431-8da5-389b" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="97b6-85e8-7bb9-dd91" primary="false" name="Chaos"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="1ef8-f178-0fcd-1898" primary="false" name="Rare"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="4936-fa3f-47de-3180" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Malignant Plaguecaster" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="aa16-3719-b8a9-f3d0">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Plague Wind" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="8ac2-5497-1042-2b32">
+          <characteristics>
+            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, this unit’s M is improved by 3” until the End step.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="dacb-115e-4108-8dfd">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) SEPTIC PLAGUE MARINES
+b) INEXORABLE PLAGUE MARINES</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Corrupted Staff" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a14a-29ff-7073-f950">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest result of this unit’s last Psychic Test.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="84c0-c0d2-0536-0ac7" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (2)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Nurgle’s Gifts" id="c704-079e-c902-3fed" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Blast (X)" id="6e4f-fcf4-b652-96a8" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+        <infoLink name="Resilient (X)" id="6548-0d81-1b3b-6cef" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="20"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Plague Bolt Pistol" hidden="false" id="22e7-5354-7f44-29df" type="selectionEntry" targetId="82e3-3b9d-abfd-0310">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="31e2-9b91-1a45-1cf8-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="31e2-9b91-1a45-1cf8-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Noxious Blightbringer" hidden="false" id="40d6-04c6-b1e3-f0fb" sortIndex="7">
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="f623-926d-bf5a-a9ac" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="14a0-c68d-dd9d-0328" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="005e-ec79-1b31-2917" primary="false" name="Chaos"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="f076-0afd-9928-b8c5" primary="false" name="Rare"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="1829-cb3d-8b87-9abf" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Noxious Blightbringer" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="7809-4b00-eba3-39c7">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="a303-f061-927a-bfba">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) SEPTIC PLAGUE MARINES
+b) INEXORABLE PLAGUE MARINES</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Cursed Bell" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2649-816f-4e8b-074c">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid, Indirect, This weapon may target enemy units up to 14” away if that unit has Suppressed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Instil Vitality" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c820-e951-70ed-0b2c">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">You may reroll Advance Rolls made for this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Dolorous Peal" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4a4e-a460-c16d-07a4">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March, each enemy infantry unit within 14” suffers 7 Suppression.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Nurgle’s Gifts" id="a7d8-1b2b-1b35-08e8" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Suppressive (X)" id="dca7-1c9a-216c-9915" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Resilient (X)" id="47a0-f6ca-8931-715a" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Indirect" id="6726-1bc2-a598-2add" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="Putrid" id="59cd-82b0-dd14-cec4" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="70"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Plasma Pistol" hidden="false" id="a723-05a3-d0fe-215e" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9bd1-c5d1-42ef-633b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9bd1-c5d1-42ef-633b-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Tallyman" hidden="false" id="141c-f88a-ddf6-de38" sortIndex="8">
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="31db-0fcc-9b26-1094" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="8ae6-b6c1-87eb-70db" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="bbce-530b-ca89-a852" primary="false" name="Chaos"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="198f-5c7b-803c-d5a6" primary="false" name="Rare"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="bc07-2515-05c3-698e" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Tallyman" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="7dac-f8c2-056b-f08f">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="1279-4ded-a65d-1ad5">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) SEPTIC PLAGUE MARINES
+b) INEXORABLE PLAGUE MARINES</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Poisoned Quill " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4b7d-3fc7-cd02-2ec6">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Sevenfold Chant" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9efe-d19e-a2cf-45c2">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attacks step, select a friendly unit within 7” of this unit. The selected unit Heals X where X is equal to the number of enemy units with Suppressed in the battlefield.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Nurgle’s Gifts" id="ec88-ea6a-f92e-e377" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Suppressive (X)" id="4cd2-1a59-fb07-ea28" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Resilient (X)" id="2bf1-14d0-64d4-c80c" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Putrid" id="93a0-4e51-c634-5ed9" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="40"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Plasma Pistol" hidden="false" id="197e-0cd2-6858-a146" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9010-146b-74f3-8147-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9010-146b-74f3-8147-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Septic Plague Marines" hidden="false" id="96c4-bdaf-8d0a-795a" sortIndex="9">
+      <costs>
+        <cost name="pts" typeId="points" value="90"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="d7c1-6e56-e996-b89f" primary="false" name="Infantry"/>
+        <categoryLink targetId="b69b-5b51-faf1-2c40" id="30f3-1825-7d80-300c" primary="true" name="Troops"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="a6d2-c9ec-333c-1147" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="4a83-5dda-4403-cd80" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Plaguebringers" id="dc0d-c933-b1b5-35b4" hidden="false" type="profile" targetId="1678-14a0-a939-cba2"/>
+        <infoLink name="Suppressive (X)" id="52cb-bc09-9b41-898d" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Nurgle’s Gifts" id="849a-8c11-3b28-4e83" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Septic Plague Marines" id="0803-422c-01b2-de63" hidden="false">
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="5f9a-550a-5628-c44b-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="5f9a-550a-5628-c44b-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Septic Plague Marine" hidden="false" id="7023-ac1f-237a-277f">
+              <profiles>
+                <profile name="Septic Plague Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b3ec-3c44-bfd2-e704">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon" id="cfae-5720-54ad-422d" hidden="false">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3522-47ee-19ee-1341-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3522-47ee-19ee-1341-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Duel Plague Knives" hidden="false" id="822c-d390-b9e9-1115" type="selectionEntry" targetId="643f-017d-ea70-c997" sortIndex="3"/>
+                    <entryLink import="true" name="Bubotic Weapon" hidden="false" id="e45e-7d66-aaf9-dc3e" type="selectionEntry" targetId="e541-6c55-f01a-f69f" sortIndex="4"/>
+                    <entryLink import="true" name="Duel Bubotic Weapons" hidden="false" id="032c-a075-88ce-ecee" type="selectionEntry" targetId="e376-f651-4b32-2dac" sortIndex="5">
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="f4d2-ad9b-f8ec-3e0b" includeChildSelections="true"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Plague Boltgun &amp; Plague Knife" hidden="false" id="5bf5-c7ff-a5eb-ba47" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Plague Boltgun" hidden="false" id="f1b8-c3c6-8537-6424" type="selectionEntry" targetId="b8b3-8c8e-ab57-5b9b" sortIndex="1">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="423c-b9c5-65a9-9658-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="423c-b9c5-65a9-9658-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Plague Knife" hidden="false" id="1488-e277-0aa5-6e99" type="selectionEntry" targetId="ab58-025c-5f63-7db2" sortIndex="2">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="069f-e4e9-1d04-86b1-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="069f-e4e9-1d04-86b1-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Plague Bolt Pistol &amp; Plague Knife" hidden="false" id="ee84-0c64-768b-aa98" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Plague Bolt Pistol" hidden="false" id="5cfd-19eb-8a37-de02" type="selectionEntry" targetId="82e3-3b9d-abfd-0310" sortIndex="1">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ecb8-a40f-5102-0a95-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ecb8-a40f-5102-0a95-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Plague Knife" hidden="false" id="bddc-a9ef-5447-5797" type="selectionEntry" targetId="ab58-025c-5f63-7db2" sortIndex="2">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="39dd-cf42-3dbf-4872-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39dd-cf42-3dbf-4872-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Special Weapon" hidden="false" id="2eab-50d9-c109-e670" sortIndex="6">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="56ae-38e5-37cb-63ab" includeChildSelections="true"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Weapon" id="715d-2319-37a7-ef76" hidden="false">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="365c-3932-4d2d-d4d4-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="365c-3932-4d2d-d4d4-max" includeChildSelections="false"/>
+                          </constraints>
+                          <entryLinks>
+                            <entryLink import="true" name="Blight Launcher" hidden="false" id="641c-df83-85fb-e2ec" type="selectionEntry" targetId="b0b7-68db-5952-a972" sortIndex="1"/>
+                            <entryLink import="true" name="Plague Spewer" hidden="false" id="8759-6709-be0a-67ce" type="selectionEntry" targetId="844f-38f1-c894-d8ab" sortIndex="2"/>
+                            <entryLink import="true" name="Flail of Corruption" hidden="false" id="67e8-27b0-3355-8c5f" type="selectionEntry" targetId="cf45-e281-1709-6e78" sortIndex="3"/>
+                            <entryLink import="true" name="Great Plague Cleaver" hidden="false" id="1747-daa3-17cf-1096" type="selectionEntry" targetId="b04f-81c2-cd03-0d71" sortIndex="4"/>
+                            <entryLink import="true" name="Meltagun" hidden="false" id="6fb7-ae1d-4744-f2ac" type="selectionEntry" targetId="4260-66c2-4887-4117" sortIndex="5">
+                              <modifiers>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                            <entryLink import="true" name="Plasma Gun" hidden="false" id="4efe-e955-8fdf-f6e6" type="selectionEntry" targetId="af5b-b208-be5c-ba5b" sortIndex="6">
+                              <modifiers>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                            <entryLink import="true" name="Plague Belcher" hidden="false" id="19b0-9326-4cec-0ac0" type="selectionEntry" targetId="433b-6edc-670e-75fa" sortIndex="7"/>
+                          </entryLinks>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <entryLinks>
+                <entryLink import="true" name="Icon of Despair" hidden="false" id="443f-2210-06b6-26a7" type="selectionEntry" targetId="17c4-18d0-db8d-251c"/>
+                <entryLink import="true" name="Blight Grenade" hidden="false" id="7689-d8e8-dab7-e5b4" type="selectionEntry" targetId="b2d1-1122-5503-1e0f">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="6eb0-f0d9-39de-9da6" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Inexorable Plague Marines" hidden="false" id="7998-9cb5-e96a-07a3" sortIndex="10">
+      <costs>
+        <cost name="pts" typeId="points" value="140"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="0253-1126-0e3a-4938" primary="false" name="Infantry"/>
+        <categoryLink targetId="b69b-5b51-faf1-2c40" id="d6ac-10de-5bce-42fe" primary="true" name="Troops"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="0308-51f3-c4b7-bc47" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="b116-0670-2a30-fbbc" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Plaguebringers" id="204a-98f2-eff4-fc82" hidden="false" type="profile" targetId="1678-14a0-a939-cba2"/>
+        <infoLink name="Suppressive (X)" id="d186-0c1b-eb30-55fc" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Nurgle’s Gifts" id="5403-69eb-53b3-5e49" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Inexorable Plague Marines" id="206b-9bce-daab-f88c" hidden="false">
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="11bc-4455-7dc4-0ce9-min" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="11bc-4455-7dc4-0ce9-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Inexorable Plague Marine" hidden="false" id="c396-c4c7-0583-c96b">
+              <profiles>
+                <profile name="Inexorable Plague Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="e116-b210-1782-438c">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon" id="57be-6f53-fe1f-9ce4" hidden="false">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8e52-7c81-92a3-f080-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e52-7c81-92a3-f080-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Duel Plague Knives" hidden="false" id="d048-f16d-9071-7686" type="selectionEntry" targetId="643f-017d-ea70-c997" sortIndex="3"/>
+                    <entryLink import="true" name="Bubotic Weapon" hidden="false" id="442a-130c-0dcc-8c06" type="selectionEntry" targetId="e541-6c55-f01a-f69f" sortIndex="4"/>
+                    <entryLink import="true" name="Duel Bubotic Weapons" hidden="false" id="a200-a848-aa27-8e7d" type="selectionEntry" targetId="e376-f651-4b32-2dac" sortIndex="5">
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="e100-45b5-627e-59be" includeChildSelections="true"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Plague Boltgun &amp; Plague Knife" hidden="false" id="a8d0-f92a-6bea-187a" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Plague Boltgun" hidden="false" id="3fd5-f493-33f3-d56c" type="selectionEntry" targetId="b8b3-8c8e-ab57-5b9b" sortIndex="1">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b902-7613-e03e-4793-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b902-7613-e03e-4793-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Plague Knife" hidden="false" id="a0b9-8532-42f6-f66a" type="selectionEntry" targetId="ab58-025c-5f63-7db2" sortIndex="2">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f0a2-4124-687a-d837-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0a2-4124-687a-d837-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Plague Bolt Pistol &amp; Plague Knife" hidden="false" id="e738-5653-a695-d595" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Plague Bolt Pistol" hidden="false" id="73a3-6517-d706-b5ed" type="selectionEntry" targetId="82e3-3b9d-abfd-0310" sortIndex="1">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db2e-548a-8535-62e9-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db2e-548a-8535-62e9-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Plague Knife" hidden="false" id="228d-11ef-f69f-25f8" type="selectionEntry" targetId="ab58-025c-5f63-7db2" sortIndex="2">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="135f-73d3-564a-f723-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="135f-73d3-564a-f723-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Special Weapon" hidden="false" id="1656-b639-6184-6e43" sortIndex="6">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="0cb6-bcc9-df99-5c61" includeChildSelections="true"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Weapon" id="d1a3-98d7-7c68-f027" hidden="false">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7ffd-d112-3f6d-33bd-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ffd-d112-3f6d-33bd-max" includeChildSelections="false"/>
+                          </constraints>
+                          <entryLinks>
+                            <entryLink import="true" name="Blight Launcher" hidden="false" id="e4d1-7cb8-bb3a-d0f6" type="selectionEntry" targetId="b0b7-68db-5952-a972" sortIndex="1"/>
+                            <entryLink import="true" name="Plague Spewer" hidden="false" id="dcd0-93f8-7ad5-02a8" type="selectionEntry" targetId="844f-38f1-c894-d8ab" sortIndex="2"/>
+                            <entryLink import="true" name="Flail of Corruption" hidden="false" id="b153-829e-04af-3e04" type="selectionEntry" targetId="cf45-e281-1709-6e78" sortIndex="3"/>
+                            <entryLink import="true" name="Great Plague Cleaver" hidden="false" id="43b5-9e74-edf3-51d9" type="selectionEntry" targetId="b04f-81c2-cd03-0d71" sortIndex="4"/>
+                            <entryLink import="true" name="Meltagun" hidden="false" id="3f81-4ba1-4052-dfb6" type="selectionEntry" targetId="4260-66c2-4887-4117" sortIndex="5">
+                              <modifiers>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                            <entryLink import="true" name="Plasma Gun" hidden="false" id="3412-7beb-f9e9-0439" type="selectionEntry" targetId="af5b-b208-be5c-ba5b" sortIndex="6">
+                              <modifiers>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                            <entryLink import="true" name="Plague Belcher" hidden="false" id="31ab-a1fc-fb03-b58d" type="selectionEntry" targetId="433b-6edc-670e-75fa" sortIndex="7"/>
+                          </entryLinks>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Champion" hidden="false" id="3c3f-a9e3-9daf-b3d8" sortIndex="7">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="9718-51eb-6ca4-9b5b" includeChildSelections="true"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Melee" id="d617-9c8c-5a2a-e832" hidden="false" defaultSelectionEntryId="b9c3-5d4f-3ffd-aac4">
+                          <entryLinks>
+                            <entryLink import="true" name="Power Fist" hidden="false" id="cfdd-0ddf-6a71-b130" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="3">
+                              <modifiers>
+                                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="df41-2bb3-7bd5-c543-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="df41-2bb3-7bd5-c543-max" includeChildSelections="false"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Champion Bubotic Weapon" hidden="false" id="b9c3-5d4f-3ffd-aac4" sortIndex="1">
+                              <profiles>
+                                <profile name="Champion Bubotic Weapon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="44b1-bbc7-9036-c4f1">
+                                  <characteristics>
+                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <infoLinks>
+                                <infoLink name="Putrid" id="d5a0-a859-60a5-3b0b" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+                              </infoLinks>
+                            </selectionEntry>
+                            <selectionEntry type="upgrade" import="true" name="Plague Daemon Sword" hidden="false" id="7a21-331f-aa5a-aa92" sortIndex="2">
+                              <profiles>
+                                <profile name="Plague Daemon Sword" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="fee6-8ad7-c53c-d00a">
+                                  <characteristics>
+                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                    <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <infoLinks>
+                                <infoLink name="Putrid" id="134f-b129-5818-f3af" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+                              </infoLinks>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <entryLinks>
+                        <entryLink import="true" name="Plasma Pistol" hidden="false" id="6d00-0d82-6c67-4166" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
+                          <modifiers>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1147-80ce-f08f-3d71-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1147-80ce-f08f-3d71-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <entryLinks>
+                <entryLink import="true" name="Icon of Despair" hidden="false" id="cdcb-07c2-44ac-4fb4" type="selectionEntry" targetId="17c4-18d0-db8d-251c"/>
+                <entryLink import="true" name="Blight Grenade" hidden="false" id="4d5e-6959-b2b4-7f16" type="selectionEntry" targetId="b2d1-1122-5503-1e0f">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="dd32-d1df-9b38-b0ac" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Poxwalkers" hidden="false" id="a791-8502-e630-9b3a" sortIndex="11">
+      <costs>
+        <cost name="pts" typeId="points" value="60"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="8f63-406f-9b2d-b26d" primary="false" name="Infantry"/>
+        <categoryLink targetId="b69b-5b51-faf1-2c40" id="7355-93b7-2fc1-7d80" primary="true" name="Troops"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="39e9-16c0-6e90-b9a8" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="f2bc-9023-2d7b-69c5" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (4+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Forward Deploy" id="6bce-e604-ff06-bb14" hidden="false" type="rule" targetId="b433-60cc-2ed2-658f"/>
+        <infoLink name="Nurgle’s Gifts" id="2f1f-8145-fcdd-de7b" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Putrid" id="fba4-4927-7bca-3f6c" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+        <infoLink name="Suppressive (X)" id="7dd4-d89a-cc5b-25be" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Poxwalkers" id="a3e4-c21b-375d-5258" hidden="false">
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="92f4-5480-0641-eb4a-min" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="92f4-5480-0641-eb4a-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Poxwalker" hidden="false" id="4f2b-d4eb-cfa2-bd8a">
+              <profiles>
+                <profile name="Poxwalker" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5df9-69d8-b1c1-f03d">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">7+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">7+</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Horrific Limbs" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="1501-746c-9f6d-31e0">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <profiles>
+        <profile name="Shambling Horde" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5e32-5d4f-7aa8-6d48">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">If this unit has no leader model, after this unit&apos;s End step, if this turn was not your second turn in a row, take another turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Curse of the Walking Pox" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="7722-eada-6368-281a">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy unit dies within 7” of this unit with Suppression X, this unit Heals X. If this unit Heals this way and is already its starting Health, instead add 1 POXWALKERS model to this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Wailing Despair" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3881-040b-1560-64df">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March, each enemy unit within 7” suffers X Suppression where X is equal to the number of models in this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Plague Marine Infestors" hidden="false" id="e157-ac50-d2c6-a1e3" sortIndex="12">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="4220-1c56-928e-334e" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="64cd-f3d5-edf2-ef6d" primary="false" name="Chaos"/>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="2bba-42e8-0015-28c8" primary="true" name="Elites"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="9737-a9bd-5c20-ba5c" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Plaguebringers" id="9d5f-7b6b-f81e-2d82" hidden="false" type="profile" targetId="1678-14a0-a939-cba2"/>
+        <infoLink name="Forward Deploy" id="6d03-13f4-23c1-e83b" hidden="false" type="rule" targetId="b433-60cc-2ed2-658f"/>
+        <infoLink name="Nurgle’s Gifts" id="d7e2-df1e-5e76-02f5" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Suppressive (X)" id="a658-19a1-3659-29a9" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Plague Marine Infestors" id="cc6d-6b06-14bc-aeca" hidden="false">
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="a486-8fa5-33d7-80ab-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="a486-8fa5-33d7-80ab-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Plague Marine Infestors" hidden="false" id="3d13-fc33-0b93-04bf">
+              <profiles>
+                <profile name="Plague Marine Infestors" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="4531-fda2-558c-7042">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon" id="1dd9-8f4a-31bc-9283" hidden="false">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="050d-e314-0fdd-f837-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="050d-e314-0fdd-f837-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Duel Plague Knives" hidden="false" id="ec3b-ea7a-9409-3721" type="selectionEntry" targetId="643f-017d-ea70-c997" sortIndex="3"/>
+                    <entryLink import="true" name="Bubotic Weapon" hidden="false" id="bd23-fad7-08e3-1ca5" type="selectionEntry" targetId="e541-6c55-f01a-f69f" sortIndex="4"/>
+                    <entryLink import="true" name="Duel Bubotic Weapons" hidden="false" id="416d-17ed-4784-b810" type="selectionEntry" targetId="e376-f651-4b32-2dac" sortIndex="5">
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="112b-930c-abdd-15a6" includeChildSelections="true"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Plague Boltgun &amp; Plague Knife" hidden="false" id="4049-bc9b-ec67-f2a8" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Plague Boltgun" hidden="false" id="c9c4-5e5f-984c-a7e7" type="selectionEntry" targetId="b8b3-8c8e-ab57-5b9b" sortIndex="1">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1686-9115-ea67-771f-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1686-9115-ea67-771f-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Plague Knife" hidden="false" id="7b57-2ede-8603-db36" type="selectionEntry" targetId="ab58-025c-5f63-7db2" sortIndex="2">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c480-be4f-5150-01d4-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c480-be4f-5150-01d4-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Plague Bolt Pistol &amp; Plague Knife" hidden="false" id="100e-0d9b-4b4d-64ec" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Plague Bolt Pistol" hidden="false" id="2a64-a551-c8d7-c72e" type="selectionEntry" targetId="82e3-3b9d-abfd-0310" sortIndex="1">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="51b8-955b-756f-a4e4-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="51b8-955b-756f-a4e4-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Plague Knife" hidden="false" id="d5f0-79ab-c056-c4a7" type="selectionEntry" targetId="ab58-025c-5f63-7db2" sortIndex="2">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="26d1-5a97-2b80-4258-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26d1-5a97-2b80-4258-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Special Weapon" hidden="false" id="b501-11f7-0678-045c" sortIndex="6">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="92e5-85ea-e77d-4dac" includeChildSelections="true"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Weapon" id="a438-23c2-9c82-a382" hidden="false">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="923e-a099-1826-fdeb-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="923e-a099-1826-fdeb-max" includeChildSelections="false"/>
+                          </constraints>
+                          <entryLinks>
+                            <entryLink import="true" name="Blight Launcher" hidden="false" id="f0a5-1581-e490-e115" type="selectionEntry" targetId="b0b7-68db-5952-a972" sortIndex="1"/>
+                            <entryLink import="true" name="Plague Spewer" hidden="false" id="8942-bffd-b167-3db3" type="selectionEntry" targetId="844f-38f1-c894-d8ab" sortIndex="2"/>
+                            <entryLink import="true" name="Flail of Corruption" hidden="false" id="75cb-264f-635e-71f5" type="selectionEntry" targetId="cf45-e281-1709-6e78" sortIndex="3"/>
+                            <entryLink import="true" name="Great Plague Cleaver" hidden="false" id="e22f-8602-22de-c82f" type="selectionEntry" targetId="b04f-81c2-cd03-0d71" sortIndex="4"/>
+                            <entryLink import="true" name="Meltagun" hidden="false" id="3317-04c3-2fe3-4c12" type="selectionEntry" targetId="4260-66c2-4887-4117" sortIndex="5">
+                              <modifiers>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                            <entryLink import="true" name="Plasma Gun" hidden="false" id="04fb-1b0e-ee26-0740" type="selectionEntry" targetId="af5b-b208-be5c-ba5b" sortIndex="6">
+                              <modifiers>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                            <entryLink import="true" name="Plague Belcher" hidden="false" id="7a87-2e09-73c3-0975" type="selectionEntry" targetId="433b-6edc-670e-75fa" sortIndex="7"/>
+                          </entryLinks>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <entryLinks>
+                <entryLink import="true" name="Icon of Despair" hidden="false" id="a25c-5eb6-32e1-c419" type="selectionEntry" targetId="17c4-18d0-db8d-251c"/>
+                <entryLink import="true" name="Blight Grenade" hidden="false" id="0d41-3568-33fc-b908" type="selectionEntry" targetId="b2d1-1122-5503-1e0f">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="7222-8d7e-ed3a-cc70" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Blightlord Terminators" hidden="false" id="ceee-93d0-0fc9-c321" sortIndex="13">
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="6f42-00f3-4307-4703" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="8db7-c83f-02e1-0705" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="d6f5-364c-8988-3821" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Unstoppable" id="35ee-43cd-fedf-1746" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Resilient (X)" id="9bb0-793a-33f3-758e" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Teleport Homer" id="c86b-c767-1037-28f1" hidden="false" type="profile" targetId="77ce-0080-b298-0daa"/>
+        <infoLink name="Nurgle’s Gifts" id="5c5e-2a28-f82e-c200" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Suppressive (X)" id="2f2d-9c31-7f96-88f0" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Heavy Armour" id="d4b7-e763-c545-d1b4" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Blightlord Terminators" id="9f77-8a86-525b-7507" hidden="false">
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="00bc-5e7d-4e24-4347-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="00bc-5e7d-4e24-4347-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Blightlord Terminator" hidden="false" id="ba90-03c9-1d72-e751">
+              <profiles>
+                <profile name="Blightlord Terminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="7a0e-2c2f-0946-92d3">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon" id="2d63-9544-53dc-fb00" hidden="false" defaultSelectionEntryId="4a42-1bc1-88fe-0833">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Plague Combi-Bolter" hidden="false" id="4a42-1bc1-88fe-0833" sortIndex="1">
+                      <profiles>
+                        <profile name="Plague Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4178-8745-4b2b-c598">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Plague" id="7506-8546-37eb-f03d" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ccd5-bc5b-8442-49e4-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ccd5-bc5b-8442-49e4-max" includeChildSelections="false"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Combi Option" id="dae7-9ca5-c646-0320" hidden="false" defaultSelectionEntryId="7edc-e6c3-8204-e40c">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="93ae-454a-aadf-a63a-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="93ae-454a-aadf-a63a-max" includeChildSelections="false"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Plague Combi-Bolter" hidden="false" id="7edc-e6c3-8204-e40c" sortIndex="1">
+                              <profiles>
+                                <profile name="Plague Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="72b9-6a81-1400-b57d">
+                                  <characteristics>
+                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <infoLinks>
+                                <infoLink name="Plague" id="9462-805e-4c12-f246" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+                              </infoLinks>
+                            </selectionEntry>
+                          </selectionEntries>
+                          <entryLinks>
+                            <entryLink import="true" name="Combi-Melta" hidden="false" id="8d60-9faa-1516-f5fb" type="selectionEntry" targetId="f770-b114-9df6-969c" sortIndex="2">
+                              <modifiers>
+                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                            <entryLink import="true" name="Combi-Flamer" hidden="false" id="5063-97d3-f908-5bb9" type="selectionEntry" targetId="725d-6955-5aee-023b" sortIndex="3">
+                              <modifiers>
+                                <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                            <entryLink import="true" name="Combi-Plasma" hidden="false" id="a185-21da-9798-4c70" type="selectionEntry" targetId="6a92-d812-47fc-a089" sortIndex="4">
+                              <modifiers>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Special Weapon" hidden="false" id="4095-259b-f1ae-31e6" sortIndex="2">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="d45b-2f05-98b8-83ab" includeChildSelections="true"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Weapon" id="e275-1124-0583-ee07" hidden="false">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="452a-cdbd-73d5-bf1c-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="452a-cdbd-73d5-bf1c-max" includeChildSelections="false"/>
+                          </constraints>
+                          <entryLinks>
+                            <entryLink import="true" name="Blight Launcher" hidden="false" id="8a63-b320-1615-ff98" type="selectionEntry" targetId="b0b7-68db-5952-a972" sortIndex="2">
+                              <modifiers>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                            <entryLink import="true" name="Plague Spewer" hidden="false" id="c31b-2973-e428-52b6" type="selectionEntry" targetId="844f-38f1-c894-d8ab" sortIndex="3">
+                              <modifiers>
+                                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                          </entryLinks>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Reaper Autocannon" hidden="false" id="20f3-7e0d-ae0a-257f" sortIndex="1">
+                              <profiles>
+                                <profile name="Reaper Autocannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0b9a-d9fe-d5e0-2488">
+                                  <characteristics>
+                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 1</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <infoLinks>
+                                <infoLink name="Suppressive (X)" id="f559-4e2a-d9f0-db8c" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+                              </infoLinks>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <entryLinks>
+                    <entryLink import="true" name="Flail of Corruption" hidden="false" id="2e06-dad8-6bdc-583f" type="selectionEntry" targetId="cf45-e281-1709-6e78" sortIndex="3">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="90a6-99e5-6d3d-814e" includeChildSelections="true"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ff12-f459-6166-d900-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff12-f459-6166-d900-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <entryLinks>
+                <entryLink import="true" name="Bubotic Weapon" hidden="false" id="4848-ae8e-be87-48a0" type="selectionEntry" targetId="e541-6c55-f01a-f69f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a195-cd3f-5865-392f-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a195-cd3f-5865-392f-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="150"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Deathshroud Terminators" hidden="false" id="93d3-98b4-c9b5-b54c" sortIndex="14">
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="a93b-9398-942e-2dbc" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="8973-1b22-e63c-89f8" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="977c-eaec-7ccd-0261" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Ignore Cover" id="0b0f-3deb-a75f-c09b" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Resilient (X)" id="9baf-2fe7-fe25-3480" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Teleport Homer" id="7419-7da6-5e3b-b2ce" hidden="false" type="profile" targetId="77ce-0080-b298-0daa"/>
+        <infoLink name="Nurgle’s Gifts" id="3755-1eaf-1321-1e1f" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Suppressive (X)" id="3571-1c03-57f6-28c6" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Heavy Armour" id="3adf-4a2e-ebc6-7210" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+        <infoLink name="Unstoppable" id="7ae5-94fa-f822-7e12" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Plague" id="a8e3-5000-2809-a97d" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Deathshroud Terminators" id="822c-ca47-8444-8f89" hidden="false">
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="84e6-8d5f-f320-d8f5-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="84e6-8d5f-f320-d8f5-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Deathshroud Terminator" hidden="false" id="ab9e-d7b8-3f4b-1d4c">
+              <profiles>
+                <profile name="Deathshroud Terminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="dec4-dc4a-bc50-edd3">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Plaguespurt Gauntlet" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8b3b-17ec-a3d5-e12e">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague, Ignores Cover</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Man Reaper" hidden="false" id="7ee9-c513-0d4e-b925" type="selectionEntry" targetId="e5b9-68cd-70c1-e0ef">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="43fe-861b-4ff6-1420-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43fe-861b-4ff6-1420-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="150"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Myphitic Blight-Hauler" hidden="false" id="feb7-8487-a46e-1089" sortIndex="15">
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="6b9e-fbc7-e625-f7d4" primary="true" name="Support"/>
+        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="3e4e-4fe7-62cd-775b" primary="false" name="Vehicle"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="8c8e-777a-121b-d527" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Myphitic Blight-Hauler" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="2f4c-13c1-b9cf-e736">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Corpse-Cloud Emission" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="80eb-af52-d3d3-1700">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack that targets another friendly infantry unit within 7&quot; of this unit, that unit is in cover for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Missile Launcher (Krak)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9c89-1181-dada-517a">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Strike (krak)</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Gnashing Maw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="39de-3964-9d01-7e8e">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Missile Launcher (Frag)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9b2d-3b6c-8e43-fbaf">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep (frag), Blast 7</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Putrid" id="530a-b4c2-d6ed-5008" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+        <infoLink name="Resilient (X)" id="3c63-1328-be96-3a12" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Nurgle’s Gifts" id="dc98-8dab-054b-7f80" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Suppressive (X)" id="fe13-9041-1102-dbff" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Multi-Melta" hidden="false" id="b64a-2420-e440-cf67" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Foetid Bloat-Drone" hidden="false" id="c5c5-ffcf-fa8c-72a9" sortIndex="16">
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="96b3-4574-37bd-a567" primary="true" name="Support"/>
+        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="b411-a07b-b97e-4351" primary="false" name="Vehicle"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="8b57-6cf9-dcec-ffd8" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Foetid Bloat-Drone" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="dcf1-190b-d005-e803">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Foul Temperament" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f197-61c2-4d2b-a215">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, each enemy unit within 7” of this unit suffers D3+1 Suppression.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="7a10-7adf-7778-ef11" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Nurgle’s Gifts" id="4bf9-58f1-f277-d7c5" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Fly" id="4e36-61cd-87ba-4d1b" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Suppressive (X)" id="11af-fc2b-953f-713a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapon" id="fe89-deb2-80b9-9789" hidden="false" defaultSelectionEntryId="1d25-bdad-74c9-672d">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9163-2810-fc69-bb45-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9163-2810-fc69-bb45-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fleshmower" hidden="false" id="1d25-bdad-74c9-672d" sortIndex="1">
+              <profiles>
+                <profile name="Fleshmower" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e5f8-b28e-2937-fe5e">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid, Shred</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Putrid" id="d49a-dfb2-e3fb-074b" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+                <infoLink name="Shred" id="5c4c-e750-cec7-e0c1" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Plaguespitters" hidden="false" id="ffeb-09f8-60ed-4c6d" sortIndex="2">
+              <profiles>
+                <profile name="Plaguespitters" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8635-11c3-a097-2a72">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 3, Plague, Ignore Cover</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Blast (X)" id="fa40-8c1d-cdbb-5151" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+                <infoLink name="Plague" id="5551-1818-97e7-d60a" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+                <infoLink name="Suppressive (X)" id="d655-88b1-a4a1-fbc2" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+                <infoLink name="Ignore Cover" id="a939-c1d2-05c9-e4a9" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Blight Launcher" hidden="false" id="8b87-b29c-0f35-4f9d" sortIndex="3">
+              <profiles>
+                <profile name="Heavy Blight Launcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8355-efec-a557-e96f">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Plague" id="9af9-1cab-fa3c-634a" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Plagueburst Crawler" hidden="false" id="b7f7-6550-8cf5-c0f8" sortIndex="17">
+      <costs>
+        <cost name="pts" typeId="points" value="210"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="3392-a7e8-5cc4-9544" primary="true" name="Support"/>
+        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="9aa4-5db8-42e4-e085" primary="false" name="Vehicle"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="a664-6f08-f70d-2434" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Plagueburst Crawler" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3c84-1ea6-cd40-5890">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f1b6-ea3b-d634-94d9">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Plagueburst Mortar, if you have no ready units except units with Artillery Support, you may instead target an enemy unit within 16&quot; of and visible to any of your infantry units within 16&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="ddd3-6f80-1747-79fc" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Nurgle’s Gifts" id="cfb9-2cd6-a687-4c8f" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Suppressive (X)" id="8305-dc1c-0342-17ab" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Secondary Weapons" id="50f4-1ac5-3144-0517" hidden="false" defaultSelectionEntryId="f888-4e90-b9fd-413b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bca7-1e58-4698-c971-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bca7-1e58-4698-c971-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Entropy Cannons" hidden="false" id="f888-4e90-b9fd-413b" sortIndex="1">
+              <profiles>
+                <profile name="Entropy Cannons" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="87ea-acaf-ed6e-6c62">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Putrid" id="d906-1809-3351-b916" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Plaguespitters" hidden="false" id="15d7-8e46-a21d-2f43" sortIndex="2">
+              <profiles>
+                <profile name="Plaguespitters" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f9ab-0186-378a-fadd">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 3, Plague, Ignore Cover</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Blast (X)" id="1539-d0f6-29df-db5c" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+                <infoLink name="Plague" id="f845-cc14-a734-4144" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+                <infoLink name="Suppressive (X)" id="7e89-8c84-45f1-52fd" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+                <infoLink name="Ignore Cover" id="269e-0d34-4914-79db" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Tertiary Weapon" id="1f2e-eb37-76c7-0689" hidden="false" defaultSelectionEntryId="abda-05a5-7fc3-5e83">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4c98-0b47-74dd-012b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c98-0b47-74dd-012b-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Heavy Slugger" hidden="false" id="5734-c64b-35b1-6811" sortIndex="1">
+              <profiles>
+                <profile name="Heavy Slugger" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3a73-a287-c7c4-ff94">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Plague" id="00a1-56ab-4fb0-c743" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+                <infoLink name="Suppressive (X)" id="f4d6-55c0-3d37-6b10" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Rothail Volley Gun" hidden="false" id="abda-05a5-7fc3-5e83" sortIndex="2">
+              <profiles>
+                <profile name="Rothail Volley Gun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ee32-5e48-6fe4-fa33">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Plague" id="0c98-d413-dc58-2593" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+                <infoLink name="Suppressive (X)" id="7bc3-f555-00f8-19ff" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Plagueburst Mortar" hidden="false" id="cf9c-c9f3-0e1d-ed29">
+          <profiles>
+            <profile name="Plagueburst Mortar" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9c49-224e-613c-64d5">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Blast 5, Plague, Enemy units within 8” of this unit cannot be selected as targets for this weapon.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Suppressive (X)" id="334e-b350-f16d-6e4f" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+            <infoLink name="Blast (X)" id="1c83-7b33-888b-5dd4" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+            <infoLink name="Indirect" id="dfaf-402d-63d2-5978" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+            <infoLink name="Plague" id="bfea-f952-9181-f454" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+            <infoLink name="Barrage" id="8b28-26ac-1eef-7b16" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5163-74a8-1d63-64ad-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5163-74a8-1d63-64ad-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Bulldozer Blade" hidden="false" id="2653-92a3-ee77-c4dd">
+          <profiles>
+            <profile name="Bulldozer Blade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="26ee-9667-434b-8b46">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid, This unit gains Walker.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Putrid" id="f4fb-d25e-1d86-fdf0" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+            <infoLink name="Walker" id="54af-4aa2-3510-669a" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c3cb-b088-c48c-79e5-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c3cb-b088-c48c-79e5-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+  </selectionEntries>
+  <sharedProfiles>
+    <profile name="Festering Advance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="944e-46dd-e901-73d1">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for your units, roll 3D3 instead of 2D6. Additionally, during a March, your Death Guard units may move up to an additional 3” if that move would end within 4” of any enemy units with Nurgle’s Fruit.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Nurgle’s Gifts" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1d15-546a-3644-21db">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy unit Activates within 7” of this unit, it suffers D3+1 Suppression.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Nurgle’s Fruit" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2bc0-64a5-bf4e-b19c">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made for a weapon with Plague or Putrid targeting this unit, reroll Wound Rolls of 1 for that attack.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Plaguebringers" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1678-14a0-a939-cba2">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While enemy units are within 14” of this unit, those units gain:
+
+
+Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targeting this unit, reroll Wound Rolls of 1 for that attack.</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+  <sharedRules>
+    <rule name="Plague" id="7985-d278-b6c4-f53e" hidden="false">
+      <description>This weapon has Suppressive X where X is equal to this weapon’s Damage.</description>
+    </rule>
+    <rule name="Putrid" id="5262-b1f5-26c7-19b6" hidden="false">
+      <description>For each attack made by this weapon, add 1 to the Wound Roll of that attack. Additionally, if the target of that attack has Nurgle’s Fruit, a Wound Roll of 6 causes an additional wound.</description>
+    </rule>
+  </sharedRules>
+  <sharedSelectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Man Reaper" hidden="false" id="e5b9-68cd-70c1-e0ef">
+      <profiles>
+        <profile name="Man Reaper" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="721e-790d-ac1e-57cc">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid, Shred, Pierce</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Putrid" id="b8ea-5512-ceb4-1b25" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+        <infoLink name="Shred" id="eb2c-c74e-952d-7add" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+        <infoLink name="Pierce" id="251e-f522-90f3-7c33" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Plague Spewer" hidden="false" id="844f-38f1-c894-d8ab">
+      <profiles>
+        <profile name="Plague Spewer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="aed6-715e-d104-e407">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague, Ignores Cover</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive (X)" id="4bc6-216d-68b7-1c80" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Ignore Cover" id="39a7-9ac4-6d5a-2d9d" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Plague" id="44a0-59a5-90c4-b457" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Blight Grenade" hidden="false" id="b2d1-1122-5503-1e0f">
+      <profiles>
+        <profile name="Blight Grenade " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="19bb-0a85-2f81-6d3b">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 2, Plague, Indirect, One Shot</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive (X)" id="e95c-c48b-89be-9ac3" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Blast (X)" id="21fe-bc65-e27a-0d5c" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+        <infoLink name="Plague" id="bf81-d375-c330-d27f" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+        <infoLink name="Indirect" id="543b-8fc1-272b-e36b" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="One Shot" id="3fe5-ce06-d26a-8939" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="10"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8cd-f178-7ca5-bf4a" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Plague Bolt Pistol" hidden="false" id="82e3-3b9d-abfd-0310">
+      <profiles>
+        <profile name="Plague Bolt Pistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9ace-18cd-3c19-f55a">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive (X)" id="e13e-1b84-d92e-6063" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Plague" id="a440-7d7f-bc7d-3e2a" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Duel Plague Knives" hidden="false" id="643f-017d-ea70-c997">
+      <profiles>
+        <profile name="Duel Plague Knives" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="61c8-56f9-7781-eb9a">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Putrid" id="8abf-78c6-9872-2f78" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Plague Boltgun" hidden="false" id="b8b3-8c8e-ab57-5b9b">
+      <profiles>
+        <profile name="Plague Boltgun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="baac-869b-c8bd-aeee">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive (X)" id="60b7-5a03-bb3b-56e9" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Plague" id="1080-feba-d0d3-f409" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Plague Knife" hidden="false" id="ab58-025c-5f63-7db2">
+      <profiles>
+        <profile name="Plague Knife" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6646-7195-bd0d-2c23">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Putrid" id="d896-2888-acf2-dbe7" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Blight Launcher" hidden="false" id="b0b7-68db-5952-a972">
+      <profiles>
+        <profile name="Blight Launcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="10d0-d620-0541-8800">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive (X)" id="751b-eda8-6bd5-ba2d" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Plague" id="6500-37bf-e30a-feae" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bubotic Weapon" hidden="false" id="e541-6c55-f01a-f69f">
+      <profiles>
+        <profile name="Bubotic Weapon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="82fa-57e9-d929-ae4d">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Putrid" id="b520-9f3f-b65f-460e" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Duel Bubotic Weapons" hidden="false" id="e376-f651-4b32-2dac">
+      <profiles>
+        <profile name="Duel Bubotic Weapons" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2b0c-3ee3-a973-df3d">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Putrid" id="aab3-bc33-d2ef-9dcc" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Flail of Corruption" hidden="false" id="cf45-e281-1709-6e78">
+      <profiles>
+        <profile name="Flail of Corruption" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d10a-615a-6ec3-68fa">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 7, Putrid</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Blast (X)" id="161b-f112-03b9-aedf" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+        <infoLink name="Putrid" id="cb44-b94f-34f3-092f" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Great Plague Cleaver" hidden="false" id="b04f-81c2-cd03-0d71">
+      <profiles>
+        <profile name="Great Plague Cleaver" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5052-97dd-93c2-e11c">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Putrid" id="7807-5afc-abcd-5a7c" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Plague Belcher" hidden="false" id="433b-6edc-670e-75fa">
+      <profiles>
+        <profile name="Plague Belcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="84f3-c8ad-251b-91fd">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague, Ignore Cover</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive (X)" id="bb87-2bd1-2a8e-7f96" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Ignore Cover" id="46c1-4444-053b-b9b3" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Plague" id="f5e2-f868-63c0-8e03" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Icon of Despair" hidden="false" id="17c4-18d0-db8d-251c">
+      <costs>
+        <cost name="pts" typeId="points" value="10"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba23-e491-2515-e196" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="351c-4d5b-ebfb-a126" includeChildSelections="true"/>
+      </constraints>
+      <profiles>
+        <profile name="Icon of Despair" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="32cc-a978-2ed2-98b2">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March, you may select an enemy unit within 14” of this unit. If you do, the selected enemy unit suffers D3+1 Suppression.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive (X)" id="1f7c-e184-e314-1557" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+      </infoLinks>
+    </selectionEntry>
+  </sharedSelectionEntries>
+</catalogue>
