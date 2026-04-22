@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.2" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
       <categoryLinks>
@@ -293,6 +293,10 @@ Your Army List may include one unit with ‘WARBOSS’ in the name</characterist
           <modifiers>
             <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
           </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f395-33e6-a99f-0d97-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f395-33e6-a99f-0d97-max" includeChildSelections="false"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="Ork Boyz" hidden="false" id="61bd-e21c-4928-1a92" type="selectionEntry" targetId="09d6-9346-3c7c-1df5">
           <constraints>
