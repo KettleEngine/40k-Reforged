@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3336-6a64-b87f-ab82" name="Thousand Sons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="14" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3336-6a64-b87f-ab82" name="Thousand Sons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="14" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="6ab5-dc8c-40f6-8ff5">
       <profiles>
@@ -1863,6 +1863,44 @@ Create the selected unit within 3” of this unit. That unit is ready.</characte
         <constraint type="min" value="1" field="selections" scope="force" shared="true" id="e312-0c35-2c61-61f4-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="e312-0c35-2c61-61f4-max" includeChildSelections="false"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Summoned Chaos Spawn of Tzeentch" hidden="false" id="928d-3572-556d-cc0a">
+      <categoryLinks>
+        <categoryLink targetId="9cd6-0442-3f35-6b52" id="426e-c289-09ea-c5cf" primary="true" name="Configuration"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="7a0f-61c1-144b-095b" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="8d5b-b9f8-902b-bf60" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="ef34-9ab4-45ba-76d3" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="c637-f90b-7376-e617" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Unstoppable" id="8c45-d61d-72fd-d267" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Summoned Chaos Spawn of Tzeentch" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="f82b-615e-d6df-9d5c">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Hideous Mutations" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a1a1-55f9-721c-14b6">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Summon (Rules Package)" hidden="false" id="5a10-d675-2b9c-ba92" type="selectionEntry" targetId="1934-6ca4-3741-6c73"/>
+      </entryLinks>
     </selectionEntry>
   </selectionEntries>
 </catalogue>
