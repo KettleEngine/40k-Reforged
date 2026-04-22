@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.2" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
       <categoryLinks>
@@ -544,7 +544,7 @@ This unit does not count towards the Army List’s leader unit capacity</charact
         <infoLink name="Solid Greenskin" id="7d5d-ad16-ff4b-dfd4" hidden="false" type="profile" targetId="c35f-6848-d4c4-faeb"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Slugga" id="e7c7-a2cc-2e12-ea4f" hidden="false" defaultSelectionEntryId="0ddc-5f45-61c7-281b">
+        <selectionEntryGroup name="Slugga" id="e7c7-a2cc-2e12-ea4f" hidden="false" defaultSelectionEntryId="16f0-653f-f2a8-0b90">
           <entryLinks>
             <entryLink import="true" name="Slugga" hidden="false" id="16f0-653f-f2a8-0b90" type="selectionEntry" targetId="efe4-3139-2e58-93af" sortIndex="1">
               <modifiers>
@@ -640,8 +640,12 @@ This unit does not count towards the Army List’s leader unit capacity</charact
               </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e7e-4b6b-f582-2778-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e7e-4b6b-f582-2778-max" includeChildSelections="false"/>
+          </constraints>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Choppa" id="a41d-f937-749d-27ca" hidden="false" defaultSelectionEntryId="1c7f-8b0d-a6b2-89c4">
+        <selectionEntryGroup name="Choppa" id="a41d-f937-749d-27ca" hidden="false" defaultSelectionEntryId="08fd-2d2c-23f1-ae69">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e9d0-cadb-fb7e-54b9" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f6c2-6b39-202b-652f" includeChildSelections="false"/>
@@ -2543,14 +2547,6 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                         <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
-                    <entryLink import="true" name="Choppa" hidden="false" id="f765-bc9a-a062-bc40" type="selectionEntry" targetId="dcb2-429a-7ee6-dae4" sortIndex="3">
-                      <modifiers>
-                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="f6a6-3efb-8914-1c6d" includeChildSelections="true"/>
-                      </constraints>
-                    </entryLink>
                   </entryLinks>
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Special Weapons" hidden="false" id="bb61-7627-e3f2-0864" sortIndex="2">
@@ -2674,6 +2670,23 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                       </selectionEntryGroups>
                       <constraints>
                         <constraint type="max" value="3" field="selections" scope="unit" shared="true" id="d075-08a4-c6aa-1947" includeChildSelections="true"/>
+                      </constraints>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Choppa" hidden="false" id="a582-32a7-af4f-c505" sortIndex="3">
+                      <profiles>
+                        <profile name="Choppa" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e9de-ea04-88b2-b0bc">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="ed8b-3c53-347b-feb8" includeChildSelections="true"/>
                       </constraints>
                     </selectionEntry>
                   </selectionEntries>
