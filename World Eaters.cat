@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="ac9e-cafe-1753-147e" name="World Eaters" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="ac9e-cafe-1753-147e" name="World Eaters" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.0" hidden="false" id="97a2-b298-c8e1-9b48" sortIndex="-1">
       <categoryLinks>
@@ -93,7 +93,7 @@
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack this unit makes that targets an enemy unit with Grating, reroll a Wound Roll of 1 for that attack.</characteristic>
           </characteristics>
         </profile>
-        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="b57f-bbf5-80ec-5926">
+        <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="b57f-bbf5-80ec-5926">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to:
 ● KHORNE BERSEKERS</characteristic>
@@ -169,7 +169,7 @@
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack made for this unit that targets an enemy unit with Grating, reroll a failed Hit Roll for that attack.</characteristic>
           </characteristics>
         </profile>
-        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="cac3-f687-5fdf-17ef">
+        <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="cac3-f687-5fdf-17ef">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to:
 ● KHORNE BERSEKERS</characteristic>
@@ -231,7 +231,7 @@
         <categoryLink targetId="f809-9826-f58a-6b8d" id="6aa2-45ef-dd9a-266e" primary="false" name="Chaos"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="20"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
       <profiles>
         <profile name="Slaughterbound" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="91c2-3c77-b6e5-72ee">
@@ -248,7 +248,7 @@
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit dies, before removing it from the battlefield, each enemy unit within 8” of and visible to this unit suffers D3+1 SW.</characteristic>
           </characteristics>
         </profile>
-        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="3ee0-b6cf-881e-ef98">
+        <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="3ee0-b6cf-881e-ef98">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to:
 ● KHORNE BERSEKERS</characteristic>
@@ -268,53 +268,53 @@
           </constraints>
         </entryLink>
       </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Melee" id="ed53-feb7-0901-907d" hidden="false" defaultSelectionEntryId="c1c5-0613-72fa-afc4">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c966-d30d-3dcb-760a-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c966-d30d-3dcb-760a-max" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Slaughterbound Claw" hidden="false" id="c1c5-0613-72fa-afc4" sortIndex="1">
-              <profiles>
-                <profile name="Slaughterbound Claw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="03a6-6b58-662b-90e7">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Shred" id="f1b7-ced0-5997-a834" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Lacerator" hidden="false" id="5d5f-f369-b9b6-a957" sortIndex="2">
-              <profiles>
-                <profile name="Lacerator" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="48d9-1ecf-b6c0-ed99">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Shred" id="1686-ba9c-254f-7bee" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <infoLinks>
         <infoLink name="Daemonic" id="173f-6ef3-a442-9f00" hidden="false" type="rule" targetId="3b9e-8b58-9bed-fb98"/>
       </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Lacerator" hidden="false" id="5d5f-f369-b9b6-a957">
+          <profiles>
+            <profile name="Lacerator" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="48d9-1ecf-b6c0-ed99">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Shred" id="1686-ba9c-254f-7bee" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7765-e2cb-4c63-9412-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7765-e2cb-4c63-9412-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Slaughterbound Claw" hidden="false" id="c1c5-0613-72fa-afc4">
+          <profiles>
+            <profile name="Slaughterbound Claw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="03a6-6b58-662b-90e7">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Shred" id="f1b7-ced0-5997-a834" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8701-f380-9b15-c0d3-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8701-f380-9b15-c0d3-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Jakhals" hidden="false" id="c270-7fe9-91f6-ffa8" sortIndex="5">
       <costs>
@@ -326,7 +326,7 @@
         <categoryLink targetId="f809-9826-f58a-6b8d" id="5132-7ade-05bc-788e" primary="false" name="Chaos"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Jakhals" id="72be-dcb5-79db-8c81" hidden="false">
+        <selectionEntryGroup name="Jakhals" id="72be-dcb5-79db-8c81" hidden="false" defaultSelectionEntryId="b7fa-690a-59d6-4d4f">
           <constraints>
             <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="2bc8-6288-a9dd-46bc-min" includeChildSelections="false"/>
             <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="2bc8-6288-a9dd-46bc-max" includeChildSelections="false"/>
@@ -416,7 +416,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
-        <infoLink name="Grating" id="5492-f877-550e-46b8" hidden="false" type="profile" targetId="8d33-eaa0-aad7-9a19"/>
+        <infoLink name="Grating (Refrence)" id="5492-f877-550e-46b8" hidden="false" type="profile" targetId="8d33-eaa0-aad7-9a19"/>
         <infoLink name="Forward Deploy" id="fb6d-0a46-7ade-b982" hidden="false" type="rule" targetId="b433-60cc-2ed2-658f"/>
         <infoLink name="Martial Savagery" id="743f-2d48-3def-053f" hidden="false" type="profile" targetId="fc10-89a6-0b44-88e3"/>
       </infoLinks>
@@ -860,7 +860,7 @@ Grating: This unit counts as two units for Martial Savagery and, during enemy 
         <infoLink name="Unstoppable" id="cbaf-e6ea-37fe-221f" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
         <infoLink name="Daemonic" id="d237-ce94-71f2-9cac" hidden="false" type="rule" targetId="3b9e-8b58-9bed-fb98"/>
         <infoLink name="Martial Savagery" id="005c-a0d0-9730-65c2" hidden="false" type="profile" targetId="fc10-89a6-0b44-88e3"/>
-        <infoLink name="Grating" id="8785-7ae4-5aef-0691" hidden="false" type="profile" targetId="8d33-eaa0-aad7-9a19"/>
+        <infoLink name="Grating (Refrence)" id="8785-7ae4-5aef-0691" hidden="false" type="profile" targetId="8d33-eaa0-aad7-9a19"/>
       </infoLinks>
       <profiles>
         <profile name="Abandon Reason" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3697-c799-a5a7-86a2">
