@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="26" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="27" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -948,7 +948,7 @@ To Disembark, place the embarked unit wholly within 3” of the unit it&apos;s e
 After a unit with Transport is destroyed, any unit embarked within it is also destroyed.</description>
     </rule>
     <rule name="Heal/Repair (X)" id="02c8-1ec5-cdab-2572" hidden="false">
-      <description>Heal X or Repair X: For each X, if all models within this unit are at their starting Health and the unit has fewer models than it started with, then add 1 missing model with 1 Health remaining. Otherwise, add 1 Health to a model with fewer Health than it started with.</description>
+      <description>To Heal X or Repair X, for each X, if any model in the unit has fewer H than it started with, improve the H of one of those models by 1. If no models have fewer H than they started with and the unit is missing one or more models, instead add 1 missing model to this unit, in coherency, with 1 H. If a model cannot be placed in coherency, do not add it.</description>
     </rule>
     <rule name="Ignore Cover" id="c88b-5cb0-aa9d-b742" hidden="false">
       <description>Saving Throws for this weapon’s attacks cannot benefit from cover.</description>
@@ -963,7 +963,7 @@ After a unit with Transport is destroyed, any unit embarked within it is also de
       <description>Each time you make attacks with this weapon, use only one of either weapon with Strike or Sweep.</description>
     </rule>
     <rule name="Barrage" id="9cfc-06e3-74c6-ad83" hidden="false">
-      <description>After selecting the target for this weapon&apos;s attacks, select up to 2 different enemy units within 6&quot; of the selected target. Also make attacks with this weapon targeting each of the selected units.</description>
+      <description>After selecting the target for this weapon&apos;s attacks, roll 2D6. Then select up to 2 other different enemy units within X” of the selected target, where X is the result of that roll. Also make attacks for this weapon targeting each of the selected units.</description>
     </rule>
     <rule name="Suppressive (X)" id="aed3-e154-8fa2-5378" hidden="false">
       <description>For each attack made for this weapon, after a successful Wound Roll for that attack, the target unit suffers X Suppression.</description>
@@ -996,7 +996,7 @@ After a unit with Transport is destroyed, any unit embarked within it is also de
       <description>For each attack that targets this unit, after a failed Saving Throw for that attack, make a Resilient roll. To make a Resilient roll, roll a D6. If the result equals or exceeds X, that attack fails.</description>
     </rule>
     <rule name="Daemonic" id="3b9e-8b58-9bed-fb98" hidden="false">
-      <description>For each attack that targets this unit, the Wound Roll of that attack is always successful on a 5+ and always fails on any result worse than 5+.</description>
+      <description>For each attack that targets this unit, Wound Rolls of 4 or lower cause that attack to fail. Additionally, for each SW this unit suffers, this unit gains Resilient 4+ for that attack.</description>
     </rule>
   </sharedRules>
   <publications>
