@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="29" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="30" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -84,22 +84,22 @@ Vehicle models can give cover to friendly infantry.</description>
       <modifiers>
         <modifier type="set" value="500" field="57b7-ac0e-5d06-9ddb">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="d62d-db22-4893-4bc0" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="d62d-db22-4893-4bc0" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="1000" field="57b7-ac0e-5d06-9ddb">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="baf8-997f-e323-a090" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="baf8-997f-e323-a090" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="set" value="-1" field="57b7-ac0e-5d06-9ddb">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="4204-82d0-908c-a62a" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="4204-82d0-908c-a62a" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
-        <constraint type="max" value="0" field="points" scope="force" shared="true" id="57b7-ac0e-5d06-9ddb" includeChildSelections="true"/>
+        <constraint type="max" value="0" field="points" scope="roster" shared="true" id="57b7-ac0e-5d06-9ddb" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <comment>basic one, some like guard have to have their own to acomidate units like master of ordinance</comment>
     </forceEntry>
