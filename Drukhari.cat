@@ -1196,19 +1196,6 @@ This unit may attach to a unit which already has an attached leader (other than 
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Disintegrator Cannon" hidden="false" id="f359-7904-34bf-5c47" type="selectionEntry" targetId="b814-8f8d-d44d-e1b9">
-          <modifiers>
-            <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="set" value="Pulse Disintegrators" field="name"/>
-            <modifier type="set" value="Pulse Disintegrators" field="name" affects="profiles.Weapon"/>
-          </modifiers>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ccc3-9b82-b2a3-703a-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ccc3-9b82-b2a3-703a-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="0f81-e908-fdfc-c84d" includeChildSelections="false"/>
       </constraints>
@@ -1233,6 +1220,29 @@ This unit may attach to a unit which already has an attached leader (other than 
           <infoLinks>
             <infoLink name="Shred" id="53fd-51c0-f7b3-0b72" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
           </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Disintegrator Cannon" hidden="false" id="5699-0d17-58ae-cf8c">
+          <profiles>
+            <profile name="Disintegrator Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9e58-11a8-ef2a-857d">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+            <modifier type="set" value="Pulse Disintegrators" field="name"/>
+            <modifier type="set" value="Pulse Disintegrators" field="name" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="de2f-75d2-7d07-74b6-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de2f-75d2-7d07-74b6-max" includeChildSelections="false"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
