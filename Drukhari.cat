@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3346-57cc-888c-c1d6" name="Drukhari" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="25" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3346-57cc-888c-c1d6" name="Drukhari" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="25" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="d4a4-79f5-d0c3-6cee" sortIndex="-1">
       <categoryLinks>
@@ -647,16 +647,26 @@ This unit may attach to a unit which already has an attached leader (other than 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2981-7356-cf50-bbc3-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Splinter Cannon" hidden="false" id="f224-cd4e-7532-b651" type="selectionEntry" targetId="0d3c-7c03-8827-c4e6">
-          <modifiers>
-            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-          </modifiers>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="874a-592b-9877-01e8-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="874a-592b-9877-01e8-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
       </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Hull mounted Splinter Cannon" hidden="false" id="85dd-0657-c262-9f08">
+          <entryLinks>
+            <entryLink import="true" name="Splinter Cannon" hidden="false" id="f224-cd4e-7532-b651" type="selectionEntry" targetId="0d3c-7c03-8827-c4e6">
+              <modifiers>
+                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="874a-592b-9877-01e8-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="874a-592b-9877-01e8-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6ccc-5937-bcf5-3e4f-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ccc-5937-bcf5-3e4f-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Mandrakes" hidden="false" id="7fa5-b708-4c97-d450" sortIndex="14">
       <categoryLinks>
