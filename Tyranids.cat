@@ -1077,6 +1077,723 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ripper Swarms" hidden="false" id="a151-9c2e-e0fd-a4b1" sortIndex="13">
+      <categoryLinks>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="c6fe-27f6-bdbf-626f" primary="true" name="Support"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="277d-2f3c-816c-0b54" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ripper Swarms" id="012b-a3fc-afe9-ca2a" hidden="false" defaultSelectionEntryId="0be3-c515-86dc-509c">
+          <constraints>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="bf4e-ab20-6d77-7e9b" includeChildSelections="false"/>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="80d8-cf66-9669-3846" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Ripper Swarm" hidden="false" id="0be3-c515-86dc-509c">
+              <profiles>
+                <profile name="Ripper Swarm" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0f43-9fce-03c5-adfc">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">6+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Ripping Jaws" hidden="false" id="99d4-dbd4-d446-02e0">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6258-85a0-ad2c-b3da-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6258-85a0-ad2c-b3da-max" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Ripping Jaws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3809-78c8-c3f6-404b">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <profiles>
+        <profile name="Utterly Relentless" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="afec-53f7-0335-0b65">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">The Strength of this unit&apos;s Ripping Jaws weapon is improved by 1 for each model in this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Completely Mindless" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="89f8-be19-abfc-e0ce">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After the end of each battle round, if this unit is not within 12&quot; of a unit with Synapse, this unit dies.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Carnifex" hidden="false" id="f93e-07bb-e4f6-0835" sortIndex="14">
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="6537-7b2d-b2c8-6005" id="ae12-c0bd-e300-eef3" primary="false" name="Monster"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="8f8d-2daa-969a-0e1c" primary="true" name="Support"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Adaptive Bioforms" id="79a2-a2ad-7b85-cd7a" hidden="false" type="profile" targetId="0d87-dd31-8828-68b4"/>
+        <infoLink name="Walker" id="83f4-6ff8-a4a9-6d98" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+        <infoLink name="Unstoppable" id="d981-e7ed-b9b2-bd39" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Carnifex" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5111-a789-17fd-9342">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Pulverising Charge" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0cc7-4bf4-12da-412a">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March, select one enemy unit within engagement range of this unit. That unit suffers 4+XD3 SW where X is equal to the number of different enemy units within engagement range of this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Monstrous Scything Talons" hidden="false" id="12c1-4e93-582d-09a8" type="selectionEntry" targetId="468d-9083-d092-58ab">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6975-f6dc-2970-36af-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6975-f6dc-2970-36af-max" includeChildSelections="false"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="Carnifex Scything Talons " field="name"/>
+                <modifier type="set" value="Carnifex Scything Talons " field="name" affects="profiles.Weapon"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapon Choice" id="c5f5-eb22-e35e-73a7" hidden="false" defaultSelectionEntryId="ff5b-4e7a-bbac-3375">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e599-c9bb-90ac-2a1f-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e599-c9bb-90ac-2a1f-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Monstrous Scything Talons" hidden="false" id="ff5b-4e7a-bbac-3375" type="selectionEntry" targetId="468d-9083-d092-58ab" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e432-55ff-2752-5cbc-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e432-55ff-2752-5cbc-max" includeChildSelections="false"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="Carnifex Scything Talons " field="name"/>
+                    <modifier type="set" value="Carnifex Scything Talons " field="name" affects="profiles.Weapon"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </entryLink>
+            <entryLink import="true" name="Heavy Venom Cannon" hidden="false" id="ea18-a777-a230-4c79" type="selectionEntry" targetId="a391-602f-fd75-1db7" sortIndex="4"/>
+            <entryLink import="true" name="Stranglethorn Cannon" hidden="false" id="74a9-ceb3-6384-1f37" type="selectionEntry" targetId="3518-6226-731a-d7f7" sortIndex="5"/>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Carnifex Crushing Claws" hidden="false" id="13b5-b6b4-e903-fffb" sortIndex="2">
+              <profiles>
+                <profile name="Carnifex Crushing Claws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a92b-451c-9ecd-34c8">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c"/>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0"/>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Carnifex Death Spitter" hidden="false" id="49c9-2d67-5f09-76bd" sortIndex="3">
+              <profiles>
+                <profile name="Carnifex Death Spitter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6938-4533-5394-837a">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 6</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Blast (X)" id="3eb3-adbc-895d-1101" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Hive Guard" hidden="false" id="8af0-abba-d23d-2bcb" sortIndex="15">
+      <categoryLinks>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="8e3b-cd57-4aaa-e1e3" primary="true" name="Support"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="d9ed-78bf-1498-9b3c" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Hive Guard" id="6a73-04ab-19fc-07e8" hidden="false" defaultSelectionEntryId="13e3-963f-0af3-b9cf">
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="949b-f354-fae5-fe4e" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="783b-9045-9163-b2b3" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Hive Guard" hidden="false" id="13e3-963f-0af3-b9cf">
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Powerful Limbs" hidden="false" id="4e37-0f40-1806-b716">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="03c6-40b1-e6c9-b2d0-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="03c6-40b1-e6c9-b2d0-max" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Powerful Limbs" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8f67-6b62-69be-ec75">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec"/>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c"/>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0"/>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon Choice" id="fe12-3b93-1fb8-2bdd" hidden="false">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8817-ead9-8fb1-00d3-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8817-ead9-8fb1-00d3-max" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Shock Cannon" hidden="false" id="fc67-8caa-fa24-328a" sortIndex="1">
+                      <profiles>
+                        <profile name="Shock Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="057f-42d4-0b9d-5583">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each attack that targets an enemy unit with 1 model, a successful Wound Roll for that attack causes the target unit to suffer 4+D3 SW.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Impaler Cannon" hidden="false" id="6197-232f-a10e-143e" sortIndex="2">
+                      <profiles>
+                        <profile name="Impaler Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2871-033a-1ceb-803c">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Indirect" id="5d2d-5958-fda9-4ba4" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <profiles>
+                <profile name="Hive Guard" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="f3cf-f257-6e45-7666">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <profiles>
+        <profile name="Synaptic Guide" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f31b-c2eb-3374-fd80">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made for this unit which targets an enemy unit that is visible to one or more friendly units with Synapse, add 1 to the Hit Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Walker" id="5dea-7290-c49d-cca0" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+        <infoLink name="Heavy Armour" id="37b5-6369-0d58-c820" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Tyrant Guard" hidden="false" id="1932-7c74-e6e5-6b76" sortIndex="16">
+      <categoryLinks>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="e03d-7026-599f-e202" primary="true" name="Support"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="a33f-acd6-0671-1e87" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Tyrant Guard" id="6b65-77a7-e172-9e70" hidden="false" defaultSelectionEntryId="ecbc-da62-bc57-ec1f">
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="7fb6-c2c6-1540-e073" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="2ad1-2e1e-6c62-a92a" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Tyrant Guard" hidden="false" id="ecbc-da62-bc57-ec1f">
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Melee" id="5602-3c84-a147-b284" hidden="false" defaultSelectionEntryId="e62e-9dc8-6f86-dd94">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="63f7-9e59-08dc-5953-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63f7-9e59-08dc-5953-max" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Bone Sword &amp; Lash Whip" hidden="false" id="e62e-9dc8-6f86-dd94" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Bone Sword" hidden="false" id="4474-2aec-9e20-0d93" type="selectionEntry" targetId="895c-af4a-f45f-d1ae">
+                          <modifierGroups>
+                            <modifierGroup type="and">
+                              <modifiers>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </modifierGroup>
+                          </modifierGroups>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b7ea-6f4c-8c86-c00d-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7ea-6f4c-8c86-c00d-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name=" Lash Whip" hidden="false" id="3eaa-f075-885b-1e85" type="selectionEntry" targetId="994e-6591-7b08-aac1">
+                          <modifierGroups>
+                            <modifierGroup type="and">
+                              <modifiers>
+                                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </modifierGroup>
+                          </modifierGroups>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da38-fe1c-27e6-8730-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da38-fe1c-27e6-8730-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Crushing Claws" hidden="false" id="4985-291f-3198-865b" sortIndex="3">
+                      <profiles>
+                        <profile name="Crushing Claws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f1de-621a-7384-6743">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+2</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Pierce" id="b7cb-b9dc-0176-db29" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <entryLinks>
+                    <entryLink import="true" name="Scything Talons" hidden="false" id="4115-4f7d-79b6-0830" type="selectionEntry" targetId="3abd-eddf-7562-c736" sortIndex="2">
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <profiles>
+                <profile name="Tyrant Guard" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="cdcf-2a98-0cb2-b01e">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <profiles>
+        <profile name="Chitin Wall" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="abc7-df07-c017-9d38">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a ranged attack successfully wounds a friendly unit with Synapse within 6” while this unit is visible to and closer to the enemy unit that made that attack, roll a D6. On a 4+, that attack’s target changes to this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Walker" id="dd70-b3b5-8173-7207" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+        <infoLink name="Heavy Armour" id="d6fd-3ced-60a6-48a7" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Trygon" hidden="false" id="350d-abef-a2f6-cbba" sortIndex="17">
+      <costs>
+        <cost name="pts" typeId="points" value="200"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="6537-7b2d-b2c8-6005" id="7a03-93a8-b1b0-45e1" primary="false" name="Monster"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="b210-e9d6-6f39-9500" primary="false" name="Rare"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="f0c9-035c-750f-3c72" primary="true" name="Support"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="0c0a-df54-1f2d-084a" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Bio-Electric Pulse" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="7b05-5af7-bff1-0cd3">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Deploy this unit, each enemy unit within 8” suffers 2D3 SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Emerging Swarm" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ad2b-0cf7-6fba-60ab">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Deploy this unit, you may select one of your infantry units in reserves. Deploy the selected unit wholly within 6” of this unit outside of the engagement range of enemy models.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Horror of the Deep" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9702-d0e1-33c2-5934">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is in reserves, after an enemy unit without Fly finishes a March, roll a D6; if that unit advanced this turn, add 1 to the result. On a 5+, you may Deploy this unit within 4&quot; of that enemy unit and outside of the engagement range of enemy units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Serpentine Coils" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6966-c4ec-7f1b-5b4e">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack targeting this unit, the Hit Roll for that attack is worsened by 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Trygon" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="a5f6-b6c6-d0f0-c540">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">14</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Titan" id="1e42-3c09-e5bb-166b" hidden="false" type="rule" targetId="8f09-c87f-c86c-8cfc"/>
+        <infoLink name="Walker" id="0408-f3e9-7a7b-9df0" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+        <infoLink name="Unstoppable" id="4316-b14a-d334-87a9" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Trygon Scything Talons" hidden="false" id="1b90-5a35-b190-2a80">
+          <profiles>
+            <profile name="Trygon Scything Talons" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c947-fb5d-8c74-3f73">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8fdd-6240-674d-20c2-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fdd-6240-674d-20c2-max" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Shred" id="c1b6-5bb7-f611-2094" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Synapse" hidden="false" id="c6a5-0d93-a3ac-53fd">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff09-9ae8-e9ea-779f" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Synapse" id="5d09-eacf-7779-a7fb" hidden="false" type="profile" targetId="ef65-9c3a-581f-6896"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Mawloc" hidden="false" id="d229-01c6-a1d5-4dbd" sortIndex="18">
+      <costs>
+        <cost name="pts" typeId="points" value="200"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="6537-7b2d-b2c8-6005" id="2778-3560-c696-a230" primary="false" name="Monster"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="250a-d7c0-e12b-89ed" primary="false" name="Rare"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="67d8-6a72-9bd1-8705" primary="true" name="Support"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="2302-180f-cf77-2e41" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Reburrow" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e8fb-1482-0c8f-044e">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After the end of each battle round, you may remove this unit from the battlefield and place it into reserves.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Horror of the Deep" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d103-5888-c48c-3f26">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is in reserves, after an enemy unit without Fly finishes a March, roll a D6; if that unit advanced this turn, add 1 to the result. On a 5+, you may Deploy this unit within 4&quot; of that enemy unit and outside of the engagement range of enemy units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Roiling Serpent" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ef04-bfa5-483b-4e2a">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack targeting this unit, the Hit Roll for that attack is worsened by 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mawloc" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6bb5-c28e-19d0-5413">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">14</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Titan" id="b969-690c-3491-2a44" hidden="false" type="rule" targetId="8f09-c87f-c86c-8cfc"/>
+        <infoLink name="Walker" id="8dc7-5971-576c-68ff" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+        <infoLink name="Unstoppable" id="482b-fa81-3a37-66fe" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Mawloc Scything Talons" hidden="false" id="39ae-4b47-733f-54f0">
+          <profiles>
+            <profile name="Mawloc Scything Talons" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="041f-3163-0e86-d446">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ffe-9322-f4ce-e63d-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ffe-9322-f4ce-e63d-max" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Shred" id="6220-dad0-2a48-cb02" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Distensible Jaws" hidden="false" id="679a-2fbc-6984-fa6c">
+          <profiles>
+            <profile name="Distensible Jaws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="578a-e339-d624-0412">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each attack made for this weapon targeting an infantry unit, the Wound Roll is successful on a 3+ for that attack.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6015-6b06-2852-e6da-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6015-6b06-2852-e6da-max" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Shred" id="95ab-0372-75ea-dbbf" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Harsupex" hidden="false" id="d1af-f8e2-83db-4789" sortIndex="19">
+      <costs>
+        <cost name="pts" typeId="points" value="160"/>
+      </costs>
+      <profiles>
+        <profile name="Harsupex" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="10c6-a4d4-5bd3-5e48">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">14</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Biomass Gorging" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1d3a-dade-9f00-aff7">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy model dies from an attack made by this unit’s Ravenous Maw weapon, this unit’s Health is improved equal to the starting H of that model (you may use a Health counter to remind you).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Ravenous Maw" hidden="false" id="50c8-2408-4f17-dc47">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4eb3-5b76-fb05-acab-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4eb3-5b76-fb05-acab-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Ravenous Maw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="1e14-94e5-8430-170f">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">16</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Ignore Cover" id="47cb-eba6-d751-19a6" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Harsupex Crushing Claws" hidden="false" id="c2b6-fa72-9342-986d">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a495-af43-530e-f559-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a495-af43-530e-f559-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Harsupex Crushing Claws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3a6e-e63f-db5f-91eb">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">15</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+4</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Pierce" id="9b55-cac2-bc4d-607b" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <infoLinks>
+        <infoLink name="Unstoppable" id="8bf8-a265-0c3e-ab43" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Walker" id="b230-dc56-8856-d867" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="6537-7b2d-b2c8-6005" id="ee77-95f6-d954-7bf3" primary="false" name="Monster"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="99d5-4369-c465-e35a" primary="true" name="Support"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Exocrine" hidden="false" id="1d04-060b-b2ef-ff2e" sortIndex="20">
+      <categoryLinks>
+        <categoryLink targetId="6537-7b2d-b2c8-6005" id="b075-c720-b87e-6536" primary="false" name="Monster"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="a863-0b5b-845c-c771" primary="true" name="Support"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="160"/>
+      </costs>
+      <profiles>
+        <profile name="Exocrine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="a74c-0177-6e33-1441">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">14</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Focused Symbiote" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b78f-d569-7246-6591">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack this unit makes, if this unit did not advance this turn, add 1 to the Hit Roll.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Walker" id="a6ea-954a-3ea5-fad6" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+        <infoLink name="Unstoppable" id="7fe2-38b7-b84b-d43d" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Bio-Plasmic Cannon" hidden="false" id="35af-379c-0d93-3d39">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fd2d-b830-3337-c124-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd2d-b830-3337-c124-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Bio-Plasmic Cannon (Strike)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d285-b3e2-4bb5-98ce">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">6</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Strike, Killshot, Pierce</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Bio-Plasmic Cannon (Sweep)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="cdad-cb06-f315-09a5">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">16</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Pierce</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Killshot" id="9eca-f369-fc89-52d9" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+            <infoLink name="Pierce" id="1a00-e7cc-beca-938b" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+            <infoLink name="Strike or Sweep (X)" id="06a1-797a-6263-8b7d" hidden="false" type="rule" targetId="2757-6563-cdb2-3456"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Powerful Limbs" hidden="false" id="deb3-1caf-b900-ad51">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="37fe-bb15-e739-60dc-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="37fe-bb15-e739-60dc-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Powerful Limbs" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="475d-65be-34b0-162c">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
     <profile name="Adaptive Bioforms" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0d87-dd31-8828-68b4">
