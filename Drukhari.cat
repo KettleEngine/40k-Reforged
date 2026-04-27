@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3346-57cc-888c-c1d6" name="Drukhari" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="25" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3346-57cc-888c-c1d6" name="Drukhari" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="25" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="d4a4-79f5-d0c3-6cee" sortIndex="-1">
       <categoryLinks>
@@ -2683,7 +2683,7 @@ This unit may attach to a unit which already has an attached leader (other than 
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Weapons" id="5f02-11f0-d605-56ae" hidden="false" defaultSelectionEntryId="2dae-084e-b8ad-9d6a">
+                <selectionEntryGroup name="Weapons" id="5f02-11f0-d605-56ae" hidden="false" defaultSelectionEntryId="b50c-06ca-1839-fc60">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Syren" hidden="false" id="1074-df04-3b1a-2655" sortIndex="2">
                       <constraints>
@@ -2754,6 +2754,10 @@ This unit may attach to a unit which already has an attached leader (other than 
                       </entryLinks>
                     </selectionEntry>
                   </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="24cf-da8a-3bde-4768-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="24cf-da8a-3bde-4768-max" includeChildSelections="false"/>
+                  </constraints>
                 </selectionEntryGroup>
                 <selectionEntryGroup name="Grenades" id="9fdc-0275-4dc0-4b38" hidden="false">
                   <constraints>
