@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="16" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -406,7 +406,12 @@ This unit does not count towards the leader maximum of the army list.</character
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Lasgun" hidden="false" id="643e-7d1e-356c-4526" type="selectionEntry" targetId="0b54-6ba9-f583-4b19"/>
+        <entryLink import="true" name="Lasgun" hidden="false" id="643e-7d1e-356c-4526" type="selectionEntry" targetId="0b54-6ba9-f583-4b19">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1084-c42a-aaa9-ca3d-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1084-c42a-aaa9-ca3d-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Master Of Vox Operator" hidden="false" id="f58d-87f6-b14c-600d">
@@ -451,8 +456,17 @@ This unit does not count towards the leader maximum of the army list</characteri
           <modifiers>
             <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
           </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca46-e80b-2f89-a356-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ca46-e80b-2f89-a356-max" includeChildSelections="false"/>
+          </constraints>
         </entryLink>
-        <entryLink import="true" name="Lasgun" hidden="false" id="1007-a0b7-52b3-a032" type="selectionEntry" targetId="0b54-6ba9-f583-4b19"/>
+        <entryLink import="true" name="Lasgun" hidden="false" id="1007-a0b7-52b3-a032" type="selectionEntry" targetId="0b54-6ba9-f583-4b19">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bde1-421d-155f-4ee5-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bde1-421d-155f-4ee5-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bodyguard" hidden="false" id="7f11-bc81-0039-49de">
@@ -500,6 +514,10 @@ This unit does not count towards the leader maximum of the army list.</character
                   <modifiers>
                     <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                   </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c58-718d-d37d-719e-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c58-718d-d37d-719e-max" includeChildSelections="false"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
               <selectionEntryGroups>
@@ -587,6 +605,10 @@ This unit does not count towards the leader maximum of the army list.</character
           <modifiers>
             <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
           </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="751b-af40-dd4f-934b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="751b-af40-dd4f-934b-max" includeChildSelections="false"/>
+          </constraints>
         </entryLink>
       </entryLinks>
     </selectionEntry>
