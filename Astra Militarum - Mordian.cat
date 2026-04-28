@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3f76-a017-a7ec-c4cc" name="Astra Militarum - Mordian" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3f76-a017-a7ec-c4cc" name="Astra Militarum - Mordian" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Astra Militarum" id="1d42-b7a2-729f-8ffc" targetId="f178-f218-fb11-d21a" importRootEntries="true"/>
   </catalogueLinks>
@@ -261,6 +261,57 @@
             </modifier>
           </modifiers>
         </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Troops" hidden="false" id="214b-f46b-d0aa-019b" targetId="b69b-5b51-faf1-2c40" primary="true"/>
+        <categoryLink name="Infantry" hidden="false" id="8320-59e5-3755-5b25" targetId="205c-3072-067b-d808" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <profiles>
+        <profile name="Drilled Maneuvers" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8553-2025-1a80-b158">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While each of this unit&apos;s models are touching another model in this unit, for each ranged attack made by another friendly Astra Militarum unit that targets an enemy unit within 24” of this unit, reroll a Hit Roll of 1 for that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Mordian Platoon Commander" hidden="false" id="9392-ea0d-0cba-557f">
+      <costs>
+        <cost name="pts" typeId="points" value="10"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="d86f-77f3-0233-7e45" primary="false" name="Infantry"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="553f-4fa6-2d62-fa1c" primary="true" name="Leaders"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Mordian Platoon Commander" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6ed6-35c5-7c1a-8d4a">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mordian Regimental Order" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="dec8-a3c4-a5ad-e949">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit and your other Astra Militarum infantry within 24” of this unit, gain the following ability:
+
+
+Close Ranks!: While this unit is within 1” of another Astra Militarum infantry unit, this unit gains Heavy Armour.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Heavy Armour" id="ba4e-0766-8db9-300a" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794">
+          <modifiers>
+            <modifier type="append" value="(Mordian Regimental Order refrence)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <selectionEntryGroups>
         <selectionEntryGroup name="Melee" id="08a6-4591-925b-7328" hidden="false" defaultSelectionEntryId="f980-887f-4379-5486">
           <entryLinks>
             <entryLink import="true" name="Chainsword" hidden="false" id="f980-887f-4379-5486" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="1">
@@ -314,55 +365,6 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Troops" hidden="false" id="214b-f46b-d0aa-019b" targetId="b69b-5b51-faf1-2c40" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="8320-59e5-3755-5b25" targetId="205c-3072-067b-d808" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="80"/>
-      </costs>
-      <profiles>
-        <profile name="Drilled Maneuvers" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8553-2025-1a80-b158">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While each of this unit&apos;s models are touching another model in this unit, for each ranged attack made by another friendly Astra Militarum unit that targets an enemy unit within 24” of this unit, reroll a Hit Roll of 1 for that attack.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Mordian Platoon Commander" hidden="false" id="9392-ea0d-0cba-557f">
-      <costs>
-        <cost name="pts" typeId="points" value="10"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink targetId="205c-3072-067b-d808" id="d86f-77f3-0233-7e45" primary="false" name="Infantry"/>
-        <categoryLink targetId="2886-2afd-f65f-9d8e" id="553f-4fa6-2d62-fa1c" primary="true" name="Leaders"/>
-      </categoryLinks>
-      <profiles>
-        <profile name="Mordian Platoon Commander" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6ed6-35c5-7c1a-8d4a">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Mordian Regimental Order" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="dec8-a3c4-a5ad-e949">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit and your other Astra Militarum infantry within 24” of this unit, gain the following ability:
-
-
-Close Ranks!: While this unit is within 1” of another Astra Militarum infantry unit, this unit gains Heavy Armour.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Heavy Armour" id="ba4e-0766-8db9-300a" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794">
-          <modifiers>
-            <modifier type="append" value="(Mordian Regimental Order refrence)" field="name"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
     </selectionEntry>
   </selectionEntries>
 </catalogue>
