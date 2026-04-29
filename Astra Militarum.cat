@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -358,6 +358,1193 @@
         <infoLink name="Ignore Cover" id="4eea-6167-9fae-3c8d" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
       </infoLinks>
       <comment>leman russ</comment>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Wyvern" hidden="false" id="3083-2edc-8324-579e">
+      <profiles>
+        <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6491-b3b5-cac3-19d8">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Quad Stormshard Mortar, if you have no ready units except units with Artillery Support, you may ‘call for an artillery strike’. If you do, you may instead target an enemy unit within 16&quot; of and visible to any of your infantry units within 16&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Wyvern" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="342e-76ae-7da8-ed77">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="63ef-6f46-bc6b-978a" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0521-f677-d89b-b3a2" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Smoke Launchers" hidden="false" id="dd7f-854a-fff5-62ff" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is also equipped with either:" id="8625-06ac-7ab4-5206" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="6775-16d0-fb6d-4ad9" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+              <modifiers>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Flamer" hidden="false" id="2576-b8df-da8a-e772" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e7be-0f63-fb66-2ae9" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60b1-e2de-89b3-ea81" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="c7e1-2da6-62f8-141c" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+        <categoryLink name="Support" hidden="false" id="2bae-6b39-eb1e-fa15" targetId="ccc6-6202-853c-23e4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Quad Stormshard Mortar" hidden="false" id="1ba0-5ce4-4b2e-3ffc">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4fd1-3e40-ab15-a874-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fd1-3e40-ab15-a874-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Quad Stormshard Mortar" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d568-df0c-e13d-5a8d">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Blast 3, Suppressive 1, Ignore Cover</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Blast (X)" id="8a76-7115-e057-19b5" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+            <infoLink name="Barrage" id="826c-2d10-8486-b48d" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+            <infoLink name="Ignore Cover" id="b919-5d9a-e0dc-028a" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+            <infoLink name="Indirect" id="c4e2-51f2-48c6-2c87" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+            <infoLink name="Suppressive (X)" id="1c82-5b83-0ad7-5b3b" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Taurox" hidden="false" id="a917-b471-aaef-d76c">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Transport" hidden="false" id="d0a5-1439-4bdf-95ff" targetId="3239-2096-a612-ed8e" primary="true"/>
+        <categoryLink name="Vehicle" hidden="false" id="5598-3ba6-d0ff-8ef2" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Taurox" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="7613-d999-4ccb-71c5">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="this model may also be equipped with either:" id="df2b-5e66-6bc9-95f7" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7825-e27a-9f9c-8c4b" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Heavy Stubber" hidden="false" id="d46c-b977-398f-e1bc" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Storm Bolter" hidden="false" id="66df-44dc-434b-a929" type="selectionEntry" targetId="d215-60bd-f49d-295e">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="7" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="5820-13be-40ad-a777" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c130-abbd-0bb0-7fea" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Smoke Launchers" hidden="false" id="9405-9d82-d6e6-9cf3" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Autocannon" hidden="false" id="1019-60cc-ab85-d870" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0">
+          <modifiers>
+            <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
+            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6317-6ee5-4253-782b" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Scout Sentinels" hidden="false" id="ae6f-4f78-6775-dde6">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Scout Sentinels" id="c6c6-c835-422a-5820" hidden="false" defaultSelectionEntryId="ab85-a5b4-5f6d-cc0d">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Scout Sentinel" hidden="false" id="ab85-a5b4-5f6d-cc0d">
+              <costs>
+                <cost name="pts" typeId="points" value="60"/>
+              </costs>
+              <profiles>
+                <profile name="Scout Sentinel" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="16a3-ac93-c810-d5ee">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Sentinel Chainsaw" hidden="false" id="15f1-6269-fae4-98f0" type="selectionEntry" targetId="5394-0d56-5119-c089">
+                  <infoLinks>
+                    <infoLink name="Shred" id="42ec-8e59-cc52-11b0" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                  </infoLinks>
+                </entryLink>
+                <entryLink import="true" name="Smoke Launchers" hidden="false" id="bb9c-040a-0087-6e77" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="da26-ca92-6c34-ee38" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0435-3f4d-16d8-7d5d" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Main Gun:" id="748c-a4f4-e7d3-376c" hidden="false" defaultSelectionEntryId="0d8c-62f6-523e-f8a7">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a82b-a85f-8397-9c3a-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a82b-a85f-8397-9c3a-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Autocannon" hidden="false" id="0d8c-62f6-523e-f8a7" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Lascannon" hidden="false" id="5100-b291-6532-e4f6" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Heavy Flamer" hidden="false" id="3d02-9d25-9b25-cf73" type="selectionEntry" targetId="5c44-7d31-605d-4b6f" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Multi-Laser" hidden="false" id="7924-386e-41f3-fef9" type="selectionEntry" targetId="5baa-cf1d-dfb0-8497" sortIndex="4">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="16" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Plasma Cannon" hidden="false" id="b4ab-a844-69a2-c56d" type="selectionEntry" targetId="597d-3cc2-8209-d3d1" sortIndex="5">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Missile Launcher" hidden="false" id="2767-53c1-4825-4c68" type="selectionEntry" targetId="e03f-db1b-d6b0-b70f" sortIndex="6"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c692-ecae-38f9-fc79" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2f5c-ef51-1bc2-52be" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Forward Deploy" id="0259-df0a-5d7b-92a9" hidden="false" type="rule" targetId="b433-60cc-2ed2-658f"/>
+        <infoLink name="Walker" id="ea4b-c37d-bb81-d705" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="289f-379e-a1ae-ce5b" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+        <categoryLink name="Support" hidden="false" id="47f2-c6b6-1ac4-b863" targetId="ccc6-6202-853c-23e4" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Forward Reconnaissance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1bf4-14ab-e4d0-a3b2">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s End step, if this turn was not your second turn in a row, take another turn. During that turn, for each attack targets an enemy unit visible to and within 24” of this unit, add 1 to the Hit Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Minotarur" hidden="false" id="d047-0d61-6df4-b3a0">
+      <costs>
+        <cost name="pts" typeId="points" value="260"/>
+      </costs>
+      <profiles>
+        <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9c84-610d-5585-b9e3">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Earthshaker Cannon, if you have no ready units except units with Artillery Support, you may ‘call for an artillery strike’. If you do, you may instead target an enemy unit within 16&quot; of and visible to any of your infantry units within 16&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Minotarur" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="da1d-5f2e-2be9-ba40">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">16</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Titan" id="d3e6-0d32-510b-9296" hidden="false" type="rule" targetId="8f09-c87f-c86c-8cfc"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Twin Earthshaker Cannon" hidden="false" id="8851-7b93-de07-ea59">
+          <profiles>
+            <profile name="Twin Earthshaker Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f345-3270-3360-12ac">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Suppressive 4, For each successful Wound Roll made for this weapon’s attacks, the target unit suffers 2 SW.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Barrage" id="c3d2-4d80-ed1a-e7a9" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+            <infoLink name="Suppressive (X)" id="080d-bc5b-dc20-1814" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cbab-1905-6a5b-2850-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cbab-1905-6a5b-2850-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Armour Piercing High Explosive Shells" hidden="false" id="3258-f113-6946-2ba0">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fde3-43fb-1953-00c7" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Armour Piercing High Explosive Shells" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e0d4-22e6-5cc0-dd05">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may have its Earthshaker Cannon weapon lose Suppressive and gain Killshot until the End step.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Killshot" id="6823-9cfb-12b0-2c30" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink name="Support" hidden="false" id="bb02-6722-7876-73e9" targetId="ccc6-6202-853c-23e4" primary="true"/>
+        <categoryLink name="Vehicle" hidden="false" id="3b8c-5c8f-c1ea-c003" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Manticore" hidden="false" id="fa4f-50d2-51d8-edd1">
+      <categoryLinks>
+        <categoryLink name="Support" hidden="false" id="3211-5486-78f6-8c7f" targetId="ccc6-6202-853c-23e4" primary="true"/>
+        <categoryLink name="Vehicle" hidden="false" id="14c5-89a3-56d4-f27f" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Manticore" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="55c8-e28f-7f45-066b">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5383-f8f4-095f-811a">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Storm Eagle Rocket (1 &amp; 2, 3 or 4), if you have no ready units except units with Artillery Support, you may ‘call for an artillery strike’. If you do, you may instead target an enemy unit within 16&quot; of and visible to any of your infantry units within 16&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Storm Eagle Rocket" hidden="false" id="3e06-ed93-2422-ff55">
+          <profiles>
+            <profile name="Storm Eagle Rocket" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8421-8224-30af-1959">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Barrage, Blast 3, Suppressive 1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="One Shot" id="88b9-56ac-283e-a560" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+            <infoLink name="Suppressive (X)" id="ae61-d101-a8aa-ada2" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+            <infoLink name="Indirect" id="1880-af02-7ff5-b294" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+            <infoLink name="Barrage" id="9a33-5fa1-de75-9cee" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="8052-bb74-3082-57b0-min" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="8052-bb74-3082-57b0-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="b5bc-9055-f222-7204" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3da9-e798-ca15-1067" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is also equipped with either:" id="07ee-4302-b6fc-f815" hidden="false" defaultSelectionEntryId="37af-c38d-06b7-0a89">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="37af-c38d-06b7-0a89" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+              <modifiers>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Flamer" hidden="false" id="38a0-910f-338e-0708" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1da3-7e63-46c4-2f97" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="480f-78ec-daf3-6167" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="240"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Titan" id="e88c-ef17-e295-99de" hidden="false" type="rule" targetId="8f09-c87f-c86c-8cfc"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Leman Russ Battle Tank" hidden="false" id="148d-4322-ecb7-a715">
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="c64f-4dd9-4e8f-3f27" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+        <categoryLink name="Rare" hidden="false" id="1ca5-53b6-d7d1-0323" targetId="1738-1300-9dbb-c5be" primary="false"/>
+        <categoryLink name="Support" hidden="false" id="8679-a6bd-dce2-d6cd" targetId="ccc6-6202-853c-23e4" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Leman Russ Battle Tank" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5c43-71da-ecc0-f60b">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="For an additional 30 points, this model may also be equipped with either" id="b85b-5bcc-2973-3b4c" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="d42b-d158-62df-7eb7" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Flamer" hidden="false" id="3d0f-8123-4d81-f541" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+              <modifiers>
+                <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Multi-Melta" hidden="false" id="7a65-1948-af58-6610" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <modifiers>
+                <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Plasma Cannon" hidden="false" id="0821-e5cd-adc5-ab50" type="selectionEntry" targetId="597d-3cc2-8209-d3d1">
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <modifiers>
+                <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9930-2c57-a79a-e395" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Hull:" id="3888-a2f5-4269-2107" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="e2b9-97f1-2b75-812f" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+              <modifiers>
+                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Flamer" hidden="false" id="dd4c-253f-b171-0f8c" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+              <modifiers>
+                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Lascannon" hidden="false" id="c37d-1b88-187d-755c" type="selectionEntry" targetId="54fc-ac08-3927-692d">
+              <modifiers>
+                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1470-f359-6a5e-74f8" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e12-f53b-fea7-3912" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="For an additional 20 points, this model may also be equipped with:" id="3b63-bd49-0b7f-d3d7" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Storm Bolter" hidden="false" id="9324-fb90-2fd3-73fe" type="selectionEntry" targetId="d215-60bd-f49d-295e">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifiers>
+                <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Stubber" hidden="false" id="ba93-ccf2-c140-c1a7" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifiers>
+                <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="102d-58a7-ac45-299f" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Main Gun:" id="6078-d50f-4d86-7d3b" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Battle Cannon" hidden="false" id="af1f-f44b-07e6-f222" type="selectionEntry" targetId="578d-f0a6-d3fa-a4f6" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Demolisher Cannon" hidden="false" id="5ddd-3010-5dba-4e23" type="selectionEntry" targetId="f3f1-6bf2-63c1-83ca" sortIndex="2"/>
+            <entryLink import="true" name="Nova Cannon" hidden="false" id="7593-9560-e9e5-d188" type="selectionEntry" targetId="c490-8803-47b5-14af" sortIndex="3"/>
+            <entryLink import="true" name="Plasma Destroyer " hidden="false" id="b2e7-785e-5677-f353" type="selectionEntry" targetId="6c3a-6c47-a326-f722" sortIndex="4">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Punisher Gatling Cannon" hidden="false" id="c881-386d-00e8-287a" type="selectionEntry" targetId="9a99-171a-43fc-1d17" sortIndex="5">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="30" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Autocannon" hidden="false" id="3af7-52d0-57e5-be52" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0" sortIndex="7">
+              <modifiers>
+                <modifier type="prepend" value="Twin-Linked" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Vanquisher Cannon" hidden="false" id="c044-27a9-450d-fe50" sortIndex="6">
+              <entryLinks>
+                <entryLink import="true" name="Vanquisher Cannon" hidden="false" id="e071-6700-3253-a089" type="selectionEntry" targetId="7a5b-67b9-ac68-3240">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Select One:" id="5fea-4d76-5f2e-68a6" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Heavy Stubber" hidden="false" id="6dc5-7568-5714-b6fd" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                      <modifiers>
+                        <modifier type="prepend" value="Coaxial" field="name" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Storm Bolter" hidden="false" id="ec06-a361-32f2-9812" type="selectionEntry" targetId="d215-60bd-f49d-295e">
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                      <modifiers>
+                        <modifier type="prepend" value="Coaxial" field="name" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1e82-80ac-718b-41ce" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="161a-1552-e632-744a" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="446e-c4eb-ca0b-abd1" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44aa-3b3a-2b14-3a6f" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="bb89-67e2-6eb9-8462" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c205-2c4e-64b3-5783" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Smoke Launchers" hidden="false" id="1a0f-d92f-0a3a-2626" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Dozer Blade" hidden="false" id="c656-6b1e-7351-020f" type="selectionEntry" targetId="272c-60ae-6f13-26dc"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Hellhound" hidden="false" id="5cb0-05a2-c9e8-0361">
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+      <profiles>
+        <profile name="Hellhound" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0f69-9b88-8780-5974">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Risky Stowage" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6605-ab4b-a4d7-19c9">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">When this unit dies, roll 3D6 and discard the lowest. Each unit within 4” suffers SW equal to the result.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Grinding Tracks" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f93c-fb91-bda4-95a8">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="e57c-34f9-ea05-6ea2" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="21ef-769f-bcc5-e94b" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Smoke Launchers" hidden="false" id="f245-161b-89a8-5f90" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="For an additional 20 points, this model may also be equipped with:" id="3672-fa3e-c84c-dea0" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Storm Bolter" hidden="false" id="a3d6-579d-f22b-37b7" type="selectionEntry" targetId="d215-60bd-f49d-295e">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifiers>
+                <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Stubber" hidden="false" id="b57e-5c44-adf8-7971" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifiers>
+                <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="82f8-cf17-191d-19d5" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Main Gun:" id="ac98-2a57-b732-26c6" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inferno Cannon" hidden="false" id="82e5-98d2-0e18-c77e" sortIndex="1">
+              <profiles>
+                <profile name="Inferno Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f89c-9898-ea61-bc32">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 6, Ignore Cover</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Blast (X)" id="98d0-5b68-68d9-5d3d" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+                <infoLink name="Ignore Cover" id="b026-998b-9fde-5775" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Chem Cannon" hidden="false" id="cbb9-e2f9-e56f-155b" sortIndex="2">
+              <profiles>
+                <profile name="Chem Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a021-3751-b5e5-ea8a">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">18</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 1, Ignore Cover</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Ignore Cover" id="43c1-55df-e238-348c" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+                <infoLink name="Suppressive (X)" id="7a49-7801-64e2-6c60" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Melta Cannon" hidden="false" id="4add-6fd8-8139-d017" sortIndex="3">
+              <profiles>
+                <profile name="Melta Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="88ca-5fc3-669d-7131">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Pierce" id="4108-09be-8e65-e48d" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8745-405e-1089-bc0f-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8745-405e-1089-bc0f-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Select One:" id="ea31-0d22-0029-96e2" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="9526-7374-0620-46b7" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Flamer" hidden="false" id="7311-5793-ec6c-007e" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+              <modifiers>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Multi-Melta" hidden="false" id="e953-a988-7336-c361" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a7f-2c2f-cf75-2a86-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a7f-2c2f-cf75-2a86-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="bb6d-643a-87cb-7650" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+        <categoryLink name="Support" hidden="false" id="4fdf-080d-7cd4-bb6b" targetId="ccc6-6202-853c-23e4" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Chimera" hidden="false" id="909c-f3d2-a143-3850">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <profiles>
+        <profile name="Chimera" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3077-2ea8-9795-ae6a">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Covering Fire" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="21cb-e83c-6fd2-fc1d">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there are one or more friendly infantry units within 8” of this unit, this unit’s ranged weapons gain Suppressive 1 (if that weapon already has Suppressive X, improve X by 1 instead).</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Lasgun Array" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8e85-d881-1c26-bbf3">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon cannot make attacks while a unit is not embarked within this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Suppressive (X)" id="fb11-8f6f-97ab-cbf9" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Transport" id="6a3a-bbf3-8239-fc44" hidden="false" type="rule" targetId="d78d-24c6-e7a9-e94f"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="8226-d8fc-b5b7-e415" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0aeb-82c0-e8ce-fb9b" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Smoke Launchers" hidden="false" id="26ed-beb3-950c-f220" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Main Gun:" id="3096-9d02-75f4-7663" hidden="false" defaultSelectionEntryId="1864-7f96-2ccb-933e">
+          <entryLinks>
+            <entryLink import="true" name="Multi-Laser" hidden="false" id="1864-7f96-2ccb-933e" type="selectionEntry" targetId="5baa-cf1d-dfb0-8497" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="15" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="5fbd-97f7-7d1a-6974" type="selectionEntry" targetId="82a1-b562-e748-d5ad" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Flamer" hidden="false" id="4e17-8594-86d6-101d" type="selectionEntry" targetId="5c44-7d31-605d-4b6f" sortIndex="3">
+              <modifiers>
+                <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ae29-6f4d-1b92-f7c6-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ae29-6f4d-1b92-f7c6-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Hull Gun:" id="8c68-85d4-21c5-a14f" hidden="false" defaultSelectionEntryId="68d5-595c-aa02-ac4e">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="68d5-595c-aa02-ac4e" type="selectionEntry" targetId="82a1-b562-e748-d5ad" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Flamer" hidden="false" id="b61b-6d70-958a-7d22" type="selectionEntry" targetId="5c44-7d31-605d-4b6f" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2100-ea57-39e7-e8ac-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2100-ea57-39e7-e8ac-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Secondary Gun" id="68ce-a5c1-5471-bd28" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Storm Bolter" hidden="false" id="7238-2d12-4c9e-491f" type="selectionEntry" targetId="d215-60bd-f49d-295e">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="7" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Heavy Stubber" hidden="false" id="b3bf-f154-5b00-0b6e" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="55f8-4d4b-514b-a8da" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Transport" hidden="false" id="8b85-8b26-36c8-d951" targetId="3239-2096-a612-ed8e" primary="true"/>
+        <categoryLink name="Vehicle" hidden="false" id="3cfa-f03e-642c-3db2" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Basilisk" hidden="false" id="66ef-3d00-9f54-1349">
+      <profiles>
+        <profile name="Basilisk" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="c0b9-ad58-38dc-7d6c">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="616c-af69-63b2-b089">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Earthshaker Cannon, if you have no ready units except units with Artillery Support, you may ‘call for an artillery strike’. If you do, you may instead target an enemy unit within 16&quot; of and visible to any of your infantry units within 16&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="5bdc-c98d-9a84-249e" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e127-ce49-9d59-601a" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Smoke Launchers" hidden="false" id="e3ec-fe10-9912-c1a7" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="This model is also equipped with either:" id="bf6e-4337-1d5c-4393" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="53bc-db97-9ebf-aa6f" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+              <modifiers>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Heavy Flamer" hidden="false" id="357b-ee67-540a-02a3" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+              <modifiers>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3606-12f3-8273-eb35" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39e6-bc85-280f-713e" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="54f5-3826-eaf4-86ff" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+        <categoryLink name="Support" hidden="false" id="78b1-da73-7694-c764" targetId="ccc6-6202-853c-23e4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="130"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Armour Piercing High Explosive Shells" hidden="false" id="2af5-2338-8d60-8e4d">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0afc-90b5-3e05-59fc" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Armour Piercing High Explosive Shells" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e2d4-43ec-a60a-ecf7">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may have its Earthshaker Cannon weapon lose Suppressive and gain Killshot until the End step.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Killshot" id="888c-6dd3-6b3b-0ebb" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Earthshaker Cannon" hidden="false" id="226d-3e2d-b6a8-aace">
+          <profiles>
+            <profile name="Earthshaker Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d4eb-32fc-36cd-cddb">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Suppressive 4, For each successful Wound Roll made for this weapon’s attacks, the target unit suffers 2 SW.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Barrage" id="2d82-5dc0-cf1e-101a" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+            <infoLink name="Suppressive (X)" id="eb4e-0561-2100-a6d6" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5aee-e599-d5c0-9fbf-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5aee-e599-d5c0-9fbf-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Armoured Sentinels" hidden="false" id="9cf5-101c-d65f-57bd">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Armoured Sentinels" id="d74a-9dcf-5b30-582f" hidden="false" defaultSelectionEntryId="4e50-4090-9d48-a8b7">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Armoured Sentinel" hidden="false" id="4e50-4090-9d48-a8b7">
+              <costs>
+                <cost name="pts" typeId="points" value="80"/>
+              </costs>
+              <profiles>
+                <profile name="Armoured Sentinel" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="abb3-0afe-4a8e-f6d9">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Sentinel Chainsaw" hidden="false" id="5bac-9261-1ecc-70d9" type="selectionEntry" targetId="5394-0d56-5119-c089"/>
+                <entryLink import="true" name="Smoke Launchers" hidden="false" id="df43-f958-5f28-6027" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="6d5a-a8a1-f8dd-ef9d" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a08b-b3cd-5cab-5c0c" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Main Gun:" id="27a8-48e1-da49-7fb2" hidden="false">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="541a-d968-d9e2-38ff-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="541a-d968-d9e2-38ff-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Autocannon" hidden="false" id="0588-23b4-4337-8e6f" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Lascannon" hidden="false" id="9a19-6c1e-f41b-ba97" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="2">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Heavy Flamer" hidden="false" id="eb25-6d77-4aa6-27fc" type="selectionEntry" targetId="5c44-7d31-605d-4b6f" sortIndex="3">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Multi-Laser" hidden="false" id="2477-05c2-d1db-aa63" type="selectionEntry" targetId="5baa-cf1d-dfb0-8497" sortIndex="4">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="32" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Plasma Cannon" hidden="false" id="cddb-fbe2-76bb-9722" type="selectionEntry" targetId="597d-3cc2-8209-d3d1" sortIndex="5">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Missile Launcher" hidden="false" id="65fb-4825-9138-e2ea" type="selectionEntry" targetId="e03f-db1b-d6b0-b70f" sortIndex="6">
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                      <modifiers>
+                        <modifier type="multiply" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="36ef-bb93-64a7-1145" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ccad-86bc-6c25-5446" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Forward Deploy" id="b454-25c2-8e55-0822" hidden="false" type="rule" targetId="b433-60cc-2ed2-658f"/>
+        <infoLink name="Walker" id="8db7-a55d-2da2-7b4e" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="871b-0add-6870-f091" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+        <categoryLink name="Support" hidden="false" id="7028-d8d2-312d-9535" targetId="ccc6-6202-853c-23e4" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Frontline Walker" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c059-d9ab-93ff-5388">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit advances, each Hv weapon in this unit is changed to Aslt.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <categoryEntries>
@@ -1595,1123 +2782,6 @@ Grinding Treads: After this unit’s Move step, you may select an enemy unit w
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Chimera" hidden="false" id="909c-f3d2-a143-3850">
-      <costs>
-        <cost name="pts" typeId="points" value="100"/>
-      </costs>
-      <profiles>
-        <profile name="Chimera" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3077-2ea8-9795-ae6a">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Covering Fire" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="21cb-e83c-6fd2-fc1d">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there are one or more friendly infantry units within 8” of this unit, this unit’s ranged weapons gain Suppressive 1 (if that weapon already has Suppressive X, improve X by 1 instead).</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Lasgun Array" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8e85-d881-1c26-bbf3">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon cannot make attacks while a unit is not embarked within this unit.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Suppressive (X)" id="fb11-8f6f-97ab-cbf9" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-        <infoLink name="Transport" id="6a3a-bbf3-8239-fc44" hidden="false" type="rule" targetId="d78d-24c6-e7a9-e94f"/>
-      </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="8226-d8fc-b5b7-e415" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0aeb-82c0-e8ce-fb9b" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Smoke Launchers" hidden="false" id="26ed-beb3-950c-f220" type="selectionEntry" targetId="d653-3fc2-d577-6295">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Main Gun:" id="3096-9d02-75f4-7663" hidden="false" defaultSelectionEntryId="1864-7f96-2ccb-933e">
-          <entryLinks>
-            <entryLink import="true" name="Multi-Laser" hidden="false" id="1864-7f96-2ccb-933e" type="selectionEntry" targetId="5baa-cf1d-dfb0-8497" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="15" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="5fbd-97f7-7d1a-6974" type="selectionEntry" targetId="82a1-b562-e748-d5ad" sortIndex="2">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="4e17-8594-86d6-101d" type="selectionEntry" targetId="5c44-7d31-605d-4b6f" sortIndex="3">
-              <modifiers>
-                <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ae29-6f4d-1b92-f7c6-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ae29-6f4d-1b92-f7c6-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Hull Gun:" id="8c68-85d4-21c5-a14f" hidden="false" defaultSelectionEntryId="68d5-595c-aa02-ac4e">
-          <entryLinks>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="68d5-595c-aa02-ac4e" type="selectionEntry" targetId="82a1-b562-e748-d5ad" sortIndex="2">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="b61b-6d70-958a-7d22" type="selectionEntry" targetId="5c44-7d31-605d-4b6f" sortIndex="3">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2100-ea57-39e7-e8ac-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2100-ea57-39e7-e8ac-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Secondary Gun" id="68ce-a5c1-5471-bd28" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Storm Bolter" hidden="false" id="7238-2d12-4c9e-491f" type="selectionEntry" targetId="d215-60bd-f49d-295e">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="7" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Heavy Stubber" hidden="false" id="b3bf-f154-5b00-0b6e" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="55f8-4d4b-514b-a8da" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Transport" hidden="false" id="8b85-8b26-36c8-d951" targetId="3239-2096-a612-ed8e" primary="true"/>
-        <categoryLink name="Vehicle" hidden="false" id="3cfa-f03e-642c-3db2" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-      </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Taurox" hidden="false" id="18ed-3029-937a-8157">
-      <costs>
-        <cost name="pts" typeId="points" value="80"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="Transport" hidden="false" id="7917-1bbc-8a24-d2c5" targetId="3239-2096-a612-ed8e" primary="true"/>
-        <categoryLink name="Vehicle" hidden="false" id="6695-04d2-0f42-2759" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-      </categoryLinks>
-      <profiles>
-        <profile name="Taurox" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="dd69-167c-f608-fafa">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="this model may also be equipped with either:" id="d9e6-be61-0ee4-ae7e" hidden="false">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c2f-55ec-1125-0a51" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Heavy Stubber" hidden="false" id="a6af-36e6-21f7-14aa" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Storm Bolter" hidden="false" id="e0b6-55fd-681f-bd60" type="selectionEntry" targetId="d215-60bd-f49d-295e">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="7" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="3484-2e02-5fa9-6c24" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f127-0758-34b5-378c" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Smoke Launchers" hidden="false" id="cd0b-ef7e-5aa8-8eb4" type="selectionEntry" targetId="d653-3fc2-d577-6295">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Autocannon" hidden="false" id="18f5-d76d-5aac-e84d" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0">
-          <modifiers>
-            <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
-            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d1a-aa2f-49f4-8773" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Leman Russ Battle Tank" hidden="false" id="148d-4322-ecb7-a715">
-      <costs>
-        <cost name="pts" typeId="points" value="120"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="c64f-4dd9-4e8f-3f27" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-        <categoryLink name="Rare" hidden="false" id="1ca5-53b6-d7d1-0323" targetId="1738-1300-9dbb-c5be" primary="false"/>
-        <categoryLink name="Support" hidden="false" id="8679-a6bd-dce2-d6cd" targetId="ccc6-6202-853c-23e4" primary="true"/>
-      </categoryLinks>
-      <profiles>
-        <profile name="Leman Russ Battle Tank" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5c43-71da-ecc0-f60b">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="For an additional 30 points, this model may also be equipped with either" id="b85b-5bcc-2973-3b4c" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="d42b-d158-62df-7eb7" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="3d0f-8123-4d81-f541" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
-              <modifiers>
-                <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Multi-Melta" hidden="false" id="7a65-1948-af58-6610" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-              <modifiers>
-                <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Plasma Cannon" hidden="false" id="0821-e5cd-adc5-ab50" type="selectionEntry" targetId="597d-3cc2-8209-d3d1">
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-              <modifiers>
-                <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9930-2c57-a79a-e395" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Hull:" id="3888-a2f5-4269-2107" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="e2b9-97f1-2b75-812f" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-              <modifiers>
-                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="dd4c-253f-b171-0f8c" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
-              <modifiers>
-                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lascannon" hidden="false" id="c37d-1b88-187d-755c" type="selectionEntry" targetId="54fc-ac08-3927-692d">
-              <modifiers>
-                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1470-f359-6a5e-74f8" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e12-f53b-fea7-3912" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="For an additional 20 points, this model may also be equipped with:" id="3b63-bd49-0b7f-d3d7" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Storm Bolter" hidden="false" id="9324-fb90-2fd3-73fe" type="selectionEntry" targetId="d215-60bd-f49d-295e">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <modifiers>
-                <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Stubber" hidden="false" id="ba93-ccf2-c140-c1a7" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <modifiers>
-                <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="102d-58a7-ac45-299f" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Main Gun:" id="6078-d50f-4d86-7d3b" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Battle Cannon" hidden="false" id="af1f-f44b-07e6-f222" type="selectionEntry" targetId="578d-f0a6-d3fa-a4f6" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Demolisher Cannon" hidden="false" id="5ddd-3010-5dba-4e23" type="selectionEntry" targetId="f3f1-6bf2-63c1-83ca" sortIndex="2"/>
-            <entryLink import="true" name="Nova Cannon" hidden="false" id="7593-9560-e9e5-d188" type="selectionEntry" targetId="c490-8803-47b5-14af" sortIndex="3"/>
-            <entryLink import="true" name="Plasma Destroyer " hidden="false" id="b2e7-785e-5677-f353" type="selectionEntry" targetId="6c3a-6c47-a326-f722" sortIndex="4">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Punisher Gatling Cannon" hidden="false" id="c881-386d-00e8-287a" type="selectionEntry" targetId="9a99-171a-43fc-1d17" sortIndex="5">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="30" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Autocannon" hidden="false" id="3af7-52d0-57e5-be52" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0" sortIndex="7">
-              <modifiers>
-                <modifier type="prepend" value="Twin-Linked" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Vanquisher Cannon" hidden="false" id="c044-27a9-450d-fe50" sortIndex="6">
-              <entryLinks>
-                <entryLink import="true" name="Vanquisher Cannon" hidden="false" id="e071-6700-3253-a089" type="selectionEntry" targetId="7a5b-67b9-ac68-3240">
-                  <modifiers>
-                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Select One:" id="5fea-4d76-5f2e-68a6" hidden="false">
-                  <entryLinks>
-                    <entryLink import="true" name="Heavy Stubber" hidden="false" id="6dc5-7568-5714-b6fd" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                      <modifiers>
-                        <modifier type="prepend" value="Coaxial" field="name" affects="profiles.Weapon"/>
-                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Storm Bolter" hidden="false" id="ec06-a361-32f2-9812" type="selectionEntry" targetId="d215-60bd-f49d-295e">
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                      <modifiers>
-                        <modifier type="prepend" value="Coaxial" field="name" affects="profiles.Weapon"/>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1e82-80ac-718b-41ce" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="161a-1552-e632-744a" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="446e-c4eb-ca0b-abd1" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44aa-3b3a-2b14-3a6f" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="bb89-67e2-6eb9-8462" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c205-2c4e-64b3-5783" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Smoke Launchers" hidden="false" id="1a0f-d92f-0a3a-2626" type="selectionEntry" targetId="d653-3fc2-d577-6295">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Dozer Blade" hidden="false" id="c656-6b1e-7351-020f" type="selectionEntry" targetId="272c-60ae-6f13-26dc"/>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Scout Sentinels" hidden="false" id="ae6f-4f78-6775-dde6">
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Scout Sentinels" id="c6c6-c835-422a-5820" hidden="false" defaultSelectionEntryId="ab85-a5b4-5f6d-cc0d">
-          <selectionEntries>
-            <selectionEntry type="model" import="true" name="Scout Sentinel" hidden="false" id="ab85-a5b4-5f6d-cc0d">
-              <costs>
-                <cost name="pts" typeId="points" value="60"/>
-              </costs>
-              <profiles>
-                <profile name="Scout Sentinel" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="16a3-ac93-c810-d5ee">
-                  <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
-                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <entryLinks>
-                <entryLink import="true" name="Sentinel Chainsaw" hidden="false" id="15f1-6269-fae4-98f0" type="selectionEntry" targetId="5394-0d56-5119-c089">
-                  <infoLinks>
-                    <infoLink name="Shred" id="42ec-8e59-cc52-11b0" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-                  </infoLinks>
-                </entryLink>
-                <entryLink import="true" name="Smoke Launchers" hidden="false" id="bb9c-040a-0087-6e77" type="selectionEntry" targetId="d653-3fc2-d577-6295">
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="da26-ca92-6c34-ee38" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0435-3f4d-16d8-7d5d" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Main Gun:" id="748c-a4f4-e7d3-376c" hidden="false" defaultSelectionEntryId="0d8c-62f6-523e-f8a7">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a82b-a85f-8397-9c3a-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a82b-a85f-8397-9c3a-max" includeChildSelections="false"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink import="true" name="Autocannon" hidden="false" id="0d8c-62f6-523e-f8a7" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0" sortIndex="1">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Lascannon" hidden="false" id="5100-b291-6532-e4f6" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="2">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Heavy Flamer" hidden="false" id="3d02-9d25-9b25-cf73" type="selectionEntry" targetId="5c44-7d31-605d-4b6f" sortIndex="3">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Multi-Laser" hidden="false" id="7924-386e-41f3-fef9" type="selectionEntry" targetId="5baa-cf1d-dfb0-8497" sortIndex="4">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="16" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Plasma Cannon" hidden="false" id="b4ab-a844-69a2-c56d" type="selectionEntry" targetId="597d-3cc2-8209-d3d1" sortIndex="5">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Missile Launcher" hidden="false" id="2767-53c1-4825-4c68" type="selectionEntry" targetId="e03f-db1b-d6b0-b70f" sortIndex="6"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c692-ecae-38f9-fc79" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2f5c-ef51-1bc2-52be" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <infoLinks>
-        <infoLink name="Forward Deploy" id="0259-df0a-5d7b-92a9" hidden="false" type="rule" targetId="b433-60cc-2ed2-658f"/>
-        <infoLink name="Walker" id="ea4b-c37d-bb81-d705" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="289f-379e-a1ae-ce5b" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-        <categoryLink targetId="ccc6-6202-853c-23e4" id="47f2-c6b6-1ac4-b863" primary="true" name="Support"/>
-      </categoryLinks>
-      <profiles>
-        <profile name="Forward Reconnaissance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1bf4-14ab-e4d0-a3b2">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s End step, if this turn was not your second turn in a row, take another turn. During that turn, for each attack targets an enemy unit visible to and within 24” of this unit, add 1 to the Hit Roll of that attack.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Armoured Sentinels" hidden="false" id="9cf5-101c-d65f-57bd">
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Armoured Sentinels" id="d74a-9dcf-5b30-582f" hidden="false" defaultSelectionEntryId="4e50-4090-9d48-a8b7">
-          <selectionEntries>
-            <selectionEntry type="model" import="true" name="Armoured Sentinel" hidden="false" id="4e50-4090-9d48-a8b7">
-              <costs>
-                <cost name="pts" typeId="points" value="80"/>
-              </costs>
-              <profiles>
-                <profile name="Armoured Sentinel" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="abb3-0afe-4a8e-f6d9">
-                  <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <entryLinks>
-                <entryLink import="true" name="Sentinel Chainsaw" hidden="false" id="5bac-9261-1ecc-70d9" type="selectionEntry" targetId="5394-0d56-5119-c089"/>
-                <entryLink import="true" name="Smoke Launchers" hidden="false" id="df43-f958-5f28-6027" type="selectionEntry" targetId="d653-3fc2-d577-6295">
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="6d5a-a8a1-f8dd-ef9d" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a08b-b3cd-5cab-5c0c" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Main Gun:" id="27a8-48e1-da49-7fb2" hidden="false">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="541a-d968-d9e2-38ff-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="541a-d968-d9e2-38ff-max" includeChildSelections="false"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink import="true" name="Autocannon" hidden="false" id="0588-23b4-4337-8e6f" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0" sortIndex="1">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Lascannon" hidden="false" id="9a19-6c1e-f41b-ba97" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="2">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Heavy Flamer" hidden="false" id="eb25-6d77-4aa6-27fc" type="selectionEntry" targetId="5c44-7d31-605d-4b6f" sortIndex="3">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Multi-Laser" hidden="false" id="2477-05c2-d1db-aa63" type="selectionEntry" targetId="5baa-cf1d-dfb0-8497" sortIndex="4">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="32" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Plasma Cannon" hidden="false" id="cddb-fbe2-76bb-9722" type="selectionEntry" targetId="597d-3cc2-8209-d3d1" sortIndex="5">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Missile Launcher" hidden="false" id="65fb-4825-9138-e2ea" type="selectionEntry" targetId="e03f-db1b-d6b0-b70f" sortIndex="6">
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                      <modifiers>
-                        <modifier type="multiply" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="36ef-bb93-64a7-1145" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ccad-86bc-6c25-5446" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <infoLinks>
-        <infoLink name="Forward Deploy" id="b454-25c2-8e55-0822" hidden="false" type="rule" targetId="b433-60cc-2ed2-658f"/>
-        <infoLink name="Walker" id="8db7-a55d-2da2-7b4e" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="871b-0add-6870-f091" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-        <categoryLink targetId="ccc6-6202-853c-23e4" id="7028-d8d2-312d-9535" primary="true" name="Support"/>
-      </categoryLinks>
-      <profiles>
-        <profile name="Frontline Walker" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c059-d9ab-93ff-5388">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit advances, each Hv weapon in this unit is changed to Aslt.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Hellhound" hidden="false" id="5cb0-05a2-c9e8-0361">
-      <costs>
-        <cost name="pts" typeId="points" value="110"/>
-      </costs>
-      <profiles>
-        <profile name="Hellhound" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0f69-9b88-8780-5974">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">10&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Risky Stowage" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6605-ab4b-a4d7-19c9">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">When this unit dies, roll 3D6 and discard the lowest. Each unit within 4” suffers SW equal to the result.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Grinding Tracks" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f93c-fb91-bda4-95a8">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </characteristics>
-        </profile>
-      </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="e57c-34f9-ea05-6ea2" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="21ef-769f-bcc5-e94b" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Smoke Launchers" hidden="false" id="f245-161b-89a8-5f90" type="selectionEntry" targetId="d653-3fc2-d577-6295">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="For an additional 20 points, this model may also be equipped with:" id="3672-fa3e-c84c-dea0" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Storm Bolter" hidden="false" id="a3d6-579d-f22b-37b7" type="selectionEntry" targetId="d215-60bd-f49d-295e">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <modifiers>
-                <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Stubber" hidden="false" id="b57e-5c44-adf8-7971" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <modifiers>
-                <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="82f8-cf17-191d-19d5" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Main Gun:" id="ac98-2a57-b732-26c6" hidden="false">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Inferno Cannon" hidden="false" id="82e5-98d2-0e18-c77e" sortIndex="1">
-              <profiles>
-                <profile name="Inferno Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f89c-9898-ea61-bc32">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 6, Ignore Cover</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Blast (X)" id="98d0-5b68-68d9-5d3d" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
-                <infoLink name="Ignore Cover" id="b026-998b-9fde-5775" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Chem Cannon" hidden="false" id="cbb9-e2f9-e56f-155b" sortIndex="2">
-              <profiles>
-                <profile name="Chem Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a021-3751-b5e5-ea8a">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">18</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 1, Ignore Cover</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Ignore Cover" id="43c1-55df-e238-348c" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
-                <infoLink name="Suppressive (X)" id="7a49-7801-64e2-6c60" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Melta Cannon" hidden="false" id="4add-6fd8-8139-d017" sortIndex="3">
-              <profiles>
-                <profile name="Melta Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="88ca-5fc3-669d-7131">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Pierce" id="4108-09be-8e65-e48d" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8745-405e-1089-bc0f-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8745-405e-1089-bc0f-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Select One:" id="ea31-0d22-0029-96e2" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="9526-7374-0620-46b7" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="7311-5793-ec6c-007e" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
-              <modifiers>
-                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Multi-Melta" hidden="false" id="e953-a988-7336-c361" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a7f-2c2f-cf75-2a86-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a7f-2c2f-cf75-2a86-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="bb6d-643a-87cb-7650" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-        <categoryLink targetId="ccc6-6202-853c-23e4" id="4fdf-080d-7cd4-bb6b" primary="true" name="Support"/>
-      </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Basilisk" hidden="false" id="66ef-3d00-9f54-1349">
-      <profiles>
-        <profile name="Basilisk" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="c0b9-ad58-38dc-7d6c">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="616c-af69-63b2-b089">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Earthshaker Cannon, if you have no ready units except units with Artillery Support, you may ‘call for an artillery strike’. If you do, you may instead target an enemy unit within 16&quot; of and visible to any of your infantry units within 16&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="5bdc-c98d-9a84-249e" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e127-ce49-9d59-601a" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Smoke Launchers" hidden="false" id="e3ec-fe10-9912-c1a7" type="selectionEntry" targetId="d653-3fc2-d577-6295">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="This model is also equipped with either:" id="bf6e-4337-1d5c-4393" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="53bc-db97-9ebf-aa6f" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-              <modifiers>
-                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="357b-ee67-540a-02a3" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3606-12f3-8273-eb35" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39e6-bc85-280f-713e" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="54f5-3826-eaf4-86ff" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-        <categoryLink name="Support" hidden="false" id="78b1-da73-7694-c764" targetId="ccc6-6202-853c-23e4" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="130"/>
-      </costs>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Armour Piercing High Explosive Shells" hidden="false" id="2af5-2338-8d60-8e4d">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0afc-90b5-3e05-59fc" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Armour Piercing High Explosive Shells" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e2d4-43ec-a60a-ecf7">
-              <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may have its Earthshaker Cannon weapon lose Suppressive and gain Killshot until the End step.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Killshot" id="888c-6dd3-6b3b-0ebb" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
-          </infoLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Earthshaker Cannon" hidden="false" id="226d-3e2d-b6a8-aace">
-          <profiles>
-            <profile name="Earthshaker Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d4eb-32fc-36cd-cddb">
-              <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Suppressive 4, For each successful Wound Roll made for this weapon’s attacks, the target unit suffers 2 SW.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Barrage" id="2d82-5dc0-cf1e-101a" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-            <infoLink name="Suppressive (X)" id="eb4e-0561-2100-a6d6" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5aee-e599-d5c0-9fbf-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5aee-e599-d5c0-9fbf-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Wyvern" hidden="false" id="3083-2edc-8324-579e">
-      <profiles>
-        <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6491-b3b5-cac3-19d8">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Quad Stormshard Mortar, if you have no ready units except units with Artillery Support, you may ‘call for an artillery strike’. If you do, you may instead target an enemy unit within 16&quot; of and visible to any of your infantry units within 16&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Wyvern" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="342e-76ae-7da8-ed77">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="63ef-6f46-bc6b-978a" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0521-f677-d89b-b3a2" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Smoke Launchers" hidden="false" id="dd7f-854a-fff5-62ff" type="selectionEntry" targetId="d653-3fc2-d577-6295">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="This model is also equipped with either:" id="8625-06ac-7ab4-5206" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="6775-16d0-fb6d-4ad9" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-              <modifiers>
-                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="2576-b8df-da8a-e772" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e7be-0f63-fb66-2ae9" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60b1-e2de-89b3-ea81" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="c7e1-2da6-62f8-141c" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-        <categoryLink name="Support" hidden="false" id="2bae-6b39-eb1e-fa15" targetId="ccc6-6202-853c-23e4" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="120"/>
-      </costs>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Quad Stormshard Mortar" hidden="false" id="1ba0-5ce4-4b2e-3ffc">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4fd1-3e40-ab15-a874-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fd1-3e40-ab15-a874-max" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Quad Stormshard Mortar" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d568-df0c-e13d-5a8d">
-              <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Blast 3, Suppressive 1, Ignore Cover</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Blast (X)" id="8a76-7115-e057-19b5" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
-            <infoLink name="Barrage" id="826c-2d10-8486-b48d" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-            <infoLink name="Ignore Cover" id="b919-5d9a-e0dc-028a" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
-            <infoLink name="Indirect" id="c4e2-51f2-48c6-2c87" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
-            <infoLink name="Suppressive (X)" id="1c82-5b83-0ad7-5b3b" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Manticore" hidden="false" id="fa4f-50d2-51d8-edd1">
-      <categoryLinks>
-        <categoryLink name="Support" hidden="false" id="3211-5486-78f6-8c7f" targetId="ccc6-6202-853c-23e4" primary="true"/>
-        <categoryLink name="Vehicle" hidden="false" id="14c5-89a3-56d4-f27f" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-      </categoryLinks>
-      <profiles>
-        <profile name="Manticore" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="55c8-e28f-7f45-066b">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5383-f8f4-095f-811a">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Storm Eagle Rocket (1 &amp; 2, 3 or 4), if you have no ready units except units with Artillery Support, you may ‘call for an artillery strike’. If you do, you may instead target an enemy unit within 16&quot; of and visible to any of your infantry units within 16&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Storm Eagle Rocket" hidden="false" id="3e06-ed93-2422-ff55">
-          <profiles>
-            <profile name="Storm Eagle Rocket" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8421-8224-30af-1959">
-              <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Barrage, Blast 3, Suppressive 1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="One Shot" id="88b9-56ac-283e-a560" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-            <infoLink name="Suppressive (X)" id="ae61-d101-a8aa-ada2" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-            <infoLink name="Indirect" id="1880-af02-7ff5-b294" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
-            <infoLink name="Barrage" id="9a33-5fa1-de75-9cee" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="8052-bb74-3082-57b0-min" includeChildSelections="false"/>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="8052-bb74-3082-57b0-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="b5bc-9055-f222-7204" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3da9-e798-ca15-1067" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="This model is also equipped with either:" id="07ee-4302-b6fc-f815" hidden="false" defaultSelectionEntryId="37af-c38d-06b7-0a89">
-          <entryLinks>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="37af-c38d-06b7-0a89" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-              <modifiers>
-                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="38a0-910f-338e-0708" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1da3-7e63-46c4-2f97" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="480f-78ec-daf3-6167" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="240"/>
-      </costs>
-      <infoLinks>
-        <infoLink name="Titan" id="e88c-ef17-e295-99de" hidden="false" type="rule" targetId="8f09-c87f-c86c-8cfc"/>
-      </infoLinks>
-    </selectionEntry>
     <selectionEntry type="unit" import="true" name="Heavy Weapons Squad" hidden="false" id="1317-c172-eade-05c8">
       <selectionEntryGroups>
         <selectionEntryGroup name="Heavy Weapons Teams" id="7fea-d95d-7195-c21b" hidden="false" defaultSelectionEntryId="3e13-0f80-608c-7453">
@@ -3027,76 +3097,6 @@ Grinding Treads: After this unit’s Move step, you may select an enemy unit w
         <categoryLink name="Infantry" hidden="false" id="dd42-1b6f-8c9e-7924" targetId="205c-3072-067b-d808" primary="false"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Minotarur" hidden="false" id="d047-0d61-6df4-b3a0">
-      <costs>
-        <cost name="pts" typeId="points" value="260"/>
-      </costs>
-      <profiles>
-        <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9c84-610d-5585-b9e3">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Earthshaker Cannon, if you have no ready units except units with Artillery Support, you may ‘call for an artillery strike’. If you do, you may instead target an enemy unit within 16&quot; of and visible to any of your infantry units within 16&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Minotarur" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="da1d-5f2e-2be9-ba40">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">3&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">16</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Titan" id="d3e6-0d32-510b-9296" hidden="false" type="rule" targetId="8f09-c87f-c86c-8cfc"/>
-      </infoLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Twin Earthshaker Cannon" hidden="false" id="8851-7b93-de07-ea59">
-          <profiles>
-            <profile name="Twin Earthshaker Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f345-3270-3360-12ac">
-              <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Suppressive 4, For each successful Wound Roll made for this weapon’s attacks, the target unit suffers 2 SW.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Barrage" id="c3d2-4d80-ed1a-e7a9" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
-            <infoLink name="Suppressive (X)" id="080d-bc5b-dc20-1814" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cbab-1905-6a5b-2850-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cbab-1905-6a5b-2850-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Armour Piercing High Explosive Shells" hidden="false" id="3258-f113-6946-2ba0">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fde3-43fb-1953-00c7" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Armour Piercing High Explosive Shells" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e0d4-22e6-5cc0-dd05">
-              <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may have its Earthshaker Cannon weapon lose Suppressive and gain Killshot until the End step.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Killshot" id="6823-9cfb-12b0-2c30" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
-      <categoryLinks>
-        <categoryLink name="Support" hidden="false" id="bb02-6722-7876-73e9" targetId="ccc6-6202-853c-23e4" primary="true"/>
-        <categoryLink name="Vehicle" hidden="false" id="3b8c-5c8f-c1ea-c003" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-      </categoryLinks>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="ad54-8299-230f-f22c" sortIndex="2">
       <categoryLinks>
         <categoryLink targetId="9cd6-0442-3f35-6b52" id="ef7b-dfd1-05e3-67c3" primary="true" name="Configuration"/>
@@ -3190,4 +3190,16 @@ c) MORDIAN IRON GUARD</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
+  <entryLinks>
+    <entryLink import="true" name="Taurox" hidden="false" id="1046-24db-1330-0b09" type="selectionEntry" targetId="a917-b471-aaef-d76c"/>
+    <entryLink import="true" name="Scout Sentinels" hidden="false" id="8c44-700e-6695-55f8" type="selectionEntry" targetId="ae6f-4f78-6775-dde6"/>
+    <entryLink import="true" name="Minotarur" hidden="false" id="a34e-7129-3dd7-f6a2" type="selectionEntry" targetId="d047-0d61-6df4-b3a0"/>
+    <entryLink import="true" name="Manticore" hidden="false" id="6393-0ed5-875c-3633" type="selectionEntry" targetId="fa4f-50d2-51d8-edd1"/>
+    <entryLink import="true" name="Hellhound" hidden="false" id="2e2d-6c0b-a7dc-b28c" type="selectionEntry" targetId="5cb0-05a2-c9e8-0361"/>
+    <entryLink import="true" name="Leman Russ Battle Tank" hidden="false" id="9082-26b4-61bc-157c" type="selectionEntry" targetId="148d-4322-ecb7-a715"/>
+    <entryLink import="true" name="Chimera" hidden="false" id="0102-15de-480a-b27a" type="selectionEntry" targetId="909c-f3d2-a143-3850"/>
+    <entryLink import="true" name="Wyvern" hidden="false" id="9816-35b5-d15a-5383" type="selectionEntry" targetId="3083-2edc-8324-579e"/>
+    <entryLink import="true" name="Basilisk" hidden="false" id="179b-0bb1-844e-ddac" type="selectionEntry" targetId="66ef-3d00-9f54-1349"/>
+    <entryLink import="true" name="Armoured Sentinels" hidden="false" id="0112-e3b3-22aa-fe76" type="selectionEntry" targetId="9cf5-101c-d65f-57bd"/>
+  </entryLinks>
 </catalogue>
