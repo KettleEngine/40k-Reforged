@@ -5,48 +5,27 @@
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
     <categoryEntry name="Configuration" id="9cd6-0442-3f35-6b52" hidden="false"/>
     <categoryEntry name="Leaders" id="2886-2afd-f65f-9d8e" hidden="false">
-      <description>Leader units must attach to another unit. Attach each leader unit in your army list to one of the compatible units listed under its unit profile.
-
-
-To attach a leader unit, select a compatible unit in your army list which does not already have an attached leader. Those two units are combined into one unit for the battle.
-
-
-The combined unit has the unit types of both units.
-
-
-Change the attached leader unit’s Toughness (T) and Resolve (Rv) to equal the other unit’s T and Rv.
-
-
-While there are non-leader models in a leader unit, when you make a Saving Throw for this unit, you must choose non-leader models to suffer the wound for that Saving Throw (even if a leader model is missing H).</description>
+      <description/>
     </categoryEntry>
     <categoryEntry name="Support" id="ccc6-6202-853c-23e4" hidden="false"/>
     <categoryEntry name="Elites" id="4820-e2b5-9e00-bb68" hidden="false"/>
     <categoryEntry name="Infantry" id="205c-3072-067b-d808" hidden="false">
-      <description>Infantry models may move over friendly infantry models as if they were not there.</description>
+      <description/>
     </categoryEntry>
     <categoryEntry name="Vehicle" id="b239-6bd1-e7a0-0a02" hidden="false">
-      <description>Vehicle models may select targets for their ranged weapons as if the vehicle model were not within engagement range of any enemy units.
-
-
-Vehicle units can be targeted with ranged weapons as if they were not within engagement range of any enemy units.
-
-
-After an Attacks step where a vehicle unit is reduced to 4 or fewer Health (excluding zero), make an Explode Roll for that unit.
-
-
-Vehicle models can give cover to friendly infantry.</description>
+      <description/>
     </categoryEntry>
     <categoryEntry name="Monster" id="6537-7b2d-b2c8-6005" hidden="false">
-      <description>Monster units and models follow the same rules as vehicles.</description>
+      <description/>
     </categoryEntry>
     <categoryEntry name="Chaos" id="f809-9826-f58a-6b8d" hidden="false">
-      <description>Chaos units have no special rules, but some rules interact with their chaos type.</description>
+      <description/>
     </categoryEntry>
     <categoryEntry name="Rare" id="1738-1300-9dbb-c5be" hidden="false">
-      <description>Rare units may only be included once in your army list during List Building.</description>
+      <description/>
     </categoryEntry>
     <categoryEntry name="Countless Leader" id="1dc0-a947-c240-76bb" hidden="false">
-      <description>same as a regular leader, just i don&apos;t want to change how the force chart is made</description>
+      <description/>
     </categoryEntry>
   </categoryEntries>
   <forceEntries>

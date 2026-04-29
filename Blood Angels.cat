@@ -315,7 +315,7 @@
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b32c-8b38-09c8-ee77" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Relics (Refrence)" hidden="false" id="7835-1e7c-5951-ff06" sortIndex="3">
+    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="7835-1e7c-5951-ff06" sortIndex="3">
       <categoryLinks>
         <categoryLink targetId="9cd6-0442-3f35-6b52" id="33bb-eecd-2309-02fa" primary="true" name="Configuration"/>
       </categoryLinks>
@@ -927,15 +927,6 @@
         <infoLink name="Heavy Armour" id="56b8-971b-1267-25c3" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="Guardian Spear" hidden="false" id="6ef2-2ff6-5647-1c05" type="selectionEntry" targetId="ee01-7e6b-43a9-8d7a">
-          <modifiers>
-            <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="self.entries.98e5-c268-975f-d93d.profiles.Weapon"/>
-            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="self.entries.9def-87a0-9059-995b.profiles.Weapon"/>
-          </modifiers>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e73a-3bc2-18d5-ccde" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
         <entryLink import="true" name="Praesidium Shield" hidden="false" id="5da1-0258-fea3-cb7e" type="selectionEntry" targetId="0e20-f816-5184-c9e8">
           <costs>
             <cost name="pts" typeId="points" value="10"/>
@@ -948,9 +939,9 @@
         </entryLink>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Vexilla" id="6de6-5280-6244-6830" hidden="false" defaultSelectionEntryId="7526-dc6a-dfe9-de90">
+        <selectionEntryGroup name="Weapon" id="6de6-5280-6244-6830" hidden="false" defaultSelectionEntryId="6ef2-2ff6-5647-1c05" sortIndex="1">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Vexilla" hidden="false" id="7526-dc6a-dfe9-de90" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Vexilla" hidden="false" id="7526-dc6a-dfe9-de90" sortIndex="2">
               <profiles>
                 <profile name="Vexilla" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3873-09f4-69da-7d6e">
                   <characteristics>
@@ -962,28 +953,35 @@
                     <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Move step, each enemy infantry unit 12” of and visible to this unit suffers 4+2D3 Suppression.</characteristic>
                   </characteristics>
                 </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Suppressive (X)" id="f5fe-0634-44cf-3799" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Teleport Beacon" hidden="false" id="e917-76ba-98c7-bd56" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <profiles>
                 <profile name="Teleport Beacon" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0ad3-122c-4905-a4b6">
                   <characteristics>
                     <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is in the battlefield, each time you use the Teleport Homer ability for any of your other units, you may instead use ‘teleport beacon’. If you do, Deploy that unit wholly within 2D6+2” of and visible to this unit. That unit cannot March or Fall Back this turn.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Suppressive (X)" id="f5fe-0634-44cf-3799" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ea00-cf69-c2a8-5fbe-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ea00-cf69-c2a8-5fbe-max" includeChildSelections="false"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Guardian Spear" hidden="false" id="6ef2-2ff6-5647-1c05" type="selectionEntry" targetId="ee01-7e6b-43a9-8d7a" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="self.entries.98e5-c268-975f-d93d.profiles.Weapon"/>
+                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="self.entries.9def-87a0-9059-995b.profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e73a-3bc2-18d5-ccde" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
