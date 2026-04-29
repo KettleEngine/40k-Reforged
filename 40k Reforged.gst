@@ -1,32 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="30" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="31" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
     <categoryEntry name="Configuration" id="9cd6-0442-3f35-6b52" hidden="false"/>
-    <categoryEntry name="Leaders" id="2886-2afd-f65f-9d8e" hidden="false">
-      <description/>
-    </categoryEntry>
+    <categoryEntry name="Leaders" id="2886-2afd-f65f-9d8e" hidden="false"/>
     <categoryEntry name="Support" id="ccc6-6202-853c-23e4" hidden="false"/>
     <categoryEntry name="Elites" id="4820-e2b5-9e00-bb68" hidden="false"/>
-    <categoryEntry name="Infantry" id="205c-3072-067b-d808" hidden="false">
-      <description/>
-    </categoryEntry>
-    <categoryEntry name="Vehicle" id="b239-6bd1-e7a0-0a02" hidden="false">
-      <description/>
-    </categoryEntry>
-    <categoryEntry name="Monster" id="6537-7b2d-b2c8-6005" hidden="false">
-      <description/>
-    </categoryEntry>
-    <categoryEntry name="Chaos" id="f809-9826-f58a-6b8d" hidden="false">
-      <description/>
-    </categoryEntry>
-    <categoryEntry name="Rare" id="1738-1300-9dbb-c5be" hidden="false">
-      <description/>
-    </categoryEntry>
-    <categoryEntry name="Countless Leader" id="1dc0-a947-c240-76bb" hidden="false">
-      <description/>
-    </categoryEntry>
+    <categoryEntry name="Infantry" id="205c-3072-067b-d808" hidden="false"/>
+    <categoryEntry name="Vehicle" id="b239-6bd1-e7a0-0a02" hidden="false"/>
+    <categoryEntry name="Monster" id="6537-7b2d-b2c8-6005" hidden="false"/>
+    <categoryEntry name="Chaos" id="f809-9826-f58a-6b8d" hidden="false"/>
+    <categoryEntry name="Rare" id="1738-1300-9dbb-c5be" hidden="false"/>
+    <categoryEntry name="Countless Leader" id="1dc0-a947-c240-76bb" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Army Roster" hidden="false" id="0396-e1ff-fdad-e17b">
@@ -956,7 +942,7 @@ After a unit with Transport is destroyed, any unit embarked within it is also de
       <description>For each attack made for this weapon, after a successful Hit Roll for that attack, instead of making a Wound Roll, make a number of Wound Rolls equal to this weapon’s D. The D of those attacks is 1 (but they retain this weapon’s abilities).</description>
     </rule>
     <rule name="Heavy Armour" id="ec2c-77fd-05f2-a794" hidden="false">
-      <description>For each attack that targets this unit, the Wound Roll for that attack is worsened by 1. This unit cannot be in cover for enemy attacks.</description>
+      <description>For each attack that targets this unit, the Wound Roll for that attack is worsened by 1. For each SW this unit suffers, it gains Resilient 5+ for that attack or if it already has Resilient, instead add 1 to resilient rolls for that attack. This unit cannot be in cover for enemy attacks.</description>
     </rule>
     <rule name="Fatal Thread" id="209e-12d3-d64c-9005" hidden="false">
       <description>For each attack made by an Aeldari Craftworlds unit that targets this unit, a Hit Roll of 6 always wounds.</description>
