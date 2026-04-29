@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.2" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="0364-85c9-a87f-e090" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -1986,6 +1986,221 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
         <cost name="pts" typeId="points" value="80"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Shokkjump Dragsta" hidden="false" id="d608-c8d3-186e-5494" sortIndex="21">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="f29b-025c-ee6d-9393" primary="false" name="Vehicle"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="3ce6-4bfd-ef44-cda5" primary="true" name="Support"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Shokkjump Dragsta" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="d8c4-7304-3289-19c4">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">9</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Suicidal Acceleration" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1a64-041d-2832-44ea">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During this unit’s Move step, instead of making a March move, you may use ‘Warp Tunnel’. If you do, select any point on the battlefield and draw a straight line between this unit and the selected point. Then, this unit suffers XD3 SW where X is the number of different units or terrain pieces along that line and removes this unit from the battlefield and places it into reserves. Then, Deploy this unit within 1” of the selected point.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="b2a7-da23-c2f4-b86d" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient 5+" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapon" id="23c9-e579-ec58-9abf" hidden="false" defaultSelectionEntryId="79d5-2cb2-12e8-6229">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="87d0-ba22-6a44-74d7-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87d0-ba22-6a44-74d7-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Axle-Saws" hidden="false" id="31ba-53a9-fb44-ab5f" sortIndex="3">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e1ac-3bb7-39c9-98a3-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1ac-3bb7-39c9-98a3-max" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Shred" id="cab0-fe56-a06e-fff7" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Axle-Saws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a195-37a2-8f9a-5476">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Shokk Rifle" hidden="false" id="79d5-2cb2-12e8-6229" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cdd4-0310-1295-0274-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cdd4-0310-1295-0274-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Shokk Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="75bf-1657-046f-6dfa">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Shred" id="89b3-e4fe-56e8-60e7" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Rokkits" hidden="false" id="ad86-24e5-6d8f-8cd7" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e90-9d98-2772-7d84-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e90-9d98-2772-7d84-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Rokkits" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="66cd-aa50-ca41-c824">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Dakka" id="b535-a9c3-dfd3-506d" hidden="false" type="rule" targetId="0c95-a6ed-a147-6b41"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Kustom Boosta Blasta" hidden="false" id="e472-8596-3534-cc0e" sortIndex="20">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="146d-1fe7-0c8f-273e" primary="false" name="Vehicle"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="21ef-204d-265b-2851" primary="true" name="Support"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Kustom Boosta Blasta" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6391-fdc8-db4c-28ee">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Flamin’ Drift" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="98fe-4db0-2de0-bc8f">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March, make attacks with its Burna Exhausts targeting one enemy unit it passed within 8” of during that March. Improve the A of its Burna Exhausts to 8 for those attacks.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Supercharged Engine" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6e5e-0833-d009-4b24">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, double the result of that roll.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="6209-d69e-5498-8280" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient 5+" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapon" id="35b9-b1bd-d8eb-bc18" hidden="false" defaultSelectionEntryId="8307-4026-291e-ade6">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="499e-656d-7e74-b870-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="499e-656d-7e74-b870-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Spiked Ram" hidden="false" id="4454-f9ea-4faf-c463" sortIndex="3">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5cea-6873-9754-fbab-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5cea-6873-9754-fbab-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Spiked Ram" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c0d2-b95e-f456-859e">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Shred" id="4f37-2e99-e1b6-21ed" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Rivet Kannon" hidden="false" id="8307-4026-291e-ade6" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2bd3-15f0-257e-2f36-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2bd3-15f0-257e-2f36-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Rivet Kannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a0f8-16c9-39d0-92be">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Dakka" id="0808-c62f-d289-2006" hidden="false" type="rule" targetId="0c95-a6ed-a147-6b41"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Burna Exhausts" hidden="false" id="4620-209a-14e9-c610" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0a87-ca8c-3ee0-0883-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a87-ca8c-3ee0-0883-max" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Ignore Cover" id="5a70-d378-bbd9-6457" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Burna Exhausts" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8376-98eb-47aa-5a2d">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
     <profile name="WAAAGH!" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c9f0-afe5-0f2c-c9b1">
@@ -1998,7 +2213,7 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
     </profile>
     <profile name="Solid Greenskin" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c35f-6848-d4c4-faeb">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack that targets this unit, the Wound Roll for that attack is worsened by 1. This unit cannot be in cover for enemy attacks.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack that targets this unit, the Wound Roll for that attack is worsened by 1. If that attack is a SW, add 1 to resilient rolls for that attack. This unit cannot be in cover for enemy attacks.</characteristic>
       </characteristics>
     </profile>
     <profile name="Everyone! Ge’ In ‘ere!" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ad82-3c2d-6494-820e">
