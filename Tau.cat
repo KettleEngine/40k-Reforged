@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.1" hidden="false" id="315e-371a-2ee5-5d8d" sortIndex="-1">
       <categoryLinks>
@@ -1151,22 +1151,6 @@
         <categoryLink targetId="ccc6-6202-853c-23e4" id="f4b8-cf72-554d-8077" primary="true" name="Support"/>
         <categoryLink targetId="205c-3072-067b-d808" id="2eb7-d918-0019-b178" primary="false" name="Infantry"/>
       </categoryLinks>
-      <profiles>
-        <profile name="XV88 Broadside Battlesuit" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3d47-5e79-d473-c70d">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Blacksun Filter" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="dc20-23d2-acd5-3376">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack made by this unit which targets an enemy unit with Marked, a Hit Roll of 6 for that attack always wounds.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Missile Drone" hidden="false" id="b0b4-c040-2d85-ad88">
           <constraints>
@@ -1194,83 +1178,105 @@
             </entryLink>
           </entryLinks>
         </selectionEntry>
+        <selectionEntry type="model" import="true" name="XV88 Broadside Battlesuit" hidden="false" id="8c59-5cda-0c8f-16f3">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0094-6447-d86d-f270-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0094-6447-d86d-f270-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="XV88 Broadside Battlesuit" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3d47-5e79-d473-c70d">
+              <characteristics>
+                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Blacksun Filter" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="dc20-23d2-acd5-3376">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack made by this unit which targets an enemy unit with Marked, a Hit Roll of 6 for that attack always wounds.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Secondary Gun" id="d657-6779-eb66-186b" hidden="false" defaultSelectionEntryId="390a-1b9c-22f4-339c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ba7-f7e3-f590-ede8-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ba7-f7e3-f590-ede8-max" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Smart Missile System" hidden="false" id="4fb1-fb95-8858-3248" type="selectionEntry" targetId="2591-7393-13f3-a913" sortIndex="1">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </entryLink>
+                <entryLink import="true" name="Plasma Rifle" hidden="false" id="390a-1b9c-22f4-339c" type="selectionEntry" targetId="e874-d698-d372-227f" sortIndex="2">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Main Gun" id="3f27-b080-acdb-e450" hidden="false" defaultSelectionEntryId="fd8c-98b3-6678-090a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2df4-dfb3-4a1d-d710-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2df4-dfb3-4a1d-d710-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Heavy Rail Rifle" hidden="false" id="fd8c-98b3-6678-090a" sortIndex="1">
+                  <profiles>
+                    <profile name="Heavy Rail Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4af4-d799-957c-f02f">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+7</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Pierce" id="cacf-7a41-057d-abb5" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <entryLinks>
+                <entryLink import="true" name="High-Yield Missile Pods" hidden="false" id="d716-e159-4a6c-5b4c" type="selectionEntry" targetId="912e-164f-873e-c6bf" sortIndex="2"/>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Seeker Missile" hidden="false" id="b479-2cd7-f746-22d2" type="selectionEntry" targetId="d67e-fac1-0cdb-abe4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b443-844a-e3e4-db94" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
       </selectionEntries>
       <infoLinks>
         <infoLink name="Unstoppable" id="1bf5-2066-e353-428f" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
         <infoLink name="Heavy Armour" id="2c1c-8a65-3e17-ab15" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Main Gun" id="3f27-b080-acdb-e450" hidden="false" defaultSelectionEntryId="fd8c-98b3-6678-090a">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2df4-dfb3-4a1d-d710-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2df4-dfb3-4a1d-d710-max" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Heavy Rail Rifle" hidden="false" id="fd8c-98b3-6678-090a" sortIndex="1">
-              <profiles>
-                <profile name="Heavy Rail Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4af4-d799-957c-f02f">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+7</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Pierce" id="cacf-7a41-057d-abb5" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-          <entryLinks>
-            <entryLink import="true" name="High-Yield Missile Pods" hidden="false" id="d716-e159-4a6c-5b4c" type="selectionEntry" targetId="912e-164f-873e-c6bf" sortIndex="2"/>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Secondary Gun" id="d657-6779-eb66-186b" hidden="false" defaultSelectionEntryId="390a-1b9c-22f4-339c">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ba7-f7e3-f590-ede8-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ba7-f7e3-f590-ede8-max" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Smart Missile System" hidden="false" id="4fb1-fb95-8858-3248" type="selectionEntry" targetId="2591-7393-13f3-a913" sortIndex="1">
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
-            <entryLink import="true" name="Plasma Rifle" hidden="false" id="390a-1b9c-22f4-339c" type="selectionEntry" targetId="e874-d698-d372-227f" sortIndex="2">
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Seeker Missile" hidden="false" id="b479-2cd7-f746-22d2" type="selectionEntry" targetId="d67e-fac1-0cdb-abe4">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b443-844a-e3e4-db94" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="TX7 Hammerhead Gunship" hidden="false" id="ead8-a04f-ace8-53fa" sortIndex="15">
       <categoryLinks>
