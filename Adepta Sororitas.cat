@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="23d8-3b8d-77df-8eb4">
       <constraints>
@@ -366,6 +366,7 @@ c) RETRIBUTORS</characteristic>
     <selectionEntry type="unit" import="true" name="Imagifier" hidden="false" id="8aac-2674-c0dc-6701">
       <categoryLinks>
         <categoryLink targetId="205c-3072-067b-d808" id="bdd0-9b40-3393-81c1" primary="false" name="Infantry"/>
+        <categoryLink targetId="1dc0-a947-c240-76bb" id="0255-f103-fed2-0e13" primary="true" name="Countless Leader"/>
       </categoryLinks>
       <profiles>
         <profile name="Simulacrum Imperialis" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6f34-cc63-025c-cba5">
@@ -650,7 +651,7 @@ c) RETRIBUTORS</characteristic>
                     </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
-                <selectionEntryGroup name="Weapons" id="d604-8bf2-0777-e58b" hidden="false" defaultSelectionEntryId="fe61-103e-3516-e077">
+                <selectionEntryGroup name="Weapons" id="d604-8bf2-0777-e58b" hidden="false" defaultSelectionEntryId="9ea0-3259-0e3b-46bf">
                   <entryLinks>
                     <entryLink import="true" name="Bolt Pistol" hidden="false" id="9ea0-3259-0e3b-46bf" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79" sortIndex="3">
                       <modifiers>
@@ -682,16 +683,6 @@ c) RETRIBUTORS</characteristic>
                     <entryLink import="true" name="Plasma Pistol" hidden="false" id="e9a6-5b5b-778e-f883" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="7">
                       <modifiers>
                         <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Boltgun" hidden="false" id="fe61-103e-3516-e077" type="selectionEntry" targetId="7c03-84c7-a561-dfa9" sortIndex="1">
-                      <infoLinks>
-                        <infoLink name="Holy Trinity" id="0153-09c9-9e6a-9ee8" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
-                      </infoLinks>
-                      <modifiers>
-                        <modifier type="append" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
-                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
@@ -1265,7 +1256,7 @@ c) RETRIBUTORS</characteristic>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Celestian Sacresants" id="4c52-6840-eaeb-6860" hidden="false">
+        <selectionEntryGroup name="Celestian Sacresants" id="4c52-6840-eaeb-6860" hidden="false" defaultSelectionEntryId="7df0-a6eb-5b1a-69c3">
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="2dcf-9b57-c9a3-ec2f-min" includeChildSelections="false"/>
             <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="2dcf-9b57-c9a3-ec2f-max" includeChildSelections="false"/>
@@ -1298,7 +1289,7 @@ c) RETRIBUTORS</characteristic>
                     </entryLink>
                   </entryLinks>
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="Other" id="7e79-aa02-4988-254b" hidden="false">
+                    <selectionEntryGroup name="Other" id="7e79-aa02-4988-254b" hidden="false" sortIndex="3">
                       <entryLinks>
                         <entryLink import="true" name="Plasma Pistol" hidden="false" id="4d20-e9fc-bbb8-0421" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
                           <modifiers>
@@ -1339,8 +1330,15 @@ c) RETRIBUTORS</characteristic>
                       <costs>
                         <cost name="pts" typeId="points" value="10"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Heal/Repair (X)" id="7b13-31fe-415d-f8af" hidden="false" type="rule" targetId="02c8-1ec5-cdab-2572"/>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="787b-54e3-ecf2-f964-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="787b-54e3-ecf2-f964-max" includeChildSelections="false"/>
+                  </constraints>
                 </selectionEntryGroup>
                 <selectionEntryGroup name="Melee" id="1136-7935-66a5-40fe" hidden="false" defaultSelectionEntryId="47a8-d3c9-f4b8-be31">
                   <selectionEntries>
@@ -1915,7 +1913,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
         <categoryLink targetId="205c-3072-067b-d808" id="e280-03e4-8178-bb71" primary="false" name="Infantry"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Seraphim" id="2bda-23d2-a922-c4f4" hidden="false">
+        <selectionEntryGroup name="Seraphim" id="2bda-23d2-a922-c4f4" hidden="false" defaultSelectionEntryId="40bb-bb35-c104-d0f4">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Seraphim" hidden="false" id="40bb-bb35-c104-d0f4">
               <profiles>
@@ -2031,12 +2029,12 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Imolator" hidden="false" id="8147-96af-ca0c-07c6">
+    <selectionEntry type="unit" import="true" name="Immolator" hidden="false" id="8147-96af-ca0c-07c6">
       <costs>
         <cost name="pts" typeId="points" value="140"/>
       </costs>
       <profiles>
-        <profile name="Imolator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="966a-f5f1-acdf-9a34">
+        <profile name="Immolator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="966a-f5f1-acdf-9a34">
           <characteristics>
             <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
             <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
@@ -2280,7 +2278,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
         <categoryLink targetId="205c-3072-067b-d808" id="2bf7-0cc5-0da2-8e21" primary="false" name="Infantry"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Zephyrim" id="9cf8-b974-a5bc-6b6b" hidden="false">
+        <selectionEntryGroup name="Zephyrim" id="9cf8-b974-a5bc-6b6b" hidden="false" defaultSelectionEntryId="51ad-52d7-2938-fb00">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Zephyrim" hidden="false" id="51ad-52d7-2938-fb00">
               <profiles>
@@ -2577,37 +2575,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Heavy Bolter" hidden="false" id="14d7-2b7e-3e12-a5ac" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-          <modifiers>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
-            <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
-          </modifiers>
-          <infoLinks>
-            <infoLink name="Holy Trinity" id="afc7-deaa-7b09-beef" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8773-9831-809b-75f6-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8773-9831-809b-75f6-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
         <entryLink import="true" name="Dozer Spikes" hidden="false" id="364b-1a69-63a0-8abb" type="selectionEntry" targetId="a3b0-cda4-b059-756a"/>
-        <entryLink import="true" name="Heavy Bolter" hidden="false" id="cca9-371d-1ea2-fe82" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-          <modifiers>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
-            <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
-          </modifiers>
-          <infoLinks>
-            <infoLink name="Holy Trinity" id="d415-b246-dfe1-86d8" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2eab-f6dd-9bd7-7c7a-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2eab-f6dd-9bd7-7c7a-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
         <entryLink import="true" name="Storm Bolter" hidden="false" id="e3ba-7344-8625-8a2d" type="selectionEntry" targetId="d215-60bd-f49d-295e">
           <modifiers>
             <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
@@ -2655,6 +2623,54 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
         <categoryLink targetId="b239-6bd1-e7a0-0a02" id="120c-7784-34d4-33db" primary="false" name="Vehicle"/>
         <categoryLink targetId="ccc6-6202-853c-23e4" id="af64-c41c-c6fd-dad7" primary="true" name="Support"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Sponson Heavy Bolter" hidden="false" id="587f-5a0a-8a33-c33e">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="cca9-371d-1ea2-fe82" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Holy Trinity" id="d415-b246-dfe1-86d8" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2eab-f6dd-9bd7-7c7a-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2eab-f6dd-9bd7-7c7a-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="74b6-c0d0-a0d4-40d0-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="74b6-c0d0-a0d4-40d0-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hull Heavy Bolter" hidden="false" id="5f79-dd4c-6a3c-7c8b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2ef7-b3fa-125d-badf-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2ef7-b3fa-125d-badf-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="14d7-2b7e-3e12-a5ac" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Holy Trinity" id="afc7-deaa-7b09-beef" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8773-9831-809b-75f6-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8773-9831-809b-75f6-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Exorcist" hidden="false" id="05a5-06e8-e09b-9fb9">
       <costs>
@@ -3051,9 +3067,7 @@ c) MORDIAN IRON GUARD</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Ignore Cover
-
-</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Ignore Cover</characteristic>
           </characteristics>
         </profile>
       </profiles>
