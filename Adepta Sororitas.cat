@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="23d8-3b8d-77df-8eb4">
       <constraints>
@@ -2075,20 +2075,6 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Heavy Bolter" hidden="false" id="f19f-5028-f3a2-4a16" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-          <modifiers>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
-          </modifiers>
-          <infoLinks>
-            <infoLink name="Holy Trinity" id="005f-b8fd-5a3e-35a8" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2a9b-d508-1ceb-984d-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a9b-d508-1ceb-984d-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Transport" id="b62e-3f80-4333-63d8" hidden="false" type="rule" targetId="d78d-24c6-e7a9-e94f"/>
@@ -2139,6 +2125,30 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
         <categoryLink targetId="b239-6bd1-e7a0-0a02" id="24fb-c885-f4e2-8c21" primary="false" name="Vehicle"/>
         <categoryLink targetId="3239-2096-a612-ed8e" id="7e53-7987-90a9-91a5" primary="true" name="Transport"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Hull Heavy Bolter" hidden="false" id="bea8-e491-6e6e-08c4">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="55d8-4aa9-e5f7-7caa-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="55d8-4aa9-e5f7-7caa-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Heavy Bolter" hidden="false" id="f19f-5028-f3a2-4a16" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Holy Trinity" id="005f-b8fd-5a3e-35a8" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2a9b-d508-1ceb-984d-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a9b-d508-1ceb-984d-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Mortifier" hidden="false" id="698d-e893-3ac9-c7c5">
       <costs>
