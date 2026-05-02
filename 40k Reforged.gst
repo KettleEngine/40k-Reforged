@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="31" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="32" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -939,7 +939,7 @@ After a unit with Transport is destroyed, any unit embarked within it is also de
       <description>For each attack made for this weapon, a successful Wound Roll for that attack causes an additional wound.</description>
     </rule>
     <rule name="Blast (X)" id="308a-e96e-90f7-855e" hidden="false">
-      <description>For each attack made for this weapon, after a successful Hit Roll for that attack, instead of making a Wound Roll, make a number of Wound Rolls equal to this weapon’s D. The D of those attacks is 1 (but they retain this weapon’s abilities).</description>
+      <description>For each attack made for this weapon, a successful Hit Roll for that attack causes X hits instead of 1 hit</description>
     </rule>
     <rule name="Heavy Armour" id="ec2c-77fd-05f2-a794" hidden="false">
       <description>For each attack that targets this unit, the Wound Roll for that attack is worsened by 1. For each SW this unit suffers, it gains Resilient 5+ for that attack or if it already has Resilient, instead add 1 to resilient rolls for that attack. This unit cannot be in cover for enemy attacks.</description>
