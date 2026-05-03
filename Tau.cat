@@ -1013,15 +1013,6 @@
         <categoryLink targetId="b239-6bd1-e7a0-0a02" id="63ee-0647-ad40-944b" primary="false" name="Vehicle"/>
       </categoryLinks>
       <profiles>
-        <profile name="XV95 Ghostkeel Battlesuit" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5e83-1d54-fb92-0b8f">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">7</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Holophoton Countermeasures" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="10a9-8291-d0a9-20a7">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each wound this unit suffers from ranged attack, roll a D6. On a 5+, that attack fails.</characteristic>
@@ -1054,94 +1045,111 @@
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="model" import="true" name="XV95 Ghostkeel Battlesuit" hidden="false" id="a81b-12a9-9dd2-3001">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="feff-7911-8415-8bbc-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="feff-7911-8415-8bbc-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Secondary Gun" id="4ffb-4e48-81d7-5a00" hidden="false" defaultSelectionEntryId="b029-cbfc-14a4-c45e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b308-b318-b25f-c728-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b308-b318-b25f-c728-max" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Burst Cannon" hidden="false" id="b029-cbfc-14a4-c45e" type="selectionEntry" targetId="9e4c-7240-51c1-0a9d" sortIndex="1">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </entryLink>
+                <entryLink import="true" name="Fusion Blaster" hidden="false" id="42e6-a4e6-04e2-1481" type="selectionEntry" targetId="9a79-03e9-a640-d458" sortIndex="2">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </entryLink>
+                <entryLink import="true" name="Flamer" hidden="false" id="5e5a-64d8-94ac-37b8" type="selectionEntry" targetId="4cf9-1758-d00d-29c4" sortIndex="3">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="20" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Main Gun" id="198b-3b67-96a6-f914" hidden="false" defaultSelectionEntryId="15e0-f739-e802-81e1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="408a-1bdb-301b-f547-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="408a-1bdb-301b-f547-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Cyclic Ion Raker" hidden="false" id="15e0-f739-e802-81e1">
+                  <profiles>
+                    <profile name="Cyclic Ion Raker" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="896b-d6d2-4ab2-9ea9">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">11</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Overcharge" id="a043-83ee-7182-cb25" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Fusion Collider" hidden="false" id="49a9-3d64-062d-bb3d">
+                  <profiles>
+                    <profile name="Fusion Collider" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f8af-a611-730b-0a37">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+4</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Pierce" id="f650-21c0-b66f-06b4" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="XV95 Ghostkeel Battlesuit" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5e83-1d54-fb92-0b8f">
+              <characteristics>
+                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">7</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <infoLinks>
         <infoLink name="Forward Deploy" id="6f41-1b53-855c-ab4f" hidden="false" type="rule" targetId="b433-60cc-2ed2-658f"/>
         <infoLink name="Fly" id="7544-52b0-fe94-160f" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
         <infoLink name="Kauyon" id="e640-af73-8f36-1309" hidden="false" type="profile" targetId="ee8f-2ea5-7ee4-36f1"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Main Gun" id="198b-3b67-96a6-f914" hidden="false" defaultSelectionEntryId="15e0-f739-e802-81e1">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="408a-1bdb-301b-f547-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="408a-1bdb-301b-f547-max" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Cyclic Ion Raker" hidden="false" id="15e0-f739-e802-81e1">
-              <profiles>
-                <profile name="Cyclic Ion Raker" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="896b-d6d2-4ab2-9ea9">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">11</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Overcharge" id="a043-83ee-7182-cb25" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fusion Collider" hidden="false" id="49a9-3d64-062d-bb3d">
-              <profiles>
-                <profile name="Fusion Collider" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f8af-a611-730b-0a37">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+4</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Pierce" id="f650-21c0-b66f-06b4" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Secondary Gun" id="4ffb-4e48-81d7-5a00" hidden="false" defaultSelectionEntryId="b029-cbfc-14a4-c45e">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b308-b318-b25f-c728-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b308-b318-b25f-c728-max" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Burst Cannon" hidden="false" id="b029-cbfc-14a4-c45e" type="selectionEntry" targetId="9e4c-7240-51c1-0a9d" sortIndex="1">
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
-            <entryLink import="true" name="Fusion Blaster" hidden="false" id="42e6-a4e6-04e2-1481" type="selectionEntry" targetId="9a79-03e9-a640-d458" sortIndex="2">
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
-            <entryLink import="true" name="Flamer" hidden="false" id="5e5a-64d8-94ac-37b8" type="selectionEntry" targetId="4cf9-1758-d00d-29c4" sortIndex="3">
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="20" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="140"/>
       </costs>

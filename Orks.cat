@@ -1290,40 +1290,55 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
             <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="a3a0-6ab5-8a5e-cf24-min"/>
             <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="a3a0-6ab5-8a5e-cf24-max"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Deffgun" hidden="false" id="8ad9-7983-0625-cdab">
-              <profiles>
-                <profile name="Shooty Deffgun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8273-e87a-0be9-cf2c">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Cuttin’ Flamez" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="927e-a0f1-5062-eaf1">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka, Killshot</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Killshot" id="f841-9d6c-0b8a-f41e" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
-                <infoLink name="Dakka" id="8a2f-5b05-b0c2-7d73" hidden="false" type="rule" targetId="0c95-a6ed-a147-6b41"/>
-              </infoLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b6f-d2f5-f185-2616-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b6f-d2f5-f185-2616-max" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Deffgun" id="ac83-04e1-a3de-2318" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Shooty Deffgun" hidden="false" id="8ad9-7983-0625-cdab" sortIndex="1">
+                  <profiles>
+                    <profile name="Shooty Deffgun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8273-e87a-0be9-cf2c">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Dakka" id="8a2f-5b05-b0c2-7d73" hidden="false" type="rule" targetId="0c95-a6ed-a147-6b41"/>
+                  </infoLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b6f-d2f5-f185-2616-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3b6f-d2f5-f185-2616-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Beamy Deffgun" hidden="false" id="e79a-cb2c-9320-afda" sortIndex="2">
+                  <profiles>
+                    <profile name="Beamy Deffgun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2b8b-023b-9f37-5970">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka, Killshot</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Killshot" id="47c6-924d-2cc9-5b4a" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+                    <infoLink name="Dakka" id="a7ee-f3c1-4f80-9cf4" hidden="false" type="rule" targetId="0c95-a6ed-a147-6b41"/>
+                  </infoLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="06b7-9a73-b5bf-06a9" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0269-184f-5edc-d5de" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Loota Nob" hidden="false" id="dac7-b41d-f49e-5a32">
           <profiles>
