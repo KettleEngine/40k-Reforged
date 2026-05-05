@@ -487,12 +487,13 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, Overcharge</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Overcharge" id="e98a-2c0a-0547-06c7" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+        <infoLink name="Pierce" id="e98a-2c0a-0547-06c7" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+        <infoLink name="Overcharge" id="123c-5289-1cfa-44a4" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="dae5-9fbf-bdd8-7f79">
