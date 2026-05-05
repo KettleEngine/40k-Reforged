@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="32" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="33" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -480,13 +480,12 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Cannon" hidden="false" id="597d-3cc2-8209-d3d1">
       <profiles>
-        <profile name="Plasma Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="09cd-0210-bbb4-048a">
+        <profile name="Plasma Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c516-224c-dfa7-2098">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-6</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge</characteristic>
           </characteristics>
