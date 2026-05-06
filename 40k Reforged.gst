@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="33" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="34" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -47,17 +47,17 @@
         <categoryLink name="Transport" hidden="false" id="f485-ae17-bb93-cf81" targetId="3239-2096-a612-ed8e"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set" value="500" field="57b7-ac0e-5d06-9ddb">
+        <modifier type="set" value="800" field="57b7-ac0e-5d06-9ddb">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="d62d-db22-4893-4bc0" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="1000" field="57b7-ac0e-5d06-9ddb">
+        <modifier type="set" value="1200" field="57b7-ac0e-5d06-9ddb">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="baf8-997f-e323-a090" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="-1" field="57b7-ac0e-5d06-9ddb">
+        <modifier type="set" value="1600" field="57b7-ac0e-5d06-9ddb">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="4204-82d0-908c-a62a" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
@@ -139,17 +139,17 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dea4-90c8-6d86-3a01" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="1. less than 501 pts" hidden="false" id="d62d-db22-4893-4bc0" collective="false">
+            <selectionEntry type="upgrade" import="true" name="1. 800 pts" hidden="false" id="d62d-db22-4893-4bc0" collective="false">
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. 501-1000 pts" hidden="false" id="baf8-997f-e323-a090" collective="false">
+            <selectionEntry type="upgrade" import="true" name="2. 1200 pts" hidden="false" id="baf8-997f-e323-a090" collective="false">
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. over 1000 pts" hidden="false" id="4204-82d0-908c-a62a" collective="false">
+            <selectionEntry type="upgrade" import="true" name="3. 1600 pts" hidden="false" id="4204-82d0-908c-a62a" collective="false">
               <costs>
                 <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
               </costs>
