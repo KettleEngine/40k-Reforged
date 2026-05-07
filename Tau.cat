@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.1" hidden="false" id="315e-371a-2ee5-5d8d" sortIndex="-1">
       <categoryLinks>
@@ -1616,10 +1616,10 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
-    <selectionEntry type="unit" import="true" name="Support Turrets" hidden="false" id="ff3d-f565-7eaa-a2d8" sortIndex="-1">
+    <selectionEntry type="model" import="true" name="Support Turret" hidden="false" id="ff3d-f565-7eaa-a2d8" sortIndex="-1">
       <infoLinks>
         <infoLink name="Support Turrets" id="33af-e75b-4292-c984" hidden="false" type="profile" targetId="5bd5-af4f-e95c-c787"/>
-        <infoLink name="Support Turrets (X)" id="ed37-594e-4797-9a56" hidden="false" type="profile" targetId="5cba-7d53-2abe-ca28"/>
+        <infoLink name="Support Turret" id="ed37-594e-4797-9a56" hidden="false" type="profile" targetId="5cba-7d53-2abe-ca28"/>
       </infoLinks>
       <profiles>
         <profile name="Turret Downlink" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4327-b6a1-eeac-b688">
@@ -1628,6 +1628,45 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
           </characteristics>
         </profile>
       </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Weapon" id="1961-f263-3a9a-c41e" hidden="false" defaultSelectionEntryId="cdac-f125-8df1-687a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bbd3-3b17-aa53-c56c-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bbd3-3b17-aa53-c56c-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Missile Pod" hidden="false" id="2769-8ee6-cde9-aac3" sortIndex="1">
+              <entryLinks>
+                <entryLink import="true" name="Missile Pod" hidden="false" id="0e00-cc29-375a-7051" type="selectionEntry" targetId="30c5-b7b9-d072-bab8">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="639a-d730-ef81-4e9b-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="639a-d730-ef81-4e9b-max" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Smart Missile System" hidden="false" id="cdac-f125-8df1-687a" sortIndex="2">
+              <entryLinks>
+                <entryLink import="true" name="Smart Missile System" hidden="false" id="6d8b-a8b5-36e4-f816" type="selectionEntry" targetId="2591-7393-13f3-a913" sortIndex="">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c12e-e28a-5dba-bd69-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c12e-e28a-5dba-bd69-max" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="30e1-a942-10a8-39a4" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Smart Missile System" hidden="false" id="2591-7393-13f3-a913">
       <profiles>
@@ -1844,6 +1883,9 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
       <infoLinks>
         <infoLink name="Markerlights" id="10b8-538a-dfc3-e8ee" hidden="false" type="profile" targetId="1f6c-1316-7984-a1b7"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Support Turret" hidden="false" id="af56-34fa-79aa-438b" type="selectionEntry" targetId="ff3d-f565-7eaa-a2d8"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Gun Drone" hidden="false" id="a9a8-f08e-c247-92e3" sortIndex="2">
       <profiles>
@@ -2040,6 +2082,9 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
       <infoLinks>
         <infoLink name="Markerlights" id="0ffc-983a-f047-a727" hidden="false" type="profile" targetId="1f6c-1316-7984-a1b7"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Support Turret" hidden="false" id="44ac-7b6c-e515-88b7" type="selectionEntry" targetId="ff3d-f565-7eaa-a2d8"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Guardian Drone" hidden="false" id="77a9-9c45-ca0c-4f1c" sortIndex="4">
       <profiles>
