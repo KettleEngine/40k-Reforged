@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.1" hidden="false" id="315e-371a-2ee5-5d8d" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.2" hidden="false" id="315e-371a-2ee5-5d8d" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="de86-5aaf-58c4-0c6b" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -1619,7 +1619,7 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
     <selectionEntry type="model" import="true" name="Support Turret" hidden="false" id="ff3d-f565-7eaa-a2d8" sortIndex="-1">
       <infoLinks>
         <infoLink name="Support Turrets" id="33af-e75b-4292-c984" hidden="false" type="profile" targetId="5bd5-af4f-e95c-c787"/>
-        <infoLink name="Support Turret" id="ed37-594e-4797-9a56" hidden="false" type="profile" targetId="5cba-7d53-2abe-ca28"/>
+        <infoLink name="Support Turrets (X)" id="ed37-594e-4797-9a56" hidden="false" type="profile" targetId="5cba-7d53-2abe-ca28"/>
       </infoLinks>
       <profiles>
         <profile name="Turret Downlink" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4327-b6a1-eeac-b688">
@@ -1650,7 +1650,7 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Smart Missile System" hidden="false" id="cdac-f125-8df1-687a" sortIndex="2">
               <entryLinks>
-                <entryLink import="true" name="Smart Missile System" hidden="false" id="6d8b-a8b5-36e4-f816" type="selectionEntry" targetId="2591-7393-13f3-a913" sortIndex="">
+                <entryLink import="true" name="Smart Missile System" hidden="false" id="6d8b-a8b5-36e4-f816" type="selectionEntry" targetId="2591-7393-13f3-a913">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c12e-e28a-5dba-bd69-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c12e-e28a-5dba-bd69-max" includeChildSelections="false"/>
@@ -1837,24 +1837,24 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink import="true" name="Pulse Carbine" hidden="false" id="0525-f8da-5004-b5d1" type="selectionEntry" targetId="6634-61a6-75bd-ba2f">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="992f-beab-6795-2ccb-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="992f-beab-6795-2ccb-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Pulse Rifle" hidden="false" id="fca0-85a0-e817-2687" type="selectionEntry" targetId="7b87-411d-c477-40cd">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d34e-9173-1798-d50f-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d34e-9173-1798-d50f-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
                 <entryLink import="true" name="Photon Grenade" hidden="false" id="f3b1-7204-290f-1261" type="selectionEntry" targetId="ad8c-7f02-854a-79dd">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="3b7d-c660-cfd3-34cf" includeChildSelections="true"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon" id="56f4-13e9-f46f-cda8" hidden="false" sortIndex="1" defaultSelectionEntryId="fca0-85a0-e817-2687">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="334e-cc3f-2f17-97e2-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="334e-cc3f-2f17-97e2-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Pulse Carbine" hidden="false" id="0525-f8da-5004-b5d1" type="selectionEntry" targetId="6634-61a6-75bd-ba2f" sortIndex="2"/>
+                    <entryLink import="true" name="Pulse Rifle" hidden="false" id="fca0-85a0-e817-2687" type="selectionEntry" targetId="7b87-411d-c477-40cd" sortIndex="1"/>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -2138,7 +2138,7 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
   </sharedSelectionEntries>
   <categoryEntries>
     <categoryEntry name="Drones" id="00fc-c619-b9f6-09cd" hidden="false">
-      <description>&apos;Drone&apos; models (Shield Drones, Missile Drones, Gun Drones, Marker Drones, etc) cannot be selected to suffer wounds. After the last non-drone model in a unit dies, each drone model in that unit dies.</description>
+      <description>‘Drone’ models (Shield Drones, Missile Drones, Gun Drones, Marker Drones, etc), do not count as models while selecting a model to suffer a wound. After the last non-drone model in a unit dies, each drone model in that unit dies.</description>
     </categoryEntry>
   </categoryEntries>
   <entryLinks>
