@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Foretold Foray" id="d0c2-99f6-070a-f4ed" hidden="false">
       <description>After rolling for initiative battle round 1, roll Strands of Fate X where X is twice the number of leader units you have on the battlefield and reserves.</description>
@@ -2371,6 +2371,10 @@ Shining Wedge: After this unit&apos;s Attacks step, it may Fall Back.</characte
                             <infoLink name="Pierce" id="0d44-5442-f959-948f" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                             <infoLink name="Precision" id="2fde-a66d-ca5d-8e07" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
                           </infoLinks>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f694-c9b6-6326-ed66-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f694-c9b6-6326-ed66-max" includeChildSelections="false"/>
+                          </constraints>
                         </selectionEntry>
                       </selectionEntries>
                     </selectionEntry>
@@ -2404,6 +2408,10 @@ Shining Wedge: After this unit&apos;s Attacks step, it may Fall Back.</characte
                           <infoLinks>
                             <infoLink name="Shred" id="c2d3-cf36-8540-58ec" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
                           </infoLinks>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8e9a-3298-6f45-7b0a-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e9a-3298-6f45-7b0a-max" includeChildSelections="false"/>
+                          </constraints>
                         </selectionEntry>
                       </selectionEntries>
                     </selectionEntry>
