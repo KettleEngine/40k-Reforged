@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Gauss" id="b2e9-8420-cfb7-4bde" hidden="false">
       <description>For each attack made for this weapon, the Wound Roll for that attack is improved by 1, and the Saving Throw is worsened by 1.</description>
@@ -174,12 +174,114 @@ Lord&apos;s Mandate: For each attack this unit makes, reroll a Wound Roll of 1�
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e466-71c7-e8d0-3461" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Cryptohralls" hidden="false" id="b258-ecbd-66e3-f1c3">
+      <costs>
+        <cost name="pts" typeId="points" value="50"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="f8ce-fa2a-c7a4-4437" targetId="205c-3072-067b-d808" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Cryptohralls" id="33da-5f08-e284-abb1" hidden="false" defaultSelectionEntryId="6a76-a2d6-d398-c32b">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Cryptohrall" hidden="false" id="6a76-a2d6-d398-c32b">
+              <profiles>
+                <profile name="Cryptohrall" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="80fb-1780-4901-ad28">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">-</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">-</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Scouring Eye Beam" hidden="false" id="343a-449d-f8b7-e6c2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a29-f092-1dab-7269-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a29-f092-1dab-7269-max" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Scouring Eye Beam" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6332-3034-9497-292f">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Scything Limbs " hidden="false" id="083d-17e9-34c1-5a4c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9fd5-9add-edb0-698c-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9fd5-9add-edb0-698c-max" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Scything Limbs " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4222-6d3d-a5a3-be2d">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Shred" id="4fbe-06d7-3cd4-3f1f" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="39dc-203a-84b0-e9fe-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="39dc-203a-84b0-e9fe-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <profiles>
+        <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="c49b-e35d-a1da-11bd">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must be attached by either:
+a) TECHNOMANCER
+b) PLASMANCER
+c) CHRONOMANCER
+d) GEOMANCER</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Engrammatic Compulsion" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8f99-b9e4-ad27-2595">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a model in this unit suffers a wound, roll a D6. On a 3+, that attack fails.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Slave Construct" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e93d-2c7d-4c78-855f">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit’s CRYPTOTHRALLS models cannot be selected to suffer wounds. After each other model is dead, this unit’s CRYPTOTHRALLS models die.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Living Metal" hidden="false" id="22c5-f186-4fbb-3126" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Heavy Armour" id="b624-6b2e-11c4-0d67" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9537-1658-3d01-6a8b" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
-    <entryLink import="true" name="Relics (Reference)" hidden="false" id="cd79-bf4f-47da-5767" type="selectionEntry" targetId="85c5-2a98-6852-6b1c" sortIndex="2"/>
+    <entryLink import="true" name="Relics (Reference)" hidden="false" id="cd79-bf4f-47da-5767" type="selectionEntry" targetId="85c5-2a98-6852-6b1c" sortIndex="-2"/>
   </entryLinks>
   <selectionEntries>
-    <selectionEntry type="unit" import="true" name="Overlord" hidden="false" id="b20b-f625-ae4f-45c7">
+    <selectionEntry type="unit" import="true" name="Overlord" hidden="false" id="b20b-f625-ae4f-45c7" sortIndex="1">
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
@@ -269,7 +371,7 @@ c) LYCHGUARD</characteristic>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="201f-ecc4-5781-61d6" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Command Barge" hidden="false" id="4548-cd81-24e3-e127">
+    <selectionEntry type="unit" import="true" name="Command Barge" hidden="false" id="4548-cd81-24e3-e127" sortIndex="2">
       <costs>
         <cost name="pts" typeId="points" value="140"/>
       </costs>
@@ -361,7 +463,7 @@ c) LYCHGUARD</characteristic>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="9eaa-a146-2fa7-ac34" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Skorpekh Lord" hidden="false" id="3548-78d0-64b7-fef0">
+    <selectionEntry type="unit" import="true" name="Skorpekh Lord" hidden="false" id="3548-78d0-64b7-fef0" sortIndex="3">
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
@@ -486,7 +588,7 @@ a) SKORPEKH DESTROYERS</characteristic>
         <infoLink name="Heavy Armour" id="f084-4ca9-da69-53da" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Destroyer Lord" hidden="false" id="6588-e4a2-83bb-4c00">
+    <selectionEntry type="unit" import="true" name="Destroyer Lord" hidden="false" id="6588-e4a2-83bb-4c00" sortIndex="4">
       <categoryLinks>
         <categoryLink name="Leaders" hidden="false" id="28a3-0312-6504-3c4d" targetId="2886-2afd-f65f-9d8e" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="9e0a-b84f-d8a2-2357" targetId="205c-3072-067b-d808" primary="false"/>
@@ -598,7 +700,7 @@ c) OPHYDIAN DESTROYERS</characteristic>
         <infoLink name="Walker" id="9b4f-26bc-356d-b646" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Harbinger of Awakening" hidden="false" id="0cc4-d5f6-d974-8b06">
+    <selectionEntry type="unit" import="true" name="Harbinger of Awakening" hidden="false" id="0cc4-d5f6-d974-8b06" sortIndex="5">
       <categoryLinks>
         <categoryLink name="Leaders" hidden="false" id="f6c4-2e43-a52e-123c" targetId="2886-2afd-f65f-9d8e" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="0b3e-23a8-f0e3-d38e" targetId="205c-3072-067b-d808" primary="false"/>
@@ -715,7 +817,7 @@ This unit uses a Necron Lord model.</characteristic>
         <infoLink name="Heavy Armour" id="38e9-5e3b-888a-b35d" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Royal Warden" hidden="false" id="4225-aeb6-e82d-fc41">
+    <selectionEntry type="unit" import="true" name="Royal Warden" hidden="false" id="4225-aeb6-e82d-fc41" sortIndex="6">
       <costs>
         <cost name="pts" typeId="points" value="50"/>
       </costs>
@@ -792,7 +894,7 @@ b) IMMORTALS</characteristic>
         <infoLink name="Heavy Armour" id="7285-75cb-3adf-5d0c" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Technomancer" hidden="false" id="2457-6b9b-91fd-8053">
+    <selectionEntry type="unit" import="true" name="Technomancer" hidden="false" id="2457-6b9b-91fd-8053" sortIndex="7">
       <costs>
         <cost name="pts" typeId="points" value="40"/>
       </costs>
@@ -809,6 +911,7 @@ b) IMMORTALS</characteristic>
       </profiles>
       <entryLinks>
         <entryLink import="true" name="Living Metal" hidden="false" id="305b-3916-b6a4-c39d" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
+        <entryLink import="true" name="Cryptohralls" hidden="false" id="55d4-be02-01ef-46da" type="selectionEntry" targetId="b258-ecbd-66e3-f1c3"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="7507-9234-f881-4a9a">
@@ -881,7 +984,7 @@ e) CRYPTOTHRALLS</characteristic>
         <infoLink name="Heavy Armour" id="bd5d-234d-5f66-97a6" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Chronomancer" hidden="false" id="69cf-7c7d-1134-a798">
+    <selectionEntry type="unit" import="true" name="Chronomancer" hidden="false" id="69cf-7c7d-1134-a798" sortIndex="9">
       <costs>
         <cost name="pts" typeId="points" value="40"/>
       </costs>
@@ -891,6 +994,7 @@ e) CRYPTOTHRALLS</characteristic>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Living Metal" hidden="false" id="7fd8-12ce-17ef-2f7d" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
+        <entryLink import="true" name="Cryptohralls" hidden="false" id="df17-dfab-955c-4f76" type="selectionEntry" targetId="b258-ecbd-66e3-f1c3"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="437d-65d9-fc1e-c93c">
@@ -970,7 +1074,7 @@ d) CRYPTOTHRALLS</characteristic>
         <infoLink name="Heavy Armour" id="176e-a26b-c5c8-fe46" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Plasmancer" hidden="false" id="04f1-cbb4-32a0-ba07">
+    <selectionEntry type="unit" import="true" name="Plasmancer" hidden="false" id="04f1-cbb4-32a0-ba07" sortIndex="8">
       <costs>
         <cost name="pts" typeId="points" value="40"/>
       </costs>
@@ -980,6 +1084,7 @@ d) CRYPTOTHRALLS</characteristic>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Living Metal" hidden="false" id="076c-e2d7-f86d-fc0a" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
+        <entryLink import="true" name="Cryptohralls" hidden="false" id="f38d-16e3-08d0-e552" type="selectionEntry" targetId="b258-ecbd-66e3-f1c3"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="b40f-58a5-e377-8909">
@@ -1049,7 +1154,7 @@ d) CRYPTOTHRALLS</characteristic>
         <infoLink name="Heavy Armour" id="9e77-91a5-6dae-e886" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Geomancer" hidden="false" id="d48f-dad1-f6fe-4455">
+    <selectionEntry type="unit" import="true" name="Geomancer" hidden="false" id="d48f-dad1-f6fe-4455" sortIndex="10">
       <costs>
         <cost name="pts" typeId="points" value="40"/>
       </costs>
@@ -1059,6 +1164,7 @@ d) CRYPTOTHRALLS</characteristic>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Living Metal" hidden="false" id="c1d3-2b64-6156-4798" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
+        <entryLink import="true" name="Cryptohralls" hidden="false" id="d289-3cfe-df2a-5b24" type="selectionEntry" targetId="b258-ecbd-66e3-f1c3"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="f293-a8cf-26b8-65d6">
@@ -1125,7 +1231,7 @@ d) CRYPTOTHRALLS</characteristic>
         <infoLink name="Heavy Armour" id="6f56-b0aa-000c-3f9d" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Psychomancer" hidden="false" id="8d77-e756-9f89-ba69">
+    <selectionEntry type="unit" import="true" name="Psychomancer" hidden="false" id="8d77-e756-9f89-ba69" sortIndex="11">
       <costs>
         <cost name="pts" typeId="points" value="40"/>
       </costs>
@@ -1180,112 +1286,13 @@ d) CRYPTOTHRALLS</characteristic>
         <entryLink import="true" name="Living Metal" hidden="false" id="e371-6210-4eb6-7967" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Cryptohralls" hidden="false" id="b258-ecbd-66e3-f1c3">
-      <costs>
-        <cost name="pts" typeId="points" value="50"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink targetId="205c-3072-067b-d808" id="f8ce-fa2a-c7a4-4437" primary="false" name="Infantry"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Cryptohralls" id="33da-5f08-e284-abb1" hidden="false">
-          <selectionEntries>
-            <selectionEntry type="model" import="true" name="Cryptohrall" hidden="false" id="6a76-a2d6-d398-c32b">
-              <profiles>
-                <profile name="Cryptohrall" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="80fb-1780-4901-ad28">
-                  <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
-                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">-</characteristic>
-                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">-</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Scouring Eye Beam" hidden="false" id="343a-449d-f8b7-e6c2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a29-f092-1dab-7269-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a29-f092-1dab-7269-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Scouring Eye Beam" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6332-3034-9497-292f">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Scything Limbs " hidden="false" id="083d-17e9-34c1-5a4c">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9fd5-9add-edb0-698c-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9fd5-9add-edb0-698c-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Scything Limbs " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4222-6d3d-a5a3-be2d">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Shred" id="4fbe-06d7-3cd4-3f1f" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-                  </infoLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="39dc-203a-84b0-e9fe-min" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="39dc-203a-84b0-e9fe-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <profiles>
-        <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="c49b-e35d-a1da-11bd">
-          <characteristics>
-            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must be attached by either:
-a) TECHNOMANCER
-b) PLASMANCER
-c) CHRONOMANCER
-d) GEOMANCER</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Engrammatic Compulsion" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8f99-b9e4-ad27-2595">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a model in this unit suffers a wound, roll a D6. On a 3+, that attack fails.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Slave Construct" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e93d-2c7d-4c78-855f">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit’s CRYPTOTHRALLS models cannot be selected to suffer wounds. After each other model is dead, this unit’s CRYPTOTHRALLS models die.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Living Metal" hidden="false" id="22c5-f186-4fbb-3126" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
-      </entryLinks>
-      <infoLinks>
-        <infoLink name="Heavy Armour" id="b624-6b2e-11c4-0d67" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Canoptek Plasmacyte" hidden="false" id="3e28-77b3-f30d-c9fa">
+    <selectionEntry type="upgrade" import="true" name="Canoptek Plasmacyte" hidden="false" id="3e28-77b3-f30d-c9fa" sortIndex="12">
       <costs>
         <cost name="pts" typeId="points" value="20"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="205c-3072-067b-d808" id="c1cf-7a2e-2195-e32c" primary="false" name="Infantry"/>
-        <categoryLink targetId="1dc0-a947-c240-76bb" id="f759-850f-1da6-f34c" primary="false" name="Countless Leader"/>
+        <categoryLink targetId="1dc0-a947-c240-76bb" id="f759-850f-1da6-f34c" primary="true" name="Countless Leader"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Monomolecular Proboscis" hidden="false" id="e977-7cd6-ff63-11d0">
@@ -1349,7 +1356,7 @@ This unit does not count towards your army list’s leader capacity.</characteri
         <entryLink import="true" name="Living Metal" hidden="false" id="0d85-75ff-c0cb-50b1" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Warriors" hidden="false" id="6922-faaf-ce69-d438">
+    <selectionEntry type="unit" import="true" name="Warriors" hidden="false" id="6922-faaf-ce69-d438" sortIndex="13">
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
@@ -1460,7 +1467,7 @@ This unit does not count towards your army list’s leader capacity.</characteri
         <infoLink name="Heavy Armour" id="68dc-aa03-8de5-4a29" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Immortals" hidden="false" id="8549-292d-751e-335f">
+    <selectionEntry type="unit" import="true" name="Immortals" hidden="false" id="8549-292d-751e-335f" sortIndex="14">
       <selectionEntryGroups>
         <selectionEntryGroup name="Immortals" id="0b92-d532-51e7-fc52" hidden="false" defaultSelectionEntryId="9869-35c0-6632-b96d">
           <constraints>
@@ -1584,7 +1591,7 @@ This unit does not count towards your army list’s leader capacity.</characteri
         <infoLink name="Heavy Armour" id="0292-80a8-d7c3-cfef" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Lychguards" hidden="false" id="75ee-4559-2b72-9891">
+    <selectionEntry type="unit" import="true" name="Lychguards" hidden="false" id="75ee-4559-2b72-9891" sortIndex="15">
       <selectionEntryGroups>
         <selectionEntryGroup name="Lychguards" id="7e13-429a-ec88-16d2" hidden="false" defaultSelectionEntryId="5f45-3b77-8756-386a">
           <constraints>
@@ -1698,7 +1705,7 @@ This unit does not count towards your army list’s leader capacity.</characteri
         <categoryLink name="Infantry" hidden="false" id="5919-6abb-687b-6672" targetId="205c-3072-067b-d808" primary="false"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Flayed Ones" hidden="false" id="df69-c203-25f2-f74f">
+    <selectionEntry type="unit" import="true" name="Flayed Ones" hidden="false" id="df69-c203-25f2-f74f" sortIndex="16">
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
@@ -1787,7 +1794,7 @@ This unit does not count towards your army list’s leader capacity.</characteri
         <infoLink name="Heavy Armour" id="674b-c5b2-54da-f94d" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Deathmarks" hidden="false" id="ea4b-a57e-d262-c1ef">
+    <selectionEntry type="unit" import="true" name="Deathmarks" hidden="false" id="ea4b-a57e-d262-c1ef" sortIndex="17">
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
@@ -1878,7 +1885,7 @@ This unit does not count towards your army list’s leader capacity.</characteri
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Skorpekh Destroyers" hidden="false" id="4a18-41ff-a3b0-1d79">
+    <selectionEntry type="unit" import="true" name="Skorpekh Destroyers" hidden="false" id="4a18-41ff-a3b0-1d79" sortIndex="18">
       <selectionEntryGroups>
         <selectionEntryGroup name="Skorpekh Destroyers" id="a562-515f-7d01-13f6" hidden="false" defaultSelectionEntryId="fdea-797d-625e-48be">
           <selectionEntries>
@@ -1965,7 +1972,7 @@ This unit does not count towards your army list’s leader capacity.</characteri
         <infoLink name="Walker" id="4beb-186a-5819-c138" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Lokhust Destroyers" hidden="false" id="003a-ef1e-c06c-9fbf">
+    <selectionEntry type="unit" import="true" name="Lokhust Destroyers" hidden="false" id="003a-ef1e-c06c-9fbf" sortIndex="19">
       <selectionEntryGroups>
         <selectionEntryGroup name="Lokhust Destroyers" id="fdeb-aa25-630a-b802" hidden="false" defaultSelectionEntryId="ffc4-6388-9b17-1b14">
           <constraints>
@@ -2028,7 +2035,7 @@ This unit does not count towards your army list’s leader capacity.</characteri
         <infoLink name="Fly" id="bbe8-98ad-61ca-fa2c" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Ophydian Destroyers" hidden="false" id="d9e4-9a36-562c-cd38">
+    <selectionEntry type="unit" import="true" name="Ophydian Destroyers" hidden="false" id="d9e4-9a36-562c-cd38" sortIndex="20">
       <selectionEntryGroups>
         <selectionEntryGroup name="Ophydian Destroyers" id="03a1-2629-8ff7-6fda" hidden="false" defaultSelectionEntryId="00cf-812c-b746-9c0b">
           <selectionEntries>
@@ -2138,7 +2145,7 @@ This unit does not count towards your army list’s leader capacity.</characteri
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Canoptek Scarab Swarms" hidden="false" id="7201-04f3-1093-c07b">
+    <selectionEntry type="unit" import="true" name="Canoptek Scarab Swarms" hidden="false" id="7201-04f3-1093-c07b" sortIndex="21">
       <selectionEntryGroups>
         <selectionEntryGroup name="Canoptek Scarab Swarms" id="e737-8cbc-8d3b-5c18" hidden="false" defaultSelectionEntryId="7af8-7621-09d9-ee1d">
           <constraints>
@@ -2242,7 +2249,7 @@ REPLICATE: After this ability is gained, add one model to this unit.</characteri
         <cost name="pts" typeId="points" value="60"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Canoptek Spyder" hidden="false" id="074d-4164-9a62-cbc0">
+    <selectionEntry type="unit" import="true" name="Canoptek Spyder" hidden="false" id="074d-4164-9a62-cbc0" sortIndex="22">
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
@@ -2354,7 +2361,7 @@ FABRICATE: After this ability is gained, create one unit of CANOPTEK SCARAB SW
         <categoryLink targetId="ccc6-6202-853c-23e4" id="af05-bdc3-74c7-4011" primary="true" name="Support"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Canoptek Reanimator" hidden="false" id="ad55-5557-8830-949c">
+    <selectionEntry type="unit" import="true" name="Canoptek Reanimator" hidden="false" id="ad55-5557-8830-949c" sortIndex="23">
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
@@ -2437,7 +2444,7 @@ WIDE NANOSCARAB BEAM: After this unit’s Move step, select up to two different
         <categoryLink targetId="ccc6-6202-853c-23e4" id="468c-ff4c-63be-7088" primary="true" name="Support"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Canoptek Doomstaker" hidden="false" id="a8dd-d76e-8aba-7bf7">
+    <selectionEntry type="unit" import="true" name="Canoptek Doomstaker" hidden="false" id="a8dd-d76e-8aba-7bf7" sortIndex="24">
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
@@ -2526,7 +2533,7 @@ RELOCATE: This unit&apos;s M is improved by 4.</characteristic>
         <categoryLink targetId="b239-6bd1-e7a0-0a02" id="a2ba-a0d9-3ae4-2288" primary="false" name="Vehicle"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Canoptek Wraiths" hidden="false" id="7c39-bd37-7dd3-f8b0">
+    <selectionEntry type="unit" import="true" name="Canoptek Wraiths" hidden="false" id="7c39-bd37-7dd3-f8b0" sortIndex="25">
       <selectionEntryGroups>
         <selectionEntryGroup name="Canoptek Wraiths" id="a5c5-7fb2-4d52-db48" hidden="false" defaultSelectionEntryId="cb7b-592d-5283-86cc">
           <selectionEntries>
@@ -2693,7 +2700,7 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
         <categoryLink targetId="ccc6-6202-853c-23e4" id="925d-f0e7-29c6-96ab" primary="true" name="Support"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Tomb Blades" hidden="false" id="e909-2fa0-d5ec-18a6">
+    <selectionEntry type="unit" import="true" name="Tomb Blades" hidden="false" id="e909-2fa0-d5ec-18a6" sortIndex="26">
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="c956-1b91-b5c3-df80" targetId="205c-3072-067b-d808" primary="false"/>
         <categoryLink targetId="ccc6-6202-853c-23e4" id="45eb-f510-f649-7e33" primary="true" name="Support"/>
@@ -2809,7 +2816,7 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
         <infoLink name="Fly" id="654f-919b-5ad9-d22f" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Lokhust Heavy Destroyers" hidden="false" id="2df5-33c4-f822-b801">
+    <selectionEntry type="unit" import="true" name="Lokhust Heavy Destroyers" hidden="false" id="2df5-33c4-f822-b801" sortIndex="27">
       <selectionEntryGroups>
         <selectionEntryGroup name="Gun" id="932e-fa28-7cbb-bd04" hidden="false">
           <selectionEntries>
@@ -2879,7 +2886,7 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
         <cost name="pts" typeId="points" value="80"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Hexmark Destroyer" hidden="false" id="8493-21b4-a51b-f4d7">
+    <selectionEntry type="unit" import="true" name="Hexmark Destroyer" hidden="false" id="8493-21b4-a51b-f4d7" sortIndex="28">
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="45b7-0fc1-28e8-c228" targetId="205c-3072-067b-d808" primary="false"/>
         <categoryLink name="Rare" hidden="false" id="546d-d85a-0fb1-b96f" targetId="1738-1300-9dbb-c5be" primary="false"/>
@@ -2948,7 +2955,7 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="1208-6757-fce3-80e3" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Annihilation Barge" hidden="false" id="d20b-a91c-1ea9-1abf">
+    <selectionEntry type="unit" import="true" name="Annihilation Barge" hidden="false" id="d20b-a91c-1ea9-1abf" sortIndex="29">
       <categoryLinks>
         <categoryLink name="Support" hidden="false" id="6dc9-84f4-08bb-e7c9" targetId="ccc6-6202-853c-23e4" primary="true"/>
         <categoryLink name="Vehicle" hidden="false" id="4f8a-6f7e-f9ef-3a92" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
@@ -3056,7 +3063,7 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
         </entryLink>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Triarch Stalker" hidden="false" id="7ede-0525-18c6-c990">
+    <selectionEntry type="unit" import="true" name="Triarch Stalker" hidden="false" id="7ede-0525-18c6-c990" sortIndex="30">
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
@@ -3202,7 +3209,7 @@ Relayed Target: For each ranged attack made by a Necrons infantry unit that ta
         <infoLink name="Walker" id="2c27-d521-9c0d-6c9c" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.4" hidden="false" id="b235-3066-1042-78ab" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.4" hidden="false" id="b235-3066-1042-78ab" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="af31-e70d-2c95-d601" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
