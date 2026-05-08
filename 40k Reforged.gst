@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="35" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="36" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -119,6 +119,11 @@
         <characteristicType name="Must Attach to" id="2c63-5e3f-9132-459d" kind="longText"/>
       </characteristicTypes>
     </profileType>
+    <profileType name="Rule" id="4349-812a-7a9b-9706" hidden="false" kind="rule">
+      <characteristicTypes>
+        <characteristicType name="Description:" id="6336-f7f6-0bef-e457" kind="longText"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <costTypes>
     <costType name="pts" id="points" defaultCostLimit="0"/>
@@ -160,6 +165,23 @@
       <costs>
         <cost name="pts" typeId="51b2-306e-1021-d207" value="0"/>
       </costs>
+      <profiles>
+        <profile name="Battle Size" typeId="4349-812a-7a9b-9706" typeName="Rule" hidden="false" id="aa23-ee88-116f-ce91">
+          <characteristics>
+            <characteristic name="Description:" typeId="6336-f7f6-0bef-e457">The size of players&apos; army lists are measured in points. Choose a size for the battle from below. Each player can select units for their army list totalling up to that size. Each size comes with list building restrictions.
+
+
+800 Points: Rapid &amp; lethal - this is the size for quick action. 1-2 hours. You can only bring two leader units. For each unit in the Elites, Transports, and Support sections, you can only bring one of that unit.
+
+
+1200 Points: Bold, tactical play is key at this size as you adapt to the dice and the battlefield. This is the recommended size for 1v1 games. 2-3 hours.
+You can only bring three leader units. For each unit in the Elites, Transports, and Support sections, you can only bring two of that unit.
+
+
+1600 Point: Strategy takes the spotlight as you battle to extend advantages over the long term. 3+ hours. You can only bring four leader units. For each unit in the Elites, Transports, and Support sections, you can only bring three of that unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Frag Grenade" hidden="false" id="a1b6-2895-8960-4e57">
       <profiles>
@@ -211,7 +233,6 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</characteristic>
           </characteristics>
@@ -384,7 +405,6 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
           </characteristics>
@@ -552,7 +572,6 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
@@ -567,7 +586,6 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">-1</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
@@ -582,7 +600,6 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
           </characteristics>
@@ -597,7 +614,6 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="AP" typeId="68a3-e9dc-8975-7aca">0</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
           </characteristics>
