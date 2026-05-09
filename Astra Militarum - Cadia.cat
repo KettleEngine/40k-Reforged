@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5595-b18e-57e5-1cd0" name=" Astra Militarum - Cadia" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5595-b18e-57e5-1cd0" name=" Astra Militarum - Cadia" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Astra Militarum" id="d1fe-461c-63db-5616" targetId="f178-f218-fb11-d21a" importRootEntries="true"/>
   </catalogueLinks>
@@ -31,7 +31,7 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af00-362f-addc-340c" includeChildSelections="false"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Hot-Shot Lasgun" hidden="false" id="0f39-2caa-320a-d17e" type="selectionEntry" targetId="4204-1729-3aa8-ae00">
+                    <entryLink import="true" name="Hot-Shot Lasgun" hidden="false" id="0f39-2caa-320a-d17e" type="selectionEntry" targetId="4204-1729-3aa8-ae00" sortIndex="1">
                       <modifiers>
                         <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
@@ -39,7 +39,7 @@
                     </entryLink>
                   </entryLinks>
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="Special Weapon:" id="3381-215c-2e87-aebb" hidden="false">
+                    <selectionEntryGroup name="Special Weapons" id="3381-215c-2e87-aebb" hidden="false" sortIndex="2">
                       <entryLinks>
                         <entryLink import="true" name="Flamer" hidden="false" id="b414-0c2f-b8ec-75b7" type="selectionEntry" targetId="4cf9-1758-d00d-29c4" sortIndex="1">
                           <modifiers>
@@ -75,57 +75,55 @@
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="3938-974b-39df-849f" includeChildSelections="true"/>
                       </constraints>
-                      <selectionEntryGroups>
-                        <selectionEntryGroup name="May Take One:" id="5312-038a-0d19-a697" hidden="false">
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Other Weapons" id="5312-038a-0d19-a697" hidden="false" sortIndex="3">
+                      <entryLinks>
+                        <entryLink import="true" name="Hot-Shot Marksman Rifle" hidden="false" id="7486-65ca-453b-0296" type="selectionEntry" targetId="e9d4-ac65-9e88-4805" sortIndex="1">
+                          <modifiers>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="9bc7-906d-8903-2d31" includeChildSelections="true"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Melta Mine &amp; Hot-Shot Laspistol" hidden="false" id="563e-bd86-b62d-39e4" sortIndex="2">
                           <entryLinks>
-                            <entryLink import="true" name="Hot-Shot Marksman Rifle" hidden="false" id="7486-65ca-453b-0296" type="selectionEntry" targetId="e9d4-ac65-9e88-4805" sortIndex="1">
+                            <entryLink import="true" name="Hot-Shot Laspistol" hidden="false" id="4e5c-1df6-b098-51d0" type="selectionEntry" targetId="8190-2575-d36d-e4b2">
                               <modifiers>
-                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8ce3-58ac-1179-9073-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ce3-58ac-1179-9073-max" includeChildSelections="false"/>
+                              </constraints>
                             </entryLink>
                           </entryLinks>
-                          <constraints>
-                            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="9bc7-906d-8903-2d31" includeChildSelections="true"/>
-                          </constraints>
                           <selectionEntries>
-                            <selectionEntry type="upgrade" import="true" name="Melta Mine &amp; Hot-Shot Laspistol" hidden="false" id="563e-bd86-b62d-39e4" sortIndex="2">
-                              <entryLinks>
-                                <entryLink import="true" name="Hot-Shot Laspistol" hidden="false" id="4e5c-1df6-b098-51d0" type="selectionEntry" targetId="8190-2575-d36d-e4b2">
-                                  <modifiers>
-                                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                  </modifiers>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8ce3-58ac-1179-9073-min" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ce3-58ac-1179-9073-max" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                              </entryLinks>
-                              <selectionEntries>
-                                <selectionEntry type="upgrade" import="true" name="Melta Mine" hidden="false" id="456f-3ab4-7a43-6826">
-                                  <profiles>
-                                    <profile name="Melta Mine" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3997-89fa-9275-8bc3">
-                                      <characteristics>
-                                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                                        <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+4</characteristic>
-                                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-                                      </characteristics>
-                                    </profile>
-                                  </profiles>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6584-ea76-38e5-cbba-min" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6584-ea76-38e5-cbba-max" includeChildSelections="false"/>
-                                  </constraints>
-                                </selectionEntry>
-                              </selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Melta Mine" hidden="false" id="456f-3ab4-7a43-6826">
+                              <profiles>
+                                <profile name="Melta Mine" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3997-89fa-9275-8bc3">
+                                  <characteristics>
+                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+4</characteristic>
+                                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6584-ea76-38e5-cbba-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6584-ea76-38e5-cbba-max" includeChildSelections="false"/>
+                              </constraints>
                             </selectionEntry>
                           </selectionEntries>
-                        </selectionEntryGroup>
-                      </selectionEntryGroups>
+                        </selectionEntry>
+                      </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
                 </selectionEntryGroup>
