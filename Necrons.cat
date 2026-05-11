@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Gauss" id="b2e9-8420-cfb7-4bde" hidden="false">
       <description>For each attack made for this weapon, the Wound Roll for that attack is improved by 1, and the Saving Throw is worsened by 1.</description>
@@ -128,6 +128,81 @@ Lord&apos;s Mandate: For each attack this unit makes, reroll a Wound Roll of 1�
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5b88-2f0d-99f9-06a2-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b88-2f0d-99f9-06a2-max" includeChildSelections="false"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry type="unit" import="true" name="Canoptek Plasmacyte" hidden="false" id="3e28-77b3-f30d-c9fa">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <categoryLinks>
+            <categoryLink name="Infantry" hidden="false" id="c1cf-7a2e-2195-e32c" targetId="205c-3072-067b-d808" primary="false"/>
+            <categoryLink targetId="1dc0-a947-c240-76bb" id="b136-1252-7dca-995b" primary="false" name="Countless Leader"/>
+          </categoryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Monomolecular Proboscis" hidden="false" id="e977-7cd6-ff63-11d0">
+              <profiles>
+                <profile name="Monomolecular Proboscis" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5c93-da5e-ca6c-d34a">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Precision</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Precision" id="422e-51d8-42d1-b549" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b13a-5da2-007a-f441-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b13a-5da2-007a-f441-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <profiles>
+            <profile name="Canoptek Plasmacyte" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="a864-b6fc-964c-db57">
+              <characteristics>
+                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">-</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">-</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Madness Virus" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="aa60-08c5-3d8d-807a">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Once per battle, after this unit Activates, you may ‘inject madness virus’. If you do, until the End step, for each attack this unit makes this turn, that attack suffers a -1 to its Hit Roll and a Hit Roll of 6 causes 2 additional hits.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Plasmacyte Construct" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="32f1-46d4-296c-a6b7">
+              <characteristics>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit’s CANOPTEK PLASMACYTE model cannot be selected to suffer wounds. After the last non-CANOPTEK PLASMACYTE model dies, this unit’s CANOPTEK PLASMACYTE model dies.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Canoptek Plasmacyte" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="02aa-acff-9926-3e66">
+              <characteristics>
+                <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to:
+a) Any unit with Destroyer Cults.
+
+
+This unit may attach to a unit which already has an attached leader (other than another CANOPTEK PLASMACYTE).
+This unit does not count towards your army list’s leader capacity.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fly" id="1b54-03c1-69b6-eece" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+            <infoLink name="Heavy Armour" id="cc57-f921-80b1-aea0" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Living Metal" hidden="false" id="0d85-75ff-c0cb-50b1" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="cf44-65f2-6804-ecfe" includeChildSelections="true"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Nanoscarab Repair" hidden="false" id="1448-e157-f806-4c16">
       <constraints>
@@ -1372,76 +1447,6 @@ d) CRYPTOTHRALLS</characteristic>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Living Metal" hidden="false" id="e371-6210-4eb6-7967" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Canoptek Plasmacyte" hidden="false" id="3e28-77b3-f30d-c9fa" sortIndex="12">
-      <costs>
-        <cost name="pts" typeId="points" value="20"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink targetId="205c-3072-067b-d808" id="c1cf-7a2e-2195-e32c" primary="false" name="Infantry"/>
-        <categoryLink targetId="1dc0-a947-c240-76bb" id="f759-850f-1da6-f34c" primary="true" name="Countless Leader"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Monomolecular Proboscis" hidden="false" id="e977-7cd6-ff63-11d0">
-          <profiles>
-            <profile name="Monomolecular Proboscis" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5c93-da5e-ca6c-d34a">
-              <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Precision</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Precision" id="422e-51d8-42d1-b549" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b13a-5da2-007a-f441-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b13a-5da2-007a-f441-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <profiles>
-        <profile name="Canoptek Plasmacyte" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="a864-b6fc-964c-db57">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">-</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">-</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Madness Virus" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="aa60-08c5-3d8d-807a">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Once per battle, after this unit Activates, you may ‘inject madness virus’. If you do, until the End step, for each attack this unit makes this turn, that attack suffers a -1 to its Hit Roll and a Hit Roll of 6 causes 2 additional hits.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Plasmacyte Construct" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="32f1-46d4-296c-a6b7">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit’s CANOPTEK PLASMACYTE model cannot be selected to suffer wounds. After the last non-CANOPTEK PLASMACYTE model dies, this unit’s CANOPTEK PLASMACYTE model dies.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Canoptek Plasmacyte" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="02aa-acff-9926-3e66">
-          <characteristics>
-            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to:
-a) Any unit with Destroyer Cults.
-
-
-This unit may attach to a unit which already has an attached leader (other than another CANOPTEK PLASMACYTE).
-This unit does not count towards your army list’s leader capacity.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Fly" id="1b54-03c1-69b6-eece" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
-        <infoLink name="Heavy Armour" id="cc57-f921-80b1-aea0" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
-      </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Living Metal" hidden="false" id="0d85-75ff-c0cb-50b1" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Warriors" hidden="false" id="6922-faaf-ce69-d438" sortIndex="13">
