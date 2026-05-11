@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Stances" hidden="false" id="9ef8-9802-e8e8-b5b6">
       <infoLinks>
@@ -303,7 +303,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb2b-fac7-1b1b-41e6-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="3fd4-08d0-17f9-61b5" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.4" hidden="false" id="3fd4-08d0-17f9-61b5" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="005a-8f68-8604-d3a9" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -483,9 +483,9 @@
         <cost name="pts" typeId="points" value="120"/>
       </costs>
       <profiles>
-        <profile name="Formidable Will" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="47b2-d9eb-20d9-a0b9">
+        <profile name="Vigilant Presidio" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="47b2-d9eb-20d9-a0b9">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Resilient roll for this unit, you may reroll that roll.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any of your other units within 1” of this unit gain Conservai or Kaptaris, this unit also gains that ability until the End step.</characteristic>
           </characteristics>
         </profile>
         <profile name="Custodian Warden" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="acac-b817-b706-66c2">
@@ -499,12 +499,19 @@
         </profile>
         <profile name="Immovable Sentinel" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="92e5-5534-2d11-6c00">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a ranged attack successfully wounds a friendly leader unit within 3” of this unit while this unit is visible to and closer to the enemy unit that made that attack, you may roll a D6. On a 4+, you may change that attack’s target to this unit. If you do, this unit gains Resilient 5+ for that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Resilient Roll made for this unit, you may reroll that roll.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Binding Oath" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="eebf-bd3a-4a2d-00a1">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Activate this unit, you may select an infantry unit in reserves or on the battlefield. If you do, for the rest of the battle, while that unit is within 1” of this unit, if this unit is visible to an active enemy unit and closer or equally distant to that enemy unit, the selected unit gains the following ability:
+
+
+Guarded: For each wound a model in this unit is selected to suffer, you may roll a D6. On a 5+, that attack fails.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Resilient (X)" id="6e85-422d-5707-dbb3" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
         <infoLink name="Heavy Armour" id="67e7-6e4c-2ad6-55ba" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
       <entryLinks>
@@ -1001,7 +1008,10 @@
         </profile>
         <profile name="Martial Apotheosis" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="95cf-e715-3e69-4a67">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within engagement range of an enemy infantry unit, for each attack this unit makes, a Hit Roll of 6+ always wounds for that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit has Dacatarai, improve the A of each melee weapon in this unit by a number equal to the number of enemy units within engagement range of this unit.
+
+
+While this unit has Rendax, improve the Strength of each melee weapon in this unit by a number equal to the number of enemy units within engagement range of this unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1082,7 +1092,7 @@
     </profile>
     <profile name="Stance: Rendax" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0ffe-80e6-74fc-1c59">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack this unit makes that targets an enemy unit with a number of models equal to or less than this unit, a Hit Roll of 6 causes that attack to always wound.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack this unit makes which targets an enemy unit with a single model, a Hit Roll of 6+ for that attack always wounds.</characteristic>
       </characteristics>
     </profile>
     <profile name="Martial Ka’tah" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e499-7601-0c40-dc24">
