@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Gauss" id="b2e9-8420-cfb7-4bde" hidden="false">
       <description>For each attack made for this weapon, the Wound Roll for that attack is improved by 1, and the Saving Throw is worsened by 1.</description>
@@ -2008,7 +2008,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Weapon" id="4e1f-6d9a-585c-6a54" hidden="false">
+                <selectionEntryGroup name="Weapon" id="4e1f-6d9a-585c-6a54" hidden="false" defaultSelectionEntryId="ef82-715e-f0d3-5914">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Hyperphase Reap-blade" hidden="false" id="ef82-715e-f0d3-5914">
                       <profiles>
@@ -2023,9 +2023,6 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
                           </characteristics>
                         </profile>
                       </profiles>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="dbeb-f680-24ec-d1c3" includeChildSelections="true"/>
-                      </constraints>
                       <infoLinks>
                         <infoLink name="Pierce" id="ef13-fdd1-4b98-ac81" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                       </infoLinks>
