@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="23d8-3b8d-77df-8eb4">
+    <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="23d8-3b8d-77df-8eb4" sortIndex="3">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="6a8d-2552-ebb8-2d4c" includeChildSelections="false"/>
         <constraint type="min" value="1" field="selections" scope="force" shared="true" id="a553-4c15-d9ae-b42d" includeChildSelections="false"/>
@@ -59,7 +59,7 @@
         <profile name="Saintly Heavy Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="719c-db2f-b2ce-b065">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">15</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
@@ -82,7 +82,7 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+2</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Holy Trinity</characteristic>
           </characteristics>
         </profile>
@@ -647,7 +647,7 @@ c) RETRIBUTORS</characteristic>
                           <entryLinks>
                             <entryLink import="true" name="Storm Bolter" hidden="false" id="322e-fc16-45e9-d96b" type="selectionEntry" targetId="d215-60bd-f49d-295e">
                               <modifiers>
-                                <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                 <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
@@ -701,7 +701,7 @@ c) RETRIBUTORS</characteristic>
                           <entryLinks>
                             <entryLink import="true" name="Heavy Bolter" hidden="false" id="8cd6-c2a0-1246-be30" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
                               <modifiers>
-                                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                 <modifier type="append" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
@@ -719,7 +719,7 @@ c) RETRIBUTORS</characteristic>
                           <entryLinks>
                             <entryLink import="true" name="Heavy Flamer" hidden="false" id="8102-edc4-9a1b-725c" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
                               <modifiers>
-                                <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                 <modifier type="append" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
@@ -1244,7 +1244,7 @@ c) RETRIBUTORS</characteristic>
         </profile>
         <profile name="Eager for Glory" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="86a6-d106-454a-d09a">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, add 1 to the result of that roll for each of your other BATTLE SISTERS units on the battlefield.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, add 1 to the result of that roll for each of your other infantry units on the battlefield or in reserves.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1329,7 +1329,7 @@ c) RETRIBUTORS</characteristic>
         </profile>
         <profile name="Great Butchery" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="91c6-4cce-ff7a-8e09">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within engagement range of any enemy unit and none of your other units are within 5” of this unit, for each of this unit’s attacks which target that enemy unit, that attack gains Shred.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within engagement range of any enemy unit and none of your other units are within 5” of this unit, each of this unit’s weapons gains Shred.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2522,7 +2522,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
                           <modifiers>
                             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                             <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
-                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                           </modifiers>
                           <infoLinks>
                             <infoLink name="Holy Trinity" id="eac3-5354-6a1e-489b" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
@@ -2725,23 +2725,24 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
             </entryLink>
           </entryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hunter-Killer Missile" hidden="false" id="4797-efff-7006-0ebc">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c065-5d2b-70e0-aae7" includeChildSelections="false"/>
-          </constraints>
+        <selectionEntry type="upgrade" import="true" name="Hunter-Killer Missile" hidden="false" id="3e1f-a11c-ea33-f04c">
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d048-c497-f835-0325" includeChildSelections="false"/>
+          </constraints>
           <entryLinks>
-            <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="a2fe-d0fb-e36d-15e1" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+            <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="3fb4-cbde-df4a-e4d5" type="selectionEntry" targetId="eda8-2347-1928-a28e">
               <modifiers>
                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                 <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="3" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
               </modifiers>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8d8-e00e-9b4d-e873" includeChildSelections="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="44d1-b45f-4718-7f74-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44d1-b45f-4718-7f74-max" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a068-14fa-d3dc-c5e8" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d373-97d7-bde3-a1cc" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fac6-093d-6263-3993" includeChildSelections="false"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -2768,7 +2769,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
         </profile>
         <profile name="Death Throes of the Unredeemed" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="be76-aa14-e965-e106">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit fails an Acts of Faith roll, before removing it from the battlefield, it may select targets for its weapons, targeting only the closest visible enemy unit, and make attacks for those weapons.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit dies, before removing it from the battlefield, it may select targets for its weapons, targeting only the closest visible enemy unit, and make attacks for those weapons.</characteristic>
           </characteristics>
         </profile>
         <profile name="Need For Forgiveness" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ae8f-3587-0d9f-ec3d">
@@ -2895,7 +2896,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Zephyrim" hidden="false" id="9b31-2de3-1781-af8f">
       <costs>
-        <cost name="pts" typeId="points" value="110"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="4820-e2b5-9e00-bb68" id="5848-c27b-b4a0-b415" primary="true" name="Elites"/>
@@ -2941,23 +2942,6 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
                         </entryLink>
                       </entryLinks>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="7939-8746-a5f0-7ad8" sortIndex="2">
-                      <entryLinks>
-                        <entryLink import="true" name="Plasma Pistol" hidden="false" id="7026-3f78-99ec-8809" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
-                          <modifiers>
-                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e2b9-4543-d74b-7740-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e2b9-4543-d74b-7740-max" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="ccdc-8f26-01ec-99ae" includeChildSelections="true"/>
-                      </constraints>
-                    </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Hand Flamer" hidden="false" id="798e-36db-b674-41b1" sortIndex="3">
                       <entryLinks>
                         <entryLink import="true" name="Hand Flamer" hidden="false" id="64cc-c076-1d0b-636e" type="selectionEntry" targetId="8c68-b0f9-70cd-4c1f">
@@ -2971,8 +2955,11 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
                         </entryLink>
                       </entryLinks>
                       <constraints>
-                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="b6cd-72de-6efb-1d00" includeChildSelections="true"/>
+                        <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="b6cd-72de-6efb-1d00" includeChildSelections="true"/>
                       </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Inferno Pistol" hidden="false" id="70f6-e53a-5492-f310" sortIndex="4">
                       <constraints>
@@ -2986,8 +2973,48 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
                           </modifiers>
                         </entryLink>
                       </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
                     </selectionEntry>
                   </selectionEntries>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Plasma Pistol" id="a63a-e5f0-e8ad-508a" hidden="false" sortIndex="2">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="7939-8746-a5f0-7ad8" sortIndex="1">
+                          <entryLinks>
+                            <entryLink import="true" name="Plasma Pistol" hidden="false" id="7026-3f78-99ec-8809" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
+                              <modifiers>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e2b9-4543-d74b-7740-min" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e2b9-4543-d74b-7740-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Pennant" hidden="false" id="04a5-a01f-552e-47d0" sortIndex="2">
+                          <profiles>
+                            <profile name="Pennant" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="1986-fe3d-0b4b-45e7">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">-</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">-</characteristic>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f">-</characteristic>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">-</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">-</characteristic>
+                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each melee attack this unit makes, that attack gains Holy Trinity.</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                      </selectionEntries>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="ccdc-8f26-01ec-99ae" includeChildSelections="true"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <selectionEntries>
@@ -3022,9 +3049,9 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
         <infoLink name="Fly" id="2511-5b90-059a-4746" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
       </infoLinks>
       <profiles>
-        <profile name="Unwavering Rapture" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="03e4-b7e4-4e0a-810b">
+        <profile name="Constant Communion" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="03e4-b7e4-4e0a-810b">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within engagement of one or more enemy units, each weapon without Holy Trinity in this unit gains Holy Trinity.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 6” of any enemy units, this unit gains Resilient 6+. While this unit is within 6” of two or more enemy units, add 1 to Resilient Rolls made for this unit.</characteristic>
           </characteristics>
         </profile>
         <profile name="San Leor Jump Packs" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="eac5-7d7f-0e81-1f87">
@@ -3090,6 +3117,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
               <modifiers>
                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                 <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="3" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
               </modifiers>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d2b8-91ff-0585-20a6" includeChildSelections="false"/>
@@ -3353,26 +3381,6 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
             </entryLink>
           </entryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hunter-Killer Missile" hidden="false" id="4453-1e4f-b69b-8029">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23c6-3784-f4e4-62f3" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="0e1f-cd9f-7482-5d73" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-              <modifiers>
-                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="45d7-70fc-2d4e-6602-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="45d7-70fc-2d4e-6602-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="5e01-0299-52e6-ee1e">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a1a-ee7c-842e-b740" includeChildSelections="false"/>
@@ -3397,6 +3405,28 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hunter-Killer Missile" hidden="false" id="efd7-0553-5431-6a09">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3250-2c42-eae8-e72b" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="b1e3-e11a-dcbc-ae5a" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="3" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce97-1d0a-baee-aff4" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71d3-ae39-7dbb-a208" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ddb2-6ced-e2e3-32b9" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -3495,26 +3525,27 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac29-13c7-b017-f49d-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hunter-Killer Missile" hidden="false" id="fc4e-63ab-1762-f1dd">
-          <entryLinks>
-            <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="e51c-3eaf-4784-e633" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-              <modifiers>
-                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7962-3f1f-7529-2963" includeChildSelections="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3288-f3b1-7522-161f-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3288-f3b1-7522-161f-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
+        <selectionEntry type="upgrade" import="true" name="Hunter-Killer Missile" hidden="false" id="20db-a961-2bef-ce3b">
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a16-a6e6-a24f-9eb3" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abbd-ac5d-2f65-676f" includeChildSelections="false"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="528c-03f4-4f5e-ed73" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="3" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02fa-454f-7c28-41ed" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="38e4-ca48-29b9-4da7" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3314-2d06-fe08-6752" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -3541,7 +3572,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3835,7 +3866,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
         <entryLink import="true" name="Munitorum Cherub" hidden="false" id="b620-4ce1-50c4-bc8c" type="selectionEntry" targetId="2772-031f-6d96-99c5"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.2" hidden="false" id="1288-3404-e1e5-90f1" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="1288-3404-e1e5-90f1" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="2a32-f478-bc26-83a2" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -3920,8 +3951,7 @@ c) MORDIAN IRON GUARD</characteristic>
     </profile>
     <profile name="Choir of the Faithful (X”)" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2fe1-71fb-63e5-c48d">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your infantry units are within 0+X” of one or more of your leader units, they gain the following ability:
-
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your infantry units are within X” of one or more of your leader units, they gain the following ability:
 
 Sisters’ Song: For each ranged attack that targets this unit, this unit gains Resilient 6+ for that attack.</characteristic>
       </characteristics>
