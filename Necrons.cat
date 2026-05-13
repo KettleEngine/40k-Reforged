@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="16" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Gauss" id="b2e9-8420-cfb7-4bde" hidden="false">
       <description>For each attack made for this weapon, the Wound Roll for that attack is improved by 1, and the Saving Throw is worsened by 1.</description>
@@ -1562,7 +1562,7 @@ d) CRYPTOTHRALLS</characteristic>
       <profiles>
         <profile name="Eternal Phalanx" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f4b5-31b2-82ad-b714">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is visible to any of your leader units, for each attack that targets this unit, reroll a Saving Throw of 1 for that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any unit Activates if this unit has any WARRIORS models and is visible to any of your leader units, until the End step, for each attack that targets this unit, reroll a Saving Throw of 1 for that attack.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1660,7 +1660,7 @@ d) CRYPTOTHRALLS</characteristic>
           <profiles>
             <profile name="Self-repair Protocols" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0145-b18a-64b3-8c83">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each roll for this unit’s Living Metal, treat any D3 result of 1 for that roll as a 2.</characteristic>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a model in this unit dies, this unit may use Living Metal. If it does, it cannot use Self-repair Protocols again this battle round.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1807,6 +1807,13 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
         <categoryLink name="Elites" hidden="false" id="2c69-1d19-288b-213d" targetId="4820-e2b5-9e00-bb68" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="5919-6abb-687b-6672" targetId="205c-3072-067b-d808" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Called to Serve" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="a79b-3b8a-fc52-230d">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During a March, this unit may move up to an additional 6” if that move would end within 1” of a friendly infantry unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Flayed Ones" hidden="false" id="df69-c203-25f2-f74f" sortIndex="16">
       <costs>
@@ -2905,44 +2912,70 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Lokhust Heavy Destroyers" hidden="false" id="2df5-33c4-f822-b801" sortIndex="27">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Gun" id="932e-fa28-7cbb-bd04" hidden="false">
+        <selectionEntryGroup name="Lokhust Heavy Destroyers" id="2b51-7a30-b9ba-643f" hidden="false" defaultSelectionEntryId="3501-5ec9-9a86-b755">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="aa11-bc32-2e29-e154" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c84-c3cc-9252-c1dd" includeChildSelections="false"/>
+          </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Gauss Destructor" hidden="false" id="8479-a467-eb75-bb0e">
+            <selectionEntry type="model" import="true" name="Lokhust Heavy Destroyer" hidden="false" id="3501-5ec9-9a86-b755">
               <profiles>
-                <profile name="Gauss Destructor" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3ac5-1a53-bde7-4e87">
+                <profile name="Lokhust Heavy Destroyer" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="d37e-31b1-d846-d9e7">
                   <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3+6</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Guass</characteristic>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink name="Gauss" id="aa82-b123-abf7-2c67" hidden="false" type="rule" targetId="b2e9-8420-cfb7-4bde"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Enmitic Exterminator" hidden="false" id="cd84-6094-92d8-0b11">
-              <profiles>
-                <profile name="Enmitic Exterminator" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4a3a-3b56-e5f3-b650">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Gun" id="932e-fa28-7cbb-bd04" hidden="false" defaultSelectionEntryId="8479-a467-eb75-bb0e">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Gauss Destructor" hidden="false" id="8479-a467-eb75-bb0e">
+                      <profiles>
+                        <profile name="Gauss Destructor" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3ac5-1a53-bde7-4e87">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3+6</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Guass</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Gauss" id="aa82-b123-abf7-2c67" hidden="false" type="rule" targetId="b2e9-8420-cfb7-4bde"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Enmitic Exterminator" hidden="false" id="cd84-6094-92d8-0b11">
+                      <profiles>
+                        <profile name="Enmitic Exterminator" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4a3a-3b56-e5f3-b650">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f4c0-25ab-fcf6-acf2-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f4c0-25ab-fcf6-acf2-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="points" value="80"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f4c0-25ab-fcf6-acf2-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f4c0-25ab-fcf6-acf2-max" includeChildSelections="false"/>
-          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -2958,20 +2991,6 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
         <infoLink name="Fly" id="f827-cd13-d7d7-9b2d" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
         <infoLink name="Unstoppable" id="bcb5-b679-1655-838d" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
       </infoLinks>
-      <profiles>
-        <profile name="Lokhust Heavy Destroyer" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="d37e-31b1-d846-d9e7">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="points" value="80"/>
-      </costs>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Hexmark Destroyer" hidden="false" id="8493-21b4-a51b-f4d7" sortIndex="28">
       <categoryLinks>
@@ -3272,7 +3291,7 @@ Relayed Target: For each ranged attack made by a Necrons infantry unit that ta
         <infoLink name="Walker" id="2c27-d521-9c0d-6c9c" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.7" hidden="false" id="b235-3066-1042-78ab" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.8" hidden="false" id="b235-3066-1042-78ab" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="af31-e70d-2c95-d601" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
