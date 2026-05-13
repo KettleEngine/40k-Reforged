@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="d93e-ed5b-78c7-6277" sortIndex="-1">
       <categoryLinks>
@@ -102,7 +102,7 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
         </profile>
         <profile name="6 Repurposed Bioforms" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="9909-3ae2-1996-8f7c">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After a unit gains this ability, you may Deploy one of your destroyed units with Adaptive Bioform wholly within your deployment zone with full Health and ready. This ability may only be used once per battle, even if another unit gains it.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After a unit gains this ability, you may Deploy one of your destroyed units with Adaptive Bioform wholly within your deployment zone or wholly within 6” of any of your units with Synapse, with full Health and ready. This ability may only be used once per battle, even if another unit gains it.</characteristic>
           </characteristics>
         </profile>
         <profile name="5 Perfect Adaptation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="6d05-f68a-0bb0-c046">
@@ -295,8 +295,7 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
           <profiles>
             <profile name="Living Incubator" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="937e-b831-3a95-fd04">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For every 500 points in your army list, you may add one additional TERMAGANT unit to your army list for 0 points (1 for 500, 2 for 1000, etc.).
-
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For every 500 points in your army list, you may add one additional TERMAGANT unit to your army list for 0 points (1 for 800, 2 for 1200, 3 for 1600).
 
 [I&apos;m not coding this, here is a counter to do it manually]</characteristic>
               </characteristics>
@@ -361,17 +360,27 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
         </profile>
         <profile name="Debilitating Shadow" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="fc22-36f8-5f42-0b81">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select up to three enemy units within 24” of this unit. The selected units suffer 2D3+1 Suppression.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select up to three enemy units within 24” of this unit. The selected units suffer X Suppression where X was the highest result of this unit’s last Psychic Test.</characteristic>
           </characteristics>
         </profile>
-        <profile name="psychic" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b37a-4663-0e86-0d21">
+        <profile name="Psychic Organisms" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b37a-4663-0e86-0d21">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit may only Cast psychic powers from the ‘Psychic Powers of the Hive Mind’ table.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">NEUROLOID models in this unit do not count as models while selecting a model to suffer a wound. After the last non-NEUROLOID model in this unit dies, each NEUROLOID model in this unit dies.</characteristic>
           </characteristics>
         </profile>
         <profile name="Overwhelming Shadow in the Warp" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f96a-f14d-729b-5b70">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Resolve Test made for enemy units within 24” of this unit, that Resolve Test is worsened by 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="psychic" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="cdf8-84b0-e793-6d22">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit may only Cast psychic powers from the ‘Psychic Powers of the Hive Mind’ table.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Neural Amplifiers" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ddde-7c4d-da42-1f91">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Psychic Test made for this unit, add 1 D6 to that Psychic Test for each NEUROLOID model in this unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -442,7 +451,7 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
                             <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
                           </characteristics>
@@ -453,11 +462,11 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
                   <profiles>
                     <profile name="Neuroloid" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="c7dc-1fba-5724-1cb2">
                       <characteristics>
-                        <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
+                        <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
                         <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
                         <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-                        <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                        <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                        <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">14</characteristic>
+                        <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -500,7 +509,7 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
             <entryLink import="true" name="Termagaunts" hidden="false" id="25e9-52c6-9253-7c74" type="selectionEntry" targetId="9908-a93b-4a52-4a11"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Melee" id="4c49-378a-ab82-bf5e" hidden="false" defaultSelectionEntryId="6f41-c385-097f-4549">
+        <selectionEntryGroup name="Melee" id="4c49-378a-ab82-bf5e" hidden="false" defaultSelectionEntryId="5008-bf4c-4178-44c6">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b3fe-d998-f7bd-1b81-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3fe-d998-f7bd-1b81-max" includeChildSelections="false"/>
@@ -556,21 +565,28 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
                 </entryLink>
               </entryLinks>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Extra Scything Talons" hidden="false" id="5008-bf4c-4178-44c6" sortIndex="1">
+              <entryLinks>
+                <entryLink import="true" name="Scything Talons" hidden="false" id="d05e-df97-9970-6555" type="selectionEntry" targetId="3abd-eddf-7562-c736">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="append" value="Extra" field="name" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ddb4-ffe2-4cf7-301c-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ddb4-ffe2-4cf7-301c-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
           </selectionEntries>
-          <entryLinks>
-            <entryLink import="true" name="Scything Talons" hidden="false" id="379c-f392-4954-00b2" type="selectionEntry" targetId="3abd-eddf-7562-c736" sortIndex="1">
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
-          </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Gun" id="004d-b5fb-35ad-ac6b" hidden="false" defaultSelectionEntryId="6f41-c385-097f-4549">
+        <selectionEntryGroup name="Gun" id="004d-b5fb-35ad-ac6b" hidden="false" defaultSelectionEntryId="8fa9-93a7-e31f-9e8c">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b33-cba9-cf73-66bc-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b33-cba9-cf73-66bc-max" includeChildSelections="false"/>
@@ -627,29 +643,61 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
                 <infoLink name="Suppressive (X)" id="4a0c-4b6d-c29a-d9c6" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
               </infoLinks>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Scything Talons" hidden="false" id="d770-83ef-d19c-35b5" sortIndex="6">
+              <entryLinks>
+                <entryLink import="true" name="Scything Talons" hidden="false" id="1ad3-86f1-4809-3426" type="selectionEntry" targetId="3abd-eddf-7562-c736">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7a2a-5d24-9a1e-5ee4-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a2a-5d24-9a1e-5ee4-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Spinefists" hidden="false" id="0133-5164-1beb-2fc7" sortIndex="5">
+              <entryLinks>
+                <entryLink import="true" name="Spinefists" hidden="false" id="9d85-f746-1e6f-4fa3" type="selectionEntry" targetId="06e5-d080-b4c7-0d85">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="de21-2472-b84d-4b1e-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de21-2472-b84d-4b1e-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Devourer" hidden="false" id="7ac6-c706-dc53-ae15" sortIndex="4">
+              <entryLinks>
+                <entryLink import="true" name="Devourer" hidden="false" id="a6f8-7b93-c972-13e0" type="selectionEntry" targetId="e328-f865-125f-9fb2">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="418d-02a0-f36e-5de6-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="418d-02a0-f36e-5de6-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
           </selectionEntries>
-          <entryLinks>
-            <entryLink import="true" name="Devourer" hidden="false" id="a6f8-7b93-c972-13e0" type="selectionEntry" targetId="e328-f865-125f-9fb2" sortIndex="4">
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
-            <entryLink import="true" name="Spinefists" hidden="false" id="9d85-f746-1e6f-4fa3" type="selectionEntry" targetId="06e5-d080-b4c7-0d85" sortIndex="5">
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
-          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <profiles>
@@ -701,14 +749,22 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
                   </characteristics>
                 </profile>
               </profiles>
-              <entryLinks>
-                <entryLink import="true" name="Fleshborer" hidden="false" id="94b2-601e-2a53-c07b" type="selectionEntry" targetId="6663-93e2-7285-d211">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Fleshborer" hidden="false" id="fd4e-a545-679f-58f8">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d989-df8c-69fa-6bfa-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d989-df8c-69fa-6bfa-max" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6cb4-a2ce-6cd9-35a9-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6cb4-a2ce-6cd9-35a9-max" includeChildSelections="false"/>
                   </constraints>
-                </entryLink>
-              </entryLinks>
+                  <entryLinks>
+                    <entryLink import="true" name="Fleshborer" hidden="false" id="94b2-601e-2a53-c07b" type="selectionEntry" targetId="6663-93e2-7285-d211">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d989-df8c-69fa-6bfa-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d989-df8c-69fa-6bfa-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1181,24 +1237,12 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
         </profile>
       </profiles>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Weapon Choice" id="c5f5-eb22-e35e-73a7" hidden="false" defaultSelectionEntryId="ff5b-4e7a-bbac-3375">
+        <selectionEntryGroup name="Weapon Choice" id="c5f5-eb22-e35e-73a7" hidden="false" defaultSelectionEntryId="792e-33de-5632-df22">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e599-c9bb-90ac-2a1f-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e599-c9bb-90ac-2a1f-max" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Monstrous Scything Talons" hidden="false" id="ff5b-4e7a-bbac-3375" type="selectionEntry" targetId="468d-9083-d092-58ab" sortIndex="1">
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="Carnifex Scything Talons " field="name"/>
-                    <modifier type="set" value="Carnifex Scything Talons " field="name" affects="profiles.Weapon"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
             <entryLink import="true" name="Heavy Venom Cannon" hidden="false" id="ea18-a777-a230-4c79" type="selectionEntry" targetId="a391-602f-fd75-1db7" sortIndex="4"/>
             <entryLink import="true" name="Stranglethorn Cannon" hidden="false" id="74a9-ceb3-6384-1f37" type="selectionEntry" targetId="3518-6226-731a-d7f7" sortIndex="5"/>
           </entryLinks>
@@ -1233,6 +1277,26 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
               <infoLinks>
                 <infoLink name="Blast (X)" id="3eb3-adbc-895d-1101" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
               </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Monstrous Scything Talons" hidden="false" id="792e-33de-5632-df22" sortIndex="1">
+              <entryLinks>
+                <entryLink import="true" name="Monstrous Scything Talons" hidden="false" id="ff5b-4e7a-bbac-3375" type="selectionEntry" targetId="468d-9083-d092-58ab">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="Carnifex Scything Talons " field="name"/>
+                        <modifier type="set" value="Carnifex Scything Talons " field="name" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="38a1-1e2d-314e-ac23-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38a1-1e2d-314e-ac23-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1471,9 +1535,17 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
         </selectionEntryGroup>
       </selectionEntryGroups>
       <profiles>
-        <profile name="Chitin Wall" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="abc7-df07-c017-9d38">
+        <profile name="Utterly Loyal" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="abc7-df07-c017-9d38">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a ranged attack successfully wounds a friendly unit with Synapse within 6” while this unit is visible to and closer to the enemy unit that made that attack, roll a D6. On a 4+, that attack’s target changes to this unit.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During a March, this unit may move up to an additional 6” if that move would end within 1” of a friendly monster unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Chitin Wall" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8298-af9e-a655-bef1">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While other friendly monster units are within 1” of this unit and this unit is closer or the same distance to an active enemy unit visible to this unit, those friendly monster units gain the following ability:
+
+
+Guarded: For each wound a model in this unit is selected to suffer, you may roll a D6. On a 5+, that attack fails.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1637,9 +1709,9 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
                 <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each attack made for this weapon targeting an infantry unit, the Wound Roll is successful on a 3+ for that attack.</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each attack made for this weapon targeting an infantry unit, add 1 to the Wound Roll of that attack.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1647,9 +1719,6 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6015-6b06-2852-e6da-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6015-6b06-2852-e6da-max" includeChildSelections="false"/>
           </constraints>
-          <infoLinks>
-            <infoLink name="Shred" id="95ab-0372-75ea-dbbf" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -1823,7 +1892,7 @@ Adrenaline: For each Advance Roll made for this unit, add 1 D6 to that Advance 
     </profile>
     <profile name="Frenzied Feeders" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="a8f5-3d8c-4b84-575a">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After rolling for initiative in battle round 1, create a unit of RIPPER SWARM with X models, where X is the total number of HORMAGAUNTS and TERMAGANTS in your army list.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After rolling for initiative in battle round 1, create a unit of RIPPER SWARM with X models, where X is the total number of HORMAGAUNTS and TERMAGANTS units in your army list.</characteristic>
       </characteristics>
     </profile>
     <profile name="Synapse" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ef65-9c3a-581f-6896">
@@ -2019,30 +2088,7 @@ Hive Minded: For each Resolve Test made for this unit, add 1 to that Resolve T
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Weapon" id="1e3d-7705-7f68-d2de" hidden="false" defaultSelectionEntryId="c120-26f1-8d5b-63da">
-                  <entryLinks>
-                    <entryLink import="true" name="Devourer" hidden="false" id="89c4-1e71-af57-c569" type="selectionEntry" targetId="e328-f865-125f-9fb2" sortIndex="1">
-                      <modifierGroups>
-                        <modifierGroup type="and">
-                          <modifiers>
-                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </modifierGroup>
-                      </modifierGroups>
-                    </entryLink>
-                    <entryLink import="true" name="Spinefists" hidden="false" id="8f5b-115a-eea5-cae3" type="selectionEntry" targetId="06e5-d080-b4c7-0d85" sortIndex="2">
-                      <modifierGroups>
-                        <modifierGroup type="and">
-                          <modifiers>
-                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </modifierGroup>
-                      </modifierGroups>
-                    </entryLink>
-                    <entryLink import="true" name="Fleshborer" hidden="false" id="c120-26f1-8d5b-63da" type="selectionEntry" targetId="6663-93e2-7285-d211" sortIndex="3"/>
-                  </entryLinks>
+                <selectionEntryGroup name="Weapon" id="1e3d-7705-7f68-d2de" hidden="false" defaultSelectionEntryId="b1c2-26fb-9e50-8dd3">
                   <selectionEntryGroups>
                     <selectionEntryGroup name="Special Weapons" id="e757-df34-2f15-bdd0" hidden="false">
                       <constraints>
@@ -2113,6 +2159,54 @@ Hive Minded: For each Resolve Test made for this unit, add 1 to that Resolve T
                       </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Devourer" hidden="false" id="b1c2-26fb-9e50-8dd3" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Devourer" hidden="false" id="89c4-1e71-af57-c569" type="selectionEntry" targetId="e328-f865-125f-9fb2">
+                          <modifierGroups>
+                            <modifierGroup type="and">
+                              <modifiers>
+                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </modifierGroup>
+                          </modifierGroups>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="daf4-dae8-e5b8-8f17-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="daf4-dae8-e5b8-8f17-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Spinefists" hidden="false" id="80ca-e8de-9957-3c15" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Spinefists" hidden="false" id="8f5b-115a-eea5-cae3" type="selectionEntry" targetId="06e5-d080-b4c7-0d85">
+                          <modifierGroups>
+                            <modifierGroup type="and">
+                              <modifiers>
+                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </modifierGroup>
+                          </modifierGroups>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b702-a799-e7c5-38a8-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b702-a799-e7c5-38a8-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Fleshborer" hidden="false" id="e6b3-398d-dfb6-b8d7" sortIndex="3">
+                      <entryLinks>
+                        <entryLink import="true" name="Fleshborer" hidden="false" id="c120-26f1-8d5b-63da" type="selectionEntry" targetId="6663-93e2-7285-d211">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5172-0a7c-3185-6a81-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5172-0a7c-3185-6a81-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
