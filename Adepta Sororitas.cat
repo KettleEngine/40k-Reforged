@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="23d8-3b8d-77df-8eb4" sortIndex="3">
       <constraints>
@@ -95,7 +95,7 @@
         <infoLink name="Resilient (X)" id="bdc7-7b3e-570a-5a0a" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Canoness" hidden="false" id="8c3d-6721-67f0-8a7f">
+    <selectionEntry type="unit" import="true" name="Canoness" hidden="false" id="8c3d-6721-67f0-8a7f" sortIndex="1">
       <costs>
         <cost name="pts" typeId="points" value="40"/>
       </costs>
@@ -111,7 +111,7 @@
         </profile>
         <profile name="Defender of the Faith" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="a75a-e497-9915-2fde">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your infantry units are within X+8” of this unit where X is equal to Choir of the Faithful X”, they gain the following ability:
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your infantry units are within X” of this unit where X is equal to Choir of the Faithful X”, they gain the following ability:
 
 
 Battle-Hymn: For each ranged attack that targets this unit, add 1 to Resilient rolls for that attack.</characteristic>
@@ -1762,9 +1762,17 @@ c) RETRIBUTORS</characteristic>
         <infoLink name="Unstoppable" id="5edd-ef87-22c1-0b24" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
       </infoLinks>
       <profiles>
-        <profile name="Processional Shieldwall" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="102a-1fd0-3e3f-a32d">
+        <profile name="Holy Duty" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="102a-1fd0-3e3f-a32d">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a ranged attack successfully wounds a friendly leader unit within 6” of this unit, while this unit is visible to and closer to the enemy unit that made that attack, you may roll a D6. On a 4+, that attack’s target changes to this unit.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During a March, this unit may move up to an additional 6” if that move would end within 1” of a friendly leader unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Processional Shieldwall" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c391-d25e-49b4-ad70">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While other friendly leader units are within 1” of this unit and this unit is closer or the same distance to an active enemy unit visible to this unit, those leader units gain the following ability:
+
+
+Guarded: For each wound a model in this unit is selected to suffer, you may roll a D6. On a 5+, that attack fails.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2254,7 +2262,7 @@ c) RETRIBUTORS</characteristic>
                       <entryLinks>
                         <entryLink import="true" name="Heavy Bolter" hidden="false" id="8233-67dd-f26a-fa98" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
                           <modifiers>
-                            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
@@ -2272,7 +2280,7 @@ c) RETRIBUTORS</characteristic>
                       <entryLinks>
                         <entryLink import="true" name="Heavy Flamer" hidden="false" id="ec45-87c7-9ad6-fce2" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
                           <modifiers>
-                            <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
@@ -2644,7 +2652,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
                 <entryLink import="true" name="Heavy Flamer" hidden="false" id="dd96-b7e2-3ed4-8d87" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
                   <modifiers>
                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="13" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                   </modifiers>
                   <infoLinks>
@@ -2662,7 +2670,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
                 <entryLink import="true" name="Heavy Bolter" hidden="false" id="8024-f268-da5c-b913" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
                   <modifiers>
                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="15" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="Heavy Bolters" field="name" affects="profiles.Weapon"/>
                     <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                     <modifier type="set" value="Heavy Bolters" field="name"/>
@@ -2795,7 +2803,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
                 <entryLink import="true" name="Heavy Bolter" hidden="false" id="04ee-9d13-5416-e19b" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
                   <modifiers>
                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                   </modifiers>
                   <infoLinks>
@@ -2813,7 +2821,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
                 <entryLink import="true" name="Heavy Flamer" hidden="false" id="af56-a80b-2892-5897" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
                   <modifiers>
                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                   </modifiers>
                   <infoLinks>
@@ -3192,7 +3200,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
                 <entryLink import="true" name="Heavy Bolter" hidden="false" id="09a2-181b-efd0-390e" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
                   <modifiers>
                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                   </modifiers>
                   <infoLinks>
@@ -3210,7 +3218,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
                 <entryLink import="true" name="Heavy Flamer" hidden="false" id="1be8-34d9-b399-a40f" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
                   <modifiers>
                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                   </modifiers>
                   <infoLinks>
@@ -3866,7 +3874,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
         <entryLink import="true" name="Munitorum Cherub" hidden="false" id="b620-4ce1-50c4-bc8c" type="selectionEntry" targetId="2772-031f-6d96-99c5"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="1288-3404-e1e5-90f1" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.4" hidden="false" id="1288-3404-e1e5-90f1" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="2a32-f478-bc26-83a2" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
