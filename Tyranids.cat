@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="8" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="d93e-ed5b-78c7-6277" sortIndex="-1">
       <categoryLinks>
@@ -2181,18 +2181,14 @@ Hive Minded: For each Resolve Test made for this unit, add 1 to that Resolve T
                     <selectionEntry type="upgrade" import="true" name="Spinefists" hidden="false" id="80ca-e8de-9957-3c15" sortIndex="2">
                       <entryLinks>
                         <entryLink import="true" name="Spinefists" hidden="false" id="8f5b-115a-eea5-cae3" type="selectionEntry" targetId="06e5-d080-b4c7-0d85">
-                          <modifierGroups>
-                            <modifierGroup type="and">
-                              <modifiers>
-                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                              </modifiers>
-                            </modifierGroup>
-                          </modifierGroups>
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b702-a799-e7c5-38a8-min" includeChildSelections="false"/>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b702-a799-e7c5-38a8-max" includeChildSelections="false"/>
                           </constraints>
+                          <modifiers>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
                         </entryLink>
                       </entryLinks>
                     </selectionEntry>
