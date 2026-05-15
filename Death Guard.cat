@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="750c-5fc9-13d4-8be3" name="Death Guard" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="750c-5fc9-13d4-8be3" name="Death Guard" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.0" hidden="false" id="6c0e-086e-521b-782e" sortIndex="-1">
       <categoryLinks>
@@ -1048,6 +1048,10 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
             <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
           </modifiers>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fb06-ace6-2115-eeef-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb06-ace6-2115-eeef-max" includeChildSelections="false"/>
+          </constraints>
         </entryLink>
       </entryLinks>
     </selectionEntry>

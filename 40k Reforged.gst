@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="38" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="39" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -872,17 +872,16 @@ You can only bring three leader units. For each unit in the Elites, Transports,
       <description>Units with Psyker X can cast psychic powers. X is the psyker tier of that unit. Each army has a list of six unique psychic powers listed in the Psychic Powers table on each army’s rules.
 
 
-After a unit with Psyker is Activated, make a Psychic Test for that unit. To make a Psychic Test, roll X D6 dice equal to the unit’s Psyker X.
-Keep track of the results.
+After a unit with Psyker is Activated, make a Psychic Test for that unit.
+
+
+To make a Psychic Test, roll X D6 dice equal to the unit’s Psyker X. Keep track of the results.
 
 
 After the Move step for an active unit with Psyker on the battlefield, it may Cast a psychic power.
 
 
-To Cast a psychic power, select a psychic power from your army rules which matches any dice in the earlier Psychic Test. If that Psychic Test had two or more dice with the same result, you may instead select any psychic power.
-
-
-Psychic powers, unit abilities, and weapon abilities on units with Psyker can cause enemy units to suffer Psychic Shock Wounds (SW). Psychic SW are SW with an AP of -X where X is double the unit’s psyker tier.</description>
+To Cast a psychic power, select a psychic power from your army rules which matches any dice in the earlier Psychic Test. If that Psychic Test had two or more dice with the same result, you may instead select any psychic power.</description>
     </rule>
     <rule name="Open Deck" id="b8d6-4f70-5c6c-d053" hidden="false">
       <description>During the Attacks step for an active unit embarked in this unit, that embarked unit may select targets for its ranged attacks using the model of this unit as the attacking model.</description>

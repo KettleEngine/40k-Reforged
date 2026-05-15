@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="26" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="27" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Foretold Foray" id="d0c2-99f6-070a-f4ed" hidden="false">
       <description>After rolling for initiative battle round 1, roll Strands of Fate X where X is twice the number of leader units you have on the battlefield and reserves.</description>
@@ -1739,15 +1739,38 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
                         </entryLink>
                       </entryLinks>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="2x Death Spinner" hidden="false" id="b2c7-8e23-9fc0-9a4a" sortIndex="1">
+                    <selectionEntry type="upgrade" import="true" name="Death Weaver" hidden="false" id="b2c7-8e23-9fc0-9a4a" sortIndex="1">
                       <entryLinks>
                         <entryLink import="true" name="Death Spinner" hidden="false" id="083d-4c05-f2f5-d833" type="selectionEntry" targetId="cf8a-26ed-56bd-dda3">
                           <constraints>
-                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="9cb2-7234-a1d9-5dda-min" includeChildSelections="false"/>
-                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9cb2-7234-a1d9-5dda-max" includeChildSelections="false"/>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="afe8-21af-4e39-e6aa-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afe8-21af-4e39-e6aa-max" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
                       </entryLinks>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Death Weaver" hidden="false" id="6141-e0d0-fd7b-84a2">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3544-e639-e0f7-0eca-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3544-e639-e0f7-0eca-max" includeChildSelections="false"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Death Weaver" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a893-2b5e-5e29-71ba">
+                              <characteristics>
+                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <infoLinks>
+                            <infoLink name="Shred" id="cda2-0222-988c-5cc8" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                          </infoLinks>
+                        </selectionEntry>
+                      </selectionEntries>
                     </selectionEntry>
                   </selectionEntries>
                   <constraints>
@@ -2299,10 +2322,6 @@ b) WINDRIDERS</characteristic>
                           </constraints>
                         </entryLink>
                       </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7a73-da15-3cb4-a76b" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8559-b162-50e8-b019" includeChildSelections="false"/>
-                      </constraints>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Hawk’s Talon" hidden="false" id="2823-85d4-4fd1-0678" sortIndex="2">
                       <profiles>
@@ -3854,10 +3873,6 @@ a) GUARDIAN DEFENDERS</characteristic>
                                 <infoLink name="Shred" id="45f7-4b9d-4841-e6d8" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
                                 <infoLink name="Pierce" id="93b8-e572-fea2-e6fc" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                               </infoLinks>
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ccf-8690-9aa4-3943-min" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ccf-8690-9aa4-3943-max" includeChildSelections="false"/>
-                              </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Power Glaive" hidden="false" id="b984-96fa-0994-639c" sortIndex="2">
                               <profiles>
@@ -3875,10 +3890,6 @@ a) GUARDIAN DEFENDERS</characteristic>
                               <infoLinks>
                                 <infoLink name="Pierce" id="56aa-31c4-7dcc-d8c6" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                               </infoLinks>
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="214a-03c5-c5b0-c2ac" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7bd1-6a4e-7403-9e1b" includeChildSelections="false"/>
-                              </constraints>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
