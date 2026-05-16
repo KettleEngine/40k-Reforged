@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -463,6 +463,11 @@
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
           </characteristics>
         </profile>
+        <profile name="Covering Fire" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="dce1-e3d5-cd12-964c">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there are one or more friendly infantry units within 8” of this unit, this unit’s ranged weapons gain Suppressive 1 (if that weapon already has Suppressive X, improve X by 1 instead).</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <selectionEntryGroups>
         <selectionEntryGroup name="this model may also be equipped with either:" id="df2b-5e66-6bc9-95f7" hidden="false">
@@ -523,6 +528,9 @@
           </costs>
         </entryLink>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="Transport" id="a9c5-278d-6247-b4c3" hidden="false" type="rule" targetId="d78d-24c6-e7a9-e94f"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Scout Sentinels" hidden="false" id="ae6f-4f78-6775-dde6">
       <selectionEntryGroups>
@@ -598,14 +606,26 @@
                         <modifier type="set" value="16" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
-                    <entryLink import="true" name="Plasma Cannon" hidden="false" id="b4ab-a844-69a2-c56d" type="selectionEntry" targetId="597d-3cc2-8209-d3d1" sortIndex="5">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
                     <entryLink import="true" name="Missile Launcher" hidden="false" id="2767-53c1-4825-4c68" type="selectionEntry" targetId="e03f-db1b-d6b0-b70f" sortIndex="6"/>
                   </entryLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Plasma Cannon" hidden="false" id="1a58-5095-cd35-f994" sortIndex="5">
+                      <entryLinks>
+                        <entryLink import="true" name="Plasma Cannon" hidden="false" id="b4ab-a844-69a2-c56d" type="selectionEntry" targetId="597d-3cc2-8209-d3d1">
+                          <modifiers>
+                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
+                            <modifier type="set" value="7" field="571c-0471-2614-c57c" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3e57-3604-09d3-f33d-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e57-3604-09d3-f33d-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
@@ -1502,12 +1522,6 @@
                         <modifier type="set" value="32" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
-                    <entryLink import="true" name="Plasma Cannon" hidden="false" id="cddb-fbe2-76bb-9722" type="selectionEntry" targetId="597d-3cc2-8209-d3d1" sortIndex="5">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
                     <entryLink import="true" name="Missile Launcher" hidden="false" id="65fb-4825-9138-e2ea" type="selectionEntry" targetId="e03f-db1b-d6b0-b70f" sortIndex="6">
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
@@ -1517,6 +1531,24 @@
                       </modifiers>
                     </entryLink>
                   </entryLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Plasma Cannon" hidden="false" id="d9f2-b180-2a1f-c380" sortIndex="5">
+                      <entryLinks>
+                        <entryLink import="true" name="Plasma Cannon" hidden="false" id="458d-cda1-13ed-0921" type="selectionEntry" targetId="597d-3cc2-8209-d3d1">
+                          <modifiers>
+                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
+                            <modifier type="set" value="7" field="571c-0471-2614-c57c" affects="profiles.Weapon"/>
+                            <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="24ec-419d-ff6f-c76e-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="24ec-419d-ff6f-c76e-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
