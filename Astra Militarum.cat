@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="25" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -137,7 +137,7 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">-</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">-</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Move step, select a point on the battlefield within 16” of this unit. For each infantry unit within 6” of that point, that unit suffers 3D3 SW</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Attacks step, select a point on the battlefield within 16” of this unit. For each infantry unit within 6” of that point, that unit suffers 3D3 SW.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -514,23 +514,33 @@
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Autocannon" hidden="false" id="1019-60cc-ab85-d870" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0">
-          <modifiers>
-            <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
-            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6317-6ee5-4253-782b" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Transport" id="a9c5-278d-6247-b4c3" hidden="false" type="rule" targetId="d78d-24c6-e7a9-e94f"/>
       </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Twin Autocannon" hidden="false" id="9220-09b7-be7c-951b">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4684-5061-4e6d-a9c6" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Autocannon" hidden="false" id="1019-60cc-ab85-d870" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0">
+              <modifiers>
+                <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6317-6ee5-4253-782b-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6317-6ee5-4253-782b-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Scout Sentinels" hidden="false" id="ae6f-4f78-6775-dde6">
       <selectionEntryGroups>
@@ -681,7 +691,7 @@
             <profile name="Twin Earthshaker Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f345-3270-3360-12ac">
               <characteristics>
                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
                 <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
@@ -710,7 +720,7 @@
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
           <infoLinks>
             <infoLink name="Killshot" id="6823-9cfb-12b0-2c30" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
@@ -1245,17 +1255,6 @@
         <infoLink name="Transport" id="6a3a-bbf3-8239-fc44" hidden="false" type="rule" targetId="d78d-24c6-e7a9-e94f"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="8226-d8fc-b5b7-e415" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0aeb-82c0-e8ce-fb9b" includeChildSelections="false"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-          </modifiers>
-        </entryLink>
         <entryLink import="true" name="Smoke Launchers" hidden="false" id="26ed-beb3-950c-f220" type="selectionEntry" targetId="d653-3fc2-d577-6295">
           <costs>
             <cost name="pts" typeId="points" value="10"/>
@@ -1263,55 +1262,95 @@
         </entryLink>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Main Gun:" id="3096-9d02-75f4-7663" hidden="false" defaultSelectionEntryId="1864-7f96-2ccb-933e">
-          <entryLinks>
-            <entryLink import="true" name="Multi-Laser" hidden="false" id="1864-7f96-2ccb-933e" type="selectionEntry" targetId="5baa-cf1d-dfb0-8497" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="15" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="5fbd-97f7-7d1a-6974" type="selectionEntry" targetId="82a1-b562-e748-d5ad" sortIndex="2">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="4e17-8594-86d6-101d" type="selectionEntry" targetId="5c44-7d31-605d-4b6f" sortIndex="3">
-              <modifiers>
-                <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
+        <selectionEntryGroup name="Main Gun:" id="3096-9d02-75f4-7663" hidden="false" defaultSelectionEntryId="533f-d5b2-7653-8433">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ae29-6f4d-1b92-f7c6-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ae29-6f4d-1b92-f7c6-max" includeChildSelections="false"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Heavy Flamer" hidden="false" id="065f-367a-f4cb-657f" sortIndex="3">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Flamer" hidden="false" id="4e17-8594-86d6-101d" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+                  <modifiers>
+                    <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c98-d654-10de-b253-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c98-d654-10de-b253-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Bolter" hidden="false" id="5ba9-8607-5b6e-df71" sortIndex="2">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Bolter" hidden="false" id="5fbd-97f7-7d1a-6974" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="prepend" value="Twin" field="name" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a357-07cb-7afc-c0a4-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a357-07cb-7afc-c0a4-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Multi-Laser" hidden="false" id="533f-d5b2-7653-8433" sortIndex="1">
+              <entryLinks>
+                <entryLink import="true" name="Multi-Laser" hidden="false" id="1864-7f96-2ccb-933e" type="selectionEntry" targetId="5baa-cf1d-dfb0-8497">
+                  <modifiers>
+                    <modifier type="set" value="15" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f99a-c02f-6c26-e632-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f99a-c02f-6c26-e632-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Hull Gun:" id="8c68-85d4-21c5-a14f" hidden="false" defaultSelectionEntryId="68d5-595c-aa02-ac4e">
-          <entryLinks>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="68d5-595c-aa02-ac4e" type="selectionEntry" targetId="82a1-b562-e748-d5ad" sortIndex="2">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="b61b-6d70-958a-7d22" type="selectionEntry" targetId="5c44-7d31-605d-4b6f" sortIndex="3">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
+        <selectionEntryGroup name="Hull Gun:" id="8c68-85d4-21c5-a14f" hidden="false" defaultSelectionEntryId="eaec-ff79-d4ba-b1be">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2100-ea57-39e7-e8ac-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2100-ea57-39e7-e8ac-max" includeChildSelections="false"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Heavy Bolter" hidden="false" id="eaec-ff79-d4ba-b1be" sortIndex="1">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Bolter" hidden="false" id="68d5-595c-aa02-ac4e" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3498-d0fd-c809-e00c-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3498-d0fd-c809-e00c-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Flamer" hidden="false" id="2d42-ebb8-ab17-ff12" sortIndex="2">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Flamer" hidden="false" id="b61b-6d70-958a-7d22" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b78f-afe7-938d-e732-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b78f-afe7-938d-e732-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup name="Secondary Gun" id="68ce-a5c1-5471-bd28" hidden="false">
           <entryLinks>
@@ -1343,6 +1382,27 @@
         <categoryLink name="Transport" hidden="false" id="8b85-8b26-36c8-d951" targetId="3239-2096-a612-ed8e" primary="true"/>
         <categoryLink name="Vehicle" hidden="false" id="3cfa-f03e-642c-3db2" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Hunter-Killer Missile" hidden="false" id="3404-8228-d98f-728e">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="200e-4657-e4e4-f2c8" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="8226-d8fc-b5b7-e415" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2943-dc3d-4632-bcb9-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2943-dc3d-4632-bcb9-max" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Basilisk" hidden="false" id="66ef-3d00-9f54-1349">
       <profiles>
@@ -1362,18 +1422,6 @@
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="5bdc-c98d-9a84-249e" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e127-ce49-9d59-601a" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-          </modifiers>
-        </entryLink>
         <entryLink import="true" name="Smoke Launchers" hidden="false" id="e3ec-fe10-9912-c1a7" type="selectionEntry" targetId="d653-3fc2-d577-6295">
           <costs>
             <cost name="pts" typeId="points" value="10"/>
@@ -1381,25 +1429,41 @@
         </entryLink>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="This model is also equipped with either:" id="bf6e-4337-1d5c-4393" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="53bc-db97-9ebf-aa6f" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-              <modifiers>
-                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Heavy Flamer" hidden="false" id="357b-ee67-540a-02a3" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
-              <modifiers>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
+        <selectionEntryGroup name="This model is also equipped with either:" id="bf6e-4337-1d5c-4393" hidden="false" defaultSelectionEntryId="b7fe-0c4f-7836-2c00">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3606-12f3-8273-eb35" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39e6-bc85-280f-713e" includeChildSelections="false"/>
           </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Heavy Bolter" hidden="false" id="b7fe-0c4f-7836-2c00" sortIndex="1">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Bolter" hidden="false" id="53bc-db97-9ebf-aa6f" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+                  <modifiers>
+                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ffdc-c1b5-00dc-8dee-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ffdc-c1b5-00dc-8dee-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Flamer" hidden="false" id="dd52-e2e7-aed5-e1bd" sortIndex="2">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Flamer" hidden="false" id="357b-ee67-540a-02a3" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2019-569c-3f10-5d07-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2019-569c-3f10-5d07-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
@@ -1412,7 +1476,7 @@
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Armour Piercing High Explosive Shells" hidden="false" id="2af5-2338-8d60-8e4d">
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0afc-90b5-3e05-59fc" includeChildSelections="false"/>
@@ -1449,6 +1513,26 @@
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5aee-e599-d5c0-9fbf-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5aee-e599-d5c0-9fbf-max" includeChildSelections="false"/>
           </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hunter-Killer Missile" hidden="false" id="0829-1087-f84c-7cb5">
+          <entryLinks>
+            <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="5bdc-c98d-9a84-249e" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b594-4c5a-20e5-932c-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b594-4c5a-20e5-932c-max" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="794a-b798-84dc-df2c" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -2491,9 +2575,12 @@ Grinding Treads: After this unit’s Move step, you may select an enemy unit w
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Tech-Priest" hidden="false" id="1c07-b463-3797-7488">
           <profiles>
-            <profile name="Mendicant&apos;s Sacrament" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3216-2bfa-e100-66b5">
+            <profile name="Maintenance Liturgy" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3216-2bfa-e100-66b5">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may select a friendly infantry or vehicle unit within 6” of this unit. The selected unit Repairs D3+1.</characteristic>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select a friendly vehicle unit within 6” of this unit. The selected unit Repairs D3+1 and gains the following ability:
+
+
+Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll of that attack. After this unit’s Attacks step, it loses this ability.</characteristic>
               </characteristics>
             </profile>
             <profile name="Resurging Machine" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6065-4257-1610-1eee">
@@ -3202,7 +3289,7 @@ c) MORDIAN IRON GUARD</characteristic>
         <infoLink name="Indirect" id="d4e8-ed5e-dc8a-fedc" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.4" hidden="false" id="49b5-96a5-b9d7-555d" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.5" hidden="false" id="49b5-96a5-b9d7-555d" sortIndex="1">
       <categoryLinks>
         <categoryLink targetId="9cd6-0442-3f35-6b52" id="48db-a12b-9852-f558" primary="true" name="Configuration"/>
       </categoryLinks>
