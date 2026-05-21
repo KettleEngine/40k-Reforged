@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="8ebc-4141-b6f1-7899" name="Adeptus Mechanicus" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="22" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="8ebc-4141-b6f1-7899" name="Adeptus Mechanicus" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="22" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.4" hidden="false" id="7646-5c1b-b2e9-3f1f" sortIndex="1">
       <categoryLinks>
@@ -1061,21 +1061,28 @@ b) SKITARII VANGUARDS</characteristic>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d60c-018e-ca02-fa03-max" includeChildSelections="false"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Arc Rifle" hidden="false" id="6679-7865-7e99-8914" type="selectionEntry" targetId="423e-1db8-903c-1051" sortIndex="1">
-                      <modifiers>
-                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="prepend" value="Heavy" field="name" affects="profiles.Weapon"/>
-                        <modifier type="prepend" value="Heavy" field="name"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="4b7e-0a37-640c-190a" includeChildSelections="true"/>
-                      </constraints>
-                    </entryLink>
                     <entryLink import="true" name="Torsion Cannon" hidden="false" id="a4c0-bed0-b05b-cdd2" type="selectionEntry" targetId="800a-36db-c8eb-33c3" sortIndex="2"/>
                     <entryLink import="true" name="Heavy Grav-Cannon" hidden="false" id="c242-1096-3a18-e85a" type="selectionEntry" targetId="cb0f-1819-15e0-b438" sortIndex="3"/>
                     <entryLink import="true" name="Kata. Plasma Culverin" hidden="false" id="f335-054e-5e5a-213d" type="selectionEntry" targetId="7ebf-fca2-c67a-1db8" sortIndex="4"/>
                   </entryLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Heavy Arc Rifle" hidden="false" id="2293-8571-616a-b2db" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Arc Rifle" hidden="false" id="6679-7865-7e99-8914" type="selectionEntry" targetId="423e-1db8-903c-1051">
+                          <modifiers>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="prepend" value="Heavy" field="name" affects="profiles.Weapon"/>
+                            <modifier type="prepend" value="Heavy" field="name"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b237-a9c2-ebdd-85b9-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b237-a9c2-ebdd-85b9-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
                 </selectionEntryGroup>
                 <selectionEntryGroup name="Arm" id="e8b3-a791-0c95-e26c" hidden="false" defaultSelectionEntryId="8221-41dd-0ff2-a90d">
                   <constraints>
@@ -1913,7 +1920,6 @@ b) SKITARII VANGUARDS</characteristic>
                     <entryLink import="true" name="Taser Goad" hidden="false" id="9c08-a62b-fb4f-acea" type="selectionEntry" targetId="9a31-1d20-cc2f-3a5c">
                       <modifiers>
                         <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
                   </entryLinks>
