@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Neuro Disruptor" hidden="false" id="7dc0-1f7b-a49c-295b">
       <profiles>
@@ -397,6 +397,10 @@ Veiled: For each ranged attack that targets this unit, the Hit Roll for that at
             <infoLink name="Killshot" id="2f92-b619-dfc6-ce02" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
             <infoLink name="Strike or Sweep (X)" id="6a64-4aca-3d7c-aba8" hidden="false" type="rule" targetId="2757-6563-cdb2-3456"/>
           </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6483-5e81-ea85-7365-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6483-5e81-ea85-7365-max" includeChildSelections="false"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
