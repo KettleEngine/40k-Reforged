@@ -71,15 +71,35 @@
                         <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="d014-4cbb-a404-f9ce" includeChildSelections="true"/>
                       </constraints>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Special Weapon" hidden="false" id="a913-b9e0-d4c2-2059">
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                      <constraints>
-                        <constraint type="max" value="5" field="selections" scope="unit" shared="true" id="8b47-468a-cee5-de80" includeChildSelections="true"/>
-                      </constraints>
+                    <selectionEntry type="upgrade" import="true" name="Lasgun &amp; Bayonet" hidden="false" id="8837-99fe-250e-6463">
+                      <entryLinks>
+                        <entryLink import="true" name="Lasgun" hidden="false" id="8cb0-1e7d-4c33-ac03" type="selectionEntry" targetId="0b54-6ba9-f583-4b19">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="759a-4436-14dc-5b1d-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="759a-4436-14dc-5b1d-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                        <entryLink import="true" name="Bayonet" hidden="false" id="0a7f-3312-efde-142b" type="selectionEntry" targetId="582d-b6ff-13db-9d86">
+                          <modifiers>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b220-7ae3-2d47-9a7a-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b220-7ae3-2d47-9a7a-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed37-e3cd-4f64-8a4a" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2af9-779a-66ba-95e4" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Special Weapon" id="fafc-4563-5608-c69e" hidden="false">
                       <selectionEntryGroups>
-                        <selectionEntryGroup name="Weapons:" id="5959-8b2b-e5ab-30e2" hidden="false">
+                        <selectionEntryGroup name="Free Weapons" id="5959-8b2b-e5ab-30e2" hidden="false">
                           <entryLinks>
                             <entryLink import="true" name="Flamer" hidden="false" id="926c-208f-16bc-f860" type="selectionEntry" targetId="4cf9-1758-d00d-29c4" sortIndex="1">
                               <modifiers>
@@ -107,12 +127,10 @@
                             </entryLink>
                           </entryLinks>
                           <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e760-6384-3ed3-336e" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b24f-8907-eed7-87d6" includeChildSelections="false"/>
                             <constraint type="max" value="3" field="selections" scope="unit" shared="true" id="a881-ecee-d14d-d47b" includeChildSelections="true"/>
                           </constraints>
                         </selectionEntryGroup>
-                        <selectionEntryGroup name="Weapons:" id="4c5b-ed7d-d44d-1247" hidden="false">
+                        <selectionEntryGroup name="Paid Weapons" id="4c5b-ed7d-d44d-1247" hidden="false">
                           <entryLinks>
                             <entryLink import="true" name="Flamer" hidden="false" id="0709-177f-bc1c-4e50" type="selectionEntry" targetId="4cf9-1758-d00d-29c4" sortIndex="1">
                               <modifiers>
@@ -163,32 +181,12 @@
                           </conditions>
                         </modifier>
                       </modifiers>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Lasgun &amp; Bayonet" hidden="false" id="8837-99fe-250e-6463">
-                      <entryLinks>
-                        <entryLink import="true" name="Lasgun" hidden="false" id="8cb0-1e7d-4c33-ac03" type="selectionEntry" targetId="0b54-6ba9-f583-4b19">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="759a-4436-14dc-5b1d-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="759a-4436-14dc-5b1d-max" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="Bayonet" hidden="false" id="0a7f-3312-efde-142b" type="selectionEntry" targetId="582d-b6ff-13db-9d86">
-                          <modifiers>
-                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b220-7ae3-2d47-9a7a-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b220-7ae3-2d47-9a7a-max" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed37-e3cd-4f64-8a4a" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2af9-779a-66ba-95e4" includeChildSelections="false"/>
-                  </constraints>
+                      <constraints>
+                        <constraint type="max" value="5" field="selections" scope="unit" shared="true" id="8b47-468a-cee5-de80" includeChildSelections="true"/>
+                        <constraint type="max" value="1" field="selections" scope="model" shared="true" id="3c9e-4942-2f2e-e855" includeChildSelections="true"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
