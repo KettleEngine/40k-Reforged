@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="40" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="41" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -890,10 +890,10 @@ To Cast a psychic power, select a psychic power from your army rules which matc
       <description>This unit’s models may move over terrain 4” or less in height or units as if they were not there.</description>
     </rule>
     <rule name="Titan" id="8f09-c87f-c86c-8cfc" hidden="false">
-      <description>The first time each battle round this unit Activates, it does not lose ready. This unit can never have its M” worsened.</description>
+      <description>The first time each battle round this unit Activates, it does not lose ready. For each Advance Roll made for this unit, roll 1 less dice for that roll.</description>
     </rule>
     <rule name="Forward Deploy" id="b433-60cc-2ed2-658f" hidden="false">
-      <description>After this unit is Activated in reserves, roll 2D6 and add this unit’s M to the result. You may Deploy this unit within X” of your Deployment Zone where X is the total.</description>
+      <description>After this unit is Activated in reserves, roll 2D6. Then, you may Deploy this unit wholly within X” of your Deployment Zone where X is equal to that roll.</description>
     </rule>
     <rule name="Deep Strike" id="a184-8710-3dda-7fdc" hidden="false">
       <description>After this unit is Activated in reserves, roll 3D6. You may Deploy that unit anywhere on the battlefield at least X” away from all enemy units where X is the result of that roll. If you do, this unit cannot March or Fall Back this turn.</description>
