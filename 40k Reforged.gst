@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="41" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="42" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -983,6 +983,11 @@ After a unit with Transport is destroyed, any unit embarked within it is also de
       </characteristics>
     </profile>
     <profile name="Jet Pack" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="38d0-b778-7525-f239">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, add 1 D6 to that roll.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Jet Bike" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="672a-9374-f2ed-e8b2">
       <characteristics>
         <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, add 1 D6 to that roll.</characteristic>
       </characteristics>
