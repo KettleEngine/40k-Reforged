@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3f76-a017-a7ec-c4cc" name="Astra Militarum - Mordian" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3f76-a017-a7ec-c4cc" name="Astra Militarum - Mordian" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Astra Militarum" id="1d42-b7a2-729f-8ffc" targetId="f178-f218-fb11-d21a" importRootEntries="true"/>
   </catalogueLinks>
@@ -81,8 +81,8 @@
                         </entryLink>
                         <entryLink import="true" name="Bayonet" hidden="false" id="0a7f-3312-efde-142b" type="selectionEntry" targetId="582d-b6ff-13db-9d86">
                           <modifiers>
-                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b220-7ae3-2d47-9a7a-min" includeChildSelections="false"/>
@@ -268,7 +268,12 @@
         <cost name="pts" typeId="points" value="80"/>
       </costs>
       <profiles>
-        <profile name="Drilled Maneuvers" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8553-2025-1a80-b158">
+        <profile name="No Retreat" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8553-2025-1a80-b158">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a Pile In, if it did not March this turn, each of this unit’s Aslt weapons have their Tp changed to CQ until the End step.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Drilled Fire" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e27f-b6b9-70ac-33e1">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While each of this unit&apos;s models are touching another model in this unit, for each ranged attack made by another friendly Astra Militarum unit that targets an enemy unit within 24” of this unit, reroll a Hit Roll of 1 for that attack.</characteristic>
           </characteristics>
@@ -297,8 +302,13 @@
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit and your other Astra Militarum infantry within 24” of this unit, gain the following ability:
 
+Form Up!: After any unit is Activated, draw a line parallel to the front edge of your deployment zone between any two points on the battlefield edge. Each unit with Form Up! that line passes through is &apos;forming the line&apos; until the End step.
 
-Close Ranks!: While this unit is within 1” of another Astra Militarum infantry unit, this unit gains Heavy Armour.</characteristic>
+
+While two or more units are forming the line, those units gain Heavy Armour.
+
+
+While three or more units are forming the line, for each attack that targets those units, you may reroll failed Saving Throws for that attack.</characteristic>
           </characteristics>
         </profile>
       </profiles>

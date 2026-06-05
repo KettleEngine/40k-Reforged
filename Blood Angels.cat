@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Stances" hidden="false" id="9ef8-9802-e8e8-b5b6">
       <infoLinks>
@@ -298,7 +298,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb2b-fac7-1b1b-41e6-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.7" hidden="false" id="3fd4-08d0-17f9-61b5" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.8" hidden="false" id="3fd4-08d0-17f9-61b5" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="005a-8f68-8604-d3a9" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -316,9 +316,9 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="457f-a1b8-ccba-ca59-max" includeChildSelections="false"/>
       </constraints>
       <profiles>
-        <profile name="1 Praetorian Plate" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="5c2e-74a3-336e-baf9">
+        <profile name="1 Praetorian Shield" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="5c2e-74a3-336e-baf9">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit gains Resilient 5+.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each wound a model in this unit suffers, roll a D6. On a 5+, that attack fails.</characteristic>
           </characteristics>
         </profile>
         <profile name="2 Solarite Heart-Node" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="0b6c-0cf9-fb5f-9232">
@@ -326,9 +326,9 @@
             <characteristic name="Description" typeId="becf-f398-aed2-688b">For each Advance Roll made for this unit, add 1 D6 to that Advance Roll.</characteristic>
           </characteristics>
         </profile>
-        <profile name="3 Eagle Eye Helm" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="c609-983f-eb32-38a7">
+        <profile name="3 Gatekeeper" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="c609-983f-eb32-38a7">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After an enemy unit finishes a March and is visible to this unit, you may roll a D6. On a 5+, this unit may Fall Back.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit is Activated, select one model in this unit. Until the End step, the selected model gains the following weapons:</characteristic>
           </characteristics>
         </profile>
         <profile name="4 Fulminaris Vexilla" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="e136-a80f-ead2-bcad">
@@ -338,15 +338,38 @@
         </profile>
         <profile name="5 Stasis Oubliette" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="24b6-3ace-5ab6-ea27">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">While enemy units are within 3” of this unit, those units cannot be selected for Activation unless their controlling player has no other units available for Activation.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">While enemy units are within 4” of this unit, those units cannot be selected for Activation unless their controlling player has no other units available for Activation.</characteristic>
           </characteristics>
         </profile>
         <profile name="6 Misery’s Burden" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="e512-f8c7-47d2-ce75">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">Each time you roll a D6 for Kaptaris Parry for this unit, add 1 to the result. For each attack this unit makes, add 1 to the Hit Roll of that attack.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">Each time you roll a D6 for Kaptaris Parry for this unit, add 1 to the result. For each attack this unit makes, a Wound Roll of 6 for that attack causes an additional wound.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Gatekeeper Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="122d-6c17-486a-4b2f">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">1+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3 Gatekeeper Spear" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c454-98f4-5460-95db">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">1+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, for each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="eece-f168-dc32-dff2" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Shield Captain in Allarus Armour" hidden="false" id="276b-b9cc-a7fb-2844" sortIndex="2">
       <costs>
@@ -501,7 +524,7 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Move step, each enemy infantry unit within 16” of and visible to this unit suffers 4+2D3 Suppression.</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Move step, each enemy infantry unit within 12” of and visible to this unit suffers 4+2D3 Suppression.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1147,7 +1170,7 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         </profile>
         <profile name="Decaptis Lunge" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2ac8-1be7-b3cd-c357">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit may move up to an additional 8” if that move would end within 4” of an enemy leader unit and after this unit selects targets for its attacks, if all of its weapons are targeting a single enemy leader unit, select bone of this unit&apos;s weapons. The selected weapon’s A is doubled until the End step.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During a March, this unit may move up to an additional 8” if that move would end within 4” of an enemy leader unit and after this unit selects targets for its attacks, if all of its weapons are targeting a single enemy leader unit, select one of this unit&apos;s weapons. The selected weapon’s A is doubled until the End step.</characteristic>
           </characteristics>
         </profile>
       </profiles>
