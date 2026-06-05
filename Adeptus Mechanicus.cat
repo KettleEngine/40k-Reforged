@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="8ebc-4141-b6f1-7899" name="Adeptus Mechanicus" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="22" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="8ebc-4141-b6f1-7899" name="Adeptus Mechanicus" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="22" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.5" hidden="false" id="7646-5c1b-b2e9-3f1f" sortIndex="1">
       <categoryLinks>
@@ -2258,30 +2258,46 @@ b) SKITARII VANGUARDS</characteristic>
         <infoLink name="Covering Fire" id="550c-2f77-78f1-08fe" hidden="false" type="profile" targetId="2415-711c-9ad6-01b3"/>
         <infoLink name="Transport" id="528c-96ee-5638-86bf" hidden="false" type="rule" targetId="d78d-24c6-e7a9-e94f"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Heavy Stubber" hidden="false" id="7e04-d2ff-b328-abf8" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
-          <modifiers>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-            <modifier type="prepend" value="Twin Cognis" field="name" affects="profiles.Weapon"/>
-            <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-          </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Twin Cognis Heavy Stubber" hidden="false" id="8d68-8f28-9d41-1cde">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0cbc-221c-79c2-4de7-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0cbc-221c-79c2-4de7-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f7de-24b9-8ca4-e6e1-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f7de-24b9-8ca4-e6e1-max" includeChildSelections="false"/>
           </constraints>
-        </entryLink>
-        <entryLink import="true" name="Heavy Stubber" hidden="false" id="affa-ffed-22c5-cd3a" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
-          <modifiers>
-            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-            <modifier type="prepend" value="Hull Cognis" field="name" affects="profiles.Weapon"/>
-            <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-          </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Heavy Stubber" hidden="false" id="7e04-d2ff-b328-abf8" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Twin Cognis" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0cbc-221c-79c2-4de7-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0cbc-221c-79c2-4de7-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hull Cognis Heavy Stubber" hidden="false" id="3ebf-ab56-1346-1ebc">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ed2-827a-6909-4fc8-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ed2-827a-6909-4fc8-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c32d-ff6c-4fae-c88c-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c32d-ff6c-4fae-c88c-max" includeChildSelections="false"/>
           </constraints>
-        </entryLink>
-      </entryLinks>
+          <entryLinks>
+            <entryLink import="true" name="Heavy Stubber" hidden="false" id="affa-ffed-22c5-cd3a" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="prepend" value="Hull Cognis" field="name" affects="profiles.Weapon"/>
+                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ed2-827a-6909-4fc8-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ed2-827a-6909-4fc8-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Kastelan Robot" hidden="false" id="e21b-b023-e13b-8301" sortIndex="4">
       <categoryLinks>
