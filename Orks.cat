@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
       <categoryLinks>
@@ -826,7 +826,7 @@ Tellyporta: After this unit is Activated in reserves, you may use the ‘telly
         </entryLink>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Nobz (5 Man)" hidden="false" id="19a7-6d8e-9950-ac74" sortIndex="9">
+    <selectionEntry type="unit" import="true" name="Nobz" hidden="false" id="19a7-6d8e-9950-ac74" sortIndex="9">
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
@@ -855,7 +855,7 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
         <selectionEntryGroup name="Nobz" id="ddbd-88e2-1e18-d6ae" hidden="false" defaultSelectionEntryId="b0d0-f41a-8813-56e2">
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="6f94-fc7e-0922-ccf0" includeChildSelections="false"/>
-            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="645e-79a2-2ce0-c379" includeChildSelections="false"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="645e-79a2-2ce0-c379" includeChildSelections="false"/>
           </constraints>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Nob" hidden="false" id="b0d0-f41a-8813-56e2">
@@ -1106,6 +1106,27 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="180" field="points" scope="unit" affects="19a7-6d8e-9950-ac74">
+              <conditions>
+                <condition type="greaterThan" value="5" field="selections" scope="unit" childId="model" shared="true" includeChildSelections="true" childName="model"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="{this} unit must have 5 or 10 models" field="error" scope="unit" affects="19a7-6d8e-9950-ac74">
+              <conditionGroups>
+                <conditionGroup type="not">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="10" field="selections" scope="unit" childId="model" shared="true" includeChildSelections="true" childName="model"/>
+                        <condition type="equalTo" value="5" field="selections" scope="unit" childId="model" shared="true" includeChildSelections="true" childName="model"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
@@ -2212,293 +2233,6 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Nobz (10 Man)" hidden="false" id="4174-190a-1d6d-2ced" sortIndex="9">
-      <costs>
-        <cost name="pts" typeId="points" value="180"/>
-      </costs>
-      <infoLinks>
-        <infoLink name="Resilient (X)" id="62ff-f241-85e9-f659" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
-          <modifiers>
-            <modifier type="set" value="Resilient (5+)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Solid Greenskin" id="bd48-322e-8560-0086" hidden="false" type="profile" targetId="c35f-6848-d4c4-faeb"/>
-      </infoLinks>
-      <profiles>
-        <profile name="Take ‘is Place" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="48e2-2a01-45c2-5c6c">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a friendly unit with ‘WARBOSS’ in its name within 16” of this unit dies, this unit gains the following ability:
-
-
-I’m Da Biggest Now: While your infantry units are within 12” of this unit, they gain the following ability:
-
-
-WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 for that attack. For each melee attack this unit makes, reroll a Wound Roll of 1 for that attack.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Nobz" id="8da1-9e49-720e-2d8f" hidden="false" defaultSelectionEntryId="b0d0-f41a-8813-56e2">
-          <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="f57c-1649-c2c0-cdaa" includeChildSelections="false"/>
-            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="a3bf-b270-dc28-31eb" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="model" import="true" name="Nob" hidden="false" id="c4cb-5cf2-940d-2846">
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Choppa" id="f26a-3584-12ca-d071" hidden="false" defaultSelectionEntryId="eee5-f036-38e4-3d64">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e61c-ae1c-6665-0859" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="16d7-9cea-6b3b-fb66" includeChildSelections="false"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink import="true" name="Choppa" hidden="false" id="3223-1d69-41e8-1045" type="selectionEntry" targetId="dcb2-429a-7ee6-dae4" sortIndex="1">
-                      <modifiers>
-                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Big Choppa" hidden="false" id="6efc-865f-c12f-60e5" type="selectionEntry" targetId="b19b-005f-c906-20b7">
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                      <modifiers>
-                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Extras" hidden="false" id="8ec3-ba24-8d7b-6428" sortIndex="3">
-                      <constraints>
-                        <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="8bf8-8182-fcba-9b6d" includeChildSelections="true"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink import="true" name="Big Choppa" hidden="false" id="d4fd-cd3e-f0f6-2cc8" type="selectionEntry" targetId="b19b-005f-c906-20b7">
-                          <modifiers>
-                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </entryLink>
-                        <entryLink import="true" name="Killsaw" hidden="false" id="d21f-322c-2068-dd70" type="selectionEntry" targetId="3559-4417-827f-f5b0">
-                          <modifiers>
-                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </entryLink>
-                        <entryLink import="true" name="Power Klaw" hidden="false" id="243a-813e-e570-3d8e" type="selectionEntry" targetId="d5aa-4bd1-fb77-325b">
-                          <modifiers>
-                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </entryLink>
-                      </entryLinks>
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditions>
-                            <condition type="lessThan" value="10" field="selections" scope="unit" childId="model" shared="true" childName="model" includeChildSelections="true"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Others" hidden="false" id="b7a4-f6d8-0d50-dd82" sortIndex="2">
-                      <constraints>
-                        <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="f3bf-838a-5752-812e" includeChildSelections="true"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink import="true" name="Big Choppa" hidden="false" id="e4a6-8ae3-f485-60f8" type="selectionEntry" targetId="b19b-005f-c906-20b7">
-                          <modifiers>
-                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </entryLink>
-                        <entryLink import="true" name="Killsaw" hidden="false" id="f901-ca28-f34e-17c9" type="selectionEntry" targetId="3559-4417-827f-f5b0">
-                          <modifiers>
-                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </entryLink>
-                        <entryLink import="true" name="Power Klaw" hidden="false" id="ba54-37f1-05c5-d88a" type="selectionEntry" targetId="d5aa-4bd1-fb77-325b">
-                          <modifiers>
-                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </entryLink>
-                      </entryLinks>
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditions>
-                            <condition type="lessThan" value="10" field="selections" scope="unit" childId="model" shared="true" childName="model" includeChildSelections="true"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="Slugga" id="8958-e022-37fd-e2f7" hidden="false" defaultSelectionEntryId="da60-04c7-f57e-660a">
-                  <entryLinks>
-                    <entryLink import="true" name="Slugga" hidden="false" id="a9c6-3238-30ed-1ceb" type="selectionEntry" targetId="efe4-3139-2e58-93af" sortIndex="1">
-                      <modifiers>
-                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Big Choppa" hidden="false" id="4e9f-4ec2-d00c-4c0b" type="selectionEntry" targetId="b19b-005f-c906-20b7">
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                      <modifiers>
-                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Other" hidden="false" id="4ba0-58d1-7e7c-f50e" sortIndex="3">
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                      <selectionEntryGroups>
-                        <selectionEntryGroup name="Other" id="8dfa-7fe5-3253-d302" hidden="false" defaultSelectionEntryId="fb14-1ddb-f77b-c7ba">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="61f8-e937-8d8a-2175" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9848-eba5-495b-29cf" includeChildSelections="false"/>
-                          </constraints>
-                          <selectionEntries>
-                            <selectionEntry type="upgrade" import="true" name="Shoota &amp; Kombi-Skorcha" hidden="false" id="1d97-1f15-d0bc-4422" sortIndex="1">
-                              <entryLinks>
-                                <entryLink import="true" name="Shoota" hidden="false" id="c7e5-8904-546d-e117" type="selectionEntry" targetId="0392-3e6d-4b99-dcd6">
-                                  <modifiers>
-                                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                  </modifiers>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac35-a63c-e0eb-59cb" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ed1-de0a-7284-5e39" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                                <entryLink import="true" name="Kombi-Skorcha" hidden="false" id="e989-9edd-c0c5-8a6a" type="selectionEntry" targetId="f85f-e91a-1c5c-e4ee">
-                                  <modifiers>
-                                    <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                  </modifiers>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d65-d6ba-6953-4280" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d107-8958-18f8-45af" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                              </entryLinks>
-                            </selectionEntry>
-                            <selectionEntry type="upgrade" import="true" name="Shoota &amp; Kombi-Rokkit" hidden="false" id="ee34-615d-822f-b1d1" sortIndex="2">
-                              <entryLinks>
-                                <entryLink import="true" name="Shoota" hidden="false" id="1030-b1ba-d280-9931" type="selectionEntry" targetId="0392-3e6d-4b99-dcd6">
-                                  <modifiers>
-                                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                  </modifiers>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d9cc-5b2f-bdaf-27ca" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11ca-425d-6cb7-54d8" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                                <entryLink import="true" name="Kombi-Rokkit" hidden="false" id="e622-fadf-20fe-e36b" type="selectionEntry" targetId="2db5-eb12-df0c-082a">
-                                  <modifiers>
-                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                  </modifiers>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="851a-1971-b806-2b6f" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e2a-5da2-1f15-e4bb" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                              </entryLinks>
-                            </selectionEntry>
-                          </selectionEntries>
-                        </selectionEntryGroup>
-                      </selectionEntryGroups>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Kombi" hidden="false" id="dafe-1abf-402f-5649" sortIndex="2">
-                      <selectionEntryGroups>
-                        <selectionEntryGroup name="Other" id="0bcf-5087-d6dc-ee58" hidden="false" defaultSelectionEntryId="5eca-477e-db95-f7ad">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ec1d-9e70-1d58-ef8c" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4722-4c7b-1b6e-419a" includeChildSelections="false"/>
-                          </constraints>
-                          <selectionEntries>
-                            <selectionEntry type="upgrade" import="true" name="Shoota &amp; Kombi-Skorcha" hidden="false" id="da37-fbe2-3bad-0f9c" sortIndex="1">
-                              <entryLinks>
-                                <entryLink import="true" name="Shoota" hidden="false" id="e425-8722-6868-d65f" type="selectionEntry" targetId="0392-3e6d-4b99-dcd6">
-                                  <modifiers>
-                                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                  </modifiers>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a48-0f65-7bce-d33a" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fee-a3ae-a6f4-ae27" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                                <entryLink import="true" name="Kombi-Skorcha" hidden="false" id="783e-ce1f-96ef-7d62" type="selectionEntry" targetId="f85f-e91a-1c5c-e4ee">
-                                  <modifiers>
-                                    <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                  </modifiers>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f7ef-6b99-f258-d1f9" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="27dd-b039-eb9e-322c" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                              </entryLinks>
-                            </selectionEntry>
-                            <selectionEntry type="upgrade" import="true" name="Shoota &amp; Kombi-Rokkit" hidden="false" id="67f1-900f-985f-fe0d" sortIndex="2">
-                              <entryLinks>
-                                <entryLink import="true" name="Shoota" hidden="false" id="0f33-3400-6b85-cf6e" type="selectionEntry" targetId="0392-3e6d-4b99-dcd6">
-                                  <modifiers>
-                                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                  </modifiers>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3595-a1e4-eb60-44eb" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff26-dae2-184f-6cd0" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                                <entryLink import="true" name="Kombi-Rokkit" hidden="false" id="943e-b178-cfba-878c" type="selectionEntry" targetId="2db5-eb12-df0c-082a">
-                                  <modifiers>
-                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                  </modifiers>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d3ff-d56c-5678-b690" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39d7-5f64-fa78-486b" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                              </entryLinks>
-                            </selectionEntry>
-                          </selectionEntries>
-                        </selectionEntryGroup>
-                      </selectionEntryGroups>
-                      <constraints>
-                        <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="1bed-24f8-efd7-3886" includeChildSelections="true"/>
-                      </constraints>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="35a8-a346-d18d-8a6a" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d312-7eca-533b-452d" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <entryLinks>
-                <entryLink import="true" name="Stikbomb" hidden="false" id="0fb9-eaaa-15bb-c459" type="selectionEntry" targetId="df8d-1d98-ca65-d2c6">
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="128c-2e21-7005-df1e" includeChildSelections="true"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-              <profiles>
-                <profile name="Nob" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="ab6e-4afe-e094-dd05">
-                  <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">6+</characteristic>
-                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink targetId="4820-e2b5-9e00-bb68" id="ef96-1f69-3870-9ff5" primary="true" name="Elites"/>
-        <categoryLink targetId="205c-3072-067b-d808" id="1f3a-c5b8-3efd-9404" primary="false" name="Infantry"/>
-      </categoryLinks>
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
