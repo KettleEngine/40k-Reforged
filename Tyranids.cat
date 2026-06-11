@@ -1160,8 +1160,8 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ripper Swarms" hidden="false" id="a151-9c2e-e0fd-a4b1" sortIndex="14">
       <categoryLinks>
-        <categoryLink targetId="ccc6-6202-853c-23e4" id="c6fe-27f6-bdbf-626f" primary="true" name="Support"/>
         <categoryLink targetId="205c-3072-067b-d808" id="277d-2f3c-816c-0b54" primary="false" name="Infantry"/>
+        <categoryLink targetId="9cd6-0442-3f35-6b52" id="56d1-64e8-2b1b-6293" primary="true" name="Configuration"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Ripper Swarms" id="012b-a3fc-afe9-ca2a" hidden="false" defaultSelectionEntryId="0be3-c515-86dc-509c">
@@ -1203,7 +1203,7 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
                 </selectionEntry>
               </selectionEntries>
               <costs>
-                <cost name="pts" typeId="points" value="20"/>
+                <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -1221,6 +1221,10 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
           </characteristics>
         </profile>
       </profiles>
+      <comment>(Reference)</comment>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="aaa1-ce51-20a2-dcc4" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Carnifex" hidden="false" id="f93e-07bb-e4f6-0835" sortIndex="15">
       <costs>
@@ -2186,6 +2190,70 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
         <profile name="Exocognitive Neurocytes" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e301-6d43-2892-de36">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit has Hive Minded, while selecting a friendly or enemy unit for a psychic power, or for Windfall of the Warp, Dominating Shadow, you may instead select a friendly or enemy unit visible to and within 5+2D6&quot; of this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ripper Swarms" hidden="false" id="aa4e-091c-4a39-442f" sortIndex="14">
+      <categoryLinks>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="0fb1-05a9-099a-9f57" primary="true" name="Support"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="907e-c2d9-66a5-7cce" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Ripper Swarms" id="064e-0657-2569-25c3" hidden="false" defaultSelectionEntryId="0be3-c515-86dc-509c">
+          <constraints>
+            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="3704-0522-a428-7e71" includeChildSelections="false"/>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="6cc4-b86b-3fa0-7260" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Ripper Swarm" hidden="false" id="7b73-06b0-d6dd-b9d7">
+              <profiles>
+                <profile name="Ripper Swarm" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="fa64-666c-8f32-226f">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">6+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Ripping Jaws" hidden="false" id="cb3e-5427-7ad2-4573">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3f40-65ab-0560-6117" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b05-4d2b-defd-98db" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Ripping Jaws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ec14-32ed-b626-f2ae">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <profiles>
+        <profile name="Utterly Relentless" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="7b43-0a3d-e009-5dca">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">The Strength of this unit&apos;s Ripping Jaws weapon is improved by 1 for each model in this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Completely Mindless" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="33f7-c38b-1784-b83c">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After the end of each battle round, if this unit does not have Hive Minded, this unit dies.</characteristic>
           </characteristics>
         </profile>
       </profiles>
