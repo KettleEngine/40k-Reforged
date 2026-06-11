@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="16" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Neuro Disruptor" hidden="false" id="7dc0-1f7b-a49c-295b">
       <profiles>
@@ -942,109 +942,86 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="bf01-1c88-1b0a-4df8" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Skyweavers" hidden="false" id="e6b0-d300-fe0c-a665">
+    <selectionEntry type="unit" import="true" name="Skyweaver" hidden="false" id="e6b0-d300-fe0c-a665">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Skyweavers" id="344c-7147-026c-2f8c" hidden="false" defaultSelectionEntryId="df65-b8b6-02b4-46bf">
+        <selectionEntryGroup name="Main Gun:" id="bb9f-62b7-fc6d-6c1d" hidden="false" defaultSelectionEntryId="2b83-d449-dbd5-7470">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="583a-0b25-a081-ace6-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="583a-0b25-a081-ace6-max" includeChildSelections="false"/>
+          </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Skyweaver" hidden="false" id="df65-b8b6-02b4-46bf">
+            <selectionEntry type="upgrade" import="true" name="Shuriken Cannon" hidden="false" id="0955-7d7b-8e46-93bf" sortIndex="1" exportable="false">
+              <entryLinks>
+                <entryLink import="true" name="Shuriken Cannon" hidden="false" id="f453-db5e-6e8e-e02d" type="selectionEntry" targetId="3de8-f8bb-0dc7-7dc8">
+                  <modifiers>
+                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="73ac-eae6-c37c-7eba-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="73ac-eae6-c37c-7eba-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Haywire Cannon" hidden="false" id="2b83-d449-dbd5-7470" sortIndex="2">
+              <entryLinks>
+                <entryLink import="true" name="Haywire Cannon" hidden="false" id="0637-71fb-82a8-cc1f" type="selectionEntry" targetId="1958-e3e6-79fd-ed99">
+                  <modifiers>
+                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2" field="571c-0471-2614-c57c" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="794a-5fb7-4d3f-209b-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="794a-5fb7-4d3f-209b-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Melee: " id="7eeb-1fb0-cd10-f674" hidden="false" defaultSelectionEntryId="202b-4717-60f2-5259">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1529-2751-4a41-3652-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1529-2751-4a41-3652-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Star Bolas" hidden="false" id="202b-4717-60f2-5259" sortIndex="2">
               <profiles>
-                <profile name="Skyweaver" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="da56-40aa-fddf-5399">
+                <profile name="Star Bolas" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="405b-1008-166b-35f6">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8/&quot;</characteristic>
-                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 3</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Main Gun:" id="bb9f-62b7-fc6d-6c1d" hidden="false" defaultSelectionEntryId="2b83-d449-dbd5-7470">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="583a-0b25-a081-ace6-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="583a-0b25-a081-ace6-max" includeChildSelections="false"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Shuriken Cannon" hidden="false" id="0955-7d7b-8e46-93bf" sortIndex="1" exportable="false">
-                      <entryLinks>
-                        <entryLink import="true" name="Shuriken Cannon" hidden="false" id="f453-db5e-6e8e-e02d" type="selectionEntry" targetId="3de8-f8bb-0dc7-7dc8">
-                          <modifiers>
-                            <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="73ac-eae6-c37c-7eba-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="73ac-eae6-c37c-7eba-max" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Haywire Cannon" hidden="false" id="2b83-d449-dbd5-7470" sortIndex="2">
-                      <entryLinks>
-                        <entryLink import="true" name="Haywire Cannon" hidden="false" id="0637-71fb-82a8-cc1f" type="selectionEntry" targetId="1958-e3e6-79fd-ed99">
-                          <modifiers>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="2" field="571c-0471-2614-c57c" affects="profiles.Weapon"/>
-                          </modifiers>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="794a-5fb7-4d3f-209b-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="794a-5fb7-4d3f-209b-max" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="Melee: " id="7eeb-1fb0-cd10-f674" hidden="false" defaultSelectionEntryId="202b-4717-60f2-5259">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1529-2751-4a41-3652-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1529-2751-4a41-3652-max" includeChildSelections="false"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Star Bolas" hidden="false" id="202b-4717-60f2-5259" sortIndex="2">
-                      <profiles>
-                        <profile name="Star Bolas" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="405b-1008-166b-35f6">
-                          <characteristics>
-                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
-                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 3</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <infoLinks>
-                        <infoLink name="Blast (X)" id="ec25-1e6b-16ca-861c" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Zephyrglaive" hidden="false" id="0e53-6a59-ca4c-24dd" sortIndex="1">
-                      <profiles>
-                        <profile name="Zephyrglaive" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c9db-4617-8e23-3057">
-                          <characteristics>
-                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
-                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <infoLinks>
-                        <infoLink name="Pierce" id="694b-d316-697e-4305" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-                      </infoLinks>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
+              <infoLinks>
+                <infoLink name="Blast (X)" id="ec25-1e6b-16ca-861c" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Zephyrglaive" hidden="false" id="0e53-6a59-ca4c-24dd" sortIndex="1">
+              <profiles>
+                <profile name="Zephyrglaive" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c9db-4617-8e23-3057">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Pierce" id="694b-d316-697e-4305" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="36ff-ec04-bc06-2657-min" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="36ff-ec04-bc06-2657-max" includeChildSelections="false"/>
-          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -1067,6 +1044,15 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
         <profile name="Jet Bike" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b217-fdee-87b7-cb5f">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, add 1 D6 to that roll.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Skyweaver" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="da56-40aa-fddf-5399">
+          <characteristics>
+            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8/&quot;</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
           </characteristics>
         </profile>
       </profiles>
