@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="27" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="28" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Gauss" id="b2e9-8420-cfb7-4bde" hidden="false">
       <description>For each attack made for this weapon, the Wound Roll for that attack is improved by 1, and the Saving Throw is worsened by 1.</description>
@@ -20,50 +20,6 @@
       </profiles>
       <infoLinks>
         <infoLink name="Heal/Repair (X)" id="3328-def1-8ebd-79c9" hidden="false" type="rule" targetId="02c8-1ec5-cdab-2572"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="85c5-2a98-6852-6b1c">
-      <profiles>
-        <profile name="1. Oracular Optics" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="4c7c-4e4f-3f66-25eb">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each attack this unit makes, reroll a Hit Roll of 1 for that attack, and that attack gains Ignore Cover.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="2. Necrodermis Plating" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="5d35-8354-882a-0611">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit gains Resilient 5+.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="3. Reanimation Orb" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="f7c7-6447-4afb-ab4d">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each Living Metal roll made for your units within 16” of this unit, add 1 to the result of that roll.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="4. Stormfield" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="6bf9-ec16-e1f3-bdd6">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit’s M is improved by 3, and it gains Fly. After this unit’s Move step, select up to three different enemy units within 12&quot;. Each selected unit suffers D3 SW</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="5. Reclaimer’s Heirloom" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="88fb-591d-30ca-6671">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each attack this unit makes targeting an enemy unit within 4” of an objective, reroll Hit Rolls of 1 for that attack. While this unit is within 4&quot; of an objective, it gains Resilient 5+.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="6. Solar Staff" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="79fe-64bf-7cb0-3c1d">
-          <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">While enemy units are within 8&quot; of this unit, the T of those units is worsened by 1.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="59d1-9283-7001-2110" includeChildSelections="false"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink targetId="9cd6-0442-3f35-6b52" id="408b-e710-9812-13a7" primary="true" name="Configuration"/>
-      </categoryLinks>
-      <infoLinks>
-        <infoLink name="Resilient (X)" id="11c0-ccde-4e20-10c9" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
-        <infoLink name="Ignore Cover" id="51d1-dccb-fc73-2962" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Tesla Cannon" hidden="false" id="c6dc-e264-4072-80a5">
@@ -351,19 +307,6 @@ d) GEOMANCER</characteristic>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9537-1658-3d01-6a8b" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Quantum Shielding" hidden="false" id="1b06-5ecd-0648-3eaf">
-      <profiles>
-        <profile name="Quantum Shielding" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="01ac-85d9-f04b-4aff">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack that targets this unit, reroll a failed Saving Throw for that attack.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1974-ead7-f116-122a-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1974-ead7-f116-122a-max" includeChildSelections="false"/>
-      </constraints>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Voidscythe" hidden="false" id="dc62-983c-0f4a-4e97">
       <profiles>
         <profile name="Voidscythe" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="13ea-6992-cb0f-5a1e">
@@ -467,8 +410,7 @@ REPLICATE: After this ability is gained, add one model to this unit.</characteri
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
-    <entryLink import="true" name="Relics (Reference)" hidden="false" id="cd79-bf4f-47da-5767" type="selectionEntry" targetId="85c5-2a98-6852-6b1c" sortIndex="-2"/>
-    <entryLink import="true" name="Canoptek Scarab Swarms" hidden="false" id="6089-28e7-aebd-202e" type="selectionEntry" targetId="7201-04f3-1093-c07b" sortIndex="21">
+    <entryLink import="true" name="Canoptek Scarab Swarms" hidden="false" id="6089-28e7-aebd-202e" type="selectionEntry" targetId="7201-04f3-1093-c07b" sortIndex="22">
       <costs>
         <cost name="pts" typeId="points" value="60"/>
       </costs>
@@ -477,7 +419,7 @@ REPLICATE: After this ability is gained, add one model to this unit.</characteri
         <categoryLink targetId="205c-3072-067b-d808" id="b0ea-9b57-7658-d15e" primary="false" name="Infantry"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Canoptek Scarab Swarms" hidden="false" id="973e-fa0d-86a5-cb88" type="selectionEntry" targetId="7201-04f3-1093-c07b" sortIndex="21">
+    <entryLink import="true" name="Canoptek Scarab Swarms" hidden="false" id="973e-fa0d-86a5-cb88" type="selectionEntry" targetId="7201-04f3-1093-c07b" sortIndex="22">
       <categoryLinks>
         <categoryLink targetId="9cd6-0442-3f35-6b52" id="3724-e347-8161-8f0a" primary="true" name="Configuration"/>
         <categoryLink targetId="205c-3072-067b-d808" id="8ff2-9461-1c15-f1c1" primary="false" name="Infantry"/>
@@ -629,7 +571,6 @@ c) LYCHGUARD</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="65ed-3559-bdb5-41c4-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Quantum Shielding" hidden="false" id="1a3f-9fbd-21e9-c57d" type="selectionEntry" targetId="1b06-5ecd-0648-3eaf"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Staff of Light" hidden="false" id="e874-c145-0bc2-020e">
@@ -656,8 +597,8 @@ c) LYCHGUARD</characteristic>
           <characteristics>
             <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
             <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">7</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">11</characteristic>
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
           </characteristics>
         </profile>
@@ -985,7 +926,7 @@ c) OPHYDIAN DESTROYERS</characteristic>
           <profiles>
             <profile name="Resurrection War Cell" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5e3d-538a-83ce-32d8">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March, you may select one WARRIORS or IMMORTALS unit in reserves. Deploy it wholly within 6” of this unit and outside of engagement range of enemy models.</characteristic>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may select any number of your WARRIORS or IMMORTALS units in reserves. Deploy it wholly within 6” of this unit and outside of engagement range of enemy models.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1204,7 +1145,7 @@ e) CRYPTOTHRALLS</characteristic>
           <profiles>
             <profile name="Canoptek Cloak" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ae51-2eee-c8ac-ac15">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After Activating a unit with ‘CANOPTEK’ in the name within 12” of this model, until the End step, for each attack made by that unit, reroll a Hit Roll of 1 for that attack.</characteristic>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After Activating a unit with ‘CANOPTEK’ in the name within 16” of this model, until the End step, for each attack made by that unit, reroll a Hit Roll of 1 for that attack.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1217,7 +1158,7 @@ e) CRYPTOTHRALLS</characteristic>
           <profiles>
             <profile name="Rites of Repair" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f8f3-6298-9423-7a7f">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each of your units within 12” of this unit, you may reroll its Living Metal rolls.</characteristic>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each of your units within 16” of this unit, you may reroll its Living Metal rolls.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1519,7 +1460,7 @@ d) CRYPTOTHRALLS</characteristic>
         </profile>
         <profile name="Harbinger of Despair" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4027-da5f-1829-aa52">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While enemy units are within 16&quot; of this unit, the Rv of those units is worsened by 1.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While enemy units are within 24&quot; of this unit, the Rv of those units is worsened by 1.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2089,7 +2030,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
           <profiles>
             <profile name="Dimensional Oubliette" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b200-e1d6-3b53-ff6a">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may Deploy it anywhere in the battlefield outside of engagement range of enemy models.</characteristic>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may Deploy it anywhere in the battlefield outside of engagement range of enemy models. If you do, this unit cannot March or Fall Back this unit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3042,7 +2983,7 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
           <profiles>
             <profile name="Dimensional Oubliette" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="282b-2f73-9889-843b">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may Deploy it anywhere in the battlefield outside of engagement range of enemy models.</characteristic>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may Deploy it anywhere in the battlefield outside of engagement range of enemy models. If you do, this unit cannot March or Fall Back this unit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3084,7 +3025,7 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
         <categoryLink name="Vehicle" hidden="false" id="4f8a-6f7e-f9ef-3a92" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="130"/>
       </costs>
       <profiles>
         <profile name="Annihilation Barge" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6204-82bd-a17c-52ba">
@@ -3092,8 +3033,8 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
             <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
             <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
             <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3171,12 +3112,11 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6fd2-8cb8-220d-2b90-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Quantum Shielding" hidden="false" id="a84a-de3e-11ec-eb5f" type="selectionEntry" targetId="1b06-5ecd-0648-3eaf"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Triarch Stalker" hidden="false" id="7ede-0525-18c6-c990" sortIndex="30">
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="170"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Vehicle" hidden="false" id="46c9-b9d5-eb92-a104" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
@@ -3192,30 +3132,27 @@ ADVANCE SCOUT: For each Advance Roll this unit makes, roll an additional D6 an
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
           </characteristics>
         </profile>
+        <profile name="Accurate Volleys" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="21a5-97fc-e36f-d8c8">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attacks step, each enemy unit targeted by any of this unit’s attacks this turn gain the following ability until the next time this unit is Activated or dies:
+
+
+Relayed Targeting Data: Each time an enemy unit selects a target for a ranged weapon, it may select this unit from an additional 4” away.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Jerking Gait" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f827-2d0f-3b02-cbed">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit makes an Advance Roll, until the End step, this unit may move through terrain pieces and units as if they were not there.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Targeting Relay" hidden="false" id="59b8-505d-6e67-908f">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc99-d66a-b0cc-55b9-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc99-d66a-b0cc-55b9-max" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Targeting Relay" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="21a5-97fc-e36f-d8c8">
-              <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attacks step, each enemy unit targeted by this unit’s ranged attacks this turn gains the following ability until the end of the battle round:
-
-
-Relayed Target: For each ranged attack made by a Necrons infantry unit that targets this unit, reroll Hit Rolls of 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Stalker Legs" hidden="false" id="f76d-2783-ab0b-c0b7">
           <profiles>
             <profile name="Stalker Legs" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c685-8e71-178d-63ef">
               <characteristics>
                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                 <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
@@ -3231,10 +3168,9 @@ Relayed Target: For each ranged attack made by a Necrons infantry unit that ta
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Living Metal" hidden="false" id="2a8d-7187-6587-d18a" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
-        <entryLink import="true" name="Quantum Shielding" hidden="false" id="566b-c50b-ebab-7b96" type="selectionEntry" targetId="1b06-5ecd-0648-3eaf"/>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Weapons" id="1d1e-c76f-370d-cf8d" hidden="false">
+        <selectionEntryGroup name="Weapons" id="1d1e-c76f-370d-cf8d" hidden="false" defaultSelectionEntryId="0988-04ac-5a02-9528">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Heat Ray" hidden="false" id="0988-04ac-5a02-9528" sortIndex="1">
               <profiles>
@@ -3242,7 +3178,7 @@ Relayed Target: For each ranged attack made by a Necrons infantry unit that ta
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                     <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
                     <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Strike, Pierce</characteristic>
@@ -3261,6 +3197,8 @@ Relayed Target: For each ranged attack made by a Necrons infantry unit that ta
               </profiles>
               <infoLinks>
                 <infoLink name="Strike or Sweep (X)" id="6704-2b68-ae14-39fb" hidden="false" type="rule" targetId="2757-6563-cdb2-3456"/>
+                <infoLink name="Pierce" id="4bd4-eb0b-e0eb-126b" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                <infoLink name="Ignore Cover" id="c4cf-b68b-d0e8-68b6" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Particle Shredder" hidden="false" id="d29e-6521-c5ab-3e86" sortIndex="2">
@@ -3268,7 +3206,7 @@ Relayed Target: For each ranged attack made by a Necrons infantry unit that ta
                 <profile name="Particle Shredder" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e3eb-e943-c6e3-10c8">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">18</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -3285,10 +3223,10 @@ Relayed Target: For each ranged attack made by a Necrons infantry unit that ta
                 <profile name="Twin Heavy Gauss Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="44c2-0be3-14eb-6cac">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">10</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+3</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3+6</characteristic>
                     <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Gauss</characteristic>
                   </characteristics>
                 </profile>
@@ -3305,10 +3243,11 @@ Relayed Target: For each ranged attack made by a Necrons infantry unit that ta
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
-        <infoLink name="Walker" id="2c27-d521-9c0d-6c9c" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+        <infoLink name="Forward Deploy" id="2c27-d521-9c0d-6c9c" hidden="false" type="rule" targetId="b433-60cc-2ed2-658f"/>
+        <infoLink name="Walker" id="ec38-44cd-f6d3-c8a4" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.8" hidden="false" id="b235-3066-1042-78ab" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.10" hidden="false" id="b235-3066-1042-78ab" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="af31-e70d-2c95-d601" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -3316,6 +3255,176 @@ Relayed Target: For each ranged attack made by a Necrons infantry unit that ta
         <constraint type="min" value="1" field="selections" scope="force" shared="true" id="1b16-9ba1-758f-d2e7-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="1b16-9ba1-758f-d2e7-max" includeChildSelections="false"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Triarch Prartorians" hidden="false" id="13fd-a3aa-4365-43e9" sortIndex="21">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Triarch Prartorians" id="12f5-5516-f68e-2815" hidden="false" defaultSelectionEntryId="00cf-812c-b746-9c0b">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Triarch Prartorian" hidden="false" id="5e17-4197-b050-d048">
+              <costs>
+                <cost name="pts" typeId="points" value="60"/>
+              </costs>
+              <profiles>
+                <profile name="Triarch Prartorian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0941-db25-3d4d-023b">
+                  <characteristics>
+                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapons" id="9000-d6a5-2b28-6d91" hidden="false" defaultSelectionEntryId="b420-7444-9717-a38a">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Rod of Covenant" hidden="false" id="b420-7444-9717-a38a" sortIndex="1">
+                      <profiles>
+                        <profile name="Rod of Covenant (Blast)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="fe10-1ac2-9411-3f63">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 2, Pierce</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="Rod of Covenant" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9768-e2c9-b665-838b">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Blast (X)" id="4c9f-e89a-50f1-64bf" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+                        <infoLink name="Pierce" id="e370-96b5-9799-29fa" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Voidblade &amp; Particle Caster" hidden="false" id="13fa-261b-8c91-28a0" sortIndex="2">
+                      <profiles>
+                        <profile name="Voidblade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3135-9c63-c67d-856b">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred, Pierce</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="Particle Caster" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="90a8-385c-0eef-66e3">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Pierce" id="d47a-b874-5196-a818" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                        <infoLink name="Shred" id="d4de-7245-4f24-272e" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf5f-1333-3606-0b8d" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f85f-0278-a407-7be8" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="b673-c202-2c9b-dad7" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4427-92a8-a250-71ec" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Living Metal" hidden="false" id="5fe8-0011-c17d-146b" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Heavy Armour" id="cccd-62b1-2724-3920" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+        <infoLink name="Fly" id="4c1e-a53f-37c6-5fa4" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Unstoppable" id="228e-01f6-d6dc-a579" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="7a87-28c9-d19b-c105" targetId="205c-3072-067b-d808" primary="false"/>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="8d8d-d5da-452f-852b" primary="true" name="Elites"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Ancient Codes" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4df8-2884-cb3b-6105">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is in reserves or on the battlefield, after any unit Deploys wholly outside of its Deployment Zone, that unit gains the following ability until this unit dies:
+
+
+Dishonored: For each attack made by an enemy TRIARCH PRAETORIANS that targets this unit, a Hit Roll of 5+ causes an additional hit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Gravity Displacement Pack" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="a0a8-5654-5f5e-7fb3">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, add 1 D6 to that roll.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="85c5-2a98-6852-6b1c" sortIndex="-2">
+      <profiles>
+        <profile name="1. Oracular Optics" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="4c7c-4e4f-3f66-25eb">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">Each of this unit’s ranged weapons gains Indirect and for each attack this unit makes, add 1 to the Hit Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2. Necrodermis Plating" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="5d35-8354-882a-0611">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each roll for this unit’s Living Metal, add D3 to that roll. Additionally, after a model in this unit loses Health, this unit may use ‘nanoscarab secretion’. If it does, it uses Living Metal and cannot use nanoscarab secretion again this battle round.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3. Resurrection Ankh" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="f7c7-6447-4afb-ab4d">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit&apos;s move step, each friendly Necrons unit within 12&quot; of it may use Living Metal.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4. Stormfield" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="6bf9-ec16-e1f3-bdd6">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit’s M is improved by 3, and it gains Fly. After this unit’s Move step, select up to three different enemy units within 12&quot;. Each selected unit suffers D3+1 SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5. Hypernova Sceptre" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="88fb-591d-30ca-6671">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Move step, select a point on the battlefield edge and draw a line between that point and this unit. All enemy units that line crosses over which are visible to this unit suffer 3+D3 SW.
+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="6. Mandate of Reclaimance" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="79fe-64bf-7cb0-3c1d">
+          <characteristics>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit is Activated in the battlefield, you may select any of your ready units. If that unit is on the battlefield, remove it and place it into reserves. Then, Deploy that unit wholly within 6&quot; of this unit. Then, this unit and the selected unit gain the following ability until the End step of the next turn:
+
+
+Royal Reclaimers: For each attack made by this unit, a Hit Roll of 6 causes an additional hit. After this unit&apos;s turn, if you have another ready unit with Royal Reclaimers, take another turn, and you must select that unit to Activate that turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="59d1-9283-7001-2110" includeChildSelections="false"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="408b-e710-9812-13a7" targetId="9cd6-0442-3f35-6b52" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Indirect" id="11c0-ccde-4e20-10c9" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="Ignore Cover" id="51d1-dccb-fc73-2962" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+        <infoLink name="Resilient (X)" id="83b5-ba11-a4b9-c6dd" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
+      </infoLinks>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
