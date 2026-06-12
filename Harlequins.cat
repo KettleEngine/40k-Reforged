@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Neuro Disruptor" hidden="false" id="7dc0-1f7b-a49c-295b">
       <profiles>
@@ -363,6 +363,7 @@ Veiled: For each ranged attack that targets this unit, the Hit Roll for that at
                   <modifiers>
                     <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                     <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
                   </modifiers>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="750e-7c67-29c5-3767-min" includeChildSelections="false"/>
@@ -375,7 +376,7 @@ Veiled: For each ranged attack that targets this unit, the Hit Roll for that at
               <profiles>
                 <profile name="Prismatic Cannon (Strike)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e798-09a0-608c-f8bd">
                   <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
                     <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
@@ -385,7 +386,7 @@ Veiled: For each ranged attack that targets this unit, the Hit Roll for that at
                 </profile>
                 <profile name="Prismatic Cannon (Sweep)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7633-3bdb-954f-04c1">
                   <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
                     <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
@@ -408,6 +409,7 @@ Veiled: For each ranged attack that targets this unit, the Hit Roll for that at
           <modifiers>
             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
             <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+            <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
           </modifiers>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e75b-1f46-4b85-ffdb-min" includeChildSelections="false"/>
@@ -954,8 +956,9 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
               <entryLinks>
                 <entryLink import="true" name="Shuriken Cannon" hidden="false" id="f453-db5e-6e8e-e02d" type="selectionEntry" targetId="3de8-f8bb-0dc7-7dc8">
                   <modifiers>
-                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
                     <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                   </modifiers>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="73ac-eae6-c37c-7eba-min" includeChildSelections="false"/>
@@ -971,6 +974,7 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
                     <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                     <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="2" field="571c-0471-2614-c57c" affects="profiles.Weapon"/>
+                    <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
                   </modifiers>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="794a-5fb7-4d3f-209b-min" includeChildSelections="false"/>
