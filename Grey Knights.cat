@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="587a-dc95-3efb-5623" name="Grey Knights" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="13" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="587a-dc95-3efb-5623" name="Grey Knights" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="13" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="086a-23f4-526e-9772">
       <profiles>
@@ -260,11 +260,6 @@
             </selectionEntryGroup>
             <selectionEntryGroup name="Melee Weapons" id="d20b-f28e-cdc4-187a" hidden="false" defaultSelectionEntryId="083d-49bf-e758-de50">
               <entryLinks>
-                <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="891c-557e-9a5e-9e71" type="selectionEntry" targetId="d941-5217-d4b0-258c" sortIndex="3">
-                  <modifiers>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
                 <entryLink import="true" name="Force Stave" hidden="false" id="84eb-29fe-111e-0032" type="selectionEntry" targetId="6c80-983e-a949-23d7" sortIndex="4"/>
               </entryLinks>
               <constraints>
@@ -294,6 +289,19 @@
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf8d-d920-295a-d0ed-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf8d-d920-295a-d0ed-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Nemesis Daemon Hammer" hidden="false" id="08cd-5a1d-341b-422b" sortIndex="3">
+                  <entryLinks>
+                    <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="891c-557e-9a5e-9e71" type="selectionEntry" targetId="d941-5217-d4b0-258c">
+                      <modifiers>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb02-89d3-98b2-fecd-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb02-89d3-98b2-fecd-max" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
