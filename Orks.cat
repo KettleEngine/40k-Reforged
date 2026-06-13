@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
       <categoryLinks>
@@ -2331,7 +2331,7 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
         <profile name="Slugga" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b583-27ab-ba1d-f5f5">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -2558,7 +2558,7 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                     </entryLink>
                   </entryLinks>
                   <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Other" hidden="false" id="46cd-ebd1-7614-aa8e" sortIndex="3">
+                    <selectionEntry type="upgrade" import="true" name="Other" hidden="false" id="46cd-ebd1-7614-aa8e" sortIndex="4">
                       <costs>
                         <cost name="pts" typeId="points" value="10"/>
                       </costs>
@@ -2632,18 +2632,13 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                         <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="40fc-3924-d1d8-178a" includeChildSelections="true"/>
                       </constraints>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Special Weapons" hidden="false" id="0257-3794-96e8-5446" sortIndex="2">
+                    <selectionEntry type="upgrade" import="true" name="Special Weapons" hidden="false" id="0257-3794-96e8-5446" sortIndex="3">
                       <selectionEntryGroups>
                         <selectionEntryGroup name="Special Weapons" id="3b78-29be-59fb-7fb1" hidden="false" defaultSelectionEntryId="4519-ab98-4e9b-b37c">
                           <entryLinks>
                             <entryLink import="true" name="Burna" hidden="false" id="4519-ab98-4e9b-b37c" type="selectionEntry" targetId="1a8c-5d64-79f3-0ab1" sortIndex="4">
                               <modifiers>
                                 <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                              </modifiers>
-                            </entryLink>
-                            <entryLink import="true" name="Shoota" hidden="false" id="ffed-adf1-9337-1483" type="selectionEntry" targetId="0392-3e6d-4b99-dcd6" sortIndex="1">
-                              <modifiers>
-                                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                               </modifiers>
                             </entryLink>
                             <entryLink import="true" name="Rokkit" hidden="false" id="823a-824e-15ad-55fd" type="selectionEntry" targetId="31f4-a334-113c-c54b" sortIndex="2">
@@ -2665,6 +2660,22 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                       </selectionEntryGroups>
                       <constraints>
                         <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="84d8-d0d8-43ca-60fc" includeChildSelections="true"/>
+                      </constraints>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Shoota" hidden="false" id="e8e6-e704-f30e-53fe" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Shoota" hidden="false" id="ffed-adf1-9337-1483" type="selectionEntry" targetId="0392-3e6d-4b99-dcd6">
+                          <modifiers>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aa84-186a-df90-753e-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa84-186a-df90-753e-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="max" value="3" field="selections" scope="unit" shared="true" id="a15f-3a4b-1016-4a1c" includeChildSelections="true"/>
                       </constraints>
                     </selectionEntry>
                   </selectionEntries>
