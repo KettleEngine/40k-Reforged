@@ -168,6 +168,332 @@
         <infoLink name="Nemesis" id="465e-ef98-9223-b770" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Terminators" hidden="false" id="e319-6252-0bd4-c6f2" sortIndex="1">
+      <categoryLinks>
+        <categoryLink name="Troops" hidden="false" id="065d-aa61-7f37-ef94" targetId="b69b-5b51-faf1-2c40" primary="true"/>
+        <categoryLink name="Infantry" hidden="false" id="1656-6a3d-7149-7c4f" targetId="205c-3072-067b-d808" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="5603-c26a-7a96-0bb0" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (2)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Heavy Armour" id="9a1c-721a-3f6b-5632" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+        <infoLink name="Vanguard Beacon" id="d389-2c5a-abf3-461b" hidden="false" type="profile" targetId="ca9b-954c-18a6-ad4f"/>
+        <infoLink name="Warp Drives" id="0466-fc38-740d-6281" hidden="false" type="profile" targetId="3f2f-e0fa-470f-e498"/>
+        <infoLink name="Cleansing Psalm" id="3c64-a2c6-03eb-f754" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Terminator" hidden="false" id="036b-4bb6-40da-01c8">
+          <profiles>
+            <profile name="Terminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="98a2-470a-1307-8ead">
+              <characteristics>
+                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Psyk-Out Grenade" hidden="false" id="814f-bcb7-46fb-fa69" type="selectionEntry" targetId="de28-3196-cc6c-0f11">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="ef94-ad6c-6463-47b4" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Ranged Weapons" id="7e2c-4ed6-1577-a138" hidden="false" defaultSelectionEntryId="42d1-78ca-a225-27c6">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed7c-6d90-ea68-927e" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5078-0f7e-2ad0-a82d" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="42d1-78ca-a225-27c6" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Storm Bolter" hidden="false" id="343e-ecf4-e75d-aebe" type="selectionEntry" targetId="086a-23f4-526e-9772" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b5a-57d2-becb-1c2d" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5056-b4eb-1432-26fe" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <entryLinks>
+                <entryLink import="true" name="Psycannon" hidden="false" id="dc02-2b10-b2be-e9ec" type="selectionEntry" targetId="cd1a-11be-9f06-71ee" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Psilencer" hidden="false" id="885b-b4ae-25f2-851e" type="selectionEntry" targetId="b66d-2be5-d375-8ab1" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Incinerator" hidden="false" id="d688-5868-cc5c-47cb" type="selectionEntry" targetId="302a-b831-3210-5084" sortIndex="4">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Melee Weapons" id="d20b-f28e-cdc4-187a" hidden="false" defaultSelectionEntryId="083d-49bf-e758-de50">
+              <entryLinks>
+                <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="891c-557e-9a5e-9e71" type="selectionEntry" targetId="d941-5217-d4b0-258c" sortIndex="3">
+                  <modifiers>
+                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Force Stave" hidden="false" id="84eb-29fe-111e-0032" type="selectionEntry" targetId="6c80-983e-a949-23d7" sortIndex="4"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a9d1-ad26-c9cc-0fad" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dc2f-fc42-68c5-162a" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="083d-49bf-e758-de50" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="887c-c166-758f-16b3" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="911c-6ea0-7ba1-28bf-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="911c-6ea0-7ba1-28bf-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Force Falchions" hidden="false" id="f53f-9004-a5e4-0c11" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Force Falchions" hidden="false" id="8010-6d7e-f2b1-d882" type="selectionEntry" targetId="1dad-85f1-40a8-9b49">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf8d-d920-295a-d0ed-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf8d-d920-295a-d0ed-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9416-0089-c501-fd0f-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9416-0089-c501-fd0f-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Paladin" hidden="false" id="24d7-067b-fe27-bd74" sortIndex="2">
+      <infoLinks>
+        <infoLink name="Heavy Armour" id="5af4-db01-33b0-e421" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+        <infoLink name="Psyker (X)" id="fb07-7bee-6ebb-76dd" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (3)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Warp Drives" id="8845-36ca-977d-9689" hidden="false" type="profile" targetId="3f2f-e0fa-470f-e498"/>
+        <infoLink name="Cleansing Psalm" id="683e-3329-98e2-cbb6" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Elites" hidden="false" id="5e1e-0436-26ca-744c" targetId="4820-e2b5-9e00-bb68" primary="true"/>
+        <categoryLink name="Infantry" hidden="false" id="d06c-5843-9ea6-b49d" targetId="205c-3072-067b-d808" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Greatest Peril" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f75e-ba33-d553-0662">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there are two or more enemy units within 12” of this unit, each time you roll a D6 for Sanctic Aegis for this unit, you may reroll the result.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Lay on Hands" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="7b8a-e775-2e17-7bd4">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select up to one friendly infantry or monster unit within 4” of this unit. The selected unit Heals D3.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Paladin" hidden="false" id="acc4-45e5-fd83-be62">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ba25-2d1b-168d-740c-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba25-2d1b-168d-740c-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Paladin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b18c-004f-e1e7-dc17">
+              <characteristics>
+                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Ranged Weapons" id="8efe-8bdd-eead-f5f5" hidden="false" defaultSelectionEntryId="1b03-6c5f-20d6-66ad">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1f29-093f-917d-97a7" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a0b-84cc-6cda-1ec7" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="1b03-6c5f-20d6-66ad" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Storm Bolter" hidden="false" id="de40-6b35-8f2b-3c98" type="selectionEntry" targetId="086a-23f4-526e-9772" sortIndex="1">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fd97-d13b-4c40-fafc" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="845f-2d33-d103-c0c1" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Psycannon" hidden="false" id="a9c2-4f32-287a-19e7" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Psycannon" hidden="false" id="16d6-85e1-63fd-859e" type="selectionEntry" targetId="cd1a-11be-9f06-71ee">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e007-c6a8-3f25-2153-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e007-c6a8-3f25-2153-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Psilencer" hidden="false" id="5118-5340-ca54-fb95" sortIndex="3">
+                  <entryLinks>
+                    <entryLink import="true" name="Psilencer" hidden="false" id="de2e-218c-a308-071e" type="selectionEntry" targetId="b66d-2be5-d375-8ab1">
+                      <modifiers>
+                        <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9aec-128e-bf9b-2aa9-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9aec-128e-bf9b-2aa9-max" includeChildSelections="false"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Incinerator" hidden="false" id="3b6f-bfef-df51-f13e" sortIndex="4">
+                  <entryLinks>
+                    <entryLink import="true" name="Incinerator" hidden="false" id="dfa7-d6af-9a2a-190f" type="selectionEntry" targetId="302a-b831-3210-5084">
+                      <modifiers>
+                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="15" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="454f-2f69-4858-7fdb-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="454f-2f69-4858-7fdb-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Melee Weapons" id="9fa6-c658-e715-3ddd" hidden="false" defaultSelectionEntryId="543b-9853-354a-dc0e">
+              <entryLinks>
+                <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="2dac-3f62-0e78-8bdb" type="selectionEntry" targetId="d941-5217-d4b0-258c" sortIndex="3">
+                  <modifiers>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="61fa-428e-eaf4-f2b4" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f317-c290-a139-d832" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="543b-9853-354a-dc0e" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="2c5b-0c36-3c93-fb45" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="deb6-00cd-1646-f7ad-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="deb6-00cd-1646-f7ad-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Force Falchions" hidden="false" id="dec5-39ca-ea3f-fd3e" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Force Falchions" hidden="false" id="a1f0-4af0-11f1-92d7" type="selectionEntry" targetId="1dad-85f1-40a8-9b49">
+                      <modifiers>
+                        <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7eb7-c70e-6f02-2b49-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7eb7-c70e-6f02-2b49-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Force Stave" hidden="false" id="222e-12e2-9e6b-8ed4">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Force Stave" hidden="false" id="d903-31ac-6882-bc1b" type="selectionEntry" targetId="6c80-983e-a949-23d7">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6a6a-80fd-2c00-f049-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a6a-80fd-2c00-f049-max" includeChildSelections="false"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="110"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedRules>
     <rule name="Nemesis" id="24b5-5baa-5c44-0c42" hidden="false">
@@ -335,6 +661,7 @@ b) GREY KNIGHT PALADIN</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5bf8-6f45-40e2-a6a7-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Leader" hidden="false" id="365c-c8d3-591e-25c1" type="selectionEntryGroup" targetId="319c-6cd7-d35e-6ca7"/>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Melee Weapon" id="ae7f-53fc-c49f-7fdf" hidden="false" defaultSelectionEntryId="5ebf-a3c8-4596-8dec">
@@ -459,6 +786,7 @@ b) GREY KNIGHT PALADIN</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a2b-0aaf-e013-7a62-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Leader" hidden="false" id="7a63-7d1a-b7ae-6da2" type="selectionEntryGroup" targetId="319c-6cd7-d35e-6ca7"/>
       </entryLinks>
       <profiles>
         <profile name="Brother Captain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="c48a-56af-a954-8e3a">
@@ -552,6 +880,7 @@ b) GREY KNIGHT PALADIN</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de49-e7bb-761d-b996-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Leader" hidden="false" id="4a84-74ab-e471-3d5c" type="selectionEntryGroup" targetId="319c-6cd7-d35e-6ca7"/>
       </entryLinks>
       <profiles>
         <profile name="Librarian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="e9b2-cbcf-9dcb-dcce">
@@ -605,6 +934,7 @@ b) GREY KNIGHT PALADIN</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0fcf-ba1f-1749-ae6c-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Leader" hidden="false" id="706d-b5bb-28a3-b6af" type="selectionEntryGroup" targetId="319c-6cd7-d35e-6ca7"/>
       </entryLinks>
       <profiles>
         <profile name="Chaplin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="414f-303e-56ac-71eb">
@@ -881,146 +1211,6 @@ b) GREY KNIGHT PALADIN</characteristic>
         <infoLink name="Cleansing Psalm" id="0baa-205c-f85e-7b70" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Terminators" hidden="false" id="e319-6252-0bd4-c6f2" sortIndex="6">
-      <categoryLinks>
-        <categoryLink name="Troops" hidden="false" id="065d-aa61-7f37-ef94" targetId="b69b-5b51-faf1-2c40" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="1656-6a3d-7149-7c4f" targetId="205c-3072-067b-d808" primary="false"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="80"/>
-      </costs>
-      <infoLinks>
-        <infoLink name="Psyker (X)" id="5603-c26a-7a96-0bb0" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
-          <modifiers>
-            <modifier type="set" value="Psyker (2)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Heavy Armour" id="9a1c-721a-3f6b-5632" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
-        <infoLink name="Vanguard Beacon" id="d389-2c5a-abf3-461b" hidden="false" type="profile" targetId="ca9b-954c-18a6-ad4f"/>
-        <infoLink name="Warp Drives" id="0466-fc38-740d-6281" hidden="false" type="profile" targetId="3f2f-e0fa-470f-e498"/>
-        <infoLink name="Cleansing Psalm" id="3c64-a2c6-03eb-f754" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
-      </infoLinks>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Terminator" hidden="false" id="036b-4bb6-40da-01c8">
-          <profiles>
-            <profile name="Terminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="98a2-470a-1307-8ead">
-              <characteristics>
-                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
-                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
-                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <entryLinks>
-            <entryLink import="true" name="Psyk-Out Grenade" hidden="false" id="814f-bcb7-46fb-fa69" type="selectionEntry" targetId="de28-3196-cc6c-0f11">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="ef94-ad6c-6463-47b4" includeChildSelections="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Ranged Weapons" id="7e2c-4ed6-1577-a138" hidden="false" defaultSelectionEntryId="42d1-78ca-a225-27c6">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed7c-6d90-ea68-927e" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5078-0f7e-2ad0-a82d" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="42d1-78ca-a225-27c6" sortIndex="1">
-                  <entryLinks>
-                    <entryLink import="true" name="Storm Bolter" hidden="false" id="343e-ecf4-e75d-aebe" type="selectionEntry" targetId="086a-23f4-526e-9772" sortIndex="1">
-                      <modifiers>
-                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b5a-57d2-becb-1c2d" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5056-b4eb-1432-26fe" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-              </selectionEntries>
-              <entryLinks>
-                <entryLink import="true" name="Psycannon" hidden="false" id="dc02-2b10-b2be-e9ec" type="selectionEntry" targetId="cd1a-11be-9f06-71ee" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Psilencer" hidden="false" id="885b-b4ae-25f2-851e" type="selectionEntry" targetId="b66d-2be5-d375-8ab1" sortIndex="3">
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Incinerator" hidden="false" id="d688-5868-cc5c-47cb" type="selectionEntry" targetId="302a-b831-3210-5084" sortIndex="4">
-                  <modifiers>
-                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Melee Weapons" id="d20b-f28e-cdc4-187a" hidden="false" defaultSelectionEntryId="62ef-302b-82c6-34df">
-              <entryLinks>
-                <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="891c-557e-9a5e-9e71" type="selectionEntry" targetId="d941-5217-d4b0-258c" sortIndex="3">
-                  <modifiers>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Force Stave" hidden="false" id="84eb-29fe-111e-0032" type="selectionEntry" targetId="6c80-983e-a949-23d7" sortIndex="4"/>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a9d1-ad26-c9cc-0fad" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dc2f-fc42-68c5-162a" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="083d-49bf-e758-de50" sortIndex="1">
-                  <entryLinks>
-                    <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="887c-c166-758f-16b3" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
-                      <modifiers>
-                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="911c-6ea0-7ba1-28bf-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="911c-6ea0-7ba1-28bf-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Force Falchions" hidden="false" id="f53f-9004-a5e4-0c11" sortIndex="2">
-                  <entryLinks>
-                    <entryLink import="true" name="Force Falchions" hidden="false" id="8010-6d7e-f2b1-d882" type="selectionEntry" targetId="1dad-85f1-40a8-9b49">
-                      <modifiers>
-                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf8d-d920-295a-d0ed-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf8d-d920-295a-d0ed-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9416-0089-c501-fd0f-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9416-0089-c501-fd0f-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntry>
     <selectionEntry type="unit" import="true" name="Purifiers" hidden="false" id="5bae-2ab1-286b-bb1e" sortIndex="7">
       <selectionEntryGroups>
         <selectionEntryGroup name="Squad" id="efe5-9087-6f1a-30a5" hidden="false" defaultSelectionEntryId="a44e-66fa-0afe-6919">
@@ -1174,192 +1364,6 @@ b) GREY KNIGHT PALADIN</characteristic>
           </characteristics>
         </profile>
       </profiles>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Paladin" hidden="false" id="24d7-067b-fe27-bd74" sortIndex="8">
-      <infoLinks>
-        <infoLink name="Heavy Armour" id="5af4-db01-33b0-e421" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
-        <infoLink name="Psyker (X)" id="fb07-7bee-6ebb-76dd" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
-          <modifiers>
-            <modifier type="set" value="Psyker (3)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Warp Drives" id="8845-36ca-977d-9689" hidden="false" type="profile" targetId="3f2f-e0fa-470f-e498"/>
-        <infoLink name="Cleansing Psalm" id="683e-3329-98e2-cbb6" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Elites" hidden="false" id="5e1e-0436-26ca-744c" targetId="4820-e2b5-9e00-bb68" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="d06c-5843-9ea6-b49d" targetId="205c-3072-067b-d808" primary="false"/>
-      </categoryLinks>
-      <profiles>
-        <profile name="Greatest Peril" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f75e-ba33-d553-0662">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there are two or more enemy units within 12” of this unit, each time you roll a D6 for Sanctic Aegis for this unit, you may reroll the result.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Lay on Hands" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="7b8a-e775-2e17-7bd4">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select up to one friendly infantry or monster unit within 4” of this unit. The selected unit Heals D3.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Paladin" hidden="false" id="acc4-45e5-fd83-be62">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ba25-2d1b-168d-740c-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba25-2d1b-168d-740c-max" includeChildSelections="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Paladin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b18c-004f-e1e7-dc17">
-              <characteristics>
-                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
-                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
-                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Ranged Weapons" id="8efe-8bdd-eead-f5f5" hidden="false" defaultSelectionEntryId="1b03-6c5f-20d6-66ad">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1f29-093f-917d-97a7" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a0b-84cc-6cda-1ec7" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="1b03-6c5f-20d6-66ad" sortIndex="1">
-                  <entryLinks>
-                    <entryLink import="true" name="Storm Bolter" hidden="false" id="de40-6b35-8f2b-3c98" type="selectionEntry" targetId="086a-23f4-526e-9772" sortIndex="1">
-                      <modifiers>
-                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fd97-d13b-4c40-fafc" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="845f-2d33-d103-c0c1" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Psycannon" hidden="false" id="a9c2-4f32-287a-19e7" sortIndex="2">
-                  <entryLinks>
-                    <entryLink import="true" name="Psycannon" hidden="false" id="16d6-85e1-63fd-859e" type="selectionEntry" targetId="cd1a-11be-9f06-71ee">
-                      <modifiers>
-                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e007-c6a8-3f25-2153-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e007-c6a8-3f25-2153-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Psilencer" hidden="false" id="5118-5340-ca54-fb95" sortIndex="3">
-                  <entryLinks>
-                    <entryLink import="true" name="Psilencer" hidden="false" id="de2e-218c-a308-071e" type="selectionEntry" targetId="b66d-2be5-d375-8ab1">
-                      <modifiers>
-                        <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9aec-128e-bf9b-2aa9-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9aec-128e-bf9b-2aa9-max" includeChildSelections="false"/>
-                      </constraints>
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Incinerator" hidden="false" id="3b6f-bfef-df51-f13e" sortIndex="4">
-                  <entryLinks>
-                    <entryLink import="true" name="Incinerator" hidden="false" id="dfa7-d6af-9a2a-190f" type="selectionEntry" targetId="302a-b831-3210-5084">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="15" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="454f-2f69-4858-7fdb-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="454f-2f69-4858-7fdb-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Melee Weapons" id="9fa6-c658-e715-3ddd" hidden="false" defaultSelectionEntryId="543b-9853-354a-dc0e">
-              <entryLinks>
-                <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="2dac-3f62-0e78-8bdb" type="selectionEntry" targetId="d941-5217-d4b0-258c" sortIndex="3">
-                  <modifiers>
-                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="61fa-428e-eaf4-f2b4" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f317-c290-a139-d832" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="543b-9853-354a-dc0e" sortIndex="1">
-                  <entryLinks>
-                    <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="2c5b-0c36-3c93-fb45" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
-                      <modifiers>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="deb6-00cd-1646-f7ad-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="deb6-00cd-1646-f7ad-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Force Falchions" hidden="false" id="dec5-39ca-ea3f-fd3e" sortIndex="2">
-                  <entryLinks>
-                    <entryLink import="true" name="Force Falchions" hidden="false" id="a1f0-4af0-11f1-92d7" type="selectionEntry" targetId="1dad-85f1-40a8-9b49">
-                      <modifiers>
-                        <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7eb7-c70e-6f02-2b49-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7eb7-c70e-6f02-2b49-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Force Stave" hidden="false" id="222e-12e2-9e6b-8ed4">
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                  <entryLinks>
-                    <entryLink import="true" name="Force Stave" hidden="false" id="d903-31ac-6882-bc1b" type="selectionEntry" targetId="6c80-983e-a949-23d7">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6a6a-80fd-2c00-f049-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a6a-80fd-2c00-f049-max" includeChildSelections="false"/>
-                      </constraints>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                      <modifiers>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="points" value="110"/>
-      </costs>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Interceptors" hidden="false" id="1bb8-5953-2361-d0e1" sortIndex="9">
       <selectionEntryGroups>
@@ -1940,4 +1944,19 @@ Windfall of the Warp - Cleansing Psalm: After this unit makes a Psychic Test, i
       </characteristics>
     </profile>
   </sharedProfiles>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Leader" id="319c-6cd7-d35e-6ca7" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="Terminators" hidden="false" id="de26-35bb-9b57-81b8" type="selectionEntry" targetId="e319-6252-0bd4-c6f2" sortIndex="1"/>
+        <entryLink import="true" name="Paladin" hidden="false" id="2c4c-f481-7f05-9999" type="selectionEntry" targetId="24d7-067b-fe27-bd74" sortIndex="2"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="64da-389b-02f7-bdf6" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
+  <entryLinks>
+    <entryLink import="true" name="Paladin" hidden="false" id="cc9c-27c2-4124-1543" type="selectionEntry" targetId="24d7-067b-fe27-bd74" sortIndex="8"/>
+    <entryLink import="true" name="Terminators" hidden="false" id="13a7-73bd-6018-5ccb" type="selectionEntry" targetId="e319-6252-0bd4-c6f2" sortIndex="6"/>
+  </entryLinks>
 </catalogue>
