@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="16" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.3" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.0" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="0364-85c9-a87f-e090" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -63,16 +63,6 @@
             <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit Activates, select one model in this unit. Until the End step, the selected model gains the following weapon:</characteristic>
           </characteristics>
         </profile>
-        <profile name="5 Ol’ Boss’s Pincha" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d377-e042-53de-4436">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec"/>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c"/>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0"/>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-          </characteristics>
-        </profile>
         <profile name="3 ‘UGE Choppa (Weapon)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4f85-acbd-6515-ec70">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
@@ -86,14 +76,17 @@
         <profile name="5 Ol’ Boss’s Pincha (Weapon)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6a64-67ca-1108-fe81">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Breach" id="7d3c-4d4a-cc73-e2db" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Warboss With Attack Squig" hidden="false" id="6cfd-7e1a-d53e-d94a" sortIndex="1">
       <costs>
@@ -156,7 +149,7 @@ Your Army List may include one unit with ‘WARBOSS’ in the name</characterist
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ecc9-feac-34d1-16d4-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Ork Boyz" hidden="false" id="3ceb-5574-ab8d-69e9" type="selectionEntry" targetId="09d6-9346-3c7c-1df5">
+        <entryLink import="true" name="Ork Boyz" hidden="false" id="3ceb-5574-ab8d-69e9" type="selectionEntry" targetId="09d6-9346-3c7c-1df5" sortIndex="1">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f17f-64e2-04e6-4dec" includeChildSelections="false"/>
           </constraints>
@@ -181,7 +174,7 @@ Your Army List may include one unit with ‘WARBOSS’ in the name</characterist
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Melee" id="62c8-7f71-11b6-6da3" hidden="false" sortIndex="1" defaultSelectionEntryId="6da9-6d8a-6789-a819">
+        <selectionEntryGroup name="Melee" id="62c8-7f71-11b6-6da3" hidden="false" sortIndex="2" defaultSelectionEntryId="6da9-6d8a-6789-a819">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a3e5-40da-485a-b300-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3e5-40da-485a-b300-max" includeChildSelections="false"/>
@@ -298,7 +291,7 @@ Your Army List may include one unit with ‘WARBOSS’ in the name</characterist
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f395-33e6-a99f-0d97-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Ork Boyz" hidden="false" id="61bd-e21c-4928-1a92" type="selectionEntry" targetId="09d6-9346-3c7c-1df5">
+        <entryLink import="true" name="Ork Boyz" hidden="false" id="61bd-e21c-4928-1a92" type="selectionEntry" targetId="09d6-9346-3c7c-1df5" sortIndex="1">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e40-7f38-61e2-14fa" includeChildSelections="false"/>
           </constraints>
@@ -855,12 +848,17 @@ This unit does not count towards the Army List’s leader unit capacity</charact
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is on the battlefield, each of your units gain the following ability:
 
-Tellyporta: After this unit is Activated in reserves, you may use the ‘tellyporta’. If you do, roll 3D6 and Deploy this unit wholly within X” of your TELLYPORTA MEKBOY unit. Then, this unit cannot March or Fall Back this turn.</characteristic>
+Tellyporta: After this unit is Activated in reserves, you may use the ‘tellyporta’. If you do, Deploy this unit wholly within 3D6” of your TELLYPORTA MEKBOY unit (if able) and, during this turn&apos;s Move step, do not make a Move Roll and this unit cannot Advance or Reposition.</characteristic>
           </characteristics>
         </profile>
         <profile name="Dats Be’a" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2186-1949-d34d-f4f4">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select a vehicle unit within 3” of this unit or a unit it is embarked within. The selected unit Heals D3+1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="b864-45cb-8773-7f66">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1411,14 +1409,14 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka, Killshot</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka, Breach</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink name="Killshot" id="47c6-924d-2cc9-5b4a" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+                    <infoLink name="Breach" id="47c6-924d-2cc9-5b4a" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
                     <infoLink name="Dakka" id="a7ee-f3c1-4f80-9cf4" hidden="false" type="rule" targetId="0c95-a6ed-a147-6b41"/>
                   </infoLinks>
                   <constraints>
@@ -1541,7 +1539,7 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
             </profile>
             <profile name="2 ‘ere We Go!" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="17da-6df2-15cc-facd">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the next time this unit Activates or dies, after any of your ORK BOYZ units Activate within 8” of this unit, roll a D3. That unit’s M is improved by that much until the End step.</characteristic>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the next time this unit is Activated or dies, for each Move Roll made for your infantry units within 8” of this unit, add 1 D6 to that Move Roll.</characteristic>
               </characteristics>
             </profile>
             <profile name="3 Deyz Lucky" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="faef-e547-26cc-3b7b">
@@ -1551,7 +1549,7 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
             </profile>
             <profile name="4 Da Jump" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="b3dc-36f5-f41f-fc2d">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one of your infantry units within 12” of this unit. The selected unit may Fall Back up to 5D6” (instead of its normal M). For that move, the models may move over terrain and enemy models as if they were not there.</characteristic>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one of your infantry units within 12”, the selected unit may Reposition and add 3D6 to the Move Roll for that Reposition. For that move, the models may move over terrain and enemy models as if they were not there.</characteristic>
               </characteristics>
             </profile>
             <profile name="5 Iz Gonna Squig Ya" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="d2d6-a27f-1fa7-2479">
@@ -1858,6 +1856,11 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Each time this unit’s models move during its Move step, its models must each end that move at least 10” from where they started.</characteristic>
           </characteristics>
         </profile>
+        <profile name="Jet Rotor Blades" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9d09-065c-cedc-5e6f">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for this unit, add 1 D6 to that roll.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Resilient (X)" id="51c5-5cc5-24a9-6e0d" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
@@ -1958,11 +1961,20 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
       <profiles>
         <profile name="Deff Dread" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1142-344f-a2fd-5872">
           <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">2&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
+            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
             <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">9</characteristic>
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Scrap Metal" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="95ba-9a51-f67c-2f14">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">You may reroll Resilient Rolls made for this unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Hobbling Kontruction" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8641-53e1-4a0c-99e4">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll this unit makes, roll a D3 instead of each D6.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1976,8 +1988,8 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
       <selectionEntryGroups>
         <selectionEntryGroup name="Arms" id="0d28-6073-5d7f-2462" hidden="false" defaultSelectionEntryId="ca14-5602-6245-ac95">
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="1554-378e-ecd8-556c-min" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="1554-378e-ecd8-556c-max" includeChildSelections="false"/>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="ec06-e978-d67e-0430-min" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="ec06-e978-d67e-0430-max" includeChildSelections="false"/>
           </constraints>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Dread Klaw" hidden="false" id="ca14-5602-6245-ac95" sortIndex="1">
@@ -1985,14 +1997,17 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                 <profile name="Dread Klaw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d595-e831-e9ed-5ad7">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Breach" id="358f-b358-e669-58a8" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Dread Saw" hidden="false" id="b885-3c3f-f54d-63e2" sortIndex="2">
               <profiles>
@@ -2011,80 +2026,80 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                 <infoLink name="Shred" id="91a1-4739-dc7e-354d" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Skorcha" hidden="false" id="1e68-da65-3661-2a4e" sortIndex="3">
-              <profiles>
-                <profile name="Skorcha" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b95b-7de3-422a-9312">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Ignore Cover" id="7353-b7e9-5d0a-07f0" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
-              </infoLinks>
-            </selectionEntry>
           </selectionEntries>
-          <entryLinks>
-            <entryLink import="true" name="Kustom Mega Blasta" hidden="false" id="f49e-c9d0-0b8b-c1d4" type="selectionEntry" targetId="a9e1-8ddc-1a60-4e14" sortIndex="4">
-              <modifiers>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Rokkit" hidden="false" id="a210-60a7-9657-02fc" type="selectionEntry" targetId="31f4-a334-113c-c54b" sortIndex="5">
-              <modifiers>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Big Shoota" hidden="false" id="c912-242f-ec53-6cd1" type="selectionEntry" targetId="cc57-8885-c7c0-c76a" sortIndex="6">
-              <modifiers>
-                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Arms (melee)" id="62d4-d98c-c01c-0222" hidden="false" defaultSelectionEntryId="5036-3e2c-9edf-ccfa">
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d595-e6cc-e71c-5b09" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8272-45c9-9b23-2f08" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Dread Klaw" hidden="false" id="5036-3e2c-9edf-ccfa" sortIndex="1">
-              <profiles>
-                <profile name="Dread Klaw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6941-8423-bb28-8d6f">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Dread Saw" hidden="false" id="a66b-f3dc-2b78-2167" sortIndex="2">
-              <profiles>
-                <profile name="Dread Saw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="45c8-057a-1a36-6687">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Shred" id="4979-36a0-d862-df70" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Guns" id="7c6d-ee4e-7863-a83b" hidden="false" sortIndex="3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Big Shoota" hidden="false" id="3bd8-ed85-b658-22f3" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Big Shoota" hidden="false" id="c912-242f-ec53-6cd1" type="selectionEntry" targetId="cc57-8885-c7c0-c76a">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6510-b472-582b-dc57-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6510-b472-582b-dc57-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Kustom Mega Blasta" hidden="false" id="e1c3-373a-8668-0905" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Kustom Mega Blasta" hidden="false" id="f49e-c9d0-0b8b-c1d4" type="selectionEntry" targetId="a9e1-8ddc-1a60-4e14">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9101-7dde-75a2-fd4b-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9101-7dde-75a2-fd4b-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Rokkit" hidden="false" id="a4e6-f208-a72a-4485" sortIndex="3">
+                  <entryLinks>
+                    <entryLink import="true" name="Rokkit" hidden="false" id="a210-60a7-9657-02fc" type="selectionEntry" targetId="31f4-a334-113c-c54b">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c09e-5fef-5cf4-936f-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c09e-5fef-5cf4-936f-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Skorcha" hidden="false" id="5668-f87d-282e-b2cf" sortIndex="4">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Skorcha" hidden="false" id="1e68-da65-3661-2a4e">
+                      <profiles>
+                        <profile name="Skorcha" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b95b-7de3-422a-9312">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Ignore Cover" id="7353-b7e9-5d0a-07f0" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d06-a101-f195-b171-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d06-a101-f195-b171-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="1554-378e-ecd8-556c-max" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -2122,67 +2137,71 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
           </modifiers>
         </infoLink>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Weapon" id="23c9-e579-ec58-9abf" hidden="false" defaultSelectionEntryId="79d5-2cb2-12e8-6229">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Shokk Rifle" hidden="false" id="79d5-2cb2-12e8-6229">
+          <profiles>
+            <profile name="Shokk Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="75bf-1657-046f-6dfa">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Shred" id="89b3-e4fe-56e8-60e7" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+          </infoLinks>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="87d0-ba22-6a44-74d7-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87d0-ba22-6a44-74d7-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eaa8-9046-8a5c-de5f-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eaa8-9046-8a5c-de5f-max" includeChildSelections="false"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Axle-Saws" hidden="false" id="31ba-53a9-fb44-ab5f" sortIndex="3">
-              <infoLinks>
-                <infoLink name="Shred" id="cab0-fe56-a06e-fff7" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-              </infoLinks>
-              <profiles>
-                <profile name="Axle-Saws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a195-37a2-8f9a-5476">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Shokk Rifle" hidden="false" id="79d5-2cb2-12e8-6229" sortIndex="1">
-              <profiles>
-                <profile name="Shokk Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="75bf-1657-046f-6dfa">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Shred" id="89b3-e4fe-56e8-60e7" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Rokkits" hidden="false" id="ad86-24e5-6d8f-8cd7" sortIndex="2">
-              <profiles>
-                <profile name="Rokkits" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="66cd-aa50-ca41-c824">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Dakka" id="b535-a9c3-dfd3-506d" hidden="false" type="rule" targetId="0c95-a6ed-a147-6b41"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Rokkits" hidden="false" id="ad86-24e5-6d8f-8cd7">
+          <profiles>
+            <profile name="Rokkits" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="66cd-aa50-ca41-c824">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Dakka" id="b535-a9c3-dfd3-506d" hidden="false" type="rule" targetId="0c95-a6ed-a147-6b41"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5be6-b419-e94b-88ca-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5be6-b419-e94b-88ca-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Axle-Saws" hidden="false" id="31ba-53a9-fb44-ab5f">
+          <infoLinks>
+            <infoLink name="Shred" id="cab0-fe56-a06e-fff7" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Axle-Saws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a195-37a2-8f9a-5476">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="461a-0d7c-eecc-44b0-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="461a-0d7c-eecc-44b0-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Kustom Boosta Blasta" hidden="false" id="e472-8596-3534-cc0e" sortIndex="20">
       <costs>
@@ -2220,67 +2239,71 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
           </modifiers>
         </infoLink>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Weapon" id="35b9-b1bd-d8eb-bc18" hidden="false" defaultSelectionEntryId="8307-4026-291e-ade6">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Spiked Ram" hidden="false" id="4454-f9ea-4faf-c463">
+          <profiles>
+            <profile name="Spiked Ram" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c0d2-b95e-f456-859e">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Shred" id="4f37-2e99-e1b6-21ed" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+          </infoLinks>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="499e-656d-7e74-b870-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="499e-656d-7e74-b870-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e3cb-0aea-938e-5671-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e3cb-0aea-938e-5671-max" includeChildSelections="false"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Spiked Ram" hidden="false" id="4454-f9ea-4faf-c463" sortIndex="3">
-              <profiles>
-                <profile name="Spiked Ram" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c0d2-b95e-f456-859e">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Shred" id="4f37-2e99-e1b6-21ed" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Rivet Kannon" hidden="false" id="8307-4026-291e-ade6" sortIndex="1">
-              <profiles>
-                <profile name="Rivet Kannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a0f8-16c9-39d0-92be">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Dakka" id="0808-c62f-d289-2006" hidden="false" type="rule" targetId="0c95-a6ed-a147-6b41"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Burna Exhausts" hidden="false" id="4620-209a-14e9-c610" sortIndex="2">
-              <infoLinks>
-                <infoLink name="Ignore Cover" id="5a70-d378-bbd9-6457" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
-              </infoLinks>
-              <profiles>
-                <profile name="Burna Exhausts" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8376-98eb-47aa-5a2d">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Rivet Kannon" hidden="false" id="8307-4026-291e-ade6">
+          <profiles>
+            <profile name="Rivet Kannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a0f8-16c9-39d0-92be">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Dakka" id="0808-c62f-d289-2006" hidden="false" type="rule" targetId="0c95-a6ed-a147-6b41"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d58d-a6fc-3988-a814-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d58d-a6fc-3988-a814-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Burna Exhausts" hidden="false" id="4620-209a-14e9-c610">
+          <infoLinks>
+            <infoLink name="Ignore Cover" id="5a70-d378-bbd9-6457" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Burna Exhausts" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8376-98eb-47aa-5a2d">
+              <characteristics>
+                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ba3-8edf-0113-65fd-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ba3-8edf-0113-65fd-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
@@ -2488,15 +2511,17 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Blast 3</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Indirect" id="0e5b-7ac1-f18e-6a16" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="One Shot" id="0e5b-7ac1-f18e-6a16" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Blast (X)" id="f65e-5a90-7fe0-90bb" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+        <infoLink name="Indirect" id="b20d-cada-4e6c-555a" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Power Klaw" hidden="false" id="d5aa-4bd1-fb77-325b">
@@ -2508,10 +2533,13 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Breach" id="950a-690c-1363-3b48" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Big Choppa" hidden="false" id="b19b-005f-c906-20b7">
       <profiles>
@@ -2617,23 +2645,23 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="68eb-27a1-8f7a-12b9" includeChildSelections="false"/>
                           </constraints>
                           <entryLinks>
-                            <entryLink import="true" name="Kustom Shoota" hidden="false" id="097c-4249-7cfe-9ebe" type="selectionEntry" targetId="c4e0-218d-3d86-67b8" sortIndex="3">
+                            <entryLink import="true" name="Kustom Shoota" hidden="false" id="097c-4249-7cfe-9ebe" type="selectionEntry" targetId="c4e0-218d-3d86-67b8" sortIndex="1">
                               <modifiers>
                                 <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                               </modifiers>
                             </entryLink>
-                            <entryLink import="true" name="Kustom Mega Blasta" hidden="false" id="69de-be9c-9984-e7b8" type="selectionEntry" targetId="a9e1-8ddc-1a60-4e14" sortIndex="4">
+                            <entryLink import="true" name="Kustom Mega Blasta" hidden="false" id="69de-be9c-9984-e7b8" type="selectionEntry" targetId="a9e1-8ddc-1a60-4e14" sortIndex="2">
                               <modifiers>
                                 <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                               </modifiers>
                             </entryLink>
                           </entryLinks>
                           <selectionEntries>
-                            <selectionEntry type="upgrade" import="true" name="Shoota &amp; Kombi-Skorcha" hidden="false" id="e782-b675-9dc1-cfdb" sortIndex="1">
+                            <selectionEntry type="upgrade" import="true" name="Shoota &amp; Kombi-Skorcha" hidden="false" id="e782-b675-9dc1-cfdb" sortIndex="3">
                               <entryLinks>
                                 <entryLink import="true" name="Shoota" hidden="false" id="09a0-70c0-58fa-78da" type="selectionEntry" targetId="0392-3e6d-4b99-dcd6">
                                   <modifiers>
-                                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                   </modifiers>
                                   <constraints>
                                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d413-615b-1b84-4e67" includeChildSelections="false"/>
@@ -2651,11 +2679,11 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                                 </entryLink>
                               </entryLinks>
                             </selectionEntry>
-                            <selectionEntry type="upgrade" import="true" name="Shoota &amp; Kombi-Rokkit" hidden="false" id="3c4a-a551-1b32-f004" sortIndex="2">
+                            <selectionEntry type="upgrade" import="true" name="Shoota &amp; Kombi-Rokkit" hidden="false" id="3c4a-a551-1b32-f004" sortIndex="4">
                               <entryLinks>
                                 <entryLink import="true" name="Shoota" hidden="false" id="33da-d21e-d230-940b" type="selectionEntry" targetId="0392-3e6d-4b99-dcd6">
                                   <modifiers>
-                                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                   </modifiers>
                                   <constraints>
                                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="104c-3196-10f2-b144" includeChildSelections="false"/>
@@ -2723,7 +2751,7 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                       <entryLinks>
                         <entryLink import="true" name="Shoota" hidden="false" id="ffed-adf1-9337-1483" type="selectionEntry" targetId="0392-3e6d-4b99-dcd6">
                           <modifiers>
-                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                           </modifiers>
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aa84-186a-df90-753e-min" includeChildSelections="false"/>
@@ -2731,9 +2759,6 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
                           </constraints>
                         </entryLink>
                       </entryLinks>
-                      <constraints>
-                        <constraint type="max" value="3" field="selections" scope="unit" shared="true" id="a15f-3a4b-1016-4a1c" includeChildSelections="true"/>
-                      </constraints>
                     </selectionEntry>
                   </selectionEntries>
                   <constraints>
@@ -2763,9 +2788,12 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
         <categoryLink targetId="205c-3072-067b-d808" id="d467-74ca-fe25-8d9a" primary="false" name="Infantry"/>
       </categoryLinks>
       <profiles>
-        <profile name="Green Tide" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="49a9-6395-24e1-0f8d">
+        <profile name="Da Boyz’ Waaaghcry" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="49a9-6395-24e1-0f8d">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for your other units within 16” of this unit, roll an additional D6 for that Advance Roll and discard the lowest result.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your units are within 16” of this unit, they gain the following ability:
+
+
+Green Tide X: For each Move Roll made for this unit, roll X additional D6s, where X is the number of units with Da Boyz’ Waaaghcry within 16” of this unit. For each additional dice added, remove one of the lowest dice from that roll.</characteristic>
           </characteristics>
         </profile>
         <profile name="Get Da Good Bitz" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5f3d-e588-9eae-0bd0">
@@ -2821,9 +2849,8 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
               <profiles>
                 <profile name="Grot" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="accf-2c0f-be7f-bbce">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">6+</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">7+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
                     <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">7+</characteristic>
                   </characteristics>
@@ -3119,7 +3146,7 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
       <profiles>
         <profile name="Wez Hidin’" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8036-16ab-7322-cca3">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For this unit’s Forward Deployment roll, that roll is 4D6 instead of 2D6.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For this unit’s Forward Deployment roll, that roll is 3D6 instead of 2D6.</characteristic>
           </characteristics>
         </profile>
         <profile name="Ge’ Closa" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b824-1eb3-9cb9-d369">
