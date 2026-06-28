@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.2" hidden="false" id="315e-371a-2ee5-5d8d" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.0" hidden="false" id="315e-371a-2ee5-5d8d" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="de86-5aaf-58c4-0c6b" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -46,9 +46,9 @@
             <characteristic name="Description" typeId="becf-f398-aed2-688b">Each time this unit selects a target for a ranged weapon, you may select an enemy unit with Marked an additional 4” away.</characteristic>
           </characteristics>
         </profile>
-        <profile name="4 Drone Distributor" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="ebd1-9305-59c9-c256">
+        <profile name="4 Holographic Decoys" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="ebd1-9305-59c9-c256">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After a unit gains this ability, add 2 SHIELD DRONE models to this unit and it gains Shield Drone.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After an enemy unit finishes an Advance and is within 24” of and is visible to this unit, roll a D6. On a 5+, this unit may Reposition.</characteristic>
           </characteristics>
         </profile>
         <profile name="6 Puretide Engram Chip" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="de81-8cd3-57af-3c6d">
@@ -58,7 +58,7 @@
         </profile>
         <profile name="5 Targeting Telemetry" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="6083-786b-5732-910a">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each ranged attack made by this unit that targets an enemy unit with Marked, reroll a fail Hit Roll for that attack.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each ranged attack made by this unit that targets an enemy unit with Marked, Hit Rolls of 6 cause an additional hit and Wound Rolls of 6 cause an additional wound.</characteristic>
           </characteristics>
         </profile>
         <profile name="3 Counterfire Defence System" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="d78f-5874-cfd2-d6ad">
@@ -80,120 +80,135 @@
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
-      <profiles>
-        <profile name="XV8 Battlesuit Commander" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b358-5587-7bc9-9b2b">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink name="Unstoppable" id="2665-4feb-0b13-05ff" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
         <infoLink name="Fly" id="55bf-50ba-359a-1557" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
-        <infoLink name="Tactical Acumen" id="1484-3cd4-e678-8da3" hidden="false" type="profile" targetId="af1a-cb44-c903-3f73"/>
-        <infoLink name="Jet Pack" id="ee41-6bca-5c56-2e8c" hidden="false" type="profile" targetId="38d0-b778-7525-f239"/>
-        <infoLink name="Kauyon" id="3649-692c-35dd-e58b" hidden="false" type="profile" targetId="ee8f-2ea5-7ee4-36f1"/>
-        <infoLink name="Shield Drone" id="2a82-55b5-2357-992c" hidden="false" type="profile" targetId="e51d-8c9d-76ff-f5ba"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Guns" id="1daa-1a88-ad71-a299" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="Shield Drone" hidden="false" id="b36d-4d8a-1dca-2765" type="selectionEntry" targetId="86a8-27ce-32d8-9be7" sortIndex="2">
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6711-6a3d-667a-c80f-min" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6711-6a3d-667a-c80f-max" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a362-d969-861f-9865-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a362-d969-861f-9865-max" includeChildSelections="false"/>
           </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Burst Cannon" hidden="false" id="de96-151b-da30-180b" type="selectionEntry" targetId="9e4c-7240-51c1-0a9d" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="302f-0cc6-e1ac-cb4a" includeChildSelections="true"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Airburst Frag. Projector" hidden="false" id="cb2e-303c-9b9a-98ac" type="selectionEntry" targetId="77c5-7d54-e3e4-5f34" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="5bd6-eda4-0a2a-ab3a" includeChildSelections="true"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Cyclic Ion Blaster" hidden="false" id="03b5-4ab2-7c70-299d" type="selectionEntry" targetId="3693-3877-55fd-59ab" sortIndex="3">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="faf0-0b3d-33f2-455f" includeChildSelections="true"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Flamer" hidden="false" id="ce7b-f5c8-acb0-0a3b" type="selectionEntry" targetId="4cf9-1758-d00d-29c4" sortIndex="4">
-              <modifiers>
-                <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="28b2-b5ff-0c32-8660" includeChildSelections="true"/>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="d9b2-393d-4402-e515" includeChildSelections="true"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Missile Pod" hidden="false" id="4c2c-1e2d-f2c4-19c2" type="selectionEntry" targetId="30c5-b7b9-d072-bab8" sortIndex="6">
-              <modifiers>
-                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="a205-1810-027d-3201" includeChildSelections="true"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Fusion Blaster" hidden="false" id="eb48-e5da-2c92-57f6" type="selectionEntry" targetId="9a79-03e9-a640-d458" sortIndex="5">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="b118-9241-173f-23e5" includeChildSelections="true"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Plasma Rifle" hidden="false" id="b6d0-1ffe-e334-710c" type="selectionEntry" targetId="e874-d698-d372-227f" sortIndex="7">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="3954-6f75-0472-bb81" includeChildSelections="true"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Battlesuit Varients" id="c964-c231-2fab-e0c0" hidden="false">
+        </entryLink>
+      </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Battlesuit Commander" hidden="false" id="8443-03b7-4658-411c" sortIndex="1">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7256-b6df-e7b9-8f22" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c3d2-b72c-2fdc-d7d0-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c3d2-b72c-2fdc-d7d0-max" includeChildSelections="false"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="XV86 Coldstar" hidden="false" id="6fe9-0c16-695b-672b" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <profiles>
-                <profile name="XV86 Coldstar" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="985f-be8e-9ae9-6a1f">
-                  <characteristics>
-                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This model’s M is improved to 10”.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="10&quot;" field="c06e-b1a2-0f87-fe2f" scope="unit" affects="self.entries.recursive.profiles.Unit"/>
-                <modifier type="set" value="XV86 Coldstar" field="name" scope="unit" affects="self.entries.recursive.profiles.Unit"/>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="XV85 Enforcer" hidden="false" id="cf77-16ba-36b5-dd7b" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="XV85 Enforcer" field="name" scope="unit" affects="self.entries.recursive.profiles.Unit"/>
-              </modifiers>
-              <infoLinks>
-                <infoLink name="Heavy Armour" id="6b04-1320-9338-71c2" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
-              </infoLinks>
-              <profiles>
-                <profile name="XV85 Enforcer" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="de57-773b-81c0-78b3">
-                  <characteristics>
-                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit gains Heavy Armour.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+          <profiles>
+            <profile name="XV8 Battlesuit Commander" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b358-5587-7bc9-9b2b">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">7</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Battlesuit Varients" id="c964-c231-2fab-e0c0" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7256-b6df-e7b9-8f22" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="XV86 Coldstar" hidden="false" id="6fe9-0c16-695b-672b" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                  <profiles>
+                    <profile name="XV86 Coldstar" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="985f-be8e-9ae9-6a1f">
+                      <characteristics>
+                        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">You may reroll Move Rolls made for this unit.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <modifiers>
+                    <modifier type="set" value="XV86 Coldstar" field="name" scope="unit" affects="self.entries.recursive.profiles.Unit"/>
+                  </modifiers>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="XV85 Enforcer" hidden="false" id="cf77-16ba-36b5-dd7b" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="XV85 Enforcer" field="name" scope="unit" affects="self.entries.recursive.profiles.Unit"/>
+                  </modifiers>
+                  <infoLinks>
+                    <infoLink name="Heavy Armour" id="6b04-1320-9338-71c2" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+                  </infoLinks>
+                  <profiles>
+                    <profile name="XV85 Enforcer" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="de57-773b-81c0-78b3">
+                      <characteristics>
+                        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit gains Heavy Armour.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Guns" id="1daa-1a88-ad71-a299" hidden="false">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6711-6a3d-667a-c80f-min" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6711-6a3d-667a-c80f-max" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Burst Cannon" hidden="false" id="de96-151b-da30-180b" type="selectionEntry" targetId="9e4c-7240-51c1-0a9d" sortIndex="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="302f-0cc6-e1ac-cb4a" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Airburst Frag. Projector" hidden="false" id="cb2e-303c-9b9a-98ac" type="selectionEntry" targetId="77c5-7d54-e3e4-5f34" sortIndex="2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="5bd6-eda4-0a2a-ab3a" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Cyclic Ion Blaster" hidden="false" id="03b5-4ab2-7c70-299d" type="selectionEntry" targetId="3693-3877-55fd-59ab" sortIndex="3">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="faf0-0b3d-33f2-455f" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Flamer" hidden="false" id="ce7b-f5c8-acb0-0a3b" type="selectionEntry" targetId="4cf9-1758-d00d-29c4" sortIndex="4">
+                  <modifiers>
+                    <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="28b2-b5ff-0c32-8660" includeChildSelections="true"/>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="d9b2-393d-4402-e515" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Missile Pod" hidden="false" id="4c2c-1e2d-f2c4-19c2" type="selectionEntry" targetId="30c5-b7b9-d072-bab8" sortIndex="6">
+                  <modifiers>
+                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="a205-1810-027d-3201" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Fusion Blaster" hidden="false" id="eb48-e5da-2c92-57f6" type="selectionEntry" targetId="9a79-03e9-a640-d458" sortIndex="5">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="b118-9241-173f-23e5" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Plasma Rifle" hidden="false" id="b6d0-1ffe-e334-710c" type="selectionEntry" targetId="e874-d698-d372-227f" sortIndex="7">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="3954-6f75-0472-bb81" includeChildSelections="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <infoLinks>
+            <infoLink name="Jet Pack" id="ee41-6bca-5c56-2e8c" hidden="false" type="profile" targetId="38d0-b778-7525-f239"/>
+            <infoLink name="Kauyon" id="3649-692c-35dd-e58b" hidden="false" type="profile" targetId="ee8f-2ea5-7ee4-36f1"/>
+            <infoLink name="Tactical Acumen" id="1484-3cd4-e678-8da3" hidden="false" type="profile" targetId="af1a-cb44-c903-3f73"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Cadre Fireblade" hidden="false" id="ee36-53de-d231-2289" sortIndex="2">
       <costs>
@@ -223,6 +238,13 @@
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made by this unit or your STRIKE TEAM or BREACHER TEAM units within 24” and visible to this unit, a Hit Roll of 6 for that attack causes an additional hit. Each attack may only benefit from Devastating Unity once.</characteristic>
           </characteristics>
         </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="f618-9c09-fe0c-e287">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) STRIKE TEAM
+b) BREACHER TEAM</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <entryLinks>
         <entryLink import="true" name="Pulse Rifle" hidden="false" id="3cba-60cb-bd5c-d224" type="selectionEntry" targetId="7b87-411d-c477-40cd">
@@ -249,7 +271,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="XV8 Crisis Battlesuits" hidden="false" id="bd29-f43f-c8eb-3df9" sortIndex="5">
+    <selectionEntry type="unit" import="true" name="XV8 Crisis Battlesuits" hidden="false" id="bd29-f43f-c8eb-3df9" sortIndex="6">
       <categoryLinks>
         <categoryLink targetId="4820-e2b5-9e00-bb68" id="88ff-2c41-dbf0-7c54" primary="true" name="Elites"/>
         <categoryLink targetId="205c-3072-067b-d808" id="e7bd-890a-dcc6-d8e3" primary="false" name="Infantry"/>
@@ -261,11 +283,10 @@
               <profiles>
                 <profile name="XV8 Crisis Battlesuit" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="190a-7824-eacb-a9dc">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -274,7 +295,7 @@
                 <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="d3bd-d96d-779e-6ef5" includeChildSelections="false"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="40"/>
+                <cost name="pts" typeId="points" value="50"/>
               </costs>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Guns" id="f56f-5819-b0d2-975e" hidden="false">
@@ -317,14 +338,14 @@
                         <modifierGroup type="and">
                           <modifiers>
                             <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </modifierGroup>
                       </modifierGroups>
                     </entryLink>
                     <entryLink import="true" name="Flamer" hidden="false" id="9ce8-f3aa-aaac-7220" type="selectionEntry" targetId="4cf9-1758-d00d-29c4" sortIndex="4">
                       <modifiers>
-                        <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
@@ -338,8 +359,8 @@
                       <modifierGroups>
                         <modifierGroup type="and">
                           <modifiers>
-                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </modifierGroup>
                       </modifierGroups>
@@ -352,7 +373,7 @@
                         <modifierGroup type="and">
                           <modifiers>
                             <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </modifierGroup>
                       </modifierGroups>
@@ -365,7 +386,7 @@
                         <modifierGroup type="and">
                           <modifiers>
                             <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </modifierGroup>
                       </modifierGroups>
@@ -386,12 +407,13 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
-        <infoLink name="Fly" id="8547-f88f-4e03-6703" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Unstoppable" id="8547-f88f-4e03-6703" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
         <infoLink name="Kauyon" id="685f-d2ca-fcd5-dbec" hidden="false" type="profile" targetId="ee8f-2ea5-7ee4-36f1"/>
         <infoLink name="Jet Pack" id="48a0-a531-78bf-1fbd" hidden="false" type="profile" targetId="38d0-b778-7525-f239"/>
+        <infoLink name="Fly" id="ad75-b361-421e-fa1d" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="XV25 Stealth Battlesuits" hidden="false" id="a677-72e3-aae6-1337" sortIndex="6">
+    <selectionEntry type="unit" import="true" name="XV25 Stealth Battlesuits" hidden="false" id="a677-72e3-aae6-1337" sortIndex="7">
       <categoryLinks>
         <categoryLink targetId="4820-e2b5-9e00-bb68" id="a28e-c0f4-6043-f28a" primary="true" name="Elites"/>
         <categoryLink targetId="205c-3072-067b-d808" id="ed94-cf3a-a614-67fb" primary="false" name="Infantry"/>
@@ -470,7 +492,7 @@
       <profiles>
         <profile name="Homing Beacon" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="dcb8-be6b-986f-c13f">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Activate an XV8 CRISIS BATTLESUITS unit in reserves, you may Deploy that unit wholly within 6” of this unit outside of engagement range of enemy units. If you do, that unit cannot March this turn.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Activate an XV8 CRISIS BATTLESUITS unit in reserves, you may Deploy that unit wholly within 6+D6” of this unit outside of engagement range of enemy units. If you do, during this turn&apos;s Move step, do not make a Move Roll and this unit cannot Advance or Reposition.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -478,18 +500,14 @@
         <cost name="pts" typeId="points" value="90"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Ethereal" hidden="false" id="a3ac-f866-b828-9115" sortIndex="7">
+    <selectionEntry type="unit" import="true" name="Ethereal" hidden="false" id="a3ac-f866-b828-9115" sortIndex="3">
       <costs>
         <cost name="pts" typeId="points" value="20"/>
       </costs>
       <categoryLinks>
-        <categoryLink targetId="4820-e2b5-9e00-bb68" id="b237-2ed3-fbc9-ce4b" primary="true" name="Elites"/>
         <categoryLink targetId="205c-3072-067b-d808" id="2854-0ba4-a56f-a9f0" primary="false" name="Infantry"/>
-        <categoryLink targetId="1738-1300-9dbb-c5be" id="ef86-c24d-c738-6c3a" primary="false" name="Rare"/>
+        <categoryLink targetId="1dc0-a947-c240-76bb" id="d752-42ce-14f9-bbea" primary="true" name="Countless Leader"/>
       </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="9ea0-7123-2a63-fbd2" includeChildSelections="false"/>
-      </constraints>
       <profiles>
         <profile name="Ethereal" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1774-e85c-0ed7-eebc">
           <characteristics>
@@ -508,6 +526,13 @@
         <profile name="Collapsing Unity" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8f14-ea4a-a09a-b891">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit dies, each of your infantry units suffer 3 Suppression.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="7f93-cfca-1a78-3b0c">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
+a) STRIKE TEAM
+b) BREACHER TEAM</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -534,6 +559,17 @@
       <infoLinks>
         <infoLink name="Fly" id="341f-4da3-af73-0ca0" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
       </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Leader" id="f060-ba72-9b3b-d36f" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a99-9b7a-f262-a02d" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Strike Team" hidden="false" id="a215-0dba-a5f1-86d7" type="selectionEntry" targetId="924d-e232-4847-e31e" sortIndex="1"/>
+            <entryLink import="true" name="Breacher Team" hidden="false" id="ee13-daa9-853f-e909" type="selectionEntry" targetId="7a30-5008-533e-e3fb" sortIndex="2"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Kroot Carnivores" hidden="false" id="e176-259b-1ad7-328a" sortIndex="8">
       <costs>
@@ -628,7 +664,7 @@
       <profiles>
         <profile name="Infrared Scouts" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="823d-73a9-e78a-0fae">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack made by your other units that targets enemy units with Marked within 12” of this unit, reroll a Hit Roll of 1 for that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack made by your other units that targets enemy units within 12” of this unit, reroll a Hit Roll of 1 for that attack.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -728,11 +764,10 @@
               <profiles>
                 <profile name="Pathfinder" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="2443-2c87-a2fb-0608">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -746,7 +781,7 @@
                     <modifierGroup type="and">
                       <modifiers>
                         <modifier type="set" value="Hv" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
-                        <modifier type="set" value="Pulse, Shred, Precision" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
+                        <modifier type="set" value="Pulse, Shred, Isolate" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
                       </modifiers>
                     </modifierGroup>
                   </modifierGroups>
@@ -841,11 +876,10 @@
               <profiles>
                 <profile name="Pathfinder" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="cebc-61ef-e55a-ab2a">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">7&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -889,13 +923,14 @@
                                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                                 <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
                                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, Precision</characteristic>
+                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Velocity, Pierce, Isolate</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
                           <infoLinks>
-                            <infoLink name="Pierce" id="731b-32b3-5414-6f93" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                            <infoLink name="Velocity" id="731b-32b3-5414-6f93" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
                             <infoLink name="Precision" id="bf4c-e262-6771-10f3" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+                            <infoLink name="Pierce" id="1f1e-f6a0-ccf8-f326" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                           </infoLinks>
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="Ion Rifle" hidden="false" id="6bb2-21b8-8082-6e71">
@@ -936,7 +971,7 @@
               <profiles>
                 <profile name="Grav-Inhibition Field" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="29f1-fa74-3428-a10c">
                   <characteristics>
-                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there are one or more GRAV-INHIBITOR DRONE models in this unit, after an enemy unit finishes a March within engagement range of this unit, you may roll a D6. On a 4+, this unit may Fall Back.</characteristic>
+                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there are one or more GRAV-INHIBITOR DRONE models in this unit, after an enemy unit finishes an Advance within engagement range of this unit, you may roll a D6. On a 4+, this unit may Reposition.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1006,6 +1041,13 @@
       <costs>
         <cost name="pts" typeId="points" value="50"/>
       </costs>
+      <profiles>
+        <profile name="Speeder" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="349a-d001-673f-3949">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for this unit, add 1 D6 to that roll.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="XV95 Ghostkeel Battlesuit" hidden="false" id="a9d3-29bd-21ee-d9db" sortIndex="13">
       <categoryLinks>
@@ -1020,7 +1062,7 @@
         </profile>
         <profile name="Overlapped Cloaking Fields" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5fe8-0080-efef-dad1">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is ready and has one or more MV5 STEALTH DRONE models, after an enemy unit finishes a March and is visible to this unit, you may roll a D6. On a 5+, this unit may Fall Back.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is ready and has one or more MV5 STEALTH DRONE models, after an enemy unit finishes an Advance and is visible to and within 24” of this unit, you may roll a D6. On a 5+, this unit may Reposition.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1157,7 +1199,7 @@
     <selectionEntry type="unit" import="true" name="XV88 Broadside Battlesuit" hidden="false" id="0db2-4639-6378-2d21" sortIndex="14">
       <categoryLinks>
         <categoryLink targetId="ccc6-6202-853c-23e4" id="f4b8-cf72-554d-8077" primary="true" name="Support"/>
-        <categoryLink targetId="205c-3072-067b-d808" id="2eb7-d918-0019-b178" primary="false" name="Infantry"/>
+        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="f4b7-4b03-57a1-697d" primary="false" name="Vehicle"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Missile Drone" hidden="false" id="b0b4-c040-2d85-ad88">
@@ -1173,7 +1215,7 @@
               <modifierGroups>
                 <modifierGroup type="and">
                   <modifiers>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                     <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
                   </modifiers>
@@ -1194,11 +1236,10 @@
           <profiles>
             <profile name="XV88 Broadside Battlesuit" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3d47-5e79-d473-c70d">
               <characteristics>
-                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
-                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
                 <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
-                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
               </characteristics>
             </profile>
             <profile name="Blacksun Filter" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="dc20-23d2-acd5-3376">
@@ -1278,12 +1319,8 @@
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
-      <infoLinks>
-        <infoLink name="Unstoppable" id="1bf5-2066-e353-428f" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
-        <infoLink name="Heavy Armour" id="2c1c-8a65-3e17-ab15" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
-      </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="TX7 Hammerhead Gunship" hidden="false" id="ead8-a04f-ace8-53fa" sortIndex="15">
@@ -1294,10 +1331,9 @@
       <profiles>
         <profile name="TX7 Hammerhead Gunship" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b5ca-6bbe-6faf-d640">
           <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
             <characteristic name="T" typeId="a6ad-d820-8495-f5b0">8</characteristic>
             <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">14</characteristic>
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
           </characteristics>
         </profile>
@@ -1315,8 +1351,9 @@
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Railgun" hidden="false" id="4502-07d2-1228-6afe" sortIndex="1">
               <infoLinks>
-                <infoLink name="Killshot" id="4dac-8ac4-0f1e-056b" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
-                <infoLink name="Pierce" id="c7be-558a-20d2-6643" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                <infoLink name="Breach" id="c7be-558a-20d2-6643" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+                <infoLink name="Pierce" id="8467-f814-b552-85b8" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                <infoLink name="Velocity" id="3d34-dead-6705-f0c0" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
               </infoLinks>
               <profiles>
                 <profile name="Railgun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2f72-d3e7-b19b-1088">
@@ -1325,8 +1362,8 @@
                     <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+9</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Killshot, Pierce</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+5</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Velocity, Breach, Pierce</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1407,7 +1444,7 @@
               <modifierGroups>
                 <modifierGroup type="and">
                   <modifiers>
-                    <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </modifierGroup>
@@ -1425,7 +1462,7 @@
               <modifierGroups>
                 <modifierGroup type="and">
                   <modifiers>
-                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </modifierGroup>
@@ -1435,7 +1472,7 @@
               <modifierGroups>
                 <modifierGroup type="and">
                   <modifiers>
-                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </modifierGroup>
@@ -1445,7 +1482,7 @@
               <modifierGroups>
                 <modifierGroup type="and">
                   <modifiers>
-                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </modifierGroup>
@@ -1552,14 +1589,13 @@ Marked: For each ranged attack made by a T’au unit that targets this unit, a
     </profile>
     <profile name="Support Turrets" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5bd5-af4f-e95c-c787">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After rolling for initiative in battle round 1, create a unit of SUPPORT TURRETS within 3” of your deployment zone with X models where X is equal to the number of STRIKE TEAM or BREACHER TEAM units in your Army List.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After rolling for initiative in battle round 1, create a unit of SUPPORT TURRETS within 4” of your deployment zone with X models where X is equal to the number of STRIKE TEAM or BREACHER TEAM units in your Army List.</characteristic>
       </characteristics>
     </profile>
     <profile name="Support Turrets (X)" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5cba-7d53-2abe-ca28">
       <characteristics>
-        <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">0&quot;</characteristic>
-        <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
-        <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+        <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+        <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
         <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
         <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
       </characteristics>
@@ -1578,12 +1614,12 @@ Marked: For each ranged attack made by a T’au unit that targets this unit, a
       <characteristics>
         <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While enemy units are within 24” of this unit, those units gain the following ability:
 
-Mont’ka: For each attack made by a T’au unit that targets this unit from within 24”, reroll a Hit and Wound Roll of 1 for that attack.</characteristic>
+Mont’ka: For each attack made by a T’au unit that targets this unit from within 24”, reroll a Wound Roll of 1 for that attack.</characteristic>
       </characteristics>
     </profile>
     <profile name="Kauyon" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ee8f-2ea5-7ee4-36f1">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attack step, if one or more enemy units that were targeted by an attack made by this unit this turn had Marked, this unit may Fall Back. If it does, that move must end further away from the closest enemy unit.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attack step, if one or more enemy units that were targeted by an attack made by this unit this turn had Marked, this unit may Reposition. If it does, that move must end further away from the closest enemy unit.</characteristic>
       </characteristics>
     </profile>
     <profile name="Cloaking Fields" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f463-4e5e-23a4-da1e">
@@ -1619,12 +1655,13 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
     <selectionEntry type="model" import="true" name="Support Turret" hidden="false" id="ff3d-f565-7eaa-a2d8" sortIndex="-1">
       <infoLinks>
         <infoLink name="Support Turrets" id="33af-e75b-4292-c984" hidden="false" type="profile" targetId="5bd5-af4f-e95c-c787"/>
-        <infoLink name="Support Turrets (X)" id="ed37-594e-4797-9a56" hidden="false" type="profile" targetId="5cba-7d53-2abe-ca28"/>
+        <infoLink name="Support Turret" id="ed37-594e-4797-9a56" hidden="false" type="profile" targetId="5cba-7d53-2abe-ca28"/>
+        <infoLink name="Heavy Armour" id="6684-6401-4213-1674" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
       <profiles>
-        <profile name="Turret Downlink" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4327-b6a1-eeac-b688">
+        <profile name="Turret Emplacement" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4327-b6a1-eeac-b688">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit cannot advance. After this unit&apos;s End step, take another turn.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During this unit&apos;s Move step, do not make a Move Roll and this unit cannot Advance, Reposition or Pile In. After this unit&apos;s End step, if this was not your second turn in a row, take another turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1643,7 +1680,7 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="639a-d730-ef81-4e9b-max" includeChildSelections="false"/>
                   </constraints>
                   <modifiers>
-                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
               </entryLinks>
@@ -1696,10 +1733,13 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 2</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Blast (X)" id="5f97-67a5-d21e-8ffc" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Shield Drone" hidden="false" id="86a8-27ce-32d8-9be7" sortIndex="1">
       <profiles>
@@ -1742,7 +1782,7 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
       <profiles>
         <profile name="Airburst Frag. Projector" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ccb1-a955-e947-d7f6">
           <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
@@ -2015,11 +2055,10 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
               <profiles>
                 <profile name="Fire Warrior" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6495-f27f-1d04-9389">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2116,33 +2155,41 @@ Mont’ka: For each attack made by a T’au unit that targets this unit from w
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One-Shot, Killshot</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Velocity, Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="One Shot" id="e313-c9f5-ec0f-afd3" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Velocity" id="4516-9484-5a2b-046e" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
+        <infoLink name="Pierce" id="fdec-f7f4-32a5-9bda" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="High-Yield Missile Pods" hidden="false" id="912e-164f-873e-c6bf">
       <profiles>
         <profile name="High-Yield Missile Pods" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b14d-4e8e-5402-ee20">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 2</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Blast (X)" id="9139-4fb0-a5af-7db3" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <categoryEntries>
     <categoryEntry name="Drones" id="00fc-c619-b9f6-09cd" hidden="false">
-      <description>‘Drone’ models (Shield Drones, Missile Drones, Gun Drones, Marker Drones, etc), do not count as models while selecting a model to suffer a wound. After the last non-drone model in a unit dies, each drone model in that unit dies.</description>
+      <description>‘Drone’ models (Shield Drones, Missile Drones, Gun Drones, Marker Drones, etc), do not count as models while selecting a model to suffer a wound or while selecting models for Suppressed. After the last non-drone model in a unit dies, each drone model in that unit dies.</description>
     </categoryEntry>
   </categoryEntries>
   <entryLinks>
-    <entryLink import="true" name="Breacher Team" hidden="false" id="d87c-829e-cb99-b1e2" type="selectionEntry" targetId="7a30-5008-533e-e3fb" sortIndex="4"/>
-    <entryLink import="true" name="Strike Team" hidden="false" id="8833-6a84-823b-fdb6" type="selectionEntry" targetId="924d-e232-4847-e31e" sortIndex="3"/>
+    <entryLink import="true" name="Breacher Team" hidden="false" id="d87c-829e-cb99-b1e2" type="selectionEntry" targetId="7a30-5008-533e-e3fb" sortIndex="5"/>
+    <entryLink import="true" name="Strike Team" hidden="false" id="8833-6a84-823b-fdb6" type="selectionEntry" targetId="924d-e232-4847-e31e" sortIndex="4"/>
   </entryLinks>
 </catalogue>
