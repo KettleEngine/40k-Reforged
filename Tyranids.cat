@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.4" hidden="false" id="d93e-ed5b-78c7-6277" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.0" hidden="false" id="d93e-ed5b-78c7-6277" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="147b-5e69-1823-d904" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -905,7 +905,7 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
       <profiles>
         <profile name="Infested Crawl-Ways" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4781-e3a5-9919-09c6">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Activate this unit, you may Deploy it wholly within 6” of a structure terrain piece and at least 9” away from enemy models.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Activate this unit, you may Deploy it wholly within 6” of a structure terrain piece and at least 2D6+6” away from enemy models.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -937,7 +937,7 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
         </profile>
         <profile name="Pheromone Trail" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="20e5-bda9-61b9-b09a">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After Activating one of your units with Adaptive Bioform, you may improve its M by 2”. If you do, until the End step that unit must finish each March or Fall Back closer to this unit.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for your units with Adaptive Bioform, you may add 1 D6 and discard the lowest dice to that Move Roll. If you do, until the End step, that unit must finish Advance moves closer to this unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1837,7 +1837,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
         </profile>
         <profile name="Focused Symbiote" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b78f-d569-7246-6591">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack this unit makes, if this unit did not advance this turn, add 1 to the Hit Roll.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack this unit makes, if this unit has not moved further than 10” from where it started this turn, add 1 to the Hit Roll of that attack.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2382,7 +2382,7 @@ Hive Minded: For each Resolve Test made for this unit, add 1 to that Resolve T
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Hormagaunts" hidden="false" id="19da-3d1d-2bf9-955b" sortIndex="1">
       <costs>
-        <cost name="pts" typeId="points" value="70"/>
+        <cost name="pts" typeId="points" value="80"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="b69b-5b51-faf1-2c40" id="374f-f170-8b71-f429" primary="true" name="Troops"/>
@@ -2439,7 +2439,12 @@ Hive Minded: For each Resolve Test made for this unit, add 1 to that Resolve T
         <infoLink name="Instinctive Swarm" id="af07-3b19-2ccf-44ac" hidden="false" type="profile" targetId="5cf3-83fb-d394-fdd8"/>
       </infoLinks>
       <profiles>
-        <profile name="Reckless Abandon" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4cfe-1dc5-8f81-ff07">
+        <profile name="Bounding Leaps" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4cfe-1dc5-8f81-ff07">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for this unit, add 1 D6 to that roll.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Reckless Abandon" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e6bd-ef15-2df9-d689">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit does not have Hive Minded, for each attack that targets this unit, add 1 to the Hit Roll of that attack.</characteristic>
           </characteristics>
