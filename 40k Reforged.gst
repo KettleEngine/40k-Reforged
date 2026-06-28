@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="43" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="44" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -902,19 +902,21 @@ To Cast a psychic power, select a psychic power from your army rules which matc
       <description>For each Resolve Test made for this unit, reroll a failed result for that Resolve Test.</description>
     </rule>
     <rule name="Transport" id="d78d-24c6-e7a9-e94f" hidden="false">
-      <description>After you deploy a unit with Transport, you may select one infantry (but not vehicle or monster) unit in reserves to be ‘embarked’ within that unit.
+      <description>After you deploy a unit with Transport, you may select one of your infantry units in reserves to be ‘embarked’ within that unit.
 
 
-Embarked units are not on the battlefield (they’re never visible, cannot be within range for any abilities, can’t capture objectives, etc). 
+Embarked units are not on the battlefield (they’re never visible, cannot be within range for any abilities, can’t capture objectives, etc).
 
 
-After an embarked unit’s Move step begins, that unit may Disembark.
+After an embarked unit’s Move step begins, that unit may Disembark. To Disembark, Deploy the embarked unit wholly within 4” of the unit it&apos;s embarked within, in unit coherency. If it cannot meet these conditions, remove models from the unit until it can.
 
 
-To Disembark, place the embarked unit wholly within 3” of the unit it&apos;s embarked within, in unit coherency. If it cannot meet these conditions, remove models from the unit until it can.
+After a unit with Transport with an embarked unit is destroyed, before removing it from the battlefield, the embarked unit must Disembark. Then, make an Evacuate Roll for that unit. To make an Evacuate Roll for a unit, roll a D6 and apply the result on the following table:
 
 
-After a unit with Transport is destroyed, any unit embarked within it is also destroyed.</description>
+1 or 2: Reeling: That unit is no longer ready, and gains Suppressed 6.
+3 or 4: Pelted by Debris: That unit gains Suppressed 6.
+5 or 6: Escaped: No effect.</description>
     </rule>
     <rule name="Heal/Repair (X)" id="02c8-1ec5-cdab-2572" hidden="false">
       <description>To Heal X or Repair X, for each X, if any model in the unit has fewer H than it started with, improve the H of one of those models by 1. If no models have fewer H than they started with and the unit is missing one or more models, instead add 1 missing model to this unit, in coherency, with 1 H. If a model cannot be placed in coherency, do not add it.</description>
@@ -925,14 +927,14 @@ After a unit with Transport is destroyed, any unit embarked within it is also de
     <rule name="Indirect" id="4de2-ca68-9af9-1b10" hidden="false">
       <description>This weapon does not need the target to be visible. However, when the target is not visible, this weapon has a -1 penalty to its Hit Rolls.</description>
     </rule>
-    <rule name="Precision" id="db97-d77e-4392-6f10" hidden="false">
+    <rule name="Isolate" id="db97-d77e-4392-6f10" hidden="false">
       <description>For each Saving Throw of this weapon’s attacks, instead of the controller of the target unit selecting the model to suffer the wound for that Saving Throw, you may choose any non-leader model to suffer that wound.</description>
     </rule>
     <rule name="Strike or Sweep (X)" id="2757-6563-cdb2-3456" hidden="false">
       <description>Each time you make attacks with this weapon, use only one of either weapon with Strike or Sweep.</description>
     </rule>
     <rule name="Barrage" id="9cfc-06e3-74c6-ad83" hidden="false">
-      <description>After selecting the target for this weapon&apos;s attacks, roll 2D6. Then select up to 2 other different enemy units within X” of the selected target, where X is the result of that roll. Also make attacks for this weapon targeting each of the selected units.</description>
+      <description>After selecting the target for this weapon&apos;s attacks, roll 2D6. Then select all other enemy units within X” of the selected target, where X is the result of that roll. Also make attacks for this weapon targeting each of the selected units.</description>
     </rule>
     <rule name="Suppressive (X)" id="aed3-e154-8fa2-5378" hidden="false">
       <description>When a unit suffers Suppression, it must make a number of Resolve Tests equal to the value of that Suppression. For each failed Resolve Test, that unit gains Suppressed.
@@ -981,6 +983,12 @@ Each time this unit gains Suppressed while it already has Suppressed, increase X
     </rule>
     <rule name="Daemonic" id="3b9e-8b58-9bed-fb98" hidden="false">
       <description>For each attack that targets this unit, Wound Rolls of 4 or lower cause that attack to fail. Additionally, for each SW this unit suffers, this unit gains Resilient 4+ for that attack.</description>
+    </rule>
+    <rule name="Breach" id="265b-df47-6a5e-4d1c" hidden="false">
+      <description>For each attack made for this weapon, a successful Hit Roll for that attack causes an additional hit. Additionally, the Wound Roll for all attacks made for this weapon is improved by 1.</description>
+    </rule>
+    <rule name="Velocity" id="5e3c-8b11-830c-6d2a" hidden="false">
+      <description>This weapon can target enemy units within 32” of the model equipped with it. After you make a Move Roll during this unit’s Move step, each unit within X” of this unit cannot be selected as a target for this weapon this turn, where X is that Move Roll result plus 12.</description>
     </rule>
   </sharedRules>
   <publications>

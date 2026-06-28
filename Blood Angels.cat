@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Stances" hidden="false" id="9ef8-9802-e8e8-b5b6">
+    <selectionEntry type="upgrade" import="true" name="Techniques" hidden="false" id="9ef8-9802-e8e8-b5b6">
       <infoLinks>
         <infoLink name="Technique: Dacatarai Flurry" id="8bce-6b01-1b7a-d752" hidden="false" type="profile" targetId="6fe9-4c64-5a0c-36ea"/>
         <infoLink name="Technique: Calistus Footwork" id="de8d-4572-eabb-5122" hidden="false" type="profile" targetId="8a9c-3400-eaba-ca54"/>
@@ -45,7 +45,7 @@
       <profiles>
         <profile name="Arae-Shrike" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="dcaf-3fb9-b3d9-3722">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy unit Activates within 12” of this unit, you may roll a D6. On a 5+, that unit becomes ready and must skip the Move and Attacks steps.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy unit Activates within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready and must skip the Move and Attacks steps.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -114,17 +114,17 @@
         <profile name="Interceptor Lance" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c94e-6a3c-7e8a-921a">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, After this unit finishes a March, this weapon gains Killshot until the End step.</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">5</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, After this unit finishes an Advance, this weapon gains Breach until the End step.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Pierce" id="c092-d66b-c2a9-4c41" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-        <infoLink name="Killshot" id="a9ea-1715-5c7f-0c18" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+        <infoLink name="Breach" id="a9ea-1715-5c7f-0c18" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Salvo Launcher" hidden="false" id="ea7c-99d1-b44d-35b7">
@@ -251,16 +251,17 @@
         <profile name="Castellan Axe (Melee)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ad50-5817-35a1-e360">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">5</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach, Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Pierce" id="7542-377f-4b23-8d03" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+        <infoLink name="Breach" id="7542-377f-4b23-8d03" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+        <infoLink name="Pierce" id="f402-86be-57b7-96cf" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Praesidium Shield" hidden="false" id="8bc2-ea67-4e5e-761c">
@@ -298,7 +299,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb2b-fac7-1b1b-41e6-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.8" hidden="false" id="3fd4-08d0-17f9-61b5" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.0" hidden="false" id="3fd4-08d0-17f9-61b5" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="005a-8f68-8604-d3a9" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -690,8 +691,8 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
           <characteristics>
             <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
             <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">9</characteristic>
+            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
           </characteristics>
         </profile>
@@ -706,21 +707,12 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a62-c421-2d05-55aa" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="39f4-a376-f75d-3844" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-              <modifiers>
-                <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
             <entryLink import="true" name="Multi-Melta" hidden="false" id="661a-ae4b-1738-0ada" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
               <modifiers>
                 <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                 <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
               </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
             </entryLink>
             <entryLink import="true" name="Storm Bolter" hidden="false" id="0778-9562-41a6-63ec" type="selectionEntry" targetId="d215-60bd-f49d-295e">
               <modifiers>
@@ -728,11 +720,29 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
                 <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
               </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
             </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Pintle Hunter-Killer Missile" hidden="false" id="56a7-89f7-29ad-e300" sortIndex="1">
+              <profiles>
+                <profile name="Hunter-Killer Missile" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="13c8-e3d4-5d89-7f67">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Velocity, Pierce</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Pierce" id="4b56-5d04-0c66-358f" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                <infoLink name="One Shot" id="0595-23f4-e980-026a" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+                <infoLink name="Velocity" id="d7b8-ee59-ce6e-5121" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup name="Secondary Weapon" id="9d2d-6883-a2a9-bf5d" hidden="false" defaultSelectionEntryId="a62d-ddf0-8c5f-2e84">
           <constraints>
@@ -771,13 +781,6 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="255d-7317-751f-b708-max" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lascannon" hidden="false" id="cac0-4bbb-26f7-bf37" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="1">
-              <modifiers>
-                <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
             <entryLink import="true" name="Hurricane Bolter" hidden="false" id="b0a3-8d7a-2b3e-7694" type="selectionEntry" targetId="14ea-3595-4572-a02d" sortIndex="2">
               <modifiers>
                 <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
@@ -786,6 +789,25 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
               </modifiers>
             </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Sponson Lascannons" hidden="false" id="283a-905e-5ab5-3c12" sortIndex="1">
+              <profiles>
+                <profile name="Lascannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b427-d386-c8a2-8395">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Breach" id="b227-b28f-481f-85de" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -811,7 +833,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
             <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
             <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
             <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">9</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
           </characteristics>
         </profile>
@@ -883,7 +905,7 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
             <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
             <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
             <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">7</characteristic>
+            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
             <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
           </characteristics>
         </profile>
@@ -1170,7 +1192,7 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         </profile>
         <profile name="Decaptis Lunge" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2ac8-1be7-b3cd-c357">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During a March, this unit may move up to an additional 8” if that move would end within 4” of an enemy leader unit and after this unit selects targets for its attacks, if all of its weapons are targeting a single enemy leader unit, select one of this unit&apos;s weapons. The selected weapon’s A is doubled until the End step.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During an Advance, this unit may move up to an additional 4” if that move would end within 4” of an enemy leader unit and after this unit selects targets for its attacks, if all of its weapons are targeting a single enemy leader unit, select one of this unit&apos;s weapons. The selected weapon’s A is doubled until the End step.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1238,7 +1260,7 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         </profile>
         <profile name="Hurricanus Flourish" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9331-ed4a-d08f-b3b1">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During a Pile In move, this unit may move up to an additional 8” and move through enemy models as if they were not there if that move would end within engagement range of two or more enemy units.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During a Pile In, this unit may move up to an additional 4” and move through enemy models as if they were not there if that move would end within engagement range of two or more enemy units.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1316,12 +1338,12 @@ Critical Opening: For each attack made by an Adeptus Custodes unit that target
     </profile>
     <profile name="Technique: Calistus Footwork" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8a9c-3400-eaba-ca54">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">The type of each ranged weapon in this unit changes to Aslt. For each ranged attack this unit makes, reroll a Hit Roll of 1 and a Wound Roll of 1 for that attack. After this unit’s Attacks step, it may Fall Back up to 4”.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">The type of each ranged weapon in this unit changes to Aslt. For each ranged attack this unit makes, reroll a Hit Roll of 1 and a Wound Roll of 1 for that attack. After this unit’s Attacks step, it may Reposition</characteristic>
       </characteristics>
     </profile>
     <profile name="Technique: Rendax Thrust" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0ffe-80e6-74fc-1c59">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there is exactly one enemy unit within 4” of this unit, for each attack this unit makes which targets that unit, reroll a Hit Roll of 1 and a Wound Roll of 1 for that attack.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there is exactly one enemy unit within engagement range of this unit, for each attack this unit makes which targets that unit, reroll a Hit Roll of 1 and a Wound Roll of 1 for that attack</characteristic>
       </characteristics>
     </profile>
     <profile name="Martial Ka’tah" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e499-7601-0c40-dc24">
