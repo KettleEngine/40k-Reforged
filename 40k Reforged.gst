@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="44" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="45" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -72,7 +72,6 @@
   <profileTypes>
     <profileType name="Unit" id="a706-96eb-fcae-b696" hidden="false" kind="model">
       <characteristicTypes>
-        <characteristicType name="M" id="c06e-b1a2-0f87-fe2f"/>
         <characteristicType name="T" id="a6ad-d820-8495-f5b0"/>
         <characteristicType name="Sv" id="9b7f-0dde-683f-6844"/>
         <characteristicType name="H" id="18e4-1bf9-a9b8-1e50"/>
@@ -997,7 +996,7 @@ Each time this unit gains Suppressed while it already has Suppressed, increase X
   <sharedProfiles>
     <profile name="Teleport Homer" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="77ce-0080-b298-0daa">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Activate this unit in reserves, you may use ‘teleport homer’. If you do, select one of your infantry units and roll D6+2. Then, Deploy this unit wholly within X” of the selected unit where X is the result of that roll and this unit cannot March or Fall Back this turn.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may use ‘teleport homer’. If you do, select one of your infantry units and roll D6+2. Then, Deploy this unit wholly within X” of the selected unit where X is the result of that roll. Then, during this turn&apos;s Move step, do not make a Move Roll and this unit cannot Advance or Reposition.</characteristic>
       </characteristics>
     </profile>
     <profile name="Covering Fire" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2415-711c-9ad6-01b3">
