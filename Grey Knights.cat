@@ -190,9 +190,8 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Terminator" hidden="false" id="036b-4bb6-40da-01c8">
           <profiles>
-            <profile name="Terminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="98a2-470a-1307-8ead">
+            <profile name="Terminator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1c69-f458-ffe6-a75d">
               <characteristics>
-                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
                 <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
@@ -350,9 +349,8 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba25-2d1b-168d-740c-max" includeChildSelections="false"/>
           </constraints>
           <profiles>
-            <profile name="Paladin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b18c-004f-e1e7-dc17">
+            <profile name="Paladin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="830c-553a-74bd-6d12">
               <characteristics>
-                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
                 <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
@@ -628,15 +626,6 @@
         <categoryLink name="Infantry" hidden="false" id="bc28-a2c0-bf53-422a" targetId="205c-3072-067b-d808" primary="false"/>
       </categoryLinks>
       <profiles>
-        <profile name="Grand Master" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="9bd6-09b8-f0a0-77e3">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="95ba-06f2-9f46-35c9">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
@@ -656,64 +645,8 @@ b) GREY KNIGHT PALADIN</characteristic>
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Storm Bolter" hidden="false" id="03d2-0d37-fb2b-e101" type="selectionEntry" targetId="086a-23f4-526e-9772">
-          <modifiers>
-            <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-          </modifiers>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5bf8-6f45-40e2-a6a7-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5bf8-6f45-40e2-a6a7-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
         <entryLink import="true" name="Leader" hidden="false" id="365c-c8d3-591e-25c1" type="selectionEntryGroup" targetId="319c-6cd7-d35e-6ca7"/>
       </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Melee Weapon" id="ae7f-53fc-c49f-7fdf" hidden="false" defaultSelectionEntryId="5ebf-a3c8-4596-8dec">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="73bf-65ee-40ec-57a3-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="73bf-65ee-40ec-57a3-max" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="5ebf-a3c8-4596-8dec" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="ceed-3497-ad69-7a4a" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
-                  <modifiers>
-                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0d8d-380c-eca6-bea9-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d8d-380c-eca6-bea9-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Nemesis Daemon Hammer" hidden="false" id="a92c-3731-1b56-64c5" sortIndex="2">
-              <entryLinks>
-                <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="ea18-d7ac-9860-c4af" type="selectionEntry" targetId="d941-5217-d4b0-258c">
-                  <modifiers>
-                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c50f-b7ef-a08e-8d8e-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c50f-b7ef-a08e-8d8e-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Force Falchions" hidden="false" id="ce70-e8e8-d5b8-02ad" sortIndex="3">
-              <entryLinks>
-                <entryLink import="true" name="Force Falchions" hidden="false" id="9cc6-8a8f-b15e-923c" type="selectionEntry" targetId="1dad-85f1-40a8-9b49">
-                  <modifiers>
-                    <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <infoLinks>
         <infoLink name="Heavy Armour" id="ee06-9a54-ce95-b3b9" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
         <infoLink name="Psyker (X)" id="89c0-0923-ca99-f7ff" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
@@ -726,6 +659,82 @@ b) GREY KNIGHT PALADIN</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Grand Master" hidden="false" id="3130-a350-570c-5bc2">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Melee Weapon" id="ae7f-53fc-c49f-7fdf" hidden="false" defaultSelectionEntryId="5ebf-a3c8-4596-8dec">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="73bf-65ee-40ec-57a3-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="73bf-65ee-40ec-57a3-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="5ebf-a3c8-4596-8dec" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="ceed-3497-ad69-7a4a" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
+                      <modifiers>
+                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0d8d-380c-eca6-bea9-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d8d-380c-eca6-bea9-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Nemesis Daemon Hammer" hidden="false" id="a92c-3731-1b56-64c5" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="ea18-d7ac-9860-c4af" type="selectionEntry" targetId="d941-5217-d4b0-258c">
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c50f-b7ef-a08e-8d8e-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c50f-b7ef-a08e-8d8e-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Force Falchions" hidden="false" id="ce70-e8e8-d5b8-02ad" sortIndex="3">
+                  <entryLinks>
+                    <entryLink import="true" name="Force Falchions" hidden="false" id="9cc6-8a8f-b15e-923c" type="selectionEntry" targetId="1dad-85f1-40a8-9b49">
+                      <modifiers>
+                        <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Storm Bolter" hidden="false" id="03d2-0d37-fb2b-e101" type="selectionEntry" targetId="086a-23f4-526e-9772">
+              <modifiers>
+                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5bf8-6f45-40e2-a6a7-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5bf8-6f45-40e2-a6a7-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7036-489f-b65c-aafa-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7036-489f-b65c-aafa-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Grand Master" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b1f0-06cd-492b-2d0e">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Brother Captain" hidden="false" id="d010-0875-20b9-00ff" sortIndex="2">
       <categoryLinks>
@@ -735,74 +744,10 @@ b) GREY KNIGHT PALADIN</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Melee Weapon" id="c49c-aceb-373b-164f" hidden="false" defaultSelectionEntryId="817b-5d20-d661-11f4">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d6a0-4b49-d633-8747" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="620d-4089-5dab-8ed4" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="817b-5d20-d661-11f4" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="5ea8-c594-1b93-4ad0" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
-                  <modifiers>
-                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f081-0540-4a80-2b33-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f081-0540-4a80-2b33-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Nemesis Daemon Hammer" hidden="false" id="079a-8afc-5b64-9127" sortIndex="2">
-              <entryLinks>
-                <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="eb9f-c70d-3cb7-d540" type="selectionEntry" targetId="d941-5217-d4b0-258c">
-                  <modifiers>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc02-7473-8e44-4d7c-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc02-7473-8e44-4d7c-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Force Falchions" hidden="false" id="c718-e66a-29e6-c982" sortIndex="3">
-              <entryLinks>
-                <entryLink import="true" name="Force Falchions" hidden="false" id="95a1-d460-4de0-47c6" type="selectionEntry" targetId="1dad-85f1-40a8-9b49">
-                  <modifiers>
-                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Storm Bolter" hidden="false" id="3e31-7af5-1e48-3fe8" type="selectionEntry" targetId="086a-23f4-526e-9772">
-          <modifiers>
-            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-          </modifiers>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2a2b-0aaf-e013-7a62-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a2b-0aaf-e013-7a62-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
         <entryLink import="true" name="Leader" hidden="false" id="7a63-7d1a-b7ae-6da2" type="selectionEntryGroup" targetId="319c-6cd7-d35e-6ca7"/>
       </entryLinks>
       <profiles>
-        <profile name="Brother Captain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="c48a-56af-a954-8e3a">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="627c-8024-24c4-b3fe">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
@@ -829,6 +774,81 @@ b) GREY KNIGHT PALADIN</characteristic>
         </infoLink>
         <infoLink name="Cleansing Psalm" id="781d-fb1e-e1c7-a420" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
       </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Brother Captain" hidden="false" id="f7c1-c0c3-125a-71a0">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8187-3148-d4fe-9bd5-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8187-3148-d4fe-9bd5-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Storm Bolter" hidden="false" id="3e31-7af5-1e48-3fe8" type="selectionEntry" targetId="086a-23f4-526e-9772">
+              <modifiers>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2a2b-0aaf-e013-7a62-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a2b-0aaf-e013-7a62-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Melee Weapon" id="c49c-aceb-373b-164f" hidden="false" defaultSelectionEntryId="817b-5d20-d661-11f4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d6a0-4b49-d633-8747" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="620d-4089-5dab-8ed4" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="817b-5d20-d661-11f4" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="5ea8-c594-1b93-4ad0" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f081-0540-4a80-2b33-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f081-0540-4a80-2b33-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Nemesis Daemon Hammer" hidden="false" id="079a-8afc-5b64-9127" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="eb9f-c70d-3cb7-d540" type="selectionEntry" targetId="d941-5217-d4b0-258c">
+                      <modifiers>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc02-7473-8e44-4d7c-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc02-7473-8e44-4d7c-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Force Falchions" hidden="false" id="c718-e66a-29e6-c982" sortIndex="3">
+                  <entryLinks>
+                    <entryLink import="true" name="Force Falchions" hidden="false" id="95a1-d460-4de0-47c6" type="selectionEntry" targetId="1dad-85f1-40a8-9b49">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="Brother Captain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="15ef-da0d-e921-08d9">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Librarian" hidden="false" id="d102-3dad-4d77-7d5f" sortIndex="3">
       <categoryLinks>
@@ -838,65 +858,10 @@ b) GREY KNIGHT PALADIN</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Melee Weapon" id="205f-f3d1-4799-64db" hidden="false" defaultSelectionEntryId="817b-5d20-d661-11f4">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="adcc-2455-84bb-dacb" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f248-3235-3681-6ccc" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="0962-3551-6968-7faf" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="4538-d3a7-5ade-9d02" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
-                  <modifiers>
-                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="63ee-cd8b-a40a-8521-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63ee-cd8b-a40a-8521-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Nemesis Daemon Hammer" hidden="false" id="0536-43ff-0e3d-e8d5" sortIndex="2">
-              <entryLinks>
-                <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="b6e0-685c-79a7-c559" type="selectionEntry" targetId="d941-5217-d4b0-258c">
-                  <modifiers>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7dbd-96aa-966c-51ed-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7dbd-96aa-966c-51ed-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Storm Bolter" hidden="false" id="a37d-b864-4b58-1be0" type="selectionEntry" targetId="086a-23f4-526e-9772">
-          <modifiers>
-            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-          </modifiers>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="de49-e7bb-761d-b996-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de49-e7bb-761d-b996-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
         <entryLink import="true" name="Leader" hidden="false" id="4a84-74ab-e471-3d5c" type="selectionEntryGroup" targetId="319c-6cd7-d35e-6ca7"/>
       </entryLinks>
       <profiles>
-        <profile name="Librarian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="e9b2-cbcf-9dcb-dcce">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="91f2-05aa-c6e4-87ef">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
@@ -918,6 +883,72 @@ b) GREY KNIGHT PALADIN</characteristic>
         </infoLink>
         <infoLink name="Cleansing Psalm" id="d91d-f05e-17e8-3496" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
       </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Librarian" hidden="false" id="6495-06c5-5dd6-600c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b598-5dc9-a699-9fde-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b598-5dc9-a699-9fde-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Storm Bolter" hidden="false" id="a37d-b864-4b58-1be0" type="selectionEntry" targetId="086a-23f4-526e-9772">
+              <modifiers>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="de49-e7bb-761d-b996-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de49-e7bb-761d-b996-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Melee Weapon" id="205f-f3d1-4799-64db" hidden="false" defaultSelectionEntryId="817b-5d20-d661-11f4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="adcc-2455-84bb-dacb" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f248-3235-3681-6ccc" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Nemesis Force Weapon" hidden="false" id="0962-3551-6968-7faf" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="4538-d3a7-5ade-9d02" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="63ee-cd8b-a40a-8521-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63ee-cd8b-a40a-8521-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Nemesis Daemon Hammer" hidden="false" id="0536-43ff-0e3d-e8d5" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="b6e0-685c-79a7-c559" type="selectionEntry" targetId="d941-5217-d4b0-258c">
+                      <modifiers>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7dbd-96aa-966c-51ed-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7dbd-96aa-966c-51ed-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="Librarian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1a0f-1abc-f8ad-46ea">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chaplin" hidden="false" id="bfc1-15ec-0577-68b3" sortIndex="4">
       <categoryLinks>
@@ -929,28 +960,9 @@ b) GREY KNIGHT PALADIN</characteristic>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Storm Bolter" hidden="false" id="3f6b-5dae-8676-3012" type="selectionEntry" targetId="086a-23f4-526e-9772">
-          <modifiers>
-            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-          </modifiers>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0fcf-ba1f-1749-ae6c-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0fcf-ba1f-1749-ae6c-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
         <entryLink import="true" name="Leader" hidden="false" id="706d-b5bb-28a3-b6af" type="selectionEntryGroup" targetId="319c-6cd7-d35e-6ca7"/>
       </entryLinks>
       <profiles>
-        <profile name="Chaplin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="414f-303e-56ac-71eb">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Litany of Hate" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d8e5-4e14-9279-6b39">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made for a friendly unit within 12&quot; of this unit which targets an enemy unit within 12&quot; of this unit, if that attack&apos;s S is equal to or greater than the target&apos;s T, add 1 to the Wound Roll for that attack.</characteristic>
@@ -973,23 +985,53 @@ b) GREY KNIGHT PALADIN</characteristic>
         <infoLink name="Cleansing Psalm" id="7a3f-0025-6195-16da" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Crozius Arcanum" hidden="false" id="61af-bf1c-c109-699f">
+        <selectionEntry type="model" import="true" name="Chaplin" hidden="false" id="f880-6fa1-e772-7318">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="19d6-1db9-b978-6834-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="19d6-1db9-b978-6834-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a117-9b10-4b76-da74-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a117-9b10-4b76-da74-max" includeChildSelections="false"/>
           </constraints>
-          <infoLinks>
-            <infoLink name="Nemesis" id="5184-3a04-d25e-a201" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
-          </infoLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Crozius Arcanum" hidden="false" id="61af-bf1c-c109-699f">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="19d6-1db9-b978-6834-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="19d6-1db9-b978-6834-max" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Nemesis" id="5184-3a04-d25e-a201" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Crozius Arcanum" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7a47-6f04-d593-f475">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Storm Bolter" hidden="false" id="3f6b-5dae-8676-3012" type="selectionEntry" targetId="086a-23f4-526e-9772">
+              <modifiers>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0fcf-ba1f-1749-ae6c-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0fcf-ba1f-1749-ae6c-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
           <profiles>
-            <profile name="Crozius Arcanum" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7a47-6f04-d593-f475">
+            <profile name="Chaplin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6e0d-6d34-47ef-4a03">
               <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1005,9 +1047,8 @@ b) GREY KNIGHT PALADIN</characteristic>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Strike Marine" hidden="false" id="2d0d-c2b0-27a4-b991">
               <profiles>
-                <profile name="Strike Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="60fe-b6b6-78dd-4c77">
+                <profile name="Strike Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0578-ceef-21a6-6ea5">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
@@ -1146,9 +1187,8 @@ b) GREY KNIGHT PALADIN</characteristic>
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Purifier" hidden="false" id="a44e-66fa-0afe-6919">
               <profiles>
-                <profile name="Purifier" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="4f43-3dd9-0150-a56b">
+                <profile name="Purifier" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="93c9-dea7-83fd-ab6c">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
@@ -1303,9 +1343,8 @@ b) GREY KNIGHT PALADIN</characteristic>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
               <profiles>
-                <profile name="Interceptor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="264c-6fe2-0f1b-3e57">
+                <profile name="Interceptor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="57c7-85b3-f2e9-9efb">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
@@ -1444,9 +1483,8 @@ b) GREY KNIGHT PALADIN</characteristic>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
               <profiles>
-                <profile name="Purgation Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="2676-b58a-d4cb-3814">
+                <profile name="Purgation Marine" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="ce49-5c36-7653-8f74">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
@@ -1571,9 +1609,8 @@ b) GREY KNIGHT PALADIN</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc9d-5336-396f-0b16-max" includeChildSelections="false"/>
           </constraints>
           <profiles>
-            <profile name="Terminator Apothecary" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5a72-7378-b65d-bc2c">
+            <profile name="Terminator Apothecary" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b38e-cf80-3179-4e23">
               <characteristics>
-                <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
                 <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
@@ -1624,17 +1661,6 @@ b) GREY KNIGHT PALADIN</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="240"/>
       </costs>
-      <profiles>
-        <profile name="Nemisis Dreadknight" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1523-5816-2868-9932">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">9</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink name="Walker" id="5429-96ce-7138-abb2" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
         <infoLink name="Psyker (X)" id="819f-d775-fdc4-3f01" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
@@ -1644,124 +1670,142 @@ b) GREY KNIGHT PALADIN</characteristic>
         </infoLink>
         <infoLink name="Titan" id="83a9-1134-93bb-f94e" hidden="false" type="rule" targetId="8f09-c87f-c86c-8cfc"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Melee Weapon:" id="cd52-abe5-293a-240c" hidden="false" defaultSelectionEntryId="076c-aa02-7760-abce">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Great Force Sword" hidden="false" id="076c-aa02-7760-abce" sortIndex="1">
-              <infoLinks>
-                <infoLink name="Pierce" id="9be9-91b1-0ca9-e0b8" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-                <infoLink name="Nemesis" id="b74a-49cb-05e9-6a94" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
-              </infoLinks>
-              <profiles>
-                <profile name="Great Force Sword" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ca30-9ca9-0b54-07ac">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis, Pierce</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Nemesis Greathammer" hidden="false" id="af87-50c6-0aa8-c062" sortIndex="2">
-              <infoLinks>
-                <infoLink name="Nemesis" id="c89f-fe7e-2601-0084" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
-              </infoLinks>
-              <profiles>
-                <profile name="Nemesis Greathammer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="605d-8315-53d3-55fa">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f0e3-c81c-13c4-d357-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0e3-c81c-13c4-d357-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Ranged Weapon:" id="cccb-4c8d-d8a1-3cfc" hidden="false" defaultSelectionEntryId="745b-893f-5985-11ee">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Heavy Psycannon" hidden="false" id="745b-893f-5985-11ee" sortIndex="1">
-              <profiles>
-                <profile name="Heavy Psycannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="56ce-97c3-a80d-22c5">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Nemesis" id="98ff-7c40-0ccf-b90e" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
-              </infoLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="777a-3f23-66ad-f2f3" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Gatling Psilencer" hidden="false" id="6e22-d421-ed3a-692f" sortIndex="2">
-              <profiles>
-                <profile name="Gatling Psilencer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="25c3-b0da-cc7f-5fa7">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Nemesis" id="f193-42aa-6e52-119e" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
-              </infoLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="7e9e-e5b0-1c98-09fc" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Heavy Incinerator" hidden="false" id="d5b5-6873-89b5-eaab" sortIndex="3">
-              <profiles>
-                <profile name="Heavy Incinerator" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="22c2-9d3c-1c93-1908">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover, Nemesis</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Nemesis" id="d8bf-ae85-aa94-4e03" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
-                <infoLink name="Ignore Cover" id="699e-29da-d194-e548" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
-              </infoLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="ab3f-3bea-968a-5175" includeChildSelections="true"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="0f8f-a6f5-705e-4c6a-min" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0f8f-a6f5-705e-4c6a-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Support" hidden="false" id="6159-c676-5860-0d21" targetId="ccc6-6202-853c-23e4" primary="true"/>
         <categoryLink name="Vehicle" hidden="false" id="acac-4b3d-befb-6083" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Nemisis Dreadknight" hidden="false" id="aa90-0663-77a5-47b8">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Melee Weapon:" id="cd52-abe5-293a-240c" hidden="false" defaultSelectionEntryId="076c-aa02-7760-abce">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Great Force Sword" hidden="false" id="076c-aa02-7760-abce" sortIndex="1">
+                  <infoLinks>
+                    <infoLink name="Pierce" id="9be9-91b1-0ca9-e0b8" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                    <infoLink name="Nemesis" id="b74a-49cb-05e9-6a94" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
+                  </infoLinks>
+                  <profiles>
+                    <profile name="Great Force Sword" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ca30-9ca9-0b54-07ac">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis, Pierce</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Nemesis Greathammer" hidden="false" id="af87-50c6-0aa8-c062" sortIndex="2">
+                  <infoLinks>
+                    <infoLink name="Nemesis" id="c89f-fe7e-2601-0084" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
+                  </infoLinks>
+                  <profiles>
+                    <profile name="Nemesis Greathammer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="605d-8315-53d3-55fa">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f0e3-c81c-13c4-d357-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0e3-c81c-13c4-d357-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Ranged Weapon:" id="cccb-4c8d-d8a1-3cfc" hidden="false" defaultSelectionEntryId="745b-893f-5985-11ee">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Heavy Psycannon" hidden="false" id="745b-893f-5985-11ee" sortIndex="1">
+                  <profiles>
+                    <profile name="Heavy Psycannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="56ce-97c3-a80d-22c5">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Nemesis" id="98ff-7c40-0ccf-b90e" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
+                  </infoLinks>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="777a-3f23-66ad-f2f3" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Gatling Psilencer" hidden="false" id="6e22-d421-ed3a-692f" sortIndex="2">
+                  <profiles>
+                    <profile name="Gatling Psilencer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="25c3-b0da-cc7f-5fa7">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Nemesis" id="f193-42aa-6e52-119e" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
+                  </infoLinks>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="7e9e-e5b0-1c98-09fc" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Heavy Incinerator" hidden="false" id="d5b5-6873-89b5-eaab" sortIndex="3">
+                  <profiles>
+                    <profile name="Heavy Incinerator" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="22c2-9d3c-1c93-1908">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover, Nemesis</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Nemesis" id="d8bf-ae85-aa94-4e03" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
+                    <infoLink name="Ignore Cover" id="699e-29da-d194-e548" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+                  </infoLinks>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="ab3f-3bea-968a-5175" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="0f8f-a6f5-705e-4c6a-min" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0f8f-a6f5-705e-4c6a-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="Nemisis Dreadknight" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="e9ed-566e-c59e-45d5">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">9</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7da7-854a-0557-2ce8-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7da7-854a-0557-2ce8-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
