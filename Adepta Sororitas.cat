@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="17" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="23d8-3b8d-77df-8eb4" sortIndex="3">
+    <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="23d8-3b8d-77df-8eb4" sortIndex="-3">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="6a8d-2552-ebb8-2d4c" includeChildSelections="false"/>
         <constraint type="min" value="1" field="selections" scope="force" shared="true" id="a553-4c15-d9ae-b42d" includeChildSelections="false"/>
@@ -16,7 +16,7 @@
         <infoLink name="Resilient (X)" id="6e28-0f5f-dc07-5560" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="3b5a-2733-35ec-e93c" sortIndex="2">
+    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="3b5a-2733-35ec-e93c" sortIndex="-2">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="fcc7-513d-14f4-8b5a" includeChildSelections="false"/>
         <constraint type="min" value="1" field="selections" scope="force" shared="true" id="aece-9e83-4365-75c0" includeChildSelections="false"/>
@@ -100,15 +100,6 @@
         <cost name="pts" typeId="points" value="40"/>
       </costs>
       <profiles>
-        <profile name="Canoness" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="a6c2-daae-df06-4f02">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Defender of the Faith" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="a75a-e497-9915-2fde">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your infantry units are within X” of this unit where X is equal to Choir of the Faithful X”, they gain the following ability:
@@ -132,139 +123,157 @@ a) BATTLE SISTERS</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="fd5e-fdc4-2389-7a0a" includeChildSelections="false"/>
       </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Pistol" id="1e89-7bf3-c9ea-49ae" hidden="false" defaultSelectionEntryId="96f0-e7bb-5a0e-ea8a">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f2b8-0894-fa94-1b25-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f2b8-0894-fa94-1b25-max" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="96f0-e7bb-5a0e-ea8a" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Bolt Pistol" hidden="false" id="2dd2-3852-3b1b-67ec" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
-                  <modifiers>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
-                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <infoLinks>
-                    <infoLink name="Holy Trinity" id="f7ea-d17a-5dcc-11d3" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
-                  </infoLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7d1e-7a96-4ee1-8d12-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7d1e-7a96-4ee1-8d12-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="8a32-35f2-0a99-cd07" sortIndex="2">
-              <entryLinks>
-                <entryLink import="true" name="Plasma Pistol" hidden="false" id="b90c-86d5-1665-ec2f" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
-                  <modifiers>
-                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f235-273c-5af4-2325-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f235-273c-5af4-2325-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Inferno Pistol" hidden="false" id="75b8-1306-4002-2735" sortIndex="3">
-              <entryLinks>
-                <entryLink import="true" name="Inferno Pistol" hidden="false" id="6bf0-dd80-fafb-8de4" type="selectionEntry" targetId="2531-7322-ac07-4d49">
-                  <modifiers>
-                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aa14-c73d-968b-88f9-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa14-c73d-968b-88f9-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Condemnor Boltgun" hidden="false" id="a835-5501-4a1e-d8a2" sortIndex="4">
-              <entryLinks>
-                <entryLink import="true" name="Condemnor Boltgun" hidden="false" id="6385-f4e1-e214-49c9" type="selectionEntry" targetId="e511-a19f-8557-dda6">
-                  <modifiers>
-                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f0fa-855a-2df5-0b02-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0fa-855a-2df5-0b02-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Sword" id="ffef-c1de-3178-786d" hidden="false" defaultSelectionEntryId="e866-3b44-cd55-5029">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da2a-101a-e7a6-3a8d-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da2a-101a-e7a6-3a8d-max" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Chainsword" hidden="false" id="e866-3b44-cd55-5029" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Chainsword" hidden="false" id="dffb-4f34-22cd-c8a1" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
-                  <modifiers>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b2c-fbc6-a7da-f892-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b2c-fbc6-a7da-f892-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Blessed Blade" hidden="false" id="7dac-b328-5f47-f76c" sortIndex="2">
-              <entryLinks>
-                <entryLink import="true" name="Blessed Blade" hidden="false" id="fe9b-fda6-b054-2412" type="selectionEntry" targetId="baf1-a819-2d48-a198">
-                  <modifiers>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2426-a686-aede-dbb2-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2426-a686-aede-dbb2-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Brazier of Holy Fire" hidden="false" id="f90f-e46d-c546-c49b">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
+        <selectionEntry type="model" import="true" name="Canoness" hidden="false" id="34e3-f551-f097-d2c9">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5fb2-5e14-c0fe-2695-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5fb2-5e14-c0fe-2695-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Brazier of Holy Fire" hidden="false" id="f90f-e46d-c546-c49b">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <profiles>
+                <profile name="Brazier of Holy Fire" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="36f2-8a20-cf03-a3b1">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover, Holy Trinity</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f896-6d46-bc57-cb48" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Ignore Cover" id="8149-7ba0-16b7-31ee" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+                <infoLink name="Holy Trinity" id="9abc-21aa-7b0f-7f8b" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Pistol" id="1e89-7bf3-c9ea-49ae" hidden="false" defaultSelectionEntryId="96f0-e7bb-5a0e-ea8a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f2b8-0894-fa94-1b25-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f2b8-0894-fa94-1b25-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="96f0-e7bb-5a0e-ea8a" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Bolt Pistol" hidden="false" id="2dd2-3852-3b1b-67ec" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="Holy Trinity" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
+                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <infoLinks>
+                        <infoLink name="Holy Trinity" id="f7ea-d17a-5dcc-11d3" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7d1e-7a96-4ee1-8d12-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7d1e-7a96-4ee1-8d12-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="8a32-35f2-0a99-cd07" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Plasma Pistol" hidden="false" id="b90c-86d5-1665-ec2f" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f235-273c-5af4-2325-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f235-273c-5af4-2325-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Inferno Pistol" hidden="false" id="75b8-1306-4002-2735" sortIndex="3">
+                  <entryLinks>
+                    <entryLink import="true" name="Inferno Pistol" hidden="false" id="6bf0-dd80-fafb-8de4" type="selectionEntry" targetId="2531-7322-ac07-4d49">
+                      <modifiers>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aa14-c73d-968b-88f9-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa14-c73d-968b-88f9-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Condemnor Boltgun" hidden="false" id="a835-5501-4a1e-d8a2" sortIndex="4">
+                  <entryLinks>
+                    <entryLink import="true" name="Condemnor Boltgun" hidden="false" id="6385-f4e1-e214-49c9" type="selectionEntry" targetId="e511-a19f-8557-dda6">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f0fa-855a-2df5-0b02-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0fa-855a-2df5-0b02-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Sword" id="ffef-c1de-3178-786d" hidden="false" defaultSelectionEntryId="e866-3b44-cd55-5029">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da2a-101a-e7a6-3a8d-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da2a-101a-e7a6-3a8d-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Chainsword" hidden="false" id="e866-3b44-cd55-5029" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Chainsword" hidden="false" id="dffb-4f34-22cd-c8a1" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b2c-fbc6-a7da-f892-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b2c-fbc6-a7da-f892-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Blessed Blade" hidden="false" id="7dac-b328-5f47-f76c" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Blessed Blade" hidden="false" id="fe9b-fda6-b054-2412" type="selectionEntry" targetId="baf1-a819-2d48-a198">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2426-a686-aede-dbb2-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2426-a686-aede-dbb2-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <profiles>
-            <profile name="Brazier of Holy Fire" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="36f2-8a20-cf03-a3b1">
+            <profile name="Canoness" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5d2c-80ba-e572-89e2">
               <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover, Holy Trinity</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3+</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f896-6d46-bc57-cb48" includeChildSelections="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Ignore Cover" id="8149-7ba0-16b7-31ee" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
-            <infoLink name="Holy Trinity" id="9abc-21aa-7b0f-7f8b" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
-          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -3900,7 +3909,7 @@ Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for 
         <entryLink import="true" name="Munitorum Cherub" hidden="false" id="b620-4ce1-50c4-bc8c" type="selectionEntry" targetId="2772-031f-6d96-99c5"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.4" hidden="false" id="1288-3404-e1e5-90f1" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.4" hidden="false" id="1288-3404-e1e5-90f1" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="2a32-f478-bc26-83a2" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>

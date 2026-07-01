@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3f76-a017-a7ec-c4cc" name="Astra Militarum - Mordian" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="6" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3f76-a017-a7ec-c4cc" name="Astra Militarum - Mordian" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="7" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Astra Militarum" id="1d42-b7a2-729f-8ffc" targetId="f178-f218-fb11-d21a" importRootEntries="true"/>
   </catalogueLinks>
@@ -10,9 +10,8 @@
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Iron Guardsman" hidden="false" id="7603-5b14-7a43-b833">
               <profiles>
-                <profile name="Iron Guardsman" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0be2-068e-0816-c8b9">
+                <profile name="Iron Guardsman" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="13c9-a3cc-ce29-ec0e">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
@@ -203,9 +202,8 @@
                 <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="38fb-a350-e47d-be91" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Heavy Weapons Team" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0e94-0162-2d28-e87f">
+                <profile name="Heavy Weapons Team" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="312b-f3f6-4d1b-52b8">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
@@ -297,15 +295,6 @@
         <categoryLink targetId="2886-2afd-f65f-9d8e" id="553f-4fa6-2d62-fa1c" primary="true" name="Leaders"/>
       </categoryLinks>
       <profiles>
-        <profile name="Mordian Platoon Commander" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6ed6-35c5-7c1a-8d4a">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Mordian Regimental Order" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="dec8-a3c4-a5ad-e949">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit and your other Astra Militarum infantry within 24” of this unit, gain the following ability:
@@ -327,60 +316,78 @@ While three or more units are forming the line, for each attack that targets tho
           </modifiers>
         </infoLink>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Melee" id="08a6-4591-925b-7328" hidden="false" defaultSelectionEntryId="f980-887f-4379-5486">
-          <entryLinks>
-            <entryLink import="true" name="Chainsword" hidden="false" id="f980-887f-4379-5486" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Power Sword" hidden="false" id="e8c1-d5b7-7e60-da7b" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="2">
-              <modifiers>
-                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Power Fist" hidden="false" id="7e69-4d3f-54f7-9056" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="3">
-              <modifiers>
-                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Mordian Platoon Commander" hidden="false" id="46b0-8393-763f-a935">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="082c-acd9-f057-3414" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d958-41c8-a12b-e67b" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="62d0-e301-09ae-90d8-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62d0-e301-09ae-90d8-max" includeChildSelections="false"/>
           </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Gun" id="728d-54f0-1e12-5bee" hidden="false" defaultSelectionEntryId="aba9-77c2-6964-f511">
-          <entryLinks>
-            <entryLink import="true" name="Bolt Pistol" hidden="false" id="8ed4-8eb8-659c-f702" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79" sortIndex="2">
-              <modifiers>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Plasma Pistol" hidden="false" id="2daf-4f8c-2a3c-9670" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="3">
-              <modifiers>
-                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Laspistol" hidden="false" id="aba9-77c2-6964-f511" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="90f1-907d-67ae-2772" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b17a-36ae-d2a1-25fc" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Gun" id="728d-54f0-1e12-5bee" hidden="false" defaultSelectionEntryId="aba9-77c2-6964-f511">
+              <entryLinks>
+                <entryLink import="true" name="Bolt Pistol" hidden="false" id="8ed4-8eb8-659c-f702" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79" sortIndex="2">
+                  <modifiers>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Plasma Pistol" hidden="false" id="2daf-4f8c-2a3c-9670" type="selectionEntry" targetId="6894-2cf4-78df-13e8" sortIndex="3">
+                  <modifiers>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Laspistol" hidden="false" id="aba9-77c2-6964-f511" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea" sortIndex="1">
+                  <modifiers>
+                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="90f1-907d-67ae-2772" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b17a-36ae-d2a1-25fc" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Melee" id="08a6-4591-925b-7328" hidden="false" defaultSelectionEntryId="f980-887f-4379-5486">
+              <entryLinks>
+                <entryLink import="true" name="Chainsword" hidden="false" id="f980-887f-4379-5486" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="1">
+                  <modifiers>
+                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Power Sword" hidden="false" id="e8c1-d5b7-7e60-da7b" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="2">
+                  <modifiers>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Power Fist" hidden="false" id="7e69-4d3f-54f7-9056" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="3">
+                  <modifiers>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="082c-acd9-f057-3414" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d958-41c8-a12b-e67b" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="Mordian Platoon Commander" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0bb7-e860-a558-7e74">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </selectionEntries>
 </catalogue>

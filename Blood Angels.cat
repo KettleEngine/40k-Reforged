@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Techniques" hidden="false" id="9ef8-9802-e8e8-b5b6">
       <infoLinks>
@@ -31,7 +31,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Precision" id="d64c-b30b-5ca0-ca10" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+        <infoLink name="Isolate" id="d64c-b30b-5ca0-ca10" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
         <infoLink name="Pierce" id="12f1-3b07-654c-b975" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
       </infoLinks>
     </selectionEntry>
@@ -382,15 +382,6 @@
         <categoryLink targetId="1738-1300-9dbb-c5be" id="f622-20ea-c36f-bd15" primary="false" name="Rare"/>
       </categoryLinks>
       <profiles>
-        <profile name="Shield Captain in Allarus Armour" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="ce5a-cf66-4eea-bd7b">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
-          </characteristics>
-        </profile>
         <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="d847-8d93-f4e6-3280">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.
@@ -404,59 +395,6 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         <infoLink name="Teleport Homer" id="23f5-2aad-0e1c-becd" hidden="false" type="profile" targetId="77ce-0080-b298-0daa"/>
         <infoLink name="Infallible Instruction" id="0eaa-ad15-c887-d20a" hidden="false" type="profile" targetId="62ce-f561-3981-5e38"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Weapon" id="3452-372c-0ed3-acbd" hidden="false" defaultSelectionEntryId="a1f9-2f3e-8d82-6063">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c7b-2a80-3e0d-12b1-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c7b-2a80-3e0d-12b1-max" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Pyrithite Spear" hidden="false" id="815e-72e8-0626-131c" type="selectionEntry" targetId="ee7a-3c29-3c1a-23cb" sortIndex="3">
-              <modifiers>
-                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="self.entries.e101-1d84-20ff-ccd2.profiles.Weapon"/>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Guardian Spear" hidden="false" id="a1f9-2f3e-8d82-6063" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Guardian Spear (Bolter)" hidden="false" id="94a5-0d07-7f95-599a" type="selectionEntry" targetId="98e5-c268-975f-d93d">
-                  <modifiers>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Guardian Spear (Melee)" hidden="false" id="a165-8e8a-b29f-5ded" type="selectionEntry" targetId="9def-87a0-9059-995b">
-                  <modifiers>
-                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Castellan Axe" hidden="false" id="c2b2-e8ce-ae5b-84d2" sortIndex="2">
-              <entryLinks>
-                <entryLink import="true" name="Castellan Axe (Bolter)" hidden="false" id="fa46-ca2b-0068-bb65" type="selectionEntry" targetId="1b81-77fb-f55b-4696">
-                  <modifiers>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Castellan Axe (Melee)" hidden="false" id="0d14-7ed1-76ad-c3ea" type="selectionEntry" targetId="df85-d9a5-4d0c-ce6b"/>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Misericordia" hidden="false" id="7cb5-3c8d-e63f-4808" type="selectionEntry" targetId="66e2-de15-fa17-7891">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Arae-Shrike" hidden="false" id="9fb0-82ad-cad5-a5ff" type="selectionEntry" targetId="d5a1-2757-8f27-2412"/>
-        <entryLink import="true" name="Ballistus Grenade Launcher" hidden="false" id="aa81-deba-b97c-2a1a" type="selectionEntry" targetId="52dd-45b3-4a09-8193"/>
-      </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -472,6 +410,77 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="880c-1905-2bf5-dd8b" includeChildSelections="false"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Shield Captain in Allarus Armour" hidden="false" id="879a-4007-27ef-66ee">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="97b3-fd7d-ffd8-446c-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97b3-fd7d-ffd8-446c-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon" id="3452-372c-0ed3-acbd" hidden="false" defaultSelectionEntryId="a1f9-2f3e-8d82-6063">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c7b-2a80-3e0d-12b1-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c7b-2a80-3e0d-12b1-max" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Pyrithite Spear" hidden="false" id="815e-72e8-0626-131c" type="selectionEntry" targetId="ee7a-3c29-3c1a-23cb" sortIndex="3">
+                  <modifiers>
+                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="self.entries.e101-1d84-20ff-ccd2.profiles.Weapon"/>
+                  </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Guardian Spear" hidden="false" id="a1f9-2f3e-8d82-6063" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Guardian Spear (Bolter)" hidden="false" id="94a5-0d07-7f95-599a" type="selectionEntry" targetId="98e5-c268-975f-d93d">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Guardian Spear (Melee)" hidden="false" id="a165-8e8a-b29f-5ded" type="selectionEntry" targetId="9def-87a0-9059-995b">
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Castellan Axe" hidden="false" id="c2b2-e8ce-ae5b-84d2" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Castellan Axe (Bolter)" hidden="false" id="fa46-ca2b-0068-bb65" type="selectionEntry" targetId="1b81-77fb-f55b-4696">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Castellan Axe (Melee)" hidden="false" id="0d14-7ed1-76ad-c3ea" type="selectionEntry" targetId="df85-d9a5-4d0c-ce6b"/>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Misericordia" hidden="false" id="7cb5-3c8d-e63f-4808" type="selectionEntry" targetId="66e2-de15-fa17-7891">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Ballistus Grenade Launcher" hidden="false" id="aa81-deba-b97c-2a1a" type="selectionEntry" targetId="52dd-45b3-4a09-8193"/>
+            <entryLink import="true" name="Arae-Shrike" hidden="false" id="9fb0-82ad-cad5-a5ff" type="selectionEntry" targetId="d5a1-2757-8f27-2412"/>
+          </entryLinks>
+          <profiles>
+            <profile name="Shield Captain in Allarus Armour" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="87af-a078-790c-7549">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Vexilla Allarus Custodian" hidden="false" id="b187-3425-323f-7c28" sortIndex="6">
       <costs>
@@ -486,31 +495,10 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         <infoLink name="Heavy Armour" id="cbe8-ba80-4fc5-a41b" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
         <infoLink name="Teleport Homer" id="f763-d298-c8fa-01fe" hidden="false" type="profile" targetId="77ce-0080-b298-0daa"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Ballistus Grenade Launcher" hidden="false" id="b1b4-e2a4-a0c8-6e97" type="selectionEntry" targetId="52dd-45b3-4a09-8193">
-          <modifiers>
-            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Misericordia" hidden="false" id="857f-c200-ec17-9a08" type="selectionEntry" targetId="66e2-de15-fa17-7891">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
       <profiles>
         <profile name="Teleport Beacon" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5cef-1692-2572-eb92">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is in the battlefield, each time you use the Teleport Homer ability for any of your other units, you may instead use ‘teleport beacon’. If you do, Deploy that unit wholly within 2D6+2” of and visible to this unit. That unit cannot March or Fall Back this turn.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Vexilla Allarus Custodian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="dc02-3982-39c6-4566">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
           </characteristics>
         </profile>
         <profile name="Magisterium Vexilla" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="776b-0e47-eb3b-9a48">
@@ -518,17 +506,57 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Resolve Test made for a friendly visible infantry unit, you may reroll that Resolve Test.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Vexilla Magnifica" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2227-65a0-0bc4-0369">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Move step, each enemy infantry unit within 12” of and visible to this unit suffers 4+2D3 Suppression.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Vexilla Allarus Custodian" hidden="false" id="ad8f-5e13-5d8a-ff19">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="021e-c263-d16c-86fb-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="021e-c263-d16c-86fb-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Vexilla Allarus Custodian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="aaf8-bb74-943a-d99b">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Vexilla Magnifica" hidden="false" id="e2dd-4479-174d-176e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e70a-7417-5717-4f66-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e70a-7417-5717-4f66-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Vexilla Magnifica" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2227-65a0-0bc4-0369">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Move step, each enemy infantry unit within 12” of and visible to this unit suffers 4+2D3 Suppression.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Misericordia" hidden="false" id="857f-c200-ec17-9a08" type="selectionEntry" targetId="66e2-de15-fa17-7891">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Ballistus Grenade Launcher" hidden="false" id="b1b4-e2a4-a0c8-6e97" type="selectionEntry" targetId="52dd-45b3-4a09-8193">
+              <modifiers>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Custodian Warden" hidden="false" id="4951-5375-187f-4f0d" sortIndex="7">
       <categoryLinks>
@@ -542,15 +570,6 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         <profile name="Vigilant Presidio" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="47b2-d9eb-20d9-a0b9">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any of your other units within 1” of this unit gain Kaptaris Parry or Conservai Counter, this unit also gains that ability until the End step.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Custodian Warden" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="acac-b817-b706-66c2">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
           </characteristics>
         </profile>
         <profile name="Immovable Sentinel" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="92e5-5534-2d11-6c00">
@@ -579,57 +598,75 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
         </infoLink>
         <infoLink name="Heavy Armour" id="f80d-58dd-3d14-c623" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Misericordia" hidden="false" id="0e04-37b0-8410-1456" type="selectionEntry" targetId="66e2-de15-fa17-7891">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Weapon" id="08aa-b91d-0871-67ee" hidden="false" defaultSelectionEntryId="1413-8635-638a-c182">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Custodian Warden" hidden="false" id="76c8-8e05-1a64-4b4b">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4f37-04c9-0986-00fb" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c720-7754-cb62-9e58" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="28f5-e294-fa87-4a09-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="28f5-e294-fa87-4a09-max" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Pyrithite Spear" hidden="false" id="b4b0-702c-4feb-d24a" type="selectionEntry" targetId="ee7a-3c29-3c1a-23cb" sortIndex="3">
-              <modifiers>
-                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="self.entries.e101-1d84-20ff-ccd2.profiles.Weapon"/>
-              </modifiers>
+            <entryLink import="true" name="Misericordia" hidden="false" id="0e04-37b0-8410-1456" type="selectionEntry" targetId="66e2-de15-fa17-7891">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
           </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Guardian Spear" hidden="false" id="1413-8635-638a-c182" sortIndex="1">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon" id="08aa-b91d-0871-67ee" hidden="false" defaultSelectionEntryId="1413-8635-638a-c182">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4f37-04c9-0986-00fb" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c720-7754-cb62-9e58" includeChildSelections="false"/>
+              </constraints>
               <entryLinks>
-                <entryLink import="true" name="Guardian Spear (Bolter)" hidden="false" id="93b9-1c2a-925a-1f91" type="selectionEntry" targetId="98e5-c268-975f-d93d">
+                <entryLink import="true" name="Pyrithite Spear" hidden="false" id="b4b0-702c-4feb-d24a" type="selectionEntry" targetId="ee7a-3c29-3c1a-23cb" sortIndex="3">
                   <modifiers>
-                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="self.entries.e101-1d84-20ff-ccd2.profiles.Weapon"/>
                   </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Guardian Spear (Melee)" hidden="false" id="d157-8c13-24d7-8798" type="selectionEntry" targetId="9def-87a0-9059-995b">
-                  <modifiers>
-                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
                 </entryLink>
               </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Castellan Axe" hidden="false" id="3536-02f8-ad4e-4fff" sortIndex="2">
-              <entryLinks>
-                <entryLink import="true" name="Castellan Axe (Bolter)" hidden="false" id="1057-e6c0-2d19-5cba" type="selectionEntry" targetId="1b81-77fb-f55b-4696">
-                  <modifiers>
-                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Castellan Axe (Melee)" hidden="false" id="1d39-2b5c-0e21-5a49" type="selectionEntry" targetId="df85-d9a5-4d0c-ce6b"/>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Guardian Spear" hidden="false" id="1413-8635-638a-c182" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Guardian Spear (Bolter)" hidden="false" id="93b9-1c2a-925a-1f91" type="selectionEntry" targetId="98e5-c268-975f-d93d">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Guardian Spear (Melee)" hidden="false" id="d157-8c13-24d7-8798" type="selectionEntry" targetId="9def-87a0-9059-995b">
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Castellan Axe" hidden="false" id="3536-02f8-ad4e-4fff" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Castellan Axe (Bolter)" hidden="false" id="1057-e6c0-2d19-5cba" type="selectionEntry" targetId="1b81-77fb-f55b-4696">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Castellan Axe (Melee)" hidden="false" id="1d39-2b5c-0e21-5a49" type="selectionEntry" targetId="df85-d9a5-4d0c-ce6b"/>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="Custodian Warden" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="be84-84a8-9ee4-e735">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Vertus Praetor" hidden="false" id="a833-c796-d98c-ff21" sortIndex="8">
       <costs>
@@ -646,37 +683,44 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
         <infoLink name="Jet Bike" id="b206-874d-f3a8-fe80" hidden="false" type="profile" targetId="672a-9374-f2ed-e8b2"/>
         <infoLink name="Golden Lightning" id="1db5-ee4b-e15c-0169" hidden="false" type="profile" targetId="a983-2b14-2822-8f71"/>
       </infoLinks>
-      <profiles>
-        <profile name="Vertus Praetor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="32f5-79e9-cd90-9137">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Hurricane Bolter" id="400d-9fbb-2799-cd5c" hidden="false" defaultSelectionEntryId="f35f-e27a-757d-1baa">
-          <entryLinks>
-            <entryLink import="true" name="Hurricane Bolter" hidden="false" id="f35f-e27a-757d-1baa" type="selectionEntry" targetId="14ea-3595-4572-a02d"/>
-            <entryLink import="true" name="Salvo Launcher" hidden="false" id="a5c8-3ee2-4366-8af6" type="selectionEntry" targetId="ea7c-99d1-b44d-35b7"/>
-          </entryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Vertus Praetor" hidden="false" id="b3bc-250f-bd39-cbe4">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7669-30d0-7f1c-c1bb-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7669-30d0-7f1c-c1bb-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="36c4-77a4-316c-51bb-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="36c4-77a4-316c-51bb-max" includeChildSelections="false"/>
           </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Misericordia" hidden="false" id="184a-ace0-7748-21f6" type="selectionEntry" targetId="66e2-de15-fa17-7891">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Interceptor Lance" hidden="false" id="297c-06f0-e1be-e829" type="selectionEntry" targetId="9fc1-9569-c23a-41f4"/>
-      </entryLinks>
+          <entryLinks>
+            <entryLink import="true" name="Misericordia" hidden="false" id="184a-ace0-7748-21f6" type="selectionEntry" targetId="66e2-de15-fa17-7891">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Interceptor Lance" hidden="false" id="297c-06f0-e1be-e829" type="selectionEntry" targetId="9fc1-9569-c23a-41f4"/>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Hurricane Bolter" id="400d-9fbb-2799-cd5c" hidden="false" defaultSelectionEntryId="f35f-e27a-757d-1baa">
+              <entryLinks>
+                <entryLink import="true" name="Hurricane Bolter" hidden="false" id="f35f-e27a-757d-1baa" type="selectionEntry" targetId="14ea-3595-4572-a02d"/>
+                <entryLink import="true" name="Salvo Launcher" hidden="false" id="a5c8-3ee2-4366-8af6" type="selectionEntry" targetId="ea7c-99d1-b44d-35b7"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7669-30d0-7f1c-c1bb-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7669-30d0-7f1c-c1bb-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="Vertus Praetor" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="efe9-80c1-65ee-a23f">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Venerable Land Raider" hidden="false" id="c3af-5083-7db5-a268" sortIndex="11">
       <costs>
@@ -686,137 +730,144 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
         <categoryLink targetId="ccc6-6202-853c-23e4" id="7382-6d12-9bd1-22ba" primary="true" name="Support"/>
         <categoryLink targetId="b239-6bd1-e7a0-0a02" id="d30c-5fbd-d593-8ca1" primary="false" name="Vehicle"/>
       </categoryLinks>
-      <profiles>
-        <profile name="Venerable Land Raider" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1db3-b79d-0d88-e222">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">6&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink name="Transport" id="f688-0072-1999-e2a1" hidden="false" type="rule" targetId="d78d-24c6-e7a9-e94f"/>
         <infoLink name="Covering Fire" id="a7f1-5efe-3b0b-2240" hidden="false" type="profile" targetId="2415-711c-9ad6-01b3"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="HK or Pintle" id="a0f6-bc5c-5b32-c54f" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Venerable Land Raider" hidden="false" id="ace1-89cc-b06f-08e3">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a62-c421-2d05-55aa" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b8db-d656-6a10-5478-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b8db-d656-6a10-5478-max" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Multi-Melta" hidden="false" id="661a-ae4b-1738-0ada" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
-              <modifiers>
-                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Storm Bolter" hidden="false" id="0778-9562-41a6-63ec" type="selectionEntry" targetId="d215-60bd-f49d-295e">
-              <modifiers>
-                <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
+            <entryLink import="true" name="Smoke Launchers" hidden="false" id="8241-6f99-7f67-9ca4" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
             </entryLink>
           </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Pintle Hunter-Killer Missile" hidden="false" id="56a7-89f7-29ad-e300" sortIndex="1">
-              <profiles>
-                <profile name="Hunter-Killer Missile" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="13c8-e3d4-5d89-7f67">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Velocity, Pierce</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Pierce" id="4b56-5d04-0c66-358f" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-                <infoLink name="One Shot" id="0595-23f4-e980-026a" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-                <infoLink name="Velocity" id="d7b8-ee59-ce6e-5121" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Secondary Weapon" id="9d2d-6883-a2a9-bf5d" hidden="false" defaultSelectionEntryId="a62d-ddf0-8c5f-2e84">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a1f3-005f-95d9-cac9-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1f3-005f-95d9-cac9-max" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Heavy Bolter" hidden="false" id="a62d-ddf0-8c5f-2e84" type="selectionEntry" targetId="82a1-b562-e748-d5ad" sortIndex="1">
-              <modifiers>
-                <modifier type="append" value="s" field="name" affects="profiles.Weapon" join=""/>
-                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Assault Cannons" hidden="false" id="1fbe-a768-8dc8-5709" sortIndex="2">
-              <profiles>
-                <profile name="Assault Cannons" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c258-02e3-8b4c-755e">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Primary Weapons" id="0066-9794-4609-bc4a" hidden="false" defaultSelectionEntryId="cac0-4bbb-26f7-bf37">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="255d-7317-751f-b708-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="255d-7317-751f-b708-max" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Hurricane Bolter" hidden="false" id="b0a3-8d7a-2b3e-7694" type="selectionEntry" targetId="14ea-3595-4572-a02d" sortIndex="2">
-              <modifiers>
-                <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
-                <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Sponson Lascannons" hidden="false" id="283a-905e-5ab5-3c12" sortIndex="1">
-              <profiles>
-                <profile name="Lascannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b427-d386-c8a2-8395">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Breach" id="b227-b28f-481f-85de" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Smoke Launchers" hidden="false" id="8241-6f99-7f67-9ca4" type="selectionEntry" targetId="d653-3fc2-d577-6295">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="HK or Pintle" id="a0f6-bc5c-5b32-c54f" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a62-c421-2d05-55aa" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Multi-Melta" hidden="false" id="661a-ae4b-1738-0ada" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
+                  <modifiers>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Storm Bolter" hidden="false" id="0778-9562-41a6-63ec" type="selectionEntry" targetId="d215-60bd-f49d-295e">
+                  <modifiers>
+                    <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
+                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Pintle Hunter-Killer Missile" hidden="false" id="56a7-89f7-29ad-e300" sortIndex="1">
+                  <profiles>
+                    <profile name="Hunter-Killer Missile" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="13c8-e3d4-5d89-7f67">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Velocity, Pierce</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Pierce" id="4b56-5d04-0c66-358f" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                    <infoLink name="One Shot" id="0595-23f4-e980-026a" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+                    <infoLink name="Velocity" id="d7b8-ee59-ce6e-5121" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Primary Weapons" id="0066-9794-4609-bc4a" hidden="false" defaultSelectionEntryId="cac0-4bbb-26f7-bf37">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="255d-7317-751f-b708-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="255d-7317-751f-b708-max" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Hurricane Bolter" hidden="false" id="b0a3-8d7a-2b3e-7694" type="selectionEntry" targetId="14ea-3595-4572-a02d" sortIndex="2">
+                  <modifiers>
+                    <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
+                    <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Sponson Lascannons" hidden="false" id="283a-905e-5ab5-3c12" sortIndex="1">
+                  <profiles>
+                    <profile name="Lascannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b427-d386-c8a2-8395">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Breach" id="b227-b28f-481f-85de" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Secondary Weapon" id="9d2d-6883-a2a9-bf5d" hidden="false" defaultSelectionEntryId="a62d-ddf0-8c5f-2e84">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a1f3-005f-95d9-cac9-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1f3-005f-95d9-cac9-max" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Heavy Bolter" hidden="false" id="a62d-ddf0-8c5f-2e84" type="selectionEntry" targetId="82a1-b562-e748-d5ad" sortIndex="1">
+                  <modifiers>
+                    <modifier type="append" value="s" field="name" affects="profiles.Weapon" join=""/>
+                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Assault Cannons" hidden="false" id="1fbe-a768-8dc8-5709" sortIndex="2">
+                  <profiles>
+                    <profile name="Assault Cannons" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c258-02e3-8b4c-755e">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="Venerable Land Raider" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="f5d9-69d4-f5d6-21c5">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Shield Captain on Dawneagle Jetbike" hidden="false" id="2447-1e05-427c-0df0" sortIndex="3">
       <costs>
@@ -828,15 +879,6 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
         <categoryLink targetId="1738-1300-9dbb-c5be" id="2fbc-2368-e3f4-46ed" primary="false" name="Rare"/>
       </categoryLinks>
       <profiles>
-        <profile name="Shield Captain on Dawneagle Jetbike" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="91d5-b88f-2af8-6a38">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
-          </characteristics>
-        </profile>
         <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="8e3b-52e8-aa3f-8c54">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.
@@ -853,27 +895,6 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         <infoLink name="Golden Lightning" id="8f57-59f3-2741-8905" hidden="false" type="profile" targetId="a983-2b14-2822-8f71"/>
         <infoLink name="Jet Bike" id="8838-d954-96b7-27c0" hidden="false" type="profile" targetId="672a-9374-f2ed-e8b2"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Hurricane Bolter" id="5b09-efba-1c1f-8f02" hidden="false" defaultSelectionEntryId="0e80-bd01-60f8-1af2">
-          <entryLinks>
-            <entryLink import="true" name="Hurricane Bolter" hidden="false" id="0e80-bd01-60f8-1af2" type="selectionEntry" targetId="14ea-3595-4572-a02d"/>
-            <entryLink import="true" name="Salvo Launcher" hidden="false" id="f445-6172-60a3-bdef" type="selectionEntry" targetId="ea7c-99d1-b44d-35b7"/>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="90ac-06a8-f7de-0cc6-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90ac-06a8-f7de-0cc6-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Misericordia" hidden="false" id="33d6-72a8-790f-3907" type="selectionEntry" targetId="66e2-de15-fa17-7891">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Arae-Shrike" hidden="false" id="5030-a029-f745-3a2e" type="selectionEntry" targetId="d5a1-2757-8f27-2412"/>
-        <entryLink import="true" name="Interceptor Lance" hidden="false" id="66aa-26fa-9bc1-6933" type="selectionEntry" targetId="9fc1-9569-c23a-41f4"/>
-      </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -889,6 +910,45 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="4867-12b3-3e76-66e3" includeChildSelections="false"/>
       </constraints>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Shield Captain on Dawneagle Jetbike" hidden="false" id="7e9c-51aa-e6fa-659b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1b1e-091f-f2e0-2b91-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1b1e-091f-f2e0-2b91-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Hurricane Bolter" id="5b09-efba-1c1f-8f02" hidden="false" defaultSelectionEntryId="0e80-bd01-60f8-1af2">
+              <entryLinks>
+                <entryLink import="true" name="Hurricane Bolter" hidden="false" id="0e80-bd01-60f8-1af2" type="selectionEntry" targetId="14ea-3595-4572-a02d"/>
+                <entryLink import="true" name="Salvo Launcher" hidden="false" id="f445-6172-60a3-bdef" type="selectionEntry" targetId="ea7c-99d1-b44d-35b7"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="90ac-06a8-f7de-0cc6-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90ac-06a8-f7de-0cc6-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Misericordia" hidden="false" id="33d6-72a8-790f-3907" type="selectionEntry" targetId="66e2-de15-fa17-7891">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Interceptor Lance" hidden="false" id="66aa-26fa-9bc1-6933" type="selectionEntry" targetId="9fc1-9569-c23a-41f4"/>
+            <entryLink import="true" name="Arae-Shrike" hidden="false" id="5030-a029-f745-3a2e" type="selectionEntry" targetId="d5a1-2757-8f27-2412"/>
+          </entryLinks>
+          <profiles>
+            <profile name="Shield Captain on Dawneagle Jetbike" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="2e41-938b-de33-0cc7">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Shield Captain" hidden="false" id="ea9e-4e93-c3bb-c825" sortIndex="1">
       <costs>
@@ -900,15 +960,6 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         <categoryLink targetId="1738-1300-9dbb-c5be" id="d5e5-a8f6-b8af-bcd4" primary="false" name="Rare"/>
       </categoryLinks>
       <profiles>
-        <profile name="Shield Captain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="043b-2ef1-cfe6-8c82">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
-          </characteristics>
-        </profile>
         <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="e166-7afb-2f74-a8f5">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.
@@ -921,63 +972,6 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         <infoLink name="Titan" id="83e7-67e2-d1a3-faec" hidden="false" type="rule" targetId="8f09-c87f-c86c-8cfc"/>
         <infoLink name="Infallible Instruction" id="2629-5165-3867-a988" hidden="false" type="profile" targetId="62ce-f561-3981-5e38"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Weapon" id="7681-3174-178c-e687" hidden="false" defaultSelectionEntryId="ea85-e750-3eff-8549">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ebe1-7575-f22c-65eb-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebe1-7575-f22c-65eb-max" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Pyrithite Spear" hidden="false" id="599c-93d5-6c70-1284" type="selectionEntry" targetId="ee7a-3c29-3c1a-23cb" sortIndex="3">
-              <modifiers>
-                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="self.entries.e101-1d84-20ff-ccd2.profiles.Weapon"/>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Guardian Spear" hidden="false" id="ea85-e750-3eff-8549" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Guardian Spear (Bolter)" hidden="false" id="a350-66a0-6091-6a76" type="selectionEntry" targetId="98e5-c268-975f-d93d">
-                  <modifiers>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Guardian Spear (Melee)" hidden="false" id="0bde-5f40-5566-f225" type="selectionEntry" targetId="9def-87a0-9059-995b">
-                  <modifiers>
-                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Castellan Axe" hidden="false" id="c929-e0b2-d3a4-177e" sortIndex="2">
-              <entryLinks>
-                <entryLink import="true" name="Castellan Axe (Bolter)" hidden="false" id="cfa6-6ccf-374d-f161" type="selectionEntry" targetId="1b81-77fb-f55b-4696">
-                  <modifiers>
-                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Castellan Axe (Melee)" hidden="false" id="9eff-c92f-7085-7581" type="selectionEntry" targetId="df85-d9a5-4d0c-ce6b"/>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Misericordia" hidden="false" id="f5d3-fa13-0788-a50c" type="selectionEntry" targetId="66e2-de15-fa17-7891">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Arae-Shrike" hidden="false" id="7e5b-68f9-a5fe-a419" type="selectionEntry" targetId="d5a1-2757-8f27-2412"/>
-        <entryLink import="true" name="Praesidium Shield" hidden="false" id="0afb-8687-4306-d010" type="selectionEntry" targetId="8bc2-ea67-4e5e-761c">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cea6-ebbe-48f2-44f1" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="07bc-14f6-5bed-8e28" includeChildSelections="false"/>
       </constraints>
@@ -993,6 +987,81 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
           </conditionGroups>
         </modifier>
       </modifiers>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Shield Captain" hidden="false" id="4ffa-eb7e-5ece-5be6">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c4ac-e452-f61c-d04d-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c4ac-e452-f61c-d04d-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Praesidium Shield" hidden="false" id="0afb-8687-4306-d010" type="selectionEntry" targetId="8bc2-ea67-4e5e-761c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cea6-ebbe-48f2-44f1" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Misericordia" hidden="false" id="f5d3-fa13-0788-a50c" type="selectionEntry" targetId="66e2-de15-fa17-7891">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Arae-Shrike" hidden="false" id="7e5b-68f9-a5fe-a419" type="selectionEntry" targetId="d5a1-2757-8f27-2412"/>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon" id="7681-3174-178c-e687" hidden="false" defaultSelectionEntryId="ea85-e750-3eff-8549">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ebe1-7575-f22c-65eb-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebe1-7575-f22c-65eb-max" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Pyrithite Spear" hidden="false" id="599c-93d5-6c70-1284" type="selectionEntry" targetId="ee7a-3c29-3c1a-23cb" sortIndex="3">
+                  <modifiers>
+                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="self.entries.e101-1d84-20ff-ccd2.profiles.Weapon"/>
+                  </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Guardian Spear" hidden="false" id="ea85-e750-3eff-8549" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Guardian Spear (Bolter)" hidden="false" id="a350-66a0-6091-6a76" type="selectionEntry" targetId="98e5-c268-975f-d93d">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Guardian Spear (Melee)" hidden="false" id="0bde-5f40-5566-f225" type="selectionEntry" targetId="9def-87a0-9059-995b">
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Castellan Axe" hidden="false" id="c929-e0b2-d3a4-177e" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Castellan Axe (Bolter)" hidden="false" id="cfa6-6ccf-374d-f161" type="selectionEntry" targetId="1b81-77fb-f55b-4696">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Castellan Axe (Melee)" hidden="false" id="9eff-c92f-7085-7581" type="selectionEntry" targetId="df85-d9a5-4d0c-ce6b"/>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="Shield Captain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="7110-cc93-84eb-5676">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Allarus Custodian" hidden="false" id="0a09-6b36-165f-1b04" sortIndex="5">
       <costs>
@@ -1007,69 +1076,76 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         <infoLink name="Heavy Armour" id="fcf5-cec7-461b-9ef3" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
         <infoLink name="Teleport Homer" id="0c26-6f1c-f983-103e" hidden="false" type="profile" targetId="77ce-0080-b298-0daa"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Weapon" id="1d88-e47f-c87d-5388" hidden="false" defaultSelectionEntryId="a1f9-2f3e-8d82-6063">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Allarus Custodian" hidden="false" id="a8f8-8317-251b-8456">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="82c8-34de-55b5-0bc9" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba23-f438-60ce-db0d" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5540-7f00-51df-7aeb-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5540-7f00-51df-7aeb-max" includeChildSelections="false"/>
           </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon" id="1d88-e47f-c87d-5388" hidden="false" defaultSelectionEntryId="a1f9-2f3e-8d82-6063">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="82c8-34de-55b5-0bc9" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba23-f438-60ce-db0d" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Pyrithite Spear" hidden="false" id="411c-336b-1328-16b8" type="selectionEntry" targetId="ee7a-3c29-3c1a-23cb" sortIndex="3">
+                  <modifiers>
+                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="self.entries.e101-1d84-20ff-ccd2.profiles.Weapon"/>
+                  </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Guardian Spear" hidden="false" id="22f3-c431-565b-cc80" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Guardian Spear (Bolter)" hidden="false" id="72db-1db6-f16f-f2d0" type="selectionEntry" targetId="98e5-c268-975f-d93d">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Guardian Spear (Melee)" hidden="false" id="aac5-2297-2899-2c5f" type="selectionEntry" targetId="9def-87a0-9059-995b">
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Castellan Axe" hidden="false" id="78f0-8040-0c27-d46c" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Castellan Axe (Bolter)" hidden="false" id="ca71-42f0-d3f8-66f9" type="selectionEntry" targetId="1b81-77fb-f55b-4696">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Castellan Axe (Melee)" hidden="false" id="b79b-fc4c-9e2d-fa4e" type="selectionEntry" targetId="df85-d9a5-4d0c-ce6b"/>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <entryLinks>
-            <entryLink import="true" name="Pyrithite Spear" hidden="false" id="411c-336b-1328-16b8" type="selectionEntry" targetId="ee7a-3c29-3c1a-23cb" sortIndex="3">
-              <modifiers>
-                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="self.entries.e101-1d84-20ff-ccd2.profiles.Weapon"/>
-              </modifiers>
+            <entryLink import="true" name="Misericordia" hidden="false" id="276e-5a03-916a-5f53" type="selectionEntry" targetId="66e2-de15-fa17-7891">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
             </entryLink>
+            <entryLink import="true" name="Ballistus Grenade Launcher" hidden="false" id="9a80-49fd-e11d-fdf8" type="selectionEntry" targetId="52dd-45b3-4a09-8193"/>
           </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Guardian Spear" hidden="false" id="22f3-c431-565b-cc80" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Guardian Spear (Bolter)" hidden="false" id="72db-1db6-f16f-f2d0" type="selectionEntry" targetId="98e5-c268-975f-d93d">
-                  <modifiers>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Guardian Spear (Melee)" hidden="false" id="aac5-2297-2899-2c5f" type="selectionEntry" targetId="9def-87a0-9059-995b">
-                  <modifiers>
-                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Castellan Axe" hidden="false" id="78f0-8040-0c27-d46c" sortIndex="2">
-              <entryLinks>
-                <entryLink import="true" name="Castellan Axe (Bolter)" hidden="false" id="ca71-42f0-d3f8-66f9" type="selectionEntry" targetId="1b81-77fb-f55b-4696">
-                  <modifiers>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Castellan Axe (Melee)" hidden="false" id="b79b-fc4c-9e2d-fa4e" type="selectionEntry" targetId="df85-d9a5-4d0c-ce6b"/>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Ballistus Grenade Launcher" hidden="false" id="9a80-49fd-e11d-fdf8" type="selectionEntry" targetId="52dd-45b3-4a09-8193"/>
-        <entryLink import="true" name="Misericordia" hidden="false" id="276e-5a03-916a-5f53" type="selectionEntry" targetId="66e2-de15-fa17-7891">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <profiles>
-        <profile name="Allarus Custodian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="8ffb-8157-0e9c-3edb">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">4&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+          <profiles>
+            <profile name="Allarus Custodian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="9e4e-b6ea-3b38-6374">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Custodian Guard" hidden="false" id="6c0a-6a4a-2788-3cc5" sortIndex="4">
       <categoryLinks>
@@ -1085,95 +1161,104 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Each model in this unit counts as 11 models when determining the number of models within an objective.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Custodian Guard" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="2b93-d97e-3261-bd01">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Heavy Armour" id="56b8-971b-1267-25c3" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Misericordia" hidden="false" id="8deb-95f8-84fa-d394" type="selectionEntry" targetId="66e2-de15-fa17-7891">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Praesidium Shield" hidden="false" id="5447-606c-6a2d-415d" type="selectionEntry" targetId="8bc2-ea67-4e5e-761c">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Weapon" id="9c35-ae10-baf0-306f" hidden="false" defaultSelectionEntryId="0126-f082-ef68-c3db" sortIndex="1">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Custodian Guard" hidden="false" id="dc1e-a6a3-f85a-52a1">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="87de-6b23-c2ce-1869" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="05dc-19e3-5835-7200" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="10ab-385a-a18f-10a4-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="10ab-385a-a18f-10a4-max" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Pyrithite Spear" hidden="false" id="4c15-bc59-2b6b-5fb6" type="selectionEntry" targetId="ee7a-3c29-3c1a-23cb" sortIndex="3">
-              <modifiers>
-                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="self.entries.e101-1d84-20ff-ccd2.profiles.Weapon"/>
-              </modifiers>
+            <entryLink import="true" name="Misericordia" hidden="false" id="8deb-95f8-84fa-d394" type="selectionEntry" targetId="66e2-de15-fa17-7891">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
-          </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Guardian Spear" hidden="false" id="0126-f082-ef68-c3db" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Guardian Spear (Bolter)" hidden="false" id="7dea-4bda-07d3-01c0" type="selectionEntry" targetId="98e5-c268-975f-d93d">
-                  <modifiers>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Guardian Spear (Melee)" hidden="false" id="7b81-f88e-8730-70bf" type="selectionEntry" targetId="9def-87a0-9059-995b">
-                  <modifiers>
-                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Castellan Axe" hidden="false" id="a9d9-0f19-4897-dfb9" sortIndex="2">
-              <entryLinks>
-                <entryLink import="true" name="Castellan Axe (Bolter)" hidden="false" id="b683-59de-39d6-a25d" type="selectionEntry" targetId="1b81-77fb-f55b-4696">
-                  <modifiers>
-                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Castellan Axe (Melee)" hidden="false" id="f7b0-6be7-b601-7562" type="selectionEntry" targetId="df85-d9a5-4d0c-ce6b"/>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Vexilla" hidden="false" id="4562-2b6f-fdf1-2a7d" sortIndex="4">
+            <entryLink import="true" name="Praesidium Shield" hidden="false" id="5447-606c-6a2d-415d" type="selectionEntry" targetId="8bc2-ea67-4e5e-761c">
               <costs>
-                <cost name="pts" typeId="points" value="10"/>
+                <cost name="pts" typeId="points" value="20"/>
               </costs>
-              <profiles>
-                <profile name="Vexilla" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e8e4-962f-7632-1f48">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Move step, each enemy infantry unit 12” of and visible to this unit suffers 4+2D3 Suppression.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Teleport Homer" id="674b-9f4f-85ee-6598" hidden="false" type="profile" targetId="77ce-0080-b298-0daa"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon" id="9c35-ae10-baf0-306f" hidden="false" defaultSelectionEntryId="0126-f082-ef68-c3db">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="87de-6b23-c2ce-1869" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="05dc-19e3-5835-7200" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Pyrithite Spear" hidden="false" id="4c15-bc59-2b6b-5fb6" type="selectionEntry" targetId="ee7a-3c29-3c1a-23cb" sortIndex="3">
+                  <modifiers>
+                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="self.entries.e101-1d84-20ff-ccd2.profiles.Weapon"/>
+                  </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Guardian Spear" hidden="false" id="0126-f082-ef68-c3db" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Guardian Spear (Bolter)" hidden="false" id="7dea-4bda-07d3-01c0" type="selectionEntry" targetId="98e5-c268-975f-d93d">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Guardian Spear (Melee)" hidden="false" id="7b81-f88e-8730-70bf" type="selectionEntry" targetId="9def-87a0-9059-995b">
+                      <modifiers>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Castellan Axe" hidden="false" id="a9d9-0f19-4897-dfb9" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Castellan Axe (Bolter)" hidden="false" id="b683-59de-39d6-a25d" type="selectionEntry" targetId="1b81-77fb-f55b-4696">
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Castellan Axe (Melee)" hidden="false" id="f7b0-6be7-b601-7562" type="selectionEntry" targetId="df85-d9a5-4d0c-ce6b"/>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Vexilla" hidden="false" id="4562-2b6f-fdf1-2a7d" sortIndex="4">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Vexilla" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e8e4-962f-7632-1f48">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Move step, each enemy infantry unit 12” of and visible to this unit suffers 4+2D3 Suppression.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Teleport Homer" id="674b-9f4f-85ee-6598" hidden="false" type="profile" targetId="77ce-0080-b298-0daa"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="Custodian Guard" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="ca49-5489-2f80-13cc">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Decaptis Blade Champion" hidden="false" id="2e4e-1930-bded-4e5a" sortIndex="9">
       <categoryLinks>
@@ -1181,15 +1266,6 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         <categoryLink targetId="205c-3072-067b-d808" id="5108-6350-3b68-9519" primary="false" name="Infantry"/>
       </categoryLinks>
       <profiles>
-        <profile name="Blade Champion" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="c538-7a9e-76e1-7db5">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Decaptis Lunge" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2ac8-1be7-b3cd-c357">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During an Advance, this unit may move up to an additional 4” if that move would end within 4” of an enemy leader unit and after this unit selects targets for its attacks, if all of its weapons are targeting a single enemy leader unit, select one of this unit&apos;s weapons. The selected weapon’s A is doubled until the End step.</characteristic>
@@ -1199,44 +1275,62 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
       <infoLinks>
         <infoLink name="Heavy Armour" id="6b6f-a85d-f036-46c9" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Misericordia" hidden="false" id="6c55-2598-0914-e3dd" type="selectionEntry" targetId="66e2-de15-fa17-7891">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Vaultsword" hidden="false" id="7229-9a03-5f3c-0d61">
+        <selectionEntry type="model" import="true" name="Decaptis Blade Champion" hidden="false" id="26bb-89e4-e6e5-157f">
+          <entryLinks>
+            <entryLink import="true" name="Misericordia" hidden="false" id="6c55-2598-0914-e3dd" type="selectionEntry" targetId="66e2-de15-fa17-7891">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Vaultsword" hidden="false" id="7229-9a03-5f3c-0d61">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ada-0f3f-41e9-0751-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ada-0f3f-41e9-0751-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Vaultsword Cleave" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="47c6-1c49-794a-e624">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Vaultsword Scythe" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a29f-7fce-3e0f-8097">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Pierce" id="35f7-e3a3-e46e-4c6f" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ada-0f3f-41e9-0751-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ada-0f3f-41e9-0751-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="af4e-efc4-7740-1fe0-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af4e-efc4-7740-1fe0-max" includeChildSelections="false"/>
           </constraints>
           <profiles>
-            <profile name="Vaultsword Cleave" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="47c6-1c49-794a-e624">
+            <profile name="Decaptis Blade Champion" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3ff0-a59e-7618-9fee">
               <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Vaultsword Scythe" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a29f-7fce-3e0f-8097">
-              <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink name="Pierce" id="35f7-e3a3-e46e-4c6f" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -1249,15 +1343,6 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
         <categoryLink targetId="205c-3072-067b-d808" id="49e2-1249-e6f2-0497" primary="false" name="Infantry"/>
       </categoryLinks>
       <profiles>
-        <profile name="Blade Champion" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="e4c7-af31-e1e5-9227">
-          <characteristics>
-            <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">8&quot;</characteristic>
-            <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
-            <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-            <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-            <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
-          </characteristics>
-        </profile>
         <profile name="Hurricanus Flourish" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9331-ed4a-d08f-b3b1">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">During a Pile In, this unit may move up to an additional 4” and move through enemy models as if they were not there if that move would end within engagement range of two or more enemy units.</characteristic>
@@ -1267,44 +1352,62 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
       <infoLinks>
         <infoLink name="Heavy Armour" id="50fe-1991-f34d-75dc" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Misericordia" hidden="false" id="de64-1dfd-acfd-714f" type="selectionEntry" targetId="66e2-de15-fa17-7891">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Vaultsword" hidden="false" id="a1de-812a-07ec-ebbc">
+        <selectionEntry type="model" import="true" name="Hurricanus Blade Champion" hidden="false" id="cd6e-176e-161c-fbca">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac61-a59e-38ae-0fe2" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="add9-97c8-74d9-2a52" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="843b-3220-d461-3b48-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="843b-3220-d461-3b48-max" includeChildSelections="false"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Misericordia" hidden="false" id="de64-1dfd-acfd-714f" type="selectionEntry" targetId="66e2-de15-fa17-7891">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Vaultsword" hidden="false" id="a1de-812a-07ec-ebbc">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac61-a59e-38ae-0fe2" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="add9-97c8-74d9-2a52" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Vaultsword Cleave" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ffdf-ac7e-87aa-7b62">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Vaultsword Scythe" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d5ea-93e4-7f85-9696">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Pierce" id="22f0-ac9f-0642-2d76" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
           <profiles>
-            <profile name="Vaultsword Cleave" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ffdf-ac7e-87aa-7b62">
+            <profile name="Hurricanus Blade Champion" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="4757-ca9e-ed41-972e">
               <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Vaultsword Scythe" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d5ea-93e4-7f85-9696">
-              <characteristics>
-                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
-                <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink name="Pierce" id="22f0-ac9f-0642-2d76" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <costs>
