@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="45" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="46" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -170,11 +170,11 @@
         <profile name="Frag Grenade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d0b4-4c54-e9c5-4e3c">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Blast 1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Blast 5</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -193,8 +193,8 @@
         <profile name="Melta Bomb" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d783-a406-6b62-8ca8">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Pierce</characteristic>
@@ -212,8 +212,8 @@
         <profile name="Krak Grenade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2f58-917f-e392-5c19">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</characteristic>
@@ -233,14 +233,15 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Killshot</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Velocity, Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Killshot" id="b135-e658-b305-b6a8" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+        <infoLink name="Velocity" id="b135-e658-b305-b6a8" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
         <infoLink name="One Shot" id="c1c5-bedc-fd24-1eeb" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Pierce" id="2184-e7ca-166a-0ef4" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Dozer Blade" hidden="false" id="73da-e53b-4390-b808">
@@ -456,11 +457,14 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Breach" id="0ac6-d8d6-bf8f-f404" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Gun" hidden="false" id="af5b-b208-be5c-ba5b">
       <profiles>
@@ -521,12 +525,12 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Killshot</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Killshot" id="fe6f-00b1-551e-4372" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+        <infoLink name="Breach" id="fe6f-00b1-551e-4372" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Chainsword" hidden="false" id="d7bf-1f8b-4dd2-edfb">
@@ -719,7 +723,7 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">-</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This unit may move over structures as if they were not there. For each attack made for this weapon, that attack’s S is 1 higher to the target’s Toughness.</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each attack made for this weapon, that attack’s S is 1 higher to the target’s Toughness.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -731,9 +735,9 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">-</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each attack made for this weapon, that attack’s S is 1 higher to the target’s Toughness.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -745,9 +749,9 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">-</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each attack made for this weapon, that attack’s S is 1 higher to the target’s Toughness.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -927,7 +931,7 @@ After a unit with Transport with an embarked unit is destroyed, before removing 
       <description>This weapon does not need the target to be visible. However, when the target is not visible, this weapon has a -1 penalty to its Hit Rolls.</description>
     </rule>
     <rule name="Isolate" id="db97-d77e-4392-6f10" hidden="false">
-      <description>For each Saving Throw of this weapon’s attacks, instead of the controller of the target unit selecting the model to suffer the wound for that Saving Throw, you may choose any non-leader model to suffer that wound.</description>
+      <description>For each attack made for this weapon, if the target unit is infantry and there are no other enemy units within 4” of the target unit, add 1 to the Wound Roll of that attack.</description>
     </rule>
     <rule name="Strike or Sweep (X)" id="2757-6563-cdb2-3456" hidden="false">
       <description>Each time you make attacks with this weapon, use only one of either weapon with Strike or Sweep.</description>
@@ -989,6 +993,9 @@ Each time this unit gains Suppressed while it already has Suppressed, increase X
     <rule name="Velocity" id="5e3c-8b11-830c-6d2a" hidden="false">
       <description>This weapon can target enemy units within 32” of the model equipped with it. After you make a Move Roll during this unit’s Move step, each unit within X” of this unit cannot be selected as a target for this weapon this turn, where X is that Move Roll result plus 12.</description>
     </rule>
+    <rule name="Hunt" id="0f3a-7a60-a486-b805" hidden="false">
+      <description>For each attack made for this weapon, if that target unit is infantry and is not in cover for that attack, add 1 to the Wound Roll of that attack.</description>
+    </rule>
   </sharedRules>
   <publications>
     <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisherUrl="https://github.com/KettleEngine/40k-Reforged"/>
@@ -1006,7 +1013,7 @@ Each time this unit gains Suppressed while it already has Suppressed, increase X
     </profile>
     <profile name="Jet Pack" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="38d0-b778-7525-f239">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, add 1 D6 to that roll.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for this unit, add 1 D6 to that roll.</characteristic>
       </characteristics>
     </profile>
     <profile name="Jet Bike" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="672a-9374-f2ed-e8b2">
