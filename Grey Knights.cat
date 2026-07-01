@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="587a-dc95-3efb-5623" name="Grey Knights" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="13" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="587a-dc95-3efb-5623" name="Grey Knights" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="13" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Storm Bolter" hidden="false" id="086a-23f4-526e-9772">
       <profiles>
@@ -45,12 +45,13 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach, Nemesis</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Nemesis" id="1f00-25be-10ae-8e10" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
+        <infoLink name="Breach" id="1f00-25be-10ae-8e10" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+        <infoLink name="Nemesis" id="fd07-8ead-e1f9-810d" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Psycannon" hidden="false" id="cd1a-11be-9f06-71ee">
@@ -75,7 +76,7 @@
         <profile name="Incinerator" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="844e-e67a-9117-44b9">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -184,7 +185,6 @@
         </infoLink>
         <infoLink name="Heavy Armour" id="9a1c-721a-3f6b-5632" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
         <infoLink name="Vanguard Beacon" id="d389-2c5a-abf3-461b" hidden="false" type="profile" targetId="ca9b-954c-18a6-ad4f"/>
-        <infoLink name="Warp Drives" id="0466-fc38-740d-6281" hidden="false" type="profile" targetId="3f2f-e0fa-470f-e498"/>
         <infoLink name="Cleansing Psalm" id="3c64-a2c6-03eb-f754" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
       </infoLinks>
       <selectionEntries>
@@ -296,7 +296,7 @@
                   <entryLinks>
                     <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="891c-557e-9a5e-9e71" type="selectionEntry" targetId="d941-5217-d4b0-258c">
                       <modifiers>
-                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb02-89d3-98b2-fecd-min" includeChildSelections="false"/>
@@ -323,7 +323,6 @@
             <modifier type="set" value="Psyker (3)" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Warp Drives" id="8845-36ca-977d-9689" hidden="false" type="profile" targetId="3f2f-e0fa-470f-e498"/>
         <infoLink name="Cleansing Psalm" id="683e-3329-98e2-cbb6" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
       </infoLinks>
       <categoryLinks>
@@ -369,7 +368,7 @@
                   <entryLinks>
                     <entryLink import="true" name="Storm Bolter" hidden="false" id="de40-6b35-8f2b-3c98" type="selectionEntry" targetId="086a-23f4-526e-9772" sortIndex="1">
                       <modifiers>
-                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
@@ -383,7 +382,7 @@
                   <entryLinks>
                     <entryLink import="true" name="Psycannon" hidden="false" id="16d6-85e1-63fd-859e" type="selectionEntry" targetId="cd1a-11be-9f06-71ee">
                       <modifiers>
-                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e007-c6a8-3f25-2153-min" includeChildSelections="false"/>
@@ -399,7 +398,7 @@
                   <entryLinks>
                     <entryLink import="true" name="Psilencer" hidden="false" id="de2e-218c-a308-071e" type="selectionEntry" targetId="b66d-2be5-d375-8ab1">
                       <modifiers>
-                        <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9aec-128e-bf9b-2aa9-min" includeChildSelections="false"/>
@@ -414,10 +413,6 @@
                 <selectionEntry type="upgrade" import="true" name="Incinerator" hidden="false" id="3b6f-bfef-df51-f13e" sortIndex="4">
                   <entryLinks>
                     <entryLink import="true" name="Incinerator" hidden="false" id="dfa7-d6af-9a2a-190f" type="selectionEntry" targetId="302a-b831-3210-5084">
-                      <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="15" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="454f-2f69-4858-7fdb-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="454f-2f69-4858-7fdb-max" includeChildSelections="false"/>
@@ -434,7 +429,7 @@
               <entryLinks>
                 <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="2dac-3f62-0e78-8bdb" type="selectionEntry" targetId="d941-5217-d4b0-258c" sortIndex="3">
                   <modifiers>
-                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
               </entryLinks>
@@ -447,7 +442,7 @@
                   <entryLinks>
                     <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="2c5b-0c36-3c93-fb45" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
                       <modifiers>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="deb6-00cd-1646-f7ad-min" includeChildSelections="false"/>
@@ -460,7 +455,7 @@
                   <entryLinks>
                     <entryLink import="true" name="Force Falchions" hidden="false" id="a1f0-4af0-11f1-92d7" type="selectionEntry" targetId="1dad-85f1-40a8-9b49">
                       <modifiers>
-                        <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7eb7-c70e-6f02-2b49-min" includeChildSelections="false"/>
@@ -471,7 +466,7 @@
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Force Stave" hidden="false" id="222e-12e2-9e6b-8ed4">
                   <costs>
-                    <cost name="pts" typeId="points" value="10"/>
+                    <cost name="pts" typeId="points" value="20"/>
                   </costs>
                   <entryLinks>
                     <entryLink import="true" name="Force Stave" hidden="false" id="d903-31ac-6882-bc1b" type="selectionEntry" targetId="6c80-983e-a949-23d7">
@@ -504,7 +499,7 @@
     </rule>
   </sharedRules>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.0" hidden="false" id="dc56-bea6-0b79-3250" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.0" hidden="false" id="dc56-bea6-0b79-3250" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="7559-35d0-c79d-9d9d" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -524,8 +519,9 @@
       <infoLinks>
         <infoLink name="Sanctic Aegis" id="3a8b-aad5-6a47-3c36" hidden="false" type="profile" targetId="141f-c84e-6982-ba56"/>
         <infoLink name="We Are The Hammer" id="7f7b-3376-44ab-eca1" hidden="false" type="profile" targetId="3bfb-8d5a-08a7-a5ca"/>
-        <infoLink name="Cleansing Psalm" id="18bf-32af-393c-adbf" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
+        <infoLink name="Warp Drives of Titan" id="18bf-32af-393c-adbf" hidden="false" type="profile" targetId="7b20-82b2-f21f-4345"/>
         <infoLink name="Psychic Resonance" id="e9bd-c7e9-c442-746a" hidden="false" type="profile" targetId="e371-a49c-1740-3005"/>
+        <infoLink name="Cleansing Psalm" id="c87f-e7ad-f627-c1c1" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Relics (Refrence)" hidden="false" id="51ab-3977-5f4d-9601" sortIndex="-3">
@@ -583,7 +579,7 @@
       <profiles>
         <profile name="2 Gate of Infinity" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="b65c-a53e-f4b1-6b4c">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Remove this unit from the battlefield and place it into reserves. Then, Deploy it anywhere in the battlefield at least 3D6” away from enemy models.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Remove this unit from the battlefield and place it into reserves. Then, choose either ‘warp puncture’ or ‘vanguard beacon’. If you chose open portal, Deploy this unit anywhere in the battlefield at least 3D6” away from all enemy units. If you chose beacon, Deploy this unit wholly within D6+2” of any of your units with Resolute Communion.</characteristic>
           </characteristics>
         </profile>
         <profile name="1 Summon" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="198f-050e-6ca5-106c">
@@ -603,7 +599,7 @@
         </profile>
         <profile name="5 Purifying Flame" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="67d9-410a-24c8-4403">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select 1 enemy unit visible to this unit within 8”. Then, the selected unit suffers D3+X SW where X is this unit’s current Health.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one enemy unit visible to and within 8” of this unit or within 8” of one or more of one or more of your units with Resolute Communion. Then, the selected unit suffers D3+X SW where X is equal to this unit’s current Health.</characteristic>
           </characteristics>
         </profile>
         <profile name="6 Argent Psybolt" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="e1a5-f603-48b1-5aab">
@@ -686,7 +682,7 @@ b) GREY KNIGHT PALADIN</characteristic>
                   <entryLinks>
                     <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="ea18-d7ac-9860-c4af" type="selectionEntry" targetId="d941-5217-d4b0-258c">
                       <modifiers>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c50f-b7ef-a08e-8d8e-min" includeChildSelections="false"/>
@@ -728,7 +724,7 @@ b) GREY KNIGHT PALADIN</characteristic>
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
             </profile>
@@ -816,7 +812,7 @@ b) GREY KNIGHT PALADIN</characteristic>
                   <entryLinks>
                     <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="eb9f-c70d-3cb7-d540" type="selectionEntry" targetId="d941-5217-d4b0-258c">
                       <modifiers>
-                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc02-7473-8e44-4d7c-min" includeChildSelections="false"/>
@@ -925,7 +921,7 @@ b) GREY KNIGHT PALADIN</characteristic>
                   <entryLinks>
                     <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="b6e0-685c-79a7-c559" type="selectionEntry" targetId="d941-5217-d4b0-258c">
                       <modifiers>
-                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7dbd-96aa-966c-51ed-min" includeChildSelections="false"/>
@@ -1079,7 +1075,7 @@ b) GREY KNIGHT PALADIN</characteristic>
                                 <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="e608-085a-65d7-b2e7" includeChildSelections="true"/>
                               </constraints>
                               <modifiers>
-                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                               </modifiers>
                             </entryLink>
                             <entryLink import="true" name="Force Stave" hidden="false" id="d3cb-7ffc-5605-83b0" type="selectionEntry" targetId="6c80-983e-a949-23d7" sortIndex="4">
@@ -1176,7 +1172,6 @@ b) GREY KNIGHT PALADIN</characteristic>
             <modifier type="set" value="Psyker (2)" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Warp Drives" id="4711-d3b6-d2a8-afef" hidden="false" type="profile" targetId="3f2f-e0fa-470f-e498"/>
         <infoLink name="Vanguard Beacon" id="61cf-2d1f-b17d-d71c" hidden="false" type="profile" targetId="ca9b-954c-18a6-ad4f"/>
         <infoLink name="Cleansing Psalm" id="0baa-205c-f85e-7b70" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
       </infoLinks>
@@ -1212,7 +1207,7 @@ b) GREY KNIGHT PALADIN</characteristic>
                                 <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="404a-eda7-e1a3-6c67" includeChildSelections="true"/>
                               </constraints>
                               <modifiers>
-                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                               </modifiers>
                             </entryLink>
                             <entryLink import="true" name="Force Stave" hidden="false" id="02d5-0d07-3c31-9a67" type="selectionEntry" targetId="6c80-983e-a949-23d7" sortIndex="4">
@@ -1316,7 +1311,6 @@ b) GREY KNIGHT PALADIN</characteristic>
           </modifiers>
         </infoLink>
         <infoLink name="Cleansing Psalm" id="8851-6ce4-5401-d3a8" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
-        <infoLink name="Warp Drives" id="6014-01da-b069-f7b4" hidden="false" type="profile" targetId="3f2f-e0fa-470f-e498"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Elites" hidden="false" id="b59a-28d9-31a7-1796" targetId="4820-e2b5-9e00-bb68" primary="true"/>
@@ -1368,7 +1362,7 @@ b) GREY KNIGHT PALADIN</characteristic>
                                 <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="e104-9b37-1e5d-efea" includeChildSelections="true"/>
                               </constraints>
                               <modifiers>
-                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                               </modifiers>
                             </entryLink>
                           </entryLinks>
@@ -1463,7 +1457,6 @@ b) GREY KNIGHT PALADIN</characteristic>
             <modifier type="set" value="Psyker (2)" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Warp Drives" id="1540-ab9f-7244-a5f0" hidden="false" type="profile" targetId="3f2f-e0fa-470f-e498"/>
         <infoLink name="Cleansing Psalm" id="04f2-c6e8-4648-239e" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
       </infoLinks>
       <profiles>
@@ -1563,7 +1556,6 @@ b) GREY KNIGHT PALADIN</characteristic>
           </modifiers>
         </infoLink>
         <infoLink name="Cleansing Psalm" id="22ea-0edd-6aad-a1bc" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
-        <infoLink name="Warp Drives" id="f567-4273-24ad-78b3" hidden="false" type="profile" targetId="3f2f-e0fa-470f-e498"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Support" hidden="false" id="c70e-6c8c-0db6-0b2f" targetId="ccc6-6202-853c-23e4" primary="true"/>
@@ -1599,7 +1591,6 @@ b) GREY KNIGHT PALADIN</characteristic>
           </modifiers>
         </infoLink>
         <infoLink name="Heavy Armour" id="9ebf-0dc8-2eb7-f96e" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
-        <infoLink name="Warp Drives" id="7011-d967-4f9e-6257" hidden="false" type="profile" targetId="3f2f-e0fa-470f-e498"/>
         <infoLink name="Cleansing Psalm" id="8d1c-10f4-aaa7-4add" hidden="false" type="profile" targetId="4b90-458f-5908-3282"/>
       </infoLinks>
       <selectionEntries>
@@ -1629,7 +1620,7 @@ b) GREY KNIGHT PALADIN</characteristic>
                   <entryLinks>
                     <entryLink import="true" name="Nemesis Force Weapon" hidden="false" id="65f4-ab92-a94e-195a" type="selectionEntry" targetId="4195-a284-5beb-e4a5">
                       <modifiers>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="17c6-12ed-1446-6ca2-min" includeChildSelections="false"/>
@@ -1642,7 +1633,7 @@ b) GREY KNIGHT PALADIN</characteristic>
                   <entryLinks>
                     <entryLink import="true" name="Nemesis Daemon Hammer" hidden="false" id="40ab-bc6d-fa80-bc8f" type="selectionEntry" targetId="d941-5217-d4b0-258c">
                       <modifiers>
-                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6dbe-d22d-cf01-e1ae-min" includeChildSelections="false"/>
@@ -1699,17 +1690,18 @@ b) GREY KNIGHT PALADIN</characteristic>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Nemesis Greathammer" hidden="false" id="af87-50c6-0aa8-c062" sortIndex="2">
                   <infoLinks>
-                    <infoLink name="Nemesis" id="c89f-fe7e-2601-0084" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
+                    <infoLink name="Breach" id="c89f-fe7e-2601-0084" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+                    <infoLink name="Nemesis" id="bbb7-9eb1-8c61-5470" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
                   </infoLinks>
                   <profiles>
                     <profile name="Nemesis Greathammer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="605d-8315-53d3-55fa">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Nemesis, Breach</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -1769,7 +1761,7 @@ b) GREY KNIGHT PALADIN</characteristic>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover, Nemesis</characteristic>
                       </characteristics>
@@ -1816,14 +1808,10 @@ b) GREY KNIGHT PALADIN</characteristic>
     </profile>
     <profile name="Psychic Resonance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e371-a49c-1740-3005">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Each of your units with Psyker X gain the following ability:
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Your Grey Knights units with Psyker X gain the following ability:
 
-Windfall of the Warp - Cleansing Psalm: After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select up to one friendly infantry or monster unit within 8” of this unit. Then, the selected unit Heals 1.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Warp Drives" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3f2f-e0fa-470f-e498">
-      <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may use ‘warp drives’. If you do, roll 3+2D6. Then, you must Deploy this unit anywhere on the battlefield at least X” away from all enemy units where X is the result of that roll. Then, this unit cannot March or Fall Back this turn.</characteristic>
+
+Windfall of the Warp, Cleansing Psalm: After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select up to one friendly infantry or monster unit within 8” of this unit with a model with fewer Health that it started with. Then, the selected unit Heals 1.</characteristic>
       </characteristics>
     </profile>
     <profile name="We Are The Hammer" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3bfb-8d5a-08a7-a5ca">
@@ -1833,12 +1821,17 @@ Windfall of the Warp - Cleansing Psalm: After this unit makes a Psychic Test, i
     </profile>
     <profile name="Cleansing Psalm" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="4b90-458f-5908-3282">
       <characteristics>
-        <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select up to one friendly infantry or monster unit within 8” of this unit. Then, the selected unit Heals 1.</characteristic>
+        <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select up to one friendly infantry or monster unit within 8” of this unit with a model with fewer Health that it started with. Then, the selected unit Heals 1.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Vanguard Beacon" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ca9b-954c-18a6-ad4f">
+    <profile name="Resolute Communion" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ca9b-954c-18a6-ad4f">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is in the battlefield, each time you use Warp Drives or Gate of Infinity for any of your other units, you may instead use ‘vanguard beacon’. If you do, Deploy that unit wholly within 2D6+2” of and visible to this unit. Then, that unit cannot March or Fall Back this turn.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit and another of your active units is in the battlefield, while selecting a unit for Windfall of the Warp, Cleansing Psalm, you may instead select up to one friendly infantry or monster unit within 8” of this unit.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Warp Drives of Titan" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="7b20-82b2-f21f-4345">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any Move Roll for any of your units in reserves, you may use ‘warp drives’. If you do, roll 12+2D6. Then, you must Deploy that unit anywhere on the battlefield at least X” away from all enemy units and the enemy unit deployment zone where X is the result of that roll. Then, that unit cannot Advance or Reposition this turn.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
