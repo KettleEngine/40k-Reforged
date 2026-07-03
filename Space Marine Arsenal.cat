@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="46" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="47" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Bolt Rifle" hidden="false" id="6802-fb1b-a361-36bb">
       <profiles>
@@ -2895,7 +2895,7 @@ Observed: For each ranged attack that targets this unit, if that unit has cove
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Shred</characteristic>
           </characteristics>
         </profile>
         <profile name="Shotgun - Strike" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="89bf-04db-1ae0-f681">
@@ -2911,6 +2911,7 @@ Observed: For each ranged attack that targets this unit, if that unit has cove
       </profiles>
       <infoLinks>
         <infoLink name="Strike or Sweep (X)" id="f432-36e7-6dd1-0832" hidden="false" type="rule" targetId="2757-6563-cdb2-3456"/>
+        <infoLink name="Shred" id="7a18-db06-c8d2-ba2e" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sanguinary Guard" hidden="true" id="91b1-b860-ce37-9031" sortIndex="16">
@@ -7954,7 +7955,7 @@ d) VANGUARD VETERANS</characteristic>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Chaplin" hidden="false" id="4216-cdb4-410e-0c48" sortIndex="13">
+    <selectionEntry type="unit" import="true" name="Chaplain" hidden="false" id="4216-cdb4-410e-0c48" sortIndex="13">
       <categoryLinks>
         <categoryLink name="Leaders" hidden="false" id="6ffa-20fb-3ab0-bd22" targetId="2886-2afd-f65f-9d8e" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="e24f-3a7b-451d-b39f" targetId="205c-3072-067b-d808" primary="false"/>
@@ -7977,7 +7978,7 @@ c) ASSAULT INTERCESSORS</characteristic>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a7a4-a0ab-0697-b070" includeChildSelections="false"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Chaplin" hidden="false" id="654c-5d4a-d312-4a3c">
+        <selectionEntry type="model" import="true" name="Chaplain" hidden="false" id="654c-5d4a-d312-4a3c">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="23b8-4b6b-a08b-8253-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23b8-4b6b-a08b-8253-max" includeChildSelections="false"/>
@@ -8001,7 +8002,7 @@ c) ASSAULT INTERCESSORS</characteristic>
             </entryLink>
           </entryLinks>
           <profiles>
-            <profile name="Chaplin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="f098-d0da-4b19-3d69">
+            <profile name="Chaplain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="f098-d0da-4b19-3d69">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
@@ -8030,7 +8031,7 @@ c) ASSAULT INTERCESSORS</characteristic>
         <infoLink name="Litany of Hate" id="3c08-d802-5cd2-719f" hidden="false" type="profile" targetId="35c4-0160-49a8-530f"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Terminator Chaplin" hidden="false" id="38a3-65d0-162d-518f" sortIndex="14">
+    <selectionEntry type="unit" import="true" name="Terminator Chaplain" hidden="false" id="38a3-65d0-162d-518f" sortIndex="14">
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
@@ -8049,20 +8050,7 @@ b) ASSAULT TERMINATORS</characteristic>
       <selectionEntryGroups>
         <selectionEntryGroup name="Leader" id="5358-e82d-0dec-80f8" hidden="false">
           <entryLinks>
-            <entryLink import="true" name="Terminators Squad" hidden="false" id="c43b-4839-4f23-3540" type="selectionEntry" targetId="d63c-ad9b-d5b9-ab11" sortIndex="1">
-              <modifiers>
-                <modifier type="add" value="{this} unit must take jump packs" field="error">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="3600-0c99-5af1-fda3" shared="true" childName="Jump Packs" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="5358-e82d-0dec-80f8" childId="c43b-4839-4f23-3540" shared="true" childName="Assault Intercessors Squad"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Terminators Squad" hidden="false" id="c43b-4839-4f23-3540" type="selectionEntry" targetId="d63c-ad9b-d5b9-ab11" sortIndex="1"/>
             <entryLink import="true" name="Assault Terminators Squad" hidden="false" id="266c-3ddf-beb2-ece4" type="selectionEntry" targetId="c9e2-3a0d-a225-d951" sortIndex="2"/>
           </entryLinks>
           <constraints>
@@ -8079,7 +8067,7 @@ b) ASSAULT TERMINATORS</characteristic>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="19a6-7c52-3a2f-ab1d" includeChildSelections="false"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Terminator Chaplin" hidden="false" id="2494-fc74-d905-5281">
+        <selectionEntry type="model" import="true" name="Terminator Chaplain" hidden="false" id="2494-fc74-d905-5281">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0683-8fc9-7456-6015-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0683-8fc9-7456-6015-max" includeChildSelections="false"/>
@@ -8093,7 +8081,7 @@ b) ASSAULT TERMINATORS</characteristic>
             </entryLink>
           </entryLinks>
           <profiles>
-            <profile name="Terminator Chaplin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="e49a-6138-9ecc-0ab3">
+            <profile name="Terminator Chaplain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="e49a-6138-9ecc-0ab3">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
@@ -8218,7 +8206,7 @@ b) ASSAULT TERMINATORS</characteristic>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Jump Pack Chaplin" hidden="false" id="91a9-39fa-6505-b63d" sortIndex="15">
+    <selectionEntry type="unit" import="true" name="Jump Pack Chaplain" hidden="false" id="91a9-39fa-6505-b63d" sortIndex="15">
       <costs>
         <cost name="pts" typeId="points" value="60"/>
       </costs>
@@ -8273,7 +8261,7 @@ d) VANGUARD VETERANS</characteristic>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="d339-007f-bf2b-4f63" includeChildSelections="false"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Jump Pack Chaplin" hidden="false" id="e5a6-9458-4533-a4c9">
+        <selectionEntry type="model" import="true" name="Jump Pack Chaplain" hidden="false" id="e5a6-9458-4533-a4c9">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e800-4f82-74ef-d37a-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e800-4f82-74ef-d37a-max" includeChildSelections="false"/>
@@ -8462,7 +8450,7 @@ d) VANGUARD VETERANS</characteristic>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <profiles>
-            <profile name="Jump Pack Chaplin" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="122a-06c1-bd16-8b5b">
+            <profile name="Jump Pack Chaplain" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="122a-06c1-bd16-8b5b">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
@@ -9379,9 +9367,6 @@ c) AGGRESSORS</characteristic>
       </profiles>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sternguard Veteran Squad" hidden="false" id="a7df-8b8a-706f-b6d7" sortIndex="31">
-      <costs>
-        <cost name="pts" typeId="points" value="120"/>
-      </costs>
       <selectionEntryGroups>
         <selectionEntryGroup name="Sternguard Veterans" id="07b5-0cc7-9d94-bb5c" hidden="false" defaultSelectionEntryId="d181-47d4-5582-d20a">
           <selectionEntries>
@@ -9599,11 +9584,14 @@ c) AGGRESSORS</characteristic>
                   </selectionEntryGroups>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="1305-62e5-704a-1d91-min" includeChildSelections="false"/>
-            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="1305-62e5-704a-1d91-max" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="1305-62e5-704a-1d91-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1305-62e5-704a-1d91-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
