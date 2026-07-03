@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="46" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="47" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -898,9 +898,6 @@ To Cast a psychic power, select a psychic power from your army rules which matc
     <rule name="Forward Deploy" id="b433-60cc-2ed2-658f" hidden="false">
       <description>After this unit is Activated in reserves, roll 2D6. Then, you may Deploy this unit wholly within X” of your Deployment Zone where X is equal to that roll.</description>
     </rule>
-    <rule name="Deep Strike" id="a184-8710-3dda-7fdc" hidden="false">
-      <description>After this unit is Activated in reserves, roll 3D6. You may Deploy that unit anywhere on the battlefield at least X” away from all enemy units where X is the result of that roll. If you do, this unit cannot March or Fall Back this turn.</description>
-    </rule>
     <rule name="Unstoppable" id="9726-164b-d2c0-a58f" hidden="false">
       <description>For each Resolve Test made for this unit, reroll a failed result for that Resolve Test.</description>
     </rule>
@@ -994,7 +991,7 @@ Each time this unit gains Suppressed while it already has Suppressed, increase X
       <description>This weapon can target enemy units within 32” of the model equipped with it. After you make a Move Roll during this unit’s Move step, each unit within X” of this unit cannot be selected as a target for this weapon this turn, where X is that Move Roll result plus 12.</description>
     </rule>
     <rule name="Hunt" id="0f3a-7a60-a486-b805" hidden="false">
-      <description>For each attack made for this weapon, if that target unit is infantry and is not in cover for that attack, add 1 to the Wound Roll of that attack.</description>
+      <description>For each attack made for this weapon, if the target isn&apos;t in cover for that attack, add 1 to the Wound Roll of that attack (unless the target has an ability which says it cannot be in cover for attacks).</description>
     </rule>
   </sharedRules>
   <publications>
