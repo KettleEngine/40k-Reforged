@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
   </catalogueLinks>
@@ -1221,6 +1221,7 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
           </selectionEntryGroups>
           <entryLinks>
             <entryLink import="true" name="Sorcerer Weapon" hidden="false" id="e85a-e907-c6ff-1693" type="selectionEntry" targetId="ca85-7f08-d5b4-4a42"/>
+            <entryLink import="true" name="Chaos Disciple" hidden="false" id="0cd6-c152-4641-318c" type="selectionEntryGroup" targetId="ff07-25ed-c9db-0945"/>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -1239,6 +1240,206 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
         <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="7db1-3352-dbcc-9e52">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Chaos Sorcerer" hidden="false" id="a8dd-0986-4d63-f784" sortIndex="4">
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="eb5b-8f44-9145-bb8d" primary="false" name="Infantry"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="06e3-696f-ff29-4cf4" primary="true" name="Leaders"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="6894-8e51-2bc2-1e32" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Chaos Sorcerer Lord" hidden="false" id="dd27-b9e2-7d55-1c8f" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="733a-eef7-e420-c271" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a02e-80f2-65d9-ec0c" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Chaos Sorcerer Lord" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="9bdd-0a98-d65d-b047">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Pistol" id="5b1f-40f9-7c9c-8b2c" hidden="false" defaultSelectionEntryId="239a-4f3c-8cef-ffdb">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d946-cab0-4d3b-2d90" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc42-d054-93a8-5d66" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="789b-5a99-ed53-5969" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Plasma Pistol" hidden="false" id="9069-6f87-b6e2-edb2" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f323-67ea-16ce-170e" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9d15-fba1-cb71-b1a9" includeChildSelections="false"/>
+                      </constraints>
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="e3de-c6fe-2345-8aa7" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Bolt Pistol" hidden="false" id="0dcb-208e-4d95-10b1" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cc41-5e4f-c4c0-452e" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="10d2-8454-3391-6fe5" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Sorcerer Weapon" hidden="false" id="cba5-6cdf-c0fe-9676" type="selectionEntry" targetId="ca85-7f08-d5b4-4a42"/>
+            <entryLink import="true" name="Chaos Disciple" hidden="false" id="0049-2a62-b7da-75e6" type="selectionEntryGroup" targetId="ff07-25ed-c9db-0945"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <infoLinks>
+        <infoLink name="Rupture" id="58ed-bb79-cea5-c872" hidden="false" type="profile" targetId="b860-055d-17c3-2fa6"/>
+        <infoLink name="Psyker (X)" id="fb86-9dca-260e-8218" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (2)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Leader" hidden="false" id="09e8-45a2-861b-04d8" type="selectionEntryGroup" targetId="9c2e-ecf5-96b0-f116"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Master of Possession" hidden="false" id="b778-4e85-406a-3bce" sortIndex="5">
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="6526-405e-67d3-3e4f" primary="false" name="Infantry"/>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="00e3-f077-fb22-1d91" primary="true" name="Leaders"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="9294-2a95-21c1-cbdc" primary="false" name="Chaos"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Master of Possession" hidden="false" id="f930-75b3-1b76-f8c6" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58ff-213d-b9ca-0cb0" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2845-7c2b-6573-8340" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Master of Possession" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3c8b-51ac-8204-8d58">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Sorcerer Weapon" hidden="false" id="348b-1228-10e8-cf53" type="selectionEntry" targetId="ca85-7f08-d5b4-4a42"/>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Daemonic Jump Pack" hidden="false" id="bd36-0d44-e803-3adf">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a5e-96d8-2cd9-dff0" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fly" id="f016-5367-5faf-48d1" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Malefic Discipline" hidden="false" id="53a1-e879-d795-5026">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3995-9f00-6cff-00bd-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3995-9f00-6cff-00bd-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="1 Pact of Flesh" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="3f68-6860-2930-1da2">
+              <characteristics>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a friendly infantry unit within 6”. If the selected unit is a POSSESSED unit, add 1 POSSESSED model to that unit. Otherwise, it Heals D3+1 instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="2 Cursed Earth" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="d494-f47c-1641-d325">
+              <characteristics>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a point on the battlefield within 24” of this unit and mark it. Until the end of the battle round, enemy units within 16” of the selected point gain Dark Gods’ Hatred.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="3 Infernal Power" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="feee-22ec-1f3c-7b9c">
+              <characteristics>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the next time this unit Activates or dies, while your units with Daemonic are within 16” of this unit, those units gain the following ability:
+
+
+Daemonic Strength: For each attack made for this unit, a Wound Roll of 6 for that attack causes an additional wound.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="4 Sacrifice" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="e9e8-a609-2de4-58be">
+              <characteristics>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a friendly infantry unit within 12”. The selected unit loses D3+1 Health. Then, select a different friendly infantry within 12” of this unit. That selected unit Heals X, where X is equal to the result of that roll. If that unit has Daemonic, it Heals X+D3 instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="5 Agonizing Ritual" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="79f1-2185-5ae1-1939">
+              <characteristics>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an infantry model with 2 or more Health remaining from one of your units within 12” of this unit. The selected model dies. Then, if there are any friendly POSSESSED units on the battlefield, add 1 POSSESSED model to one of those units. Otherwise, create a ready POSSESSED unit within 1” of this unit with 1 model.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="6 Mutating Possession" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="9fb1-5bc3-870a-538a">
+              <characteristics>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit with Dark Gods’ Hatred, visible to and within 16” of this unit. The selected enemy unit suffers 2D3+1 SW. Then, if one or more models died as a result of those SW, create a ready POSSESSED unit with 1 model within 2” and outside of the engagement range of that enemy unit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <infoLinks>
+        <infoLink name="Psyker (X)" id="ae51-5718-61e9-d2c2" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
+          <modifiers>
+            <modifier type="set" value="Psyker (3)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Heavy Armour" id="7709-278e-20da-47fc" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+        <infoLink name="Traitorous Contempt" id="0920-e4af-58b4-9b82" hidden="false" type="profile" targetId="3941-84ed-06f0-8bcb"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Daemonkin" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f6cb-3479-f184-11d3">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">The unit this unit is attached to does not count towards the maximum number of that unit in your army list.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="0e56-0980-ca2f-ea22">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Ruinous Prophet" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1470-390a-185b-d432">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Each of your units with Daemonic gain Traitorous Contempt.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1265,6 +1466,11 @@ Dark Gods’ Hatred: After this unit dies, if the active unit is a Chaos Space�
     <profile name="Rupture" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="b860-055d-17c3-2fa6">
       <characteristics>
         <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select a visible point on the battlefield with 24” and mark it. Each enemy unit within 1” of the centre of that point suffers 3D3 SW.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Mutated Invigoration" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="851b-d3b5-a483-5134">
+      <characteristics>
+        <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">Select a friendly infantry unit within 12”. The selected unit Heals D3. If that unit has one or more models with Daemonic, it Heals D3+1 instead.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
