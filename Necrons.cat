@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="34" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="35" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Gauss" id="b2e9-8420-cfb7-4bde" hidden="false">
       <description>For each attack made for this weapon, the Wound Roll for that attack is improved by 1, and the Saving Throw is worsened by 1.</description>
@@ -99,17 +99,14 @@ Lord&apos;s Mandate: For each attack this unit makes, reroll a Wound Roll of 1�
                 <profile name="Monomolecular Proboscis" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5c93-da5e-ca6c-d34a">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Precision</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
                   </characteristics>
                 </profile>
               </profiles>
-              <infoLinks>
-                <infoLink name="Isolate" id="422e-51d8-42d1-b549" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
-              </infoLinks>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b13a-5da2-007a-f441-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b13a-5da2-007a-f441-max" includeChildSelections="false"/>
@@ -1721,7 +1718,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Flayed Ones" hidden="false" id="df69-c203-25f2-f74f" sortIndex="16">
       <costs>
-        <cost name="pts" typeId="points" value="80"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
       <selectionEntryGroups>
         <selectionEntryGroup name="Flayed Ones" id="03cb-423d-77c1-3112" hidden="false" defaultSelectionEntryId="09e5-8366-868e-2d98">
@@ -1747,9 +1744,9 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
                     <profile name="Flensing Blades" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="284b-1620-6983-3fa3">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
                       </characteristics>
@@ -1781,10 +1778,13 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
       <profiles>
         <profile name="Terrifying Carnage" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="a8ff-6aed-77e4-e4dc">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s Attacks step, for each enemy infantry unit that lost any models as the result of an attack made by this unit this turn, that unit suffers 2D6+1 Suppression.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit destroys an enemy unit, all enemy units within 8” of and visible to this unit suffer 2D3 Suppression and this unit gains the following ability:
+
+
+Escape Dimension: After any enemy unit&apos;s End step, you may remove this unit from the battlefield and place it into reserves. If you do, it loses this ability.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Dimensional Ambush" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="902b-bbc3-bf3c-a5dc">
+        <profile name="Flayer Dimension Ambush" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="902b-bbc3-bf3c-a5dc">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After rolling for initiative, if this unit is in reserves you may Deploy it at least 3D6” away from enemy units.</characteristic>
           </characteristics>
@@ -1819,17 +1819,17 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
                     <profile name="Synaptic Disintegrator" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7930-1b61-f1d1-7013">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Precision, For each attack made for this weapon that targets an infantry or monster unit, that attack gains Pierce.</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, Hunt</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <infoLinks>
                     <infoLink name="Pierce" id="0bb7-2355-6a01-b40b" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-                    <infoLink name="Isolate" id="5c03-428b-0b06-4286" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+                    <infoLink name="Hunt" id="5c03-428b-0b06-4286" hidden="false" type="rule" targetId="0f3a-7a60-a486-b805"/>
                   </infoLinks>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4201-dbbe-110a-b1d6-min" includeChildSelections="false"/>
@@ -1853,9 +1853,12 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
         <infoLink name="Dimensional Oubliette" id="8dcb-9e02-a3b1-c1a9" hidden="false" type="profile" targetId="0854-5237-1342-0789"/>
       </infoLinks>
       <profiles>
-        <profile name="Escape Dimension" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="48f0-c27e-7247-09b7">
+        <profile name="Mark Fulfilled" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="48f0-c27e-7247-09b7">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Once per battle, if this unit is on the battlefield, after rolling for initiative, you may remove this unit from the battlefield and place it into reserves.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit destroys an enemy unit, it gains the following ability:
+
+
+Escape Oubliette: After any enemy unit&apos;s End step, you may remove this unit from the battlefield and place it into reserves. If you do, it loses this ability.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2392,13 +2395,13 @@ RELOCATE: You may reroll Move Rolls and Reposition Rolls made for this unit.</c
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Canoptek Wraith" hidden="false" id="cb7b-592d-5283-86cc">
               <costs>
-                <cost name="pts" typeId="points" value="40"/>
+                <cost name="pts" typeId="points" value="50"/>
               </costs>
               <profiles>
                 <profile name="Canoptek Wraith" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="632b-28a1-fc6d-37e4">
                   <characteristics>
-                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">6</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
                     <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
                   </characteristics>
@@ -2412,7 +2415,7 @@ RELOCATE: You may reroll Move Rolls and Reposition Rolls made for this unit.</c
                         <profile name="Particle Caster" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a0e1-4536-c05c-b7fb">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -2431,9 +2434,9 @@ RELOCATE: You may reroll Move Rolls and Reposition Rolls made for this unit.</c
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
                             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, For each attack made for this weapon, a failed Saving Throw causes the target to lose 4 Health (in addition to the normal damage).</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, For each attack made for this weapon, a failed Saving Throw causes the target to lose 2 Health (in addition to the normal damage).</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2458,34 +2461,28 @@ RELOCATE: You may reroll Move Rolls and Reposition Rolls made for this unit.</c
                         <profile name="Vicious Claws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ed2e-e2f0-23b9-059d">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
                           </characteristics>
                         </profile>
                       </profiles>
-                      <infoLinks>
-                        <infoLink name="Shred" id="ef42-c497-2b28-8ec1" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Whip Coils" hidden="false" id="3b5f-0306-dbab-e221">
                       <profiles>
                         <profile name="Whip Coils" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b2a1-087d-4f10-fee3">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
                           </characteristics>
                         </profile>
                       </profiles>
-                      <infoLinks>
-                        <infoLink name="Shred" id="616d-b7ac-7ab6-6e52" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -2505,31 +2502,26 @@ RELOCATE: You may reroll Move Rolls and Reposition Rolls made for this unit.</c
         <infoLink name="Heavy Armour" id="1c8d-d6d1-c52e-b1a5" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
         <infoLink name="Walker" id="b784-15d1-0d18-3696" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
         <infoLink name="Fly" id="f569-bcd2-3d81-5b40" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
-        <infoLink name="Isolate" id="6cb1-533e-9a07-4531" hidden="false" type="rule" targetId="db97-d77e-4392-6f10">
-          <modifiers>
-            <modifier type="set" value="Precision (5+)" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Shred" id="6cb1-533e-9a07-4531" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+        <infoLink name="Isolate" id="8ec1-9196-2908-84c6" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="92f7-a7a5-600f-3115" targetId="205c-3072-067b-d808" primary="false"/>
         <categoryLink targetId="ccc6-6202-853c-23e4" id="925d-f0e7-29c6-96ab" primary="true" name="Support"/>
       </categoryLinks>
       <profiles>
-        <profile name="Phase Shifter" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e5a7-5dbc-9473-8def">
+        <profile name="Dimensional Destabilisation Matrix" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d992-6440-c0f5-f1a7">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may use ‘phase shifter’. If you do, roll 2D6. Then, Deploy this unit anywhere on the battlefield at least X” away from all enemy units where X is the result of that roll. If you do, during this turn’s Move step, do not make a Move roll and this unit cannot Advance or Reposition.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is ready, it is treated as being not visible to all enemy units. Additionally, this unit may move through models and terrain as if they were not there.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Wraith Subroutines" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d992-6440-c0f5-f1a7">
+        <profile name="Wraith Subroutines" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="141c-494b-feb1-4f99">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated, select one of the following abilities. Then, this unit gains the selected ability until the End step:
 
-
 SOW TERROR: After this unit’s Move step, each enemy unit within engagement range of this unit suffers D3+1 Suppression.
 
-
-ADVANCE SCOUT: For each Move Roll this unit makes, add 1 D6 to that</characteristic>
+ISOLATE INTRUDER: For each melee attack this makes, that attack gains Isolate and Shred.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2671,14 +2663,15 @@ ADVANCE SCOUT: For each Move Roll this unit makes, add 1 D6 to that</characteris
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                            <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
-                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3+6</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Guass</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">14</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">6</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Guass, Breach</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
                       <infoLinks>
-                        <infoLink name="Gauss" id="aa82-b123-abf7-2c67" hidden="false" type="rule" targetId="b2e9-8420-cfb7-4bde"/>
+                        <infoLink name="Breach" id="aa82-b123-abf7-2c67" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+                        <infoLink name="Gauss" id="7c36-0ddf-c9d5-fd7b" hidden="false" type="rule" targetId="b2e9-8420-cfb7-4bde"/>
                       </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Enmitic Exterminator" hidden="false" id="cd84-6094-92d8-0b11">
@@ -2974,14 +2967,15 @@ Relayed Targeting Data: Each time an enemy unit selects a target for a ranged 
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3+6</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Gauss</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">14</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">6</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Gauss, Breach</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink name="Gauss" id="6680-ca1f-f844-1925" hidden="false" type="rule" targetId="b2e9-8420-cfb7-4bde"/>
+                    <infoLink name="Breach" id="6680-ca1f-f844-1925" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+                    <infoLink name="Gauss" id="dc01-927e-7b90-7156" hidden="false" type="rule" targetId="b2e9-8420-cfb7-4bde"/>
                   </infoLinks>
                 </selectionEntry>
               </selectionEntries>
@@ -3262,7 +3256,7 @@ Royal Reclaimers: For each attack made by this unit, a Hit Roll of 6 causes an 
     </profile>
     <profile name="Dimensional Oubliette" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0854-5237-1342-0789">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may Deploy it anywhere in the battlefield outside of engagement range of enemy models. If you do, during this turn’s Move step, do not make a Move roll and this unit cannot Advance or Reposition.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may Deploy it anywhere in the battlefield outside of engagement range of enemy models. If you do, during this turn’s Move step, do not make a Move roll and this unit cannot Advance or Reposition.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

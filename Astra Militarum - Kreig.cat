@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="eef4-16e6-fd38-1a64" name="Astra Militarum - Krieg" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="eef4-16e6-fd38-1a64" name="Astra Militarum - Krieg" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="ab77-7564-91d5-ee87">
       <profiles>
@@ -294,11 +294,11 @@
                           <entryLinks>
                             <entryLink import="true" name="Longlas" hidden="false" id="f760-fe69-4a91-12fc" type="selectionEntry" targetId="5f3a-ea3d-65c4-1356">
                               <modifiers>
-                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                 <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
                               <infoLinks>
-                                <infoLink name="Isolate" id="8fc3-29d1-c61d-8181" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+                                <infoLink name="Hunt" id="8fc3-29d1-c61d-8181" hidden="false" type="rule" targetId="0f3a-7a60-a486-b805"/>
                               </infoLinks>
                               <constraints>
                                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc1d-f83d-96c9-a448-min" includeChildSelections="false"/>
@@ -336,6 +336,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
+        <infoLink targetId="57ea-cdf2-571a-71ad" id="7b2a-0386-438e-4527" type="profile" name="Entrench" hidden="false"/>
         <infoLink name="Resilient (X)" id="42ef-edf4-4612-75f5" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
           <modifiers>
             <modifier type="set" value="Resilient (6+)" field="name"/>
@@ -343,11 +344,6 @@
         </infoLink>
       </infoLinks>
       <profiles>
-        <profile name="Entrenched" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="57ea-cdf2-571a-71ad">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack that targets this unit, add 1 to the Saving Throw of that attack. After this unit advances or Disembarks, it loses this ability until the next time it&apos;s Activated.</characteristic>
-          </characteristics>
-        </profile>
         <profile name="In life, War" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1ea2-ac75-69d0-2c41">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack made by another friendly Astra Militarum unit that targets an enemy unit visible to this unit, reroll a Hit Roll of 1 for that attack.</characteristic>
@@ -588,7 +584,7 @@
       <profiles>
         <profile name="In Death, Atonement" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="7e16-709f-779a-1e08">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack that targets this unit, if this unit is the closest friendly Astra Militarum infantry unit to the enemy unit which made that attack, add 2 to the Resilient rolls for that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack that targets this unit, if this unit is your closest infantry unit to the enemy unit which made that attack, add 2 to the Resilient rolls for that attack.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -781,7 +777,7 @@
           <profiles>
             <profile name="Explosive Mines" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="037a-c0f8-340e-f9dc">
               <characteristics>
-                <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">After an enemy unit finishes a March and is within 9” of this unit, you may roll a D6. If that unit advanced this turn, add 1 to that roll. If that unit finished that March within engagement range of any friendly units, add 1 to that roll. On a 6+, that unit suffers 2D3 Suppression.</characteristic>
+                <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">After an enemy unit finishes an Advance and is within 9” of this unit, you may roll a D6. If that unit finished that Advance within engagement range of any friendly units, add 1 to that roll. On a 5+, that unit suffers 2D3 Suppression.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -795,7 +791,7 @@
         </profile>
         <profile name="Tunnelling" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8ca8-0b5d-e56c-48c9">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit Activates, you may remove it from the battlefield. Then, roll 2D6”. You may Deploy it anywhere on the battlefield surface area within that many inches of any of your other infantry units with Entrenched. If you do, you may select one of your infantry units in reserves. Deploy the selected unit wholly within 6” of this unit outside of the engagement range of enemy models.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated, you may remove it from the battlefield. If you do, roll 2D6. Then, Deploy this unit anywhere on the battlefield surface area within X inches of any of your other infantry units with Entrench, where X is equal to the result of that roll. Then, you may select one of your infantry units in reserves and Deploy the selected unit wholly within 6” of this unit outside of the engagement range of enemy models.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -813,12 +809,9 @@
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your other Astra Militarum infantry units are within 24”, gain the following abilities:
 
+Hold The Line: For each of this unit&apos;s ranged attacks, reroll a Wound Roll of 1 for that attack.
 
-Hold The Line: After this unit&apos;s Move step, if it did not Advance this turn, until the End step, each of this unit&apos;s ‘Lasgun’ weapons changes its Tp to Hv and, for each attack made by this unit&apos;s Hv weapons, a Hit Roll of 6 for that attack causes an additional hit.
-
-
-Over The Top: For each Advance Roll made for this unit, you may reroll that Advance Roll. After this unit makes an Advance Roll, until the End step, it gains the following ability: 
-
+Over The Top: For each Move Roll made for this unit, you may reroll that roll. After this unit makes a Move Roll, until the End step, it gains the following ability:
 
 Duty To The Emperor: This unit may select targets for Side Arm weapons even if it did not Activate in engagement range of any enemy units. For each attack this unit makes, a Wound Roll of 6 for that attack causes an additional wound.</characteristic>
           </characteristics>
@@ -826,6 +819,11 @@ Duty To The Emperor: This unit may select targets for Side Arm weapons even if
         <profile name="Look Out Sir!" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="fa28-44cb-adfd-f4d3">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While one or more of your units with Entrenched are within 6&quot; of and visible to this unit, for each ranged or SW attack that targets this unit, you may change the Sv of this unit to 2+ for that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="8bbd-05c9-b245-7367">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.</characteristic>
           </characteristics>
         </profile>
       </profiles>

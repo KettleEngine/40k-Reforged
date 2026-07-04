@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="8ebc-4141-b6f1-7899" name="Adeptus Mechanicus" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="22" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="8ebc-4141-b6f1-7899" name="Adeptus Mechanicus" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="22" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.5" hidden="false" id="7646-5c1b-b2e9-3f1f" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.0" hidden="false" id="7646-5c1b-b2e9-3f1f" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="c52b-72ff-2114-f15b" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -562,7 +562,7 @@ This unit may instead not attach to anything.</characteristic>
 
 Fortified Aegis: If this unit has Aegis Protocol, for each ranged attack that targets this unit, reroll a failed Saving Throw for that attack.
 
-Accelerated Drives: If this unit has Conqueror Protocol, reroll Advance Rolls made for this unit.
+Accelerated Drives: If this unit has Conqueror Protocol, reroll Move Rolls made for this unit.
 
 Targeting Matrix: If this unit has Protector Protocol, for each attack this unit makes, add 1 to the Hit Roll for that attack.</characteristic>
           </characteristics>
@@ -897,9 +897,9 @@ b) SKITARII VANGUARDS</characteristic>
                                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
                                 <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
                                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
-                                <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
                                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, Each time this unit moves, it may move through structures as if they were not there.</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -1283,7 +1283,7 @@ b) SKITARII VANGUARDS</characteristic>
       <profiles>
         <profile name="Relentless Trackers" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="af81-fba4-d31f-a14a">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit Activates, you may select an enemy unit. Until the End step, if the selected unit is not ready, this unit&apos;s M is improved equal to the selected unit&apos;s M, and for each attack this unit makes that targets the selected unit, reroll a Wound Roll of 1 for that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated, you may select an enemy unit in the battlefield. If the selected unit is not ready, until the End step, add 1 D6 to this unit’s Move Rolls, and for each attack this unit makes that targets the selected unit, reroll a Wound Roll of 1 for that attack.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1449,7 +1449,7 @@ b) SKITARII VANGUARDS</characteristic>
         </profile>
         <profile name="Momentum of the Mechanicum" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e555-766f-645c-13b0">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, roll 3D3 instead of 2D6 for that Advance Roll.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for this unit, roll 3D3 instead of 2D6 for that Move Roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1557,7 +1557,7 @@ b) SKITARII VANGUARDS</characteristic>
         </profile>
         <profile name="Advanced Jump Pack" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="1486-a82e-1618-01a3">
           <characteristics>
-            <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">For each Advance Roll made for this unit, add 1 D6 and reroll dice results of 1 for that Advance Roll.</characteristic>
+            <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">For each Move Roll made for this unit, add 1 D6 and reroll dice results of 1 for that Move Roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1594,7 +1594,7 @@ b) SKITARII VANGUARDS</characteristic>
                   <modifiers>
                     <modifier type="prepend" value="Twin Cognis" field="name" affects="profiles.Weapon"/>
                     <modifier type="prepend" value="Twin Cognis" field="name"/>
-                    <modifier type="prepend" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="prepend" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
@@ -1710,14 +1710,8 @@ b) SKITARII VANGUARDS</characteristic>
       <infoLinks>
         <infoLink name="Fly" id="6a89-8bc9-64d7-fe65" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
         <infoLink name="Heavy Armour" id="e336-c324-5cf3-fa6a" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+        <infoLink name="Jet Pack" id="0137-92e7-77cf-7bbf" hidden="false" type="profile" targetId="38d0-b778-7525-f239"/>
       </infoLinks>
-      <profiles>
-        <profile name="Jet Packs" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="6328-a743-637e-ad3d">
-          <characteristics>
-            <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">For each Advance Roll made for this unit, add 1 D6 to that Advance Roll.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Vorax-Class Battle-Automata" hidden="false" id="dde4-2368-111c-977d" sortIndex="4">
       <categoryLinks>
@@ -1815,12 +1809,14 @@ b) SKITARII VANGUARDS</characteristic>
       </selectionEntryGroups>
       <infoLinks>
         <infoLink name="Walker" id="4d47-38de-13ed-435d" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
-        <infoLink name="Unstoppable" id="66b3-aeec-4463-7737" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Isolate" id="66b3-aeec-4463-7737" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+        <infoLink name="Hunt" id="e9ac-971c-8074-02f5" hidden="false" type="rule" targetId="0f3a-7a60-a486-b805"/>
+        <infoLink name="Unstoppable" id="908b-fc00-5508-8979" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
       </infoLinks>
       <profiles>
         <profile name="Population Cull" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d847-4b87-b27e-ad44">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made by this unit that targets an infantry unit, if the Saving Throw for that attack would benefit from cover, reroll a Wound Roll of 1 for that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made by this unit that targets an infantry unit within 12” of this unit, that attack gains Isolate and Hunt.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1988,7 +1984,8 @@ b) SKITARII VANGUARDS</characteristic>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Neutron Laser &amp; Coaxial Cognis Heavy Stubber" hidden="false" id="95b9-19fd-a929-8847" sortIndex="1">
                   <infoLinks>
-                    <infoLink name="Pierce" id="3826-b644-d3c9-3729" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                    <infoLink name="Breach" id="3826-b644-d3c9-3729" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+                    <infoLink name="Pierce" id="4259-8178-6006-044e" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                   </infoLinks>
                   <profiles>
                     <profile name="Neutron Laser" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="16cc-b978-d71e-58a6">
@@ -1996,9 +1993,9 @@ b) SKITARII VANGUARDS</characteristic>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D6+5</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">14</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+3</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach, Pierce</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2023,9 +2020,9 @@ b) SKITARII VANGUARDS</characteristic>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Killshot, For each attack made for this weapon targeting a unit with Fly, add 1 to the Hit Roll of that attack.</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach, For each attack made for this weapon targeting a unit with Fly, add 1 to the Hit Roll of that attack.</characteristic>
                       </characteristics>
                     </profile>
                     <profile name="Icarus array" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0978-9030-effa-0d8a">
@@ -2041,7 +2038,7 @@ b) SKITARII VANGUARDS</characteristic>
                   </profiles>
                   <infoLinks>
                     <infoLink name="Suppressive (X)" id="999e-841e-9577-c172" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-                    <infoLink name="Killshot" id="eac6-bbd7-b7bf-9762" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+                    <infoLink name="Breach" id="eac6-bbd7-b7bf-9762" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
                   </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Eradication Beamer" hidden="false" id="6cff-1300-4034-502e" sortIndex="4">
@@ -2326,7 +2323,7 @@ b) SKITARII VANGUARDS</characteristic>
         </profile>
         <profile name="Hunter Arachnids" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e321-c167-4e78-983d">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, you may reroll the result.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for this unit, you may reroll that Move Roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2521,12 +2518,9 @@ b) SKITARII VANGUARDS</characteristic>
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit Deploys or an ability has this unit ‘change protocol’, select one of the following abilities. Then, this unit gains the selected ability and loses any of the other abilities (if it has any):
 
-
 Aegis Protocol: For each ranged attack that targets this unit, reroll a failed Saving Throw of 1 for that attack.
 
-
-Conqueror Protocol: This unit’s M is improved to 9”.
-
+Conqueror Protocol: You may reroll Move Rolls made for this unit.
 
 Protector Protocol: For each attack this unit makes, add 1 to the Hit Roll for that attack.</characteristic>
           </characteristics>
@@ -2681,42 +2675,44 @@ Protector Protocol: For each attack this unit makes, add 1 to the Hit Roll for 
                         <profile name="Dual Transonic Blades" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d87c-00ae-4248-a4b1">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Isolate, Pierce</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
                       <infoLinks>
-                        <infoLink name="Pierce" id="9d22-ade2-ffca-0cc3" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                        <infoLink name="Isolate" id="9d22-ade2-ffca-0cc3" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+                        <infoLink name="Pierce" id="e199-0147-bc67-9b58" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                       </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Transonic Razor &amp; Chordclaw" hidden="false" id="5b65-e62a-61ae-4f2d" sortIndex="2">
                       <infoLinks>
-                        <infoLink name="Shred" id="3a57-90f8-8e6e-26aa" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                        <infoLink name="Isolate" id="3a57-90f8-8e6e-26aa" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
                         <infoLink name="Pierce" id="a79b-de6b-f2a3-c62e" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                        <infoLink name="Shred" id="b6b4-6ed1-0e5a-846e" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
                       </infoLinks>
                       <profiles>
                         <profile name="Transonic Razor" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f9d1-ae58-4666-900a">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Isolate, Pierce</characteristic>
                           </characteristics>
                         </profile>
                         <profile name="Chordclaw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4e06-ffd5-be8c-d93b">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Isolate, Shred</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2736,9 +2732,17 @@ Protector Protocol: For each attack this unit makes, add 1 to the Hit Roll for 
         </selectionEntryGroup>
       </selectionEntryGroups>
       <profiles>
-        <profile name="Hunter Arachnids" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ea3a-8124-5242-bd13">
+        <profile name="Killing Machines" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ea3a-8124-5242-bd13">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, you may reroll the result.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy unit dies from an attack made for this unit, this unit gains the following ability:
+
+
+Efficient Movement: After any enemy unit&apos;s End step, this unit may Advance and it loses this ability.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Hunter Arachnids" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5112-c87f-346c-9451">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for this unit, you may reroll the result.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3118,7 +3122,7 @@ Command and Control: After any of your units within 24” of this unit Repairs�
                 <entryLink import="true" name="Lascannon" hidden="false" id="062a-fdda-3667-00e0" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="7">
                   <modifiers>
                     <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
                 <entryLink import="true" name="Multi-Melta" hidden="false" id="1640-de42-a32a-4e9e" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f" sortIndex="8">
@@ -3171,7 +3175,7 @@ Command and Control: After any of your units within 24” of this unit Repairs�
                 <entryLink import="true" name="Lascannon" hidden="false" id="0c72-fa39-79b7-2bdf" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="3">
                   <modifiers>
                     <modifier type="append" value="s" field="name" affects="profiles.Weapon" join=""/>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                     <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
@@ -3295,13 +3299,13 @@ Command and Control: After any of your units within 24” of this unit Repairs�
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">14</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+5</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Killshot</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">5</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink name="Killshot" id="8f9e-2418-2032-0b89" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+                    <infoLink name="Breach" id="8f9e-2418-2032-0b89" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
                   </infoLinks>
                 </selectionEntry>
               </selectionEntries>
@@ -3309,6 +3313,108 @@ Command and Control: After any of your units within 24” of this unit Repairs�
           </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Sydonian Skatros" hidden="false" id="fde1-6d4c-facc-5844" sortIndex="4">
+      <costs>
+        <cost name="pts" typeId="points" value="50"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="0a28-4cd2-2d47-6c5c" primary="false" name="Infantry"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="6b22-a90b-7990-707f" primary="true" name="Support"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Sydonian Skatros" hidden="false" id="eeda-8325-b458-c43e">
+          <profiles>
+            <profile name="Sydonian Skatros" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="f666-635e-a4a7-aeb7">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Archeotech Pistol" hidden="false" id="1fb2-66b1-3dde-3c58" type="selectionEntry" targetId="4b1d-e120-e07d-968a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dc16-5a11-b6fc-bc1c-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dc16-5a11-b6fc-bc1c-max" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapon" id="1715-0683-a17d-405a" hidden="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9766-711d-0434-d4df-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9766-711d-0434-d4df-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Radium Jezzail" hidden="false" id="e329-c943-5c83-ba34" sortIndex="1">
+                  <profiles>
+                    <profile name="Radium Jezzail" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7e9a-d75f-0eb2-b4fe">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Velocity, Radiation, Hunt</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Velocity" id="ce20-e0a7-6ce3-f67e" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
+                    <infoLink name="Radiation" id="0f23-c80c-a1ca-7494" hidden="false" type="rule" targetId="89da-6037-0bd7-640b"/>
+                    <infoLink name="Hunt" id="6536-0dab-dca9-720f" hidden="false" type="rule" targetId="0f3a-7a60-a486-b805"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Transuranic Arquebus" hidden="false" id="2181-c695-3ff2-19fa" sortIndex="2">
+                  <profiles>
+                    <profile name="Transuranic Arquebus" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="98eb-cb98-2db4-5474">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Velocity, Breach, Pierce</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Pierce" id="2f74-39b4-f801-9e58" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                    <infoLink name="Breach" id="bb79-e2cf-4eee-888b" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+                    <infoLink name="Velocity" id="b10c-81f2-5e5f-e10b" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Cyborg Watchtower" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="82dc-802f-b423-8a8f">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a Move Roll made for this unit during its Move step, you may discard the highest result of that Move Roll. If you do, until the end of the battle round, this unit gains the following ability:
+
+
+Achillan Eye: After any enemy unit’s Move step, this unit may make attacks targeting that unit (if able) and for each of those attacks, reroll a Wound Roll of 1 for that attack. Then, it loses this ability.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Perfectly Engineered" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="efa1-275a-d97a-b551">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s End step, if this was not your second turn in a row, you must take another turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Stilt Legs" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="47d0-3799-c22c-20a8">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit always has High Ground.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
@@ -3346,8 +3452,7 @@ Command and Control: After any of your units within 24” of this unit Repairs�
       <characteristics>
         <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack that targets this unit, worsen the Wound Roll of that attack by 1. Additionally, while enemy infantry units are within 14” of this unit, those units gain the following ability:
 
-
-Acute Rad-poisoning: For each Advance Roll made for this unit, roll 1 less D6 for that roll.</characteristic>
+Acute Rad-poisoning: For each Move Roll made for this unit, roll 1 less D6 for that roll.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -3540,16 +3645,17 @@ Acute Rad-poisoning: For each Advance Roll made for this unit, roll 1 less D6 f
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">8</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, Killshot</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Velocity, Breach, Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Pierce" id="f94b-9d22-7eaa-d530" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-        <infoLink name="Killshot" id="56da-954d-857a-5635" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
+        <infoLink name="Velocity" id="56da-954d-857a-5635" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
+        <infoLink name="Breach" id="515e-319d-9ee3-db33" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Arc Maul" hidden="false" id="f570-f0cc-34e0-c9be">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="20" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Neuro Disruptor" hidden="false" id="7dc0-1f7b-a49c-295b">
       <profiles>
@@ -10,12 +10,12 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Precision</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Hunt</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Isolate" id="016c-fd4d-6af2-a0e2" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+        <infoLink name="Hunt" id="016c-fd4d-6af2-a0e2" hidden="false" type="rule" targetId="0f3a-7a60-a486-b805"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Harlequin’s Kiss" hidden="false" id="2b2a-6b9a-72af-4117">
@@ -58,7 +58,7 @@
       <profiles>
         <profile name="Windfall of the Warp, Phantasmic Illusion" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="1101-55e2-35d0-f322">
           <characteristics>
-            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, this unit may Fall Back.</characteristic>
+            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, this unit may Reposition.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -87,64 +87,45 @@
   </sharedSelectionEntries>
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Army Abilities" hidden="false" id="3e4b-29af-4da8-2435" sortIndex="-2">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Mocking Misstep" hidden="false" id="d7fb-3c5a-bf3c-59d1" sortIndex="1">
-          <profiles>
-            <profile name="Mocking Misstep" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="93f2-8278-f866-f23e">
-              <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Once per turn, after an enemy unit’s Move step, you may select one of your Harlequins units that is visible to that enemy unit. If you do, roll a D6. On a 5+ the roll is successful and this unit may Fall Back.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="606e-3caa-b2b1-489a-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="606e-3caa-b2b1-489a-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Kaleidoscopic Cavalcade" hidden="false" id="7cf2-5629-262a-8835" sortIndex="2">
-          <profiles>
-            <profile name="Kaleidoscopic Cavalcade" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9280-5f03-55b2-37aa">
-              <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack that targets your Harlequins units, the Hit Roll for that attack is worsened by 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="134b-353c-d9eb-4990-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="134b-353c-d9eb-4990-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Prismatic Pirouette" hidden="false" id="d2a8-a0f8-b4a7-452f" sortIndex="3">
-          <profiles>
-            <profile name="Prismatic Pirouette" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e5f5-f88d-4326-e279">
-              <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Your Harlequins units may move over enemy units and terrain as if they were not there. During your turns, if any of your units would Fall Back, that unit may March instead.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a7c2-2a47-d2e7-2a99-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a7c2-2a47-d2e7-2a99-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
       <categoryLinks>
         <categoryLink targetId="9cd6-0442-3f35-6b52" id="0760-2d2e-bb87-c895" primary="true" name="Configuration"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ef3-7421-f11f-96ec" includeChildSelections="false"/>
       </constraints>
+      <profiles>
+        <profile name="Mocking Misstep" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="93f2-8278-f866-f23e">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Once per turn, after an enemy unit’s Move step, you may select one of your Harlequins units that is visible to that enemy unit. If you do, roll a D6. On a 6+, the roll is successful and the selected unit may Reposition.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Kaleidoscopic Cavalcade" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9280-5f03-55b2-37aa">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack that targets your Harlequins units, the Hit Roll for that attack is worsened by 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Prismatic Pirouette" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e5f5-f88d-4326-e279">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Your Harlequins units may move over enemy units and terrain as if they were not there. During your turns, if any of your Harlequins units would Reposition, that unit may Advance instead.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Allegro Advance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b0fe-1497-b8f4-1287">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for your Harlequins units, roll an additional D6 and discard the lowest dice for that roll.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="b58a-ba1e-7fbf-a030" sortIndex="-4">
       <profiles>
         <profile name="2 Blinded Damsel" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="3c0c-9a15-b526-32e0">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit is targeted by one or more attacks, roll 2 D6 and set them aside until the End step. For each wound suffered by any of this unit’s models, roll a D6. If that result matches either of the set aside dice, that attack fails.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After a wound is assigned to a model in this unit, roll a D6. On a 5+, that attack fails</characteristic>
           </characteristics>
         </profile>
         <profile name="3 Curtain’s Fall" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="8429-07bd-099c-7883">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">Each time you roll a D6 for Mocking Misstep for this unit, you may reroll the result.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">Each time you roll a D6 for Mocking Misstep for this unit, you may reroll the result. After this unit finishes a Reposition, if it had Stuck In, it does not lose it.</characteristic>
           </characteristics>
         </profile>
         <profile name="1 Webway Virtuosos" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="0623-7726-9761-14f3">
@@ -164,7 +145,7 @@
         </profile>
         <profile name="6 Cegorach’s Favour" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="c057-fd2c-7b76-5731">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After an enemy unit’s Move step, you may roll a D6. On a 5+, this unit may Fall Back.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After an enemy unit’s Move step, you may roll a D6. On a 5+, this unit may Reposition. After this unit finishes a Reposition, if it had Stuck In, it does not lose it. </characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -429,13 +410,19 @@ c) TWILIGHT TROUPE</characteristic>
         </profile>
         <profile name="Immaculate Choreography" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="71d5-b598-ee4e-1c0d">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s Move step, you may select any other LIGHT TROUPE, DARK TROUPE or TWILIGHT TROUPE unit which is not ready, is visible to this unit and has not been selected for any Immaculate Choreography this battle round. If you do, until the End step, this unit gains the following abilities:
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s Move step, you may select another TROUPE unit visible to this unit, and select ‘Perform’, ‘Accompany’, or ‘Await  Cue’ from below.
 
 
-Awaiting Cue: After this unit gains this ability, you may have this unit become ready. If you do, skip the Attacks step.
+Perform: This unit gains the following ability until the End step: 
 
 
-Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for that attack.</characteristic>
+      Blooming Carnage: For each attack made for this unit, reroll a Hit Roll of 1 for that attack.
+
+
+Accompany: The selected unit becomes ready, then skip this turn’s  Attacks step.
+
+
+Await Cue: This unit becomes ready, then skip this turn’s Attacks step.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -578,7 +565,7 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
                   <entryLinks>
                     <entryLink import="true" name="Neuro Disruptor" hidden="false" id="c678-2bec-7635-6cbc" type="selectionEntry" targetId="7dc0-1f7b-a49c-295b">
                       <modifiers>
-                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
@@ -766,7 +753,7 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
                           <entryLinks>
                             <entryLink import="true" name="Neuro Disruptor" hidden="false" id="98df-5ad3-ce11-a6e1" type="selectionEntry" targetId="7dc0-1f7b-a49c-295b">
                               <modifiers>
-                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                 <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
                               <constraints>
@@ -796,7 +783,12 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
       <profiles>
         <profile name="Twilight" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4c3f-62dd-3e12-7b95">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Each time you roll a D6 for Mocking Misstep for this unit, that roll is successful on a 4+ (instead of 5+)</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 2” of a terrain piece, for each roll for Mocking Misstep for this unit, improve that roll by 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Changeable Performance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="60f6-b909-ecc1-70a8">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 2” of a terrain piece, for each roll for Mocking Misstep for visible friendly units, that roll is successful on a 5+.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -863,7 +855,7 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
         </profile>
         <profile name="Path of Damnation" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="319e-bc82-6484-cad1">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, add 1 D6 to that roll.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for this unit, add 1 D6 to that roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -887,16 +879,17 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
                 <profile name="Solitaire&apos;s Embrace" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="c725-b8d6-d4a4-ae26">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Precision</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Isolate, Pierce</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Isolate" id="ea62-13e5-5c30-864e" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+                <infoLink name="Pierce" id="ea62-13e5-5c30-864e" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                <infoLink name="Isolate" id="d3aa-e8c4-748c-385b" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Solitaire&apos;s Caress" hidden="false" id="7c39-ef3b-ad88-00b6">
@@ -908,16 +901,17 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
                 <profile name="Solitaire&apos;s Caress" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="09ec-5382-af07-405f">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Precision</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Isolate, Pierce</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <infoLinks>
                 <infoLink name="Isolate" id="5ed9-d835-251d-fe52" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+                <infoLink name="Pierce" id="1090-8379-434f-0075" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
@@ -952,7 +946,7 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
       <profiles>
         <profile name="Incomparable Tempo" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4ca7-5093-a89b-68f2">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March, if that move ended at least 14” away from where it started, until the next time this unit Activates, after a wound is assigned to a model in this unit, roll a D6. On a 5+, that attack fails.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes a March, if that move ended at least 10” away from where it started, until the next time this unit Activates, after a wound is assigned to a model in this unit, roll a D6. On a 5+, that attack fails.</characteristic>
           </characteristics>
         </profile>
         <profile name="Jet Bike" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b217-fdee-87b7-cb5f">
@@ -1163,7 +1157,7 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
                   <entryLinks>
                     <entryLink import="true" name="Neuro Disruptor" hidden="false" id="2385-7b88-9922-21bc" type="selectionEntry" targetId="7dc0-1f7b-a49c-295b">
                       <modifiers>
-                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
@@ -1261,7 +1255,7 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
                           <entryLinks>
                             <entryLink import="true" name="Neuro Disruptor" hidden="false" id="3e13-9563-89f8-ab63" type="selectionEntry" targetId="7dc0-1f7b-a49c-295b">
                               <modifiers>
-                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                 <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
                               <constraints>
@@ -1385,7 +1379,15 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
       <profiles>
         <profile name="Dark" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c21b-7e40-0871-d108">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each of this unit’s attacks, a Hit Roll of 5+ for that attack causes an additional hit.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit Activates, all enemy units not visible to this unit gain the following ability until the End step:
+
+
+Captive Audience: For each attack that targets this unit, a Hit Roll of 5+ for that attack causes an additional hit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Devious Performance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9993-0bbe-1a00-1a56">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there is an enemy unit within 24” of and not visible to this unit, for each roll for Mocking Misstep for visible friendly units, that roll is successful on a 5+.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1549,7 +1551,7 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
                           <entryLinks>
                             <entryLink import="true" name="Neuro Disruptor" hidden="false" id="86b5-955f-ff5a-5219" type="selectionEntry" targetId="7dc0-1f7b-a49c-295b">
                               <modifiers>
-                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                 <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
                               <constraints>
@@ -1582,12 +1584,17 @@ Carnage Bloom: For each attack made for this unit, reroll a Hit Roll of 1 for 
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 12” of and visible to any enemy units, this unit gains Resilient 5+.</characteristic>
           </characteristics>
         </profile>
+        <profile name="Bold Performance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="a3c3-7d74-277b-d9db">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 24” of and visible to any enemy units, for each roll for Mocking Misstep for visible friendly units, that roll is successful on a 5+.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Resilient (X)" id="79f8-6e6d-6d61-e9df" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.5" hidden="false" id="7e19-64a2-0bf1-e5d8" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.0" hidden="false" id="7e19-64a2-0bf1-e5d8" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="1295-e31a-c988-78d3" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
