@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="750c-5fc9-13d4-8be3" name="Death Guard" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="9" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="750c-5fc9-13d4-8be3" name="Death Guard" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.0.0" hidden="false" id="6c0e-086e-521b-782e" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.0" hidden="false" id="6c0e-086e-521b-782e" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="de1e-337f-a456-8e31" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -45,7 +45,7 @@
         </profile>
         <profile name="2 Blighted Pathogens" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="440d-3cb4-6bfd-c916">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select any friendly unit within 14” of this unit. Until the next time this unit is Activated or dies, enemy units within 14” of the selected unit gain Nurgle’s Fruit.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a point on the battlefield within 21” of this unit. Until the next time this unit is Activated or dies, enemy units within 14” of the selected point gain Nurgle’s Fruit.</characteristic>
           </characteristics>
         </profile>
         <profile name="3 Gift of Contagion" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="e894-0d5a-083d-c75b">
@@ -101,7 +101,7 @@
         </profile>
         <profile name="6 Cornucopia of Corruption" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="5664-e1ae-fac5-44ac">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Move step, all enemy units within 7” suffers 3D3 Suppression. Then, all enemy units within 7” of this unit and Suppressed X, that unit suffers SW equal to X+D3.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Move step, all enemy units within 7” of this unit suffer 3D3 Suppression. Then, each enemy unit with Suppressed X within 7” of this unit suffers SW equal to X.</characteristic>
           </characteristics>
         </profile>
         <profile name="5 Sigil of Decay" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="2c28-da20-4303-09e5">
@@ -147,7 +147,7 @@
       <profiles>
         <profile name="Mantle of Contagion" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b582-6048-4ac0-c42a">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack that targets an enemy unit within 7”, add 1 to the Wound Roll of that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack that targets an enemy unit within 21&quot; of this unit, reroll a Wound Roll of 1 for that attack.</characteristic>
           </characteristics>
         </profile>
         <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="7253-8437-9cf1-9aa1">
@@ -157,6 +157,11 @@ a) DEATHSHROUD TERMINATORS
 b) BLIGHTLORD TERMINATORS</characteristic>
           </characteristics>
         </profile>
+        <profile name="New Profile" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="c4c4-9028-6e49-47aa">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Resilient (X)" id="62b8-39a2-4cc5-7c33" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
@@ -164,15 +169,14 @@ b) BLIGHTLORD TERMINATORS</characteristic>
             <modifier type="set" value="Resilient (5+)" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Heavy Armour" id="e208-9681-add1-2e88" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
-        <infoLink name="Nurgle’s Gifts" id="0ceb-1459-b877-db3d" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Unstoppable" id="e208-9681-add1-2e88" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Teleport Homer" id="0ceb-1459-b877-db3d" hidden="false" type="profile" targetId="77ce-0080-b298-0daa"/>
+        <infoLink name="Nurgle’s Gifts" id="d713-7ed0-22a9-ea2a" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Heavy Armour" id="70d9-cfa4-daec-aa1d" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Teminators" hidden="false" id="a0d9-e617-2fa4-fbae" type="selectionEntryGroup" targetId="b982-24fc-9f5e-6409"/>
-      </entryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Lord of Contagion" hidden="false" id="21af-0583-77ad-792b">
           <constraints>
@@ -188,7 +192,7 @@ b) BLIGHTLORD TERMINATORS</characteristic>
               <entryLinks>
                 <entryLink import="true" name="Man Reaper" hidden="false" id="6785-6e7d-e9a6-7003" type="selectionEntry" targetId="e5b9-68cd-70c1-e0ef">
                   <modifiers>
-                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="7" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
               </entryLinks>
@@ -198,7 +202,7 @@ b) BLIGHTLORD TERMINATORS</characteristic>
                     <profile name="Plaguereaper Power Axe" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3db7-a615-0007-9dcf">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
@@ -219,7 +223,7 @@ b) BLIGHTLORD TERMINATORS</characteristic>
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
             </profile>
@@ -240,14 +244,12 @@ b) BLIGHTLORD TERMINATORS</characteristic>
       <profiles>
         <profile name="Mantle of Virulence" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="afb0-6994-168e-e568">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made by your heavy weapons which target an enemy unit within 14” of this unit, you may reroll a failed Hit Roll for that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made by your units’ ranged weapons which target an enemy unit within 14” of this unit, you may reroll a failed Hit Roll for that attack.</characteristic>
           </characteristics>
         </profile>
         <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="939a-735a-97d8-fcea">
           <characteristics>
-            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
-a) DEATHSHROUD TERMINATORS
-b) BLIGHTLORD TERMINATORS</characteristic>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit cannot attach to anything.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -257,14 +259,14 @@ b) BLIGHTLORD TERMINATORS</characteristic>
             <modifier type="set" value="Resilient (5+)" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Nurgle’s Gifts" id="dd5b-006f-b441-add1" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
+        <infoLink name="Teleport Homer" id="dd5b-006f-b441-add1" hidden="false" type="profile" targetId="77ce-0080-b298-0daa"/>
+        <infoLink name="Unstoppable" id="20f7-c180-750e-a707" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Heavy Armour" id="71ac-e218-29b1-63cc" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+        <infoLink name="Nurgle’s Gifts" id="4caa-9999-6f1c-9ef9" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Teminators" hidden="false" id="1279-20a5-ea00-ffb4" type="selectionEntryGroup" targetId="b982-24fc-9f5e-6409"/>
-      </entryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Lord of Virulence" hidden="false" id="dad3-fa33-495e-4fe8">
           <constraints>
@@ -299,7 +301,7 @@ b) BLIGHTLORD TERMINATORS</characteristic>
             <entryLink import="true" name="Plague Spewer" hidden="false" id="3c25-9ea0-b075-60f7" type="selectionEntry" targetId="844f-38f1-c894-d8ab">
               <modifiers>
                 <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
               </modifiers>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2f72-2aeb-e7f8-a5a2-min" includeChildSelections="false"/>
@@ -312,7 +314,7 @@ b) BLIGHTLORD TERMINATORS</characteristic>
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
             </profile>
@@ -357,7 +359,7 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
         <infoLink name="Plague" id="e1e3-c886-c8e4-e355" hidden="false" type="rule" targetId="7985-d278-b6c4-f53e"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="40"/>
+        <cost name="pts" typeId="points" value="60"/>
       </costs>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Foul Blightspawn" hidden="false" id="75b7-fa16-871b-2786">
@@ -657,7 +659,7 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
       <profiles>
         <profile name="Plague Wind" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="8ac2-5497-1042-2b32">
           <characteristics>
-            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, this unit’s M is improved by 3” until the End step.</characteristic>
+            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, until the End step, for each Move Roll made for this unit, add 2D3 to that roll.</characteristic>
           </characteristics>
         </profile>
         <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="dacb-115e-4108-8dfd">
@@ -704,7 +706,7 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest result of this unit’s last Psychic Test.</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest dice result of this unit’s last Psychic Test.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -755,7 +757,7 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
         </profile>
         <profile name="Instil Vitality" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c820-e951-70ed-0b2c">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">You may reroll Advance Rolls made for this unit.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">You may reroll Move Rolls made for this unit</characteristic>
           </characteristics>
         </profile>
         <profile name="Dolorous Peal" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4a4e-a460-c16d-07a4">
@@ -1287,7 +1289,7 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
       <profiles>
         <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f1b6-ea3b-d634-94d9">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Plagueburst Mortar, if you have no ready units except units with Artillery Support, you may instead target an enemy unit within 16&quot; of and visible to any of your infantry units within 16&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Plagueburst Mortar, if you have no ready units except units with Artillery Support, you may instead target an enemy unit within 24&quot; of and visible to any of your infantry units within 24&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1298,7 +1300,8 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
           </modifiers>
         </infoLink>
         <infoLink name="Nurgle’s Gifts" id="cfb9-2cd6-a687-4c8f" hidden="false" type="profile" targetId="1d15-546a-3644-21db"/>
-        <infoLink name="Suppressive (X)" id="8305-dc1c-0342-17ab" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Titan" id="8305-dc1c-0342-17ab" hidden="false" type="rule" targetId="8f09-c87f-c86c-8cfc"/>
+        <infoLink name="Suppressive (X)" id="70a6-18a1-8958-3099" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Plagueburst Crawler" hidden="false" id="44f1-5410-66be-ed24">
@@ -1335,10 +1338,10 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                     <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">16</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Blast 5, Plague, Enemy units within 8” of this unit cannot be selected as targets for this weapon.</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Blast 7, Plague, This weapon can only select targets for its attacks once per battle round.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1367,10 +1370,10 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
                     <profile name="Entropy Cannons" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="87ea-acaf-ed6e-6c62">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">9</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+1</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+3</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
                       </characteristics>
                     </profile>
@@ -1384,7 +1387,7 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
                     <profile name="Plaguespitters" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f9ab-0186-378a-fadd">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -1412,7 +1415,7 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
                     <profile name="Heavy Slugger" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3a73-a287-c7c4-ff94">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -1430,8 +1433,8 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
                     <profile name="Rothail Volley Gun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ee32-5e48-6fe4-fa33">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Plague</characteristic>
@@ -1450,8 +1453,8 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
             <profile name="Plagueburst Crawler" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="fc9c-f9e3-03e3-7137">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">9</characteristic>
-                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">11</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
               </characteristics>
             </profile>
@@ -1463,7 +1466,7 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
   <sharedProfiles>
     <profile name="Festering Advance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="944e-46dd-e901-73d1">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for your units, roll 3D3 instead of 2D6. Additionally, during a March, your Death Guard units may move up to an additional 3” if that move would end within 4” of any enemy units with Nurgle’s Fruit.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for your Death Guard units, roll 2D3 instead of 2D6. Additionally, during an Advance, your Death Guard units may move up to an additional 3” if that move would end within 4” of any enemy units with Nurgle’s Fruit.</characteristic>
       </characteristics>
     </profile>
     <profile name="Nurgle’s Gifts" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1d15-546a-3644-21db">
@@ -1478,7 +1481,7 @@ b) INEXORABLE PLAGUE MARINES</characteristic>
     </profile>
     <profile name="Plaguebringers" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1678-14a0-a939-cba2">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While enemy units are within 14” of this unit, those units gain:
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While enemy units are within 14” of this unit, those units and enemy units within 7” of those units gain:
 
 
 Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targeting this unit, reroll Wound Rolls of 1 for that attack.</characteristic>
@@ -1499,7 +1502,7 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
         <profile name="Man Reaper" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="721e-790d-ac1e-57cc">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -2008,7 +2011,7 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Septic Plague Marines" hidden="false" id="da3c-e19b-ad00-3529" sortIndex="1">
@@ -2135,7 +2138,6 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink import="true" name="Icon of Despair" hidden="false" id="4038-cc01-828c-2172" type="selectionEntry" targetId="17c4-18d0-db8d-251c"/>
                 <entryLink import="true" name="Blight Grenade" hidden="false" id="8efe-d51b-79e7-7160" type="selectionEntry" targetId="b2d1-1122-5503-1e0f">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="e27c-f797-3d64-0ec3" includeChildSelections="true"/>
@@ -2146,6 +2148,9 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Icon of Despair" hidden="false" id="4038-cc01-828c-2172" type="selectionEntry" targetId="17c4-18d0-db8d-251c"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Inexorable Plague Marines" hidden="false" id="5950-b6c2-572b-45cf" sortIndex="2">
       <costs>
@@ -2246,23 +2251,49 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8bb0-56dc-171b-bb8f" includeChildSelections="false"/>
                           </constraints>
                           <entryLinks>
-                            <entryLink import="true" name="Blight Launcher" hidden="false" id="dc06-4df2-0880-7838" type="selectionEntry" targetId="b0b7-68db-5952-a972" sortIndex="1"/>
-                            <entryLink import="true" name="Plague Spewer" hidden="false" id="87b7-094f-993c-6f1d" type="selectionEntry" targetId="844f-38f1-c894-d8ab" sortIndex="2"/>
-                            <entryLink import="true" name="Flail of Corruption" hidden="false" id="dad4-e6bf-e23f-df32" type="selectionEntry" targetId="cf45-e281-1709-6e78" sortIndex="3"/>
-                            <entryLink import="true" name="Great Plague Cleaver" hidden="false" id="07c6-b138-a47b-d3fd" type="selectionEntry" targetId="b04f-81c2-cd03-0d71" sortIndex="4"/>
+                            <entryLink import="true" name="Blight Launcher" hidden="false" id="dc06-4df2-0880-7838" type="selectionEntry" targetId="b0b7-68db-5952-a972" sortIndex="1">
+                              <constraints>
+                                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="f8f9-9bc9-1b58-fd89" includeChildSelections="true"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="Plague Spewer" hidden="false" id="87b7-094f-993c-6f1d" type="selectionEntry" targetId="844f-38f1-c894-d8ab" sortIndex="2">
+                              <constraints>
+                                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="d4cc-ddbd-d318-0425" includeChildSelections="true"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="Flail of Corruption" hidden="false" id="dad4-e6bf-e23f-df32" type="selectionEntry" targetId="cf45-e281-1709-6e78" sortIndex="3">
+                              <constraints>
+                                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="9d10-9181-d867-4942" includeChildSelections="true"/>
+                              </constraints>
+                            </entryLink>
+                            <entryLink import="true" name="Great Plague Cleaver" hidden="false" id="07c6-b138-a47b-d3fd" type="selectionEntry" targetId="b04f-81c2-cd03-0d71" sortIndex="4">
+                              <constraints>
+                                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="7684-dab7-6e1a-bc59" includeChildSelections="true"/>
+                              </constraints>
+                            </entryLink>
                             <entryLink import="true" name="Meltagun" hidden="false" id="080b-0c8a-73ee-f616" type="selectionEntry" targetId="4260-66c2-4887-4117" sortIndex="5">
                               <modifiers>
                                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                 <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                               </modifiers>
+                              <constraints>
+                                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="daa5-d946-8e20-a235" includeChildSelections="true"/>
+                              </constraints>
                             </entryLink>
                             <entryLink import="true" name="Plasma Gun" hidden="false" id="2745-df23-4f99-d215" type="selectionEntry" targetId="af5b-b208-be5c-ba5b" sortIndex="6">
                               <modifiers>
                                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                 <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                               </modifiers>
+                              <constraints>
+                                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="43a2-bebc-9dc5-f9bf" includeChildSelections="true"/>
+                              </constraints>
                             </entryLink>
-                            <entryLink import="true" name="Plague Belcher" hidden="false" id="081c-dda4-0a7c-1e46" type="selectionEntry" targetId="433b-6edc-670e-75fa" sortIndex="7"/>
+                            <entryLink import="true" name="Plague Belcher" hidden="false" id="081c-dda4-0a7c-1e46" type="selectionEntry" targetId="433b-6edc-670e-75fa" sortIndex="7">
+                              <constraints>
+                                <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="d604-e343-3e3b-92a7" includeChildSelections="true"/>
+                              </constraints>
+                            </entryLink>
                           </entryLinks>
                         </selectionEntryGroup>
                       </selectionEntryGroups>
@@ -2340,7 +2371,6 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink import="true" name="Icon of Despair" hidden="false" id="9ec3-9b21-f3ff-5b03" type="selectionEntry" targetId="17c4-18d0-db8d-251c"/>
                 <entryLink import="true" name="Blight Grenade" hidden="false" id="8886-50e7-3432-ed44" type="selectionEntry" targetId="b2d1-1122-5503-1e0f">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="43d2-f8f7-560c-9ff6" includeChildSelections="true"/>
@@ -2351,6 +2381,9 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Icon of Despair" hidden="false" id="9ec3-9b21-f3ff-5b03" type="selectionEntry" targetId="17c4-18d0-db8d-251c"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Poxwalkers" hidden="false" id="145f-de64-0f6b-1682" sortIndex="5">
       <costs>
@@ -2412,7 +2445,7 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
         </profile>
         <profile name="Curse of the Walking Pox" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6ef9-5da0-b7cd-7419">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy unit dies within 7” of this unit with Suppression X, this unit Heals X. If this unit Heals this way and is already its starting Health, instead add 1 POXWALKERS model to this unit.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy unit dies within 7” of this unit with Suppression X, this unit Heals X. If this unit Heals this way and is already its starting Health, instead add X POXWALKERS models to this unit each time it would otherwise Heal X.</characteristic>
           </characteristics>
         </profile>
         <profile name="Wailing Despair" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c564-52df-c8b4-e6c0">
@@ -2429,6 +2462,39 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
     <entryLink import="true" name="Inexorable Plague Marines" hidden="false" id="ccdf-f7f2-7783-545d" type="selectionEntry" targetId="5950-b6c2-572b-45cf" sortIndex="10"/>
     <entryLink import="true" name="Blightlord Terminators" hidden="false" id="d50c-544a-f582-006e" type="selectionEntry" targetId="35ec-7f14-6b26-12cc" sortIndex="13"/>
     <entryLink import="true" name="Deathshroud Terminators" hidden="false" id="4b41-7acf-eac0-bfed" type="selectionEntry" targetId="70d2-4be8-2c4f-0c7e" sortIndex="14"/>
+    <entryLink import="true" name="Basilisk" hidden="false" id="9026-c8af-6c0d-ce7f" type="selectionEntry" targetId="66ef-3d00-9f54-1349">
+      <costs>
+        <cost name="pts" typeId="points" value="140"/>
+      </costs>
+    </entryLink>
+    <entryLink import="true" name="Chaos Lord" hidden="false" id="06ca-924a-ce0a-1c88" targetId="e83a-c173-fcbc-e480" type="selectionEntry"/>
+    <entryLink import="true" name="Terminator Chaos Lord" hidden="false" id="f282-fe9e-006c-d126" targetId="5082-9beb-8bed-0edd" type="selectionEntry"/>
+    <entryLink import="true" name="Terminator Chaos Sorcerer Lord" hidden="false" id="a2b6-bd73-445e-b0e7" targetId="a749-12e2-8031-6ccc" type="selectionEntry"/>
+    <entryLink import="true" name="Chaos Sorcerer" hidden="false" id="539a-cbf9-9e8f-11c1" targetId="a8dd-0986-4d63-f784" type="selectionEntry"/>
+    <entryLink import="true" name="Master of Possession" hidden="false" id="7e73-0b9a-e018-f42c" targetId="b778-4e85-406a-3bce" type="selectionEntry"/>
+    <entryLink import="true" name="Warpsmith" hidden="false" id="79c1-3235-ef57-aa59" targetId="7353-5ab5-a476-1079" type="selectionEntry"/>
+    <entryLink import="true" name="Chaos Apothecary" hidden="false" id="a393-a7a9-a1dd-300e" targetId="7f39-2d61-3915-9c0d" type="selectionEntry"/>
+    <entryLink import="true" name="Legionaries" hidden="false" id="c77e-8d73-5d5d-6c8e" type="selectionEntry" targetId="286f-70e0-ffba-da53"/>
+    <entryLink import="true" name="Cultists" hidden="false" id="7e0b-148b-6b82-d509" type="selectionEntry" targetId="e6fe-5cc9-bb21-2430"/>
+    <entryLink import="true" name="Terminators Squad" hidden="false" id="c232-754a-64f2-fec9" targetId="f846-8b20-216f-1a8c" type="selectionEntry"/>
+    <entryLink import="true" name="Possessed" hidden="false" id="5c18-51be-15dc-69ef" type="selectionEntry" targetId="71f1-0dbd-829d-7748"/>
+    <entryLink import="true" name="Breacher Siege Squad" hidden="false" id="d95e-69ea-9c27-09b9" targetId="f711-cdab-7f3f-3ccf" type="selectionEntry"/>
+    <entryLink import="true" name="Rhino" hidden="false" id="a62c-c25f-c40a-c735" targetId="9efc-f95b-4cd0-65b7" type="selectionEntry"/>
+    <entryLink import="true" name="Raptors" hidden="false" id="4bdf-bea4-2028-1c89" targetId="0c99-5b95-932e-a436" type="selectionEntry"/>
+    <entryLink import="true" name="Chaos Bikers" hidden="false" id="23bb-3fbc-7397-8537" targetId="8193-b177-1315-8d65" type="selectionEntry"/>
+    <entryLink import="true" name="Chosen" hidden="false" id="7218-c593-116f-2a0c" type="selectionEntry" targetId="970c-0d8e-c281-ed7b"/>
+    <entryLink import="true" name="Defiler" hidden="false" id="c103-e232-572e-4f2b" targetId="3941-6f57-3bfa-5714" type="selectionEntry"/>
+    <entryLink import="true" name="Hellbrute" hidden="false" id="98a9-0089-c066-3068" targetId="c95a-f982-95b6-6779" type="selectionEntry"/>
+    <entryLink import="true" name="Havocs" hidden="false" id="094a-d7d5-b0fb-c2be" targetId="501d-eaf0-34a6-685e" type="selectionEntry"/>
+    <entryLink import="true" name="Warp Talons" hidden="false" id="ddb3-bb94-8f66-c22a" type="selectionEntry" targetId="82c3-ad8e-81a6-af4c"/>
+    <entryLink import="true" name="Obliterators" hidden="false" id="bd05-12cc-297b-fb54" targetId="1b1f-15ed-7bd7-1315" type="selectionEntry"/>
+    <entryLink import="true" name="Master Of Executions" hidden="false" id="7b78-f8da-686a-f7d5" targetId="496d-ce88-6ee1-ecfc" type="selectionEntry"/>
+    <entryLink import="true" name="Forgefiend" hidden="false" id="e7a8-8621-1f7a-bfb0" targetId="f3e9-8f6b-3f25-734b" type="selectionEntry"/>
+    <entryLink import="true" name="Predator" hidden="false" id="8977-91ab-2541-cf67" targetId="9173-8b2c-7c1d-1dbd" type="selectionEntry"/>
+    <entryLink import="true" name="Wardog" hidden="false" id="d4c7-0675-22b1-2e07" targetId="acb0-c72d-4022-5cc3" type="selectionEntry"/>
+    <entryLink import="true" name="Vindicator" hidden="false" id="9d57-7996-428a-367e" targetId="7aa0-644a-fffd-220a" type="selectionEntry"/>
+    <entryLink import="true" name="Contemptor Dreadnaught" hidden="false" id="50fa-3865-7e5f-66f4" targetId="ce1c-87e1-a73d-1932" type="selectionEntry"/>
+    <entryLink import="true" name="Leviathan Dreadnaught" hidden="false" id="f76b-ca15-1a16-9ca5" targetId="a7aa-c8f5-02ab-e4bc" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Teminators" id="b982-24fc-9f5e-6409" hidden="false">
@@ -2450,4 +2516,7 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
+  <catalogueLinks>
+    <catalogueLink type="catalogue" name="CSM Arsenal" id="9219-9fe5-5894-ba2b" targetId="149d-ebd0-bba9-e9df" importRootEntries="false"/>
+  </catalogueLinks>
 </catalogue>
