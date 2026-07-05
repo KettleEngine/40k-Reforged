@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.0" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.1" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="0364-85c9-a87f-e090" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -897,9 +897,9 @@ This unit does not count towards the Army List’s leader unit capacity</charact
 Tellyporta: After this unit is Activated in reserves, you may use the ‘tellyporta’. If you do, Deploy this unit wholly within 3D6” of your TELLYPORTA MEKBOY unit (if able) and, during this turn&apos;s Move step, do not make a Move Roll and this unit cannot Advance or Reposition.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Dats Be’a" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2186-1949-d34d-f4f4">
+        <profile name="Off Ye Go" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2186-1949-d34d-f4f4">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select a vehicle unit within 3” of this unit or a unit it is embarked within. The selected unit Heals D3+1.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s End step, if this turn was not your second turn in a row, take another turn.</characteristic>
           </characteristics>
         </profile>
         <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="b864-45cb-8773-7f66">
@@ -915,9 +915,10 @@ Tellyporta: After this unit is Activated in reserves, you may use the ‘tellyp
           </modifiers>
         </infoLink>
         <infoLink name="Solid Greenskin" id="c344-dd70-7bce-15f0" hidden="false" type="profile" targetId="c35f-6848-d4c4-faeb"/>
+        <infoLink targetId="8111-4d6b-4a50-773c" id="c457-38ef-ad8c-8576" type="profile" name="Dats Be’a" hidden="false"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Tellyporta Mekboy" hidden="false" id="e3f5-ae92-ab6f-1522">
+        <selectionEntry type="model" import="true" name="Tellyporta Mekboy" hidden="false" id="e3f5-ae92-ab6f-1522">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dd4c-906a-aa53-af1f-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dd4c-906a-aa53-af1f-max" includeChildSelections="false"/>
@@ -950,10 +951,10 @@ Tellyporta: After this unit is Activated in reserves, you may use the ‘tellyp
           <profiles>
             <profile name="Tellyporta Mekboy" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b577-0d13-448b-b9aa">
               <characteristics>
-                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">6+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
-                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1547,7 +1548,7 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
         </profile>
         <profile name="Zzap" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="7661-6a0b-5e92-f061">
           <characteristics>
-            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select the closest enemy unit within 18” of this unit. The selected unit suffers 1+D3 SW.</characteristic>
+            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, roll a D3. Until the End step, if the result was 1, change this unit&apos;s Staff weapon’s Tp to CQ, or Aslt if it was 2, or Hv if it was 3. That weapon also gains Shred. until the End step.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1955,7 +1956,7 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
       <profiles>
         <profile name="General Direction" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="754e-52d5-81cb-bd87">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Each time this unit’s models move during its Move step, its models must each end that move at least 10” from where they started.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Each time this unit’s models move during an Advance, its models must each end that move at least X” from where they started where X is equal to the Move Roll for that Advance.</characteristic>
           </characteristics>
         </profile>
         <profile name="Jet Rotor Blades" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="9d09-065c-cedc-5e6f">
@@ -2434,6 +2435,292 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="BannerNob" hidden="false" id="6fe7-4e40-0929-3b09">
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="7a92-4559-d8b9-2c56" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="3cea-6037-02af-5d00" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="40"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="BannerNob" hidden="false" id="c247-be00-4942-facb">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7dae-af61-f8c5-f3ce-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7dae-af61-f8c5-f3ce-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="BannerNob" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="4ab4-b3b6-d151-754b">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">6+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Banna" hidden="false" id="3a0f-774e-1fc3-e4f1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3829-2f16-1180-ff88-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3829-2f16-1180-ff88-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Banna" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="cfde-32b4-921e-524d">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Go On!" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e222-6465-0a89-2c35">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s End step, if this turn was not your second turn in a row, take another turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Nevamind Dat!" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c3b4-7174-1341-ad8d">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Resolve Test made for a friendly Orks infantry unit visible to this unit, add 1 to that Resolve Test.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="315d-e6f0-8f26-86c9" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Solid Greenskin" id="208b-8263-01bb-36f5" hidden="false" type="profile" targetId="c35f-6848-d4c4-faeb"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Wartrakk" hidden="false" id="1650-db6b-4475-27a7">
+      <categoryLinks>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="2820-0fe1-59ca-6a9f" primary="true" name="Support"/>
+        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="9649-93f0-31dd-6c7e" primary="false" name="Vehicle"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Wartrakk" hidden="false" id="8042-50b2-1e85-cef5">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cc2d-0d41-fbba-31a6-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc2d-0d41-fbba-31a6-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Wartrakk" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="8d1e-3fbb-18b6-11df">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Big Shoota" hidden="false" id="f386-b471-22d6-a2f4" type="selectionEntry" targetId="cc57-8885-c7c0-c76a">
+              <modifiers>
+                <modifier type="set" value="28" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="452f-e325-47f0-09dd-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="452f-e325-47f0-09dd-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Rokkit" hidden="false" id="0a77-ad00-f1b0-7a2f" type="selectionEntry" targetId="31f4-a334-113c-c54b">
+              <modifiers>
+                <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4391-8bb6-7a12-6db9-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4391-8bb6-7a12-6db9-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Rugged Trakks" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c20d-fdd1-de63-ad23">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated, you may &apos;go off-road&apos;. If you do, until the End step, this unit gains Walker and, roll 1 fewer dice for each Move Roll made for it. Then, after the Attacks step, this unit may Reposition.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="41dd-89d1-f52d-14dc" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Bigboss" hidden="false" id="9835-1864-bd24-f9d4">
+      <categoryLinks>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="2e2e-d621-5aa4-6707" primary="true" name="Elites"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="e998-19ac-5e3c-3959" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="60"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Bigboss" hidden="false" id="e205-8365-8eb8-6f8f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f3fc-6fa6-d846-9ba0-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f3fc-6fa6-d846-9ba0-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Bigboss" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="73e2-24e5-6138-b405">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">6+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Big Choppa" hidden="false" id="45a0-abad-3d57-f23f" type="selectionEntry" targetId="b19b-005f-c906-20b7">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6a21-1ec8-35c8-8395-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a21-1ec8-35c8-8395-max" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Follow Us" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="fd74-1533-75b6-ed8c">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s End step, if this turn was not your second turn in a row, take another turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Wherez Da Biggun" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b5ce-7ff8-9f7f-e29d">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may Deploy it within 1” of any of your ORK BOYZ units. If you do, until the End step, for each attack this unit makes which targets an enemy unit with a Toughness of 5 or greater, add 1 to the Wound Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="0560-c7b0-1a99-b39a" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Solid Greenskin" id="6997-0a50-d90b-64d9" hidden="false" type="profile" targetId="c35f-6848-d4c4-faeb"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Big Mek Dakkarig" hidden="false" id="d1b4-0e1c-7daa-9d0e">
+      <categoryLinks>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="1510-9d90-cd96-430b" primary="true" name="Support"/>
+        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="8789-4aac-5f61-99af" primary="false" name="Vehicle"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Big Mek Dakkarig" hidden="false" id="f26c-2fe0-732d-a9ed">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6a06-4f21-3dc5-fe39-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a06-4f21-3dc5-fe39-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Big Mek Dakkarig" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="a27f-c83e-feba-3c48">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">7</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Rokkit" hidden="false" id="aa31-98d6-d219-f160" type="selectionEntry" targetId="31f4-a334-113c-c54b">
+              <modifiers>
+                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2623-91ae-ee92-81fa-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2623-91ae-ee92-81fa-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Stompy Feet " hidden="false" id="cefa-e27b-9517-7715">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="84d0-6884-aaa4-9b18-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="84d0-6884-aaa4-9b18-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Stompy Feet " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4b96-ae32-7277-87bb">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Blitzkannon " hidden="false" id="9665-b68c-901c-95d3">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4418-ffba-447d-8feb-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4418-ffba-447d-8feb-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Blitzkannon " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5c02-4ef0-e7eb-b79a">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">16</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Dakka</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Dakka" id="9c93-1db3-2fe3-22b0" hidden="false" type="rule" targetId="0c95-a6ed-a147-6b41"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Surprisingly Accurate" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ae89-9e9b-e901-7289">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a Move Roll made for this unit during its Move step, you may discard the lowest result of that Move Roll. If you do, for each ranged attack made for this unit this turn, add 1 to the Hit Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Wherez Da Biggun" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="900d-8590-a68a-0927">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may Deploy it within 1” of any of your ORK BOYZ units. If you do, until the End step, for each attack this unit makes which targets an enemy unit with a Toughness of 5 or greater, add 1 to the Wound Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Resilient (X)" id="321b-8a04-e723-1a7d" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e">
+          <modifiers>
+            <modifier type="set" value="Resilient (5+)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Dats Be’a" id="7a0e-705e-4fab-f0a9" hidden="false" targetId="8111-4d6b-4a50-773c" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
     <profile name="WAAAGH!" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c9f0-afe5-0f2c-c9b1">
@@ -2452,6 +2739,11 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
     <profile name="Everyone! Ge’ In ‘ere!" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ad82-3c2d-6494-820e">
       <characteristics>
         <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is in engagement range of any enemy unit, your infantry units within 24” of this unit gain WAAAAGH!.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Dats Be’a" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8111-4d6b-4a50-773c">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select a vehicle unit within 4” of this unit or a unit it is embarked within. The selected unit Heals D3+1.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -3124,16 +3416,16 @@ Green Tide X: For each Move Roll made for this unit, roll X additional D6s, whe
                                 <profile name="Snipa" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="252b-200a-ba22-fc05">
                                   <characteristics>
                                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
                                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                                     <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
                                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Precision</characteristic>
+                                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Hunt</characteristic>
                                   </characteristics>
                                 </profile>
                               </profiles>
                               <infoLinks>
-                                <infoLink name="Isolate" id="f00c-3e50-5200-b77f" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+                                <infoLink name="Hunt" id="f00c-3e50-5200-b77f" hidden="false" type="rule" targetId="0f3a-7a60-a486-b805"/>
                               </infoLinks>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Kombi-Weapon" hidden="false" id="ebd6-b587-a29b-4643" sortIndex="7">
