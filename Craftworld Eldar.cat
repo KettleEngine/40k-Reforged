@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="32" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="33" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Foretold Foray" id="d0c2-99f6-070a-f4ed" hidden="false">
       <description>After rolling for initiative battle round 1, roll Strands of Fate XÂ where X is twice the number of leader units you have on the battlefield andÂ reserves.</description>
@@ -3720,7 +3720,7 @@ Graceless Foes:Â For each attack made targeting this unit, reroll Hit Roll of 1Â
             </entryLink>
           </entryLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup name="This model is also equipped with either:" id="2274-436c-bdc1-29af" hidden="false" defaultSelectionEntryId="7504-01f9-5f66-0f72">
+            <selectionEntryGroup name="Melee" id="2274-436c-bdc1-29af" hidden="false" defaultSelectionEntryId="7504-01f9-5f66-0f72">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="429f-19f8-4b8e-c2c9-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="429f-19f8-4b8e-c2c9-max" includeChildSelections="false"/>
@@ -3770,7 +3770,7 @@ Graceless Foes:Â For each attack made targeting this unit, reroll Hit Roll of 1Â
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
-            <selectionEntryGroup name="This model is equipped with either:" id="8588-5df6-2f67-e0b0" hidden="false" defaultSelectionEntryId="cbaa-26c9-8cc6-f4ed">
+            <selectionEntryGroup name="Gun" id="8588-5df6-2f67-e0b0" hidden="false" defaultSelectionEntryId="cbaa-26c9-8cc6-f4ed">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8550-22d0-8960-f24c-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8550-22d0-8960-f24c-max" includeChildSelections="false"/>
@@ -3847,9 +3847,8 @@ Graceless Foes:Â For each attack made targeting this unit, reroll Hit Roll of 1Â
                   <entryLinks>
                     <entryLink import="true" name="Prism Rifle" hidden="false" id="47a5-4faa-b19e-d5c8" type="selectionEntry" targetId="b092-d1e7-ff8e-dac4">
                       <modifiers>
-                        <modifier type="set" value="3D3+1" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2D3+1" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
                         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="16" field="571c-0471-2614-c57c" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="12c9-ce18-e8e8-69f6-min" includeChildSelections="false"/>
