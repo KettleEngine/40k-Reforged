@@ -613,6 +613,27 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Death Weaver" hidden="false" id="6141-e0d0-fd7b-84a2">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3544-e639-e0f7-0eca-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3544-e639-e0f7-0eca-max" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Death Weaver" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a893-2b5e-5e29-71ba">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Shred" id="cda2-0222-988c-5cc8" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Troupe Master" hidden="false" id="5801-0c51-8bbe-f4bc" type="selectionEntry" targetId="4022-69f2-afa5-0bc5"/>
@@ -1551,33 +1572,10 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
                 <selectionEntryGroup name="Weapon" id="7fd3-a5d8-da1d-0fd8" hidden="false" defaultSelectionEntryId="5daa-c43d-66b0-a8d9">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Exarch" hidden="false" id="ca1d-5a49-5e8e-58c6">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Powerblades" hidden="false" id="8fb1-757f-2f0f-d835">
-                          <profiles>
-                            <profile name="Powerblades" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0a94-c2e7-5596-7f33">
-                              <characteristics>
-                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                                <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
-                              </characteristics>
-                            </profile>
-                          </profiles>
-                          <infoLinks>
-                            <infoLink name="Pierce" id="18b7-53db-5ab8-5efa" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-                          </infoLinks>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c23d-90ed-31ec-78c6-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c23d-90ed-31ec-78c6-max" includeChildSelections="false"/>
-                          </constraints>
-                        </selectionEntry>
-                      </selectionEntries>
                       <selectionEntryGroups>
-                        <selectionEntryGroup name="Weapon" id="a23e-eb13-512b-0e56" hidden="false" defaultSelectionEntryId="083d-4c05-f2f5-d833">
+                        <selectionEntryGroup name="Weapon" id="a23e-eb13-512b-0e56" hidden="false" defaultSelectionEntryId="c484-578e-43b8-6959">
                           <selectionEntries>
-                            <selectionEntry type="upgrade" import="true" name="Quad Powerblades" hidden="false" id="9fea-6fc3-b574-f743" sortIndex="3">
+                            <selectionEntry type="upgrade" import="true" name="Quad Powerblades" hidden="false" id="9fea-6fc3-b574-f743" sortIndex="2">
                               <profiles>
                                 <profile name="Quad Powerblades" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="528b-3abf-190a-091f">
                                   <characteristics>
@@ -1594,7 +1592,7 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
                                 <infoLink name="Pierce" id="1107-9ef7-b22d-eb65" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                               </infoLinks>
                             </selectionEntry>
-                            <selectionEntry type="upgrade" import="true" name="Exarch Death Spinners" hidden="false" id="c484-578e-43b8-6959" sortIndex="2">
+                            <selectionEntry type="upgrade" import="true" name="Exarch Death Spinners" hidden="false" id="c484-578e-43b8-6959" sortIndex="1">
                               <profiles>
                                 <profile name="Exarch Death Spinners" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b937-fed3-e825-03b1">
                                   <characteristics>
@@ -1611,7 +1609,7 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
                                 <infoLink name="Shred" id="569e-0a54-1ed2-2acf" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
                               </infoLinks>
                             </selectionEntry>
-                            <selectionEntry type="upgrade" import="true" name="Dual Powerblades" hidden="false" id="2b5a-6919-07a6-12b1" sortIndex="4">
+                            <selectionEntry type="upgrade" import="true" name="Dual Powerblades" hidden="false" id="2b5a-6919-07a6-12b1" sortIndex="3">
                               <profiles>
                                 <profile name="Dual Powerblades" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="906a-64f8-f156-0439">
                                   <characteristics>
@@ -1627,8 +1625,11 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
                               <infoLinks>
                                 <infoLink name="Pierce" id="563a-d76f-4e45-27cf" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                               </infoLinks>
+                              <entryLinks>
+                                <entryLink import="true" name="Death Weaver" hidden="false" id="30d7-7a3c-91db-e318" targetId="6141-e0d0-fd7b-84a2" type="selectionEntry"/>
+                              </entryLinks>
                             </selectionEntry>
-                            <selectionEntry type="upgrade" import="true" name="Spinneret Rifle" hidden="false" id="7485-6787-a351-301f" sortIndex="5">
+                            <selectionEntry type="upgrade" import="true" name="Spinneret Rifle" hidden="false" id="7485-6787-a351-301f" sortIndex="4">
                               <profiles>
                                 <profile name="Spinneret Rifle" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="639f-530c-04e6-c4da">
                                   <characteristics>
@@ -1646,46 +1647,8 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
                                 <infoLink name="Shred" id="4e0d-9b5e-26e4-7026" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
                               </infoLinks>
                               <entryLinks>
-                                <entryLink import="true" name="Death Spinner" hidden="false" id="2cca-26b5-ace4-6218" type="selectionEntry" targetId="cf8a-26ed-56bd-dda3">
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7242-40ea-2c14-292c-min" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7242-40ea-2c14-292c-max" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
+                                <entryLink import="true" name="Death Weaver" hidden="false" id="d32b-d078-b92b-b5a3" targetId="6141-e0d0-fd7b-84a2" type="selectionEntry"/>
                               </entryLinks>
-                            </selectionEntry>
-                            <selectionEntry type="upgrade" import="true" name="Death Weaver" hidden="false" id="b2c7-8e23-9fc0-9a4a" sortIndex="1">
-                              <entryLinks>
-                                <entryLink import="true" name="Death Spinner" hidden="false" id="083d-4c05-f2f5-d833" type="selectionEntry" targetId="cf8a-26ed-56bd-dda3">
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="afe8-21af-4e39-e6aa-min" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afe8-21af-4e39-e6aa-max" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                              </entryLinks>
-                              <selectionEntries>
-                                <selectionEntry type="upgrade" import="true" name="Death Weaver" hidden="false" id="6141-e0d0-fd7b-84a2">
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3544-e639-e0f7-0eca-min" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3544-e639-e0f7-0eca-max" includeChildSelections="false"/>
-                                  </constraints>
-                                  <profiles>
-                                    <profile name="Death Weaver" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a893-2b5e-5e29-71ba">
-                                      <characteristics>
-                                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                                        <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
-                                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                                        <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
-                                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                                      </characteristics>
-                                    </profile>
-                                  </profiles>
-                                  <infoLinks>
-                                    <infoLink name="Shred" id="cda2-0222-988c-5cc8" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-                                  </infoLinks>
-                                </selectionEntry>
-                              </selectionEntries>
                             </selectionEntry>
                           </selectionEntries>
                           <constraints>
