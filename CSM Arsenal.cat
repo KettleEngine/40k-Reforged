@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
   </catalogueLinks>
@@ -3408,26 +3408,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                       </modifierGroups>
                     </entryLink>
                   </entryLinks>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="af1c-a070-0c0a-1f7a">
-                      <entryLinks>
-                        <entryLink import="true" name="Plasma Pistol" hidden="false" id="dbb1-5599-582b-0c17" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3660-3bd9-4479-453c" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bdf1-048d-ba50-e3d3" includeChildSelections="false"/>
-                          </constraints>
-                          <modifierGroups>
-                            <modifierGroup type="and">
-                              <modifiers>
-                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                              </modifiers>
-                            </modifierGroup>
-                          </modifierGroups>
-                        </entryLink>
-                      </entryLinks>
-                    </selectionEntry>
-                  </selectionEntries>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="fa15-4561-2e81-db1f" sortIndex="2">
                   <entryLinks>
@@ -3443,6 +3423,8 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f0d1-ece8-5658-106b-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0d1-ece8-5658-106b-max" includeChildSelections="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c62-6dfb-ef01-abe8-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c62-6dfb-ef01-abe8-max" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -3536,9 +3518,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
         <entryLink import="true" name="Champion of Chaos" hidden="false" id="c601-8156-10ef-35fb" type="selectionEntry" targetId="d39b-d0f0-66db-fe7f"/>
         <entryLink import="true" name="Leader" hidden="false" id="26fa-0a53-2066-db24" type="selectionEntryGroup" targetId="9c2e-ecf5-96b0-f116"/>
       </entryLinks>
-      <infoLinks>
-        <infoLink name="Teleport Homer" id="9082-aafb-0869-0ba4" hidden="false" type="profile" targetId="77ce-0080-b298-0daa"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Terminator Chaos Lord" hidden="false" id="5082-9beb-8bed-0edd" sortIndex="2">
       <categoryLinks>
