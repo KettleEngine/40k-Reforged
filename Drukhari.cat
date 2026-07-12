@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3346-57cc-888c-c1d6" name="Drukhari" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="25" revision="10" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3346-57cc-888c-c1d6" name="Drukhari" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="25" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.0" hidden="false" id="d4a4-79f5-d0c3-6cee" sortIndex="-1">
       <categoryLinks>
@@ -1159,7 +1159,7 @@ This unit may attach to a unit which already has an attached leader (other than 
         <infoLink name="Power from Pain" id="b99b-5d69-27b3-e051" hidden="false" type="profile" targetId="b06f-e1dd-55f1-f0e8"/>
       </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Reavers" id="538c-46b2-e9a9-8cd2" hidden="false" defaultSelectionEntryId="fd99-4902-a408-0fad">
+        <selectionEntryGroup name="Reavers" id="538c-46b2-e9a9-8cd2" hidden="false" defaultSelectionEntryId="4d17-cd96-cbed-45e4">
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="de33-6124-c2fd-f7df-min" includeChildSelections="false"/>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="de33-6124-c2fd-f7df-max" includeChildSelections="false"/>
@@ -1182,46 +1182,6 @@ This unit may attach to a unit which already has an attached leader (other than 
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8670-1a53-15fa-daf0-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8670-1a53-15fa-daf0-max" includeChildSelections="false"/>
                   </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Champion" hidden="false" id="e100-1aeb-cc76-5197" sortIndex="3">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="2318-3025-afc7-5046" includeChildSelections="true"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink import="true" name="Splinter Pistol" hidden="false" id="4895-fb46-1fe0-eb69" type="selectionEntry" targetId="c1e1-cb6d-2d98-2f2b">
-                          <modifiers>
-                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                          </modifiers>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="84f9-9dfb-17dc-cc14-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="84f9-9dfb-17dc-cc14-max" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <selectionEntryGroups>
-                        <selectionEntryGroup name="Melee" id="c0a4-3b16-9b33-f614" hidden="false" defaultSelectionEntryId="7f26-3f6f-20f8-4c8b">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e583-69a4-480a-a786-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e583-69a4-480a-a786-max" includeChildSelections="false"/>
-                          </constraints>
-                          <entryLinks>
-                            <entryLink import="true" name="Power Sword" hidden="false" id="7f26-3f6f-20f8-4c8b" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="1">
-                              <modifiers>
-                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                              </modifiers>
-                            </entryLink>
-                            <entryLink import="true" name="Agoniser" hidden="false" id="4ad8-5bfd-0203-3ba5" type="selectionEntry" targetId="4c06-5829-c3a6-f409" sortIndex="2">
-                              <modifiers>
-                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                              </modifiers>
-                            </entryLink>
-                          </entryLinks>
-                        </selectionEntryGroup>
-                      </selectionEntryGroups>
-                    </selectionEntry>
-                  </selectionEntries>
                   <selectionEntryGroups>
                     <selectionEntryGroup name="heavy Weapons" id="1d2a-24b7-7d81-dcd0" hidden="false" sortIndex="2">
                       <constraints>
@@ -1253,6 +1213,46 @@ This unit may attach to a unit which already has an attached leader (other than 
                   </modifiers>
                 </entryLink>
               </entryLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Champion" hidden="false" id="e100-1aeb-cc76-5197">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="2318-3025-afc7-5046" includeChildSelections="true"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Splinter Pistol" hidden="false" id="4895-fb46-1fe0-eb69" type="selectionEntry" targetId="c1e1-cb6d-2d98-2f2b">
+                      <modifiers>
+                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="84f9-9dfb-17dc-cc14-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="84f9-9dfb-17dc-cc14-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Melee" id="c0a4-3b16-9b33-f614" hidden="false" defaultSelectionEntryId="7f26-3f6f-20f8-4c8b">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e583-69a4-480a-a786-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e583-69a4-480a-a786-max" includeChildSelections="false"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="Power Sword" hidden="false" id="7f26-3f6f-20f8-4c8b" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="1">
+                          <modifiers>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="Agoniser" hidden="false" id="4ad8-5bfd-0203-3ba5" type="selectionEntry" targetId="4c06-5829-c3a6-f409" sortIndex="2">
+                          <modifiers>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2841,6 +2841,7 @@ Entertaining Spectacle: For each Move Roll made for your units within 12” of 
         <infoLink name="Graceful Acrobatics" id="6cdf-44dc-e3b6-b4ed" hidden="false" type="profile" targetId="245a-99df-d602-3b5a"/>
         <infoLink name="Lethal Celerity" id="37f1-053f-bc04-09e8" hidden="false" type="profile" targetId="0f7c-388c-93a3-aeaa"/>
         <infoLink name="Power from Pain" id="2df4-340e-6867-8eb7" hidden="false" type="profile" targetId="b06f-e1dd-55f1-f0e8"/>
+        <infoLink name="Walker" id="7d6d-0f4c-55a3-92e9" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Hekatarii Blades" hidden="false" id="2816-ab4f-5aa9-f2b3">
@@ -2999,6 +3000,7 @@ Entertaining Spectacle: For each Move Roll made for your units within 12” of 
         <infoLink name="Graceful Acrobatics" id="3c67-16f7-96c8-750f" hidden="false" type="profile" targetId="245a-99df-d602-3b5a"/>
         <infoLink name="Lethal Celerity" id="664e-2d1a-584b-08a5" hidden="false" type="profile" targetId="0f7c-388c-93a3-aeaa"/>
         <infoLink name="Power from Pain" id="26eb-3512-0126-7f2c" hidden="false" type="profile" targetId="b06f-e1dd-55f1-f0e8"/>
+        <infoLink name="Walker" id="3c81-4ce4-3245-9442" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
       </infoLinks>
       <profiles>
         <profile name="Peerless Performance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="69b7-d9e5-83c0-c1ad">
