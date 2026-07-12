@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3336-6a64-b87f-ab82" name="Thousand Sons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="14" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3336-6a64-b87f-ab82" name="Thousand Sons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="14" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Windfall of the Warp, Baleful Arc" hidden="false" id="6ab5-dc8c-40f6-8ff5">
       <profiles>
@@ -241,10 +241,10 @@ Ruinous Spellcraft: For each SW an enemy unit suffers, that SW gains Pierce.</
   </sharedSelectionEntries>
   <sharedRules>
     <rule name="Entwined Will" id="5a20-9748-a65b-7e1f" hidden="false">
-      <description>While this unit is not active, if your active unit with Psyker is within 9” of one or more units with Entwined Will, for each Psychic Test that unit makes, add 1 D6 to that Psychic Test.</description>
+      <description>While this unit is not active, if your active unit with Psyker is within 18” of one or more units with Entwined Will, for each Psychic Test that unit makes, add 1 D6 to that Psychic Test.</description>
     </rule>
     <rule name="Inferno" id="188a-b70b-b086-9c0e" hidden="false">
-      <description>While any of your units with Psyker are within 9” of this unit, each of this weapon’s attacks gain Pierce and Shred.</description>
+      <description>While any of your units with Psyker are within 18” of this unit, each of this weapon’s attacks gain Pierce and Shred.</description>
     </rule>
   </sharedRules>
   <selectionEntries>
@@ -2020,7 +2020,7 @@ Create the selected unit within 3” of this unit. That unit is ready.</characte
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.0" hidden="false" id="f518-7102-a197-17ef" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.1.1" hidden="false" id="f518-7102-a197-17ef" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="621a-7456-1d1d-1850" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -2141,10 +2141,13 @@ Create the selected unit within 3” of this unit. That unit is ready.</characte
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno, Ignore Cover</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
+                  <infoLinks>
+                    <infoLink name="Ignore Cover" id="1de3-26c1-f7b1-d0cc" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Power Claw &amp; Warpflame Projector" hidden="false" id="d7e3-498f-ae81-d6c9" sortIndex="3">
                   <constraints>
@@ -2171,10 +2174,13 @@ Create the selected unit within 3” of this unit. That unit is ready.</characte
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Inferno, Ignore Cover</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
+                  <infoLinks>
+                    <infoLink name="Ignore Cover" id="6a0d-e67b-2a4b-977a" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -2188,12 +2194,12 @@ Create the selected unit within 3” of this unit. That unit is ready.</characte
       <profiles>
         <profile name="Complex Shrouds" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1f80-6bf5-e5b9-a991">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After rolling for initiative during battle round 1, if this unit is in reserves, you may Deploy this unit within 9+2D6 of your deployment zone.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After rolling for initiative during battle round 1, Deploy this unit within 9+2D6 of your deployment zone.</characteristic>
           </characteristics>
         </profile>
         <profile name="Hidden True Nature" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="16e2-56e5-7493-ec4c">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit is treated as an obstacle terrain piece instead of a unit. It can still be selected to Activate like a unit. After it is Activated, it loses this ability.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this is in the battlefield, it is treated as a debris terrain piece instead of a unit. It can still be selected to Activate like a unit. After it is Activated, it loses this ability.</characteristic>
           </characteristics>
         </profile>
       </profiles>
