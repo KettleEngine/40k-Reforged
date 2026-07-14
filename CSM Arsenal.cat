@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
   </catalogueLinks>
@@ -1722,6 +1722,17 @@ Vicious Murder: After a unit gains this ability, it suffers X+D3 SW where X is 
                                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="40ec-6b42-ac43-d2ba-max" includeChildSelections="false"/>
                                       </constraints>
                                       <modifiers>
+                                        <modifier type="set" value="CQ" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
+                                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                      </modifiers>
+                                    </entryLink>
+                                    <entryLink import="true" name="Plasma Blaster" hidden="false" id="137f-157a-d272-7ce7" type="selectionEntry" targetId="f4e1-5e30-78a3-2852">
+                                      <constraints>
+                                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e2a-6553-c608-19bc" includeChildSelections="false"/>
+                                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2ebc-c84a-80dc-14c3" includeChildSelections="false"/>
+                                      </constraints>
+                                      <modifiers>
                                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                         <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                       </modifiers>
@@ -1870,7 +1881,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+D3 SW where X is 
         <categoryLink targetId="f809-9826-f58a-6b8d" id="6e0d-84ff-e808-5efb" primary="false" name="Chaos"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="120"/>
+        <cost name="pts" typeId="points" value="140"/>
       </costs>
       <profiles>
         <profile name="No Witnesses" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e026-530a-baa5-654c">
