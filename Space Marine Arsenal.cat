@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="57" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="58" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Bolt Rifle" hidden="false" id="6802-fb1b-a361-36bb">
       <profiles>
@@ -3150,6 +3150,10 @@ b) JUMP PACK CHAPLAIN</characteristic>
                               </constraints>
                             </entryLink>
                           </entryLinks>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="837f-3d7c-0d69-f171-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="837f-3d7c-0d69-f171-max" includeChildSelections="false"/>
+                          </constraints>
                         </selectionEntry>
                       </selectionEntries>
                       <selectionEntryGroups>
@@ -3372,7 +3376,7 @@ b) JUMP PACK CHAPLAIN</characteristic>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Unstoppable" id="f5eb-2db8-beb9-0be2" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
-        <infoLink targetId="8901-8664-944c-a6e7" id="a993-ca24-1f96-e5fe" type="profile" name="The Black Rage, Assault Intercessors" hidden="false"/>
+        <infoLink targetId="8901-8664-944c-a6e7" id="a993-ca24-1f96-e5fe" type="profile" name="The Black Rage" hidden="false"/>
       </infoLinks>
       <profiles>
         <profile name="Saltire of Madness" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4ec2-cd36-4e19-2451">
@@ -3435,6 +3439,10 @@ b) JUMP PACK CHAPLAIN</characteristic>
                               </constraints>
                             </entryLink>
                           </entryLinks>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ea78-ee0f-9ae3-a673-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ea78-ee0f-9ae3-a673-max" includeChildSelections="false"/>
+                          </constraints>
                         </selectionEntry>
                       </selectionEntries>
                       <selectionEntryGroups>
@@ -3942,7 +3950,6 @@ b) JUMP PACK CHAPLAIN</characteristic>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Grenade Launcher" hidden="false" id="07d1-4756-59d3-1be1">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="unit" shared="true" id="dcb4-4abb-ecc2-88d2-min" includeChildSelections="true"/>
                     <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="dcb4-4abb-ecc2-88d2-max" includeChildSelections="true"/>
                   </constraints>
                   <profiles>
@@ -7360,7 +7367,6 @@ d) VANGUARD VETERANS</characteristic>
               <constraints>
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3f10-72af-41cd-5263-min-min" includeChildSelections="false"/>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3f10-72af-41cd-5263-min-max" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3f10-72af-41cd-5263-max" includeChildSelections="false"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Power Sword" hidden="false" id="f933-3260-16bc-309e" sortIndex="1">
@@ -9272,7 +9278,7 @@ d) VANGUARD VETERANS</characteristic>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made for this unit that targets an infantry unit, a Hit Roll of 6 causes that attack to always wound.</characteristic>
           </characteristics>
         </profile>
-        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="203c-7860-d210-ff13">
+        <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="203c-7860-d210-ff13">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to either:
 a) HEAVY INTERCESSORS
