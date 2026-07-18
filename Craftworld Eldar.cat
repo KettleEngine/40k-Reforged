@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="40" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="41" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Foretold Foray" id="d0c2-99f6-070a-f4ed" hidden="false">
       <description>After rolling for initiative battle round 1, roll Strands of Fate XÂ where X is twice the number of leader units you have on the battlefield andÂ reserves.</description>
@@ -632,6 +632,34 @@ Fatal Thread:Â For each attack made by an Aeldari Craftworlds unit thatÂ targets
       </profiles>
       <infoLinks>
         <infoLink name="Shred" id="cda2-0222-988c-5cc8" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Aeldari Missile Launcher" hidden="false" id="72f4-7c35-0df0-2121">
+      <comment>for Vyper Hull</comment>
+      <profiles>
+        <profile name="Aeldari Missile Launcher (Starshot)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7193-d9ba-336c-97d5">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+          </characteristics>
+        </profile>
+        <profile name="Aeldari Missile Launcher (Sunburst)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6e5e-eab2-72fc-ef10">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Pierce" id="9498-1259-c541-d684" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -4268,7 +4296,7 @@ Graceless Foes:Â For each attack made targeting this unit, reroll Hit Roll of 1Â
                     <entryLink import="true" name="Shuriken Cannon" hidden="false" id="4338-019b-a631-15a4" type="selectionEntry" targetId="3de8-f8bb-0dc7-7dc8">
                       <modifiers>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="460e-f5e8-b503-acdb" includeChildSelections="false"/>
@@ -4282,12 +4310,26 @@ Graceless Foes:Â For each attack made targeting this unit, reroll Hit Roll of 1Â
                     <entryLink import="true" name="Shuriken Catapult" hidden="false" id="ec56-c92c-7f1c-9151" type="selectionEntry" targetId="e63e-e756-2598-88cc">
                       <modifiers>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="prepend" value="Twin" field="name"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f256-93b8-61c9-400e" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ddd-09ab-ced0-26a4" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Hull Aeldari Missile Launcher" hidden="false" id="6827-e592-cd97-9e20" sortIndex="3">
+                  <entryLinks>
+                    <entryLink import="true" name="Aeldari Missile Launcher" hidden="false" id="5b5c-cefe-8eff-2e13" type="selectionEntry" targetId="72f4-7c35-0df0-2121">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7a1a-6d80-78f7-d0de" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d219-bea3-b3f2-584d" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -4318,8 +4360,8 @@ Graceless Foes:Â For each attack made targeting this unit, reroll Hit Roll of 1Â
                   <entryLinks>
                     <entryLink import="true" name="Bright Lance" hidden="false" id="48e2-76a4-25c2-29d7" type="selectionEntry" targetId="92dd-6279-6da9-82bc">
                       <modifiers>
-                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="827c-4ba1-f1c3-efff" includeChildSelections="false"/>
@@ -4333,7 +4375,7 @@ Graceless Foes:Â For each attack made targeting this unit, reroll Hit Roll of 1Â
                     <entryLink import="true" name="Scatter Laser" hidden="false" id="8b90-3d6f-d35e-192a" type="selectionEntry" targetId="0822-c1d9-aa91-521d">
                       <modifiers>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="26" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="24" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="76bf-1597-3392-2459" includeChildSelections="false"/>
@@ -4347,7 +4389,7 @@ Graceless Foes:Â For each attack made targeting this unit, reroll Hit Roll of 1Â
                     <entryLink import="true" name="Starcannon" hidden="false" id="6148-b9db-85cc-9873" type="selectionEntry" targetId="eb4b-d315-afd6-0110">
                       <modifiers>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6625-dfa7-9098-5e32" includeChildSelections="false"/>
@@ -4361,7 +4403,7 @@ Graceless Foes:Â For each attack made targeting this unit, reroll Hit Roll of 1Â
                     <profile name="Aeldari Missile Launcher (Starshot)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="aa98-65f5-4db3-0b88">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
@@ -4371,7 +4413,7 @@ Graceless Foes:Â For each attack made targeting this unit, reroll Hit Roll of 1Â
                     <profile name="Aeldari Missile Launcher (Sunburst)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="bebf-8f08-8755-e50d">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
@@ -4390,7 +4432,6 @@ Graceless Foes:Â For each attack made targeting this unit, reroll Hit Roll of 1Â
       </selectionEntries>
       <infoLinks>
         <infoLink name="Fly" id="1f33-8279-143e-ad00" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
-        <infoLink name="Transport" id="56c7-0b0a-e215-5174" hidden="false" type="rule" targetId="d78d-24c6-e7a9-e94f"/>
         <infoLink name="Jet Bikes" id="8c0e-9b43-4604-bcc2" hidden="false" type="profile" targetId="e8ad-40cd-784f-fb45"/>
         <infoLink name="Lightning Speed" id="d796-c403-2198-e84e" hidden="false" type="profile" targetId="981f-33b8-4f96-fa66"/>
       </infoLinks>
