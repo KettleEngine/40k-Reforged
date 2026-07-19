@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
   </catalogueLinks>
@@ -844,7 +844,7 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
                     </entryLink>
                   </entryLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Graviton Crusher" hidden="false" id="9345-dff1-5081-3bc4" sortIndex="4">
+                <selectionEntry type="upgrade" import="true" name="Graviton Crusher" hidden="false" id="9345-dff1-5081-3bc4" sortIndex="5">
                   <profiles>
                     <profile name="Graviton Crusher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e331-05ef-ad75-b07d">
                       <characteristics>
@@ -887,6 +887,20 @@ Breach, For each attack made for this weapon, that attack’s S is 1 higher tha
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1491-3e7f-3a84-4c9e" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="625e-b8b3-d6d8-b9de" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Daemon Hammer" hidden="false" id="2e9b-cd64-de16-ff40" sortIndex="4">
+                  <entryLinks>
+                    <entryLink import="true" name="Daemon Hammer" hidden="false" id="b540-80e4-00d8-4cc6" type="selectionEntry" targetId="ea6e-1dec-e154-a575">
+                      <modifiers>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5f3a-ee5b-d3db-3221" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e30-e7e2-9467-ec9c" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -1308,7 +1322,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                                         <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                        <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Blast 7</characteristic>
                                       </characteristics>
@@ -1522,6 +1536,10 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                       </selectionEntryGroups>
                     </selectionEntry>
                   </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9170-2c87-2e32-4512-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9170-2c87-2e32-4512-max" includeChildSelections="false"/>
+                  </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
@@ -1573,7 +1591,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                     <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d43e-1df7-0d41-515a">
                                       <characteristics>
                                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                                        <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
                                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                                         <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -1589,7 +1607,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                 <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6e4e-d6c9-884f-f724">
                                   <characteristics>
                                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
                                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                                     <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -1599,7 +1617,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                 <profile name="Combi-Flamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="19b2-cae2-aeaf-c53a">
                                   <characteristics>
                                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">9</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
                                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                                     <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
                                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -1617,7 +1635,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                   <characteristics>
                                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
                                     <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                                     <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
                                     <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge, Pierce</characteristic>
@@ -1626,7 +1644,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                 <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="87b1-f80b-1e19-e445">
                                   <characteristics>
                                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
                                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                                     <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -1654,7 +1672,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                 <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ca20-299d-9148-1b7b">
                                   <characteristics>
                                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
                                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                                     <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -1674,7 +1692,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                 <profile name="Volkite Charger" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4a82-cbb0-da2b-2c5a">
                                   <characteristics>
                                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                                     <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
@@ -1694,49 +1712,30 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                 <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="a94a-4d88-7dc4-7080" includeChildSelections="true"/>
                               </constraints>
                               <selectionEntries>
-                                <selectionEntry type="upgrade" import="true" name="Conversion Beamer" hidden="false" id="fae5-2114-587c-08fe" sortIndex="1">
-                                  <profiles>
-                                    <profile name="Conversion Beamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="124f-659e-ff9b-3f84">
-                                      <characteristics>
-                                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred, For each attack made for this weapon that targets an enemy unit further than 16” away, the D of that attack improves by 2.</characteristic>
-                                      </characteristics>
-                                    </profile>
-                                  </profiles>
-                                  <infoLinks>
-                                    <infoLink name="Shred" id="9426-0564-b990-fff0" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-                                  </infoLinks>
-                                </selectionEntry>
-                                <selectionEntry type="upgrade" import="true" name="Plasma Blaster" hidden="false" id="7b50-d410-7d4b-5c3c" sortIndex="2">
+                                <selectionEntry type="upgrade" import="true" name="Reaper Autocannon " hidden="false" id="fae5-2114-587c-08fe" sortIndex="1">
                                   <entryLinks>
-                                    <entryLink import="true" name="Plasma Blaster" hidden="false" id="216d-3b92-8026-af76" type="selectionEntry" targetId="f4e1-5e30-78a3-2852">
+                                    <entryLink import="true" name="Reaper Autocannon" hidden="false" id="42cc-db1b-ccb2-2faa" type="selectionEntry" targetId="02d4-f10f-7394-2296">
                                       <constraints>
-                                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="40ec-6b42-ac43-d2ba-min" includeChildSelections="false"/>
-                                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="40ec-6b42-ac43-d2ba-max" includeChildSelections="false"/>
+                                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a5cc-1143-a3ef-cb02-min" includeChildSelections="false"/>
+                                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a5cc-1143-a3ef-cb02-max" includeChildSelections="false"/>
                                       </constraints>
                                       <modifiers>
-                                        <modifier type="set" value="CQ" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
-                                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                       </modifiers>
                                     </entryLink>
+                                  </entryLinks>
+                                </selectionEntry>
+                                <selectionEntry type="upgrade" import="true" name="Plasma Blaster" hidden="false" id="7b50-d410-7d4b-5c3c" sortIndex="4">
+                                  <entryLinks>
                                     <entryLink import="true" name="Plasma Blaster" hidden="false" id="137f-157a-d272-7ce7" type="selectionEntry" targetId="f4e1-5e30-78a3-2852">
                                       <constraints>
                                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e2a-6553-c608-19bc" includeChildSelections="false"/>
                                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2ebc-c84a-80dc-14c3" includeChildSelections="false"/>
                                       </constraints>
-                                      <modifiers>
-                                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                      </modifiers>
                                     </entryLink>
                                   </entryLinks>
                                 </selectionEntry>
-                                <selectionEntry type="upgrade" import="true" name="Volkite Culverin " hidden="false" id="c7b7-386d-d4f8-c5cc" sortIndex="3">
+                                <selectionEntry type="upgrade" import="true" name="Volkite Culverin " hidden="false" id="c7b7-386d-d4f8-c5cc" sortIndex="5">
                                   <profiles>
                                     <profile name="Volkite Culverin " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="fb22-9136-a50c-1544">
                                       <characteristics>
@@ -1750,11 +1749,41 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                     </profile>
                                   </profiles>
                                 </selectionEntry>
+                                <selectionEntry type="upgrade" import="true" name="Conversion Beamer" hidden="false" id="d196-5972-8c4f-b0e1" sortIndex="3">
+                                  <profiles>
+                                    <profile name="Conversion Beamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0585-5a23-f2f6-3755">
+                                      <characteristics>
+                                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred, For each attack made for this weapon that targets an enemy unit further than 16” away, the D of that attack improves by 2.</characteristic>
+                                      </characteristics>
+                                    </profile>
+                                  </profiles>
+                                  <infoLinks>
+                                    <infoLink name="Shred" id="005c-9a1d-f64b-56af" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                                  </infoLinks>
+                                </selectionEntry>
+                                <selectionEntry type="upgrade" import="true" name="Heavy Flamer" hidden="false" id="3b76-44b6-06b7-987b" sortIndex="2">
+                                  <entryLinks>
+                                    <entryLink import="true" name="Heavy Flamer" hidden="false" id="26fb-a7e7-1cef-4c7c" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+                                      <constraints>
+                                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="328b-1592-f8f8-e651-min" includeChildSelections="false"/>
+                                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="328b-1592-f8f8-e651-max" includeChildSelections="false"/>
+                                      </constraints>
+                                      <modifiers>
+                                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                      </modifiers>
+                                    </entryLink>
+                                  </entryLinks>
+                                </selectionEntry>
                               </selectionEntries>
                             </selectionEntryGroup>
                           </selectionEntryGroups>
                         </selectionEntryGroup>
-                        <selectionEntryGroup name="Melee" id="82cc-7a50-39f3-754e" hidden="false" defaultSelectionEntryId="917b-3e10-2704-1e76">
+                        <selectionEntryGroup name="Melee" id="82cc-7a50-39f3-754e" hidden="false" defaultSelectionEntryId="3d84-08aa-8cc3-8700">
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0872-9374-00dd-7923" includeChildSelections="false"/>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7426-de4a-4d6d-c922" includeChildSelections="false"/>
@@ -8001,7 +8030,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
           <profiles>
             <profile name="1 Shriveling Pox" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="5adc-374e-13e4-4929">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 14” of this unit. Until the End step, the selected unit’s Toughness is worsened by 3. If the selected unit is within 7”, its Toughness is worsened by 7 instead.</characteristic>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 14” of this unit. Until the End step, the selected unit’s Toughness is worsened by 1. If the selected unit is within 7”, its Toughness is worsened by 2 instead.</characteristic>
               </characteristics>
             </profile>
             <profile name="2 Dance for the Grandfather" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="29cc-a3c6-0832-f044">
