@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="43" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="44" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Foretold Foray" id="d0c2-99f6-070a-f4ed" hidden="false">
       <description>After rolling for initiative battle round 1, roll Strands of Fate X where X is twice the number of leader units you have on the battlefield and reserves.</description>
@@ -474,7 +474,7 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
       <profiles>
         <profile name="Windfall of the Warp: Guide Spirits" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="11c6-5f89-1569-6670">
           <characteristics>
-            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test has two or more dice with the same result, until the End step, for each attack this unit makes, add 1 to the Hit Roll of that attack.</characteristic>
+            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test has two or more dice with the same result, until the End step, for each attack made for this for a weapon equipped to any WRAITHBLADE or WRAITHGUARD model, add 1 to the Hit Roll of that attack.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -936,8 +936,8 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">11</characteristic>
-                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">9</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1191,8 +1191,8 @@ Twin&apos;s Essence: Add 1 D6 to Move Rolls made for this unit.</characteristic>
                             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, For each attack made for this weapon, a failed Saving Throw causes the target to lose 4 Health (in addition to the normal damage).</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">7</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, For each attack made for this weapon, a failed Saving Throw causes the target to lose 7 Health (in addition to the normal damage).</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -1479,7 +1479,7 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
                     <entryLink import="true" name="Shuriken Cannon" hidden="false" id="8be1-2635-b45b-cd79" type="selectionEntry" targetId="3de8-f8bb-0dc7-7dc8">
                       <modifiers>
                         <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3d07-ed56-2b34-8468-min" includeChildSelections="false"/>
@@ -1504,7 +1504,7 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
                     <entryLink import="true" name="Bright Lance" hidden="false" id="db84-0c67-aaa3-c60a" type="selectionEntry" targetId="92dd-6279-6da9-82bc">
                       <modifiers>
                         <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="prepend" value="Twin" field="name"/>
                       </modifiers>
                       <constraints>
@@ -1567,7 +1567,7 @@ Speeding Blur: For each attack that targets this unit, the Hit Roll for that a
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
               </characteristics>
             </profile>
@@ -1823,7 +1823,7 @@ a) GUARDIAN DEFENDERS</characteristic>
                 <entryLink import="true" name="Shuriken Pistol" hidden="false" id="3da0-9e98-2974-dd82" type="selectionEntry" targetId="4f77-9c86-d981-5252">
                   <modifiers>
                     <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                   </modifiers>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4d13-fad8-fbba-fc90-min" includeChildSelections="false"/>
@@ -1909,7 +1909,7 @@ b) WRAITHGUARD</characteristic>
                 <entryLink import="true" name="Shuriken Pistol" hidden="false" id="616f-f071-e235-d165" type="selectionEntry" targetId="4f77-9c86-d981-5252">
                   <modifiers>
                     <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                   </modifiers>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1a7c-215f-b8de-510a" includeChildSelections="false"/>
@@ -2650,7 +2650,7 @@ Shining Wedge: After this unit&apos;s Attacks step, it may Fall Back.</characte
                                 <profile name="Executioner" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2ab8-3f1b-b8c5-030b">
                                   <characteristics>
                                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                                     <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
@@ -2825,7 +2825,7 @@ Shining Wedge: After this unit&apos;s Attacks step, it may Fall Back.</characte
                   </constraints>
                   <modifiers>
                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
               </entryLinks>
@@ -2878,7 +2878,7 @@ Shining Wedge: After this unit&apos;s Attacks step, it may Fall Back.</characte
                   <entryLinks>
                     <entryLink import="true" name="Scatter Laser" hidden="false" id="aaf6-83a9-0f75-265e" type="selectionEntry" targetId="0822-c1d9-aa91-521d">
                       <modifiers>
-                        <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="24" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
@@ -3690,7 +3690,7 @@ b) Any unit with an Aspect, X ability</characteristic>
         </profile>
         <profile name="Path of Command" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="7afc-930e-bada-9178">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any of your units with Aspect Warrior Activate while visible to this unit, you may select an enemy unit visible to two or more friendly units with Eyes of the Asuryani. If you do, until the End step, that friendly unit gains Fluid Grace, and that enemy unit gains Graceless Foes.
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any of your units with Aspect Warrior Activate, you may select an enemy unit visible to one or more friendly units with Eyes of the Asuryani. If you do, until the End step, that friendly unit gains Fluid Grace, and that enemy unit gains Graceless Foes.
 
 
 Fluid Grace: During this unit’s Move step, for each Move Roll made for this unit, add 2D6 to that roll.
@@ -3726,10 +3726,10 @@ Graceless Foes: For each attack made targeting this unit, reroll Hit Roll of 1�
                     <profile name="Star Glaive" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6019-91c0-b100-02d6">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
                       </characteristics>
                     </profile>
@@ -3776,7 +3776,7 @@ Graceless Foes: For each attack made targeting this unit, reroll Hit Roll of 1�
                     <entryLink import="true" name="Shuriken Pistol" hidden="false" id="29cd-0ee3-6e2e-145b" type="selectionEntry" targetId="4f77-9c86-d981-5252">
                       <modifiers>
                         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="7" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="15" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9e61-6581-9b10-1d68-min" includeChildSelections="false"/>
