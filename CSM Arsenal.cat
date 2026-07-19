@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="27" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="28" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
   </catalogueLinks>
@@ -5337,6 +5337,104 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                                   <constraints>
                                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="72c0-6ca2-f9d2-5d67" includeChildSelections="false"/>
                                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0d9-3fab-feaa-2877" includeChildSelections="false"/>
+                                  </constraints>
+                                </entryLink>
+                              </entryLinks>
+                            </selectionEntry>
+                            <selectionEntry type="upgrade" import="true" name="Thunder Hammer" hidden="false" id="b7da-3769-2aec-0fb3" sortIndex="5">
+                              <entryLinks>
+                                <entryLink import="true" name="Thunder Hammer" hidden="false" id="e69e-e9b7-5a3b-2b1f" type="selectionEntry" targetId="a26d-bbe4-6e1d-51af">
+                                  <modifierGroups>
+                                    <modifierGroup type="and">
+                                      <modifiers>
+                                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                      </modifiers>
+                                    </modifierGroup>
+                                  </modifierGroups>
+                                  <constraints>
+                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9b99-ecdf-221c-f187" includeChildSelections="false"/>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8980-2b13-f9bd-e7d8" includeChildSelections="false"/>
+                                  </constraints>
+                                </entryLink>
+                              </entryLinks>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                        <selectionEntryGroup name="Melee" id="62de-2e21-1907-e3af" hidden="false" defaultSelectionEntryId="917b-3e10-2704-1e76">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7c1e-e37e-01e7-e593" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c1c8-3478-76d1-ae3f" includeChildSelections="false"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Power Fist" hidden="false" id="7339-02c0-f5be-fb37" sortIndex="3">
+                              <entryLinks>
+                                <entryLink import="true" name="Power Fist" hidden="false" id="23c3-e5c6-24fd-b996" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d">
+                                  <constraints>
+                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1a1f-8440-39cd-df70" includeChildSelections="false"/>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2205-8a0b-a1c2-4725" includeChildSelections="false"/>
+                                  </constraints>
+                                  <modifierGroups>
+                                    <modifierGroup type="and">
+                                      <modifiers>
+                                        <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                      </modifiers>
+                                    </modifierGroup>
+                                  </modifierGroups>
+                                </entryLink>
+                              </entryLinks>
+                            </selectionEntry>
+                            <selectionEntry type="upgrade" import="true" name="Power Sword" hidden="false" id="072a-b047-ee1c-3836" sortIndex="2">
+                              <entryLinks>
+                                <entryLink import="true" name="Power Sword" hidden="false" id="a738-5e16-b361-47a4" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
+                                  <modifierGroups>
+                                    <modifierGroup type="and">
+                                      <modifiers>
+                                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                      </modifiers>
+                                    </modifierGroup>
+                                  </modifierGroups>
+                                  <constraints>
+                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="999f-9366-9fea-cb57" includeChildSelections="false"/>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f78-f377-28b5-3e14" includeChildSelections="false"/>
+                                  </constraints>
+                                </entryLink>
+                              </entryLinks>
+                            </selectionEntry>
+                            <selectionEntry type="upgrade" import="true" name="Chainsword" hidden="false" id="41ad-0c50-b196-3cd0" sortIndex="1">
+                              <entryLinks>
+                                <entryLink import="true" name="Chainsword" hidden="false" id="65eb-d2c4-b985-2fc0" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
+                                  <modifierGroups>
+                                    <modifierGroup type="and">
+                                      <modifiers>
+                                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                      </modifiers>
+                                    </modifierGroup>
+                                  </modifierGroups>
+                                  <constraints>
+                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="68a7-4111-2205-5592" includeChildSelections="false"/>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70e6-0e7a-771b-bc6b" includeChildSelections="false"/>
+                                  </constraints>
+                                </entryLink>
+                              </entryLinks>
+                            </selectionEntry>
+                            <selectionEntry type="upgrade" import="true" name="Lightning Claw" hidden="false" id="95dc-c373-b22d-e212" sortIndex="4">
+                              <entryLinks>
+                                <entryLink import="true" name="Lightning Claw" hidden="false" id="081d-5302-4241-1d56" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
+                                  <modifierGroups>
+                                    <modifierGroup type="and">
+                                      <modifiers>
+                                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                      </modifiers>
+                                    </modifierGroup>
+                                  </modifierGroups>
+                                  <constraints>
+                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a90a-e4f9-c832-8efd" includeChildSelections="false"/>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3958-1f0e-df38-66d4" includeChildSelections="false"/>
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
