@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="8ebc-4141-b6f1-7899" name="Adeptus Mechanicus" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="22" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="8ebc-4141-b6f1-7899" name="Adeptus Mechanicus" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="22" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.0" hidden="false" id="7646-5c1b-b2e9-3f1f" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.1" hidden="false" id="7646-5c1b-b2e9-3f1f" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="c52b-72ff-2114-f15b" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -906,6 +906,23 @@ b) SKITARII VANGUARDS</characteristic>
                           </constraints>
                         </selectionEntry>
                       </selectionEntries>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="5bb4-11b0-30e0-63fb" sortIndex="3">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="0a6e-e4d6-75e2-4ab0" includeChildSelections="true"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="Flamer" hidden="false" id="e68a-9457-b264-3e7a" type="selectionEntry" targetId="4cf9-1758-d00d-29c4">
+                          <modifiers>
+                            <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9e81-98bf-aad0-ef4e" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a937-f54d-190a-af09" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -3707,7 +3724,7 @@ Acute Rad-poisoning: For each Move Roll made for this unit, roll 1 less D6 for t
         <profile name="Heavy Grav-Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b1f7-e533-29f1-8f4f">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">-</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>

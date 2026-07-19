@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.0" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.1" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="0364-85c9-a87f-e090" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -2735,6 +2735,9 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
       <characteristics>
         <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack that targets this unit, the Wound Roll for that attack is worsened by 1. If that attack is a SW, add 1 to resilient rolls for that attack. This unit cannot be in cover for enemy attacks.</characteristic>
       </characteristics>
+      <modifiers>
+        <modifier type="increment" value="1" field="a6ad-d820-8495-f5b0" scope="unit-self" affects="self.entries.recursive.profiles.Unit"/>
+      </modifiers>
     </profile>
     <profile name="Everyone! Ge’ In ‘ere!" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ad82-3c2d-6494-820e">
       <characteristics>

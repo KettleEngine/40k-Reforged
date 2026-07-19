@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="35" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="36" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -3158,23 +3158,6 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
                         <infoLink name="Suppressive (X)" id="08a8-a7a8-7c74-0c80" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
                       </infoLinks>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Heavy Lascannon" hidden="false" id="cf6e-aed4-12f9-ace1" sortIndex="3">
-                      <profiles>
-                        <profile name="Heavy Lascannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b451-f727-9767-f863">
-                          <characteristics>
-                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+4</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Killshot</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <infoLinks>
-                        <infoLink name="Killshot" id="e7dd-82bb-4640-1dc9" hidden="false" type="rule" targetId="8fb7-ea3f-ae47-9521"/>
-                      </infoLinks>
-                    </selectionEntry>
                   </selectionEntries>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a72b-df75-1f1a-8fea-min" includeChildSelections="false"/>
@@ -3431,7 +3414,7 @@ Aim There!: For each ranged attack this unit makes, add 1 to the Hit Roll of th
         <infoLink name="Indirect" id="d4e8-ed5e-dc8a-fedc" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.0" hidden="false" id="49b5-96a5-b9d7-555d" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.1" hidden="false" id="49b5-96a5-b9d7-555d" sortIndex="1">
       <categoryLinks>
         <categoryLink targetId="9cd6-0442-3f35-6b52" id="48db-a12b-9852-f558" primary="true" name="Configuration"/>
       </categoryLinks>
@@ -3439,6 +3422,71 @@ Aim There!: For each ranged attack this unit makes, add 1 to the Hit Roll of th
         <constraint type="min" value="1" field="selections" scope="force" shared="true" id="70a8-903c-b35f-9866-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="70a8-903c-b35f-9866-max" includeChildSelections="false"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Heavy Lascannon Battery" hidden="false" id="ad9d-fdfc-9682-493a">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Heavy Lascannon Battery" id="dcee-d911-10de-c001" hidden="false" defaultSelectionEntryId="b81c-ff67-9d2c-b6b5">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Heavy Lascannon Battery Team" hidden="false" id="a751-7d34-0bea-ab59">
+              <profiles>
+                <profile name="Heavy Lascannon Battery Team" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1381-ec06-9906-dc2b">
+                  <characteristics>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">1</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Heavy Lascannon" hidden="false" id="75e9-5b2b-8257-2656">
+                  <profiles>
+                    <profile name="Heavy Lascannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8950-20b0-3643-b61a">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Breach" id="dd42-ec53-7ada-f7ea" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+                  </infoLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ef40-8b18-73c8-b329-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef40-8b18-73c8-b329-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c8a3-b102-4610-3993" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a3aa-259c-f0e6-fa68" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Support" hidden="false" id="b999-7310-df48-cf40" targetId="ccc6-6202-853c-23e4" primary="true"/>
+        <categoryLink name="Infantry" hidden="false" id="ba2d-ecee-e144-1675" targetId="205c-3072-067b-d808" primary="false"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Recrew" id="3cae-c0f5-d1e9-efaf" hidden="false" type="profile" targetId="9567-753f-2da2-e85a"/>
+        <infoLink name="Entrench" id="f9b9-760e-42d9-e9d7" hidden="false" type="profile" targetId="57ea-cdf2-571a-71ad"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="45e2-7cdd-012f-ee3f">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Bombast Field Gun or Malleaus Rocket Launcher, if you have no ready units except units with Artillery Support, you may ‘call for an artillery strike’. If you do, you may instead target an enemy unit within 24&quot; of and visible to any of your infantry units within 24&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="90"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
