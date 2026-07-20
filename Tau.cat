@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.1" hidden="false" id="315e-371a-2ee5-5d8d" sortIndex="-1">
       <categoryLinks>
@@ -149,56 +149,29 @@
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Guns" id="1daa-1a88-ad71-a299" hidden="false">
+            <selectionEntryGroup name="Guns" id="1daa-1a88-ad71-a299" hidden="false" defaultSelectionEntryId="de96-151b-da30-180b">
               <constraints>
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6711-6a3d-667a-c80f-min" includeChildSelections="false"/>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6711-6a3d-667a-c80f-max" includeChildSelections="false"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Burst Cannon" hidden="false" id="de96-151b-da30-180b" type="selectionEntry" targetId="9e4c-7240-51c1-0a9d" sortIndex="1">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="302f-0cc6-e1ac-cb4a" includeChildSelections="true"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Airburst Frag. Projector" hidden="false" id="cb2e-303c-9b9a-98ac" type="selectionEntry" targetId="77c5-7d54-e3e4-5f34" sortIndex="2">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="5bd6-eda4-0a2a-ab3a" includeChildSelections="true"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Cyclic Ion Blaster" hidden="false" id="03b5-4ab2-7c70-299d" type="selectionEntry" targetId="3693-3877-55fd-59ab" sortIndex="3">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="faf0-0b3d-33f2-455f" includeChildSelections="true"/>
-                  </constraints>
-                </entryLink>
+                <entryLink import="true" name="Burst Cannon" hidden="false" id="de96-151b-da30-180b" type="selectionEntry" targetId="9e4c-7240-51c1-0a9d" sortIndex="1"/>
+                <entryLink import="true" name="Airburst Frag. Projector" hidden="false" id="cb2e-303c-9b9a-98ac" type="selectionEntry" targetId="77c5-7d54-e3e4-5f34" sortIndex="2"/>
+                <entryLink import="true" name="Cyclic Ion Blaster" hidden="false" id="03b5-4ab2-7c70-299d" type="selectionEntry" targetId="3693-3877-55fd-59ab" sortIndex="3"/>
                 <entryLink import="true" name="Flamer" hidden="false" id="ce7b-f5c8-acb0-0a3b" type="selectionEntry" targetId="4cf9-1758-d00d-29c4" sortIndex="4">
                   <modifiers>
                     <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="28b2-b5ff-0c32-8660" includeChildSelections="true"/>
-                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="d9b2-393d-4402-e515" includeChildSelections="true"/>
-                  </constraints>
                 </entryLink>
                 <entryLink import="true" name="Missile Pod" hidden="false" id="4c2c-1e2d-f2c4-19c2" type="selectionEntry" targetId="30c5-b7b9-d072-bab8" sortIndex="6">
                   <modifiers>
                     <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="a205-1810-027d-3201" includeChildSelections="true"/>
-                  </constraints>
                 </entryLink>
-                <entryLink import="true" name="Fusion Blaster" hidden="false" id="eb48-e5da-2c92-57f6" type="selectionEntry" targetId="9a79-03e9-a640-d458" sortIndex="5">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="b118-9241-173f-23e5" includeChildSelections="true"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Plasma Rifle" hidden="false" id="b6d0-1ffe-e334-710c" type="selectionEntry" targetId="e874-d698-d372-227f" sortIndex="7">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="3954-6f75-0472-bb81" includeChildSelections="true"/>
-                  </constraints>
-                </entryLink>
+                <entryLink import="true" name="Fusion Blaster" hidden="false" id="eb48-e5da-2c92-57f6" type="selectionEntry" targetId="9a79-03e9-a640-d458" sortIndex="5"/>
+                <entryLink import="true" name="Plasma Rifle" hidden="false" id="b6d0-1ffe-e334-710c" type="selectionEntry" targetId="e874-d698-d372-227f" sortIndex="7"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -307,16 +280,13 @@ b) BREACHER TEAM</characteristic>
                 <cost name="pts" typeId="points" value="50"/>
               </costs>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Guns" id="f56f-5819-b0d2-975e" hidden="false">
+                <selectionEntryGroup name="Guns" id="f56f-5819-b0d2-975e" hidden="false" defaultSelectionEntryId="5e6c-dffd-24f5-7ee1">
                   <constraints>
                     <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="059a-ecad-7716-f2ec" includeChildSelections="false"/>
                     <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4f85-1c91-2b9d-c8ca" includeChildSelections="false"/>
                   </constraints>
                   <entryLinks>
                     <entryLink import="true" name="Burst Cannon" hidden="false" id="5e6c-dffd-24f5-7ee1" type="selectionEntry" targetId="9e4c-7240-51c1-0a9d" sortIndex="1">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="model" shared="true" id="69a3-f56e-b27c-5ab1" includeChildSelections="true"/>
-                      </constraints>
                       <modifierGroups>
                         <modifierGroup type="and">
                           <modifiers>
@@ -327,9 +297,6 @@ b) BREACHER TEAM</characteristic>
                       </modifierGroups>
                     </entryLink>
                     <entryLink import="true" name="Airburst Frag. Projector" hidden="false" id="6986-653f-e5de-6d4f" type="selectionEntry" targetId="77c5-7d54-e3e4-5f34" sortIndex="2">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="model" shared="true" id="4ef2-60c6-e015-e432" includeChildSelections="true"/>
-                      </constraints>
                       <modifierGroups>
                         <modifierGroup type="and">
                           <modifiers>
@@ -340,9 +307,6 @@ b) BREACHER TEAM</characteristic>
                       </modifierGroups>
                     </entryLink>
                     <entryLink import="true" name="Cyclic Ion Blaster" hidden="false" id="5590-d929-237f-636d" type="selectionEntry" targetId="3693-3877-55fd-59ab" sortIndex="3">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="model" shared="true" id="29fe-8d06-c082-0dec" includeChildSelections="true"/>
-                      </constraints>
                       <modifierGroups>
                         <modifierGroup type="and">
                           <modifiers>
@@ -357,14 +321,8 @@ b) BREACHER TEAM</characteristic>
                         <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="model" shared="true" id="dd37-92cf-c492-1ba2" includeChildSelections="true"/>
-                      </constraints>
                     </entryLink>
                     <entryLink import="true" name="Missile Pod" hidden="false" id="5412-1ecd-abac-87ba" type="selectionEntry" targetId="30c5-b7b9-d072-bab8" sortIndex="6">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="model" shared="true" id="ec1b-1d6c-0592-d33d" includeChildSelections="true"/>
-                      </constraints>
                       <modifierGroups>
                         <modifierGroup type="and">
                           <modifiers>
@@ -375,9 +333,6 @@ b) BREACHER TEAM</characteristic>
                       </modifierGroups>
                     </entryLink>
                     <entryLink import="true" name="Fusion Blaster" hidden="false" id="e3de-590e-4ea2-c9ce" type="selectionEntry" targetId="9a79-03e9-a640-d458" sortIndex="5">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="model" shared="true" id="5179-7367-38d4-1a55" includeChildSelections="true"/>
-                      </constraints>
                       <modifierGroups>
                         <modifierGroup type="and">
                           <modifiers>
@@ -388,9 +343,6 @@ b) BREACHER TEAM</characteristic>
                       </modifierGroups>
                     </entryLink>
                     <entryLink import="true" name="Plasma Rifle" hidden="false" id="c8ff-bbd2-7c7e-de19" type="selectionEntry" targetId="e874-d698-d372-227f" sortIndex="7">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="model" shared="true" id="be73-afcc-1b0f-b4fc" includeChildSelections="true"/>
-                      </constraints>
                       <modifierGroups>
                         <modifierGroup type="and">
                           <modifiers>
