@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="54" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="55" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -1007,9 +1007,6 @@ Each time this unit gains Suppressed while it already has Suppressed, increase X
     </rule>
     <rule name="Shuriken" id="c503-366d-25f8-01c0" hidden="false">
       <description>For each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit. If the target for that attack had Fatal Thread, that additional hit always wounds.</description>
-    </rule>
-    <rule name="Killshot" id="8fb7-ea3f-ae47-9521" hidden="false">
-      <description>For each attack made for this weapon that targets a unit with a single model, if the Wound Roll of that attack is a 6, triple the Damage of that attack.</description>
     </rule>
     <rule name="Pierce" id="f61d-729a-ad35-ab97" hidden="false">
       <description>For each attack made for this weapon, the Saving Throw of that attack is worsened by 1.</description>
