@@ -88,11 +88,6 @@
         <characteristicType name="Abilities" id="d93f-70ee-72bc-5ef9"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Wargear" id="3ce5-e1a1-5b1f-0410" hidden="false" kind="ability">
-      <characteristicTypes>
-        <characteristicType name="Description" id="14c0-3a47-fe6d-6563"/>
-      </characteristicTypes>
-    </profileType>
     <profileType name="Psychic Power" id="6406-cf2b-ec5b-c7e6" hidden="false" kind="spell">
       <characteristicTypes>
         <characteristicType name="Description" id="4b9e-dc73-b312-b42d" kind="longText"/>
@@ -295,9 +290,9 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Smoke Launchers" hidden="false" id="d653-3fc2-d577-6295">
       <profiles>
-        <profile name="Smoke Launchers" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="05b6-0208-cd8f-0a67">
+        <profile name="Smoke Launchers" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="05b6-0208-cd8f-0a67">
           <characteristics>
-            <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability again until the next battle round.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability again until the next battle round.</characteristic>
           </characteristics>
         </profile>
       </profiles>

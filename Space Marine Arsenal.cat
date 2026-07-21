@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="62" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="63" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Bolt Rifle" hidden="false" id="6802-fb1b-a361-36bb">
       <profiles>
@@ -10747,23 +10747,6 @@ Inspiring Stature: While other friendly units are within 12” of and visible t
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="25fa-4d33-5c62-2490-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25fa-4d33-5c62-2490-max" includeChildSelections="false"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Smoke Launchers" hidden="false" id="75df-78f9-2a13-c811">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <profiles>
-                <profile name="Smoke Launchers" typeId="3ce5-e1a1-5b1f-0410" typeName="Wargear" hidden="false" id="b557-0cfa-6d1c-fe16">
-                  <characteristics>
-                    <characteristic name="Description" typeId="14c0-3a47-fe6d-6563">After this unit is targeted by one or more ranged attacks, you may roll a D6. On a 3+, each ranged attack targeting this unit suffers a -1 penalty to its Hit Roll and you cannot roll for this ability until the next battle round.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79ae-9d6e-32e3-a39e" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup name="Hull mount" id="720e-9d4e-880c-7356" hidden="false" defaultSelectionEntryId="0514-ec57-1606-fe30">
               <constraints>
@@ -10877,6 +10860,13 @@ Inspiring Stature: While other friendly units are within 12” of and visible t
               </characteristics>
             </profile>
           </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Smoke Launchers" hidden="false" id="8f61-4d99-5364-4b8e" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
