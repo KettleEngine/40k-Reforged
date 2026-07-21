@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="46" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="47" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Foretold Foray" id="d0c2-99f6-070a-f4ed" hidden="false">
       <description>After rolling for initiative battle round 1, roll Strands of Fate X where X is twice the number of leader units you have on the battlefield and reserves.</description>
@@ -1093,16 +1093,17 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
                     <profile name="Wraithknight Ghostglaive" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="98ea-d04c-314a-cc82">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">8</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">7</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach, Pierce</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink name="Pierce" id="9849-b285-03a2-41e7" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                    <infoLink name="Breach" id="9849-b285-03a2-41e7" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+                    <infoLink name="Pierce" id="4e3d-e5df-3850-893d" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                   </infoLinks>
                 </selectionEntry>
               </selectionEntries>
@@ -1117,7 +1118,7 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">19</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">16</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
               </characteristics>
             </profile>
@@ -4325,7 +4326,8 @@ Graceless Foes: For each attack made targeting this unit, reroll Hit Roll of 1�
                     <entryLink import="true" name="Aeldari Missile Launcher" hidden="false" id="5b5c-cefe-8eff-2e13" type="selectionEntry" targetId="72f4-7c35-0df0-2121">
                       <modifiers>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7a1a-6d80-78f7-d0de" includeChildSelections="false"/>
@@ -4424,6 +4426,9 @@ Graceless Foes: For each attack made targeting this unit, reroll Hit Roll of 1�
                   <infoLinks>
                     <infoLink name="Pierce" id="df37-f6d8-8412-ac14" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                   </infoLinks>
+                  <modifiers>
+                    <modifier type="prepend" value="Turret" field="name" affects="profiles.Weapon"/>
+                  </modifiers>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
