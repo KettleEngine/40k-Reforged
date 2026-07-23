@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="50" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="51" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Roaming Performers" id="c56f-e048-3acd-ec3d" hidden="false">
       <description>You may add one of the following Harlequins units to your Army
@@ -2398,6 +2398,16 @@ b) WINDRIDERS</characteristic>
                           </entryLinks>
                         </selectionEntry>
                       </selectionEntries>
+                      <entryLinks>
+                        <entryLink import="true" name="Shimmershield" hidden="false" id="c4e6-6947-42a3-0cbd" type="selectionEntry" targetId="65ee-ea44-929d-298f">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9bb-2e8c-2e1d-53eb" includeChildSelections="false"/>
+                          </constraints>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <constraints>
@@ -2406,16 +2416,6 @@ b) WINDRIDERS</characteristic>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
-              <entryLinks>
-                <entryLink import="true" name="Shimmershield" hidden="false" id="c4e6-6947-42a3-0cbd" type="selectionEntry" targetId="65ee-ea44-929d-298f">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9bb-2e8c-2e1d-53eb" includeChildSelections="false"/>
-                  </constraints>
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
             </selectionEntry>
           </selectionEntries>
           <constraints>
