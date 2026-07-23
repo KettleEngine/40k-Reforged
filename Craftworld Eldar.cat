@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="51" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="52" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Roaming Performers" id="c56f-e048-3acd-ec3d" hidden="false">
       <description>You may add one of the following Harlequins units to your Army
@@ -1333,45 +1333,6 @@ Twin&apos;s Essence: Add 1 D6 to Move Rolls made for this unit.</characteristic>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7244-a9c1-ea7d-d504-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7244-a9c1-ea7d-d504-max" includeChildSelections="false"/>
                   </constraints>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup name="One model may instead be equipped with either:" id="2d0d-0932-0e86-742f" hidden="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="6e7f-1a4e-7642-b5c0" includeChildSelections="true"/>
-                      </constraints>
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Shuriken Cannon" hidden="false" id="50c7-9788-4096-d76c" sortIndex="1">
-                          <entryLinks>
-                            <entryLink import="true" name="Shuriken Cannon" hidden="false" id="bc10-36cd-0962-c1a4" type="selectionEntry" targetId="3de8-f8bb-0dc7-7dc8">
-                              <modifiers>
-                                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
-                              </modifiers>
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ee0-23da-6946-c458-min" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ee0-23da-6946-c458-max" includeChildSelections="false"/>
-                              </constraints>
-                            </entryLink>
-                          </entryLinks>
-                        </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Scatter Laser" hidden="false" id="f77c-5aa7-1ce1-c845" sortIndex="2">
-                          <entryLinks>
-                            <entryLink import="true" name="Scatter Laser" hidden="false" id="cab5-7b8b-1386-5c1a" type="selectionEntry" targetId="0822-c1d9-aa91-521d">
-                              <modifiers>
-                                <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
-                              </modifiers>
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="827c-bdbf-620d-4ad2-min" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="827c-bdbf-620d-4ad2-max" includeChildSelections="false"/>
-                              </constraints>
-                            </entryLink>
-                          </entryLinks>
-                        </selectionEntry>
-                      </selectionEntries>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Twin Shuriken Catapult" hidden="false" id="6018-3792-86d8-f8b6">
                       <entryLinks>
@@ -1384,6 +1345,36 @@ Twin&apos;s Essence: Add 1 D6 to Move Rolls made for this unit.</characteristic>
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c91c-3b06-3054-8113-min" includeChildSelections="false"/>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c91c-3b06-3054-8113-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Shuriken Cannon" hidden="false" id="50c7-9788-4096-d76c">
+                      <entryLinks>
+                        <entryLink import="true" name="Shuriken Cannon" hidden="false" id="bc10-36cd-0962-c1a4" type="selectionEntry" targetId="3de8-f8bb-0dc7-7dc8">
+                          <modifiers>
+                            <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ee0-23da-6946-c458-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ee0-23da-6946-c458-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Scatter Laser" hidden="false" id="f77c-5aa7-1ce1-c845">
+                      <entryLinks>
+                        <entryLink import="true" name="Scatter Laser" hidden="false" id="cab5-7b8b-1386-5c1a" type="selectionEntry" targetId="0822-c1d9-aa91-521d">
+                          <modifiers>
+                            <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="827c-bdbf-620d-4ad2-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="827c-bdbf-620d-4ad2-max" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
                       </entryLinks>
