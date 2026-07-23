@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="29" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="30" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
   </catalogueLinks>
@@ -668,7 +668,7 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
               </characteristics>
             </profile>
@@ -855,7 +855,8 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This unit may move over structures as if they were not there.
 
-Breach, For each attack made for this weapon, that attack’s S is 1 higher than the target’s nToughness</characteristic>
+
+Breach, For each attack made for this weapon, that attack’s S is 1 higher than the target’s Toughness.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -910,13 +911,6 @@ Breach, For each attack made for this weapon, that attack’s S is 1 higher tha
           </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
-      <profiles>
-        <profile name="Servo-Arm" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="cf25-944f-271b-a0f7">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may select a friendly unit within 3” of this unit. The selected unit Repairs D3.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink name="Teleport Homer" id="d101-028d-8fe3-14c7" hidden="false" type="profile" targetId="77ce-0080-b298-0daa"/>
         <infoLink name="Heal/Repair (X)" id="f018-f07e-b7af-2c16" hidden="false" type="rule" targetId="02c8-1ec5-cdab-2572"/>
@@ -1086,7 +1080,7 @@ Breach, For each attack made for this weapon, that attack’s S is 1 higher tha
           <profiles>
             <profile name="Iron Circle Automata" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="40a9-eabc-6ab6-028a">
               <characteristics>
-                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                 <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
@@ -1207,7 +1201,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                               <entryLinks>
                                 <entryLink import="true" name="Boltgun" hidden="false" id="8757-1a4b-6a60-6cae" type="selectionEntry" targetId="7c03-84c7-a561-dfa9">
                                   <modifiers>
-                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
                                   <constraints>
@@ -1254,7 +1248,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                     <entryLink import="true" name="Flamer" hidden="false" id="79cb-2905-c483-6933" type="selectionEntry" targetId="4cf9-1758-d00d-29c4">
                                       <modifiers>
                                         <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                       </modifiers>
                                       <constraints>
                                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca10-e90d-09fb-57a6" includeChildSelections="false"/>
@@ -1321,7 +1315,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                       <characteristics>
                                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                                         <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                                         <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Blast 7</characteristic>
@@ -1466,7 +1460,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                               <entryLinks>
                                 <entryLink import="true" name="Bolt Pistol" hidden="false" id="4306-9cae-d5ca-e790" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
                                   <modifiers>
-                                    <modifier type="set" value="Champion Bolt Pistol" field="name" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="Visionary Bolt Pistol" field="name" affects="profiles.Weapon"/>
                                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                     <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                   </modifiers>
@@ -2416,25 +2410,55 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="631f-ff74-e9a9-8c09-max" includeChildSelections="false"/>
                           </constraints>
                         </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Chainsword" hidden="false" id="0fc9-157f-b8d4-5e9e">
-                          <entryLinks>
-                            <entryLink import="true" name="Chainsword" hidden="false" id="bdd3-6f70-0605-a8d8" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
-                              <modifiers>
-                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                              </modifiers>
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8bc9-d95c-9599-29d6-min" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8bc9-d95c-9599-29d6-max" includeChildSelections="false"/>
-                              </constraints>
-                            </entryLink>
-                          </entryLinks>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b0a-cff7-5935-b25c-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b0a-cff7-5935-b25c-max" includeChildSelections="false"/>
-                          </constraints>
-                        </selectionEntry>
                       </selectionEntries>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Chainsword" id="0745-3379-c651-7dbb" hidden="false" defaultSelectionEntryId="0fc9-157f-b8d4-5e9e">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1a17-61e8-9482-d800-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a17-61e8-9482-d800-max" includeChildSelections="false"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Chainsword" hidden="false" id="0fc9-157f-b8d4-5e9e">
+                              <entryLinks>
+                                <entryLink import="true" name="Chainsword" hidden="false" id="bdd3-6f70-0605-a8d8" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
+                                  <modifiers>
+                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                  <constraints>
+                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8bc9-d95c-9599-29d6-min" includeChildSelections="false"/>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8bc9-d95c-9599-29d6-max" includeChildSelections="false"/>
+                                  </constraints>
+                                </entryLink>
+                              </entryLinks>
+                            </selectionEntry>
+                            <selectionEntry type="upgrade" import="true" name="Power Knife" hidden="true" id="888b-36cb-0d3d-ecd1">
+                              <profiles>
+                                <profile name="Power Knife" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="588a-5ac6-c4d4-4fc0">
+                                  <characteristics>
+                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                    <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <infoLinks>
+                                <infoLink name="Pierce" id="ff65-f299-cb68-abcd" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                              </infoLinks>
+                              <modifiers>
+                                <modifier type="set" value="false" field="hidden">
+                                  <conditions>
+                                    <condition type="atLeast" value="1" field="selections" scope="force" childId="d592-5a78-0580-1d03" shared="true" includeChildSelections="true" childName="Alpha Legion"/>
+                                  </conditions>
+                                </modifier>
+                              </modifiers>
+                            </selectionEntry>
+                          </selectionEntries>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Champion" hidden="false" id="6cd1-32d7-58d9-d2ce" sortIndex="3">
                       <constraints>
@@ -3999,7 +4023,7 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                     <modifierGroup type="and">
                       <modifiers>
                         <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                     </modifierGroup>
                   </modifierGroups>
@@ -4274,7 +4298,7 @@ Daemonic Strength: For each attack made for this unit, a Wound Roll of 6 for th
             <profile name="Chaos Sorcerer Lord" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="9bdd-0a98-d65d-b047">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                 <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
@@ -4312,7 +4336,7 @@ Daemonic Strength: For each attack made for this unit, a Wound Roll of 6 for th
                         <modifierGroup type="and">
                           <modifiers>
                             <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </modifierGroup>
                       </modifierGroups>
@@ -4447,7 +4471,7 @@ Daemonic Strength: For each attack made for this unit, a Wound Roll of 6 for th
                       <modifierGroups>
                         <modifierGroup type="and">
                           <modifiers>
-                            <modifier type="set" value="9" field="571c-0471-2614-c57c" affects="profiles.Weapon"/>
+                            <modifier type="set" value="5" field="571c-0471-2614-c57c" affects="profiles.Weapon"/>
                             <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                             <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="2D3+2" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
@@ -8041,10 +8065,20 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Hades Autocannons" hidden="false" id="d521-a890-fb6a-5f2f" sortIndex="1">
                   <profiles>
-                    <profile name="Hades Autocannons" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="790f-28d3-2977-5222">
+                    <profile name="Hades Autocannon Left" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="790f-28d3-2977-5222">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 2</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Hades Autocannon Right" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="b4fd-e8ec-08f2-9650">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
