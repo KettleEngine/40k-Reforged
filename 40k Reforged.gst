@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="58" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="59" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -361,9 +361,9 @@
         <infoLink name="Indirect" id="2512-df36-d64f-600d" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Power Sword" hidden="false" id="dfed-4c14-cafd-626d">
+    <selectionEntry type="upgrade" import="true" name="Power Weapon" hidden="false" id="dfed-4c14-cafd-626d">
       <profiles>
-        <profile name="Power Sword" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0235-7859-850a-582a">
+        <profile name="Power Weapon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0235-7859-850a-582a">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>

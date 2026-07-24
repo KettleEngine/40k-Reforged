@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="30" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="31" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
   </catalogueLinks>
@@ -143,7 +143,7 @@
         </profile>
         <profile name="5 United In Hatred" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="true" id="7abf-5b82-3deb-e8b7">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">While this unit is not active, each enemy unit visible to it gains Dark Gods’ Hatred. If any of those units are within 24” of one or more of your units with Traitorous Contempt, instead those units gain Ruinous Onslaught.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">While this unit is not active, each enemy unit visible to it gains Dark Gods’ Hatred. If any of those units are within 24” of one or more of your units with Traitorous Contempt, those units gain Ruinous Onslaught</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -194,9 +194,9 @@
           </modifiers>
           <comment>Black Legion</comment>
         </profile>
-        <profile name="1 Techno-Venomous Mechatendrils" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="true" id="c3fb-b82f-ad88-abbc">
+        <profile name="1 Thunderburst Towed Artillery" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="true" id="c3fb-b82f-ad88-abbc">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit gains this ability or after this unit’s Move step, select one of your units within 6”. The selected unit Repairs 2D3.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">While this unit has this ability, one model of your choice gains the following weapon:</characteristic>
           </characteristics>
           <comment>Iron Warriors</comment>
           <modifiers>
@@ -207,14 +207,12 @@
             </modifier>
           </modifiers>
         </profile>
-        <profile name="6 Thunderburst Towed Artillery" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="true" id="1f9b-a7d1-39e5-0f7b">
+        <profile name="6 Techno-Venomous Mechatendrils" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="true" id="1f9b-a7d1-39e5-0f7b">
           <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Blast 3, Suppressive 1</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While enemy units are visible to and within 8” of this unit, those units gain the following ability: 
+
+
+Structural Degradation: This unit cannot be selected for Activation unless their controlling player has no other units available for Activation. Additionally, for each attack that targets this unit, a Hit Roll of 6 for that attack always wounds.</characteristic>
           </characteristics>
           <comment>Iron Warriors</comment>
           <modifiers>
@@ -276,7 +274,7 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
         </profile>
         <profile name="2 Fleshmetal Exoskeleton" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="true" id="2fcc-1ceb-d971-87cd">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit gains Resilient 6+. After this unit’s Attacks step, this unit Repairs D3.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit gains Resilient 6+. After this unit gains this ability and after it is Activated, this unit Repairs 1.</characteristic>
           </characteristics>
           <comment>Iron Warriors</comment>
           <modifiers>
@@ -483,6 +481,24 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
             </modifier>
           </modifiers>
           <comment>Alpha Legion</comment>
+        </profile>
+        <profile name="1 Thunderburst Towed Artillery" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="true" id="f894-6ab7-e3c6-82f4">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Blast 3, Suppressive 1</characteristic>
+          </characteristics>
+          <comment>Iron Warriors</comment>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="27b0-cf36-cd17-73c6" shared="true" includeChildSelections="true" childName="Iron Warriors"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -1922,7 +1938,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
   <sharedProfiles>
     <profile name="Selfish Ascension" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="298d-635e-7f54-b527">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Each time an enemy unit with Dark Gods’ Hatred dies, if the active unit is one of your Chaos Space Marines units, instead of ‘that unit Heals D3’, you may select one of your units with Selfish Ascension and improve the H of a Leader model in that unit by 1.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Each time an enemy unit with Dark Gods’ Hatred dies, if the active unit is one of your Chaos Space Marines units, instead of ‘that unit Heals D3’, you may select one of your units in the battlefield with Selfish Ascension and improve the H of a Leader model in that unit by 1.</characteristic>
       </characteristics>
     </profile>
     <profile name="Traitorous Contempt" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3941-84ed-06f0-8bcb">
@@ -2328,7 +2344,7 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                                         <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                        <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Blast 7</characteristic>
                                       </characteristics>
@@ -2920,7 +2936,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                               <entryLinks>
                                 <entryLink import="true" name="Bolt Pistol" hidden="false" id="3508-20a4-042e-2379" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
                                   <modifiers>
-                                    <modifier type="set" value="Champion Bolt Pistol" field="name" affects="profiles.Weapon"/>
                                     <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                     <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                   </modifiers>
@@ -5036,7 +5051,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                       </constraints>
                       <modifiers>
                         <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="set" value="D3+1" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
+                        <modifier type="set" value="D3" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
                         <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
@@ -5753,12 +5768,12 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Raptor" hidden="false" id="abb8-4060-5f54-6323">
               <profiles>
-                <profile name="Warp Talon" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5d0c-ddd3-7649-0049">
+                <profile name="Raptors" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="5d0c-ddd3-7649-0049">
                   <characteristics>
-                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5784,7 +5799,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                               <entryLinks>
                                 <entryLink import="true" name="Bolt Pistol" hidden="false" id="e0ba-3966-a743-b9dc" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
                                   <modifiers>
-                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
                                   <constraints>
@@ -5884,7 +5899,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                               <entryLinks>
                                 <entryLink import="true" name="Plasma Pistol" hidden="false" id="41bf-752e-105c-d9ab" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
                                   <modifiers>
-                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
                                   <constraints>
@@ -5898,7 +5913,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                               <entryLinks>
                                 <entryLink import="true" name="Bolt Pistol" hidden="false" id="1fc1-4dd5-3526-c6fd" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
                                   <modifiers>
-                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
                                   <constraints>
@@ -5991,7 +6006,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
       <profiles>
         <profile name="Disoriented Prey" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="59e6-0335-96eb-c2f6">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select an enemy unit within engagement range of this unit if able. The selected unit suffers X Suppression where X is equal to the highest result of this unit’s last Move Roll.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select an enemy unit within engagement range of this unit if able. The selected unit suffers X Suppression where X is equal to the highest single dice result of this unit’s last Move Roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6274,14 +6289,14 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
         <cost name="pts" typeId="points" value="180"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Hellbrute" hidden="false" id="c95a-f982-95b6-6779" sortIndex="17">
+    <selectionEntry type="unit" import="true" name="Helbrute" hidden="false" id="c95a-f982-95b6-6779" sortIndex="17">
       <categoryLinks>
         <categoryLink targetId="6537-7b2d-b2c8-6005" id="ac07-f6c3-7595-ba32" primary="false" name="Monster"/>
         <categoryLink targetId="f809-9826-f58a-6b8d" id="eb85-8a10-306f-ada5" primary="false" name="Chaos"/>
         <categoryLink targetId="ccc6-6202-853c-23e4" id="0467-d1b9-6854-4f27" primary="true" name="Support"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Hellbrute" hidden="false" id="113c-050b-a687-51bc">
+        <selectionEntry type="model" import="true" name="Helbrute" hidden="false" id="113c-050b-a687-51bc">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="086c-3292-03cd-0882-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="086c-3292-03cd-0882-max" includeChildSelections="false"/>
@@ -6299,9 +6314,9 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
           <selectionEntryGroups>
             <selectionEntryGroup name="Left Arm:" id="32a7-70be-c58f-7fae" hidden="false" defaultSelectionEntryId="f4d8-122d-5e10-01a4">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Hammer" hidden="false" id="1094-a5e1-83c8-2ffd" sortIndex="1">
+                <selectionEntry type="upgrade" import="true" name="Helbrute Hammer" hidden="false" id="1094-a5e1-83c8-2ffd" sortIndex="1">
                   <profiles>
-                    <profile name="Hammer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9aa9-9e7f-1de3-a301">
+                    <profile name="Helbrute Hammer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9aa9-9e7f-1de3-a301">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
@@ -6316,7 +6331,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                     <infoLink name="Breach" id="0cd0-28a3-1ac8-1642" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="hellbrute Fist" hidden="false" id="f4d8-122d-5e10-01a4" sortIndex="3">
+                <selectionEntry type="upgrade" import="true" name="Helbrute Fist" hidden="false" id="f4d8-122d-5e10-01a4" sortIndex="3">
                   <profiles>
                     <profile name="Hellbrute Fist" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4baa-31bd-d13f-bd06">
                       <characteristics>
@@ -6462,7 +6477,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Blast 7</characteristic>
                       </characteristics>
@@ -6558,7 +6573,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                     </entryLink>
                   </entryLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="hellbrute Fist" hidden="false" id="f0d7-6cf3-6da6-4b15" sortIndex="6">
+                <selectionEntry type="upgrade" import="true" name="Helbrute Fist" hidden="false" id="f0d7-6cf3-6da6-4b15" sortIndex="6">
                   <profiles>
                     <profile name="Hellbrute Fist" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a32a-1aff-52a7-76ba">
                       <characteristics>
@@ -7064,6 +7079,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
       <categoryLinks>
         <categoryLink name="Vehicle" hidden="false" id="fd1b-79b5-e38a-e10e" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
         <categoryLink name="Support" hidden="false" id="0f36-40ce-c8be-b8d3" targetId="ccc6-6202-853c-23e4" primary="true"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="b6be-9a74-b7b0-18b2" primary="false" name="Chaos"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -7112,9 +7128,6 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                         <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="prepend" value="Sponson" field="name"/>
                       </modifiers>
-                      <costs>
-                        <cost name="pts" typeId="points" value="20"/>
-                      </costs>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e77-cfed-d3f8-9ab9-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e77-cfed-d3f8-9ab9-max" includeChildSelections="false"/>
@@ -7295,16 +7308,11 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                       </characteristics>
                     </profile>
                   </profiles>
-                  <infoLinks>
-                    <infoLink name="Overcharge" id="23ca-8cc3-05d0-8b91" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
-                    <infoLink name="Pierce" id="313c-d1b9-d75e-ed27" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
             <selectionEntryGroup name="Aux Gun" id="9d51-822f-b9e0-d070" hidden="false" defaultSelectionEntryId="c84c-bf4e-994f-b126">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5188-0038-547b-f7dc-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5188-0038-547b-f7dc-max" includeChildSelections="false"/>
               </constraints>
               <selectionEntries>
@@ -7322,6 +7330,9 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                       </modifiers>
                     </entryLink>
                   </entryLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Havoc Launcher" hidden="false" id="bd54-0336-5792-08ec" sortIndex="2">
                   <entryLinks>
@@ -7336,6 +7347,9 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                       </modifiers>
                     </entryLink>
                   </entryLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -7419,7 +7433,8 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                 <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
               </modifiers>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c73c-a499-1d64-568b" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c73c-a499-1d64-568b-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c73c-a499-1d64-568b-max" includeChildSelections="false"/>
               </constraints>
             </entryLink>
             <entryLink import="true" name="Smoke Launchers" hidden="false" id="05bf-37ac-9582-9962" type="selectionEntry" targetId="d653-3fc2-d577-6295">
@@ -7469,7 +7484,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Contemptor Dreadnaught" hidden="false" id="ce1c-87e1-a73d-1932" sortIndex="26">
+    <selectionEntry type="unit" import="true" name="Contemptor Dreadnought" hidden="false" id="ce1c-87e1-a73d-1932" sortIndex="26">
       <costs>
         <cost name="pts" typeId="points" value="160"/>
       </costs>
@@ -7479,7 +7494,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
         <categoryLink targetId="f809-9826-f58a-6b8d" id="0cca-2aae-093f-e126" primary="false" name="Chaos"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Contemptor Dreadnaught" hidden="false" id="15e1-de4f-6eea-67d5">
+        <selectionEntry type="model" import="true" name="Contemptor Dreadnought " hidden="false" id="15e1-de4f-6eea-67d5">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e4f-17cb-3f31-c0a0" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2846-eefc-1c5f-da6c" includeChildSelections="false"/>
@@ -7494,7 +7509,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred, For each attack made for this weapon that targets an enemy unit further than 16” away, the D of that attack improves by 2.</characteristic>
                       </characteristics>
@@ -7526,8 +7541,8 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                     <profile name="Dreadnought Powerfist" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a5d3-82ee-4186-a545">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+1</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
@@ -7627,7 +7642,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7711,6 +7726,9 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                       </constraints>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
+                  <infoLinks>
+                    <infoLink name="Shred" id="348c-9db8-3ba6-03da" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Assault Cannon" hidden="false" id="f6ab-40c6-860d-738c" sortIndex="3">
                   <entryLinks>
@@ -7732,7 +7750,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                       <modifiers>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                         <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="prepend" value="Duel" field="name"/>
+                        <modifier type="prepend" value="Dual" field="name"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="323d-01bf-b1d5-fcca" includeChildSelections="false"/>
@@ -7747,7 +7765,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                       <modifiers>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                         <modifier type="set" value="16" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="prepend" value="Duel" field="name"/>
+                        <modifier type="prepend" value="Dual" field="name"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="800b-caf3-f7c1-6fab" includeChildSelections="false"/>
@@ -7762,7 +7780,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                       <modifiers>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                         <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="prepend" value="Duel" field="name"/>
+                        <modifier type="prepend" value="Dual" field="name"/>
                       </modifiers>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d8ae-bb3e-7bcc-985b" includeChildSelections="false"/>
@@ -7793,11 +7811,11 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
             </selectionEntryGroup>
           </selectionEntryGroups>
           <profiles>
-            <profile name="Contemptor Dreadnaught" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6329-0f88-6009-10b4">
+            <profile name="Contemptor Dreadnought " typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="6329-0f88-6009-10b4">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">14</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">13</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
               </characteristics>
             </profile>
@@ -7831,7 +7849,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
         <infoLink targetId="a975-5d96-4936-cf29" id="eec8-47c0-7a17-edb1" type="profile" name="Ancient Fury" hidden="false"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Leviathan Dreadnaught" hidden="false" id="a7aa-c8f5-02ab-e4bc" sortIndex="27">
+    <selectionEntry type="unit" import="true" name="Leviathan Dreadnought " hidden="false" id="a7aa-c8f5-02ab-e4bc" sortIndex="27">
       <costs>
         <cost name="pts" typeId="points" value="260"/>
       </costs>
@@ -7841,7 +7859,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
         <categoryLink targetId="f809-9826-f58a-6b8d" id="1bc1-871e-32a4-c415" primary="false" name="Chaos"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Leviathan Dreadnaught" hidden="false" id="ffa9-a658-2f72-1afc">
+        <selectionEntry type="model" import="true" name="Leviathan Dreadnought " hidden="false" id="ffa9-a658-2f72-1afc">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da46-cf86-3b43-bf0d" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="610a-7bfb-1895-acf5" includeChildSelections="false"/>
@@ -7926,7 +7944,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                     <infoLink name="Shred" id="6c65-ab64-2e2e-b670" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Leviathan Claw Drill &amp; Meltagun" hidden="false" id="9c8c-2ec0-7573-f064" sortIndex="5">
+                <selectionEntry type="upgrade" import="true" name="Leviathan Claw &amp; Meltagun" hidden="false" id="9c8c-2ec0-7573-f064" sortIndex="5">
                   <entryLinks>
                     <entryLink import="true" name="Meltagun" hidden="false" id="e49f-eaf6-8625-f880" type="selectionEntry" targetId="4260-66c2-4887-4117">
                       <constraints>
@@ -7996,12 +8014,12 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
             </selectionEntryGroup>
           </selectionEntryGroups>
           <profiles>
-            <profile name="Leviathan Dreadnaught" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="67d2-8c70-8c10-112f">
+            <profile name="Leviathan Dreadnought " typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="67d2-8c70-8c10-112f">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
-                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">2+</characteristic>
                 <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">14</characteristic>
-                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8218,10 +8236,10 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
             </profile>
             <profile name="5 Fleshy Abundance" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="ec48-8bed-5e7d-6a36">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a friendly unit within 14” of this unit. Until the nnext time this unit is Activated or dies, the selected unit gains Resilient 6+ and the following ability:
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a friendly unit within 14” of this unit. Until the next time this unit is Activated or dies, the selected unit gains Resilient 6+ and the following ability:
 
 
-Grotesquely Resilient: Add 1 to Resilient rolls made for this unit</characteristic>
+Grotesquely Resilient: Add 1 to Resilient rolls made for this unit.</characteristic>
               </characteristics>
             </profile>
             <profile name="6 Rancid Visitations" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="1480-9066-a62c-28f8">
@@ -8239,7 +8257,7 @@ Grotesquely Resilient: Add 1 to Resilient rolls made for this unit</characterist
           <profiles>
             <profile name="1 Cacophonic Choir" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="3721-f0e3-3c3f-49a4">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the End step, for each Resolve Test made for benemy units within 6” of this unit, a result of 6 always fails. Then, each nenemy unit within 6” suffers D3+2 Suppression.</characteristic>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the End step, for each Resolve Test made for enemy units within 6” of this unit, a result of 6 always fails. Then, each enemy unit within 6” suffers D3+2 Suppression.</characteristic>
               </characteristics>
             </profile>
             <profile name="2 Siren" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="4aa6-419c-4383-7e95">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="38" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="39" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -70,7 +70,7 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Blast 7, Ignore Cover</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Indirect, Barrage, Blast 5, Ignore Cover</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -91,7 +91,7 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">-</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">-</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Attacks step, select a point on the battlefield within 16” of this unit. For each infantry unit within 6” of that point, that unit suffers 3D3 SW.</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Attacks step, select a point on the battlefield within 16” of this unit. For each infantry unit within 2D6” of that point, that unit suffers 6 SW.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -151,7 +151,7 @@
       <profiles>
         <profile name="Hot-Shot Laspistol" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7a2e-3c2a-048d-140e">
           <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
@@ -293,7 +293,7 @@
       <profiles>
         <profile name="Demolisher Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ef19-0317-83d0-9d13">
           <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
@@ -437,7 +437,7 @@
               <entryLinks>
                 <entryLink import="true" name="Heavy Stubber" hidden="false" id="d46c-b977-398f-e1bc" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
                   <costs>
-                    <cost name="pts" typeId="points" value="20"/>
+                    <cost name="pts" typeId="points" value="10"/>
                   </costs>
                   <modifiers>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
@@ -450,7 +450,7 @@
                     <modifier type="set" value="7" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                   </modifiers>
                   <costs>
-                    <cost name="pts" typeId="points" value="20"/>
+                    <cost name="pts" typeId="points" value="10"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -683,7 +683,7 @@
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="points" value="10"/>
+                <cost name="pts" typeId="points" value="20"/>
               </costs>
               <infoLinks>
                 <infoLink name="Breach" id="6823-9cfb-12b0-2c30" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
@@ -782,6 +782,11 @@
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
+            <entryLink import="true" name="Smoke Launchers" hidden="false" id="3efb-1d75-c55c-e80f" type="selectionEntry" targetId="d653-3fc2-d577-6295">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </entryLink>
           </entryLinks>
           <profiles>
             <profile name="Manticore" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3434-48ad-bbb9-fb65">
@@ -842,7 +847,7 @@
               <entryLinks>
                 <entryLink import="true" name="Heavy Bolter" hidden="false" id="d42b-d158-62df-7eb7" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
                   <costs>
-                    <cost name="pts" typeId="points" value="30"/>
+                    <cost name="pts" typeId="points" value="20"/>
                   </costs>
                   <modifiers>
                     <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
@@ -853,16 +858,16 @@
                 <entryLink import="true" name="Heavy Flamer" hidden="false" id="3d0f-8123-4d81-f541" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
                   <modifiers>
                     <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
-                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                   <costs>
-                    <cost name="pts" typeId="points" value="30"/>
+                    <cost name="pts" typeId="points" value="20"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Multi-Melta" hidden="false" id="7a65-1948-af58-6610" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
                   <costs>
-                    <cost name="pts" typeId="points" value="30"/>
+                    <cost name="pts" typeId="points" value="20"/>
                   </costs>
                   <modifiers>
                     <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
@@ -872,7 +877,7 @@
                 </entryLink>
                 <entryLink import="true" name="Plasma Cannon" hidden="false" id="0821-e5cd-adc5-ab50" type="selectionEntry" targetId="597d-3cc2-8209-d3d1">
                   <costs>
-                    <cost name="pts" typeId="points" value="30"/>
+                    <cost name="pts" typeId="points" value="20"/>
                   </costs>
                   <modifiers>
                     <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
@@ -889,7 +894,7 @@
               <entryLinks>
                 <entryLink import="true" name="Storm Bolter" hidden="false" id="9324-fb90-2fd3-73fe" type="selectionEntry" targetId="d215-60bd-f49d-295e">
                   <costs>
-                    <cost name="pts" typeId="points" value="20"/>
+                    <cost name="pts" typeId="points" value="10"/>
                   </costs>
                   <modifiers>
                     <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
@@ -899,11 +904,11 @@
                 </entryLink>
                 <entryLink import="true" name="Heavy Stubber" hidden="false" id="ba93-ccf2-c140-c1a7" type="selectionEntry" targetId="4b7a-633d-1e19-061d">
                   <costs>
-                    <cost name="pts" typeId="points" value="20"/>
+                    <cost name="pts" typeId="points" value="10"/>
                   </costs>
                   <modifiers>
                     <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
-                    <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
@@ -1012,7 +1017,7 @@
                 <entryLink import="true" name="Lascannon" hidden="false" id="c37d-1b88-187d-755c" type="selectionEntry" targetId="54fc-ac08-3927-692d">
                   <modifiers>
                     <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
-                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
@@ -1028,7 +1033,7 @@
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">11</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
               </characteristics>
             </profile>
@@ -1317,7 +1322,7 @@
                     <entryLink import="true" name="Heavy Bolter" hidden="false" id="68d5-595c-aa02-ac4e" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
                       <modifiers>
                         <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="7" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
@@ -1536,7 +1541,7 @@
                   <entryLinks>
                     <entryLink import="true" name="Heavy Bolter" hidden="false" id="53bc-db97-9ebf-aa6f" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
                       <modifiers>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
@@ -1629,8 +1634,8 @@
                     </entryLink>
                     <entryLink import="true" name="Lascannon" hidden="false" id="9a19-6c1e-f41b-ba97" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="2">
                       <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
                     <entryLink import="true" name="Heavy Flamer" hidden="false" id="eb25-6d77-4aa6-27fc" type="selectionEntry" targetId="5c44-7d31-605d-4b6f" sortIndex="3">
@@ -1676,9 +1681,9 @@
                         <profile name="Missile Launcher (Sweep)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f919-d228-c45e-2ae6">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Blast 7</characteristic>
                           </characteristics>
@@ -1712,6 +1717,24 @@
         <profile name="Frontline Walker" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c059-d9ab-93ff-5388">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit Activates, you may change the Tp of each Hv weapon in this unit to Aslt.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Astropath Stave" hidden="false" id="d1cb-0102-d66e-37f9">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a0cf-1f63-35fd-4dba-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a0cf-1f63-35fd-4dba-max" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Astropath Stave" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6ecb-fa8a-26d3-ab51">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest dice result of this unit’s last Psychic Test.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1760,7 +1783,7 @@ This unit does not count towards the leader maximum of the army list.</character
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1926-eb29-91c9-49ac-max" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lasgun" hidden="false" id="643e-7d1e-356c-4526" type="selectionEntry" targetId="0b54-6ba9-f583-4b19">
+            <entryLink import="true" name="Laspistol" hidden="false" id="643e-7d1e-356c-4526" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1084-c42a-aaa9-ca3d-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1084-c42a-aaa9-ca3d-max" includeChildSelections="false"/>
@@ -1780,7 +1803,7 @@ This unit does not count towards the leader maximum of the army list.</character
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Master Of Vox Operator" hidden="false" id="f58d-87f6-b14c-600d">
+    <selectionEntry type="unit" import="true" name="Master Vox Operator" hidden="false" id="f58d-87f6-b14c-600d">
       <costs>
         <cost name="pts" typeId="points" value="10"/>
       </costs>
@@ -1808,30 +1831,13 @@ This unit does not count towards the leader maximum of the army list</characteri
         </profile>
       </profiles>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Master Of Vox Operator" hidden="false" id="3276-5f25-7f35-8a36">
+        <selectionEntry type="model" import="true" name="Master Vox Operator" hidden="false" id="3276-5f25-7f35-8a36">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d0cd-10c7-9fad-bfb4-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0cd-10c7-9fad-bfb4-max" includeChildSelections="false"/>
           </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Laspistol" hidden="false" id="15c4-c92c-4277-5f8d" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea">
-              <modifiers>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca46-e80b-2f89-a356-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ca46-e80b-2f89-a356-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lasgun" hidden="false" id="1007-a0b7-52b3-a032" type="selectionEntry" targetId="0b54-6ba9-f583-4b19">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bde1-421d-155f-4ee5-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bde1-421d-155f-4ee5-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
           <profiles>
-            <profile name="Master Of Vox Operator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="9d56-a0ec-f340-62f8">
+            <profile name="Master Vox Operator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="9d56-a0ec-f340-62f8">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
@@ -1840,6 +1846,22 @@ This unit does not count towards the leader maximum of the army list</characteri
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Gun" id="0c8b-152d-06f4-5624" hidden="false" defaultSelectionEntryId="1007-a0b7-52b3-a032">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5fcc-5619-81f4-0c6f-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5fcc-5619-81f4-0c6f-max" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Lasgun" hidden="false" id="1007-a0b7-52b3-a032" type="selectionEntry" targetId="0b54-6ba9-f583-4b19"/>
+                <entryLink import="true" name="Laspistol" hidden="false" id="15c4-c92c-4277-5f8d" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea">
+                  <modifiers>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -1905,7 +1927,7 @@ This unit does not count towards the leader maximum of the army list.</character
                         <entryLink import="true" name="Power Fist" hidden="false" id="cb7e-8993-1d9f-413e" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="3">
                           <modifiers>
                             <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="6+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </entryLink>
                       </entryLinks>
@@ -1974,23 +1996,6 @@ This unit does not count towards the leader maximum of the army list.</character
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c271-bb40-62ba-dbcb-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c271-bb40-62ba-dbcb-max" includeChildSelections="false"/>
           </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Laspistol" hidden="false" id="ea32-3d7f-a130-74d6" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea">
-              <modifiers>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="751b-af40-dd4f-934b-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="751b-af40-dd4f-934b-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lasgun" hidden="false" id="6028-aff8-fe58-f3f9" type="selectionEntry" targetId="0b54-6ba9-f583-4b19">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c8d6-2833-78df-0bf6" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f1a-0271-e54b-1501" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
           <profiles>
             <profile name="Medic" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="e97a-980f-83e0-8e8b">
               <characteristics>
@@ -2001,6 +2006,22 @@ This unit does not count towards the leader maximum of the army list.</character
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Gun" id="e324-033c-f339-5c75" hidden="false" defaultSelectionEntryId="f3da-ca44-50ec-3d09">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="57f4-39cf-3b66-e0ed-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="57f4-39cf-3b66-e0ed-max" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Lasgun" hidden="false" id="f3da-ca44-50ec-3d09" type="selectionEntry" targetId="0b54-6ba9-f583-4b19"/>
+                <entryLink import="true" name="Laspistol" hidden="false" id="ef2d-8f76-f4c7-57e0" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea">
+                  <modifiers>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -2244,27 +2265,8 @@ This unit does not count towards the leader maximum of the army list.</character
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="09f1-ac3b-9ba1-8e97-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="09f1-ac3b-9ba1-8e97-max" includeChildSelections="false"/>
           </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Astropath Stave" hidden="false" id="d1cb-0102-d66e-37f9">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a0cf-1f63-35fd-4dba-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a0cf-1f63-35fd-4dba-max" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Astropath Stave" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6ecb-fa8a-26d3-ab51">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">-</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After each successful Wound Roll, the target unit suffers 2 Psychic SW.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
+            <entryLink targetId="d1cb-0102-d66e-37f9" id="20fd-a81b-0c8e-dbdb" type="selectionEntry" name="Astropath Stave" hidden="false"/>
             <entryLink import="true" name="Laspistol" hidden="false" id="37c0-7b93-ef8f-f95f" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c6fb-fd7d-7d45-612e-min" includeChildSelections="false"/>
@@ -2371,14 +2373,14 @@ This unit may only Cast psychic powers from the ‘Psychic Powers of the Battle 
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c371-35d1-6173-7876" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Psyker Stave" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="52f4-8145-1f30-35db">
+                <profile name="Psyker Stave" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3b0a-381b-ec85-6e7a">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
                     <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">-</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After each successful Wound Roll, the target unit suffers 2 Psychic SW.</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest dice result of this unit’s last Psychic Test.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2399,7 +2401,7 @@ This unit may only Cast psychic powers from the ‘Psychic Powers of the Battle 
             <profile name="Primaris Psyker" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="25e1-c4b7-62d3-5170">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
                 <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
@@ -2498,7 +2500,7 @@ Grinding Treads: After this unit’s Move step, you may select an enemy unit w
               <entryLinks>
                 <entryLink import="true" name="Heavy Bolter" hidden="false" id="80c7-a104-8d2d-60af" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
                   <costs>
-                    <cost name="pts" typeId="points" value="30"/>
+                    <cost name="pts" typeId="points" value="20"/>
                   </costs>
                   <modifiers>
                     <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
@@ -2513,12 +2515,12 @@ Grinding Treads: After this unit’s Move step, you may select an enemy unit w
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                   <costs>
-                    <cost name="pts" typeId="points" value="30"/>
+                    <cost name="pts" typeId="points" value="20"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Multi-Melta" hidden="false" id="45a8-f1ed-48b3-cac0" type="selectionEntry" targetId="8cdb-d231-cc0f-a98f">
                   <costs>
-                    <cost name="pts" typeId="points" value="30"/>
+                    <cost name="pts" typeId="points" value="20"/>
                   </costs>
                   <modifiers>
                     <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
@@ -2528,7 +2530,7 @@ Grinding Treads: After this unit’s Move step, you may select an enemy unit w
                 </entryLink>
                 <entryLink import="true" name="Plasma Cannon" hidden="false" id="66c0-a8b1-600d-7053" type="selectionEntry" targetId="597d-3cc2-8209-d3d1">
                   <costs>
-                    <cost name="pts" typeId="points" value="30"/>
+                    <cost name="pts" typeId="points" value="20"/>
                   </costs>
                   <modifiers>
                     <modifier type="prepend" value="Sponson" field="name" affects="profiles.Weapon"/>
@@ -2560,7 +2562,7 @@ Grinding Treads: After this unit’s Move step, you may select an enemy unit w
                 <entryLink import="true" name="Lascannon" hidden="false" id="8185-329a-1200-3784" type="selectionEntry" targetId="54fc-ac08-3927-692d">
                   <modifiers>
                     <modifier type="prepend" value="Hull" field="name" affects="profiles.Weapon"/>
-                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
@@ -2661,7 +2663,7 @@ Grinding Treads: After this unit’s Move step, you may select an enemy unit w
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">16</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">15</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
               </characteristics>
             </profile>
@@ -2691,13 +2693,12 @@ Grinding Treads: After this unit’s Move step, you may select an enemy unit w
               <characteristics>
                 <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select a friendly vehicle unit within 6” of this unit. The selected unit Repairs D3+1 and gains the following ability:
 
-
-Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll of that attack. After this unit’s Attacks step, it loses this ability.</characteristic>
+Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll of that attack. After this unit’s Attacks step, it loses this ability.</characteristic>
               </characteristics>
             </profile>
-            <profile name="Resurging Machine" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6065-4257-1610-1eee">
+            <profile name="Invocate Machine" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6065-4257-1610-1eee">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit uses its Mendicant&apos;s Sacrament ability, the selected unit gains +X M until the End step, where X is equal to the Repair X.</characteristic>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s End step, if this was not your second turn in a row, you must take another turn.</characteristic>
               </characteristics>
             </profile>
             <profile name="Predictive Algorithms" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0d91-daf1-3c63-ffdf">
@@ -2775,7 +2776,7 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Commisar" hidden="true" id="f5a8-8170-6c47-e638">
+    <selectionEntry type="unit" import="true" name="Commissar" hidden="false" id="f5a8-8170-6c47-e638">
       <costs>
         <cost name="pts" typeId="points" value="20"/>
       </costs>
@@ -2790,13 +2791,21 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may select one of your infantry units within 8” of and visible to this unit with Suppressed X. Then, one model from that unit dies. Then, roll 2D3 and reduce its Suppressed X by the result.</characteristic>
           </characteristics>
         </profile>
+        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="95e2-b399-9f70-9973">
+          <characteristics>
+            <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to:
+● Any Troops unit
+This unit does not count towards the leader capacity of your army list.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="761e-94ff-72bd-2914" targetId="205c-3072-067b-d808" primary="false"/>
         <categoryLink targetId="1dc0-a947-c240-76bb" id="3736-4d8a-149c-c2cf" primary="true" name="Countless Leader"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="366f-f600-3320-1589" primary="false" name="Rare"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Commisar" hidden="false" id="0230-a114-efa5-0f72">
+        <selectionEntry type="model" import="true" name="Commissar" hidden="false" id="0230-a114-efa5-0f72">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a091-3d3a-b80a-c1f2-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a091-3d3a-b80a-c1f2-max" includeChildSelections="false"/>
@@ -2836,22 +2845,24 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
             </entryLink>
           </entryLinks>
           <profiles>
-            <profile name="Commisar" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0503-9c49-9843-27ad">
+            <profile name="Commissar" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="0503-9c49-9843-27ad">
               <characteristics>
-                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
-                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
         </selectionEntry>
       </selectionEntries>
-      <comment>Hidden as i suspect it was removed by mistake from the rules PDFs</comment>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="132f-e6de-780c-e0bc" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tempestus Scions" hidden="false" id="4373-8998-8aa8-3a32">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Exactly 5 Scions:" id="ff24-15a9-5e38-ad4f" hidden="false" defaultSelectionEntryId="e0da-e97d-49b8-8699">
+        <selectionEntryGroup name="Scions:" id="ff24-15a9-5e38-ad4f" hidden="false" defaultSelectionEntryId="e0da-e97d-49b8-8699">
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="53dc-ad61-acf9-ef07-min" includeChildSelections="false"/>
             <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="53dc-ad61-acf9-ef07-max" includeChildSelections="false"/>
@@ -2887,37 +2898,89 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
                       <entryLinks>
                         <entryLink import="true" name="Flamer" hidden="false" id="8a7f-ab96-bff7-d253" type="selectionEntry" targetId="4cf9-1758-d00d-29c4" sortIndex="1">
                           <modifiers>
-                            <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </entryLink>
                         <entryLink import="true" name="Meltagun" hidden="false" id="51ef-ce3b-ba39-0cef" type="selectionEntry" targetId="4260-66c2-4887-4117" sortIndex="2">
                           <modifiers>
                             <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </entryLink>
                         <entryLink import="true" name="Plasma Gun" hidden="false" id="3e0f-99e3-daf5-f95a" type="selectionEntry" targetId="af5b-b208-be5c-ba5b" sortIndex="3">
                           <modifiers>
                             <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </entryLink>
                         <entryLink import="true" name="Grenade Launcher" hidden="false" id="8f2e-4ced-940b-aae8" type="selectionEntry" targetId="15c9-8839-7f65-9a7b" sortIndex="4">
                           <modifiers>
-                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </entryLink>
                         <entryLink import="true" name="Hot-Shot Volley Gun" hidden="false" id="afa2-6aa6-1c78-f3d1" type="selectionEntry" targetId="8bf6-c294-2559-bf21" sortIndex="5">
                           <modifiers>
-                            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </entryLink>
                       </entryLinks>
                       <constraints>
-                        <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="c694-ef35-f900-334c" includeChildSelections="true"/>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="c694-ef35-f900-334c" includeChildSelections="true"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Special Weapons" id="910e-e8bf-26a5-afad" hidden="false" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Flamer" hidden="false" id="44fc-7c6f-22db-2bf5" type="selectionEntry" targetId="4cf9-1758-d00d-29c4" sortIndex="1">
+                          <modifiers>
+                            <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                        </entryLink>
+                        <entryLink import="true" name="Meltagun" hidden="false" id="8da6-1bc0-54f9-2a18" type="selectionEntry" targetId="4260-66c2-4887-4117" sortIndex="2">
+                          <modifiers>
+                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                        </entryLink>
+                        <entryLink import="true" name="Plasma Gun" hidden="false" id="2a1b-982c-4046-9946" type="selectionEntry" targetId="af5b-b208-be5c-ba5b" sortIndex="3">
+                          <modifiers>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                        </entryLink>
+                        <entryLink import="true" name="Grenade Launcher" hidden="false" id="f537-f59d-776f-1edb" type="selectionEntry" targetId="15c9-8839-7f65-9a7b" sortIndex="4">
+                          <modifiers>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                        </entryLink>
+                        <entryLink import="true" name="Hot-Shot Volley Gun" hidden="false" id="0ba2-fbb3-39a7-e802" type="selectionEntry" targetId="8bf6-c294-2559-bf21" sortIndex="5">
+                          <modifiers>
+                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <costs>
+                            <cost name="pts" typeId="points" value="10"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="5c0f-432d-bd62-a33b" includeChildSelections="true"/>
                       </constraints>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
@@ -2928,19 +2991,19 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
                           <entryLinks>
                             <entryLink import="true" name="Chainsword" hidden="false" id="a488-7449-bc39-6af9" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb" sortIndex="1">
                               <modifiers>
-                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
                             </entryLink>
                             <entryLink import="true" name="Power Fist" hidden="false" id="fd5a-20be-20f0-c198" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="2">
                               <modifiers>
                                 <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
                             </entryLink>
                             <entryLink import="true" name="Power Sword" hidden="false" id="fa5e-9213-5e48-8496" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="3">
                               <modifiers>
-                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
                             </entryLink>
@@ -3064,14 +3127,14 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
                     </entryLink>
                     <entryLink import="true" name="Lascannon" hidden="false" id="5adf-11f1-ee79-ba4c" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="2">
                       <modifiers>
-                        <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
                     <entryLink import="true" name="Heavy Bolter" hidden="false" id="8eae-7d3d-7040-3452" type="selectionEntry" targetId="82a1-b562-e748-d5ad" sortIndex="3">
                       <modifiers>
                         <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="13" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
                     <entryLink import="true" name="Mortar" hidden="false" id="9b8f-8e65-c438-511e" type="selectionEntry" targetId="41f7-2ab6-7e6c-8e01" sortIndex="4">
@@ -3080,8 +3143,40 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
                         <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
-                    <entryLink import="true" name="Missile Launcher" hidden="false" id="f553-149f-409c-7a70" type="selectionEntry" targetId="e03f-db1b-d6b0-b70f" sortIndex="6"/>
                   </entryLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Missile Launcher" hidden="false" id="81e8-7953-92b5-df88">
+                      <profiles>
+                        <profile name="Missile Launcher (Strike)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="cca7-7d87-578a-3f19">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Strike</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="Missile Launcher (Sweep)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="0bdd-db78-c683-47c7">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Blast 7</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Blast (X)" id="ff43-0631-5d72-064c" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+                        <infoLink name="Strike or Sweep (X)" id="3495-8c57-27ea-8408" hidden="false" type="rule" targetId="2757-6563-cdb2-3456"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
@@ -3104,17 +3199,17 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
         <infoLink name="Recrew" id="f40c-9d86-822e-6414" hidden="false" type="profile" targetId="9567-753f-2da2-e85a"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Field Ordinance Battery" hidden="false" id="4475-d615-6d47-0057">
+    <selectionEntry type="unit" import="true" name="Field Ordnance Battery" hidden="false" id="4475-d615-6d47-0057">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Field Ordinance Battery" id="f835-f338-e735-0c7a" hidden="false" defaultSelectionEntryId="b81c-ff67-9d2c-b6b5">
+        <selectionEntryGroup name="Field Ordnance Battery" id="f835-f338-e735-0c7a" hidden="false" defaultSelectionEntryId="b81c-ff67-9d2c-b6b5">
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Field Ordinance Team" hidden="false" id="b81c-ff67-9d2c-b6b5">
+            <selectionEntry type="model" import="true" name="Field Ordnance Team" hidden="false" id="b81c-ff67-9d2c-b6b5">
               <profiles>
-                <profile name="Field Ordinance Team" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1fa3-13fc-98f8-7252">
+                <profile name="Field Ordnance Team" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1fa3-13fc-98f8-7252">
                   <characteristics>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">1</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
-                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
                     <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
                   </characteristics>
                 </profile>
@@ -3127,7 +3222,7 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
                         <profile name="Bombast Field Gun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5ac7-9c19-d2bf-799f">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
@@ -3145,18 +3240,19 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
                         <profile name="Malleus Rocket Launcher " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e560-1df2-ad05-2ac1">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Suppressive 1</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Suppressive 1, One Shot</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
                       <infoLinks>
                         <infoLink name="Indirect" id="7ff0-b6d0-75b5-05f6" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
-                        <infoLink name="Barrage" id="0f56-ad61-3cc6-671b" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+                        <infoLink name="One Shot" id="0f56-ad61-3cc6-671b" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
                         <infoLink name="Suppressive (X)" id="08a8-a7a8-7c74-0c80" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+                        <infoLink name="Barrage" id="9438-8220-e929-206e" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -3193,7 +3289,7 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll
         <cost name="pts" typeId="points" value="110"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Death Korps Field Artillery" hidden="false" id="b186-98a3-7201-087b">
+    <selectionEntry type="unit" import="true" name="Death Korps Field Artillery" hidden="false" id="b186-98a3-7201-087b">
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
@@ -3400,7 +3496,7 @@ Aim There!: For each ranged attack this unit makes, add 1 to the Hit Roll of th
         <profile name="5 Valkyrie Authorisation (Valkyrie Multi-Laser)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6c50-8d0d-1fcc-baa5">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">30</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">40</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -3434,7 +3530,7 @@ Aim There!: For each ranged attack this unit makes, add 1 to the Hit Roll of th
                   <characteristics>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">1</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
-                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
                     <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
                   </characteristics>
                 </profile>
@@ -3478,13 +3574,6 @@ Aim There!: For each ranged attack this unit makes, add 1 to the Hit Roll of th
         <infoLink name="Recrew" id="3cae-c0f5-d1e9-efaf" hidden="false" type="profile" targetId="9567-753f-2da2-e85a"/>
         <infoLink name="Entrench" id="f9b9-760e-42d9-e9d7" hidden="false" type="profile" targetId="57ea-cdf2-571a-71ad"/>
       </infoLinks>
-      <profiles>
-        <profile name="Artillery Support" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="45e2-7cdd-012f-ee3f">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While selecting targets for this unit&apos;s Bombast Field Gun or Malleaus Rocket Launcher, if you have no ready units except units with Artillery Support, you may ‘call for an artillery strike’. If you do, you may instead target an enemy unit within 24&quot; of and visible to any of your infantry units within 24&quot; of this unit. Additionally, for each attack made for that weapon this turn, add 1 to the Hit Roll of that attack.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <costs>
         <cost name="pts" typeId="points" value="90"/>
       </costs>
