@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="32" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="33" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
   </catalogueLinks>
@@ -1331,7 +1331,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                       <characteristics>
                                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
                                         <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                                         <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Blast 7</characteristic>
@@ -1412,18 +1412,30 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                           </constraints>
                         </selectionEntryGroup>
                       </selectionEntryGroups>
-                      <entryLinks>
-                        <entryLink import="true" name="Combat Knife" hidden="false" id="d133-5919-de85-cb49" type="selectionEntry" targetId="a0e3-54ef-3ad5-3039" sortIndex="2">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Nemesis Claw Knife" hidden="false" id="30c9-198b-a92b-59fc">
+                          <entryLinks>
+                            <entryLink import="true" name="Combat Knife" hidden="false" id="d133-5919-de85-cb49" type="selectionEntry" targetId="a0e3-54ef-3ad5-3039">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="859c-ce75-fef3-e7b3" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d92f-5d01-8331-ead4" includeChildSelections="false"/>
+                              </constraints>
+                              <modifiers>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="Shred" field="d93f-70ee-72bc-5ef9" affects="profiles.Weapon"/>
+                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                              <infoLinks>
+                                <infoLink name="Shred" id="503d-f36f-0667-00bc" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                              </infoLinks>
+                            </entryLink>
+                          </entryLinks>
                           <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="859c-ce75-fef3-e7b3" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d92f-5d01-8331-ead4" includeChildSelections="false"/>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be40-cad6-51ef-d6de-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be40-cad6-51ef-d6de-max" includeChildSelections="false"/>
                           </constraints>
-                          <modifiers>
-                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </entryLink>
-                      </entryLinks>
+                        </selectionEntry>
+                      </selectionEntries>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Bolt Pistol &amp; Chainsword" hidden="false" id="6666-e3bd-19b2-55a9" sortIndex="2">
                       <selectionEntries>
@@ -1693,9 +1705,6 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                               <infoLinks>
                                 <infoLink name="Pierce" id="6244-85b2-0d6f-54d4" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                               </infoLinks>
-                              <costs>
-                                <cost name="pts" typeId="points" value="10"/>
-                              </costs>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Volkite Charger" hidden="false" id="42c0-ed62-f3b1-b8cf" sortIndex="1">
                               <profiles>
@@ -2276,7 +2285,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                     <entryLink import="true" name="Flamer" hidden="false" id="fb31-19e0-9311-8f6b" type="selectionEntry" targetId="4cf9-1758-d00d-29c4">
                                       <modifiers>
                                         <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                       </modifiers>
                                       <constraints>
                                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="818b-358c-e0f4-32b8-min" includeChildSelections="false"/>
@@ -2910,9 +2918,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="e78f-fcab-7b4f-0c48" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Plasma Gun" hidden="false" id="7793-b65a-6727-71fd" sortIndex="3">
                               <entryLinks>
@@ -2927,9 +2932,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="97e1-ea48-92aa-65c8" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="96ff-c147-10a3-1453" sortIndex="2">
                               <entryLinks>
@@ -2944,9 +2946,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="3ab1-4650-e74b-6172" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="6be2-a7ec-2a2e-6efb" sortIndex="4">
                               <entryLinks>
@@ -2961,9 +2960,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="8360-51b2-1cfd-1f1a" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Meltagun" hidden="false" id="6e4e-3695-d739-bdda" sortIndex="5">
                               <entryLinks>
@@ -2977,9 +2973,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="957c-cc63-5480-1127" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Flamer" hidden="false" id="4b39-2a71-ca03-c3aa" sortIndex="6">
                               <entryLinks>
@@ -2993,9 +2986,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="2c2d-5c48-53a2-2a64" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntry>
                           </selectionEntries>
                           <constraints>
@@ -3098,13 +3088,10 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                     </entryLink>
                                   </entryLinks>
                                   <costs>
-                                    <cost name="pts" typeId="points" value="20"/>
+                                    <cost name="pts" typeId="points" value="10"/>
                                   </costs>
                                 </selectionEntry>
                               </selectionEntries>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="4fff-fc27-ef6a-413f" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntryGroup>
                           </selectionEntryGroups>
                         </selectionEntryGroup>
@@ -3127,9 +3114,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="312a-5e6a-97a0-80ba" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Power Sword" hidden="false" id="8b34-d9d7-6d90-9712" sortIndex="2">
                               <entryLinks>
@@ -3144,9 +3128,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="ff9e-eddd-c2a9-bb27" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Power Fist" hidden="false" id="7999-bd74-60c5-fcae" sortIndex="3">
                               <entryLinks>
@@ -3161,9 +3142,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="a9d7-77b2-e634-6930" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Lightning Claw" hidden="false" id="d3a0-fb20-c119-b0f4" sortIndex="4">
                               <entryLinks>
@@ -3178,9 +3156,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="e137-2102-08e6-ff4d" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Daemon Hammer" hidden="false" id="d404-ea63-8ac7-2cfe" sortIndex="5">
                               <entryLinks>
@@ -3195,9 +3170,6 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
-                              <constraints>
-                                <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="8a58-744f-356a-e36b" includeChildSelections="true"/>
-                              </constraints>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
@@ -3796,7 +3768,7 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                   <entryLinks>
                     <entryLink import="true" name="Lightning Claw" hidden="false" id="bc24-c167-4790-47f0" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
                       <modifiers>
-                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="16" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
@@ -4102,7 +4074,6 @@ Daemonic Strength: For each attack made for this unit, a Wound Roll of 6 for th
             <modifier type="set" value="Psyker (3)" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Heavy Armour" id="7709-278e-20da-47fc" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
         <infoLink name="Traitorous Contempt" id="0920-e4af-58b4-9b82" hidden="false" type="profile" targetId="3941-84ed-06f0-8bcb"/>
       </infoLinks>
       <profiles>
@@ -4303,13 +4274,13 @@ Daemonic Strength: For each attack made for this unit, a Wound Roll of 6 for th
         <cost name="pts" typeId="points" value="70"/>
       </costs>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Chaos Sorcerer Lord" hidden="false" id="dd27-b9e2-7d55-1c8f" sortIndex="1">
+        <selectionEntry type="model" import="true" name="Chaos Sorcerer" hidden="false" id="dd27-b9e2-7d55-1c8f" sortIndex="1">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="733a-eef7-e420-c271" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a02e-80f2-65d9-ec0c" includeChildSelections="false"/>
           </constraints>
           <profiles>
-            <profile name="Chaos Sorcerer Lord" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="9bdd-0a98-d65d-b047">
+            <profile name="Chaos Sorcerer" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="9bdd-0a98-d65d-b047">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
@@ -4336,7 +4307,7 @@ Daemonic Strength: For each attack made for this unit, a Wound Roll of 6 for th
                         <modifierGroup type="and">
                           <modifiers>
                             <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </modifierGroup>
                       </modifierGroups>
@@ -4897,6 +4868,9 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                                   </modifiers>
                                 </entryLink>
                               </entryLinks>
+                              <costs>
+                                <cost name="pts" typeId="points" value="10"/>
+                              </costs>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Chainfist" hidden="false" id="0ce5-0a6b-d498-c53f" sortIndex="5">
                               <profiles>
@@ -5050,7 +5024,6 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                       </constraints>
                       <modifiers>
                         <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="set" value="D3" field="c2c0-3714-05e2-65a0" affects="profiles.Weapon"/>
                         <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
@@ -5393,86 +5366,6 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                                   <constraints>
                                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9b99-ecdf-221c-f187" includeChildSelections="false"/>
                                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8980-2b13-f9bd-e7d8" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                              </entryLinks>
-                            </selectionEntry>
-                          </selectionEntries>
-                        </selectionEntryGroup>
-                        <selectionEntryGroup name="Melee" id="62de-2e21-1907-e3af" hidden="false" defaultSelectionEntryId="917b-3e10-2704-1e76">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7c1e-e37e-01e7-e593" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c1c8-3478-76d1-ae3f" includeChildSelections="false"/>
-                          </constraints>
-                          <selectionEntries>
-                            <selectionEntry type="upgrade" import="true" name="Power Fist" hidden="false" id="7339-02c0-f5be-fb37" sortIndex="3">
-                              <entryLinks>
-                                <entryLink import="true" name="Power Fist" hidden="false" id="23c3-e5c6-24fd-b996" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d">
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1a1f-8440-39cd-df70" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2205-8a0b-a1c2-4725" includeChildSelections="false"/>
-                                  </constraints>
-                                  <modifierGroups>
-                                    <modifierGroup type="and">
-                                      <modifiers>
-                                        <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                      </modifiers>
-                                    </modifierGroup>
-                                  </modifierGroups>
-                                </entryLink>
-                              </entryLinks>
-                            </selectionEntry>
-                            <selectionEntry type="upgrade" import="true" name="Power Sword" hidden="false" id="072a-b047-ee1c-3836" sortIndex="2">
-                              <entryLinks>
-                                <entryLink import="true" name="Power Weapon" hidden="false" id="a738-5e16-b361-47a4" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
-                                  <modifierGroups>
-                                    <modifierGroup type="and">
-                                      <modifiers>
-                                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                      </modifiers>
-                                    </modifierGroup>
-                                  </modifierGroups>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="999f-9366-9fea-cb57" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f78-f377-28b5-3e14" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                              </entryLinks>
-                            </selectionEntry>
-                            <selectionEntry type="upgrade" import="true" name="Chainsword" hidden="false" id="41ad-0c50-b196-3cd0" sortIndex="1">
-                              <entryLinks>
-                                <entryLink import="true" name="Chainsword" hidden="false" id="65eb-d2c4-b985-2fc0" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
-                                  <modifierGroups>
-                                    <modifierGroup type="and">
-                                      <modifiers>
-                                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                        <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                      </modifiers>
-                                    </modifierGroup>
-                                  </modifierGroups>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="68a7-4111-2205-5592" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70e6-0e7a-771b-bc6b" includeChildSelections="false"/>
-                                  </constraints>
-                                </entryLink>
-                              </entryLinks>
-                            </selectionEntry>
-                            <selectionEntry type="upgrade" import="true" name="Lightning Claw" hidden="false" id="95dc-c373-b22d-e212" sortIndex="4">
-                              <entryLinks>
-                                <entryLink import="true" name="Lightning Claw" hidden="false" id="081d-5302-4241-1d56" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
-                                  <modifierGroups>
-                                    <modifierGroup type="and">
-                                      <modifiers>
-                                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                      </modifiers>
-                                    </modifierGroup>
-                                  </modifierGroups>
-                                  <constraints>
-                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a90a-e4f9-c832-8efd" includeChildSelections="false"/>
-                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3958-1f0e-df38-66d4" includeChildSelections="false"/>
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
@@ -6016,8 +5909,8 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
       </costs>
       <categoryLinks>
         <categoryLink targetId="ccc6-6202-853c-23e4" id="d86c-87df-6ca8-7f9a" primary="true" name="Support"/>
-        <categoryLink targetId="b239-6bd1-e7a0-0a02" id="767d-2892-2a2e-9ded" primary="false" name="Vehicle"/>
         <categoryLink targetId="f809-9826-f58a-6b8d" id="6010-415c-9155-29ef" primary="false" name="Chaos"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="f64f-691d-45d0-7746" primary="false" name="Infantry"/>
       </categoryLinks>
       <profiles>
         <profile name="Rapid Circling" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b194-fcf5-b5ef-d4fe">
@@ -7411,6 +7304,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
       <categoryLinks>
         <categoryLink name="Vehicle" hidden="false" id="8a61-2a42-3435-a399" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
         <categoryLink name="Support" hidden="false" id="5aa4-fe30-828e-404f" targetId="ccc6-6202-853c-23e4" primary="true"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="e5c8-1e5c-f0b8-e0ae" primary="false" name="Chaos"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Vindicator" hidden="false" id="822b-8f7b-95c8-ec57">
@@ -7468,19 +7362,30 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                 <infoLink name="Ignore Cover" id="0a71-af25-9455-bcf0" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
               </infoLinks>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Siege Shield" hidden="false" id="e9f3-f0b7-cef3-c93b">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eb61-0c13-39c5-8914-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb61-0c13-39c5-8914-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Siege Shield" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ae5c-dfeb-42f7-9dc5">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This unit may move through terrain pieces as if they were not there.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
-      <profiles>
-        <profile name="Siege Shield" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="d6ef-5ffd-f5d8-1eb4">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each wound this unit suffers for a ranged attack, if this model’s ‘Siege Shield’ weapon model is the closest part of the model to the attacking model of that attack, roll a D6. On a 5+, that attack fails.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Contemptor Dreadnought" hidden="false" id="ce1c-87e1-a73d-1932" sortIndex="26">
       <costs>
