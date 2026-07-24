@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="750c-5fc9-13d4-8be3" name="Death Guard" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="750c-5fc9-13d4-8be3" name="Death Guard" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Army Rules" hidden="false" id="3491-e84e-c473-9b93" sortIndex="-2">
       <constraints>
@@ -1668,21 +1668,14 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Dual Bubotic Weapons" hidden="false" id="e376-f651-4b32-2dac">
-      <profiles>
-        <profile name="Duel Bubotic Weapons" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2b0c-3ee3-a973-df3d">
-          <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Putrid" id="aab3-bc33-d2ef-9dcc" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
-      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Bubotic Weapon" hidden="false" id="9fb2-6e70-91d1-e30b" type="selectionEntry" targetId="e541-6c55-f01a-f69f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0831-4f7a-796b-3581-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0831-4f7a-796b-3581-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flail of Corruption" hidden="false" id="cf45-e281-1709-6e78">
       <profiles>
@@ -2205,6 +2198,9 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
                       <constraints>
                         <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="97cf-efe1-f474-6508" includeChildSelections="true"/>
                       </constraints>
+                      <modifiers>
+                        <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                   <selectionEntries>
@@ -2304,35 +2300,24 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
                       </constraints>
                       <selectionEntryGroups>
                         <selectionEntryGroup name="Melee" id="5697-1453-c070-2601" hidden="false" defaultSelectionEntryId="b9c3-5d4f-3ffd-aac4">
-                          <entryLinks>
-                            <entryLink import="true" name="Power Fist" hidden="false" id="cb1e-29d7-4cd2-d454" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d" sortIndex="3">
-                              <modifiers>
-                                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                              </modifiers>
-                            </entryLink>
-                          </entryLinks>
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="64f5-f1e3-5fb0-d89d" includeChildSelections="false"/>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e973-02cf-6117-2e8e" includeChildSelections="false"/>
                           </constraints>
                           <selectionEntries>
                             <selectionEntry type="upgrade" import="true" name="Champion Bubotic Weapon" hidden="false" id="369a-ce54-de08-85ff" sortIndex="1">
-                              <profiles>
-                                <profile name="Champion Bubotic Weapon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="efb3-e4e8-b9de-fab3">
-                                  <characteristics>
-                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
-                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                                    <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Putrid</characteristic>
-                                  </characteristics>
-                                </profile>
-                              </profiles>
-                              <infoLinks>
-                                <infoLink name="Putrid" id="9455-20ca-f895-175a" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
-                              </infoLinks>
+                              <entryLinks>
+                                <entryLink import="true" name="Bubotic Weapon" hidden="false" id="42ad-d97c-8d56-ae2a" type="selectionEntry" targetId="e541-6c55-f01a-f69f">
+                                  <constraints>
+                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ba02-a2d0-c21f-0348-min" includeChildSelections="false"/>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba02-a2d0-c21f-0348-max" includeChildSelections="false"/>
+                                  </constraints>
+                                  <modifiers>
+                                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="prepend" value="Champion" field="name" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </entryLink>
+                              </entryLinks>
                             </selectionEntry>
                             <selectionEntry type="upgrade" import="true" name="Plague Daemon Sword" hidden="false" id="640c-7d94-4638-fd61" sortIndex="2">
                               <profiles>
@@ -2350,6 +2335,20 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
                               <infoLinks>
                                 <infoLink name="Putrid" id="2e8b-8e21-0aa9-c6b0" hidden="false" type="rule" targetId="5262-b1f5-26c7-19b6"/>
                               </infoLinks>
+                            </selectionEntry>
+                            <selectionEntry type="upgrade" import="true" name="Power Fist" hidden="false" id="2195-8161-fb55-70a5" sortIndex="3">
+                              <entryLinks>
+                                <entryLink import="true" name="Power Fist" hidden="false" id="cb1e-29d7-4cd2-d454" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d">
+                                  <modifiers>
+                                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                  <constraints>
+                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="faec-4180-212b-98c6-min" includeChildSelections="false"/>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="faec-4180-212b-98c6-max" includeChildSelections="false"/>
+                                  </constraints>
+                                </entryLink>
+                              </entryLinks>
                             </selectionEntry>
                           </selectionEntries>
                         </selectionEntryGroup>
@@ -2484,7 +2483,7 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
     <entryLink import="true" name="Chaos Bikers" hidden="false" id="23bb-3fbc-7397-8537" targetId="8193-b177-1315-8d65" type="selectionEntry"/>
     <entryLink import="true" name="Chosen" hidden="false" id="7218-c593-116f-2a0c" type="selectionEntry" targetId="970c-0d8e-c281-ed7b"/>
     <entryLink import="true" name="Defiler" hidden="false" id="c103-e232-572e-4f2b" targetId="3941-6f57-3bfa-5714" type="selectionEntry"/>
-    <entryLink import="true" name="Hellbrute" hidden="false" id="98a9-0089-c066-3068" targetId="c95a-f982-95b6-6779" type="selectionEntry"/>
+    <entryLink import="true" name="Helbrute" hidden="false" id="98a9-0089-c066-3068" targetId="c95a-f982-95b6-6779" type="selectionEntry"/>
     <entryLink import="true" name="Havocs" hidden="false" id="094a-d7d5-b0fb-c2be" targetId="501d-eaf0-34a6-685e" type="selectionEntry"/>
     <entryLink import="true" name="Warp Talons" hidden="false" id="ddb3-bb94-8f66-c22a" type="selectionEntry" targetId="82c3-ad8e-81a6-af4c"/>
     <entryLink import="true" name="Obliterators" hidden="false" id="bd05-12cc-297b-fb54" targetId="1b1f-15ed-7bd7-1315" type="selectionEntry"/>
@@ -2493,8 +2492,27 @@ Nurgle’s Fruit: For each attack made for a weapon with Plague or Putrid targ
     <entryLink import="true" name="Predator" hidden="false" id="8977-91ab-2541-cf67" targetId="9173-8b2c-7c1d-1dbd" type="selectionEntry"/>
     <entryLink import="true" name="Wardog" hidden="false" id="d4c7-0675-22b1-2e07" targetId="acb0-c72d-4022-5cc3" type="selectionEntry"/>
     <entryLink import="true" name="Vindicator" hidden="false" id="9d57-7996-428a-367e" targetId="7aa0-644a-fffd-220a" type="selectionEntry"/>
-    <entryLink import="true" name="Contemptor Dreadnaught" hidden="false" id="50fa-3865-7e5f-66f4" targetId="ce1c-87e1-a73d-1932" type="selectionEntry"/>
-    <entryLink import="true" name="Leviathan Dreadnaught" hidden="false" id="f76b-ca15-1a16-9ca5" targetId="a7aa-c8f5-02ab-e4bc" type="selectionEntry"/>
+    <entryLink import="true" name="Contemptor Dreadnought" hidden="false" id="50fa-3865-7e5f-66f4" targetId="ce1c-87e1-a73d-1932" type="selectionEntry"/>
+    <entryLink import="true" name="Leviathan Dreadnought " hidden="false" id="f76b-ca15-1a16-9ca5" targetId="a7aa-c8f5-02ab-e4bc" type="selectionEntry"/>
+    <entryLink import="true" name="Dual Bubotic Weapons" hidden="false" id="941f-9f33-1762-a23b" type="selectionEntry" targetId="e376-f651-4b32-2dac">
+      <costs>
+        <cost name="pts" typeId="points" value="10"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="ae83-7d50-3635-56e8" includeChildSelections="true"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Bubotic Weapon" hidden="false" id="fb14-45da-b9f9-8158" type="selectionEntry" targetId="e541-6c55-f01a-f69f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7dfa-5bd7-a8f5-14bd-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7dfa-5bd7-a8f5-14bd-max" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Teminators" id="b982-24fc-9f5e-6409" hidden="false">
