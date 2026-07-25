@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="20" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.1" hidden="false" id="d93e-ed5b-78c7-6277" sortIndex="-1">
       <categoryLinks>
@@ -585,105 +585,10 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d65c-b276-0ebf-842c-max" includeChildSelections="false"/>
           </constraints>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Gun" id="baaf-b507-6451-38aa" hidden="false" defaultSelectionEntryId="0632-701b-025a-ca7e">
+            <selectionEntryGroup name="Weapons" id="57d3-0145-d39f-c4b8" hidden="false" defaultSelectionEntryId="60af-87a4-604f-a8ee">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="889d-5639-72cf-fbbd" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c98-4357-4caf-a84e" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Death Spitter" hidden="false" id="0632-701b-025a-ca7e" sortIndex="1">
-                  <profiles>
-                    <profile name="Death Spitter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6bbf-d6f1-d153-5f9c">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 4</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Blast (X)" id="c9fc-b12c-562d-e7ac" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Venom Cannon" hidden="false" id="dda3-689c-67b0-09ff" sortIndex="2">
-                  <profiles>
-                    <profile name="Venom Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="521b-2d1d-0a59-8722">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Shred" id="dc0a-9ed1-7ee7-95c3" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Barbed Strangler" hidden="false" id="11fe-3e6d-0035-5338" sortIndex="3">
-                  <profiles>
-                    <profile name="Barbed Strangler" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="acae-dbf7-70ea-9e3a">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 1</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Suppressive (X)" id="e9e9-c8ae-e14d-8362" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Spinefists" hidden="false" id="2ae2-4be0-8d00-4ae5" sortIndex="5">
-                  <entryLinks>
-                    <entryLink import="true" name="Spinefists" hidden="false" id="5640-0483-f44a-baa5" type="selectionEntry" targetId="06e5-d080-b4c7-0d85">
-                      <modifierGroups>
-                        <modifierGroup type="and">
-                          <modifiers>
-                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </modifierGroup>
-                      </modifierGroups>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b9a1-25f3-e5a2-cca2" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef7f-c284-d6af-97c0" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Devourer" hidden="false" id="a747-9c7e-259d-e1ab" sortIndex="4">
-                  <entryLinks>
-                    <entryLink import="true" name="Devourer" hidden="false" id="ed85-2f6b-b081-7870" type="selectionEntry" targetId="e328-f865-125f-9fb2">
-                      <modifierGroups>
-                        <modifierGroup type="and">
-                          <modifiers>
-                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </modifierGroup>
-                      </modifierGroups>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b23-8924-b750-8e3c" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9e5b-5144-4bc9-e59a" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Melee" id="57d3-0145-d39f-c4b8" hidden="false" defaultSelectionEntryId="60af-87a4-604f-a8ee">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="60dc-1e3c-7f56-772b" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7091-2adf-dadc-5662" includeChildSelections="false"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="60dc-1e3c-7f56-772b" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7091-2adf-dadc-5662" includeChildSelections="false"/>
               </constraints>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="2x Bone Swords" hidden="false" id="d024-6e3a-a9fd-75af" sortIndex="2">
@@ -751,6 +656,93 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="456e-dbb7-c9d4-1d9d" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0293-4140-3f8b-2757" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Death Spitter" hidden="false" id="0632-701b-025a-ca7e">
+                  <profiles>
+                    <profile name="Death Spitter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6bbf-d6f1-d153-5f9c">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 4</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Blast (X)" id="c9fc-b12c-562d-e7ac" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Venom Cannon" hidden="false" id="dda3-689c-67b0-09ff">
+                  <profiles>
+                    <profile name="Venom Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="521b-2d1d-0a59-8722">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Shred" id="dc0a-9ed1-7ee7-95c3" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Barbed Strangler" hidden="false" id="11fe-3e6d-0035-5338">
+                  <profiles>
+                    <profile name="Barbed Strangler" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="acae-dbf7-70ea-9e3a">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 1</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Suppressive (X)" id="e9e9-c8ae-e14d-8362" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Devourer" hidden="false" id="a747-9c7e-259d-e1ab">
+                  <entryLinks>
+                    <entryLink import="true" name="Devourer" hidden="false" id="ed85-2f6b-b081-7870" type="selectionEntry" targetId="e328-f865-125f-9fb2">
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b23-8924-b750-8e3c" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9e5b-5144-4bc9-e59a" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Spinefists" hidden="false" id="2ae2-4be0-8d00-4ae5">
+                  <entryLinks>
+                    <entryLink import="true" name="Spinefists" hidden="false" id="5640-0483-f44a-baa5" type="selectionEntry" targetId="06e5-d080-b4c7-0d85">
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b9a1-25f3-e5a2-cca2" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef7f-c284-d6af-97c0" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -2034,10 +2026,10 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Warrior" hidden="false" id="2665-50b4-bd60-fde8">
               <selectionEntryGroups>
-                <selectionEntryGroup name="Melee" id="9a77-c9c5-970b-3754" hidden="false" defaultSelectionEntryId="a5ad-fc5a-e698-c729">
+                <selectionEntryGroup name="Weapons" id="9a77-c9c5-970b-3754" hidden="false" defaultSelectionEntryId="a5ad-fc5a-e698-c729">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0c0a-7974-4128-1e4a" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4df9-7888-4eb0-b1bf" includeChildSelections="false"/>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="0c0a-7974-4128-1e4a" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4df9-7888-4eb0-b1bf" includeChildSelections="false"/>
                   </constraints>
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="2x Bone Swords" hidden="false" id="0db1-7bfa-cf65-6a25" sortIndex="2">
@@ -2109,15 +2101,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
                         </entryLink>
                       </entryLinks>
                     </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="Gun" id="63ba-6151-126f-a5b2" hidden="false" defaultSelectionEntryId="c977-75ed-4e19-52a3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cc02-c074-1f7e-8e85" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f108-1017-5709-8f6b" includeChildSelections="false"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Death Spitter" hidden="false" id="c977-75ed-4e19-52a3" sortIndex="1">
+                    <selectionEntry type="upgrade" import="true" name="Death Spitter" hidden="false" id="c977-75ed-4e19-52a3">
                       <profiles>
                         <profile name="Death Spitter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7b9b-410a-88e9-4f43">
                           <characteristics>
@@ -2134,7 +2118,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
                         <infoLink name="Blast (X)" id="475d-cb1f-3d6e-44e8" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
                       </infoLinks>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Venom Cannon" hidden="false" id="9100-e0bc-dc3e-1c62" sortIndex="2">
+                    <selectionEntry type="upgrade" import="true" name="Venom Cannon" hidden="false" id="9100-e0bc-dc3e-1c62">
                       <profiles>
                         <profile name="Venom Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9715-7deb-9457-6499">
                           <characteristics>
@@ -2151,7 +2135,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
                         <infoLink name="Shred" id="03c9-f01f-0f6b-47a6" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
                       </infoLinks>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Barbed Strangler" hidden="false" id="797b-7dee-af36-4dad" sortIndex="3">
+                    <selectionEntry type="upgrade" import="true" name="Barbed Strangler" hidden="false" id="797b-7dee-af36-4dad">
                       <profiles>
                         <profile name="Barbed Strangler" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="39a0-4f39-b79a-4f70">
                           <characteristics>
@@ -2168,25 +2152,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
                         <infoLink name="Suppressive (X)" id="a6c0-ed6b-68fa-1370" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
                       </infoLinks>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Spinefists" hidden="false" id="c86c-3045-e31c-c679" sortIndex="5">
-                      <entryLinks>
-                        <entryLink import="true" name="Spinefists" hidden="false" id="98fa-f159-883e-78dc" type="selectionEntry" targetId="06e5-d080-b4c7-0d85">
-                          <modifierGroups>
-                            <modifierGroup type="and">
-                              <modifiers>
-                                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                              </modifiers>
-                            </modifierGroup>
-                          </modifierGroups>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="57b4-116e-a569-2907" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="550d-94c2-ba56-abe4" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Devourer" hidden="false" id="d2f4-6ebb-1253-4011" sortIndex="4">
+                    <selectionEntry type="upgrade" import="true" name="Devourer" hidden="false" id="d2f4-6ebb-1253-4011">
                       <entryLinks>
                         <entryLink import="true" name="Devourer" hidden="false" id="75f4-37c6-5b34-a6e4" type="selectionEntry" targetId="e328-f865-125f-9fb2">
                           <modifierGroups>
@@ -2200,6 +2166,24 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b22-efdd-3398-bb89" includeChildSelections="false"/>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e45d-f823-268b-d8b5" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Spinefists" hidden="false" id="c86c-3045-e31c-c679">
+                      <entryLinks>
+                        <entryLink import="true" name="Spinefists" hidden="false" id="98fa-f159-883e-78dc" type="selectionEntry" targetId="06e5-d080-b4c7-0d85">
+                          <modifierGroups>
+                            <modifierGroup type="and">
+                              <modifiers>
+                                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </modifierGroup>
+                          </modifierGroups>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="57b4-116e-a569-2907" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="550d-94c2-ba56-abe4" includeChildSelections="false"/>
                           </constraints>
                         </entryLink>
                       </entryLinks>
