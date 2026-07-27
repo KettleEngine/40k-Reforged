@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="59" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="60" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -226,7 +226,7 @@
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Velocity, Pierce</characteristic>
@@ -980,22 +980,15 @@ After a unit with Transport with an embarked unit is destroyed, before removing 
       <description>After selecting the target for this weapon&apos;s attacks, roll 2D6. Then select all other enemy units within X” of the selected target, where X is the result of that roll. Also make attacks for this weapon targeting each of the selected units.</description>
     </rule>
     <rule name="Suppressive (X)" id="aed3-e154-8fa2-5378" hidden="false">
-      <description>When a unit suffers Suppression, it must make a number of Resolve Tests equal to the value of that Suppression. For each failed Resolve Test, that unit gains Suppressed.
-
-
-To make a Resolve Test, roll a D6. If the result is equal to or greater than the unit’s Resolve (Rv) characteristic, the roll is successful.
-
-
-Suppressed X: If this unit is a vehicle or monster, subtract X from Explode Rolls for it. After it makes an Explode Roll, this unit loses Suppressed.
-
-
-If this unit is infantry, each time it selects targets for attacks, its controller must select a number of non-leader infantry models equal to X. You cannot select targets for those models&apos; weapons this turn. 
-
+      <description>If this unit is infantry, each time it selects targets for attacks, its controller must select a number of non-leader infantry models equal to X. You cannot select targets for those models&apos; weapons this turn.
 
 If this unit is infantry, after its End step, it loses Suppressed.
 
+If this unit is a vehicle or monster, after its Move step, you may skip its Attacks step. If you do, it loses Suppressed.
 
-Each time this unit gains Suppressed while it already has Suppressed, increase X by 1, to a maximum of 6 (you can use a d6 to keep track).</description>
+If this unit is a vehicle or monster, after its Attacks step, it suffers twice X SW and loses Suppressed.
+
+Each time this unit gains Suppressed while it already has Suppressed, increase X by 1, to a maximum of 6 (you can use a d6 to keep track)</description>
     </rule>
     <rule name="One Shot" id="0c06-9eed-2a45-b772" hidden="false">
       <description>After making attacks for this weapon, you may not make attacks for it until you ‘reload’. To reload, the unit with this weapon must end its turn within your deployment zone during a battle round in which you didn’t make attacks for this weapon.</description>
