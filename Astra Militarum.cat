@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="39" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="40" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -86,7 +86,7 @@
       <profiles>
         <profile name="Nova Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8b11-8e4b-c571-35ec">
           <characteristics>
-            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec"/>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">-</characteristic>
@@ -898,7 +898,7 @@
                   </costs>
                   <modifiers>
                     <modifier type="prepend" value="Pintle" field="name" affects="profiles.Weapon"/>
-                    <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
@@ -1132,7 +1132,7 @@
                   <profiles>
                     <profile name="Melta Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="88ca-5fc3-669d-7131">
                       <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
@@ -1730,7 +1730,7 @@
         <profile name="Astropath Stave" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6ecb-fa8a-26d3-ab51">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -1788,6 +1788,9 @@ This unit does not count towards the leader maximum of the army list.</character
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1084-c42a-aaa9-ca3d-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1084-c42a-aaa9-ca3d-max" includeChildSelections="false"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
             </entryLink>
           </entryLinks>
           <profiles>
@@ -1918,7 +1921,7 @@ This unit does not count towards the leader maximum of the army list.</character
                             <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </entryLink>
-                        <entryLink import="true" name="Power Sword" hidden="false" id="c952-2cff-63b2-cca3" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="2">
+                        <entryLink import="true" name="Power Weapon" hidden="false" id="c952-2cff-63b2-cca3" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="2">
                           <modifiers>
                             <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
@@ -2791,7 +2794,7 @@ Surging Motive Force: For each attack made for this unit, add 1 to the Hit Roll 
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may select one of your infantry units within 8” of and visible to this unit with Suppressed X. Then, one model from that unit dies. Then, roll 2D3 and reduce its Suppressed X by the result.</characteristic>
           </characteristics>
         </profile>
-        <profile name="" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="95e2-b399-9f70-9973">
+        <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="95e2-b399-9f70-9973">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to:
 ● Any Troops unit
@@ -2813,7 +2816,7 @@ This unit does not count towards the leader capacity of your army list.</charact
           <selectionEntryGroups>
             <selectionEntryGroup name="Sword" id="0738-8b0b-465b-7c68" hidden="false" defaultSelectionEntryId="dea8-a935-41a1-42d2">
               <entryLinks>
-                <entryLink import="true" name="Power Sword" hidden="false" id="ca21-6715-4e5b-8500" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
+                <entryLink import="true" name="Power Weapon" hidden="false" id="ca21-6715-4e5b-8500" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
                   <modifiers>
                     <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
@@ -3001,7 +3004,7 @@ This unit does not count towards the leader capacity of your army list.</charact
                                 <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
                             </entryLink>
-                            <entryLink import="true" name="Power Sword" hidden="false" id="fa5e-9213-5e48-8496" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="3">
+                            <entryLink import="true" name="Power Weapon" hidden="false" id="fa5e-9213-5e48-8496" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="3">
                               <modifiers>
                                 <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
@@ -3122,7 +3125,7 @@ This unit does not count towards the leader capacity of your army list.</charact
                     <entryLink import="true" name="Autocannon" hidden="false" id="8439-24dc-2cb0-5251" type="selectionEntry" targetId="a636-c9c9-ad6d-6db0" sortIndex="1">
                       <modifiers>
                         <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
                     <entryLink import="true" name="Lascannon" hidden="false" id="5adf-11f1-ee79-ba4c" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="2">
@@ -3226,13 +3229,14 @@ This unit does not count towards the leader capacity of your army list.</charact
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Ignores Cover</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Ignores Cover, Blast 2</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
                       <infoLinks>
-                        <infoLink name="Barrage" id="8e53-00d6-b671-2c1d" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
+                        <infoLink name="Blast (X)" id="8e53-00d6-b671-2c1d" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
                         <infoLink name="Ignore Cover" id="b5fc-b663-ee3c-a16d" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
+                        <infoLink name="Barrage" id="1287-ea65-a24c-8eb2" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
                       </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Malleus Rocket Launcher " hidden="false" id="4676-56bc-991d-78c7" sortIndex="2">
@@ -3496,7 +3500,7 @@ Aim There!: For each ranged attack this unit makes, add 1 to the Hit Roll of th
         <profile name="5 Valkyrie Authorisation (Valkyrie Multi-Laser)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6c50-8d0d-1fcc-baa5">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">40</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">30</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>

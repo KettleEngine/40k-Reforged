@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="35" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="36" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
   </catalogueLinks>
@@ -2861,7 +2861,7 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
       <categoryLinks>
         <categoryLink targetId="205c-3072-067b-d808" id="87a3-6486-8fe9-d207" primary="false" name="Infantry"/>
         <categoryLink targetId="f809-9826-f58a-6b8d" id="d3d0-c61a-8c75-a4bc" primary="false" name="Chaos"/>
-        <categoryLink targetId="ccc6-6202-853c-23e4" id="c652-7918-3c45-1dc1" primary="true" name="Support"/>
+        <categoryLink targetId="4820-e2b5-9e00-bb68" id="af6d-9b70-a086-d939" primary="true" name="Elites"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Unstoppable" id="0a44-e40e-7424-2c6b" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
@@ -3817,7 +3817,7 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0739-6657-b64d-0f9d-max"/>
                               </constraints>
                               <modifiers>
-                                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                               </modifiers>
                             </entryLink>
                           </entryLinks>
@@ -6212,7 +6212,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
@@ -6221,61 +6221,6 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                   </profiles>
                   <infoLinks>
                     <infoLink name="Breach" id="0cd0-28a3-1ac8-1642" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Helbrute Fist" hidden="false" id="f4d8-122d-5e10-01a4" sortIndex="3">
-                  <profiles>
-                    <profile name="Hellbrute Fist" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4baa-31bd-d13f-bd06">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+2</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup name="For each Power Fist, this model is also equipped with either:" id="3a3e-7d04-e918-746c" hidden="false" defaultSelectionEntryId="956d-b5d4-0bfe-0d3c">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a16e-f0f3-8f02-f061" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2ce7-c71e-7dd3-81ac" includeChildSelections="false"/>
-                      </constraints>
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Combi-Bolter" hidden="false" id="5c50-0727-6914-6083" sortIndex="1">
-                          <profiles>
-                            <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2c21-dfa1-f194-61da">
-                              <characteristics>
-                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
-                                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                                <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
-                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-                              </characteristics>
-                            </profile>
-                          </profiles>
-                        </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Heavy Flamer" hidden="false" id="956d-b5d4-0bfe-0d3c" sortIndex="2">
-                          <entryLinks>
-                            <entryLink import="true" name="Heavy Flamer" hidden="false" id="1557-863e-4cf9-563e" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
-                              <modifiers>
-                                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                              </modifiers>
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f1a3-d4b8-6854-f74a" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1478-b1af-a7e4-a87b" includeChildSelections="false"/>
-                              </constraints>
-                            </entryLink>
-                          </entryLinks>
-                        </selectionEntry>
-                      </selectionEntries>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <infoLinks>
-                    <infoLink name="Breach" id="aa57-7e59-4316-d24e" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
                   </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Power Scourge" hidden="false" id="fcd0-a3e6-1f23-f3e5" sortIndex="2">
@@ -6328,6 +6273,9 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5232-6325-07d2-2063" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c09-55fc-2a32-7674" includeChildSelections="false"/>
               </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Helbrute Fist" hidden="false" id="cd53-5e77-f2c3-da19" targetId="f0d7-6cf3-6da6-4b15" type="selectionEntry" sortIndex="3"/>
+              </entryLinks>
             </selectionEntryGroup>
             <selectionEntryGroup name="Right Arm:" id="1412-6f6d-0675-e041" hidden="false" defaultSelectionEntryId="f0d7-6cf3-6da6-4b15">
               <constraints>
@@ -6408,62 +6356,10 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                     </entryLink>
                   </entryLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Helbrute Fist" hidden="false" id="f0d7-6cf3-6da6-4b15" sortIndex="6">
-                  <profiles>
-                    <profile name="Hellbrute Fist" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a32a-1aff-52a7-76ba">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+2</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup name="For each Power Fist, this model is also equipped with either:" id="309f-730b-3213-034e" hidden="false" defaultSelectionEntryId="8db2-b678-51b9-d26c">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="15c1-9727-0d0b-2b21" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="85e7-64ad-5251-1a49" includeChildSelections="false"/>
-                      </constraints>
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Combi-Bolter" hidden="false" id="2ffb-ec5d-6695-6488" sortIndex="1">
-                          <profiles>
-                            <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="28e3-411e-b294-12e6">
-                              <characteristics>
-                                <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
-                                <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                                <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
-                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-                              </characteristics>
-                            </profile>
-                          </profiles>
-                        </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Heavy Flamer" hidden="false" id="8db2-b678-51b9-d26c" sortIndex="2">
-                          <entryLinks>
-                            <entryLink import="true" name="Heavy Flamer" hidden="false" id="5f7f-2263-4476-e86d" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
-                              <modifiers>
-                                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                              </modifiers>
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="476a-58a6-0087-d335" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="896f-52d2-f7f5-7db1" includeChildSelections="false"/>
-                              </constraints>
-                            </entryLink>
-                          </entryLinks>
-                        </selectionEntry>
-                      </selectionEntries>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <infoLinks>
-                    <infoLink name="Breach" id="1309-ec18-4315-e76b" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
-                  </infoLinks>
-                </selectionEntry>
               </selectionEntries>
+              <entryLinks>
+                <entryLink targetId="f0d7-6cf3-6da6-4b15" id="9384-2687-3740-6249" type="selectionEntry" name="Helbrute Fist" hidden="false" sortIndex="6"/>
+              </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntry>
@@ -7496,6 +7392,61 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
       </profiles>
       <infoLinks>
         <infoLink name="Heal/Repair (X)" id="179d-0b3e-79e4-213e" hidden="false" type="rule" targetId="02c8-1ec5-cdab-2572"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Helbrute Fist" hidden="false" id="f0d7-6cf3-6da6-4b15" sortIndex="6">
+      <profiles>
+        <profile name="Helbrute Fist" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a32a-1aff-52a7-76ba">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="For each Power Fist, this model is also equipped with either:" id="309f-730b-3213-034e" hidden="false" defaultSelectionEntryId="8db2-b678-51b9-d26c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="15c1-9727-0d0b-2b21" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="85e7-64ad-5251-1a49" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Combi-Bolter" hidden="false" id="2ffb-ec5d-6695-6488" sortIndex="1">
+              <profiles>
+                <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="28e3-411e-b294-12e6">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Flamer" hidden="false" id="8db2-b678-51b9-d26c" sortIndex="2">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Flamer" hidden="false" id="5f7f-2263-4476-e86d" type="selectionEntry" targetId="5c44-7d31-605d-4b6f">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="476a-58a6-0087-d335" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="896f-52d2-f7f5-7db1" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <infoLinks>
+        <infoLink name="Breach" id="1309-ec18-4315-e76b" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
