@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.2" hidden="false" id="d93e-ed5b-78c7-6277" sortIndex="-1">
       <categoryLinks>
@@ -860,32 +860,32 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
       <profiles>
         <profile name="1 Hypnotic Gaze" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="0d70-ad02-068b-0121">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a visible enemy unit within 24&quot;. Until the next time this unit is Activated or dies, the selected enemy unit cannot be selected for Activation unless their controlling player has no other units available for Activation. Then, this unit suffers 3 Suppression.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a visible enemy unit within 24&quot;. Until the next time this unit is Activated or dies, the selected enemy unit cannot be selected for Activation unless their controlling player has no other units available for Activation. Then, roll a D6. On a 1-3, this unit loses 2 Health.</characteristic>
           </characteristics>
         </profile>
         <profile name="2 Dominion" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="8af4-fc5f-c530-11f1">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one of your other ready units within 12&quot; of this unit. After this unit&apos;s End step, you may take another turn. During that turn, for each attack the selected unit makes, add 2 to the Hit Roll for that attack. Then, this unit suffers 3 Suppression.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select one of your other ready units within 12&quot; of this unit. After this unit&apos;s End step, you may take another turn. During that turn, for each attack the selected unit makes, add 2 to the Hit Roll for that attack. Then, roll a D6. On a 1-3, this unit loses 3 Health.</characteristic>
           </characteristics>
         </profile>
         <profile name="3 Paroxysm" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="ab1b-1929-f2fd-cd38">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">For each single dice in this unit’s last Psychic Test, select a different enemy unit within 16&quot; of this unit. Then, each selected unit suffers X Suppression where X is equal to the result of that single dice. Then, this unit suffers 3 Suppression.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select up to three different enemy infantry or monster units within 16&quot; of this unit. Each selected unit suffers 12 Suppression. Then, roll a D6. On a 1-3, this unit loses 5 Health.</characteristic>
           </characteristics>
         </profile>
         <profile name="4 Warp Lance" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="bc0c-9582-3e98-99f6">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 16” of and visible to this unit. The selected unit suffers X+2D3 SW where X is equal to the selected units Toughness. Then, this unit suffers Suppression equal to X.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 16” of and visible to this unit. The selected unit suffers XD6+6 SW where X is equal to the selected units Toughness. Then, roll a D6. On a 1-3, this unit loses 5 Health.</characteristic>
           </characteristics>
         </profile>
         <profile name="5 Warp Blast" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="a523-aef4-bae3-069c">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit with 16” and visible to this unit. That unit suffers 2+2D3 SW. Then, each unit within 6” of that unit suffers D3 SW.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit with 16” and visible to this unit. That unit and all other units within 2D6” of that unit each suffer D6+4 SW. Then, roll a D6. On a 1-3, this unit loses 5 Health.</characteristic>
           </characteristics>
         </profile>
         <profile name="6 Hateful Will" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="7ea2-0b70-f56e-6970">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 16” and visible to this unit. The selected unit suffers 2D6+3 SW and this unit suffers X Suppression where X is equal to that roll.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 16” and visible to this unit. The selected unit suffers 2D6+12 SW. Then, roll a D6. On a 1-3, this unit loses 5 Health.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1263,8 +1263,7 @@ To The Shadows: After any enemy unit&apos;s End step, this unit may Advance an
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated, each enemy unit visible to and further than 10&quot; from this unit gains Rumbling Earth until the End step:
 
-
-Rumbling Earth: After an enemy unit with Pulverising Charge finishes a March, if that unit passed within 1&quot; of this unit during that March, this unit suffers 3 SW.</characteristic>
+Rumbling Earth: After an enemy unit with Pulverising Charge finishes an Advance, if that unit passed within 1&quot; of this unit during that Advance, this unit suffers 3 SW.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1319,7 +1318,7 @@ Rumbling Earth: After an enemy unit with Pulverising Charge finishes a March, 
                     <infoLink name="Blast (X)" id="3eb3-adbc-895d-1101" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Monstrous Scything Talons" hidden="false" id="792e-33de-5632-df22" sortIndex="1">
+                <selectionEntry type="upgrade" import="true" name="Extra Carnifex Scything Talons" hidden="false" id="792e-33de-5632-df22" sortIndex="1">
                   <entryLinks>
                     <entryLink import="true" name="Monstrous Scything Talons" hidden="false" id="ff5b-4e7a-bbac-3375" type="selectionEntry" targetId="468d-9083-d092-58ab">
                       <modifierGroups>
@@ -1557,19 +1556,26 @@ Rumbling Earth: After an enemy unit with Pulverising Charge finishes a March, 
                         <infoLink name="Pierce" id="b7cb-b9dc-0176-db29" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                       </infoLinks>
                     </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Scything Talons" hidden="false" id="7a1c-337d-e6a7-1482" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Scything Talons" hidden="false" id="4115-4f7d-79b6-0830" type="selectionEntry" targetId="3abd-eddf-7562-c736">
+                          <modifierGroups>
+                            <modifierGroup type="and">
+                              <modifiers>
+                                <modifier type="set" value="3" field="571c-0471-2614-c57c" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </modifierGroup>
+                          </modifierGroups>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1d2e-45ba-641f-cafa-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d2e-45ba-641f-cafa-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
                   </selectionEntries>
-                  <entryLinks>
-                    <entryLink import="true" name="Scything Talons" hidden="false" id="4115-4f7d-79b6-0830" type="selectionEntry" targetId="3abd-eddf-7562-c736" sortIndex="2">
-                      <modifierGroups>
-                        <modifierGroup type="and">
-                          <modifiers>
-                            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                        </modifierGroup>
-                      </modifierGroups>
-                    </entryLink>
-                  </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <profiles>
@@ -2476,11 +2482,11 @@ Hive Minded: For each Resolve Test made for this unit, add 1 to that Resolve T
                             <profile name="Strangleweb" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d5af-7d98-a13e-f76a">
                               <characteristics>
                                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
                                 <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
                                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 2, Suppressive 1</characteristic>
+                                <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 3, Suppressive 1</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -2796,6 +2802,9 @@ Hive Minded: For each Resolve Test made for this unit, add 1 to that Resolve T
       <modifiers>
         <modifier type="set" value="0" field="points" scope="unit" affects="self.entries.recursive"/>
       </modifiers>
+      <categoryLinks>
+        <categoryLink targetId="9cd6-0442-3f35-6b52" id="163b-fad6-a3f9-b8fd" primary="true" name="Configuration"/>
+      </categoryLinks>
     </entryLink>
     <entryLink targetId="aa4e-091c-4a39-442f" id="2d3e-7af9-22c6-270a" type="selectionEntry" name="Ripper Swarms" hidden="false" sortIndex="14">
       <categoryLinks>
