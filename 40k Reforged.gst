@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="60" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="61" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -347,18 +347,19 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3D3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Suppressive 2D3, For each attack made for this weapon that targets a vehicle unit, a Wound Roll for that attack always succeeds on a 2+. If that wound roll is successful, after the Attacks step, the target unit must make an Explode Roll.</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Haywire, Suppressive 2</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="One Shot" id="6db5-e03b-a8f8-2641" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Haywire" id="6db5-e03b-a8f8-2641" hidden="false" type="rule" targetId="0c93-fe53-7091-88d0"/>
         <infoLink name="Suppressive (X)" id="e3fa-9ad1-c075-f35a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378">
           <modifiers>
-            <modifier type="set" value="Suppressive (3)" field="name"/>
+            <modifier type="set" value="Suppressive (2)" field="name"/>
           </modifiers>
         </infoLink>
         <infoLink name="Indirect" id="2512-df36-d64f-600d" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="One Shot" id="4e2a-7bca-e454-50ff" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Power Weapon" hidden="false" id="dfed-4c14-cafd-626d">
@@ -1018,7 +1019,7 @@ Each time this unit gains Suppressed while it already has Suppressed, increase X
       <description>For each attack that targets this unit, after a failed Saving Throw for that attack, make a Resilient roll. To make a Resilient roll, roll a D6. If the result equals or exceeds X, that attack fails.</description>
     </rule>
     <rule name="Daemonic" id="3b9e-8b58-9bed-fb98" hidden="false">
-      <description>For each attack that targets this unit, Wound Rolls of 4 or lower cause that attack to fail. Additionally, for each SW this unit suffers, this unit gains Resilient 4+ for that attack.</description>
+      <description>For each attack that targets this unit, a Wound Roll of 4 or lower causes that attack to fail. A Wound Roll of 5 or 6 causes that attack to succeed. Additionally, for each SW this unit suffers, this unit gains Resilient 4+ for that attack</description>
     </rule>
     <rule name="Breach" id="265b-df47-6a5e-4d1c" hidden="false">
       <description>For each attack made for this weapon, a successful Hit Roll for that attack causes an additional hit. Additionally, the Wound Roll for all attacks made for this weapon is improved by 1.</description>
@@ -1028,6 +1029,11 @@ Each time this unit gains Suppressed while it already has Suppressed, increase X
     </rule>
     <rule name="Hunt" id="0f3a-7a60-a486-b805" hidden="false">
       <description>For each attack made for this weapon that targets an infantry unit, if that isn&apos;t in cover for that attack, add 1 to the Wound Roll of that attack (unless the target has an ability which says it cannot be in cover for attacks).</description>
+    </rule>
+    <rule name="Haywire" id="0c93-fe53-7091-88d0" hidden="false">
+      <description>For each attack made for this weapon that targets a vehicle unit, the Strength of that attack is improved to 6. If the Wound Roll of that is successful, the target unit gains Stunned.
+
+Stunned: After this unit Activates, if it has Suppressed X, roll a D6. If the result of that roll is less than the X of Suppressed X, this unit becomes ready and skip this turns’ Move and Attacks steps.</description>
     </rule>
   </sharedRules>
   <publications>

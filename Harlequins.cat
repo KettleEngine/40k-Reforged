@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="25" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Neuro Disruptor" hidden="false" id="7dc0-1f7b-a49c-295b">
       <profiles>
@@ -74,14 +74,15 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">0</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">0</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 3, For each attack made for this weapon that targets a vehicle unit, the Strength of that attack is improved to 16. If that wound roll is successful, after the Attacks step, the target unit must make an Explode Roll.</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Haywire, Suppressive 4</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Suppressive (X)" id="c0b2-f626-8a95-02a8" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Haywire" id="c0b2-f626-8a95-02a8" hidden="false" type="rule" targetId="0c93-fe53-7091-88d0"/>
+        <infoLink name="Suppressive (X)" id="a1be-d80d-c221-c293" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -299,7 +300,7 @@ Veiled: For each ranged attack that targets this unit, the Hit Roll for that at
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="VoidWeaver" hidden="false" id="bd11-2d3e-551a-c440" sortIndex="9">
       <costs>
-        <cost name="pts" typeId="points" value="100"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Support" hidden="false" id="c30a-3c01-b6b9-9030" targetId="ccc6-6202-853c-23e4" primary="true"/>
@@ -351,7 +352,7 @@ Veiled: For each ranged attack that targets this unit, the Hit Roll for that at
                     <profile name="Prismatic Cannon (Strike)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e798-09a0-608c-f8bd">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+1</characteristic>
@@ -361,7 +362,7 @@ Veiled: For each ranged attack that targets this unit, the Hit Roll for that at
                     <profile name="Prismatic Cannon (Sweep)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7633-3bdb-954f-04c1">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
@@ -382,7 +383,7 @@ Veiled: For each ranged attack that targets this unit, the Hit Roll for that at
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
               </characteristics>
             </profile>
@@ -513,7 +514,7 @@ Await Cue: This unit becomes ready, then skip this turn’s Attacks step.</chara
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Power Weapon" hidden="false" id="9d08-b390-cc6e-3202" sortIndex="2">
                   <entryLinks>
-                    <entryLink import="true" name="Power Sword" hidden="false" id="8206-7bc7-f478-4072" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
+                    <entryLink import="true" name="Power Weapon" hidden="false" id="8206-7bc7-f478-4072" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
                       <modifiers>
                         <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
@@ -693,7 +694,7 @@ Await Cue: This unit becomes ready, then skip this turn’s Attacks step.</chara
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Power Weapon" hidden="false" id="4a36-8ab1-f0be-a6b2" sortIndex="2">
                       <entryLinks>
-                        <entryLink import="true" name="Power Sword" hidden="false" id="391f-d5b6-eda4-b9a2" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
+                        <entryLink import="true" name="Power Weapon" hidden="false" id="391f-d5b6-eda4-b9a2" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
                           <modifiers>
                             <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
@@ -1349,7 +1350,7 @@ Await Cue: This unit becomes ready, then skip this turn’s Attacks step.</chara
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Power Weapon" hidden="false" id="fc68-0856-7eec-cc4d" sortIndex="2">
                       <entryLinks>
-                        <entryLink import="true" name="Power Sword" hidden="false" id="6eb6-9367-9ac8-1122" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
+                        <entryLink import="true" name="Power Weapon" hidden="false" id="6eb6-9367-9ac8-1122" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
                           <modifiers>
                             <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
@@ -1491,7 +1492,7 @@ Captive Audience: For each attack that targets this unit, a Hit Roll of 5+ for
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Power Weapon" hidden="false" id="ed11-e87e-6776-d43e" sortIndex="2">
                       <entryLinks>
-                        <entryLink import="true" name="Power Sword" hidden="false" id="f24e-aae6-5319-d534" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
+                        <entryLink import="true" name="Power Weapon" hidden="false" id="f24e-aae6-5319-d534" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
                           <modifiers>
                             <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
@@ -1594,7 +1595,7 @@ Captive Audience: For each attack that targets this unit, a Hit Roll of 5+ for
         <infoLink name="Resilient (X)" id="79f8-6e6d-6d61-e9df" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.0" hidden="false" id="7e19-64a2-0bf1-e5d8" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.1" hidden="false" id="7e19-64a2-0bf1-e5d8" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="1295-e31a-c988-78d3" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>

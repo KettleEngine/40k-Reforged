@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="67" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="68" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Bolt Rifle" hidden="false" id="6802-fb1b-a361-36bb">
       <profiles>
@@ -2815,11 +2815,11 @@ Veteran Linebreakers: After this unit’s Move step, select up to two enemy uni
                     <profile name="Haywire Mine " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="1287-e353-2753-7218">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">0</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">0</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Suppressive 4 For each attack made for this weapon that targets a vehicle unit, the Strength of that attack is improved to 6. If that Wound Roll is successful, after the Attacks step, the target unit must make an Explode Roll.</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Haywire*, Suppressive 2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2827,6 +2827,13 @@ Veteran Linebreakers: After this unit’s Move step, select up to two enemy uni
                     <infoLink name="One Shot" id="8dc0-5c27-9199-2fbb" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
                     <infoLink name="Suppressive (X)" id="17f1-02f5-2751-41f5" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
                   </infoLinks>
+                  <rules>
+                    <rule name="*Haywire" id="c8e5-9656-c19a-d3e9" hidden="false">
+                      <description>For each attack made for this weapon that targets a vehicle unit, the Strength of that attack is improved to 6. If the Wound Roll of that is successful, the target unit gains Stunned.
+
+Stunned: After this unit Activates, if it has Suppressed X, roll a D6. If the result of that roll is less than the X of Suppressed X, this unit becomes ready and skip this turns’ Move and Attacks steps.</description>
+                    </rule>
+                  </rules>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntry>
@@ -5971,7 +5978,7 @@ c) PHOBOS LIEUTENANT</characteristic>
     <entryLink targetId="c089-5a77-b33a-8653" id="7a60-6c41-c8dd-8517" type="selectionEntry" name="Wolf Scouts" hidden="true" sortIndex="64"/>
     <entryLink import="true" name="Melta Eradicators Squad" hidden="false" id="9e56-5c78-4a02-e98d" type="selectionEntry" targetId="6fae-9098-94c0-e8c8" sortIndex="23"/>
     <entryLink targetId="1a7c-eccc-baed-f5ff" id="94d5-3c39-d29a-fa23" type="selectionEntry" name="Leviathan Dreadnought " hidden="false" sortIndex="53"/>
-    <entryLink targetId="1214-e873-29cf-8d3f" id="676d-1326-3908-b68c" type="selectionEntry" name="Contemptor Dreadnaught" hidden="false" sortIndex="53"/>
+    <entryLink targetId="1214-e873-29cf-8d3f" id="676d-1326-3908-b68c" type="selectionEntry" name="Contemptor Dreadnought" hidden="false" sortIndex="53"/>
   </entryLinks>
   <sharedRules>
     <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
@@ -6222,7 +6229,7 @@ c) ASSAULT INTERCESSORS without Fly</characteristic>
         <entryLink targetId="3f6d-281b-7664-d53f" id="8c90-ffa8-fef8-8853" type="selectionEntryGroup" name="Leader" hidden="false"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.3" hidden="false" id="beca-d151-7fad-9832" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.4" hidden="false" id="beca-d151-7fad-9832" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="895e-8347-d87b-2963" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -9168,10 +9175,6 @@ d) VANGUARD VETERANS</characteristic>
                         </modifierGroup>
                       </modifierGroups>
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c53f-ca47-c51c-0260-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c53f-ca47-c51c-0260-max" includeChildSelections="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="491a-a6b9-945f-d1a2-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="491a-a6b9-945f-d1a2-max" includeChildSelections="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b6b-06f7-e831-8638-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b6b-06f7-e831-8638-max" includeChildSelections="false"/>
                       </constraints>
