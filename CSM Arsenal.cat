@@ -2729,6 +2729,10 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                     <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
+                                  <constraints>
+                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="36f9-3eac-acab-c9d3-min" includeChildSelections="false"/>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="36f9-3eac-acab-c9d3-max" includeChildSelections="false"/>
+                                  </constraints>
                                 </entryLink>
                               </entryLinks>
                             </selectionEntry>
@@ -2740,7 +2744,8 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
                                   <constraints>
-                                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="5a04-eab4-62cb-5dd9-max" includeChildSelections="true" includeChildForces="false"/>
+                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b1a7-34a1-6a32-3a61-min" includeChildSelections="false"/>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b1a7-34a1-6a32-3a61-max" includeChildSelections="false"/>
                                   </constraints>
                                 </entryLink>
                               </entryLinks>
