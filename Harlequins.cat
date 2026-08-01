@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="27" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="5f5e-53b8-b4af-9b92" name="Harlequins" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="10" revision="28" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Neuro Disruptor" hidden="false" id="7dc0-1f7b-a49c-295b">
       <profiles>
@@ -84,6 +84,262 @@
         <infoLink name="Haywire" id="c0b2-f626-8a95-02a8" hidden="false" type="rule" targetId="0c93-fe53-7091-88d0"/>
         <infoLink name="Suppressive (X)" id="a1be-d80d-c221-c293" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Troupe" hidden="false" id="b9b5-f1c5-28fb-b674" sortIndex="3">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Troupe" id="01b5-a51e-269a-1690" hidden="false" defaultSelectionEntryId="1540-3895-a6cb-40a7" sortIndex="2">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Troupe Member" hidden="false" id="1540-3895-a6cb-40a7">
+              <profiles>
+                <profile name="Troupe Member" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="8ff2-52cc-6a63-e336">
+                  <characteristics>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">1</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Grenade:" id="2f54-f40e-faca-f5bc" hidden="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="3f7c-7f5a-3d58-9ca3" includeChildSelections="true"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Plasma Grenade" hidden="false" id="59c6-9534-687b-c528" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Plasma Grenade" hidden="false" id="a936-0bf1-e88f-f9f7" type="selectionEntry" targetId="16c6-5a66-c200-152f">
+                          <modifiers>
+                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="872f-ee40-e6b5-f6d1" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fffa-71a3-7725-0a53" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Haywire Grenade" hidden="false" id="4a69-e3ad-a92f-eea3" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Haywire Grenade" hidden="false" id="7d79-946c-2d6d-2f3f" type="selectionEntry" targetId="70d9-3670-51f4-ae16">
+                          <modifiers>
+                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2904-e3f1-5297-b88e" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf68-79fa-3edc-203d" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Prismatic Grenade" hidden="false" id="a23e-6b4c-f7ec-ec28" sortIndex="3">
+                      <entryLinks>
+                        <entryLink import="true" name="Prismatic Grenade" hidden="false" id="05d6-a96e-8a39-1670" type="selectionEntry" targetId="0f6e-e88b-9246-24bb">
+                          <modifiers>
+                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a4a-576e-0eaf-928c" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c989-3a11-8171-e3c5" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Melee:" id="a60f-88a5-fb8d-e9bf" hidden="false" defaultSelectionEntryId="805d-56fe-6031-9e7f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="365c-77cc-0234-c3bb" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2148-33c0-93f2-5bc3" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Harlequin’s Kiss" hidden="false" id="805d-56fe-6031-9e7f" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Harlequin’s Kiss" hidden="false" id="9f64-1e39-679d-5557" type="selectionEntry" targetId="2b2a-6b9a-72af-4117">
+                          <modifiers>
+                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="802c-f9ad-e040-c517" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="333b-2267-9381-89f2" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Power Weapon" hidden="false" id="87e2-b060-85a4-830a" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Power Weapon" hidden="false" id="2978-7e8d-eedf-7e62" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
+                          <modifiers>
+                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5b67-ef92-65cb-c973" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0a6-a74e-35eb-517b" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Pistol:" id="05a8-2a5e-470e-362a" hidden="false" defaultSelectionEntryId="0cf8-f541-46ce-95fb">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e2c1-cf10-9138-36aa" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c71e-20a3-db10-1ff7" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Shuriken Pistol" hidden="false" id="0cf8-f541-46ce-95fb" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Shuriken Pistol" hidden="false" id="dfdd-17b2-3f5e-a698" type="selectionEntry" targetId="4f77-9c86-d981-5252">
+                          <modifiers>
+                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3751-9367-da2c-7a95" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="145f-85ce-020f-b8c6" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Special Weapon" id="78a9-3383-cda0-9603" hidden="false">
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="7a53-a04b-4edc-f290" includeChildSelections="true"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Fusion Pistol" hidden="false" id="58c1-6b8e-b31f-a120" sortIndex="1">
+                          <entryLinks>
+                            <entryLink import="true" name="Fusion Pistol" hidden="false" id="dd2c-ef44-22c7-3da0" type="selectionEntry" targetId="2a6b-b034-37f1-59fa">
+                              <modifiers>
+                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="36d6-2e53-43e0-b2b2" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e571-fe7a-bdbe-0c9d" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Neuro Disruptor" hidden="false" id="cedf-a4e5-5cb8-a5ad" sortIndex="2">
+                          <entryLinks>
+                            <entryLink import="true" name="Neuro Disruptor" hidden="false" id="0ae5-2dde-5d77-9dc6" type="selectionEntry" targetId="7dc0-1f7b-a49c-295b">
+                              <modifiers>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4898-e2de-f6a7-ca75" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c97-ddbd-d321-5ef4" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="6d62-524e-472f-7307" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="bd3c-b009-f1f8-3958" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Type" id="b63f-913e-7784-3ba5" hidden="false" sortIndex="1" defaultSelectionEntryId="dd46-d8eb-9a92-1e86">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9ad9-dea2-9cd2-9c85-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ad9-dea2-9cd2-9c85-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Light" hidden="false" id="a289-af52-5c51-695a" sortIndex="1">
+              <infoLinks>
+                <infoLink name="Resilient (X)" id="5d38-3e8d-6cc5-702e" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Light" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="487d-3c17-ec4f-858c">
+                  <characteristics>
+                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 24” of and visible to any enemy units, this unit gains Resilient 5+.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Bold Performance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1a61-dfc1-1ed9-8cd7">
+                  <characteristics>
+                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 24” of and visible to any enemy units, for each roll for Mocking Misstep for visible friendly units, that roll is successful on a 5+.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <modifiers>
+                <modifier type="prepend" value="Light" field="name" affects="b9b5-f1c5-28fb-b674" scope="unit"/>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dark" hidden="false" id="c3d2-169d-cd8e-8d3c" sortIndex="3">
+              <profiles>
+                <profile name="Dark" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3c73-503a-d39b-e065">
+                  <characteristics>
+                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit Activates, all enemy units not visible to this unit gain the following ability until the End step:
+
+Captive Audience: For each attack that targets this unit, a Hit Roll of 5+ for that attack causes an additional hit.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Devious Performance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="de1d-8e12-9547-2ea5">
+                  <characteristics>
+                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there is an enemy unit within 24” of and not visible to this unit, for each roll for Mocking Misstep for visible friendly units, that roll is successful on a 5+.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <modifiers>
+                <modifier type="prepend" value="Dark" field="name" affects="b9b5-f1c5-28fb-b674" scope="unit"/>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Twilight" hidden="false" id="dd46-d8eb-9a92-1e86" sortIndex="2">
+              <profiles>
+                <profile name="Changeable Performance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3fa3-a8ab-ec6b-9e81">
+                  <characteristics>
+                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 2” of a terrain piece, for each roll for Mocking Misstep for visible friendly units, that roll is successful on a 5+.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Twilight" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f3c1-2187-f5a1-1521">
+                  <characteristics>
+                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 2” of a terrain piece, for each roll for Mocking Misstep for this unit, improve that roll by 1.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="prepend" value="Twilight" field="name" affects="b9b5-f1c5-28fb-b674" scope="unit"/>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="92a6-a448-785d-8818" primary="false" name="Infantry"/>
+        <categoryLink targetId="b69b-5b51-faf1-2c40" id="fa84-b143-13fe-8a8b" primary="true" name="Troops"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="150"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
@@ -1000,262 +1256,6 @@ Await Cue: This unit becomes ready, then skip this turn’s Attacks step.</chara
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="0814-5ea2-2203-495e-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Troupe" hidden="false" id="b9b5-f1c5-28fb-b674" sortIndex="3">
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Troupe" id="01b5-a51e-269a-1690" hidden="false" defaultSelectionEntryId="1540-3895-a6cb-40a7" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="model" import="true" name="Troupe Member" hidden="false" id="1540-3895-a6cb-40a7">
-              <profiles>
-                <profile name="Troupe Member" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="8ff2-52cc-6a63-e336">
-                  <characteristics>
-                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">1</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Grenade:" id="2f54-f40e-faca-f5bc" hidden="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="3f7c-7f5a-3d58-9ca3" includeChildSelections="true"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Plasma Grenade" hidden="false" id="59c6-9534-687b-c528" sortIndex="1">
-                      <entryLinks>
-                        <entryLink import="true" name="Plasma Grenade" hidden="false" id="a936-0bf1-e88f-f9f7" type="selectionEntry" targetId="16c6-5a66-c200-152f">
-                          <modifiers>
-                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="872f-ee40-e6b5-f6d1" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fffa-71a3-7725-0a53" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Haywire Grenade" hidden="false" id="4a69-e3ad-a92f-eea3" sortIndex="2">
-                      <entryLinks>
-                        <entryLink import="true" name="Haywire Grenade" hidden="false" id="7d79-946c-2d6d-2f3f" type="selectionEntry" targetId="70d9-3670-51f4-ae16">
-                          <modifiers>
-                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2904-e3f1-5297-b88e" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf68-79fa-3edc-203d" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Prismatic Grenade" hidden="false" id="a23e-6b4c-f7ec-ec28" sortIndex="3">
-                      <entryLinks>
-                        <entryLink import="true" name="Prismatic Grenade" hidden="false" id="05d6-a96e-8a39-1670" type="selectionEntry" targetId="0f6e-e88b-9246-24bb">
-                          <modifiers>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                          </modifiers>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a4a-576e-0eaf-928c" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c989-3a11-8171-e3c5" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="Melee:" id="a60f-88a5-fb8d-e9bf" hidden="false" defaultSelectionEntryId="805d-56fe-6031-9e7f">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="365c-77cc-0234-c3bb" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2148-33c0-93f2-5bc3" includeChildSelections="false"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Harlequin’s Kiss" hidden="false" id="805d-56fe-6031-9e7f" sortIndex="1">
-                      <entryLinks>
-                        <entryLink import="true" name="Harlequin’s Kiss" hidden="false" id="9f64-1e39-679d-5557" type="selectionEntry" targetId="2b2a-6b9a-72af-4117">
-                          <modifiers>
-                            <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="802c-f9ad-e040-c517" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="333b-2267-9381-89f2" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Power Weapon" hidden="false" id="87e2-b060-85a4-830a" sortIndex="2">
-                      <entryLinks>
-                        <entryLink import="true" name="Power Weapon" hidden="false" id="2978-7e8d-eedf-7e62" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
-                          <modifiers>
-                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                          </modifiers>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5b67-ef92-65cb-c973" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0a6-a74e-35eb-517b" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="Pistol:" id="05a8-2a5e-470e-362a" hidden="false" defaultSelectionEntryId="0cf8-f541-46ce-95fb">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e2c1-cf10-9138-36aa" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c71e-20a3-db10-1ff7" includeChildSelections="false"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Shuriken Pistol" hidden="false" id="0cf8-f541-46ce-95fb" sortIndex="1">
-                      <entryLinks>
-                        <entryLink import="true" name="Shuriken Pistol" hidden="false" id="dfdd-17b2-3f5e-a698" type="selectionEntry" targetId="4f77-9c86-d981-5252">
-                          <modifiers>
-                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                          </modifiers>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3751-9367-da2c-7a95" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="145f-85ce-020f-b8c6" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup name="Special Weapon" id="78a9-3383-cda0-9603" hidden="false">
-                      <constraints>
-                        <constraint type="max" value="2" field="selections" scope="unit" shared="true" id="7a53-a04b-4edc-f290" includeChildSelections="true"/>
-                      </constraints>
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Fusion Pistol" hidden="false" id="58c1-6b8e-b31f-a120" sortIndex="1">
-                          <entryLinks>
-                            <entryLink import="true" name="Fusion Pistol" hidden="false" id="dd2c-ef44-22c7-3da0" type="selectionEntry" targetId="2a6b-b034-37f1-59fa">
-                              <modifiers>
-                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                              </modifiers>
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="36d6-2e53-43e0-b2b2" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e571-fe7a-bdbe-0c9d" includeChildSelections="false"/>
-                              </constraints>
-                            </entryLink>
-                          </entryLinks>
-                        </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Neuro Disruptor" hidden="false" id="cedf-a4e5-5cb8-a5ad" sortIndex="2">
-                          <entryLinks>
-                            <entryLink import="true" name="Neuro Disruptor" hidden="false" id="0ae5-2dde-5d77-9dc6" type="selectionEntry" targetId="7dc0-1f7b-a49c-295b">
-                              <modifiers>
-                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                              </modifiers>
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4898-e2de-f6a7-ca75" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c97-ddbd-d321-5ef4" includeChildSelections="false"/>
-                              </constraints>
-                            </entryLink>
-                          </entryLinks>
-                        </selectionEntry>
-                      </selectionEntries>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="6d62-524e-472f-7307" includeChildSelections="false"/>
-            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="bd3c-b009-f1f8-3958" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Type" id="b63f-913e-7784-3ba5" hidden="false" sortIndex="1" defaultSelectionEntryId="dd46-d8eb-9a92-1e86">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9ad9-dea2-9cd2-9c85-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ad9-dea2-9cd2-9c85-max" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Light" hidden="false" id="a289-af52-5c51-695a" sortIndex="1">
-              <infoLinks>
-                <infoLink name="Resilient (X)" id="5d38-3e8d-6cc5-702e" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
-              </infoLinks>
-              <profiles>
-                <profile name="Light" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="487d-3c17-ec4f-858c">
-                  <characteristics>
-                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 24” of and visible to any enemy units, this unit gains Resilient 5+.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Bold Performance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1a61-dfc1-1ed9-8cd7">
-                  <characteristics>
-                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 24” of and visible to any enemy units, for each roll for Mocking Misstep for visible friendly units, that roll is successful on a 5+.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <modifiers>
-                <modifier type="prepend" value="Light" field="name" affects="b9b5-f1c5-28fb-b674" scope="unit"/>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Dark" hidden="false" id="c3d2-169d-cd8e-8d3c" sortIndex="3">
-              <profiles>
-                <profile name="Dark" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3c73-503a-d39b-e065">
-                  <characteristics>
-                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit Activates, all enemy units not visible to this unit gain the following ability until the End step:
-
-Captive Audience: For each attack that targets this unit, a Hit Roll of 5+ for that attack causes an additional hit.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Devious Performance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="de1d-8e12-9547-2ea5">
-                  <characteristics>
-                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While there is an enemy unit within 24” of and not visible to this unit, for each roll for Mocking Misstep for visible friendly units, that roll is successful on a 5+.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <modifiers>
-                <modifier type="prepend" value="Dark" field="name" affects="b9b5-f1c5-28fb-b674" scope="unit"/>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Twilight" hidden="false" id="dd46-d8eb-9a92-1e86" sortIndex="2">
-              <profiles>
-                <profile name="Changeable Performance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="3fa3-a8ab-ec6b-9e81">
-                  <characteristics>
-                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 2” of a terrain piece, for each roll for Mocking Misstep for visible friendly units, that roll is successful on a 5+.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Twilight" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f3c1-2187-f5a1-1521">
-                  <characteristics>
-                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 2” of a terrain piece, for each roll for Mocking Misstep for this unit, improve that roll by 1.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="prepend" value="Twilight" field="name" affects="b9b5-f1c5-28fb-b674" scope="unit"/>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink targetId="205c-3072-067b-d808" id="92a6-a448-785d-8818" primary="false" name="Infantry"/>
-        <categoryLink targetId="b69b-5b51-faf1-2c40" id="fa84-b143-13fe-8a8b" primary="true" name="Troops"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="150"/>
-      </costs>
-    </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
     <profile name="Grav-Engines" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6d1b-8f0c-a8c8-5183">
@@ -1264,4 +1264,7 @@ Captive Audience: For each attack that targets this unit, a Hit Roll of 5+ for
       </characteristics>
     </profile>
   </sharedProfiles>
+  <entryLinks>
+    <entryLink targetId="b9b5-f1c5-28fb-b674" id="8ae4-8629-fe9d-73a2" type="selectionEntry" name="Troupe" hidden="false" sortIndex="3"/>
+  </entryLinks>
 </catalogue>
