@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="56" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="14ba-fba9-02a2-388d" name="Craftworld Eldar" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="6" revision="57" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Roaming Performers" id="c56f-e048-3acd-ec3d" hidden="false">
       <description>You may add one of the following Harlequins units to your Army
@@ -153,7 +153,7 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets 
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest result of this unit’s last Psychic Test</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest dice result of this unit’s last Psychic Test.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -171,7 +171,7 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets 
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest result of this unit’s last Psychic Test</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">This weapon has Blast X, where X is the highest dice result of this unit’s last Psychic Test.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -458,26 +458,9 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets 
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4dbb-d3be-2cea-4a76-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4dbb-d3be-2cea-4a76-max" includeChildSelections="false"/>
       </constraints>
-      <profiles>
-        <profile name="Windfall of the Warp: Certain Death" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="cee7-b7cf-d712-cc0b">
-          <characteristics>
-            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, each enemy unit on the battlefield gains Fatal Thread until the End of the next turn.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Windfall of the Warp: Guide Spirits" hidden="false" id="a47c-ec55-083f-76b9">
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f41e-c282-494f-258f-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f41e-c282-494f-258f-max" includeChildSelections="false"/>
-      </constraints>
-      <profiles>
-        <profile name="Windfall of the Warp: Guide Spirits" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="11c6-5f89-1569-6670">
-          <characteristics>
-            <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test has two or more dice with the same result, until the End step, for each attack made for this for a weapon equipped to any WRAITHBLADE or WRAITHGUARD model, add 1 to the Hit Roll of that attack.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+      <infoLinks>
+        <infoLink targetId="cee7-b7cf-d712-cc0b" id="fbe4-b7ed-bfb5-4895" type="profile" name="Windfall of the Warp: Certain Death" hidden="false"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Prescient Portent" hidden="false" id="9a18-dd37-6c86-a2d5">
       <profiles>
@@ -683,18 +666,32 @@ Fatal Thread: For each attack made by an Aeldari Craftworlds unit that targets 
   <entryLinks>
     <entryLink import="true" name="Troupe" hidden="false" id="5801-0c51-8bbe-f4bc" type="selectionEntry" targetId="b9b5-f1c5-28fb-b674">
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="force" shared="true" id="9ef4-5a4e-122b-a9b5" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="9ef4-5a4e-122b-a9b5" includeChildSelections="false"/>
       </constraints>
     </entryLink>
     <entryLink import="true" name="Shadowseer" hidden="false" id="2ecf-ac74-ad45-bc06" type="selectionEntry" targetId="5be0-2b38-78af-32bf">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="fb58-2b10-69f2-f968" includeChildSelections="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="c6f8-f7c3-aee3-0f77" shared="true" includeChildSelections="true" childName="Troupe Master" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Troupe Master" hidden="false" id="c6f8-f7c3-aee3-0f77" type="selectionEntry" targetId="4022-69f2-afa5-0bc5">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ddaf-3284-597b-0f0d" includeChildSelections="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="2ecf-ac74-ad45-bc06" shared="true" includeChildSelections="true" childName="Shadowseer" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
   </entryLinks>
   <catalogueLinks>
@@ -1739,15 +1736,13 @@ a) GUARDIAN DEFENDERS</characteristic>
       <costs>
         <cost name="pts" typeId="points" value="20"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Windfall of the Warp: Certain Death" hidden="false" id="9137-641d-b46d-a30a" type="selectionEntry" targetId="d9c3-f9d1-e3dd-f1bd"/>
-      </entryLinks>
       <infoLinks>
         <infoLink name="Psyker (X)" id="53aa-d5b0-c5ae-30c3" hidden="false" type="rule" targetId="6ff7-e000-c4c9-fb18">
           <modifiers>
             <modifier type="set" value="Psyker (2)" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Windfall of the Warp: Certain Death" id="4ebc-e145-7f45-0bc1" hidden="false" targetId="cee7-b7cf-d712-cc0b" type="profile"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Warlock" hidden="false" id="65e4-1d3d-1c8d-a9ea">
@@ -1852,9 +1847,6 @@ b) WRAITHGUARD</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Windfall of the Warp: Guide Spirits" hidden="false" id="769c-9deb-c6e9-84ee" type="selectionEntry" targetId="a47c-ec55-083f-76b9"/>
-      </entryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Spiritseer" hidden="false" id="815a-3671-a56d-dde6">
           <constraints>
@@ -1917,6 +1909,7 @@ b) WRAITHGUARD</characteristic>
             <modifier type="set" value="Psyker (2)" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Windfall of the Warp: Guide Spirits" id="4799-6cde-5e9d-033b" hidden="false" targetId="11c6-5f89-1569-6670" type="profile"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skyrunner Farseer" hidden="false" id="dab0-b3e4-d712-0e37" sortIndex="3">
@@ -2029,7 +2022,6 @@ b) WINDRIDERS</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Windfall of the Warp: Certain Death" hidden="false" id="08e7-b5e7-65a7-4740" type="selectionEntry" targetId="d9c3-f9d1-e3dd-f1bd"/>
         <entryLink import="true" name="Prescient Portent" hidden="false" id="df9d-f860-6ee4-1e78" type="selectionEntry" targetId="9a18-dd37-6c86-a2d5"/>
       </entryLinks>
       <infoLinks>
@@ -2038,6 +2030,7 @@ b) WINDRIDERS</characteristic>
             <modifier type="set" value="Psyker (3)" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Windfall of the Warp: Certain Death" id="22f3-35c6-9316-9043" hidden="false" targetId="cee7-b7cf-d712-cc0b" type="profile"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5bec-c576-8d9e-792f" includeChildSelections="false"/>
@@ -3181,7 +3174,6 @@ a) GUARDIAN DEFENDERS</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Windfall of the Warp: Certain Death" hidden="false" id="ec24-058a-4dae-d7c4" type="selectionEntry" targetId="d9c3-f9d1-e3dd-f1bd"/>
         <entryLink import="true" name="Prescient Portent" hidden="false" id="3be8-7259-7839-309d" type="selectionEntry" targetId="9a18-dd37-6c86-a2d5"/>
       </entryLinks>
       <infoLinks>
@@ -3190,6 +3182,7 @@ a) GUARDIAN DEFENDERS</characteristic>
             <modifier type="set" value="Psyker (3)" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Windfall of the Warp: Certain Death" id="3308-1970-d015-7f7f" hidden="false" targetId="cee7-b7cf-d712-cc0b" type="profile"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="310b-997c-c355-6679" includeChildSelections="false"/>
@@ -4462,6 +4455,16 @@ Graceless Foes: For each attack made targeting this unit, reroll Hit Roll of 1�
     <profile name="Fleet Footwork" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1367-65b6-5f27-116d">
       <characteristics>
         <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attack step, if one or more enemy units that were targeted by an attack made by this unit this turn had Fatal Thread, this unit may Reposition.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Windfall of the Warp: Guide Spirits" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="11c6-5f89-1569-6670">
+      <characteristics>
+        <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test has two or more dice with the same result, until the End step, for each attack made for a weapon equipped to any WRAITHBLADE or WRAITHGUARD model, add 1 to the Hit Roll of that attack.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Windfall of the Warp: Certain Death" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="cee7-b7cf-d712-cc0b">
+      <characteristics>
+        <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, each enemy unit on the battlefield gains Fatal Thread until the End of the next turn.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

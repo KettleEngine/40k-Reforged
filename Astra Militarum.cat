@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="41" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="f178-f218-fb11-d21a" name="Astra Militarum" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="42" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lasgun" hidden="false" id="0b54-6ba9-f583-4b19">
       <profiles>
@@ -584,7 +584,6 @@
                         <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
-                    <entryLink import="true" name="Missile Launcher" hidden="false" id="2767-53c1-4825-4c68" type="selectionEntry" targetId="e03f-db1b-d6b0-b70f" sortIndex="6"/>
                   </entryLinks>
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Plasma Cannon" hidden="false" id="1a58-5095-cd35-f994" sortIndex="5">
@@ -600,6 +599,34 @@
                           </constraints>
                         </entryLink>
                       </entryLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Missile Launcher" hidden="false" id="df58-6749-ca97-05e5" sortIndex="6">
+                      <profiles>
+                        <profile name="Missile Launcher (Strike)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a46a-0205-1324-14f7">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Strike</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="Missile Launcher (Sweep)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6ebe-dff7-6fd5-b0c1">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Blast 7</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Blast (X)" id="4528-5b31-afdc-fb1f" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
+                        <infoLink name="Strike or Sweep (X)" id="7f9d-fbaa-b010-24b9" hidden="false" type="rule" targetId="2757-6563-cdb2-3456"/>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -764,7 +791,6 @@
               <infoLinks>
                 <infoLink name="One Shot" id="88b9-56ac-283e-a560" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
                 <infoLink name="Suppressive (X)" id="ae61-d101-a8aa-ada2" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-                <infoLink name="Indirect" id="1880-af02-7ff5-b294" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
                 <infoLink name="Barrage" id="9a33-5fa1-de75-9cee" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
               </infoLinks>
               <constraints>
@@ -813,7 +839,6 @@
       </costs>
       <categoryLinks>
         <categoryLink name="Vehicle" hidden="false" id="c64f-4dd9-4e8f-3f27" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-        <categoryLink name="Rare" hidden="false" id="1ca5-53b6-d7d1-0323" targetId="1738-1300-9dbb-c5be" primary="false"/>
         <categoryLink name="Support" hidden="false" id="8679-a6bd-dce2-d6cd" targetId="ccc6-6202-853c-23e4" primary="true"/>
       </categoryLinks>
       <selectionEntries>
@@ -2127,9 +2152,6 @@ Range Finders: While enemy units are visible to this unit, each time you roll 2
           </characteristics>
         </profile>
       </profiles>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="8904-0633-6de7-64bb" includeChildSelections="false"/>
-      </constraints>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Master of Ordnance" hidden="false" id="9db4-dc0c-e630-4748">
           <constraints>
@@ -2184,9 +2206,6 @@ This unit does not count towards the leader maximum of the army list.</character
         <categoryLink name="Infantry" hidden="false" id="116b-b7a2-5c4a-1b14" targetId="205c-3072-067b-d808" primary="false"/>
         <categoryLink targetId="1dc0-a947-c240-76bb" id="dfd6-3c4e-3aa4-d78a" primary="true" name="Countless Leader"/>
       </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="65f5-8cc6-a1b1-b2a1" includeChildSelections="false"/>
-      </constraints>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Officer of the Fleet" hidden="false" id="741d-a360-a89d-2c87">
           <constraints>
@@ -2225,9 +2244,6 @@ This unit does not count towards the leader maximum of the army list.</character
         <categoryLink name="Infantry" hidden="false" id="72de-f28b-acae-6c49" targetId="205c-3072-067b-d808" primary="false"/>
         <categoryLink targetId="1dc0-a947-c240-76bb" id="720a-2067-f914-2472" primary="true" name="Countless Leader"/>
       </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="0682-8dec-ff57-d77a" includeChildSelections="false"/>
-      </constraints>
       <profiles>
         <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="912b-0ad1-ff5c-9942">
           <characteristics>
@@ -2308,9 +2324,6 @@ This unit does not count towards the leader maximum of the army list.</character
         <categoryLink name="Infantry" hidden="false" id="1641-193b-dc76-b348" targetId="205c-3072-067b-d808" primary="false"/>
         <categoryLink targetId="2886-2afd-f65f-9d8e" id="d63f-39c1-5bc7-9c3e" primary="true" name="Leaders"/>
       </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="380d-cbcf-f165-b704" includeChildSelections="false"/>
-      </constraints>
       <profiles>
         <profile name="Windfall of the Warp - Psychic Awakening" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="bed2-6ef7-19cf-ef16">
           <characteristics>
@@ -2379,7 +2392,7 @@ This unit may only Cast psychic powers from the ‘Psychic Powers of the Battle 
                 <profile name="Psyker Stave" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3b0a-381b-ec85-6e7a">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -3253,7 +3266,6 @@ This unit does not count towards the leader capacity of your army list.</charact
                         </profile>
                       </profiles>
                       <infoLinks>
-                        <infoLink name="Indirect" id="7ff0-b6d0-75b5-05f6" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
                         <infoLink name="One Shot" id="0f56-ad61-3cc6-671b" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
                         <infoLink name="Suppressive (X)" id="08a8-a7a8-7c74-0c80" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
                         <infoLink name="Barrage" id="9438-8220-e929-206e" hidden="false" type="rule" targetId="9cfc-06e3-74c6-ad83"/>
@@ -3331,7 +3343,7 @@ This unit does not count towards the leader capacity of your army list.</charact
               <profiles>
                 <profile name="Gas Dispersion" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0cc2-e67b-6cf6-3155">
                   <characteristics>
-                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each of this unit’s weapons with Indirect, after selecting targets for its attacks, you may ‘load gas shells’. If you do, for each successful Hit Roll, that attack sequence ends and the target unit suffers Suppression X where X is equal to the Damage of the attack.</characteristic>
+                    <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After selecting targets for its attacks, you may ‘load gas shells’. If you do, for each successful Hit Roll, the attack sequence ends and the target unit suffers Suppression X where X is equal to the Damage of that attack.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3370,7 +3382,7 @@ This unit does not count towards the leader capacity of your army list.</charact
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">6+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3+4</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Ignore Cover, For each successful Wound Roll made for this weapon’s attacks, the target unit suffers 2D3 SW.</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Ignore Cover, For each successful Wound Roll made for this weapon’s attacks, the target unit suffers 1+2D3 SW.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3384,7 +3396,7 @@ This unit does not count towards the leader capacity of your army list.</charact
                     <profile name="Multiple Rocket Launcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="858e-0ff7-866c-9892">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -3409,11 +3421,11 @@ This unit does not count towards the leader capacity of your army list.</charact
                     <profile name="Heavy Quad Launcher" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="44eb-b881-d35f-75e7">
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">5+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Blast 7, Ignore Cover, Shred</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Barrage, Blast 5, Ignore Cover, Shred</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3430,7 +3442,7 @@ This unit does not count towards the leader capacity of your army list.</charact
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">1</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">5+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">11</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">14</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
               </characteristics>
             </profile>
