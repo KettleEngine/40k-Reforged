@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="38" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="39" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Gauss" id="b2e9-8420-cfb7-4bde" hidden="false">
       <description>For each attack made for this weapon, the Wound Roll for that attack is improved by 1, and the Saving Throw is worsened by 1.</description>
@@ -216,11 +216,10 @@ This unit does not count towards your army list’s leader capacity.</characteri
               <profiles>
                 <profile name="Cryptohrall" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="80fb-1780-4901-ad28">
                   <characteristics>
-                    <characteristic name="M" typeId="c06e-b1a2-0f87-fe2f">5&quot;</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">2</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">-</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">-</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -323,7 +322,7 @@ d) GEOMANCER</characteristic>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Canoptek Scarab Swarms" hidden="false" id="7201-04f3-1093-c07b">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Canoptek Scarab Swarms" id="e737-8cbc-8d3b-5c18" hidden="false" defaultSelectionEntryId="7af8-7621-09d9-ee1d">
+        <selectionEntryGroup name="Canoptek Scarab Swarms" id="e737-8cbc-8d3b-5c18" hidden="false" defaultSelectionEntryId="7af8-7621-09d9-ee1d" sortIndex="1">
           <constraints>
             <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="2cc6-15f5-aa26-89ce" includeChildSelections="false"/>
             <constraint type="min" value="6" field="selections" scope="parent" shared="true" id="08ae-82be-6caf-755d" includeChildSelections="false"/>
@@ -347,7 +346,7 @@ d) GEOMANCER</characteristic>
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">1</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
@@ -504,7 +503,7 @@ c) LYCHGUARD</characteristic>
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">7</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
             </profile>
@@ -565,7 +564,7 @@ c) LYCHGUARD</characteristic>
                 <profile name="Staff of Light (CQ)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="074a-695f-f70c-2670">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">14</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">12</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -588,7 +587,7 @@ c) LYCHGUARD</characteristic>
               <entryLinks>
                 <entryLink import="true" name="Gauss Cannon" hidden="false" id="b8ce-f035-72f0-14f6" type="selectionEntry" targetId="1204-6118-b8e6-75ec">
                   <modifiers>
-                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
@@ -640,7 +639,7 @@ a) SKORPEKH DESTROYERS</characteristic>
         </profile>
       </profiles>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Skorpekh Lord" hidden="false" id="08c3-2705-781b-ffae">
+        <selectionEntry type="model" import="true" name="Skorpekh Lord" hidden="false" id="08c3-2705-781b-ffae" sortIndex="1">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8bd6-d030-3892-0946-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8bd6-d030-3892-0946-max" includeChildSelections="false"/>
@@ -686,7 +685,7 @@ a) SKORPEKH DESTROYERS</characteristic>
                 <profile name="Flensing Claw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="62f9-feb4-e5dc-4401">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -764,13 +763,13 @@ c) OPHYDIAN DESTROYERS</characteristic>
         <entryLink import="true" name="Destroyer Cults" hidden="false" id="82f4-e757-8056-3af5" type="selectionEntry" targetId="ade0-d12f-6736-77d7"/>
       </entryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Lohkust Lord" hidden="false" id="7f4d-7956-3a88-9cd3">
+        <selectionEntry type="model" import="true" name="Lohkust Lord" hidden="false" id="7f4d-7956-3a88-9cd3" sortIndex="1">
           <profiles>
             <profile name="Lohkust Lord" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="a4e8-8a27-3520-c9a4">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
             </profile>
@@ -1000,7 +999,7 @@ b) IMMORTALS</characteristic>
         <entryLink import="true" name="Living Metal" hidden="false" id="ff9a-a1a4-1efc-2075" type="selectionEntry" targetId="62c7-282f-8c64-69cf"/>
       </entryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Royal Warden" hidden="false" id="2129-ef6c-4636-d970">
+        <selectionEntry type="model" import="true" name="Royal Warden" hidden="false" id="2129-ef6c-4636-d970" sortIndex="1">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="88a0-4f70-6367-0b21-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="88a0-4f70-6367-0b21-max" includeChildSelections="false"/>
@@ -1010,7 +1009,7 @@ b) IMMORTALS</characteristic>
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">3</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
             </profile>
@@ -1021,7 +1020,7 @@ b) IMMORTALS</characteristic>
                 <profile name="Relic Gauss Blaster" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="1aba-6947-f5fc-fa3f">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
@@ -1212,7 +1211,7 @@ d) CRYPTOTHRALLS</characteristic>
         <entryLink import="true" name="Cryptohralls" hidden="false" id="f38d-16e3-08d0-e552" type="selectionEntry" targetId="b258-ecbd-66e3-f1c3"/>
       </entryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Plasmancer" hidden="false" id="df49-f6bb-1171-476d">
+        <selectionEntry type="model" import="true" name="Plasmancer" hidden="false" id="df49-f6bb-1171-476d" sortIndex="1">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fded-ac0d-8794-701c-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fded-ac0d-8794-701c-max" includeChildSelections="false"/>
@@ -1233,10 +1232,10 @@ d) CRYPTOTHRALLS</characteristic>
                 <profile name="Plasmic Lance" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="d1c8-e75f-de5c-b90f">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">X</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                     <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
                   </characteristics>
                 </profile>
@@ -1621,7 +1620,7 @@ d) CRYPTOTHRALLS</characteristic>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1721,7 +1720,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
         <cost name="pts" typeId="points" value="100"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Flayed Ones" id="03cb-423d-77c1-3112" hidden="false" defaultSelectionEntryId="09e5-8366-868e-2d98">
+        <selectionEntryGroup name="Flayed Ones" id="03cb-423d-77c1-3112" hidden="false" defaultSelectionEntryId="09e5-8366-868e-2d98" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Flayed One" hidden="false" id="09e5-8366-868e-2d98">
               <profiles>
@@ -1730,7 +1729,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">2</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1800,7 +1799,7 @@ Escape Dimension: After any enemy unit&apos;s End step, you may remove this un
         <categoryLink name="Infantry" hidden="false" id="5e31-2d45-3aef-0710" targetId="205c-3072-067b-d808" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Deathmarks" id="d88b-4d04-3630-ca7b" hidden="false" defaultSelectionEntryId="b59b-c598-ac31-cb59">
+        <selectionEntryGroup name="Deathmarks" id="d88b-4d04-3630-ca7b" hidden="false" defaultSelectionEntryId="b59b-c598-ac31-cb59" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Deathmark" hidden="false" id="b59b-c598-ac31-cb59">
               <profiles>
@@ -1809,7 +1808,7 @@ Escape Dimension: After any enemy unit&apos;s End step, you may remove this un
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">2</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1865,7 +1864,7 @@ Escape Oubliette: After any enemy unit&apos;s End step, you may remove this un
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skorpekh Destroyers" hidden="false" id="4a18-41ff-a3b0-1d79" sortIndex="18">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Skorpekh Destroyers" id="a562-515f-7d01-13f6" hidden="false" defaultSelectionEntryId="fdea-797d-625e-48be">
+        <selectionEntryGroup name="Skorpekh Destroyers" id="a562-515f-7d01-13f6" hidden="false" defaultSelectionEntryId="fdea-797d-625e-48be" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Skorpekh Destroyer" hidden="false" id="fdea-797d-625e-48be">
               <costs>
@@ -1889,7 +1888,7 @@ Escape Oubliette: After any enemy unit&apos;s End step, you may remove this un
                         <profile name="Hyperphase Reap-blade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="cc67-c1e6-7e6e-0970">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
@@ -1906,7 +1905,7 @@ Escape Oubliette: After any enemy unit&apos;s End step, you may remove this un
                         <profile name="Hyperphase Threshers" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="956e-866b-00ac-c011">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">7</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
@@ -2152,7 +2151,7 @@ FABRICATE: After this unit’s Move step, if there is a friendly CANOPTEK SCARA
         <infoLink name="Fly" id="1126-423b-ac3c-5479" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
       </infoLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Canoptek Spyder" hidden="false" id="25e2-41eb-b1b1-c3f1">
+        <selectionEntry type="model" import="true" name="Canoptek Spyder" hidden="false" id="25e2-41eb-b1b1-c3f1" sortIndex="1">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="22d4-7c33-4892-2cd7-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="22d4-7c33-4892-2cd7-max" includeChildSelections="false"/>
@@ -2163,7 +2162,7 @@ FABRICATE: After this unit’s Move step, if there is a friendly CANOPTEK SCARA
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                 <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">7</characteristic>
-                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2195,7 +2194,7 @@ FABRICATE: After this unit’s Move step, if there is a friendly CANOPTEK SCARA
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 2</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2204,7 +2203,7 @@ FABRICATE: After this unit’s Move step, if there is a friendly CANOPTEK SCARA
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7b5-389f-98af-c841-max" includeChildSelections="false"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Shred" id="d581-ef92-0c84-a12c" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                <infoLink name="Blast (X)" id="d581-ef92-0c84-a12c" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
@@ -2288,7 +2287,7 @@ WIDE NANOSCARAB BEAM: After this unit’s Move step, select up to two different
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
                 <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">7</characteristic>
-                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">7+</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2391,7 +2390,7 @@ RELOCATE: You may reroll Move Rolls and Reposition Rolls made for this unit.</c
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Canoptek Wraiths" hidden="false" id="7c39-bd37-7dd3-f8b0" sortIndex="25">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Canoptek Wraiths" id="a5c5-7fb2-4d52-db48" hidden="false" defaultSelectionEntryId="cb7b-592d-5283-86cc">
+        <selectionEntryGroup name="Canoptek Wraiths" id="a5c5-7fb2-4d52-db48" hidden="false" defaultSelectionEntryId="cb7b-592d-5283-86cc" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Canoptek Wraith" hidden="false" id="cb7b-592d-5283-86cc">
               <costs>
@@ -2403,7 +2402,7 @@ RELOCATE: You may reroll Move Rolls and Reposition Rolls made for this unit.</c
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                     <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2415,16 +2414,16 @@ RELOCATE: You may reroll Move Rolls and Reposition Rolls made for this unit.</c
                         <profile name="Particle Caster" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="a0e1-4536-c05c-b7fb">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 2</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
                       <infoLinks>
-                        <infoLink name="Shred" id="c221-5fd2-d077-c402" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                        <infoLink name="Blast (X)" id="c221-5fd2-d077-c402" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
                       </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Transdimensional Beamer " hidden="false" id="1739-5e35-dad7-a2b1">
@@ -2535,7 +2534,7 @@ ISOLATE INTRUDER: For each melee attack this makes, that attack gains Isolate 
         <cost name="pts" typeId="points" value="100"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Tomb Blades" id="3f94-fd73-10b6-b223" hidden="false" defaultSelectionEntryId="a1c7-5804-2994-6f1f">
+        <selectionEntryGroup name="Tomb Blades" id="3f94-fd73-10b6-b223" hidden="false" defaultSelectionEntryId="a1c7-5804-2994-6f1f" sortIndex="1">
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="e3c6-54db-5d5e-757c-min" includeChildSelections="false"/>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e3c6-54db-5d5e-757c-max" includeChildSelections="false"/>
@@ -2584,16 +2583,16 @@ ISOLATE INTRUDER: For each melee attack this makes, that attack gains Isolate 
                         <profile name="Particle Beamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ad8e-99a2-bcbb-d199">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 2</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
                       <infoLinks>
-                        <infoLink name="Shred" id="60d6-8942-c814-e96f" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                        <infoLink name="Blast (X)" id="60d6-8942-c814-e96f" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -2607,9 +2606,9 @@ ISOLATE INTRUDER: For each melee attack this makes, that attack gains Isolate 
                 <profile name="Tomb Blade" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="ea19-93f3-07f4-7986">
                   <characteristics>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">2</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">3+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2865,7 +2864,7 @@ ISOLATE INTRUDER: For each melee attack this makes, that attack gains Isolate 
             <profile name="Annihilation Barge" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="9d49-fd9e-26a4-852a">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
-                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                 <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
               </characteristics>
@@ -2906,7 +2905,7 @@ Relayed Targeting Data: Each time an enemy unit selects a target for a ranged 
         </profile>
       </profiles>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Triarch Stalker" hidden="false" id="5197-acde-00df-63aa">
+        <selectionEntry type="model" import="true" name="Triarch Stalker" hidden="false" id="5197-acde-00df-63aa" sortIndex="1">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9df0-82cf-ff39-59cc-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9df0-82cf-ff39-59cc-max" includeChildSelections="false"/>
@@ -2930,8 +2929,8 @@ Relayed Targeting Data: Each time an enemy unit selects a target for a ranged 
                       <characteristics>
                         <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
                         <characteristic name="A" typeId="13c5-f234-c120-afc3">26</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                         <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Sweep, Ignore Cover</characteristic>
                       </characteristics>
@@ -2952,12 +2951,12 @@ Relayed Targeting Data: Each time an enemy unit selects a target for a ranged 
                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
                         <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 2</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink name="Shred" id="c01e-0f08-3e56-c0f6" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                    <infoLink name="Blast (X)" id="c01e-0f08-3e56-c0f6" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
                   </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Twin Heavy Gauss Cannon" hidden="false" id="f2cd-5fc7-01be-bf32" sortIndex="3">
@@ -3009,8 +3008,8 @@ Relayed Targeting Data: Each time an enemy unit selects a target for a ranged 
             <profile name="Triarch Stalker" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="4e65-9b7a-2870-60e1">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
-                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">7</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">5+</characteristic>
               </characteristics>
             </profile>
@@ -3036,7 +3035,7 @@ Relayed Targeting Data: Each time an enemy unit selects a target for a ranged 
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Triarch Prartorians" hidden="false" id="13fd-a3aa-4365-43e9" sortIndex="21">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Triarch Prartorians" id="12f5-5516-f68e-2815" hidden="false" defaultSelectionEntryId="00cf-812c-b746-9c0b">
+        <selectionEntryGroup name="Triarch Prartorians" id="12f5-5516-f68e-2815" hidden="false" defaultSelectionEntryId="00cf-812c-b746-9c0b" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Triarch Prartorian" hidden="false" id="5e17-4197-b050-d048">
               <costs>
@@ -3046,9 +3045,9 @@ Relayed Targeting Data: Each time an enemy unit selects a target for a ranged 
                 <profile name="Triarch Prartorian" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="1670-0612-dccc-3d5d">
                   <characteristics>
                     <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
-                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
                     <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">2</characteristic>
-                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3102,13 +3101,14 @@ Relayed Targeting Data: Each time an enemy unit selects a target for a ranged 
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Blast 2</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
                       <infoLinks>
-                        <infoLink name="Pierce" id="d47a-b874-5196-a818" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                        <infoLink name="Blast (X)" id="d47a-b874-5196-a818" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
                         <infoLink name="Shred" id="d4de-7245-4f24-272e" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                        <infoLink name="Pierce" id="f3cf-1104-92f1-e927" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
