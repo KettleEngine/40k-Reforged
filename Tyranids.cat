@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="27" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a50c-93fe-33fc-4e86" name="Tyranids" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="29" revision="28" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.2" hidden="false" id="d93e-ed5b-78c7-6277" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="d93e-ed5b-78c7-6277" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="147b-5e69-1823-d904" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -38,7 +38,7 @@
       <profiles>
         <profile name="1 Synaptic Surge" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="213a-9ef6-16d1-5590">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the end of the next time this unit is Activated or dies, you may reroll Move Rolls made for friendly units with Adaptive Bioform within 12” of this unit.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the end of the next time this unit is Activated or dies, while your units are within 12” of this unit, you may reroll Move Rolls made for those units.</characteristic>
           </characteristics>
         </profile>
         <profile name="2 Psychic Barrier" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="7872-87d1-fc12-a4f9">
@@ -48,17 +48,17 @@
         </profile>
         <profile name="3 Horrible Presence" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="2cd1-1d27-36a6-906c">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Each enemy unit within 16” and visible to this unit suffers D3+1 Suppression.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Each enemy unit within 16” and visible to this unit suffers 2 Suppression.</characteristic>
           </characteristics>
         </profile>
         <profile name="4 Psychic Scream" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="9a3f-c56d-b386-b1fe">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Each enemy unit within 8” of this unit suffers D3+2 Suppression.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Each enemy unit within 8” of this unit suffers D3+1 Suppression.</characteristic>
           </characteristics>
         </profile>
         <profile name="5 Manifest Hate" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="c811-4d37-d1e3-e1fc">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 16” of and visible to this unit. The selected unit suffers 4+2D3 SW</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 16” of and visible to this unit. The selected unit suffers 2D3+6 SW</characteristic>
           </characteristics>
         </profile>
         <profile name="6 Metabolic Catalyst" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="6a0a-3c91-fd32-0a07">
@@ -87,7 +87,7 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
         </profile>
         <profile name="2 Dirgeheart of Kharis" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="34e4-0cf8-f9a9-7b88">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Move step, each enemy unit within X” where X is this unit’s Toughness suffers 3D3 Suppression.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Move step, each enemy unit within X” where X is this unit’s Toughness suffers D3+2 Suppression.</characteristic>
           </characteristics>
         </profile>
         <profile name="3 Rapid Evolution" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="33e4-356c-d28f-aaef">
@@ -102,7 +102,7 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
         </profile>
         <profile name="6 Overwhelming Shadow" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="9909-3ae2-1996-8f7c">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">While this unit has Hive Minded, after this unit’s Move step, each enemy unit within 6” of it suffers 3+D3 Suppression. While enemy units with Suppressed are within 6” of this unit, those units cannot be selected for Activation unless their controlling player has no other units available for Activation.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">While this unit has Hive Minded, after this unit’s Move step, each enemy unit within 6” of it suffers D3+1 Suppression. While enemy units with Suppressed are within 6” of this unit, those units cannot be selected for Activation unless their controlling player has no other units available for Activation.</characteristic>
           </characteristics>
         </profile>
         <profile name="5 Perfect Adaptation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="6d05-f68a-0bb0-c046">
@@ -336,7 +336,7 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
           <selectionEntryGroups>
             <selectionEntryGroup name="Free Squads" id="ddfd-0508-a97b-0b19" hidden="false">
               <entryLinks>
-                <entryLink import="true" name="Termagaunts" hidden="false" id="8549-c45d-2cbc-b50d" type="selectionEntry" targetId="9908-a93b-4a52-4a11">
+                <entryLink import="true" name="Termagants" hidden="false" id="8549-c45d-2cbc-b50d" type="selectionEntry" targetId="9908-a93b-4a52-4a11">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
@@ -426,12 +426,7 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
       <profiles>
         <profile name="Debilitating Shadow" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="fc22-36f8-5f42-0b81">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select up to three enemy units within 24” of this unit. The selected units suffer X Suppression where X was the highest result of this unit’s last Psychic Test.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Psychic Organisms" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b37a-4663-0e86-0d21">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">NEUROLOID models in this unit do not count as models while selecting a model to suffer a wound. After the last non-NEUROLOID model in this unit dies, each NEUROLOID model in this unit dies.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select up to two enemy units within 24” of this unit. The selected units suffer X Suppression where X was the highest result of this unit’s last Psychic Test.</characteristic>
           </characteristics>
         </profile>
         <profile name="Tyrannical Will" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f96a-f14d-729b-5b70">
@@ -510,10 +505,10 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
                   <profiles>
                     <profile name="Neuroloid" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="7411-f62b-9869-5185">
                       <characteristics>
-                        <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
-                        <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">-</characteristic>
-                        <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">-</characteristic>
-                        <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
+                        <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                        <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                        <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
+                        <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -589,7 +584,7 @@ Dominated Metabolism: Each time a model in this unit dies, do not remove it fro
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Hormagaunts" hidden="false" id="cece-759c-b824-3e99" type="selectionEntry" targetId="19da-3d1d-2bf9-955b"/>
-            <entryLink import="true" name="Termagaunts" hidden="false" id="25e9-52c6-9253-7c74" type="selectionEntry" targetId="9908-a93b-4a52-4a11"/>
+            <entryLink import="true" name="Termagants" hidden="false" id="25e9-52c6-9253-7c74" type="selectionEntry" targetId="9908-a93b-4a52-4a11"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -870,7 +865,7 @@ Terror Skirmishers: For each attack that targets this unit while it is the clo
         </profile>
         <profile name="3 Paroxysm" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="ab1b-1929-f2fd-cd38">
           <characteristics>
-            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select up to three different enemy infantry or monster units within 16&quot; of this unit. Each selected unit suffers 12 Suppression. Then, roll a D6. On a 1-3, this unit loses 5 Health.</characteristic>
+            <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select up to three different enemy infantry or monster units within 16&quot; of this unit. Each selected unit suffers 7 Suppression. Then, roll a D6. On a 1-3, this unit loses 5 Health.</characteristic>
           </characteristics>
         </profile>
         <profile name="4 Warp Lance" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="bc0c-9582-3e98-99f6">
@@ -1044,7 +1039,7 @@ To The Shadows: After any enemy unit&apos;s End step, this unit may Advance an
       <profiles>
         <profile name="Atavistic Terror" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="bb7e-00d5-cbae-07c8">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Each time this unit Casts Horrible Presence or Psychic Scream, add 1 D3 to rolls for a number of Suppression.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">Each time this unit Casts Horrible Presence or Psychic Scream or uses Neural Fields, add 1 to rolls for a number of Suppression.</characteristic>
           </characteristics>
         </profile>
         <profile name="psychic" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4360-bdca-0be3-8ee0">
@@ -1103,7 +1098,7 @@ To The Shadows: After any enemy unit&apos;s End step, this unit may Advance an
       <profiles>
         <profile name="Toxic Clouds" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e1bb-5890-cc68-98a6">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attacks step, each enemy unit within 3D6” of this unit suffers 8 Suppression.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attacks step, each enemy unit within 3D6” of this unit suffers 4 Suppression.</characteristic>
           </characteristics>
         </profile>
         <profile name="Thick Spores" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="24c1-698c-2568-d951">
@@ -1114,7 +1109,6 @@ To The Shadows: After any enemy unit&apos;s End step, this unit may Advance an
       </profiles>
       <infoLinks>
         <infoLink name="Unstoppable" id="0d88-4a82-d6c1-0f13" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
-        <infoLink name="Walker" id="de92-a878-c91c-9ef3" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Venomthrope" hidden="false" id="c62a-e39e-22dd-6921">
@@ -1156,7 +1150,7 @@ To The Shadows: After any enemy unit&apos;s End step, this unit may Advance an
       </selectionEntries>
       <categoryLinks>
         <categoryLink targetId="ccc6-6202-853c-23e4" id="bc89-22dc-6115-2230" primary="true" name="Support"/>
-        <categoryLink targetId="6537-7b2d-b2c8-6005" id="a053-9f80-86ae-d8f6" primary="false" name="Monster"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="4287-7c5e-9023-55dc" primary="false" name="Infantry"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
@@ -1480,7 +1474,6 @@ Rumbling Earth: After an enemy unit with Pulverising Charge finishes an Advance
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Walker" id="5dea-7290-c49d-cca0" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
         <infoLink name="Heavy Armour" id="37b5-6369-0d58-c820" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
       </infoLinks>
     </selectionEntry>
@@ -2284,7 +2277,7 @@ Hive Minded: For each Resolve Test made for this unit, add 1 to that Resolve T
     </profile>
     <profile name="Dominating Shadow" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="12e1-903d-2084-3dd7">
       <characteristics>
-        <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select any enemy unit within 12+3D6” of this unit. The selected unit suffers 4 Suppression. If the selected unit has Psyker, that unit suffers 5 Suppression instead.</characteristic>
+        <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, select any enemy unit within 12+3D6” of this unit. The selected unit suffers 2 Suppression. If the selected unit has Psyker, that unit suffers 3 Suppression instead.</characteristic>
       </characteristics>
     </profile>
     <profile name="Instinctive Swarm" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5cf3-83fb-d394-fdd8">
@@ -2299,7 +2292,7 @@ Hive Minded: For each Resolve Test made for this unit, add 1 to that Resolve T
     </profile>
     <profile name="Neural Fields" typeId="266a-be4d-b9fa-94de" typeName="Windfall of the Warp" hidden="false" id="5f07-ae71-efa1-911b">
       <characteristics>
-        <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, each enemy unit within 6+3D6” of this unit suffers 3 Suppression.</characteristic>
+        <characteristic name="Psychic Power" typeId="9060-973c-99e9-75b4">After this unit makes a Psychic Test, if that Psychic Test had two or more dice with the same result, each enemy unit within 6+3D6” of this unit suffers D3 Suppression.</characteristic>
       </characteristics>
     </profile>
     <profile name="Synaptic Node" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="25a5-78c2-e19f-0550">
@@ -2795,7 +2788,7 @@ Hive Minded: For each Resolve Test made for this unit, add 1 to that Resolve T
   </sharedRules>
   <entryLinks>
     <entryLink import="true" name="Hormagaunts" hidden="false" id="f7c8-3778-9b57-ff6b" type="selectionEntry" targetId="19da-3d1d-2bf9-955b" sortIndex="5"/>
-    <entryLink import="true" name="Termagaunts" hidden="false" id="df95-c51f-d742-c7fe" type="selectionEntry" targetId="9908-a93b-4a52-4a11" sortIndex="6"/>
+    <entryLink import="true" name="Termagants" hidden="false" id="df95-c51f-d742-c7fe" type="selectionEntry" targetId="9908-a93b-4a52-4a11" sortIndex="6"/>
     <entryLink targetId="aa4e-091c-4a39-442f" id="6a61-cb40-0c16-b7e1" type="selectionEntry" name="Ripper Swarms" hidden="false" sortIndex="14">
       <comment>Reference</comment>
       <costs>

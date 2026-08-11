@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3346-57cc-888c-c1d6" name="Drukhari" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="25" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3346-57cc-888c-c1d6" name="Drukhari" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="25" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.1" hidden="false" id="d4a4-79f5-d0c3-6cee" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="d4a4-79f5-d0c3-6cee" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="1133-b921-ce13-2734" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -56,12 +56,12 @@
         </profile>
         <profile name="5 Mask of the First Age" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="dcc9-cf74-17da-7cb6">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">While enemy units are within 16” of this unit, each Resolve Test made for those units is worsened by 1.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">While enemy units are within 16” of this unit, those units’ Rv is worsened by 1.</characteristic>
           </characteristics>
         </profile>
         <profile name="3 Phantasm Grenades" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="1d3c-852e-efd2-e0f5">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Move step, select an enemy unit within 12” of and visible to this unit. Until the End step, for each Resolve Test the selected unit succeeds, it suffers 1 SW. Then, the selected enemy unit suffers 3D6 Suppression.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Move step, select an enemy unit within 12” of and visible to this unit. Until the End step, for each Resolve Test the selected unit succeeds, it suffers 1 SW. Then, the selected enemy unit suffers 2D6 Suppression.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -221,7 +221,7 @@ c) INCUBI</characteristic>
       <profiles>
         <profile name="Virtuoso of Anguish" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c152-02cc-3822-42cd">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While any enemy units are within 12” of this unit, those units’ Rv is worsened by 1.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s Attacks step, for each enemy unit with Suppressed X within 12&quot; of this unit, that unit suffers 2D3 Suppression</characteristic>
           </characteristics>
         </profile>
         <profile name="Harvest Despair" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f380-d0de-4a98-7d3d">
@@ -417,31 +417,8 @@ c) INCUBI</characteristic>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Beastmaster" hidden="false" id="e70b-34e1-995a-6ed5">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Splinter Pods" hidden="false" id="0325-490e-5a2a-8b45">
-              <profiles>
-                <profile name="Splinter Pods" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="98fc-0d9b-fffe-08bf">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Poison, Suppressive 1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dde3-8bb5-5915-63b2-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dde3-8bb5-5915-63b2-max" includeChildSelections="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Poison" id="ee30-74bf-a2e3-ad9c" hidden="false" type="rule" targetId="dda4-31db-bf0a-2af4"/>
-                <infoLink name="Suppressive (X)" id="61fb-95c4-9f87-ba0d" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
+            <entryLink targetId="0325-490e-5a2a-8b45" id="1aa0-6d87-8da8-7972" type="selectionEntry" name="Splinter Pods" hidden="false"/>
             <entryLink import="true" name="Agoniser" hidden="false" id="1c85-fe99-01ff-0b59" type="selectionEntry" targetId="4c06-5829-c3a6-f409">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3121-37fd-4398-bc1d-min" includeChildSelections="false"/>
@@ -1544,11 +1521,11 @@ This unit may attach to a unit which already has an attached leader (other than 
       <profiles>
         <profile name="Mobile Torture Chamber" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="23b8-e2ac-5bad-ce09">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attacks step, if one or more enemy models died to a melee attack this turn, all enemy units within 12” of and visible to this unit suffer D3+2 Suppression. Then, choose one of the following abilities and this unit gains it until after the next time this unit is Activated:
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attacks step, if one or more enemy models died to a melee attack this turn, all enemy units within 12” of and visible to this unit suffer D3 Suppression. Then, choose one of the following abilities and this unit gains it until after the next time this unit is Activated:
 
-Prolonged Suffering: While enemy units are within 12” of and visible to this unit, after time they suffer any Suppression X, they suffer Suppression X again.
+Prolonged Suffering: While enemy units are within 12” of and visible to this unit, after time they suffer any Suppression X, they suffer Suppression X again.
 
-Entertaining Spectacle: For each Move Roll made for your units within 12” of and visible to this unit, roll an additional D6 and discard the lowest dice for that roll.</characteristic>
+Entertaining Spectacle: For each Move Roll made for your units within 12” of and visible to this unit, roll an additional D6 and discard the lowest dice for that roll.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1720,6 +1697,151 @@ Entertaining Spectacle: For each Move Roll made for your units within 12” of 
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Hellions" hidden="false" id="b918-e2e9-aa25-8fc9">
+      <categoryLinks>
+        <categoryLink targetId="205c-3072-067b-d808" id="0784-50cc-265f-2ca5" primary="false" name="Infantry"/>
+        <categoryLink targetId="ccc6-6202-853c-23e4" id="5e7a-7265-6d4a-06c8" primary="true" name="Support"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Fly" id="fc0e-bc7d-03ee-bc72" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
+        <infoLink name="Power from Pain" id="55b3-b3b2-6f14-94be" hidden="false" type="profile" targetId="b06f-e1dd-55f1-f0e8"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Hellions" id="bc90-3fac-6373-39b3" hidden="false" defaultSelectionEntryId="175e-301b-c24c-9f73">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="2c25-26dd-319e-c70e-min" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="2c25-26dd-319e-c70e-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Hellion" hidden="false" id="175e-301b-c24c-9f73">
+              <profiles>
+                <profile name="Hellion" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="d65b-1590-05e5-5e66">
+                  <characteristics>
+                    <characteristic name="T" typeId="a6ad-d820-8495-f5b0">1</characteristic>
+                    <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                    <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">1</characteristic>
+                    <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">4+</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="Splinter Pods" hidden="false" id="0c73-98e3-ecb1-e4e2" targetId="0325-490e-5a2a-8b45" type="selectionEntry">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Hellglaive" id="ef90-8270-a4f1-5729" hidden="false" defaultSelectionEntryId="98c1-2f21-03b0-6724">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6438-2c82-280d-c110-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6438-2c82-280d-c110-max" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Hellglaive" hidden="false" id="98c1-2f21-03b0-6724" sortIndex="1">
+                      <profiles>
+                        <profile name="Hellglaive" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="8987-d683-aac7-f02d">
+                          <characteristics>
+                            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Commander" hidden="false" id="a6f9-266d-550d-12eb">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="ae1a-1c39-a223-31ee" includeChildSelections="true"/>
+                      </constraints>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Melee" id="cc24-1897-e3f3-aeba" hidden="false" defaultSelectionEntryId="ae5a-ab7c-6898-e8fb">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5497-52ca-89ef-202c" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="006b-865a-d4d4-e24f" includeChildSelections="false"/>
+                          </constraints>
+                          <selectionEntries>
+                            <selectionEntry type="upgrade" import="true" name="Stunclaw" hidden="false" id="8974-71a7-596b-fee0" sortIndex="4">
+                              <profiles>
+                                <profile name="Stunclaw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4e94-c398-2e67-6a79">
+                                  <characteristics>
+                                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                                    <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+                                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 1, Isolate</characteristic>
+                                  </characteristics>
+                                </profile>
+                              </profiles>
+                              <infoLinks>
+                                <infoLink name="Isolate" id="9b3d-1f07-b246-a83d" hidden="false" type="rule" targetId="db97-d77e-4392-6f10"/>
+                                <infoLink name="Suppressive (X)" id="2699-a4c3-bd20-0678" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+                              </infoLinks>
+                            </selectionEntry>
+                          </selectionEntries>
+                          <entryLinks>
+                            <entryLink import="true" name="Agoniser" hidden="false" id="ae5a-ab7c-6898-e8fb" type="selectionEntry" targetId="4c06-5829-c3a6-f409" sortIndex="3">
+                              <modifiers>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                            <entryLink import="true" name="Power Weapon" hidden="false" id="f297-9b8b-d1b5-9046" type="selectionEntry" targetId="dfed-4c14-cafd-626d" sortIndex="2">
+                              <modifiers>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntryGroup>
+                        <selectionEntryGroup name="Pistol" id="18f9-5139-9dcb-e1cc" hidden="false" defaultSelectionEntryId="5e06-d8b2-d897-a308">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c448-24b1-a8fe-5408" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2bb1-aa94-1818-342d" includeChildSelections="false"/>
+                          </constraints>
+                          <entryLinks>
+                            <entryLink import="true" name="Splinter Pistol" hidden="false" id="5e06-d8b2-d897-a308" type="selectionEntry" targetId="c1e1-cb6d-2d98-2f2b" sortIndex="1">
+                              <modifiers>
+                                <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                            <entryLink import="true" name="Blast Pistol" hidden="false" id="3788-8812-fbd5-0bba" type="selectionEntry" targetId="028c-ee1f-5eb4-8541" sortIndex="2">
+                              <modifiers>
+                                <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                              </modifiers>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <profiles>
+        <profile name="Intoxicated Aerialists" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ed6a-ee45-7cb7-26e6">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you make a Move Roll for this unit, you may have it ‘inject adrenalight’. If you do, reroll that Move Roll. After this unit’s End step, this unit suffers 1 Suppression for each time it injected adrenalight this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Depraved Daredevils" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="4271-8617-d603-841a">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit finishes an Advance or Reposition within 1” of a structure or obstacle terrain piece or a vehicle unit, this unit may Reposition. It may not do so again this turn for that terrain piece or unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
     <profile name="Power from Pain" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b06f-e1dd-55f1-f0e8">
@@ -1739,7 +1861,7 @@ Entertaining Spectacle: For each Move Roll made for your units within 12” of 
     </profile>
     <profile name="Instruments of Torture" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0128-cfa6-7815-0843">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While any enemy units with Suppressed X are within 12” of this unit, for each Move Roll made for those units, that Move Roll’s result is worsened by X.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While any enemy units with Suppressed X are within 12” of this unit, for each Move Roll made for those units, that Move Roll’s result is worsened by X. (to a minimum of 0)</characteristic>
       </characteristics>
     </profile>
     <profile name="Lethal Celerity" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0f7c-388c-93a3-aeaa">
@@ -2201,9 +2323,9 @@ Entertaining Spectacle: For each Move Roll made for your units within 12” of 
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within 12” of a friendly leader unit, for each attack made by this unit, reroll a failed Wound Roll for that attack.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Terrifyingly Efficient" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="193e-3a59-a431-bf38">
+        <profile name="Torturous Tormentors" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="193e-3a59-a431-bf38">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an attack made by this unit kills a model, that model’s unit suffers D3 Suppression.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, each enemy unit within engagement range of this unit suffers D3 Suppression.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2271,16 +2393,17 @@ Entertaining Spectacle: For each Move Roll made for your units within 12” of 
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">0</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">0</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Suppressive 3 For each attack made for this weapon that targets a vehicle unit, the Strength of that attack is improved to 16. If that Wound Roll is successful, after the Attacks step, the target unit must make an Explode Roll.</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Rearm, Indirect, Suppressive 2, Haywire</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Suppressive (X)" id="8bda-574b-5f45-7404" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-        <infoLink name="One Shot" id="8cb5-df7f-79f0-b7c8" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Haywire" id="8cb5-df7f-79f0-b7c8" hidden="false" type="rule" targetId="0c93-fe53-7091-88d0"/>
         <infoLink name="Indirect" id="854e-4d0e-d8d9-1de1" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="Rearm" id="17a8-218f-5a44-563c" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Kabalite Trueborns" hidden="false" id="d3cb-ce21-5865-3a1a" sortIndex="2">
@@ -3122,7 +3245,7 @@ Entertaining Spectacle: For each Move Roll made for your units within 12” of 
       <profiles>
         <profile name="Razorwing Stoop" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="dc27-db9f-2787-700f">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s Move step, select one enemy unit within engagement range of this unit. Then, that unit suffers D6+X Suppression, where X is the number of models in this unit.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, select one enemy unit within engagement range of this unit. Then, that unit suffers XD3 Suppression, where X is the number of models in this unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3169,7 +3292,7 @@ Entertaining Spectacle: For each Move Roll made for your units within 12” of 
             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+4</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
@@ -3183,17 +3306,41 @@ Entertaining Spectacle: For each Move Roll made for your units within 12” of 
         <profile name="Haywire Blaster" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9c56-7ad0-f777-c4c7">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">0</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">0</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Suppressive 3 For each attack made for this weapon that targets a vehicle unit, the Strength of that attack is improved to 16. If that Wound Roll is successful, after the Attacks step, the target unit must make an Explode Roll.</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Haywire, Suppressive 4
+
+</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="One Shot" id="dfbc-ff5f-505b-4c71" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Suppressive (X)" id="dfbc-ff5f-505b-4c71" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
         <infoLink name="Suppressive (X)" id="494c-5d38-62d3-a4a6" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Splinter Pods" hidden="false" id="0325-490e-5a2a-8b45">
+      <profiles>
+        <profile name="Splinter Pods" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="98fc-0d9b-fffe-08bf">
+          <characteristics>
+            <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Poison, Suppressive 1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dde3-8bb5-5915-63b2-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dde3-8bb5-5915-63b2-max" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Poison" id="ee30-74bf-a2e3-ad9c" hidden="false" type="rule" targetId="dda4-31db-bf0a-2af4"/>
+        <infoLink name="Suppressive (X)" id="61fb-95c4-9f87-ba0d" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>

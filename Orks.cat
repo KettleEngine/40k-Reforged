@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3de7-a135-8614-c599" name="Orks" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="25" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.1" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="82a4-4826-eaf1-eb30" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="0364-85c9-a87f-e090" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -106,7 +106,7 @@
             <modifier type="set" value="Resilient (5+)" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Everyone! Ge’ In ‘ere!" id="324a-5e25-606b-c172" hidden="false" type="profile" targetId="ad82-3c2d-6494-820e"/>
+        <infoLink name="Ge’ In ‘ere!" id="324a-5e25-606b-c172" hidden="false" type="profile" targetId="ad82-3c2d-6494-820e"/>
         <infoLink name="WAAAGH!" id="988c-ed01-b604-77c8" hidden="false" type="profile" targetId="c9f0-afe5-0f2c-c9b1"/>
         <infoLink name="Solid Greenskin" id="0cd3-caa0-e826-030a" hidden="false" type="profile" targetId="c35f-6848-d4c4-faeb"/>
         <infoLink name="Shred" id="9157-0c6a-31ac-0147" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
@@ -983,11 +983,9 @@ Tellyporta: After this unit is Activated in reserves, you may use the ‘tellyp
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a friendly unit with ‘WARBOSS’ in its name within 16” of this unit dies, this unit gains the following ability:
 
-
 I’m Da Biggest Now: While your infantry units are within 12” of this unit, they gain the following ability:
 
-
-WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 for that attack. For each melee attack this unit makes, reroll a Wound Roll of 1 for that attack.</characteristic>
+WAAAAGH!: For each attack that targets this unit, reroll Resilient Rolls of 1 for that attack. If there are two or more other friendly Orks units within 12” of this unit, reroll failed Resilient Rolls for that attack instead.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2716,8 +2714,7 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
       <characteristics>
         <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your infantry units are within 12” of this unit, they gain the following ability:
 
-
-WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 for that attack. For each melee attack this unit makes, reroll a Wound Roll of 1 for that attack.</characteristic>
+WAAAAGH!: For each attack that targets this unit, reroll Resilient Rolls of 1 for that attack. If there are two or more other friendly Orks units within 12” of this unit, reroll failed Resilient Rolls for that attack instead.</characteristic>
       </characteristics>
     </profile>
     <profile name="Solid Greenskin" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c35f-6848-d4c4-faeb">
@@ -2728,9 +2725,9 @@ WAAAAGH!: For each attack that targets this unit, reroll Resilient rolls of 1 
         <modifier type="increment" value="1" field="a6ad-d820-8495-f5b0" scope="unit-self" affects="self.entries.recursive.profiles.Unit"/>
       </modifiers>
     </profile>
-    <profile name="Everyone! Ge’ In ‘ere!" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ad82-3c2d-6494-820e">
+    <profile name="Ge’ In Dere!" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ad82-3c2d-6494-820e">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is in engagement range of any enemy unit, your infantry units within 24” of this unit gain WAAAAGH!.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s End step, if this turn was not your second turn in a row, you may take another turn.</characteristic>
       </characteristics>
     </profile>
     <profile name="Dats Be’a" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8111-4d6b-4a50-773c">

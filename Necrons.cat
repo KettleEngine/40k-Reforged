@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="39" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1841-e935-15ec-c764" name="Necrons" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="40" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Gauss" id="b2e9-8420-cfb7-4bde" hidden="false">
       <description>For each attack made for this weapon, the Wound Roll for that attack is improved by 1, and the Saving Throw is worsened by 1.</description>
@@ -853,7 +853,7 @@ c) OPHYDIAN DESTROYERS</characteristic>
         <infoLink name="Fly" id="9b4f-26bc-356d-b646" hidden="false" type="rule" targetId="449b-2864-9b01-7476"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Harbinger of Awakening" hidden="false" id="0cc4-d5f6-d974-8b06" sortIndex="5">
+    <selectionEntry type="unit" import="true" name="Lord of Awakening" hidden="false" id="0cc4-d5f6-d974-8b06" sortIndex="5">
       <categoryLinks>
         <categoryLink name="Leaders" hidden="false" id="f6c4-2e43-a52e-123c" targetId="2886-2afd-f65f-9d8e" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="0b3e-23a8-f0e3-d38e" targetId="205c-3072-067b-d808" primary="false"/>
@@ -865,7 +865,7 @@ c) OPHYDIAN DESTROYERS</characteristic>
       <profiles>
         <profile name="Resurrection War Cell" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5e3d-538a-83ce-32d8">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may select any number of your WARRIORS or IMMORTALS units in reserves. Deploy it wholly within 6” of this unit and outside of engagement range of enemy models.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may select any number of your WARRIORS or IMMORTALS units in reserves. Deploy each of those units wholly within 6” of this unit and outside of engagement range of enemy models.</characteristic>
           </characteristics>
         </profile>
         <profile name="Leader" typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="5994-df5d-91e0-6fa8">
@@ -885,7 +885,7 @@ This unit uses a Necron Lord model.</characteristic>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Harbinger of Awakening" hidden="false" id="8c76-ca59-1232-63d8">
+        <selectionEntry type="model" import="true" name="Lord of Awakening" hidden="false" id="8c76-ca59-1232-63d8">
           <selectionEntryGroups>
             <selectionEntryGroup name="Weapon:" id="04d7-df3c-65b2-7c31" hidden="false" defaultSelectionEntryId="79f1-b3cc-46dc-3ed0">
               <selectionEntries>
@@ -955,7 +955,7 @@ This unit uses a Necron Lord model.</characteristic>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <profiles>
-            <profile name="Harbinger of Awakening" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="8c33-8a4a-23d5-e0e8">
+            <profile name="Lord of Awakening" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="8c33-8a4a-23d5-e0e8">
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
@@ -1709,8 +1709,7 @@ d) CRYPTOTHRALLS</characteristic>
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While other infantry units are within 1” of this unit, if this unit is visible to an active enemy unit and closer or equally distant to that enemy unit, those friendly leader units gain the following ability:
 
-
-Guarded: For each wound a model in this unit is selected to suffer, you may roll a D6. On a 5+, that attack fails.</characteristic>
+Guarded: After a model in this unit is selected to suffer a wound, roll a D6. On a 5+, the Saving Throw for that wound always succeeds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1777,8 +1776,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may rol
       <profiles>
         <profile name="Terrifying Carnage" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="a8ff-6aed-77e4-e4dc">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit destroys an enemy unit, all enemy units within 8” of and visible to this unit suffer 2D3 Suppression and this unit gains the following ability:
-
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit destroys an enemy unit, all enemy units within 8” of and visible to this unit suffer D3+1 Suppression and this unit gains the following ability:
 
 Escape Dimension: After any enemy unit&apos;s End step, you may remove this unit from the battlefield and place it into reserves. If you do, it loses this ability.</characteristic>
           </characteristics>
@@ -2518,7 +2516,7 @@ RELOCATE: You may reroll Move Rolls and Reposition Rolls made for this unit.</c
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated, select one of the following abilities. Then, this unit gains the selected ability until the End step:
 
-SOW TERROR: After this unit’s Move step, each enemy unit within engagement range of this unit suffers D3+1 Suppression.
+SOW TERROR: After this unit’s Move step, each enemy unit within 8” of this unit suffers 1+D3 Suppression.
 
 ISOLATE INTRUDER: For each melee attack this makes, that attack gains Isolate and Shred.</characteristic>
           </characteristics>
@@ -3024,7 +3022,7 @@ Relayed Targeting Data: Each time an enemy unit selects a target for a ranged 
         <infoLink name="Walker" id="ec38-44cd-f6d3-c8a4" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.1" hidden="false" id="b235-3066-1042-78ab" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="b235-3066-1042-78ab" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="af31-e70d-2c95-d601" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>

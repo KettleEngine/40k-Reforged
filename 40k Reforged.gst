@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="61" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="62" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -66,7 +66,6 @@
       <constraints>
         <constraint type="max" value="0" field="points" scope="roster" shared="true" id="57b7-ac0e-5d06-9ddb" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
-      <comment>basic one, some like guard have to have their own to acomidate units like master of ordinance</comment>
     </forceEntry>
   </forceEntries>
   <profileTypes>
@@ -169,17 +168,13 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Blast 5</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Rearm, Indirect, Blast 5</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="One Shot" id="79f0-68e7-00a6-83ee" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-        <infoLink name="Blast (X)" id="4c3e-854a-4e0b-96d3" hidden="false" type="rule" targetId="308a-e96e-90f7-855e">
-          <modifiers>
-            <modifier type="set" value="Blast (1)" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Blast (X)" id="4c3e-854a-4e0b-96d3" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
         <infoLink name="Indirect" id="4b39-975d-1afc-7737" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
@@ -192,7 +187,7 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Pierce</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Rearm, Indirect, Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -211,7 +206,7 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2D3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Rearm, Indirect</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -229,7 +224,7 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Velocity, Pierce</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Rearm, Velocity, Pierce</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -308,7 +303,7 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+4</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
@@ -404,7 +399,7 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+4</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
@@ -597,7 +592,7 @@
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Ignore Cover</characteristic>
@@ -683,16 +678,17 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">7</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">One Shot, Indirect, Pierce</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Rearm, Indirect, Blast 3, Suppressive 1</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="One Shot" id="c151-b4dc-feed-8b27" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
-        <infoLink name="Indirect" id="5e0f-0369-fdb1-32e0" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
-        <infoLink name="Pierce" id="c787-373e-c03d-4b2f" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+        <infoLink name="Suppressive (X)" id="5e0f-0369-fdb1-32e0" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+        <infoLink name="Indirect" id="f41f-5515-18eb-133f" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
+        <infoLink name="Blast (X)" id="9c15-faba-60ca-4178" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plasma Blaster" hidden="false" id="f4e1-5e30-78a3-2852">
@@ -781,7 +777,7 @@
             <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
             <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+            <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+4</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
           </characteristics>
         </profile>
@@ -981,7 +977,15 @@ After a unit with Transport with an embarked unit is destroyed, before removing 
       <description>After selecting the target for this weapon&apos;s attacks, roll 2D6. Then select all other enemy units within X” of the selected target, where X is the result of that roll. Also make attacks for this weapon targeting each of the selected units.</description>
     </rule>
     <rule name="Suppressive (X)" id="aed3-e154-8fa2-5378" hidden="false">
-      <description>If this unit is infantry, each time it selects targets for attacks, its controller must select a number of non-leader infantry models equal to X. You cannot select targets for those models&apos; weapons this turn.
+      <description>For each attack made for this weapon, after that attack wounds, the target unit suffers X Suppression.
+
+When a unit suffers Suppression, it must make a number of Resolve Tests equal to the value of that Suppression. For each failed Resolve Test, that unit gains Suppressed.
+
+To make a Resolve Test, roll a D6. If the result is equal to or greater than the unit’s Resolve (Rv) characteristic, the roll is successful.
+
+Suppressed X: For each Move Roll made for this unit, worsen that roll by X to a minimum of 1.
+
+If this unit is infantry, each time it selects targets for attacks, its controller must select a number of non-leader infantry models equal to X. You cannot select targets for those models&apos; weapons this turn.
 
 If this unit is infantry, after its End step, it loses Suppressed.
 
@@ -989,9 +993,11 @@ If this unit is a vehicle or monster, after its Move step, you may skip its Atta
 
 If this unit is a vehicle or monster, after its Attacks step, it suffers twice X SW and loses Suppressed.
 
+If this unit has Psyker, after this unit makes a Psychic Test, if any result on a dice in that Psychic Test was X, this unit suffers X SW.
+
 Each time this unit gains Suppressed while it already has Suppressed, increase X by 1, to a maximum of 6 (you can use a d6 to keep track)</description>
     </rule>
-    <rule name="One Shot" id="0c06-9eed-2a45-b772" hidden="false">
+    <rule name="Rearm" id="0c06-9eed-2a45-b772" hidden="false">
       <description>After making attacks for this weapon, you may not make attacks for it until you ‘reload’. To reload, the unit with this weapon must end its turn within your deployment zone during a battle round in which you didn’t make attacks for this weapon.</description>
     </rule>
     <rule name="Shuriken" id="c503-366d-25f8-01c0" hidden="false">
@@ -1035,6 +1041,15 @@ Each time this unit gains Suppressed while it already has Suppressed, increase X
 
 Stunned: After this unit Activates, if it has Suppressed X, roll a D6. If the result of that roll is less than the X of Suppressed X, this unit becomes ready and skip this turns’ Move and Attacks steps.</description>
     </rule>
+    <rule name="Critical Wounds X+" id="c751-8dab-2486-9a1b" hidden="false">
+      <description>For each attack made for this weapon, each Wound Roll of X+ for that attack causes an additional wound.</description>
+    </rule>
+    <rule name="Critical Hits X+" id="fff4-3f9d-5d2d-4cf9" hidden="false">
+      <description>For each attack made for this weapon, a Hit Roll of X+ for that attack causes an additional hit.</description>
+    </rule>
+    <rule name="Shield X+" id="a04b-6862-277b-8580" hidden="false">
+      <description>After the model with this weapon is selected to suffer a wound, roll a D6. On a 5+, the Saving Throw for that wound always succeeds.</description>
+    </rule>
   </sharedRules>
   <publications>
     <publication name="GitHub" id="f513-c3a0-5768-8dca" hidden="false" publisherUrl="https://github.com/KettleEngine/40k-Reforged"/>
@@ -1042,7 +1057,7 @@ Stunned: After this unit Activates, if it has Suppressed X, roll a D6. If the r
   <sharedProfiles>
     <profile name="Teleport Homer" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="77ce-0080-b298-0daa">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, you may use ‘teleport homer’. If you do, select one of your infantry units and roll D6+2. Then, Deploy this unit wholly within X” of the selected unit where X is the result of that roll. Then, during this turn&apos;s Move step, do not make a Move Roll and this unit cannot Advance or Reposition.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated in reserves, if it is not your second turn in a row, you may use ‘teleport homer’. If you do, select one of your infantry units without Teleport Homer and roll D6+2. Then, Deploy this unit wholly within X” of the selected unit where X is the result of that roll. Then, during this turn&apos;s Move step, do not make a Move Roll and this unit cannot Advance or Reposition.</characteristic>
       </characteristics>
     </profile>
     <profile name="Covering Fire" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="2415-711c-9ad6-01b3">

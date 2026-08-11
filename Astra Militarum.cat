@@ -135,7 +135,7 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Velocity, Breach, Pierce</characteristic>
           </characteristics>
@@ -971,6 +971,13 @@
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
+                <entryLink import="true" name="Lascannon" hidden="false" id="219d-c0e6-e9a5-fad5" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="8">
+                  <modifiers>
+                    <modifier type="prepend" value="Twin-Linked" field="name" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Vanquisher Cannon" hidden="false" id="c044-27a9-450d-fe50" sortIndex="6">
@@ -1073,7 +1080,7 @@
       <profiles>
         <profile name="Risky Stowage" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="6605-ab4b-a4d7-19c9">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">When this unit dies, roll 3D6 and discard the lowest. Each unit within 4” suffers SW equal to the result.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit dies, before removing it from the battlefield, roll 3D6 and discard the lowest result. Each unit within 4</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1776,7 +1783,7 @@
     </rule>
   </sharedRules>
   <selectionEntries>
-    <selectionEntry type="unit" import="true" name="Standard Bearer" hidden="false" id="7dde-b2e2-fb5b-2bf2">
+    <selectionEntry type="unit" import="true" name="Standard Bearer" hidden="false" id="7dde-b2e2-fb5b-2bf2" sortIndex="2">
       <costs>
         <cost name="pts" typeId="points" value="10"/>
       </costs>
@@ -1796,7 +1803,7 @@
 a) CADIAN PLATOON COMMANDER
 b) DEATH KORPS PLATOON COMMANDER
 c) MORDIAN PLATOON COMMANDER
-One and only one STANDARD BEARER unit may attach to any one unit.
+Only one STANDARD BEARER unit may attach to any one unit
 This unit does not count towards the leader maximum of the army list.</characteristic>
           </characteristics>
         </profile>
@@ -1807,17 +1814,6 @@ This unit does not count towards the leader maximum of the army list.</character
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1926-eb29-91c9-49ac-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1926-eb29-91c9-49ac-max" includeChildSelections="false"/>
           </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Laspistol" hidden="false" id="643e-7d1e-356c-4526" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1084-c42a-aaa9-ca3d-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1084-c42a-aaa9-ca3d-max" includeChildSelections="false"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
           <profiles>
             <profile name="Standard Bearer" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="e7b0-56ef-0ee0-2388">
               <characteristics>
@@ -1828,10 +1824,26 @@ This unit does not count towards the leader maximum of the army list.</character
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Gun" id="11c9-b55c-e77f-5223" hidden="false" defaultSelectionEntryId="1007-a0b7-52b3-a032">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="48e5-079c-14c4-2c0f" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8741-0caf-f5aa-eb60" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Lasgun" hidden="false" id="ea55-faaf-c6b8-f3a0" type="selectionEntry" targetId="0b54-6ba9-f583-4b19"/>
+                <entryLink import="true" name="Laspistol" hidden="false" id="0bfe-ac83-22a2-0dfa" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea">
+                  <modifiers>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Master Vox Operator" hidden="false" id="f58d-87f6-b14c-600d">
+    <selectionEntry type="unit" import="true" name="Master Vox Operator" hidden="false" id="f58d-87f6-b14c-600d" sortIndex="1">
       <costs>
         <cost name="pts" typeId="points" value="10"/>
       </costs>
@@ -1874,26 +1886,21 @@ This unit does not count towards the leader maximum of the army list</characteri
               </characteristics>
             </profile>
           </profiles>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Gun" id="0c8b-152d-06f4-5624" hidden="false" defaultSelectionEntryId="1007-a0b7-52b3-a032">
+          <entryLinks>
+            <entryLink import="true" name="Laspistol" hidden="false" id="643e-7d1e-356c-4526" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5fcc-5619-81f4-0c6f-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5fcc-5619-81f4-0c6f-max" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1084-c42a-aaa9-ca3d-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1084-c42a-aaa9-ca3d-max" includeChildSelections="false"/>
               </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Lasgun" hidden="false" id="1007-a0b7-52b3-a032" type="selectionEntry" targetId="0b54-6ba9-f583-4b19"/>
-                <entryLink import="true" name="Laspistol" hidden="false" id="15c4-c92c-4277-5f8d" type="selectionEntry" targetId="c7f1-1050-a6b5-63ea">
-                  <modifiers>
-                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+              <modifiers>
+                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Bodyguard" hidden="false" id="7f11-bc81-0039-49de">
+    <selectionEntry type="upgrade" import="true" name="Bodyguard" hidden="false" id="7f11-bc81-0039-49de" sortIndex="4">
       <costs>
         <cost name="pts" typeId="points" value="10"/>
       </costs>
@@ -1990,7 +1997,7 @@ This unit does not count towards the leader maximum of the army list.</character
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Medic" hidden="false" id="50d6-0833-a909-dd84">
+    <selectionEntry type="upgrade" import="true" name="Medic" hidden="false" id="50d6-0833-a909-dd84" sortIndex="3">
       <costs>
         <cost name="pts" typeId="points" value="10"/>
       </costs>
@@ -2013,7 +2020,7 @@ Medical Supplies: After this unit’s Move step, select an infantry unit withi
 a) CADIAN PLATOON COMMANDER
 b) DEATH KORPS PLATOON COMMANDER
 c) MORDIAN PLATOON COMMANDER
-One and only one MEDIC unit may attach to any one unit.
+Only one MEDIC unit may attach to any one unit.
 This unit does not count towards the leader maximum of the army list.</characteristic>
           </characteristics>
         </profile>
@@ -2053,7 +2060,7 @@ This unit does not count towards the leader maximum of the army list.</character
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Weapons Specialist" hidden="false" id="ab9c-13e1-4efe-bb79">
+    <selectionEntry type="upgrade" import="true" name="Weapons Specialist" hidden="false" id="ab9c-13e1-4efe-bb79" sortIndex="5">
       <costs>
         <cost name="pts" typeId="points" value="10"/>
       </costs>
@@ -2126,7 +2133,7 @@ This unit does not count towards the leader maximum of the army list.</character
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Master of Ordnance" hidden="false" id="75ca-3292-ce3c-933e">
+    <selectionEntry type="unit" import="true" name="Master of Ordnance" hidden="false" id="75ca-3292-ce3c-933e" sortIndex="6">
       <costs>
         <cost name="pts" typeId="points" value="10"/>
       </costs>
@@ -2141,7 +2148,8 @@ This unit does not count towards the leader maximum of the army list.</character
 a) CADIAN PLATOON COMMANDER
 b) DEATH KORPS PLATOON COMMANDER
 c) MORDIAN PLATOON COMMANDER
-This unit does not count towards the leader maximum of the army list.</characteristic>
+This unit does not count towards the leader maximum of the army list.
+Only one MASTER OF ORDNANCE unit may attach to any one unit.</characteristic>
           </characteristics>
         </profile>
         <profile name="Artillery Expert" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f2f6-2d69-eba5-49d7">
@@ -2182,7 +2190,7 @@ Range Finders: While enemy units are visible to this unit, each time you roll 2
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Officer of the Fleet" hidden="false" id="7b9c-0f95-64b8-19ec">
+    <selectionEntry type="unit" import="true" name="Officer of the Fleet" hidden="false" id="7b9c-0f95-64b8-19ec" sortIndex="7">
       <costs>
         <cost name="pts" typeId="points" value="10"/>
       </costs>
@@ -2198,7 +2206,8 @@ Range Finders: While enemy units are visible to this unit, each time you roll 2
 a) CADIAN PLATOON COMMANDER
 b) DEATH KORPS PLATOON COMMANDER
 c) MORDIAN PLATOON COMMANDER
-This unit does not count towards the leader maximum of the army list.</characteristic>
+This unit does not count towards the leader maximum of the army list.
+Only one OFFICER OF THE FLEET unit may attach to any one unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2236,7 +2245,7 @@ This unit does not count towards the leader maximum of the army list.</character
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Astropath" hidden="false" id="cf4c-6bec-10c3-511e">
+    <selectionEntry type="unit" import="true" name="Astropath" hidden="false" id="cf4c-6bec-10c3-511e" sortIndex="8">
       <costs>
         <cost name="pts" typeId="points" value="10"/>
       </costs>
@@ -2251,7 +2260,8 @@ This unit does not count towards the leader maximum of the army list.</character
 a) CADIAN PLATOON COMMANDER
 b) DEATH KORPS PLATOON COMMANDER
 c) MORDIAN PLATOON COMMANDER
-This unit does not count towards the leader maximum of the army list.</characteristic>
+This unit does not count towards the leader maximum of the army list.
+Only one ASTROPATH unit may attach to any one unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2316,7 +2326,7 @@ This unit does not count towards the leader maximum of the army list.</character
         </infoLink>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Primaris Psyker" hidden="false" id="fe7e-e483-e114-9b68">
+    <selectionEntry type="unit" import="true" name="Primaris Psyker" hidden="false" id="fe7e-e483-e114-9b68" sortIndex="9">
       <costs>
         <cost name="pts" typeId="points" value="20"/>
       </costs>
@@ -2433,7 +2443,7 @@ This unit may only Cast psychic powers from the ‘Psychic Powers of the Battle 
         </infoLink>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Tank Commander" hidden="false" id="a272-0554-6a79-2895">
+    <selectionEntry type="unit" import="true" name="Tank Commander" hidden="false" id="a272-0554-6a79-2895" sortIndex="10">
       <costs>
         <cost name="pts" typeId="points" value="140"/>
       </costs>
@@ -2455,11 +2465,9 @@ This unit may only Cast psychic powers from the ‘Psychic Powers of the Battle 
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After you Activate another Astra Militarum vehicle within 24”, that unit may gain one of the following abilities. If it already has one of these abilities, select one of those abilities and it loses the other:
 
-
 Pin Them Down: Each of this unit’s ranged weapons gains Suppressive X where X is equal to the D of that weapon. For each ranged attack this unit makes, the Hit Roll for that attack is worsened by 1. After the End step, this unit loses this ability.
 
-
-Grinding Treads: After this unit’s Move step, you may select an enemy unit within the engagement range of this unit. The select unit suffers SW equal to this unit’s Toughness.</characteristic>
+Grinding Treads: After this unit’s Move step, you may select an enemy unit within the engagement range of this unit. The selected unit suffers X+2 SW where X is equal to this unit’s Toughness.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2618,6 +2626,13 @@ Grinding Treads: After this unit’s Move step, you may select an enemy unit w
                   <modifiers>
                     <modifier type="prepend" value="Twin-Linked" field="name" affects="profiles.Weapon"/>
                     <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Lascannon" hidden="false" id="b145-41bc-2c4a-8609" type="selectionEntry" targetId="54fc-ac08-3927-692d" sortIndex="8">
+                  <modifiers>
+                    <modifier type="prepend" value="Twin-Linked" field="name" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
@@ -3454,7 +3469,7 @@ This unit does not count towards the leader capacity of your army list.</charact
         <categoryLink name="Infantry" hidden="false" id="dd42-1b6f-8c9e-7924" targetId="205c-3072-067b-d808" primary="false"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="ad54-8299-230f-f22c" sortIndex="2">
+    <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="ad54-8299-230f-f22c" sortIndex="-2">
       <categoryLinks>
         <categoryLink targetId="9cd6-0442-3f35-6b52" id="ef7b-dfd1-05e3-67c3" primary="true" name="Configuration"/>
       </categoryLinks>
@@ -3527,7 +3542,7 @@ Aim There!: For each ranged attack this unit makes, add 1 to the Hit Roll of th
         <infoLink name="Indirect" id="d4e8-ed5e-dc8a-fedc" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.2" hidden="false" id="49b5-96a5-b9d7-555d" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="49b5-96a5-b9d7-555d" sortIndex="-1">
       <categoryLinks>
         <categoryLink targetId="9cd6-0442-3f35-6b52" id="48db-a12b-9852-f558" primary="true" name="Configuration"/>
       </categoryLinks>

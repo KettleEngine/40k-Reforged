@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="39" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="149d-ebd0-bba9-e9df" name="CSM Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="15" revision="40" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
   </catalogueLinks>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.3" hidden="false" id="5b84-0185-eb47-6988" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="5b84-0185-eb47-6988" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="720c-bc09-1d72-2cf0" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -115,7 +115,7 @@
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">1+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
           </characteristics>
@@ -259,7 +259,7 @@ Once per turn, after a successful Wound Roll for an attack made for this weapon
         </profile>
         <profile name="3 Hindering Mecha-Serpents" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="true" id="772f-e68a-8f51-8a10">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit&apos;s Move step, select one enemy unit within 16&quot; of and visible to this unit. That unit suffers 3D6+8 Suppression, and gains the following ability:
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit&apos;s Move step, select one enemy unit within 16&quot; of and visible to this unit. That unit suffers D6+3 Suppression, and gains the following ability:
 
 Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll. If this unit does not have Suppressed, it loses this ability.</characteristic>
           </characteristics>
@@ -300,7 +300,7 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
         </profile>
         <profile name="6 Bereft of Mercy" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="true" id="6835-d6ca-cd7d-647e">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Attacks step, if any enemy models in a unit with Suppressed X within engagement range of this unit died this turn, each enemy unit within 12&quot; of and visible to that enemy unit suffers X Suppression. After an enemy unit with Suppressed X within engagement range of this unit is destroyed by an attack made for this unit, each enemy unit within 24&quot; of this unit suffers X Suppression.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Attacks step, if any enemy models in a unit with Suppressed X within engagement range of this unit died this turn, each enemy unit within 12&quot; of and visible to that enemy unit suffers X Suppression. After an enemy unit with Suppressed X within engagement range of this unit is destroyed by an attack made for this unit, each enemy unit within 12&quot; of this unit suffers 2 Suppression.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -313,7 +313,7 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
         </profile>
         <profile name="5 Talons of the Night Terror" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="true" id="c8b9-7071-aa05-ca47">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit&apos;s Move step, each enemy infantry unit within engagement range of this unit suffers 2D3 Suppression. Then, for each enemy unit within engagement range of this unit, that unit suffers X SW where X is equal to that unit&apos;s Suppressed X.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit&apos;s Move step, roll 1+D3. Then, all enemy infantry units within engagement range of this unit suffer X Suppression and X SW where X is equal to that roll.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -326,7 +326,7 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
         </profile>
         <profile name="4 Vox Daemonicus" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="true" id="a6d6-229f-a5e4-512a">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">Select a visible enemy unit within 8” and roll 3D3. That roll is X. Then, select a second enemy unit within X&quot; of and visible to the first, and a third within X&quot; of and visible to the second, and so on for any number of enemy units. Each enemy unit can only be selected once, and you can stop selecting at any time. Then, each selected unit suffers D3+2 Suppression.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">Select a visible enemy unit within 8” and roll 3D3. That roll is X. Then, select a second enemy unit within X&quot; of and visible to the first, and a third within X&quot; of and visible to the second, and so on for any number of enemy units. Each enemy unit can only be selected once, and you can stop selecting at any time. Then, each selected unit suffers 2 Suppression.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -435,7 +435,7 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
         </profile>
         <profile name="2 Hydra&apos;s Wail" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="true" id="f0ed-f4d6-39b1-b78d">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Move step, select an enemy unit visible to and within 12” of this unit. Each other enemy unit visible to that enemy unit suffers D6+6 Suppression.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After this unit’s Move step, select an enemy unit visible to and within 12” of this unit. Each other enemy unit visible to that enemy unit suffers D6+2 Suppression.</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
@@ -1175,9 +1175,9 @@ Breach, For each attack made for this weapon, that attack’s S is 1 higher tha
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Attacks step, select an enemy unit with Suppressed X within engagement range of this unit. Then, select one of the following abilities and the selected unit gains it until the End step:
 
-Terrifying Display: After a unit gains this ability, if one or more models from this unit died this turn, each friendly unit within 12” of and visible to this unit suffers X Suppression where X is equal to this unit&apos;s Suppressed X.
+Terrifying Display: After a unit gains this ability, if one or more models from this unit died this turn, each friendly unit within 12” of and visible to this unit suffers 2 Suppression.
 
-Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is equal to this unit&apos;s Suppressed X.</characteristic>
+Vicious Murder: After a unit gains this ability, it suffers X+D3 SW where X is equal to this unit&apos;s Suppressed X.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1395,7 +1395,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                                         <characteristic name="WS" typeId="459f-6890-e77f-b62f">-</characteristic>
                                         <characteristic name="S" typeId="571c-0471-2614-c57c">-</characteristic>
                                         <characteristic name="D" typeId="c2c0-3714-05e2-65a0">-</characteristic>
-                                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Move step, each enemy unit within 8” of and visible to this unit suffers 2D3 Suppression.</characteristic>
+                                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">After this unit’s Move step, each enemy unit within 8” of and visible to this unit suffers 2 Suppression.</characteristic>
                                       </characteristics>
                                     </profile>
                                   </profiles>
@@ -1894,7 +1894,7 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
                             <modifierGroup type="and">
                               <modifiers>
                                 <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                               </modifiers>
                             </modifierGroup>
                           </modifierGroups>
@@ -1985,9 +1985,13 @@ Vicious Murder: After a unit gains this ability, it suffers X+2D3 SW where X is 
       <profiles>
         <profile name="The Long War" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="true" id="7c2b-9a38-732a-9d20">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After rolling for initiative during battle round 1, select one enemy unit. That enemy unit gains Abaddon’s Contempt. After rolling for initiative during battle round 2, select a vault at random. Then, after any battle round, if you have two or more units within 4” of that vault, all enemy units gain Abaddon&apos;s Contempt for the rest of the battle.
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After rolling for initiative during battle round 1, select one enemy unit. That enemy unit and all enemy units of the same name gain
 
-Abaddon&apos;s Contempt: For each attack made by a Chaos Space Marines unit that targets this unit, a Hit Roll of 6 for that attack causes an additional hit.</characteristic>
+
+Abaddon’s Contempt. After rolling for initiative during battle round 2, select a vault at random. For the rest of the battle, after any of your unit’s capture that vault, all enemy units gain Abaddon&apos;s Contempt for the rest of the battle.
+
+
+Abaddon&apos;s Contempt: For each attack made by a Chaos Space Marines unit that targets this unit, that attack gains Critical Hit 6+.</characteristic>
           </characteristics>
           <comment>Black Legion</comment>
           <modifiers>
@@ -2050,26 +2054,11 @@ Abaddon&apos;s Contempt: For each attack made by a Chaos Space Marines unit tha
             </modifier>
           </modifiers>
         </profile>
-        <profile name="The Long War" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="true" id="66ed-9168-4359-79af">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After rolling for initiative during battle round 1, select one enemy unit. That enemy unit gains Abaddon’s Contempt. After rolling for initiative during battle round 2, select a vault at random. Then, after any battle round, if you have two or more units within 4” of that vault, all enemy units gain Abaddon&apos;s Contempt for the rest of the battle.
-
-Abaddon&apos;s Contempt: For each attack made by a Chaos Space Marines unit that targets this unit, a Hit Roll of 6 for that attack causes an additional hit.</characteristic>
-          </characteristics>
-          <comment>Black Legion</comment>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="4664-cd3f-b95b-a458" shared="true" includeChildSelections="true" childName="Black Legion"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
         <profile name="Terror Tactics" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="true" id="8f95-fe43-cd0c-e0eb">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your units are within 24&quot; of this unit, those units gain the following abilities: 
 
-We Bring The Night: After this unit is Activated, select an enemy unit not visible to this unit. Once this turn, after this unit finishes a Pile In within engagement range of that unit this turn, that unit suffers 3+2D3 Suppression.
+We Bring The Night: After this unit is Activated, select an enemy unit not visible to this unit. Once this turn, after this unit finishes a Pile In within engagement range of that unit this turn, that unit suffers 2D3 Suppression.
 
 Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.</characteristic>
           </characteristics>
@@ -2123,11 +2112,11 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Isolate" id="a1e2-b428-8f33-f272" hidden="true" type="rule" targetId="db97-d77e-4392-6f10">
+        <infoLink name="Critical Hits X+" id="a1e2-b428-8f33-f272" hidden="true" type="rule" targetId="fff4-3f9d-5d2d-4cf9">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="force" childId="1fa8-6666-7875-be1b" shared="true" includeChildSelections="true" childName="Night Lords"/>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="4664-cd3f-b95b-a458" shared="true" includeChildSelections="true" childName="Black Legion"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2146,6 +2135,15 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="27b0-cf36-cd17-73c6" shared="true" includeChildSelections="true" childName="Iron Warriors"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Isolate" id="c05e-9d9e-1398-ad33" hidden="true" type="rule" targetId="db97-d77e-4392-6f10">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="1fa8-6666-7875-be1b" shared="true" includeChildSelections="true" childName="Night Lords"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2900,7 +2898,7 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                       <entryLinks>
                         <entryLink import="true" name="Lightning Claw" hidden="false" id="dc77-89e0-84e9-2fa6" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
                           <modifiers>
-                            <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                           <constraints>
@@ -3296,7 +3294,7 @@ Cruel Ambush: Each melee weapon equipped to models in this unit gains Isolate.
                   </constraints>
                   <modifiers>
                     <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                   </modifiers>
                 </entryLink>
               </entryLinks>
@@ -3532,13 +3530,13 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                             </entryLink>
                           </entryLinks>
                         </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="fa15-4561-2e81-db1f" sortIndex="2">
+                        <selectionEntry type="upgrade" import="true" name="Grav Pistol" hidden="false" id="fa15-4561-2e81-db1f" sortIndex="2">
                           <entryLinks>
-                            <entryLink import="true" name="Bolt Pistol" hidden="false" id="f9da-6178-cd02-4d8d" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+                            <entryLink import="true" name="Grav Pistol" hidden="false" id="f9da-6178-cd02-4d8d" type="selectionEntry" targetId="aeca-017c-7dcb-cf9e">
                               <modifierGroups>
                                 <modifierGroup type="and">
                                   <modifiers>
-                                    <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                     <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
                                 </modifierGroup>
@@ -3548,6 +3546,65 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0d1-ece8-5658-106b-max" includeChildSelections="false"/>
                                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c62-6dfb-ef01-abe8-min" includeChildSelections="false"/>
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c62-6dfb-ef01-abe8-max" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="a53a-9f03-44f1-4037" sortIndex="4">
+                          <entryLinks>
+                            <entryLink import="true" name="Bolt Pistol" hidden="false" id="b77f-368a-d63f-a7be" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+                              <modifierGroups>
+                                <modifierGroup type="and">
+                                  <modifiers>
+                                    <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </modifierGroup>
+                              </modifierGroups>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a165-2843-76ea-851a" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6cf6-a1a5-9ce5-e0e4" includeChildSelections="false"/>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0647-07a9-18ce-7757" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="134e-68b2-3ec7-42ca" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Flamer Pistol" hidden="false" id="21b4-8347-d062-d627" sortIndex="3">
+                          <entryLinks>
+                            <entryLink import="true" name="Flamer Pistol" hidden="false" id="abe3-2109-3aa5-52cb" type="selectionEntry" targetId="6ba7-fe2b-ac9d-446c">
+                              <modifierGroups>
+                                <modifierGroup type="and">
+                                  <modifiers>
+                                    <modifier type="set" value="18" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </modifierGroup>
+                              </modifierGroups>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db9e-eb5f-429c-ff72" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="995b-2fe0-77a6-5809" includeChildSelections="false"/>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="84b6-7822-c9b6-f856" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c8a3-223f-ecb2-f3d6" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Inferno Pistol" hidden="false" id="c473-9126-02b4-80bf" sortIndex="5">
+                          <entryLinks>
+                            <entryLink import="true" name="Inferno Pistol " hidden="false" id="a1ba-862d-3343-ca5d" type="selectionEntry" targetId="cddf-3a99-f266-f50a">
+                              <modifierGroups>
+                                <modifierGroup type="and">
+                                  <modifiers>
+                                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </modifierGroup>
+                              </modifierGroups>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="22cf-5ec6-ef95-dafa" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e8d-d6c9-46f9-cbeb" includeChildSelections="false"/>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2507-db45-1bc5-46b9" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0428-0664-8da8-c1f1" includeChildSelections="false"/>
                               </constraints>
                             </entryLink>
                           </entryLinks>
@@ -3620,7 +3677,7 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                               <modifierGroups>
                                 <modifierGroup type="and">
                                   <modifiers>
-                                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                     <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
                                 </modifierGroup>
@@ -3678,7 +3735,7 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                       <modifierGroups>
                         <modifierGroup type="and">
                           <modifiers>
-                            <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </modifierGroup>
@@ -3780,7 +3837,7 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                   <entryLinks>
                     <entryLink import="true" name="Lightning Claw" hidden="false" id="bc24-c167-4790-47f0" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
                       <modifiers>
-                        <modifier type="set" value="16" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
@@ -3893,7 +3950,7 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dbd0-2374-6b0e-f059" includeChildSelections="false"/>
                       </constraints>
                       <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Daemon Hammer" hidden="false" id="71b9-5d0d-303d-bdb1" sortIndex="1">
+                        <selectionEntry type="upgrade" import="true" name="Daemon Hammer" hidden="false" id="71b9-5d0d-303d-bdb1" sortIndex="3">
                           <entryLinks>
                             <entryLink import="true" name="Daemon Hammer" hidden="false" id="750e-08de-8e0b-60b4" type="selectionEntry" targetId="ea6e-1dec-e154-a575">
                               <modifiers>
@@ -3907,7 +3964,7 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                             </entryLink>
                           </entryLinks>
                         </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Power Sword" hidden="false" id="2e40-db78-8cbe-ca06" sortIndex="2">
+                        <selectionEntry type="upgrade" import="true" name="Power Sword" hidden="false" id="2e40-db78-8cbe-ca06" sortIndex="1">
                           <entryLinks>
                             <entryLink import="true" name="Power Weapon" hidden="false" id="c6a9-f0a9-cc7e-8d10" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
                               <modifiers>
@@ -3921,7 +3978,7 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                             </entryLink>
                           </entryLinks>
                         </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Power Fist" hidden="false" id="4de9-f3f3-6c42-202c" sortIndex="3">
+                        <selectionEntry type="upgrade" import="true" name="Power Fist" hidden="false" id="4de9-f3f3-6c42-202c" sortIndex="2">
                           <entryLinks>
                             <entryLink import="true" name="Power Fist" hidden="false" id="9471-9da7-22d2-070e" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d">
                               <modifiers>
@@ -3935,16 +3992,44 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                             </entryLink>
                           </entryLinks>
                         </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Lightning Claw" hidden="false" id="326e-dfd8-4866-9e68" sortIndex="4">
+                        <selectionEntry type="upgrade" import="true" name="Chainfist" hidden="false" id="326e-dfd8-4866-9e68" sortIndex="4">
                           <entryLinks>
-                            <entryLink import="true" name="Lightning Claw" hidden="false" id="fb06-005a-c87d-ac05" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
+                            <entryLink import="true" name="Chainfist" hidden="false" id="fb06-005a-c87d-ac05" type="selectionEntry" targetId="ad98-4b41-0c98-aa4e">
                               <modifiers>
-                                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
                               <constraints>
                                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db05-5214-9c6b-1da1" includeChildSelections="false"/>
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="99a4-9329-ae3d-05ec" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Lightning Claw" hidden="false" id="9cb9-fb2d-4869-c35d" sortIndex="6">
+                          <entryLinks>
+                            <entryLink import="true" name="Lightning Claw" hidden="false" id="6e99-f5b9-023d-5f91" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
+                              <modifiers>
+                                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f770-82d3-8b95-0cdf" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f2a-1b06-7e69-3299" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Chainblade" hidden="false" id="64c3-9528-0a8d-1edb" sortIndex="5">
+                          <entryLinks>
+                            <entryLink import="true" name="Chainfist" hidden="false" id="b5ff-c4ab-c466-1bdd" type="selectionEntry" targetId="ad98-4b41-0c98-aa4e">
+                              <modifiers>
+                                <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eb07-6c17-f6a4-ceaf" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="561c-eb99-571d-2420" includeChildSelections="false"/>
                               </constraints>
                             </entryLink>
                           </entryLinks>
@@ -5613,37 +5698,8 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Havoc Launcher" hidden="false" id="2ea6-6946-9ee9-ba49" type="selectionEntry" targetId="a40b-783e-4918-5f3a">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ec8b-b865-4cb3-35d1-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec8b-b865-4cb3-35d1-max" includeChildSelections="false"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-              </modifiers>
-            </entryLink>
             <entryLink import="true" name="Dozer Spikes " hidden="false" id="3569-5ab5-e8e9-b056" type="selectionEntry" targetId="6a0c-882e-a0e2-f1a1"/>
           </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Combi-Bolter " hidden="false" id="41f8-7cf6-a76a-f71b">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4d02-7a9f-cf4f-c292-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d02-7a9f-cf4f-c292-max" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Combi-Bolter " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="108e-8451-6331-a46b">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">22</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
           <profiles>
             <profile name="Rhino" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="afed-d2cf-1e9f-a994">
               <characteristics>
@@ -5654,6 +5710,37 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Gun" id="2c32-5aec-0e70-57de" hidden="false" defaultSelectionEntryId="2ea6-6946-9ee9-ba49">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Combi-Bolter " hidden="false" id="41f8-7cf6-a76a-f71b">
+                  <profiles>
+                    <profile name="Combi-Bolter " typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="108e-8451-6331-a46b">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">22</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <entryLinks>
+                <entryLink import="true" name="Havoc Launcher" hidden="false" id="2ea6-6946-9ee9-ba49" type="selectionEntry" targetId="a40b-783e-4918-5f3a">
+                  <modifiers>
+                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c7c1-5649-8fab-984b-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c7c1-5649-8fab-984b-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -6817,177 +6904,6 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Predator" hidden="false" id="9173-8b2c-7c1d-1dbd" sortIndex="22">
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="fd1b-79b5-e38a-e10e" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-        <categoryLink name="Support" hidden="false" id="0f36-40ce-c8be-b8d3" targetId="ccc6-6202-853c-23e4" primary="true"/>
-        <categoryLink targetId="f809-9826-f58a-6b8d" id="b6be-9a74-b7b0-18b2" primary="false" name="Chaos"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="120"/>
-      </costs>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Predator" hidden="false" id="b724-9b69-e279-d3ab">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5dc8-31fd-3584-3669" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e7d-1c4f-f13a-72a8" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Dozer Spikes " hidden="false" id="2478-3626-b03c-fbb8" type="selectionEntry" targetId="6a0c-882e-a0e2-f1a1"/>
-          </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Sponson" id="358f-be3b-9c80-b935" hidden="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="31c1-1f2a-f6bd-8d6d" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Heavy Bolter" hidden="false" id="34e9-dc33-bff5-8681">
-                  <entryLinks>
-                    <entryLink import="true" name="Heavy Bolter" hidden="false" id="cbe7-eaf0-9788-b6f1" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-                      <modifiers>
-                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="13" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="prepend" value="Sponson" field="name"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9575-1403-ba6d-b3da-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9575-1403-ba6d-b3da-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="20"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Lascannon" hidden="false" id="afb7-b818-f669-5d90">
-                  <costs>
-                    <cost name="pts" typeId="points" value="20"/>
-                  </costs>
-                  <entryLinks>
-                    <entryLink import="true" name="Lascannon" hidden="false" id="3fb9-cd8b-ac14-be84" type="selectionEntry" targetId="54fc-ac08-3927-692d">
-                      <modifiers>
-                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                        <modifier type="prepend" value="Sponson" field="name"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e77-cfed-d3f8-9ab9-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e77-cfed-d3f8-9ab9-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Turret" id="856d-7dee-68bd-2649" hidden="false">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0bd3-59e3-ad37-73bf" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="774f-b54b-8427-e162" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Predator Autocannon" hidden="false" id="5d6e-a109-8ac3-f959" sortIndex="1">
-                  <profiles>
-                    <profile name="Predator Autocannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ae5c-a1c3-b94a-e677">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 2</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Suppressive (X)" id="3e09-b8bf-0540-85a0" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Predator Twin Lascannon" hidden="false" id="3ac8-039f-3120-d76e" sortIndex="2">
-                  <profiles>
-                    <profile name="Predator Twin Lascannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4702-7bbc-8d87-bb8f">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Breach" id="df88-2b3d-5833-311b" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Predator Twin Plasmacannon" hidden="false" id="ea36-a9a8-74ba-90bf" sortIndex="3">
-                  <profiles>
-                    <profile name="Predator Twin Plasmacannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="70d3-ae4b-2d9e-c17e">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">13</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge, Pierce</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Pierce" id="4d7c-3c59-df4f-5f1d" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-                    <infoLink name="Overcharge" id="7686-1e43-b314-f651" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
-                  </infoLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Pintle" id="eb68-0c88-f9ad-c76e" hidden="false" defaultSelectionEntryId="9091-7a51-b67f-b902">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="df43-9034-6424-4f38" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b4f-2e07-7e17-dd57" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Combi-Bolter" hidden="false" id="9091-7a51-b67f-b902">
-                  <profiles>
-                    <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6d40-939c-44d4-4c66">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Havoc Launcher" hidden="false" id="af81-ae99-f13d-5e15">
-                  <entryLinks>
-                    <entryLink import="true" name="Havoc Launcher" hidden="false" id="f2d9-4405-f41c-296a" type="selectionEntry" targetId="a40b-783e-4918-5f3a">
-                      <modifiers>
-                        <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8aff-eaa7-b42c-9bdc-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8aff-eaa7-b42c-9bdc-max" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <profiles>
-            <profile name="Predator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="267e-7ad6-f7be-1785">
-              <characteristics>
-                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
-                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">11</characteristic>
-                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntry>
     <selectionEntry type="unit" import="true" name="Wardog" hidden="false" id="acb0-c72d-4022-5cc3" sortIndex="24">
       <categoryLinks>
         <categoryLink targetId="ccc6-6202-853c-23e4" id="fef1-bc4b-a8f7-b037" primary="true" name="Support"/>
@@ -7014,45 +6930,6 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
             </profile>
           </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Left Gun" id="eb2f-0431-8415-6e1b" hidden="false" defaultSelectionEntryId="f029-49e3-b6a6-3a29">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a615-2ac7-4506-62fb-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a615-2ac7-4506-62fb-max" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Reaper Chaintalon" hidden="false" id="37af-255a-3fdd-4fa1" sortIndex="2">
-                  <profiles>
-                    <profile name="Reaper Chaintalon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="cfa7-ee3d-f30c-96c0">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Shred" id="b628-cde8-42e7-fc10" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Slaughter Claw" hidden="false" id="f029-49e3-b6a6-3a29" sortIndex="1">
-                  <profiles>
-                    <profile name="Slaughter Claw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7151-6fad-65aa-9e9a">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Once per turn, after an attack made by this weapon successfully wounds, select up to one enemy unit within 12” of and visible to this unit. The selected unit suffers XD3 SW where X is equal to the toughness of the unit that attack targeted.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
             <selectionEntryGroup name="Aux Gun" id="9d51-822f-b9e0-d070" hidden="false" defaultSelectionEntryId="c84c-bf4e-994f-b126">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5188-0038-547b-f7dc-max" includeChildSelections="false"/>
@@ -7095,13 +6972,44 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Right Gun" id="feca-45a4-cc3d-cedd" hidden="false" defaultSelectionEntryId="6391-5e69-4b51-37c8">
+            <selectionEntryGroup name="Arms" id="4ddc-6da7-f47e-c155" hidden="false" defaultSelectionEntryId="37af-255a-3fdd-4fa1">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e895-fcb8-59a4-346f-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e895-fcb8-59a4-346f-max" includeChildSelections="false"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="b307-7998-8420-d60d-min" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b307-7998-8420-d60d-max" includeChildSelections="false"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Daemonbreath Spear" hidden="false" id="6391-5e69-4b51-37c8" sortIndex="1">
+                <selectionEntry type="upgrade" import="true" name="Slaughter Claw" hidden="false" id="f029-49e3-b6a6-3a29" sortIndex="2">
+                  <profiles>
+                    <profile name="Slaughter Claw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="7151-6fad-65aa-9e9a">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Once per turn, after an attack made by this weapon successfully wounds, select up to one enemy unit within 12” of and visible to this unit. The selected unit suffers XD3 SW where X is equal to the toughness of the unit that attack targeted.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Reaper Chaintalon" hidden="false" id="37af-255a-3fdd-4fa1" sortIndex="1">
+                  <profiles>
+                    <profile name="Reaper Chaintalon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="cfa7-ee3d-f30c-96c0">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Shred" id="b628-cde8-42e7-fc10" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Daemonbreath Spear" hidden="false" id="6391-5e69-4b51-37c8" sortIndex="3">
                   <profiles>
                     <profile name="Daemonbreath Spear" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="29ff-03b1-877d-ef01">
                       <characteristics>
@@ -7118,7 +7026,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                     <infoLink name="Pierce" id="50b2-3a79-3af7-590a" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Avenger Chaincannon" hidden="false" id="962f-083d-83a9-b8a7" sortIndex="2">
+                <selectionEntry type="upgrade" import="true" name="Avenger Chaincannon" hidden="false" id="962f-083d-83a9-b8a7" sortIndex="4">
                   <profiles>
                     <profile name="Avenger Chaincannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="6523-f5fe-f185-be33">
                       <characteristics>
@@ -7245,7 +7153,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
         <categoryLink targetId="f809-9826-f58a-6b8d" id="5a26-d268-ef56-adae" primary="false" name="Chaos"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="150"/>
+        <cost name="pts" typeId="points" value="160"/>
       </costs>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Forgefiend" hidden="false" id="ed2e-db6e-2483-1e7b">
@@ -7258,33 +7166,13 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">5</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">8</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">9</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
               </characteristics>
             </profile>
           </profiles>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Daemonic Jaws" hidden="false" id="b1b9-6f39-2fe6-59df">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3cc5-f86a-150e-3efb-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3cc5-f86a-150e-3efb-max" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Daemonic Jaws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3dad-baa8-6b4f-e283">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Guns" id="5b5c-b82a-93ca-6f7e" hidden="false" defaultSelectionEntryId="d521-a890-fb6a-5f2f">
+            <selectionEntryGroup name="Guns" id="5b5c-b82a-93ca-6f7e" hidden="false" defaultSelectionEntryId="d521-a890-fb6a-5f2f" sortIndex="2">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7a76-1f6c-f714-6ba1-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a76-1f6c-f714-6ba1-max" includeChildSelections="false"/>
@@ -7374,10 +7262,10 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                             <profile name="Magma Cutters" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="afb0-c345-1f02-a8e5">
                               <characteristics>
                                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                                <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
                                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
-                                <characteristic name="S" typeId="571c-0471-2614-c57c">6</characteristic>
-                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                                <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">5</characteristic>
                                 <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce, For each attack made for this weapon, if that attack is targeting a vehicle or monster unit, add 1 to the Wound Roll.</characteristic>
                               </characteristics>
                             </profile>
@@ -7389,6 +7277,46 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
                       </selectionEntries>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Head" id="4d3c-6f44-9d6b-ed64" hidden="false" sortIndex="1" defaultSelectionEntryId="b1b9-6f39-2fe6-59df">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d107-4f12-fa60-bed2-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d107-4f12-fa60-bed2-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Daemonic Jaws" hidden="false" id="b1b9-6f39-2fe6-59df">
+                  <profiles>
+                    <profile name="Daemonic Jaws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3dad-baa8-6b4f-e283">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Head Ectoplasma Cannon" hidden="false" id="fd85-141e-52c3-ce90">
+                  <profiles>
+                    <profile name="Head Ectoplasma Cannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2fcb-4077-a0b0-66f7">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">3</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge, Pierce</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Overcharge" id="ba5c-f89b-26af-3bed" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+                    <infoLink name="Pierce" id="f5ec-c67f-b6ab-46ca" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -7495,7 +7423,7 @@ Shield Facing: For each attack that targets this unit, reroll a failed Saving T
             </profile>
             <profile name="4 Aura of Decay" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="59d8-4c23-536b-eb91">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the next time this unit is Activated or dies, after an enemy unit is Activated within 7” of this unit, that unit suffers 3D3 Suppression.</characteristic>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the next time this unit is Activated or dies, after an enemy unit is Activated within 7” of this unit, that unit suffers D3+1 Suppression.</characteristic>
               </characteristics>
             </profile>
             <profile name="5 Fleshy Abundance" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="ec48-8bed-5e7d-6a36">
@@ -7508,7 +7436,7 @@ Grotesquely Resilient: Add 1 to Resilient rolls made for this unit.</characteris
             </profile>
             <profile name="6 Rancid Visitations" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="1480-9066-a62c-28f8">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit with 14” and visible to this unit. The selected unit suffers D3+7 Suppression. If the selected unit is within 7”, it suffers 2D3+7 Suppression instead.</characteristic>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit with 14” and visible to this unit. The selected unit suffers D3+3 Suppression. If the selected unit is within 7”, it suffers 2D3+3 Suppression instead.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7521,7 +7449,7 @@ Grotesquely Resilient: Add 1 to Resilient rolls made for this unit.</characteris
           <profiles>
             <profile name="1 Cacophonic Choir" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="3721-f0e3-3c3f-49a4">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the End step, for each Resolve Test made for enemy units within 6” of this unit, a result of 6 always fails. Then, each enemy unit within 6” suffers D3+2 Suppression.</characteristic>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Until the End step, for each Resolve Test made for enemy units within 6” of this unit, a result of 6 always fails. Then, each enemy unit within 6” suffers D3+1 Suppression.</characteristic>
               </characteristics>
             </profile>
             <profile name="2 Siren" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="4aa6-419c-4383-7e95">
@@ -7531,7 +7459,7 @@ Grotesquely Resilient: Add 1 to Resilient rolls made for this unit.</characteris
             </profile>
             <profile name="3 Phantasmagoria" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="3574-e8c8-648f-9b09">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy infantry unit within 16” of and visible to this unit. The selected unit suffers 3D3 Suppression. Then, that unit suffers X SW where X is equal to its Suppressed X.</characteristic>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy infantry unit within 16” of and visible to this unit. Then, roll 1+D3. The selected unit suffers X Suppression and X SW where X is equal to that roll.</characteristic>
               </characteristics>
             </profile>
             <profile name="4 Blissful Devotion" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="f0ee-54c9-3880-6eda">
@@ -7541,7 +7469,7 @@ Grotesquely Resilient: Add 1 to Resilient rolls made for this unit.</characteris
             </profile>
             <profile name="5 Symphony of Pain" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="74e4-3a53-1b48-a522">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 12”. The selected enemy unit suffers 3+2D3 SW. If that enemy unit is within 6”, it suffers 5+2D3 SW instead.</characteristic>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit within 12”. The selected enemy unit suffers 3+D3 SW. If that enemy unit is within 6”, it suffers 3+2D3 SW instead.</characteristic>
               </characteristics>
             </profile>
             <profile name="6 Touch of Slaanesh" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="4300-5871-41b8-b290">
@@ -7578,7 +7506,7 @@ Grotesquely Resilient: Add 1 to Resilient rolls made for this unit.</characteris
             </profile>
             <profile name="5 Withering Gaze" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="3727-1908-bcb8-2bf3">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a visible enemy unit with 16”. The selected enemy unit suffers 3D6 Suppression.</characteristic>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select a visible enemy unit with 16”. The selected enemy unit suffers 2D6 Suppression.</characteristic>
               </characteristics>
             </profile>
             <profile name="6 Desecration of Worlds" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="6b19-076d-bfe1-d6fa">
@@ -7615,7 +7543,7 @@ Grotesquely Resilient: Add 1 to Resilient rolls made for this unit.</characteris
             </profile>
             <profile name="5 Doombolt" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="82a9-2b7a-a07e-47aa">
               <characteristics>
-                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit visible to and within 16” of this unit. The selected enemy unit suffers 4+2D3 SW.</characteristic>
+                <characteristic name="Description" typeId="4b9e-dc73-b312-b42d">Select an enemy unit visible to and within 16” of this unit. The selected enemy unit suffers 2D3+2 SW.</characteristic>
               </characteristics>
             </profile>
             <profile name="6 Dark Blessings" typeId="6406-cf2b-ec5b-c7e6" typeName="Psychic Power" hidden="false" id="2116-871b-51e9-895c">
@@ -7648,7 +7576,11 @@ Grotesquely Resilient: Add 1 to Resilient rolls made for this unit.</characteris
     <entryLink targetId="1a7c-eccc-baed-f5ff" id="2adb-e40c-ab12-9147" type="selectionEntry" name="Leviathan Dreadnought " hidden="false" sortIndex="27"/>
     <entryLink targetId="1214-e873-29cf-8d3f" id="7d6c-6f6c-ef13-3abf" type="selectionEntry" name="Contemptor Dreadnought" hidden="false" sortIndex="26"/>
     <entryLink targetId="496d-ce88-6ee1-ecfc" id="d426-371f-cc11-da3a" type="selectionEntry" name="Master Of Executions" hidden="false" sortIndex="21"/>
-    <entryLink targetId="9173-8b2c-7c1d-1dbd" id="5bc3-3706-65a7-70da" type="selectionEntry" name="Predator" hidden="false" sortIndex="23"/>
+    <entryLink targetId="0630-8454-7f40-51ee" id="5bc3-3706-65a7-70da" type="selectionEntry" name="Predator" hidden="false" sortIndex="23">
+      <categoryLinks>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="5eb9-2981-7c52-e3ca" primary="false" name="Chaos"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink targetId="acb0-c72d-4022-5cc3" id="d3bf-1549-d6d9-4124" type="selectionEntry" name="Wardog" hidden="false" sortIndex="24"/>
     <entryLink targetId="1b1f-15ed-7bd7-1315" id="2b10-ad59-3ef4-4e1d" type="selectionEntry" name="Obliterators" hidden="false" sortIndex="20"/>
     <entryLink targetId="501d-eaf0-34a6-685e" id="e3e4-4ff7-9404-558a" type="selectionEntry" name="Havocs" hidden="false" sortIndex="18"/>

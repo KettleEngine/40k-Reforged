@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="69" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="189f-f42f-6f3b-5328" name=" Space Marine Arsenal" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="1" revision="70" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Bolt Rifle" hidden="false" id="6802-fb1b-a361-36bb">
       <profiles>
@@ -1452,7 +1452,7 @@
         <categoryLink targetId="205c-3072-067b-d808" id="01a7-f1ec-455b-6f48" primary="false" name="Infantry"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="130"/>
+        <cost name="pts" typeId="points" value="120"/>
       </costs>
       <infoLinks>
         <infoLink name="Breach" id="0c10-8366-0732-aca5" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
@@ -1824,7 +1824,7 @@ Unnerved: For each attack that targets this unit, that attack gains Suppressiv
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3"/>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f"/>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred, Pierce</characteristic>
           </characteristics>
@@ -2803,9 +2803,9 @@ Veteran Linebreakers: For each attack that targets this unit, if it is the close
                   </infoLinks>
                   <rules>
                     <rule name="*Haywire" id="c8e5-9656-c19a-d3e9" hidden="false">
-                      <description>For each attack made for this weapon that targets a vehicle unit, the Strength of that attack is improved to 6. If the Wound Roll of that is successful, the target unit gains Stunned.
+                      <description>For each attack made for this weapon, if the target of that is a vehicle unit, improve this weapon’s S to 6 this turn. If that unit gains Suppressed X this turn, the target unit also gains Stunned.
 
-Stunned: After this unit Activates, if it has Suppressed X, roll a D6. If the result of that roll is less than the X of Suppressed X, this unit becomes ready and skip this turns’ Move and Attacks steps.</description>
+Stunned: After this unit Activates, if it has Suppressed X, roll a D6. If the result of that roll is less than the X of Suppressed X, this unit becomes ready and skip this turns’ Move and Attacks steps. Then, this unit loses this ability.</description>
                     </rule>
                   </rules>
                 </selectionEntry>
@@ -5941,6 +5941,258 @@ c) PHOBOS LIEUTENANT</characteristic>
         <infoLink name="Ancient’s Wisdom" id="88d0-3fb2-b104-a5b0" hidden="false" targetId="fcd8-890d-39ef-1312" type="profile"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Predator" hidden="false" id="0630-8454-7f40-51ee" sortIndex="47">
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="f148-55a2-92aa-9295" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
+        <categoryLink name="Support" hidden="false" id="15bb-0dab-d4b8-c5df" targetId="ccc6-6202-853c-23e4" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Predator" hidden="false" id="3506-dac9-cf96-33ae">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a632-c6db-0af2-ec54-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a632-c6db-0af2-ec54-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Dozer Blade" hidden="false" id="c288-1c5e-e070-41c3" type="selectionEntry" targetId="73da-e53b-4390-b808">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7851-dcb2-a7c4-0536" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Sponson" id="e625-0210-cc44-cb7d" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd19-e1a3-7bfb-d6f3" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Plasmacannons" hidden="false" id="47dc-7cb2-ce41-563b" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Plasma Cannon" hidden="false" id="a5a0-7c84-c37c-00d0" type="selectionEntry" targetId="597d-3cc2-8209-d3d1">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e2f1-8997-e731-0d89-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e2f1-8997-e731-0d89-max" includeChildSelections="false"/>
+                      </constraints>
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier type="set" value="7" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Heavy Bolter" hidden="false" id="e9f0-9f3c-3bb8-662d" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Heavy Bolter" hidden="false" id="36be-d70e-e04b-1f80" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="13" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="prepend" value="Sponson" field="name"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3d8c-e668-b133-e1de-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d8c-e668-b133-e1de-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Lascannon" hidden="false" id="701d-99f5-1897-6a61" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Lascannon" hidden="false" id="3c93-765e-8ebb-852c" type="selectionEntry" targetId="54fc-ac08-3927-692d">
+                      <modifiers>
+                        <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="prepend" value="Sponson" field="name"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c64f-3266-6fa8-d64d-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c64f-3266-6fa8-d64d-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Turret" id="a6dc-161c-84a9-b43c" hidden="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c5ea-769f-efae-23dc-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c5ea-769f-efae-23dc-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Predator Autocannon" hidden="false" id="11f8-9458-4826-42ef">
+                  <profiles>
+                    <profile name="Predator Autocannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="bfd7-c9c8-96b8-3217">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 2</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Suppressive (X)" id="c08e-c745-2661-471a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Predator Twin Lascannon" hidden="false" id="f0a1-3cba-7453-52c2">
+                  <profiles>
+                    <profile name="Predator Twin Lascannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f7de-c623-c985-067e">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Breach" id="2348-1869-f958-e4df" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Predator Twin Plasmacannon" hidden="false" id="4e40-fdac-2718-7554">
+                  <profiles>
+                    <profile name="Predator Twin Plasmacannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9376-5c99-1226-1705">
+                      <characteristics>
+                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
+                        <characteristic name="A" typeId="13c5-f234-c120-afc3">14</characteristic>
+                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
+                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge, Pierce</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Pierce" id="3040-3df2-8661-2f14" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
+                    <infoLink name="Overcharge" id="23fe-9ac9-3d7e-1cce" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Aux Gun" id="8d88-34ab-34d1-eaad" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="49cc-528b-8629-5382" type="selectionEntry" targetId="eda8-2347-1928-a28e">
+                  <modifiers>
+                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Storm Bolter" hidden="false" id="accd-6632-40ae-6bcf" type="selectionEntry" targetId="d215-60bd-f49d-295e">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="acb8-e84d-fbbc-9666-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acb8-e84d-fbbc-9666-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Pintle" id="0401-8a28-7f57-5040" hidden="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6f6a-e5ca-570b-00bb" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Pintle Combi-Bolter" hidden="false" id="3081-de15-13a3-524a" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Combi-Bolter" hidden="false" id="fca0-6b67-df6c-503b" type="selectionEntry" targetId="81e6-a62a-eca2-22e2">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e93e-d844-713a-04af-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e93e-d844-713a-04af-max" includeChildSelections="false"/>
+                      </constraints>
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Pintle Plasmagun" hidden="false" id="b3d4-8df4-a7e4-9f6a" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Plasma Gun" hidden="false" id="fcfe-7077-d9de-b42c" type="selectionEntry" targetId="af5b-b208-be5c-ba5b">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8876-719d-2b38-bc46-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8876-719d-2b38-bc46-max" includeChildSelections="false"/>
+                      </constraints>
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Pintle Meltagun" hidden="false" id="9249-4cf5-49c0-c288" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Meltagun" hidden="false" id="7340-83b1-0da9-8ae3" type="selectionEntry" targetId="4260-66c2-4887-4117">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cc4b-914a-5736-6fab-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc4b-914a-5736-6fab-max" includeChildSelections="false"/>
+                      </constraints>
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="Predator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b4f8-b3c8-58a6-9094">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Tactical Squad" hidden="false" id="e659-acf2-34b0-e399" type="selectionEntry" targetId="8838-62e2-29c4-69ce" sortIndex="17"/>
@@ -5977,6 +6229,7 @@ c) PHOBOS LIEUTENANT</characteristic>
     <entryLink import="true" name="Melta Eradicators Squad" hidden="false" id="9e56-5c78-4a02-e98d" type="selectionEntry" targetId="6fae-9098-94c0-e8c8" sortIndex="23"/>
     <entryLink targetId="1a7c-eccc-baed-f5ff" id="94d5-3c39-d29a-fa23" type="selectionEntry" name="Leviathan Dreadnought " hidden="false" sortIndex="53"/>
     <entryLink targetId="1214-e873-29cf-8d3f" id="676d-1326-3908-b68c" type="selectionEntry" name="Contemptor Dreadnought" hidden="false" sortIndex="53"/>
+    <entryLink targetId="0630-8454-7f40-51ee" id="83de-10fd-066b-c90e" type="selectionEntry" name="Predator" hidden="false" sortIndex="47"/>
   </entryLinks>
   <sharedRules>
     <rule name="Vivispectrum" id="f7fd-cebe-ccc9-0bc5" hidden="false">
@@ -6227,7 +6480,7 @@ c) ASSAULT INTERCESSORS without Fly</characteristic>
         <entryLink targetId="3f6d-281b-7664-d53f" id="8c90-ffa8-fef8-8853" type="selectionEntryGroup" name="Leader" hidden="false"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.4" hidden="false" id="beca-d151-7fad-9832" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="beca-d151-7fad-9832" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="895e-8347-d87b-2963" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -12210,151 +12463,6 @@ Inspiring Stature: While other friendly units are within 12” of and visible t
         <categoryLink name="Support" hidden="false" id="37df-f13a-004b-c50f" targetId="ccc6-6202-853c-23e4" primary="true"/>
         <categoryLink name="Vehicle" hidden="false" id="47d2-58b1-c817-6f49" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
       </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Predator" hidden="false" id="0630-8454-7f40-51ee" sortIndex="47">
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="f148-55a2-92aa-9295" targetId="b239-6bd1-e7a0-0a02" primary="false"/>
-        <categoryLink name="Support" hidden="false" id="15bb-0dab-d4b8-c5df" targetId="ccc6-6202-853c-23e4" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="120"/>
-      </costs>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Predator" hidden="false" id="3506-dac9-cf96-33ae">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a632-c6db-0af2-ec54-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a632-c6db-0af2-ec54-max" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Dozer Blade" hidden="false" id="c288-1c5e-e070-41c3" type="selectionEntry" targetId="73da-e53b-4390-b808">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7851-dcb2-a7c4-0536" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Sponson" id="e625-0210-cc44-cb7d" hidden="false">
-              <entryLinks>
-                <entryLink import="true" name="Lascannon" hidden="false" id="3c93-765e-8ebb-852c" type="selectionEntry" targetId="54fc-ac08-3927-692d">
-                  <modifiers>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="prepend" value="Sponson" field="name"/>
-                  </modifiers>
-                  <costs>
-                    <cost name="pts" typeId="points" value="20"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Heavy Bolter" hidden="false" id="36be-d70e-e04b-1f80" type="selectionEntry" targetId="82a1-b562-e748-d5ad">
-                  <modifiers>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="13" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                    <modifier type="prepend" value="Sponson" field="name"/>
-                  </modifiers>
-                  <costs>
-                    <cost name="pts" typeId="points" value="20"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd19-e1a3-7bfb-d6f3" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Turret" id="a6dc-161c-84a9-b43c" hidden="false">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c5ea-769f-efae-23dc-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c5ea-769f-efae-23dc-max" includeChildSelections="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Predator Autocannon" hidden="false" id="11f8-9458-4826-42ef">
-                  <profiles>
-                    <profile name="Predator Autocannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="bfd7-c9c8-96b8-3217">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Suppressive 2</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Suppressive (X)" id="c08e-c745-2661-471a" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Predator Twin Lascannon" hidden="false" id="f0a1-3cba-7453-52c2">
-                  <profiles>
-                    <profile name="Predator Twin Lascannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="f7de-c623-c985-067e">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Breach</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Breach" id="2348-1869-f958-e4df" hidden="false" type="rule" targetId="265b-df47-6a5e-4d1c"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Predator Twin Plasmacannon" hidden="false" id="4e40-fdac-2718-7554">
-                  <profiles>
-                    <profile name="Predator Twin Plasmacannon" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="9376-5c99-1226-1705">
-                      <characteristics>
-                        <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Hv</characteristic>
-                        <characteristic name="A" typeId="13c5-f234-c120-afc3">13</characteristic>
-                        <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                        <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
-                        <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                        <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Overcharge, Pierce</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Pierce" id="3040-3df2-8661-2f14" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-                    <infoLink name="Overcharge" id="23fe-9ac9-3d7e-1cce" hidden="false" type="rule" targetId="e676-2d17-e4bf-f5e8"/>
-                  </infoLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Pintle" id="8d88-34ab-34d1-eaad" hidden="false">
-              <entryLinks>
-                <entryLink import="true" name="Hunter-Killer Missile" hidden="false" id="49cc-528b-8629-5382" type="selectionEntry" targetId="eda8-2347-1928-a28e">
-                  <modifiers>
-                    <modifier type="set" value="1" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Storm Bolter" hidden="false" id="accd-6632-40ae-6bcf" type="selectionEntry" targetId="d215-60bd-f49d-295e">
-                  <modifiers>
-                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                    <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="acb8-e84d-fbbc-9666-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acb8-e84d-fbbc-9666-max" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <profiles>
-            <profile name="Predator" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="b4f8-b3c8-58a6-9094">
-              <characteristics>
-                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
-                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">4+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
-                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">6+</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Whirlwind" hidden="false" id="dd4d-4f0c-d34a-b856" sortIndex="49">
       <categoryLinks>

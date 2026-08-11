@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="ac9e-cafe-1753-147e" name="World Eaters" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="ac9e-cafe-1753-147e" name="World Eaters" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.2.1" hidden="false" id="97a2-b298-c8e1-9b48" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="97a2-b298-c8e1-9b48" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="38fa-da97-6896-2856" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -21,6 +21,7 @@
       <infoLinks>
         <infoLink name="Martial Savagery" id="46b3-b330-8249-6140" hidden="false" type="profile" targetId="fc10-89a6-0b44-88e3"/>
         <infoLink name="Khorne&apos;s Contempt" id="4510-57b4-a1f3-c5d4" hidden="false" type="profile" targetId="3246-21e3-9e49-00c2"/>
+        <infoLink name="Critical Hits X+" id="8919-7694-8239-4d1f" hidden="false" type="rule" targetId="fff4-3f9d-5d2d-4cf9"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Relics (Reference)" hidden="false" id="6b6a-3e09-d1a2-e3c9" sortIndex="-3">
@@ -34,7 +35,7 @@
       <profiles>
         <profile name="1 Khorne’s Scarification" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="eb82-3099-ed7f-ae48">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit&apos;s T is improved to 8.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">While this unit has this ability, it gains Heavy Armour. If it already has Heavy Armour, its Toughness is improved by 1.</characteristic>
           </characteristics>
         </profile>
         <profile name="2 Adrenalizing Nails" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="5e50-3904-bf31-b5a7">
@@ -54,15 +55,18 @@
         </profile>
         <profile name="5 Blood for the Blood God!" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="40a7-893d-437b-a5d3">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each melee attack this unit makes, a Wound Roll of 5+ for that attack causes an additional wound.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each melee attack this unit makes, that gains Critical Wound 5+.</characteristic>
           </characteristics>
         </profile>
         <profile name="3 Berserker’s Visage" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="7134-9af4-eea7-c2da">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each melee attack this unit makes, reroll a Wound Roll of 1 for that attack. After this units&apos; Attack step, each enemy unit within 8” suffers X Suppression where X is equal to the Health lost this turn.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each melee attack this unit makes, reroll a Wound Roll of 1 for that attack. After this units&apos; Attack step, all enemy units within 8” suffers X Suppression where X is equal to the Health lost this turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Critical Wounds X+" id="e12a-aec4-dfdd-b95d" hidden="false" type="rule" targetId="c751-8dab-2486-9a1b"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Butcher Surgeon" hidden="false" id="509c-2c05-2005-0c2a" sortIndex="1">
       <categoryLinks>
@@ -633,11 +637,7 @@
       </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="World Eaters Terminator Chaos Lord" hidden="false" id="fde8-d561-d257-fd70" sortIndex="1">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="1aa4-0490-57e0-1cfc" includeChildSelections="false"/>
-      </constraints>
       <categoryLinks>
-        <categoryLink targetId="1738-1300-9dbb-c5be" id="d6d0-8a7e-4257-4678" primary="false" name="Rare"/>
         <categoryLink targetId="f809-9826-f58a-6b8d" id="e04e-0cc8-b489-ae47" primary="false" name="Chaos"/>
         <categoryLink targetId="205c-3072-067b-d808" id="0c72-9ada-2083-ec3e" primary="false" name="Infantry"/>
         <categoryLink targetId="2886-2afd-f65f-9d8e" id="e377-e1b3-182b-73d8" primary="true" name="Leaders"/>
@@ -658,7 +658,7 @@
                   <entryLinks>
                     <entryLink import="true" name="Lightning Claw" hidden="false" id="f52f-5e48-4750-f1e7" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
                       <modifiers>
-                        <modifier type="set" value="16" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                         <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                       </modifiers>
                       <constraints>
@@ -712,7 +712,7 @@
                             <profile name="Combi-Flamer" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="45c0-2737-a4d7-ab97">
                               <characteristics>
                                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
-                                <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">18</characteristic>
                                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                                 <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
                                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -1087,7 +1087,7 @@ Cathartic Carnage: For each melee attack made for this unit, if that attack ca
                               <modifierGroups>
                                 <modifierGroup type="and">
                                   <modifiers>
-                                    <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                     <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
                                 </modifierGroup>
@@ -1109,7 +1109,7 @@ Cathartic Carnage: For each melee attack made for this unit, if that attack ca
                       <modifierGroups>
                         <modifierGroup type="and">
                           <modifiers>
-                            <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                             <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                           </modifiers>
                         </modifierGroup>
@@ -1145,18 +1145,275 @@ Cathartic Carnage: For each melee attack made for this unit, if that attack ca
         <cost name="pts" typeId="points" value="60"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Juggernaut Chaos Lord" hidden="false" id="ad4b-11be-482a-4b97" sortIndex="1">
+      <categoryLinks>
+        <categoryLink targetId="2886-2afd-f65f-9d8e" id="fe3f-23e5-7db0-4bdd" primary="true" name="Leaders"/>
+        <categoryLink targetId="205c-3072-067b-d808" id="fcd4-836f-4583-930b" primary="false" name="Infantry"/>
+        <categoryLink targetId="f809-9826-f58a-6b8d" id="0157-940f-a525-7c5c" primary="false" name="Chaos"/>
+        <categoryLink targetId="1738-1300-9dbb-c5be" id="30f6-d4c5-fa5d-2dee" primary="false" name="Rare"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Heavy Armour" id="98cc-ce24-d247-2381" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
+        <infoLink name="Unstoppable" id="7d5c-20fb-e675-2547" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Juggernaut Chaos Lord" hidden="false" id="f0b7-68ee-634f-8192">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bed6-4833-4bef-6b0c-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bed6-4833-4bef-6b0c-max" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Juggernaut Chaos Lord" typeId="a706-96eb-fcae-b696" typeName="Unit" hidden="false" id="3df9-5a2e-8704-6d55">
+              <characteristics>
+                <characteristic name="T" typeId="a6ad-d820-8495-f5b0">4</characteristic>
+                <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">6</characteristic>
+                <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Iron Horn" hidden="false" id="8e59-feec-05c8-f31b">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9197-685c-014d-d383-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9197-685c-014d-d383-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Iron Horn" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2e68-b839-f3dd-e301">
+                  <characteristics>
+                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
+                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+                    <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
+                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Weapons" id="7111-739c-66c0-26e0" hidden="false" defaultSelectionEntryId="dfc3-6c51-5d42-5e8b">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="37da-7fd1-eda3-cb5b" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c77f-8ec7-f2d0-c024" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Pistol &amp; Melee" hidden="false" id="6b8f-66e9-a78c-8020" sortIndex="1">
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Pistol" id="57a1-2288-d47f-4069" hidden="false" defaultSelectionEntryId="af31-5549-db15-4bde">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5322-5cbc-3738-2c84" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b282-1596-cb77-d4bb" includeChildSelections="false"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Plasma Pistol" hidden="false" id="af31-5549-db15-4bde" sortIndex="1">
+                          <entryLinks>
+                            <entryLink import="true" name="Plasma Pistol" hidden="false" id="5f78-23e6-57d4-337a" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2473-c581-2be9-a528" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c7d9-2eee-ef73-fc1c" includeChildSelections="false"/>
+                              </constraints>
+                              <modifierGroups>
+                                <modifierGroup type="and">
+                                  <modifiers>
+                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </modifierGroup>
+                              </modifierGroups>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Bolt Pistol" hidden="false" id="0c9b-f060-eb67-9b28" sortIndex="4">
+                          <entryLinks>
+                            <entryLink import="true" name="Bolt Pistol" hidden="false" id="7ea2-2a28-9b05-a4a4" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
+                              <modifierGroups>
+                                <modifierGroup type="and">
+                                  <modifiers>
+                                    <modifier type="set" value="9" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </modifierGroup>
+                              </modifierGroups>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="858f-334b-a120-08be" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3060-caca-1429-3d06" includeChildSelections="false"/>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e69-ce71-8b6d-dcde" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3434-72f6-a22a-0dad" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Melee" id="3687-0341-3b7c-323c" hidden="false" defaultSelectionEntryId="8f0f-681f-f337-17e8">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6a58-4c73-f92e-2876" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3769-f33c-42f2-41c0" includeChildSelections="false"/>
+                      </constraints>
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Power Weapon" hidden="false" id="8f0f-681f-f337-17e8" sortIndex="1">
+                          <entryLinks>
+                            <entryLink import="true" name="Power Weapon" hidden="false" id="0580-87c6-87c7-dcf3" type="selectionEntry" targetId="dfed-4c14-cafd-626d">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="18b8-0c0f-4215-339b" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cdf5-c817-af98-989d" includeChildSelections="false"/>
+                              </constraints>
+                              <modifierGroups>
+                                <modifierGroup type="and">
+                                  <modifiers>
+                                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </modifierGroup>
+                              </modifierGroups>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Daemon Hammer" hidden="false" id="174a-9af3-5ae2-cc26" sortIndex="3">
+                          <entryLinks>
+                            <entryLink import="true" name="Daemon Hammer" hidden="false" id="56e3-f021-4ed3-b797" type="selectionEntry" targetId="ea6e-1dec-e154-a575">
+                              <modifierGroups>
+                                <modifierGroup type="and">
+                                  <modifiers>
+                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </modifierGroup>
+                              </modifierGroups>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db18-73f4-017c-2b1e" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dedb-0302-7a72-fc91" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="ChainBlade" hidden="false" id="05ae-aa19-02bb-15b4" sortIndex="5">
+                          <entryLinks>
+                            <entryLink import="true" name="Chainsword" hidden="false" id="6b43-407f-86dd-c0c9" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
+                              <modifierGroups>
+                                <modifierGroup type="and">
+                                  <modifiers>
+                                    <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </modifierGroup>
+                              </modifierGroups>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3e78-0c88-22dc-0faa" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d60c-8f06-48d3-78db" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Lightning Claw" hidden="false" id="f013-1999-f1e1-5186" sortIndex="4">
+                          <entryLinks>
+                            <entryLink import="true" name="Lightning Claw" hidden="false" id="23e6-768f-0bd5-6436" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
+                              <modifierGroups>
+                                <modifierGroup type="and">
+                                  <modifiers>
+                                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </modifierGroup>
+                              </modifierGroups>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b39e-b036-40a4-09a8" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c34e-78bc-9dd8-c129" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Power Fist" hidden="false" id="c2aa-e080-9212-8b3e" sortIndex="2">
+                          <entryLinks>
+                            <entryLink import="true" name="Power Fist" hidden="false" id="b040-47ed-c577-c556" type="selectionEntry" targetId="e9ab-47d0-5cce-0c1d">
+                              <modifierGroups>
+                                <modifierGroup type="and">
+                                  <modifiers>
+                                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </modifierGroup>
+                              </modifierGroups>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2481-ab13-28b5-2554" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9e1f-1276-1bc8-885b" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Chain Fist" hidden="false" id="dce1-b180-fafc-889c" sortIndex="6">
+                          <entryLinks>
+                            <entryLink import="true" name="Chainfist" hidden="false" id="f101-7b39-fa17-0536" type="selectionEntry" targetId="ad98-4b41-0c98-aa4e">
+                              <modifierGroups>
+                                <modifierGroup type="and">
+                                  <modifiers>
+                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                  </modifiers>
+                                </modifierGroup>
+                              </modifierGroups>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c9a7-ddb5-894a-eba6" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43bc-2643-98d7-d312" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Lightning Claws" hidden="false" id="f19c-4fc1-ec2e-4e2b" sortIndex="2">
+                  <entryLinks>
+                    <entryLink import="true" name="Lightning Claw" hidden="false" id="ffca-38c9-4b09-b64d" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <modifiers>
+                            <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                          </modifiers>
+                        </modifierGroup>
+                      </modifierGroups>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="85af-6ed5-6fea-8018" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c562-f059-e5ce-f687" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Unstoppable Rage" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0a4d-48cd-4e20-9293">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated, each enemy unit visible to and further than 10&quot; from this unit gains Flattened Ranks until the End step:
+
+Flattened Ranks: After an enemy unit with Unstoppable Rage finishes an Advance, if that unit passed within 1&quot; of this unit during that Advance, this unit suffers 4 SW.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Butcher Lord" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="91df-34d9-db29-d1a0">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your units are within 16” of this unit, those units gain Martial Savagery. If they already have Martial Savagery, instead they gain the following ability:
+
+Cathartic Carnage: For each melee attack made for this unit, if that attack causes one or more additional hits, it causes another additional hit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
     <profile name="Martial Savagery" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="fc10-89a6-0b44-88e3">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit selects targets for all of its weapons, until the End step, for each melee attack made for this unit, a successful Hit Roll of X+ for that attack causes an additional hit. X is equal to the following:
-
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit selects targets for all of its weapons, until the End step, for each melee attack made for this unit, that attack gains Critical Hit X+, where X is equal to the following:
 
 If ONE enemy unit was targeted by one or more melee attacks this turn, X is 6.
 
-
 If TWO enemy units were targeted by one or more melee attacks this turn, X is 5.
-
 
 If THREE or more enemy units were targeted by one or more melee attacks this turn, X is 4.</characteristic>
       </characteristics>
@@ -1465,9 +1722,9 @@ Grating: This unit counts as two units for Martial Savagery and, during enemy 
         <profile name="Lightning Claws" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="3579-233b-798a-9e03">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-            <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
+            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-            <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
+            <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred, Pierce</characteristic>
           </characteristics>
@@ -1542,11 +1799,15 @@ Grating: This unit counts as two units for Martial Savagery and, during enemy 
     <entryLink import="true" name="Obliterators" hidden="false" id="0e6c-8e65-1447-54d0" targetId="1b1f-15ed-7bd7-1315" type="selectionEntry"/>
     <entryLink import="true" name="Master Of Executions" hidden="false" id="7823-7ee4-2c20-f1ba" targetId="496d-ce88-6ee1-ecfc" type="selectionEntry"/>
     <entryLink import="true" name="Forgefiend" hidden="false" id="8f90-c3c4-efe9-8b2f" targetId="f3e9-8f6b-3f25-734b" type="selectionEntry"/>
-    <entryLink import="true" name="Predator" hidden="false" id="fb66-3975-50f6-bb91" targetId="9173-8b2c-7c1d-1dbd" type="selectionEntry"/>
     <entryLink import="true" name="Wardog" hidden="false" id="b2bf-78c4-b64f-8e43" targetId="acb0-c72d-4022-5cc3" type="selectionEntry"/>
     <entryLink import="true" name="Vindicator" hidden="false" id="addd-a44e-76e2-609b" targetId="7aa0-644a-fffd-220a" type="selectionEntry"/>
-    <entryLink import="true" name="Contemptor Dreadnaught" hidden="false" id="6df6-25e3-4810-7d23" targetId="1214-e873-29cf-8d3f" type="selectionEntry"/>
+    <entryLink import="true" name="Contemptor Dreadnought" hidden="false" id="6df6-25e3-4810-7d23" targetId="1214-e873-29cf-8d3f" type="selectionEntry"/>
     <entryLink import="true" name="Leviathan Dreadnought " hidden="false" id="5076-4394-331c-f27b" targetId="1a7c-eccc-baed-f5ff" type="selectionEntry"/>
+    <entryLink import="true" name="Predator" hidden="false" id="9daf-3579-a7e7-98a1" targetId="0630-8454-7f40-51ee" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Chaos" hidden="false" id="33ba-6c1f-2d65-5905" targetId="f809-9826-f58a-6b8d" primary="false"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="CSM Arsenal" id="0c42-0353-006a-c855" targetId="149d-ebd0-bba9-e9df"/>
