@@ -121,7 +121,7 @@
       </profiles>
       <infoLinks>
         <infoLink name="Indirect" id="5f6e-d5da-4b29-5597" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
-        <infoLink name="One Shot" id="8d17-3d0f-75e5-2e29" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Rearm" id="8d17-3d0f-75e5-2e29" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
         <infoLink name="Blast (X)" id="b75e-61aa-2e4c-298c" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
       </infoLinks>
       <costs>
@@ -495,7 +495,7 @@ Without Peer: For each wound this unit’s GREY KNIGHT PALADIN model is selecte
     </rule>
   </sharedRules>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="dc56-bea6-0b79-3250" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.1" hidden="false" id="dc56-bea6-0b79-3250" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="7559-35d0-c79d-9d9d" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -544,7 +544,7 @@ Without Peer: For each wound this unit’s GREY KNIGHT PALADIN model is selecte
         </profile>
         <profile name="5 Augury Malifica" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="8f82-c56a-cbae-d162">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each attack this unit makes for a weapon with Nemesis, a Hit Roll of 6 causes an additional hit. After an enemy unit’s Move step, if that unit is visible to this unit, roll a D6. On a 5+, make ranged attacks targeting that enemy unit (if able).</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each attack this unit makes for a weapon with Nemesis, that attack gains Critical Hits 6+. After an enemy unit’s Move step, if that unit is visible to this unit, roll a D6. On a 5+, make ranged attacks targeting that enemy unit (if able).</characteristic>
           </characteristics>
         </profile>
         <profile name="6 Domina Liber Daemonica" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="6476-7326-8c38-270d">
@@ -570,6 +570,10 @@ Without Peer: For each wound this unit’s GREY KNIGHT PALADIN model is selecte
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="b477-aa5d-7d52-d3ac" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
+      <infoLinks>
+        <infoLink name="Nemesis" id="7c3f-7842-ee65-e2a4" hidden="false" type="rule" targetId="24b5-5baa-5c44-0c42"/>
+        <infoLink name="Critical Hits X+" id="89fc-d9ea-9547-8ba0" hidden="false" type="rule" targetId="fff4-3f9d-5d2d-4cf9"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Psychic Powers (Refrence)" hidden="false" id="5d41-be7e-2be6-c477" sortIndex="-4">
       <profiles>
@@ -2195,7 +2199,7 @@ b) GREY KNIGHT PALADIN</characteristic>
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While one or more other friendly Grey Knights infantry units are within 6” of this unit and, this unit is closer or the same distance to an active enemy unit visible to this unit, this unit and those friendly infantry units gain the following ability:
 
-Reinforced Wards: After a model in this unit is selected to suffer a wound, add 1 to the roll for Sanctic Aegis for that attack.</characteristic>
+Reinforced Wards: After a model in this unit is selected to suffer a wound, roll a D6. On a 5+, the Saving Throw for that attack always succeeds.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2204,7 +2208,7 @@ Reinforced Wards: After a model in this unit is selected to suffer a wound, add 
   <sharedProfiles>
     <profile name="Sanctic Aegis" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="141f-c84e-6982-ba56">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each wound a model in your Grey Knights units is selected to suffer, roll a D6. On a 6+, that attack fails. If that unit is within 12” of a different friendly Grey Knights unit, add 1 to that roll.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a model in any of your Grey Knights units is selected to suffer a wound, roll a D6. On a 6+, the Saving Throw for that attack always succeeds. If that unit is within 12” of another friendly Grey Knights unit, add 1 to that roll.</characteristic>
       </characteristics>
     </profile>
     <profile name="Psychic Resonance" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e371-a49c-1740-3005">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="23" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="9389-f137-0f71-fe7b" name=" Adepta Sororitas" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="18" revision="24" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Army Rules (Reference)" hidden="false" id="23d8-3b8d-77df-8eb4" sortIndex="-3">
       <constraints>
@@ -53,7 +53,7 @@
         </profile>
         <profile name="5 Creed Annunciation" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="10b4-c80d-2a27-9c50">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">ability this unit’s weapons have is changed to “For each attack made for this weapon, a successful Wound Roll for that attack causes an additional wound.”</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each attack this unit makes for a weapon with Holy Trinity, that attack gains Critical Hits 5+.</characteristic>
           </characteristics>
         </profile>
         <profile name="Saintly Heavy Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="719c-db2f-b2ce-b065">
@@ -89,10 +89,11 @@
       </profiles>
       <infoLinks>
         <infoLink name="Suppressive (X)" id="70a0-ac66-211b-46e7" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
-        <infoLink name="Holy Trinity" id="3642-b1d5-0cfa-d0c1" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
+        <infoLink name="Critical Hits X+" id="3642-b1d5-0cfa-d0c1" hidden="false" type="rule" targetId="fff4-3f9d-5d2d-4cf9"/>
         <infoLink name="Ignore Cover" id="d8bb-2e5c-3559-44f2" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
         <infoLink name="Blast (X)" id="4e85-5fde-892c-1566" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
         <infoLink name="Resilient (X)" id="bdc7-7b3e-570a-5a0a" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
+        <infoLink name="Holy Trinity" id="e45a-0e98-832b-f6f4" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Canoness" hidden="false" id="8c3d-6721-67f0-8a7f" sortIndex="1">
@@ -1420,12 +1421,13 @@ c) RETRIBUTORS</characteristic>
         </profile>
         <profile name="Great Butchery" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="91c6-4cce-ff7a-8e09">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within engagement range of any enemy unit and none of your other units are within 4” of this unit, for each attack made for this unit’s Eviscerator weapons, a Hit Roll of 5+ for that attack causes an additional hit.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is within engagement range of any enemy unit and none of your other units are within 4” of this unit, for each attack made for this unit&apos;s Eviscerator weapons, that attack gains Critical Hits 5+.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Shred" id="88ea-99d2-de5d-0e15" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
+        <infoLink name="Critical Hits X+" id="88ea-99d2-de5d-0e15" hidden="false" type="rule" targetId="fff4-3f9d-5d2d-4cf9"/>
+        <infoLink name="Shred" id="2954-fc9e-cced-fd6b" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Celestine, The living Saint" hidden="false" id="d9c5-19b0-9c68-0e69" sortIndex="9">
@@ -1876,6 +1878,7 @@ c) RETRIBUTORS</characteristic>
       <infoLinks>
         <infoLink name="Heavy Armour" id="8d02-ff40-cef4-b156" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
         <infoLink name="Unstoppable" id="5edd-ef87-22c1-0b24" hidden="false" type="rule" targetId="9726-164b-d2c0-a58f"/>
+        <infoLink name="Guarded" id="97a0-e5cd-8180-a341" hidden="false" type="profile" targetId="5f45-8a1e-dcb3-915f"/>
       </infoLinks>
       <profiles>
         <profile name="Holy Duty" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="102a-1fd0-3e3f-a32d">
@@ -1885,10 +1888,7 @@ c) RETRIBUTORS</characteristic>
         </profile>
         <profile name="Processional Shieldwall" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="c391-d25e-49b4-ad70">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While other friendly leader units are within 1” of this unit and this unit is closer or the same distance to an active enemy unit visible to this unit, those leader units gain the following ability:
-
-
-Guarded: For each wound a model in this unit is selected to suffer, you may roll a D6. On a 5+, that attack fails.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While other friendly leader units are within 1” of this unit and this unit is closer or the same distance to an active enemy unit visible to this unit, those leader units gain the following ability: Guarded</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -2530,10 +2530,22 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
       <profiles>
         <profile name="Pacifier Helmet" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="caf5-6bfa-6eea-73d4">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated, you may ‘utter its trigger word’. If you do, this unit gains the following abilities: Resilient 6+ Frenzied Berserkers: This unit cannot capture objectives. Disabled Pacifier: Each time this unit makes a move, it must Advance and it must end that move as close as possible to the closest enemy unit. Deadly Cocktail: For each attack this unit makes, a successful Wound Roll for that attack causes an additional wound.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated, you may ‘utter its trigger word’. If you do, this unit gains the following abilities:
+
+Resilient 6+
+
+Frenzied Berserkers: This unit cannot capture objectives.
+
+Disabled Pacifier: Each time this unit makes an Advance or Reposition move, it must end that move as close as possible to the closest enemy unit (If two or more units are closest, you choose).
+
+Deadly Cocktail: For each attack made for this unit&apos;s Arco-flails, that attack gains Critical Hits 4+.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Critical Hits X+" id="b944-0b46-d74a-5b0a" hidden="false" type="rule" targetId="fff4-3f9d-5d2d-4cf9"/>
+        <infoLink name="Resilient (X)" id="8e8e-1fab-f9bb-fba4" hidden="false" type="rule" targetId="253c-c1fa-d29d-d21e"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Seraphim" hidden="false" id="01ed-b32d-7d58-a80e" sortIndex="16">
       <costs>
@@ -3655,7 +3667,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="One Shot" id="0ef6-0ecd-685f-1507" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+                <infoLink name="Rearm" id="0ef6-0ecd-685f-1507" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
                 <infoLink name="Holy Trinity" id="0fd9-08f1-9391-4ded" hidden="false" type="rule" targetId="5328-f292-f3b4-de07"/>
               </infoLinks>
               <constraints>
@@ -4027,7 +4039,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
         <entryLink import="true" name="Munitorum Cherub" hidden="false" id="b620-4ce1-50c4-bc8c" type="selectionEntry" targetId="2772-031f-6d96-99c5"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="1288-3404-e1e5-90f1" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.1" hidden="false" id="1288-3404-e1e5-90f1" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="2a32-f478-bc26-83a2" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>

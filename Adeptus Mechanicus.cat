@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="8ebc-4141-b6f1-7899" name="Adeptus Mechanicus" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="22" revision="18" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="8ebc-4141-b6f1-7899" name="Adeptus Mechanicus" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="22" revision="19" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="7646-5c1b-b2e9-3f1f" sortIndex="1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.1" hidden="false" id="7646-5c1b-b2e9-3f1f" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="c52b-72ff-2114-f15b" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -109,13 +109,14 @@ This unit may instead not attach to anything.</characteristic>
         </profile>
         <profile name="Destruction Shaper" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f319-0765-580f-d57a">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your units are visible to this unit, after any of those units Repair, until the End step, for each attack made by that unit, a Hit Roll of 6 for that attack causes an additional hit.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While your units are visible to this unit, after any of those units Repair, until the End step, for each attack made by that unit, that attack gains Critical Hits 6+.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Invocate Machine" id="99af-a2c4-89e6-40df" hidden="false" type="profile" targetId="f914-73c8-f087-eadf"/>
         <infoLink name="Tech-Priest" id="0d47-321b-4835-1614" hidden="false" type="profile" targetId="d505-4156-df21-9043"/>
+        <infoLink name="Critical Hits X+" id="277d-6c56-d05b-88a2" hidden="false" type="rule" targetId="fff4-3f9d-5d2d-4cf9"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Dominus" hidden="false" id="f9bf-30fb-6f4b-0f8d">
@@ -315,15 +316,16 @@ This unit may instead not attach to anything.</characteristic>
         </profile>
         <profile name="Manipulate Motive Force" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="47be-2540-4112-d7c0">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s turn, if you take another turn, during that turn, for each ranged attack made for your active unit, a Wound Roll of 6+ for that attack causes an additional wound.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s turn, if you take another turn, during that turn, for each ranged attack made for your active unit, that attack gains Critical Wounds 6+.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Invocate Machine" id="f3e8-0c64-8439-ac96" hidden="false" type="profile" targetId="f914-73c8-f087-eadf"/>
         <infoLink name="Predictive Algorithms" id="36a0-d2ac-0aaa-d84b" hidden="false" type="profile" targetId="88fc-182e-a840-2df9"/>
-        <infoLink name="Heal/Repair (X)" id="04a1-2b64-d954-0694" hidden="false" type="rule" targetId="02c8-1ec5-cdab-2572"/>
+        <infoLink name="Critical Wounds X+" id="04a1-2b64-d954-0694" hidden="false" type="rule" targetId="c751-8dab-2486-9a1b"/>
         <infoLink name="Tech-Priest" id="64ee-baba-7873-fc48" hidden="false" type="profile" targetId="d505-4156-df21-9043"/>
+        <infoLink name="Heal/Repair (X)" id="f2bc-dee0-8643-7f23" hidden="false" type="rule" targetId="02c8-1ec5-cdab-2572"/>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Manipulus" hidden="false" id="e3cf-4ae0-32c3-0d2b">
@@ -632,7 +634,7 @@ This unit may instead not attach to anything.</characteristic>
       <profiles>
         <profile name="Advanced Uplinks" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="41da-e2a3-43c4-fb1d">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack made for this unit, a Hit Roll of 6 for that attack always wounds.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack made for this unit, a Hit Roll of 6+ for that attack causes that attack to always wound.</characteristic>
           </characteristics>
         </profile>
         <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="01b7-29cf-9035-df5d">
@@ -1002,7 +1004,7 @@ b) SKITARII VANGUARDS</characteristic>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Skitarii Vanguards" hidden="false" id="739c-6299-aa91-e513" sortIndex="4">
+    <selectionEntry type="unit" import="true" name="Skitarii Vanguards" hidden="false" id="739c-6299-aa91-e513" sortIndex="4.12">
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
@@ -1149,7 +1151,7 @@ b) SKITARII VANGUARDS</characteristic>
         <infoLink name="Radioactive" id="3123-75af-c035-7522" hidden="false" type="profile" targetId="7d55-9f74-29f2-c388"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Skitarii Rangers" hidden="false" id="4081-c623-63ea-e2a8" sortIndex="4">
+    <selectionEntry type="unit" import="true" name="Skitarii Rangers" hidden="false" id="4081-c623-63ea-e2a8" sortIndex="4.11">
       <costs>
         <cost name="pts" typeId="points" value="120"/>
       </costs>
@@ -1300,7 +1302,7 @@ b) SKITARII VANGUARDS</characteristic>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Kataphron Destroyers" hidden="false" id="c2c0-7d54-57c6-42e6" sortIndex="4">
+    <selectionEntry type="unit" import="true" name="Kataphron Destroyers" hidden="false" id="c2c0-7d54-57c6-42e6" sortIndex="4.14">
       <categoryLinks>
         <categoryLink targetId="205c-3072-067b-d808" id="1873-2c32-ee5b-e6a0" primary="false" name="Infantry"/>
         <categoryLink targetId="b69b-5b51-faf1-2c40" id="5d23-4a32-e2a3-903c" primary="true" name="Troops"/>
@@ -1384,7 +1386,7 @@ b) SKITARII VANGUARDS</characteristic>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Kataphron Breachers" hidden="false" id="4897-9cf9-595d-be0e" sortIndex="4">
+    <selectionEntry type="unit" import="true" name="Kataphron Breachers" hidden="false" id="4897-9cf9-595d-be0e" sortIndex="4.13">
       <categoryLinks>
         <categoryLink targetId="205c-3072-067b-d808" id="4afd-8339-7db5-3e92" primary="false" name="Infantry"/>
         <categoryLink targetId="b69b-5b51-faf1-2c40" id="d395-64fb-7163-9059" primary="true" name="Troops"/>
@@ -1466,7 +1468,7 @@ b) SKITARII VANGUARDS</characteristic>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Ursarax" hidden="false" id="6dd0-6f3f-2f3b-d9ab" sortIndex="4">
+    <selectionEntry type="unit" import="true" name="Ursarax" hidden="false" id="6dd0-6f3f-2f3b-d9ab" sortIndex="4.16">
       <categoryLinks>
         <categoryLink targetId="4820-e2b5-9e00-bb68" id="d884-846f-1b69-9836" primary="true" name="Elites"/>
         <categoryLink targetId="205c-3072-067b-d808" id="4dbd-4e6f-9894-a6cc" primary="false" name="Infantry"/>
@@ -1634,7 +1636,7 @@ b) SKITARII VANGUARDS</characteristic>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Thallax Cohort" hidden="false" id="aa13-bced-4da3-3791" sortIndex="4">
+    <selectionEntry type="unit" import="true" name="Thallax Cohort" hidden="false" id="aa13-bced-4da3-3791" sortIndex="4.15">
       <categoryLinks>
         <categoryLink targetId="4820-e2b5-9e00-bb68" id="1da4-0d13-928c-7f3e" primary="true" name="Elites"/>
         <categoryLink targetId="205c-3072-067b-d808" id="8ebe-a4dc-6aae-eade" primary="false" name="Infantry"/>
@@ -1725,7 +1727,7 @@ b) SKITARII VANGUARDS</characteristic>
         <infoLink name="Jet Pack" id="0137-92e7-77cf-7bbf" hidden="false" type="profile" targetId="38d0-b778-7525-f239"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Vorax-Class Battle-Automata" hidden="false" id="dde4-2368-111c-977d" sortIndex="4">
+    <selectionEntry type="unit" import="true" name="Vorax-Class Battle-Automata" hidden="false" id="dde4-2368-111c-977d" sortIndex="4.17">
       <categoryLinks>
         <categoryLink targetId="4820-e2b5-9e00-bb68" id="eb5f-0ae7-edfd-e2b3" primary="true" name="Elites"/>
         <categoryLink targetId="205c-3072-067b-d808" id="375c-3209-8738-be74" primary="false" name="Infantry"/>
@@ -2242,7 +2244,7 @@ b) SKITARII VANGUARDS</characteristic>
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink name="One Shot" id="f0ef-bb91-f3ac-647c" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+                    <infoLink name="Rearm" id="f0ef-bb91-f3ac-647c" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
                     <infoLink name="Indirect" id="5d6d-1d48-34c5-7d5d" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
                     <infoLink name="Suppressive (X)" id="73a7-9a85-6b71-1797" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
                   </infoLinks>
@@ -2333,14 +2335,10 @@ b) SKITARII VANGUARDS</characteristic>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Resolve Test made for an enemy unit within 12”, worsen the result of that Resolve Test by 1.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Hunter Arachnids" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="e321-c167-4e78-983d">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for this unit, you may reroll that Move Roll.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Walker" id="877e-489e-ef6f-051a" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+        <infoLink name="Hunter Arachnids" id="4c6d-fd53-3a0d-0272" hidden="false" targetId="5112-c87f-346c-9451" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -2523,7 +2521,7 @@ b) SKITARII VANGUARDS</characteristic>
       <profiles>
         <profile name="Repulsor Grid" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="17c1-05da-5ea4-0bcc">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made targeting this unit, on a successful Saving Throw of 6, the unit which made that attack suffers SW equal to the D of that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each attack made targeting this unit, a Saving Throw of 6 causes that attack to be &apos;reflected&apos;. After the current step, for each attack which reflected this step, the unit which made that attack suffers SW equal to its D.</characteristic>
           </characteristics>
         </profile>
         <profile name="Kastelan Protocols" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b5ed-445b-1a2d-73e3">
@@ -2666,7 +2664,7 @@ Protector Protocol: For each attack this unit makes, add 1 to the Hit Roll for 
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink name="One Shot" id="36f4-35b5-5561-8f45" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+                    <infoLink name="Rearm" id="36f4-35b5-5561-8f45" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
                     <infoLink name="Indirect" id="e104-49b8-5c0c-2b40" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
                     <infoLink name="Suppressive (X)" id="ded5-7769-0818-2c4e" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
                   </infoLinks>
@@ -2752,14 +2750,10 @@ Protector Protocol: For each attack this unit makes, add 1 to the Hit Roll for 
 Efficient Movement: After any enemy unit&apos;s End step, this unit may Advance and it loses this ability.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Hunter Arachnids" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5112-c87f-346c-9451">
-          <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for this unit, you may reroll the result.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Walker" id="0876-c2e2-b44a-6b78" hidden="false" type="rule" targetId="4100-8e8c-47a5-3a15"/>
+        <infoLink targetId="5112-c87f-346c-9451" id="9d9f-d63d-092a-612a" type="profile" name="Hunter Arachnids" hidden="false"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -2776,7 +2770,7 @@ Efficient Movement: After any enemy unit&apos;s End step, this unit may Advance
       <profiles>
         <profile name="Repulsor Shroud" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ccd7-84fc-2ca3-b15e">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack that targets another friendly infantry unit within 8&quot; of this unit, that unit is in cover for that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each ranged attack that targets any friendly infantry unit within 8&quot; of this unit, that unit is in cover for that attack.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -3467,7 +3461,12 @@ Achillan Eye: After any enemy unit’s Move step, this unit may make attacks t
       <characteristics>
         <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack that targets this unit, worsen the Wound Roll of that attack by 1. Additionally, while enemy infantry units are within 14” of this unit, those units gain the following ability:
 
-Acute Rad-poisoning: For each Move Roll made for this unit, roll 1 less D6 for that roll.</characteristic>
+Acute Rad-poisoning: For each Move Roll made for this unit, roll 1 less dice for that Move Roll.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Hunter Arachnids" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5112-c87f-346c-9451">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Move Roll made for this unit, you may reroll that Move Roll</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

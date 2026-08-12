@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="62" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-c49b-9f87-36f1-c9b5" name="40k Reforged" battleScribeVersion="2.03" revision="63" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Transport" id="3239-2096-a612-ed8e" hidden="false"/>
     <categoryEntry name="Troops" id="b69b-5b51-faf1-2c40" hidden="false"/>
@@ -173,7 +173,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="One Shot" id="79f0-68e7-00a6-83ee" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Rearm" id="79f0-68e7-00a6-83ee" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
         <infoLink name="Blast (X)" id="4c3e-854a-4e0b-96d3" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
         <infoLink name="Indirect" id="4b39-975d-1afc-7737" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
@@ -192,7 +192,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="One Shot" id="c3c8-2bba-f450-4979" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Rearm" id="c3c8-2bba-f450-4979" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
         <infoLink name="Pierce" id="65ad-bcba-5072-6f96" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
         <infoLink name="Indirect" id="72a5-733d-3a17-ee42" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
@@ -211,7 +211,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="One Shot" id="e82f-8e0a-299c-8b05" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Rearm" id="e82f-8e0a-299c-8b05" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
         <infoLink name="Indirect" id="ba67-7204-a161-5839" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
       </infoLinks>
     </selectionEntry>
@@ -230,7 +230,7 @@
       </profiles>
       <infoLinks>
         <infoLink name="Velocity" id="b135-e658-b305-b6a8" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
-        <infoLink name="One Shot" id="c1c5-bedc-fd24-1eeb" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Rearm" id="c1c5-bedc-fd24-1eeb" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
         <infoLink name="Pierce" id="2184-e7ca-166a-0ef4" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
       </infoLinks>
     </selectionEntry>
@@ -354,7 +354,7 @@
           </modifiers>
         </infoLink>
         <infoLink name="Indirect" id="2512-df36-d64f-600d" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
-        <infoLink name="One Shot" id="4e2a-7bca-e454-50ff" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Rearm" id="4e2a-7bca-e454-50ff" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Power Weapon" hidden="false" id="dfed-4c14-cafd-626d">
@@ -685,7 +685,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="One Shot" id="c151-b4dc-feed-8b27" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+        <infoLink name="Rearm" id="c151-b4dc-feed-8b27" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
         <infoLink name="Suppressive (X)" id="5e0f-0369-fdb1-32e0" hidden="false" type="rule" targetId="aed3-e154-8fa2-5378"/>
         <infoLink name="Indirect" id="f41f-5515-18eb-133f" hidden="false" type="rule" targetId="4de2-ca68-9af9-1b10"/>
         <infoLink name="Blast (X)" id="9c15-faba-60ca-4178" hidden="false" type="rule" targetId="308a-e96e-90f7-855e"/>
@@ -1004,7 +1004,7 @@ Each time this unit gains Suppressed while it already has Suppressed, increase X
       <description>For each attack made for this weapon, a Hit Roll of 6 for that attack causes an additional hit. If the target for that attack had Fatal Thread, that additional hit always wounds.</description>
     </rule>
     <rule name="Pierce" id="f61d-729a-ad35-ab97" hidden="false">
-      <description>For each attack made for this weapon, the Saving Throw of that attack is worsened by 1.</description>
+      <description>After a target is selected for this weapon, if that target&apos;s T is equal to or lower than this weapon&apos;s S, improve this weapon&apos;s S to 7 this turn.</description>
     </rule>
     <rule name="Shred" id="4a04-e9da-d7b5-e035" hidden="false">
       <description>For each attack made for this weapon, a successful Wound Roll for that attack causes an additional wound.</description>
@@ -1031,7 +1031,10 @@ Each time this unit gains Suppressed while it already has Suppressed, increase X
       <description>For each attack made for this weapon, a successful Hit Roll for that attack causes an additional hit. Additionally, the Wound Roll for all attacks made for this weapon is improved by 1.</description>
     </rule>
     <rule name="Velocity" id="5e3c-8b11-830c-6d2a" hidden="false">
-      <description>This weapon can target enemy units within 32” of the model equipped with it. After you make a Move Roll during this unit’s Move step, each unit within X” of this unit cannot be selected as a target for this weapon this turn, where X is that Move Roll result plus 12.</description>
+      <description>This weapon can target enemy units within 32” of the model equipped with it. After you make a Move Roll during your Move step for the unit with this weapon, each enemy unit currently within X” of that unit gains Too Close (Velocity) until the End step, where X is that Move Roll result plus 12.
+
+
+Too Close (Velocity): This unit is an ineligible target for weapons with Velocity.</description>
     </rule>
     <rule name="Hunt" id="0f3a-7a60-a486-b805" hidden="false">
       <description>For each attack made for this weapon that targets an infantry unit, if that isn&apos;t in cover for that attack, add 1 to the Wound Roll of that attack (unless the target has an ability which says it cannot be in cover for attacks).</description>
@@ -1073,6 +1076,11 @@ Stunned: After this unit Activates, if it has Suppressed X, roll a D6. If the r
     <profile name="Jet Bike" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="672a-9374-f2ed-e8b2">
       <characteristics>
         <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each Advance Roll made for this unit, add 1 D6 to that roll.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Guarded" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5f45-8a1e-dcb3-915f">
+      <characteristics>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After a model in this unit is selected to suffer a wound, you may roll a D6. On a 5+, the Saving Throw for that attack always succeeds.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

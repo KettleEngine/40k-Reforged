@@ -4,7 +4,7 @@
     <catalogueLink type="catalogue" name="New Catalogue (link)" id="1f6f-7689-e57a-87cd" targetId="189f-f42f-6f3b-5328"/>
   </catalogueLinks>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="5b84-0185-eb47-6988" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.2" hidden="false" id="5b84-0185-eb47-6988" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="720c-bc09-1d72-2cf0" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -274,7 +274,7 @@ Constricted: For each Move Roll made for this unit, roll 1 less D6 for that roll
         </profile>
         <profile name="2 Fleshmetal Exoskeleton" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="true" id="2fcc-1ceb-d971-87cd">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">This unit gains Resilient 6+. After this unit gains this ability and after it is Activated, this unit Repairs 1.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">While this unit has this ability, it gains Heavy Armour. If it already has Heavy Armour, its Toughness is improved by 1.</characteristic>
           </characteristics>
           <comment>Iron Warriors</comment>
           <modifiers>
@@ -2017,7 +2017,7 @@ Abaddon&apos;s Contempt: For each attack made by a Chaos Space Marines unit tha
         </profile>
         <profile name="Iron Cage Doctrine" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="true" id="efbe-63af-d868-6205">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may select a point on the battlefield within 16” of this unit and mark it. Until the next time this unit is Activated or dies, for each attack made by any of your unit’s models which targets an enemy unit within 16” of the centre of that point, reroll a Hit Roll of 1 for that attack.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit’s Move step, you may select a point on the battlefield within 16” of this unit and mark it. Until the next time this unit is Activated or dies, for each attack made by any of your unit’s models which targets an enemy unit within 16” of the centre of that point, reroll Wound Rolls of 1 for that attack.</characteristic>
           </characteristics>
           <comment>Iron Warriors</comment>
           <modifiers>
@@ -3795,6 +3795,24 @@ Slice Dimensions: After any enemy unit&apos;s End step, you may remove this uni
                 </modifier>
               </modifiers>
             </entryLink>
+            <entryLink import="true" name="Havocs" hidden="false" id="d1a8-1e24-7d2a-e951" type="selectionEntry" targetId="501d-eaf0-34a6-685e" sortIndex="5">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="e83a-c173-fcbc-e480" childId="f7de-0e12-2c91-9597" shared="true" includeChildSelections="true" childName="Glorious Jump Pack"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Breacher Siege Squad" hidden="false" id="44a2-abee-e872-c835" type="selectionEntry" targetId="f711-cdab-7f3f-3ccf" sortIndex="4">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="e83a-c173-fcbc-e480" childId="f7de-0e12-2c91-9597" shared="true" includeChildSelections="true" childName="Glorious Jump Pack"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1e97-c85d-f007-da35" includeChildSelections="false"/>
@@ -5173,7 +5191,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
       <selectionEntryGroups>
         <selectionEntryGroup name="Breacher Siege Squad" id="3638-006c-a8d3-bd23" hidden="false" defaultSelectionEntryId="45b7-4e2c-03dd-6be9">
           <constraints>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="0cab-a637-406e-8d5d" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="0cab-a637-406e-8d5d" includeChildSelections="false"/>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="d784-4078-6871-1136" includeChildSelections="false"/>
           </constraints>
           <selectionEntries>
@@ -5658,7 +5676,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink name="One Shot" id="77bb-7966-56e7-7333" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+                    <infoLink name="Rearm" id="77bb-7966-56e7-7333" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
                   </infoLinks>
                 </selectionEntry>
               </selectionEntries>
@@ -6822,7 +6840,7 @@ Wailing Spirit: For each attack made by this unit that targets an enemy unit w
       <profiles>
         <profile name="Fleshmetal Armoury" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="1a2b-b48b-ea84-1cf6">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s Move step, for each model in this unit, you may reselect that model’s loadout options as you would during Army List Building.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is Activated, for each model in this unit, you may reselect that model’s loadout options as you would during Army List Building.</characteristic>
           </characteristics>
         </profile>
         <profile name="Manifesting Abominations" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="b6d3-db8b-4dfa-857a">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="21" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="fc27-2f3c-4325-2d96" name="Adeptus Custodes" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="9" revision="22" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Techniques" hidden="false" id="9ef8-9802-e8e8-b5b6">
       <infoLinks>
@@ -9,6 +9,7 @@
         <infoLink name="Technique: Kaptaris Parry" id="479e-b781-fc80-1973" hidden="false" type="profile" targetId="0c6b-2f19-8d96-a518"/>
         <infoLink name="Technique: Rendax Thrust" id="cf36-fbff-efd3-5ca3" hidden="false" type="profile" targetId="0ffe-80e6-74fc-1c59"/>
         <infoLink name="Technique: Salvus Volley" id="51a9-9446-16cf-1a32" hidden="false" type="profile" targetId="796a-d54b-29ca-601f"/>
+        <infoLink name="Critical Hits X+" id="87eb-d52d-3cae-4964" hidden="false" type="rule" targetId="fff4-3f9d-5d2d-4cf9"/>
       </infoLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ddd1-4db1-d4f1-5eef-min" includeChildSelections="false"/>
@@ -45,7 +46,7 @@
       <profiles>
         <profile name="Arae-Shrike" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="dcaf-3fb9-b3d9-3722">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy unit is Activated within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready and must skip the Move and Attacks steps.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After an enemy unit is Activated within 6” of this unit, you may roll a D6. On a 5+, that unit becomes ready, skip the Move and Attacks steps of this turn, and you cannot roll for this ability until the next battle round.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -229,7 +230,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b22a-e37d-6ae0-547b-max" includeChildSelections="false"/>
       </constraints>
       <profiles>
-        <profile name="Guardian Spear (Bolter)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="297e-69c8-80ad-0ef2">
+        <profile name="Castellan Axe (Bolter)" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="297e-69c8-80ad-0ef2">
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
@@ -272,13 +273,16 @@
             <characteristic name="WS" typeId="459f-6890-e77f-b62f">-</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">-</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">-</characteristic>
-            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">For each wound the model with this weapon is selected to suffer, roll a D6. On a 5+, that attack fails.</characteristic>
+            <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shield 5+</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a248-e8f3-03aa-bb21" includeChildSelections="false"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Shield X+" id="5dbe-a422-6658-a661" hidden="false" type="rule" targetId="a04b-6862-277b-8580"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
@@ -299,7 +303,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb2b-fac7-1b1b-41e6-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.0" hidden="false" id="3fd4-08d0-17f9-61b5" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.1" hidden="false" id="3fd4-08d0-17f9-61b5" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="005a-8f68-8604-d3a9" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -319,7 +323,7 @@
       <profiles>
         <profile name="1 Praetorian Shield" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="5c2e-74a3-336e-baf9">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each wound a model in this unit suffers, roll a D6. On a 5+, that attack fails.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">After a model in this unit is selected to suffer a wound, roll a D6. On a 5+, the Saving Throw for attack always succeeds.</characteristic>
           </characteristics>
         </profile>
         <profile name="2 Solarite Heart-Node" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="0b6c-0cf9-fb5f-9232">
@@ -760,7 +764,7 @@ Guarded: For each wound a model in this unit is selected to suffer, you may ro
                   </profiles>
                   <infoLinks>
                     <infoLink name="Pierce" id="4b56-5d04-0c66-358f" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
-                    <infoLink name="One Shot" id="0595-23f4-e980-026a" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
+                    <infoLink name="Rearm" id="0595-23f4-e980-026a" hidden="false" type="rule" targetId="0c06-9eed-2a45-b772"/>
                     <infoLink name="Velocity" id="d7b8-ee59-ce6e-5121" hidden="false" type="rule" targetId="5e3c-8b11-830c-6d2a"/>
                   </infoLinks>
                   <costs>
@@ -1450,10 +1454,9 @@ Your army list may have only one SHIELD-CAPTAIN, SHIELD-CAPTAIN IN ALLARUS ARMOU
     </profile>
     <profile name="Technique: Conservai Counter" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="60b1-040e-1e4b-3704">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit gains Resilient 6+. After this unit gains this ability, if the active enemy unit is within 8” of and visible to this unit, that unit gains the following ability until the End step of the next turn:
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit gains Resilient 6+. After this unit gains this ability, if the active enemy unit is within 8” of and visible to this unit, that unit gains the following ability until the End step of your next turn:
 
-
-Critical Opening: For each attack made by an Adeptus Custodes unit that targets this unit, a Hit Roll of 5+ for that attack causes an additional hit.</characteristic>
+Critical Opening: For each attack made by an Adeptus Custodes unit that targets this unit, that attack gains Critical Hits 5+.</characteristic>
       </characteristics>
     </profile>
     <profile name="Technique: Kaptaris Parry" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="0c6b-2f19-8d96-a518">
