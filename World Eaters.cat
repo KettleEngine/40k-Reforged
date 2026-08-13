@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="ac9e-cafe-1753-147e" name="World Eaters" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="ac9e-cafe-1753-147e" name="World Eaters" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.1" hidden="false" id="97a2-b298-c8e1-9b48" sortIndex="-1">
       <categoryLinks>
@@ -19,6 +19,7 @@
         <categoryLink name="Configuration" hidden="false" id="1e03-dcde-06f5-128c" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
       <infoLinks>
+        <infoLink targetId="cba5-864c-9321-8088" id="ef53-04bc-cc4e-69fd" type="profile" name="Great Traitors’ Arsenal" hidden="false"/>
         <infoLink name="Martial Savagery" id="46b3-b330-8249-6140" hidden="false" type="profile" targetId="fc10-89a6-0b44-88e3"/>
         <infoLink name="Khorne&apos;s Contempt" id="4510-57b4-a1f3-c5d4" hidden="false" type="profile" targetId="3246-21e3-9e49-00c2"/>
         <infoLink name="Critical Hits X+" id="8919-7694-8239-4d1f" hidden="false" type="rule" targetId="fff4-3f9d-5d2d-4cf9"/>
@@ -50,7 +51,8 @@
         </profile>
         <profile name="6 Skulls for the Skull Throne!" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="eaf3-34ab-0b99-41f3">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">While enemy units are within 16” of this unit, those enemy units count as one additional enemy unit for Martial Savagery.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">While enemy units are within 16” of this unit, those enemy units count as one additional enemy unit for Martial Savagery. Additionally, for each melee attack this unit makes, reroll a failed Hit Roll for that attack.
+</characteristic>
           </characteristics>
         </profile>
         <profile name="5 Blood for the Blood God!" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="40a7-893d-437b-a5d3">
@@ -266,7 +268,7 @@
         <profile typeId="55da-e0a0-1fa3-2d1c" typeName="Leader" hidden="false" id="3ee0-b6cf-881e-ef98">
           <characteristics>
             <characteristic name="Must Attach to" typeId="2c63-5e3f-9132-459d">This unit must attach to:
-● KHORNE BERSEKERS</characteristic>
+● EIGHTBOUND</characteristic>
           </characteristics>
         </profile>
         <profile name="Unbound Carnage" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="ee25-c2b6-aeee-bb29">
@@ -292,27 +294,6 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2800-fcab-b780-8678-max" includeChildSelections="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Lacerator" hidden="false" id="5d5f-f369-b9b6-a957">
-              <profiles>
-                <profile name="Lacerator" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="48d9-1ecf-b6c0-ed99">
-                  <characteristics>
-                    <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
-                    <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                    <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
-                    <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
-                    <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Shred" id="1686-ba9c-254f-7bee" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
-              </infoLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7765-e2cb-4c63-9412-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7765-e2cb-4c63-9412-max" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Slaughterbound Claw" hidden="false" id="c1c5-0613-72fa-afc4">
               <profiles>
                 <profile name="Slaughterbound Claw" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="03a6-6b58-662b-90e7">
@@ -333,6 +314,20 @@
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8701-f380-9b15-c0d3-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8701-f380-9b15-c0d3-max" includeChildSelections="false"/>
               </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Chainblade" hidden="false" id="ac4e-923b-4da5-26a0">
+              <entryLinks>
+                <entryLink import="true" name="Chainsword" hidden="false" id="1916-231d-ef7c-195c" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
+                  <modifiers>
+                    <modifier type="set" value="14" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                    <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a968-2a0b-f6d6-6084" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7d5e-5262-1a39-3236" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
           <profiles>
@@ -424,7 +419,7 @@
                         <profile name="Skullsmasher Mace and Chainblade" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="bfa0-a94c-57cb-1943">
                           <characteristics>
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                            <characteristic name="A" typeId="13c5-f234-c120-afc3">6</characteristic>
+                            <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
                             <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -452,9 +447,9 @@
         <infoLink name="Martial Savagery" id="743f-2d48-3def-053f" hidden="false" type="profile" targetId="fc10-89a6-0b44-88e3"/>
       </infoLinks>
       <profiles>
-        <profile name="Slathering Frenzy" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="58b2-0e4e-9522-18ad">
+        <profile name="Devoted To Butchery" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="58b2-0e4e-9522-18ad">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack that targets an enemy unit within 8” of this unit, reroll a failed Hit Roll of 1 for that attack. If that unit has Grating, reroll a failed Hit Roll for that attack instead.</characteristic>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s End step, if this turn was not your second turn in a row, take another turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -601,7 +596,7 @@
                 <profile name="Gorechild Carve" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="2910-7227-1102-651d">
                   <characteristics>
                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
-                    <characteristic name="A" typeId="13c5-f234-c120-afc3">4</characteristic>
+                    <characteristic name="A" typeId="13c5-f234-c120-afc3">5</characteristic>
                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                     <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">2</characteristic>
@@ -628,7 +623,7 @@
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">3</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">10</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">12</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">2+</characteristic>
               </characteristics>
             </profile>
@@ -686,7 +681,7 @@
                                 <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="5b73-ffab-9340-b82c">
                                   <characteristics>
                                     <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">9</characteristic>
+                                    <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
                                     <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                                     <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                     <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -702,7 +697,7 @@
                             <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="eed7-aaae-7238-0991">
                               <characteristics>
                                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                <characteristic name="A" typeId="13c5-f234-c120-afc3">9</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
                                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                                 <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -724,9 +719,9 @@
                             <infoLink name="Ignore Cover" id="8fc5-2224-7c51-6cb9" hidden="false" type="rule" targetId="c88b-5cb0-aa9d-b742"/>
                           </infoLinks>
                         </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Combi-Bolter &amp; Combi-Plasma Gun" hidden="false" id="ca14-0eec-ff7a-8483" sortIndex="3">
+                        <selectionEntry type="upgrade" import="true" name="Combi-Bolter &amp; Combi-Plasma" hidden="false" id="ca14-0eec-ff7a-8483" sortIndex="3">
                           <profiles>
-                            <profile name="Combi-Plasma Gun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4c7c-0780-9b6e-ddf9">
+                            <profile name="Combi-Plasma" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="4c7c-0780-9b6e-ddf9">
                               <characteristics>
                                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
                                 <characteristic name="A" typeId="13c5-f234-c120-afc3">3</characteristic>
@@ -739,7 +734,7 @@
                             <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="02ce-99f2-23a6-bf09">
                               <characteristics>
                                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                <characteristic name="A" typeId="13c5-f234-c120-afc3">9</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
                                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                                 <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -752,22 +747,22 @@
                             <infoLink name="Pierce" id="f89f-5020-f339-e462" hidden="false" type="rule" targetId="f61d-729a-ad35-ab97"/>
                           </infoLinks>
                         </selectionEntry>
-                        <selectionEntry type="upgrade" import="true" name="Combi-Bolter &amp; Combi-Meltagun" hidden="false" id="17fb-2f1e-aa8b-a482" sortIndex="4">
+                        <selectionEntry type="upgrade" import="true" name="Combi-Bolter &amp; Combi-Melta" hidden="false" id="17fb-2f1e-aa8b-a482" sortIndex="4">
                           <profiles>
-                            <profile name="Combi-Meltagun" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ba69-6767-45d4-9ff4">
+                            <profile name="Combi-Melta" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="ba69-6767-45d4-9ff4">
                               <characteristics>
                                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">CQ</characteristic>
                                 <characteristic name="A" typeId="13c5-f234-c120-afc3">1</characteristic>
                                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                                 <characteristic name="S" typeId="571c-0471-2614-c57c">5</characteristic>
-                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D6+2</characteristic>
+                                <characteristic name="D" typeId="c2c0-3714-05e2-65a0">D3+4</characteristic>
                                 <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Pierce</characteristic>
                               </characteristics>
                             </profile>
                             <profile name="Combi-Bolter" typeId="2dff-53d0-6d25-8c59" typeName="Weapon" hidden="false" id="e45b-f127-94ae-3f53">
                               <characteristics>
                                 <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">Aslt</characteristic>
-                                <characteristic name="A" typeId="13c5-f234-c120-afc3">9</characteristic>
+                                <characteristic name="A" typeId="13c5-f234-c120-afc3">8</characteristic>
                                 <characteristic name="WS" typeId="459f-6890-e77f-b62f">2+</characteristic>
                                 <characteristic name="S" typeId="571c-0471-2614-c57c">3</characteristic>
                                 <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
@@ -837,12 +832,40 @@
                           <entryLinks>
                             <entryLink import="true" name="Lightning Claw" hidden="false" id="71a0-dc51-b944-5226" type="selectionEntry" targetId="6e69-532c-9a66-4cb2">
                               <modifiers>
-                                <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="6" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                 <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                               </modifiers>
                               <constraints>
                                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e3aa-dae1-eb40-09e8" includeChildSelections="false"/>
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a87a-56f3-9868-aa8a" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Chainfist" hidden="false" id="a712-f2d6-1137-e354" sortIndex="5">
+                          <entryLinks>
+                            <entryLink import="true" name="Chainfist" hidden="false" id="5c06-d217-a571-e946" type="selectionEntry" targetId="ad98-4b41-0c98-aa4e">
+                              <modifiers>
+                                <modifier type="set" value="4" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e99-ab8c-a785-1070" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a69-7d05-672e-7403" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Chainblade" hidden="false" id="d20f-5d56-424a-039b" sortIndex="6">
+                          <entryLinks>
+                            <entryLink import="true" name="Chainsword" hidden="false" id="2e01-99d1-094e-39d3" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
+                              <modifiers>
+                                <modifier type="set" value="12" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b881-2062-444f-e598" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="745f-e350-765f-5cd9" includeChildSelections="false"/>
                               </constraints>
                             </entryLink>
                           </entryLinks>
@@ -923,7 +946,7 @@ Cathartic Carnage: For each melee attack made for this unit, if that attack ca
               <characteristics>
                 <characteristic name="T" typeId="a6ad-d820-8495-f5b0">-</characteristic>
                 <characteristic name="Sv" typeId="9b7f-0dde-683f-6844">3+</characteristic>
-                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">4</characteristic>
+                <characteristic name="H" typeId="18e4-1bf9-a9b8-1e50">5</characteristic>
                 <characteristic name="Rv" typeId="411f-3942-6dc0-7c06">-</characteristic>
               </characteristics>
             </profile>
@@ -1037,7 +1060,7 @@ Cathartic Carnage: For each melee attack made for this unit, if that attack ca
                               <modifierGroups>
                                 <modifierGroup type="and">
                                   <modifiers>
-                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="5" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                     <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
                                 </modifierGroup>
@@ -1051,7 +1074,7 @@ Cathartic Carnage: For each melee attack made for this unit, if that attack ca
                               <modifierGroups>
                                 <modifierGroup type="and">
                                   <modifiers>
-                                    <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
                                 </modifierGroup>
@@ -1070,7 +1093,7 @@ Cathartic Carnage: For each melee attack made for this unit, if that attack ca
                                 <modifierGroup type="and">
                                   <modifiers>
                                     <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                                    <modifier type="set" value="5+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                                    <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
                                   </modifiers>
                                 </modifierGroup>
                               </modifierGroups>
@@ -1095,6 +1118,34 @@ Cathartic Carnage: For each melee attack made for this unit, if that attack ca
                               <constraints>
                                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58e0-6355-d138-9486" includeChildSelections="false"/>
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87b6-32e4-f09e-41d9" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Chainblade" hidden="false" id="e0db-e779-e9c8-4ec4" sortIndex="6">
+                          <entryLinks>
+                            <entryLink import="true" name="Chainsword" hidden="false" id="6116-8fc1-e972-3c81" type="selectionEntry" targetId="d7bf-1f8b-4dd2-edfb">
+                              <modifiers>
+                                <modifier type="set" value="10" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="2+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="11db-bf5e-9a9e-0b5d" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc62-3c96-68f6-c006" includeChildSelections="false"/>
+                              </constraints>
+                            </entryLink>
+                          </entryLinks>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Chainfist" hidden="false" id="e8b4-704b-a6f0-848c" sortIndex="5">
+                          <entryLinks>
+                            <entryLink import="true" name="Chainfist" hidden="false" id="58a6-8cee-3337-f367" type="selectionEntry" targetId="ad98-4b41-0c98-aa4e">
+                              <modifiers>
+                                <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                                <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                              </modifiers>
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3af7-b352-932a-48d8" includeChildSelections="false"/>
+                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f58-6f01-f610-f6d4" includeChildSelections="false"/>
                               </constraints>
                             </entryLink>
                           </entryLinks>
@@ -1404,6 +1455,9 @@ Cathartic Carnage: For each melee attack made for this unit, if that attack cau
           </characteristics>
         </profile>
       </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
@@ -1425,12 +1479,12 @@ If THREE or more enemy units were targeted by one or more melee attacks this tu
     </profile>
     <profile name="Grating (Refrence)" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8d33-eaa0-aad7-9a19">
       <characteristics>
-        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit counts as two units for Martial Savagery and, during enemy World Eaters units advance moves, those units may move up to an additional 4” if that move would end within 4” of this unit.</characteristic>
+        <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit counts as two units for Martial Savagery and, during an enemy units&apos; Advance, those units may move up to an additional 4” if that move would end within 4” of this unit.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
   <sharedSelectionEntries>
-    <selectionEntry type="unit" import="true" name="Khorne Berzerkers" hidden="false" id="4e93-62e8-2ee9-624d">
+    <selectionEntry type="unit" import="true" name="Khorne Berzerkers" hidden="false" id="4e93-62e8-2ee9-624d" sortIndex="1">
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="ddbc-70b7-e081-4190" targetId="205c-3072-067b-d808" primary="false"/>
         <categoryLink targetId="b69b-5b51-faf1-2c40" id="939f-af25-8a8b-f3c0" primary="true" name="Troops"/>
@@ -1439,10 +1493,9 @@ If THREE or more enemy units were targeted by one or more melee attacks this tu
       <profiles>
         <profile name="Butcher’s Nails" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="8590-343b-c80d-503a">
           <characteristics>
-            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any of your World Eaters units Activate, until the End step, each enemy unit within 24” of this unit gains the following ability:
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After any of your World Eaters units Activate, until the End step, each enemy unit within 24” of this unit gains the following ability:
 
-
-Grating: This unit counts as two units for Martial Savagery and, during enemy World Eaters units advance moves, those units may move up to an additional 4” if that move would end within 4” of this unit.</characteristic>
+Grating: This unit counts as two units for Martial Savagery and, during an enemy units&apos; Advance, those units may move up to an additional 4” if that move would end within 4” of this unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1474,7 +1527,7 @@ Grating: This unit counts as two units for Martial Savagery and, during enemy 
                     <entryLink import="true" name="Bolt Pistol" hidden="false" id="e4a2-0a28-f414-acb0" type="selectionEntry" targetId="dae5-9fbf-bdd8-7f79">
                       <modifiers>
                         <modifier type="set" value="3+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
-                        <modifier type="set" value="2" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                        <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
                     <entryLink import="true" name="Plasma Pistol" hidden="false" id="d1df-48a7-deee-0f85" type="selectionEntry" targetId="6894-2cf4-78df-13e8">
@@ -1568,7 +1621,7 @@ Grating: This unit counts as two units for Martial Savagery and, during enemy 
         <cost name="pts" typeId="points" value="10"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Eightbound" hidden="false" id="694a-d2ca-484b-9e86">
+    <selectionEntry type="unit" import="true" name="Eightbound" hidden="false" id="694a-d2ca-484b-9e86" sortIndex="2">
       <categoryLinks>
         <categoryLink targetId="205c-3072-067b-d808" id="1be0-8548-c895-222c" primary="false" name="Infantry"/>
         <categoryLink targetId="f809-9826-f58a-6b8d" id="8a04-6fa8-d08e-a23a" primary="false" name="Chaos"/>
@@ -1613,11 +1666,6 @@ Grating: This unit counts as two units for Martial Savagery and, during enemy 
                         <modifier type="set" value="3" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                       </modifiers>
                     </entryLink>
-                    <entryLink import="true" name="Berserker Chainblade" hidden="false" id="649d-ff9b-a778-bcd3" type="selectionEntry" targetId="2e07-8bd1-0fa2-a780" sortIndex="4">
-                      <modifiers>
-                        <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
-                      </modifiers>
-                    </entryLink>
                     <entryLink import="true" name="Lightning Claws" hidden="false" id="d46b-2007-7502-46a3" type="selectionEntry" targetId="f6a8-b0b8-1d07-7cab" sortIndex="5"/>
                   </entryLinks>
                   <selectionEntries>
@@ -1631,7 +1679,7 @@ Grating: This unit counts as two units for Martial Savagery and, during enemy 
                             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
                             <characteristic name="A" typeId="13c5-f234-c120-afc3">10</characteristic>
                             <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
-                            <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
+                            <characteristic name="S" typeId="571c-0471-2614-c57c">2</characteristic>
                             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">1</characteristic>
                             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred, Sweep</characteristic>
                           </characteristics>
@@ -1651,6 +1699,24 @@ Grating: This unit counts as two units for Martial Savagery and, during enemy 
                         <infoLink name="Strike or Sweep (X)" id="bcdd-0991-fc75-1431" hidden="false" type="rule" targetId="2757-6563-cdb2-3456"/>
                         <infoLink name="Shred" id="b878-5be0-41e2-5931" hidden="false" type="rule" targetId="4a04-e9da-d7b5-e035"/>
                       </infoLinks>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="unit" shared="true" id="21be-f44d-b380-153b" includeChildSelections="true"/>
+                      </constraints>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Lacerators Chainblade" hidden="false" id="168c-5e2d-6668-be03" sortIndex="4">
+                      <entryLinks>
+                        <entryLink import="true" name="Berserker Chainblade" hidden="false" id="649d-ff9b-a778-bcd3" type="selectionEntry" targetId="2e07-8bd1-0fa2-a780">
+                          <modifiers>
+                            <modifier type="set" value="Lacerator Chainblade" field="name" arg="Berserker" scope="168c-5e2d-6668-be03" affects="self.entries"/>
+                            <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
+                            <modifier type="set" value="Lacerator Chainblade" field="name" affects="profiles.Weapon" arg="Berserker"/>
+                          </modifiers>
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c42f-dece-c2a2-10bb-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c42f-dece-c2a2-10bb-max" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -1690,7 +1756,7 @@ Grating: This unit counts as two units for Martial Savagery and, during enemy 
           <profiles>
             <profile name="Exalted Eightbound" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="f837-87b5-05c0-8548">
               <characteristics>
-                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit’s Rv is improved by 1</characteristic>
+                <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">This unit’s Rv is improved by 1 (this unit will now take suppression as if each model cost 88 points).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1706,7 +1772,7 @@ Grating: This unit counts as two units for Martial Savagery and, during enemy 
           <characteristics>
             <characteristic name="Tp" typeId="6c1c-7d1d-c8b0-33ec">ML</characteristic>
             <characteristic name="A" typeId="13c5-f234-c120-afc3">2</characteristic>
-            <characteristic name="WS" typeId="459f-6890-e77f-b62f">4+</characteristic>
+            <characteristic name="WS" typeId="459f-6890-e77f-b62f">3+</characteristic>
             <characteristic name="S" typeId="571c-0471-2614-c57c">4</characteristic>
             <characteristic name="D" typeId="c2c0-3714-05e2-65a0">4</characteristic>
             <characteristic name="Abilities" typeId="d93f-70ee-72bc-5ef9">Shred</characteristic>
