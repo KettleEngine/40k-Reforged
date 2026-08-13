@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="6aa1-4f3f-5d57-1d1e" name="Tau" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="28" revision="16" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.1" hidden="false" id="315e-371a-2ee5-5d8d" sortIndex="-1">
       <categoryLinks>
@@ -736,8 +736,8 @@ b) BREACHER TEAM</characteristic>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Gun" id="53a9-5ee4-2e1c-2416" hidden="false" defaultSelectionEntryId="cc2c-4302-b820-fe8c">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc04-16db-8191-dee2-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc04-16db-8191-dee2-max" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc04-16db-8191-dee2-max-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc04-16db-8191-dee2-max-max" includeChildSelections="false"/>
                   </constraints>
                   <entryLinks>
                     <entryLink import="true" name="Pulse Carbine" hidden="false" id="cc2c-4302-b820-fe8c" type="selectionEntry" targetId="6634-61a6-75bd-ba2f" sortIndex="1">
@@ -796,7 +796,6 @@ b) BREACHER TEAM</characteristic>
                         </selectionEntry>
                       </selectionEntries>
                       <constraints>
-                        <constraint type="max" value="1" field="selections" scope="model" shared="true" id="45a2-9803-a1fd-632c" includeChildSelections="true"/>
                         <constraint type="max" value="3" field="selections" scope="unit" shared="true" id="76a7-d97f-4d29-f4e4" includeChildSelections="true"/>
                       </constraints>
                     </selectionEntryGroup>
@@ -903,7 +902,7 @@ b) BREACHER TEAM</characteristic>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit is selected to suffer a wound from a ranged attack, roll a D6. On a 5+, the Saving Throw for that attack always succeeds.</characteristic>
           </characteristics>
         </profile>
-        <profile name="Overlapped Cloaking Fields" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5fe8-0080-efef-dad1">
+        <profile name="Overlapping Cloaking Fields" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="5fe8-0080-efef-dad1">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">While this unit is ready and has one or more MV5 STEALTH DRONE models, after an enemy unit finishes an Advance and is visible to and within 24” of this unit, you may roll a D6. On a 5+, this unit may Reposition.</characteristic>
           </characteristics>
@@ -1393,6 +1392,7 @@ b) BREACHER TEAM</characteristic>
                   <modifiers>
                     <modifier type="set" value="8" field="13c5-f234-c120-afc3" affects="profiles.Weapon"/>
                     <modifier type="set" value="4+" field="459f-6890-e77f-b62f" affects="profiles.Weapon"/>
+                    <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
@@ -1520,6 +1520,9 @@ b) BREACHER TEAM</characteristic>
               <constraints>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d0fb-1280-7165-c622" includeChildSelections="false"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="Aslt" field="6c1c-7d1d-c8b0-33ec" affects="profiles.Weapon"/>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntry>
