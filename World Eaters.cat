@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="ac9e-cafe-1753-147e" name="World Eaters" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="ac9e-cafe-1753-147e" name="World Eaters" gameSystemId="sys-c49b-9f87-36f1-c9b5" gameSystemRevision="23" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.1" hidden="false" id="97a2-b298-c8e1-9b48" sortIndex="-1">
+    <selectionEntry type="upgrade" import="true" name="Current Version: 3.3.3" hidden="false" id="97a2-b298-c8e1-9b48" sortIndex="-1">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="38fa-da97-6896-2856" targetId="9cd6-0442-3f35-6b52" primary="true"/>
       </categoryLinks>
@@ -51,8 +51,7 @@
         </profile>
         <profile name="6 Skulls for the Skull Throne!" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="eaf3-34ab-0b99-41f3">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">While enemy units are within 16” of this unit, those enemy units count as one additional enemy unit for Martial Savagery. Additionally, for each melee attack this unit makes, reroll a failed Hit Roll for that attack.
-</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">While enemy units are within 16” of this unit, those enemy units count as one additional enemy unit for Martial Savagery. Additionally, for each melee attack this unit makes, reroll a failed Hit Roll for that attack.</characteristic>
           </characteristics>
         </profile>
         <profile name="5 Blood for the Blood God!" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="40a7-893d-437b-a5d3">
@@ -62,7 +61,7 @@
         </profile>
         <profile name="3 Berserker’s Visage" typeId="9b56-9768-f88b-14ac" typeName="Relics" hidden="false" id="7134-9af4-eea7-c2da">
           <characteristics>
-            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each melee attack this unit makes, reroll a Wound Roll of 1 for that attack. After this units&apos; Attack step, all enemy units within 8” suffers X Suppression where X is equal to the Health lost this turn.</characteristic>
+            <characteristic name="Description" typeId="becf-f398-aed2-688b">For each melee attack this unit makes, reroll a Wound Roll of 1 for that attack. After this units&apos; Attacks step, all enemy units within 8” of this unit suffer X Suppression where X is equal to the Health lost this turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -447,7 +446,12 @@
         <infoLink name="Martial Savagery" id="743f-2d48-3def-053f" hidden="false" type="profile" targetId="fc10-89a6-0b44-88e3"/>
       </infoLinks>
       <profiles>
-        <profile name="Devoted To Butchery" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="58b2-0e4e-9522-18ad">
+        <profile name="Slathering Frenzy" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="58b2-0e4e-9522-18ad">
+          <characteristics>
+            <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">For each melee attack that targets an enemy unit within 8” of this unit, reroll a failed Hit Roll of 1 for that attack. If that unit has Grating, reroll a failed Hit Roll for that attack instead.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Devoted To Butchery" typeId="e9b6-89e0-ffee-5662" typeName="Ability" hidden="false" id="7724-dd42-9073-83b6">
           <characteristics>
             <characteristic name="Description:" typeId="22b9-735d-71b1-6d7a">After this unit&apos;s End step, if this turn was not your second turn in a row, take another turn.</characteristic>
           </characteristics>
@@ -1201,7 +1205,6 @@ Cathartic Carnage: For each melee attack made for this unit, if that attack ca
         <categoryLink targetId="2886-2afd-f65f-9d8e" id="fe3f-23e5-7db0-4bdd" primary="true" name="Leaders"/>
         <categoryLink targetId="205c-3072-067b-d808" id="fcd4-836f-4583-930b" primary="false" name="Infantry"/>
         <categoryLink targetId="f809-9826-f58a-6b8d" id="0157-940f-a525-7c5c" primary="false" name="Chaos"/>
-        <categoryLink targetId="1738-1300-9dbb-c5be" id="30f6-d4c5-fa5d-2dee" primary="false" name="Rare"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Heavy Armour" id="98cc-ce24-d247-2381" hidden="false" type="rule" targetId="ec2c-77fd-05f2-a794"/>
